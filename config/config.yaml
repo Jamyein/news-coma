@@ -44,27 +44,20 @@ rss_sources:
 
 # 当前使用的提供商
 # 可选值: gemini, openai, azure, claude, deepseek, zhipu, kimi, qwen, wenxin, spark, yi, minimax, ollama
-ai_provider: "deepseek"
+ai_provider: "gemini"
 
-# ==========================================
-# 所有提供商配置（按需填写）
-# ==========================================
 ai_providers:
   
-  # ==================== 国际提供商 ====================
-  
-  # 1. Gemini (Google) - 免费 generous
   gemini:
     api_key: "${GEMINI_API_KEY}"
     base_url: "https://generativelanguage.googleapis.com/v1beta/openai/"
-    model: "gemini-1.5-flash"
+    model: "gemini-3-flash"
     max_tokens: 2000
     temperature: 0.3
-    rate_limit_rpm: 15
+    rate_limit_rpm: 3
     batch_size: 3
     max_concurrent: 2
   
-  # 2. OpenAI - 付费
   openai:
     api_key: "${OPENAI_API_KEY}"
     base_url: "https://api.openai.com/v1"
@@ -74,17 +67,6 @@ ai_providers:
     batch_size: 5
     max_concurrent: 3
   
-  # 3. Azure OpenAI - 企业付费
-  azure:
-    api_key: "${AZURE_OPENAI_API_KEY}"
-    base_url: "https://{your-resource}.openai.azure.com/openai/deployments/{deployment}"
-    model: "gpt-4"
-    max_tokens: 2000
-    temperature: 0.3
-    batch_size: 5
-    max_concurrent: 3
-  
-  # 4. Claude (Anthropic) - 付费
   claude:
     api_key: "${ANTHROPIC_API_KEY}"
     base_url: "https://api.anthropic.com/v1"
@@ -95,9 +77,6 @@ ai_providers:
     batch_size: 5
     max_concurrent: 3
   
-  # ==================== 国内提供商 ====================
-  
-  # 5. DeepSeek - 免费 generous 🥇
   deepseek:
     api_key: "${DEEPSEEK_API_KEY}"
     base_url: "https://api.deepseek.com/v1"
@@ -108,18 +87,16 @@ ai_providers:
     batch_size: 5
     max_concurrent: 3
   
-  # 6. 智谱GLM - 免费 generous 🥈
   zhipu:
     api_key: "${ZHIPU_API_KEY}"
     base_url: "https://open.bigmodel.cn/api/paas/v4"
-    model: "glm-4-flash"
+    model: "glm-4.6v-flash"
     max_tokens: 2000
     temperature: 0.3
-    rate_limit_rpm: 100
+    rate_limit_rpm: 1
     batch_size: 5
     max_concurrent: 3
   
-  # 7. Kimi (Moonshot) 🥉
   kimi:
     api_key: "${KIMI_API_KEY}"
     base_url: "https://api.moonshot.cn/v1"
@@ -130,7 +107,6 @@ ai_providers:
     batch_size: 3
     max_concurrent: 2
   
-  # 8. 通义千问 (阿里云)
   qwen:
     api_key: "${DASHSCOPE_API_KEY}"
     base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
@@ -141,40 +117,6 @@ ai_providers:
     batch_size: 5
     max_concurrent: 3
   
-  # 9. 百度文心
-  wenxin:
-    api_key: "${WENXIN_API_KEY}"
-    base_url: "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat"
-    model: "completions_pro"
-    max_tokens: 2000
-    temperature: 0.3
-    rate_limit_rpm: 60
-    batch_size: 5
-    max_concurrent: 3
-  
-  # 10. 讯飞星火
-  spark:
-    api_key: "${SPARK_API_KEY}"
-    base_url: "wss://spark-api.xf-yun.com/v3.5/chat"
-    model: "generalv3.5"
-    max_tokens: 2000
-    temperature: 0.3
-    rate_limit_rpm: 50
-    batch_size: 5
-    max_concurrent: 3
-  
-  # 11. 零一万物
-  yi:
-    api_key: "${YI_API_KEY}"
-    base_url: "https://api.lingyiwanwu.com/v1"
-    model: "yi-large"
-    max_tokens: 2000
-    temperature: 0.3
-    rate_limit_rpm: 60
-    batch_size: 5
-    max_concurrent: 3
-  
-  # 12. MiniMax
   minimax:
     api_key: "${MINIMAX_API_KEY}"
     base_url: "https://api.minimax.chat/v1"
@@ -184,32 +126,15 @@ ai_providers:
     rate_limit_rpm: 60
     batch_size: 5
     max_concurrent: 3
-  
-  # ==================== 本地部署 ====================
-  
-  # 13. Ollama 本地模型
-  ollama:
-    api_key: "ollama"
-    base_url: "http://localhost:11434/v1"
-    model: "qwen2.5:14b"
-    max_tokens: 2000
-    temperature: 0.3
-    rate_limit_rpm: 1000
-    batch_size: 10
-    max_concurrent: 5
 
-# ==========================================
-# 自动回退配置
-# ==========================================
+
 fallback:
   enabled: true
   max_retries_per_provider: 2
   fallback_chain:
-    - "deepseek"
     - "zhipu"
-    - "gemini"
-    - "openai"
-
+    - "deepseek"
+    
 # ==========================================
 # 全局评分标准（所有提供商共享）
 # ==========================================
