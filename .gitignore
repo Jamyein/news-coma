@@ -41,3 +41,5 @@ env/
 
 # 日志
 *.log
+src/__init__.py
+/.sisyphus
