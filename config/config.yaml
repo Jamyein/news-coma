@@ -1,0 +1,247 @@
+# ==========================================
+# RSS 新闻聚合配置
+# 支持14家国内外LLM提供商
+# ==========================================
+
+# ==========================================
+# 数据源配置
+# ==========================================
+rss_sources:
+  - name: "TechCrunch"
+    url: "https://techcrunch.com/feed/"
+    weight: 1.0
+    category: "科技"
+    enabled: true
+  
+  - name: "GitHub Blog"
+    url: "https://github.blog/feed/"
+    weight: 1.2
+    category: "开发"
+    enabled: true
+  
+  - name: "Hacker News"
+    url: "https://news.ycombinator.com/rss"
+    weight: 1.5
+    category: "技术"
+    enabled: true
+  
+  - name: "The Verge"
+    url: "https://www.theverge.com/rss/index.xml"
+    weight: 0.9
+    category: "科技"
+    enabled: true
+  
+  - name: "InfoQ"
+    url: "https://feed.infoq.cn/"
+    weight: 1.1
+    category: "架构"
+    enabled: true
+
+# ==========================================
+# AI 提供商配置（简化版）
+# 只需修改 ai_provider 字段即可切换
+# ==========================================
+
+# 当前使用的提供商
+# 可选值: gemini, openai, azure, claude, deepseek, zhipu, kimi, qwen, wenxin, spark, yi, minimax, ollama
+ai_provider: "deepseek"
+
+# ==========================================
+# 所有提供商配置（按需填写）
+# ==========================================
+ai_providers:
+  
+  # ==================== 国际提供商 ====================
+  
+  # 1. Gemini (Google) - 免费 generous
+  gemini:
+    api_key: "${GEMINI_API_KEY}"
+    base_url: "https://generativelanguage.googleapis.com/v1beta/openai/"
+    model: "gemini-1.5-flash"
+    max_tokens: 2000
+    temperature: 0.3
+    rate_limit_rpm: 15
+    batch_size: 3
+    max_concurrent: 2
+  
+  # 2. OpenAI - 付费
+  openai:
+    api_key: "${OPENAI_API_KEY}"
+    base_url: "https://api.openai.com/v1"
+    model: "gpt-4o-mini"
+    max_tokens: 2000
+    temperature: 0.3
+    batch_size: 5
+    max_concurrent: 3
+  
+  # 3. Azure OpenAI - 企业付费
+  azure:
+    api_key: "${AZURE_OPENAI_API_KEY}"
+    base_url: "https://{your-resource}.openai.azure.com/openai/deployments/{deployment}"
+    model: "gpt-4"
+    max_tokens: 2000
+    temperature: 0.3
+    batch_size: 5
+    max_concurrent: 3
+  
+  # 4. Claude (Anthropic) - 付费
+  claude:
+    api_key: "${ANTHROPIC_API_KEY}"
+    base_url: "https://api.anthropic.com/v1"
+    model: "claude-3-haiku-20240307"
+    max_tokens: 2000
+    temperature: 0.3
+    rate_limit_rpm: 50
+    batch_size: 5
+    max_concurrent: 3
+  
+  # ==================== 国内提供商 ====================
+  
+  # 5. DeepSeek - 免费 generous 🥇
+  deepseek:
+    api_key: "${DEEPSEEK_API_KEY}"
+    base_url: "https://api.deepseek.com/v1"
+    model: "deepseek-chat"
+    max_tokens: 2000
+    temperature: 0.3
+    rate_limit_rpm: 60
+    batch_size: 5
+    max_concurrent: 3
+  
+  # 6. 智谱GLM - 免费 generous 🥈
+  zhipu:
+    api_key: "${ZHIPU_API_KEY}"
+    base_url: "https://open.bigmodel.cn/api/paas/v4"
+    model: "glm-4-flash"
+    max_tokens: 2000
+    temperature: 0.3
+    rate_limit_rpm: 100
+    batch_size: 5
+    max_concurrent: 3
+  
+  # 7. Kimi (Moonshot) 🥉
+  kimi:
+    api_key: "${KIMI_API_KEY}"
+    base_url: "https://api.moonshot.cn/v1"
+    model: "moonshot-v1-8k"
+    max_tokens: 2000
+    temperature: 0.3
+    rate_limit_rpm: 30
+    batch_size: 3
+    max_concurrent: 2
+  
+  # 8. 通义千问 (阿里云)
+  qwen:
+    api_key: "${DASHSCOPE_API_KEY}"
+    base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    model: "qwen-max"
+    max_tokens: 2000
+    temperature: 0.3
+    rate_limit_rpm: 60
+    batch_size: 5
+    max_concurrent: 3
+  
+  # 9. 百度文心
+  wenxin:
+    api_key: "${WENXIN_API_KEY}"
+    base_url: "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat"
+    model: "completions_pro"
+    max_tokens: 2000
+    temperature: 0.3
+    rate_limit_rpm: 60
+    batch_size: 5
+    max_concurrent: 3
+  
+  # 10. 讯飞星火
+  spark:
+    api_key: "${SPARK_API_KEY}"
+    base_url: "wss://spark-api.xf-yun.com/v3.5/chat"
+    model: "generalv3.5"
+    max_tokens: 2000
+    temperature: 0.3
+    rate_limit_rpm: 50
+    batch_size: 5
+    max_concurrent: 3
+  
+  # 11. 零一万物
+  yi:
+    api_key: "${YI_API_KEY}"
+    base_url: "https://api.lingyiwanwu.com/v1"
+    model: "yi-large"
+    max_tokens: 2000
+    temperature: 0.3
+    rate_limit_rpm: 60
+    batch_size: 5
+    max_concurrent: 3
+  
+  # 12. MiniMax
+  minimax:
+    api_key: "${MINIMAX_API_KEY}"
+    base_url: "https://api.minimax.chat/v1"
+    model: "abab6.5-chat"
+    max_tokens: 2000
+    temperature: 0.3
+    rate_limit_rpm: 60
+    batch_size: 5
+    max_concurrent: 3
+  
+  # ==================== 本地部署 ====================
+  
+  # 13. Ollama 本地模型
+  ollama:
+    api_key: "ollama"
+    base_url: "http://localhost:11434/v1"
+    model: "qwen2.5:14b"
+    max_tokens: 2000
+    temperature: 0.3
+    rate_limit_rpm: 1000
+    batch_size: 10
+    max_concurrent: 5
+
+# ==========================================
+# 自动回退配置
+# ==========================================
+fallback:
+  enabled: true
+  max_retries_per_provider: 2
+  fallback_chain:
+    - "deepseek"
+    - "zhipu"
+    - "gemini"
+    - "openai"
+
+# ==========================================
+# 全局评分标准（所有提供商共享）
+# ==========================================
+scoring_criteria:
+  importance: 0.30      # 重要性
+  timeliness: 0.20      # 时效性
+  technical_depth: 0.20 # 技术深度
+  audience_breadth: 0.15 # 受众广度
+  practicality: 0.15    # 实用性
+
+# ==========================================
+# 系统配置
+# ==========================================
+retry_attempts: 3
+timeout: 120
+
+# ==========================================
+# 输出配置
+# ==========================================
+output:
+  max_news_count: 10      # 每期精选新闻数量
+  max_feed_items: 50      # RSS feed 保留条数
+  archive_days: 30        # 归档保留天数
+  time_window_days: 7     # 只处理最近 N 天的新闻
+
+# ==========================================
+# 过滤配置
+# ==========================================
+filters:
+  min_score_threshold: 6.0  # 最低评分阈值
+  dedup_similarity: 0.85    # 标题相似度阈值(0-1)
+  blocked_keywords:         # 屏蔽关键词列表
+    - "广告"
+    - "推广"
+    - "促销"

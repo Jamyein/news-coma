@@ -1,0 +1,99 @@
+name: RSS News Aggregator
+
+on:
+  # 每6小时运行一次 (UTC时间: 00:00, 06:00, 12:00, 18:00)
+  schedule:
+    - cron: '0 0,6,12,18 * * *'
+  
+  # 手动触发
+  workflow_dispatch:
+    inputs:
+      debug_mode:
+        description: 'Debug模式(保留临时文件)'
+        required: false
+        default: false
+        type: boolean
+
+# 权限配置 (最小权限原则)
+permissions:
+  contents: write  # 用于提交生成的文件
+
+# 并发控制 - 防止多个工作流同时运行
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+env:
+  PYTHON_VERSION: '3.11'
+  
+  # ==========================================
+  # AI提供商API Keys（支持14家LLM）
+  # 根据config.yaml中的ai_provider自动选择
+  # 只需在GitHub Secrets中设置你使用的提供商
+  # ==========================================
+  
+  # 国际提供商
+  GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+  AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+  ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+  
+  # 国内提供商
+  DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+  ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+  KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
+  DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+  WENXIN_API_KEY: ${{ secrets.WENXIN_API_KEY }}
+  SPARK_API_KEY: ${{ secrets.SPARK_API_KEY }}
+  YI_API_KEY: ${{ secrets.YI_API_KEY }}
+  MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
+
+jobs:
+  aggregate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. 检出代码
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取完整历史
+      
+      # 2. 设置Python环境
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+      
+      # 3. 安装依赖
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      # 4. 运行主程序
+      - name: Run RSS Aggregator
+        id: aggregator
+        run: python src/main.py
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        continue-on-error: false
+      
+      # 5. 提交生成的文件
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          # 检查是否有变更
+          if [ -n "$(git status --porcelain)" ]; then
+            git add docs/ archive/ feed.xml data/
+            git commit -m "📰 Update news aggregation [$(date -u +'%Y-%m-%d %H:%M UTC')]"
+            git push
+            echo "✅ Changes committed and pushed"
+          else
+            echo "ℹ️ No changes to commit"
+          fi
