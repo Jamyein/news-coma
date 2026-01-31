@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-01-31T10:11:57.554952",
+  "last_run": "2026-01-31T10:23:43.192365",
   "processed_urls": [
     "https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding",
     "https://viewfromthewing.com/court-filings-ice-uses-mobile-fortify-to-identify-protesters-global-entry-and-precheck-get-revoked/",
@@ -80,12 +80,14 @@
     "https://piunikaweb.com/2026/01/28/youtube-background-play-samsung-internet-brave/",
     "https://terraformindustries.wordpress.com/2026/01/30/direct-current-data-centers/",
     "https://somehowmanage.com/2026/01/22/a-step-behind-the-bleeding-edge-monarchs-philosophy-on-ai-in-dev/",
-    "https://jaisenmathai.com/articles/my-ridiculously-robust-photo-management-system-immich-edition/"
+    "https://jaisenmathai.com/articles/my-ridiculously-robust-photo-management-system-immich-edition/",
+    "https://physicsworld.com/a/cern-accepts-1bn-in-private-cash-towards-future-circular-collider/",
+    "https://news.ycombinator.com/item?id=46834977"
   ],
   "stats": {
-    "total_runs": 6,
-    "total_news_processed": 145,
-    "avg_news_per_run": 24.2
+    "total_runs": 7,
+    "total_news_processed": 147,
+    "avg_news_per_run": 21.0
   },
   "source_stats": {
     "The Verge": {
@@ -93,8 +95,8 @@
       "selected": 6
     },
     "Hacker News": {
-      "fetched": 74,
-      "selected": 18
+      "fetched": 76,
+      "selected": 19
     },
     "TechCrunch": {
       "fetched": 40,
@@ -435,10 +437,34 @@
       ],
       "cached_at": "2026-01-31T10:12:27.620240",
       "source": "Hacker News"
+    },
+    "e775cb8f52790563": {
+      "ai_score": 7.7,
+      "translated_title": "CERN获得10亿美元私人资金用于未来圆形对撞机",
+      "ai_summary": "欧洲核子研究中心（CERN）成功筹集了10亿美元私人资金，用于建设未来圆形对撞机。这一举措将加速粒子物理学的进展，对整个科技行业具有深远影响。",
+      "key_points": [
+        "CERN获得巨额私人资金支持",
+        "未来圆形对撞机建设加速",
+        "对粒子物理学和科技行业具有重大意义"
+      ],
+      "cached_at": "2026-01-31T10:23:58.933610",
+      "source": "Hacker News"
+    },
+    "c5fd7d737ce60d5b": {
+      "ai_score": 5.9,
+      "translated_title": "问HN：你们还使用物理计算器吗？",
+      "ai_summary": "在数字化时代，物理计算器的使用是否已经过时？这一话题引发了广泛的讨论，反映了科技产品对日常生活的影响。",
+      "key_points": [
+        "物理计算器的使用现状",
+        "数字化时代科技产品的变迁",
+        "对日常生活的影响"
+      ],
+      "cached_at": "2026-01-31T10:23:58.933623",
+      "source": "Hacker News"
     }
   },
   "cache_hits": 6,
-  "cache_lookups": 80,
+  "cache_lookups": 82,
   "run_metrics": [
     {
       "run_time": "2026-01-31T06:47:45.364104",
@@ -494,6 +520,17 @@
       "semantic_duplicates": 0,
       "duration_seconds": 30.067631,
       "avg_score": 7.4
+    },
+    {
+      "run_time": "2026-01-31T10:23:43.192365",
+      "news_count": 2,
+      "api_calls": 1,
+      "cache_hits": 0,
+      "cache_misses": 0,
+      "duplicates_removed": 0,
+      "semantic_duplicates": 0,
+      "duration_seconds": 15.744205,
+      "avg_score": 7.7
     }
   ]
 }

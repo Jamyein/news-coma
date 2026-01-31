@@ -5,8 +5,8 @@
     <link>https://github.com/Jamyein/news-coma</link>
     <description>由 AI 筛选的高质量科技新闻聚合，每6小时自动更新</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 31 Jan 2026 10:12:27 GMT</lastBuildDate>
-    <pubDate>Sat, 31 Jan 2026 10:12:27 GMT</pubDate>
+    <lastBuildDate>Sat, 31 Jan 2026 10:23:58 GMT</lastBuildDate>
+    <pubDate>Sat, 31 Jan 2026 10:23:58 GMT</pubDate>
     <atom:link href="https://Jamyein.github.io/news-coma/feed.xml" rel="self" type="application/rss+xml" />
     <image>
         <url>https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</url>
@@ -17,18 +17,479 @@
     <item>
         <title>2026年01月31日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-01-31.md</link>
-        <description>本期精选 4 条高质量科技新闻</description>
-        <pubDate>Sat, 31 Jan 2026 10:12:27 GMT</pubDate>
+        <description>本期精选 1 条高质量科技新闻</description>
+        <pubDate>Sat, 31 Jan 2026 10:23:58 GMT</pubDate>
         <guid>archive/2026-01-31.md</guid>
         <category>科技新闻</category>
+        <content:encoded><![CDATA[# 📰 科技新闻精选
+
+> 🕐 更新时间: 2026年01月31日 18:23 (北京时间)  
+> 📊 本期精选 **1** 条高质量科技新闻  
+> 🤖 由 AI 自动筛选、翻译和总结
+
+---
+
+### 1. 星链更新隐私政策，允许消费者数据用于训练
+
+**📌 来源**: Hacker News | **🏷️ 分类**: 技术 | **⭐ 评分**: 7.7/10
+
+**📝 摘要**:
+星链公司更新了其隐私政策，允许使用消费者数据来训练其系统，这一举措引发了关于数据隐私和用户信任的讨论。
+
+**💡 关键要点**:
+- 星链
+- 隐私政策
+- 数据训练
+- 用户信任
+
+**🔗 原文链接**: [Starlink updates privacy policy to allow consumer data to train](https://finance.yahoo.com/news/musks-starlink-updates-privacy-policy-230853500.html)
+
+---
+
+### 2. 参议院通过预算，国土安全部获得两周资金延期
+
+**📌 来源**: The Verge | **🏷️ 分类**: 科技 | **⭐ 评分**: 7.7/10
+
+**📝 摘要**:
+美国参议院通过联邦预算，除国土安全部外，所有部门获得资金。国土安全部获得两周资金延期以就移民和海关执法局（ICE）的新规则进行谈判。若无法达成协议，国土安全部资金将中断。
+
+**💡 关键要点**:
+- 参议院通过预算
+- 国土安全部资金延期
+- ICE新规则谈判
+
+**🔗 原文链接**: [Senate passes budget with two more weeks of Homeland Security funding](https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding)
+
+---
+
+### 3. 使用GitHub Copilot CLI在终端中实现强大的代理工作流程
+
+**📌 来源**: GitHub Blog | **🏷️ 分类**: 开发 | **⭐ 评分**: 7.7/10
+
+**📝 摘要**:
+GitHub博客发布了一篇关于GitHub Copilot CLI的文章，介绍了如何直接从终端与Copilot交互，探索了这一工具在开发领域的应用和潜力。
+
+**💡 关键要点**:
+- GitHub Copilot CLI
+- 终端交互
+- 开发工具
+- 工作流程优化
+
+**🔗 原文链接**: [Power agentic workflows in your terminal with GitHub Copilot CLI](https://github.blog/ai-and-ml/github-copilot/power-agentic-workflows-in-your-terminal-with-github-copilot-cli/)
+
+---
+
+### 4. iPhone创下最佳季度销售记录
+
+**📌 来源**: TechCrunch | **🏷️ 分类**: 科技 | **⭐ 评分**: 7.5/10
+
+**📝 摘要**:
+得益于中国和印度等地区市场的增长，苹果的iPhone销量创下历史新高。
+
+**💡 关键要点**:
+- iPhone销售记录
+- 市场增长
+- 苹果公司
+
+**🔗 原文链接**: [The iPhone just had its best quarter ever](https://techcrunch.com/2026/01/29/the-iphone-just-had-its-best-quarter-ever/)
+
+---
+
+### 5. 俄罗斯黑客因安全漏洞入侵波兰电网
+
+**📌 来源**: TechCrunch | **🏷️ 分类**: 科技 | **⭐ 评分**: 7.4/10
+
+**📝 摘要**:
+波兰政府指责俄罗斯政府黑客组织利用默认用户名和密码入侵能源设施。
+
+**💡 关键要点**:
+- 俄罗斯黑客入侵
+- 波兰电网
+- 安全漏洞
+
+**🔗 原文链接**: [Russian hackers breached Polish power grid thanks to bad security, report says](https://techcrunch.com/2026/01/30/russian-hackers-breached-polish-power-grid-thanks-to-bad-security-report-says/)
+
+---
+
+### 6. SpaceX的IPO可能开启大门，同时二级市场繁荣
+
+**📌 来源**: TechCrunch | **🏷️ 分类**: 科技 | **⭐ 评分**: 7.3/10
+
+**📝 摘要**:
+SpaceX的IPO讨论引发关注，同时其二级市场交易活跃。Rainmaker Securities的Greg Martin分析了私人流动性在IPO前的运作方式。
+
+**💡 关键要点**:
+- SpaceX IPO
+- 二级市场交易
+- 私人流动性
+
+**🔗 原文链接**: [SpaceX’s IPO could open the floodgates — and secondaries are booming in the meantime](https://techcrunch.com/2026/01/30/spacexs-ipo-could-open-the-floodgates-and-secondaries-are-booming-in-the-meantime/)
+
+---
+
+### 7. Uber在自动驾驶汽车领域占据领先地位
+
+**📌 来源**: TechCrunch | **🏷️ 分类**: 科技 | **⭐ 评分**: 7.3/10
+
+**📝 摘要**:
+Uber通过投资自动驾驶卡车初创公司Waabi，进一步扩大其机器人出租车业务。这笔交易是Uber在自动驾驶领域的又一重要举措。
+
+**💡 关键要点**:
+- Uber自动驾驶
+- Waabi融资
+- 机器人出租车
+
+**🔗 原文链接**: [Uber is literally in the driver’s seat when it comes to AV bets](https://techcrunch.com/video/uber-is-literally-in-the-drivers-seat-when-it-comes-to-av-bets/)
+
+---
+
+### 8. 设计一个被动安全的API
+
+**📌 来源**: Hacker News | **🏷️ 分类**: 技术 | **⭐ 评分**: 7.3/10
+
+**📝 摘要**:
+一篇技术文章探讨了如何设计一个既安全又易于使用的API，这对于软件开发者来说是一个重要的参考。
+
+**💡 关键要点**:
+- API设计
+- 安全性
+- 易用性
+- 软件开发
+
+**🔗 原文链接**: [Designing a Passively Safe API](https://www.danealbaugh.com/articles/passively-safe-apis)
+
+---
+
+### 9. 谷歌推出AI世界生成工具，游戏公司股价下跌
+
+**📌 来源**: The Verge | **🏷️ 分类**: 科技 | **⭐ 评分**: 7.0/10
+
+**📝 摘要**:
+谷歌宣布其Project Genie工具，允许用户通过AI生成互动体验，导致一些主要游戏公司的股价下跌。
+
+**💡 关键要点**:
+- 谷歌AI工具
+- 游戏公司股价下跌
+- AI对游戏行业的影响
+
+**🔗 原文链接**: [Video game company stock prices dip after Google introduces an AI world-generation tool](https://www.theverge.com/games/871348/google-project-genie-take-two-roblox-unity)
+
+---
+
+### 10. Sequoia支持的Ethos成功上市，而竞争对手未能如愿
+
+**📌 来源**: TechCrunch | **🏷️ 分类**: 科技 | **⭐ 评分**: 7.0/10
+
+**📝 摘要**:
+盈利的生命保险平台Ethos成为首批测试2026年公开市场的科技巨头之一。
+
+**💡 关键要点**:
+- Ethos上市
+- 公开市场测试
+- 生命保险平台
+
+**🔗 原文链接**: [How Sequoia-backed Ethos reached the public market while rivals fell short](https://techcrunch.com/2026/01/29/how-sequoia-backed-ethos-reached-the-public-market-while-rivals-fell-short/)
+
+---
+
+## 📮 订阅
+
+- **RSS订阅**: [feed.xml](https://raw.githubusercontent.com/{username}/{repo}/main/feed.xml)
+- **更新时间**: 每6小时自动更新
+- **生成方式**: GitHub Actions + OpenAI GPT-4o-mini
+
+---
+
+*本项目自动聚合科技新闻，由AI筛选最有价值的内容*
+### 11. 最新富士拍立得打印机：价格昂贵但值得升级
+
+**📌 来源**: The Verge | **🏷️ 分类**: 科技 | **⭐ 评分**: 7.7/10
+
+**📝 摘要**:
+富士胶片的Instax Mini Link 3打印机是我旅行日记套件中备受喜爱的100美元配件。我经常将打印的图像贴在手写的想法旁边，以保存一个时刻。然而，这种即时胶片打印出的图像可能会显得模糊不清，而新的Instax Mini Link+则承诺解决这个问题。
+
+**💡 关键要点**:
+- 富士胶片发布新款Instax Mini Link+打印机
+- 新打印机售价169.95美元
+- 旨在改善即时胶片打印质量
+
+**🔗 原文链接**: [The latest Instax printer is a pricey but worthy upgrade](https://www.theverge.com/tech/870603/fujifilm-instax-mini-link-plus-reivew-improved-photos)
+
+---
+
+### 12. 关于向后兼容性的轶事
+
+**📌 来源**: Hacker News | **🏷️ 分类**: 技术 | **⭐ 评分**: 6.3/10
+
+**📝 摘要**:
+评论。
+
+**💡 关键要点**:
+- 向后兼容性的讨论
+- 技术性话题
+- 未提供具体内容
+
+**🔗 原文链接**: [An anecdote about backward compatibility](https://blog.plover.com/2026/01/26/#wrterm)
+
+---
+
+### 13. 美国优先可能使美国孤立无援
+
+**📌 来源**: Hacker News | **🏷️ 分类**: 技术 | **⭐ 评分**: 6.1/10
+
+**📝 摘要**:
+评论。
+
+**💡 关键要点**:
+- 美国优先政策可能带来的孤立风险
+- 评论性质的文章
+- 未提供具体内容
+
+**🔗 原文链接**: [America First Risks Becoming America Alone](https://www.wsj.com/world/how-america-first-risks-becoming-america-alone-6592701a)
+
+---
+
+## 📮 订阅
+
+- **RSS订阅**: [feed.xml](https://raw.githubusercontent.com/{username}/{repo}/main/feed.xml)
+- **更新时间**: 每6小时自动更新
+- **生成方式**: GitHub Actions + OpenAI GPT-4o-mini
+
+---
+
+*本项目自动聚合科技新闻，由AI筛选最有价值的内容*
+
+## 📮 订阅
+
+- **RSS订阅**: [feed.xml](https://raw.githubusercontent.com/{username}/{repo}/main/feed.xml)
+- **更新时间**: 每6小时自动更新
+- **生成方式**: GitHub Actions + OpenAI GPT-4o-mini
+
+---
+
+*本项目自动聚合科技新闻，由AI筛选最有价值的内容*
+### 14. 苏美尔星图记录了小行星撞击事件
+
+**📌 来源**: Hacker News | **🏷️ 分类**: 技术 | **⭐ 评分**: 7.7/10
+
+**📝 摘要**:
+一项新的研究揭示了苏美尔星图记录了约公元前2300年一次小行星撞击地球的事件，这一发现对理解古代天文学和地球环境变化具有重要意义。
+
+**💡 关键要点**:
+- 苏美尔星图
+- 小行星撞击
+- 古代天文学
+- 地球环境变化
+
+**🔗 原文链接**: [Sumerian Star Map Recorded the Impact of an Asteroid (2024)](https://archaeologyworlds.com/5500-year-old-sumerian-star-map-recorded/)
+
+---
+
+### 15. 编码时我们最不 productive
+
+**📌 来源**: Hacker News | **🏷️ 分类**: 技术 | **⭐ 评分**: 6.8/10
+
+**📝 摘要**:
+一项研究表明，在编码过程中，程序员可能会因为各种原因而降低工作效率，了解这些原因有助于提高编程效率和团队协作。
+
+**💡 关键要点**:
+- 编码效率
+- 程序员生产力
+- 团队协作
+- 编程研究
+
+**🔗 原文链接**: [Coding Is When We're Least Productive](https://codemanship.wordpress.com/2026/01/30/coding-is-when-were-least-productive/)
+
+---
+
+## 📮 订阅
+
+- **RSS订阅**: [feed.xml](https://raw.githubusercontent.com/{username}/{repo}/main/feed.xml)
+- **更新时间**: 每6小时自动更新
+- **生成方式**: GitHub Actions + OpenAI GPT-4o-mini
+
+---
+
+*本项目自动聚合科技新闻，由AI筛选最有价值的内容*
+
+## 📮 订阅
+
+- **RSS订阅**: [feed.xml](https://raw.githubusercontent.com/{username}/{repo}/main/feed.xml)
+- **更新时间**: 每6小时自动更新
+- **生成方式**: GitHub Actions + OpenAI GPT-4o-mini
+
+---
+
+*本项目自动聚合科技新闻，由AI筛选最有价值的内容*
+### 16. YouTube禁止Brave和其他浏览器后台播放视频
+
+**📌 来源**: Hacker News | **🏷️ 分类**: 技术 | **⭐ 评分**: 7.7/10
+
+**📝 摘要**:
+YouTube近日宣布将禁止Brave和其他浏览器后台播放视频，这一举措可能会影响这些浏览器的用户体验，并对广告收入产生一定影响。
+
+**💡 关键要点**:
+- YouTube
+- Brave浏览器
+- 后台播放视频
+- 用户体验
+- 广告收入
+
+**🔗 原文链接**: [YouTube blocks background video playback on Brave and other Browsers](https://piunikaweb.com/2026/01/28/youtube-background-play-samsung-internet-brave/)
+
+---
+
+### 17. 站在AI开发前沿的背后：关于AI的哲学思考
+
+**📌 来源**: Hacker News | **🏷️ 分类**: 技术 | **⭐ 评分**: 7.4/10
+
+**📝 摘要**:
+本文探讨了在AI开发过程中的一些哲学思考，包括AI的伦理、责任和未来发展方向。
+
+**💡 关键要点**:
+- AI开发
+- 哲学思考
+- 伦理
+- 责任
+- 未来发展方向
+
+**🔗 原文链接**: [A Step Behind the Bleeding Edge: A Philosophy on AI in Dev](https://somehowmanage.com/2026/01/22/a-step-behind-the-bleeding-edge-monarchs-philosophy-on-ai-in-dev/)
+
+---
+
+### 18. 直流数据中心
+
+**📌 来源**: Hacker News | **🏷️ 分类**: 技术 | **⭐ 评分**: 7.3/10
+
+**📝 摘要**:
+直流数据中心是一种新型的数据中心设计，它使用直流电源而不是传统的交流电源，旨在提高能源效率和降低成本。
+
+**💡 关键要点**:
+- 直流电源
+- 数据中心
+- 能源效率
+- 成本降低
+- 新型设计
+
+**🔗 原文链接**: [Direct Current Data Centers](https://terraformindustries.wordpress.com/2026/01/30/direct-current-data-centers/)
+
+---
+
+### 19. 我那令人难以置信的强大照片管理系统（Immich版）
+
+**📌 来源**: Hacker News | **🏷️ 分类**: 技术 | **⭐ 评分**: 7.2/10
+
+**📝 摘要**:
+本文介绍了一种名为Immich的照片管理系统，它提供了一种高效且易于使用的照片管理解决方案。
+
+**💡 关键要点**:
+- 照片管理系统
+- Immich
+- 高效管理
+- 易于使用
+- 解决方案
+
+**🔗 原文链接**: [My Ridiculously Robust Photo Management System (Immich Edition)](https://jaisenmathai.com/articles/my-ridiculously-robust-photo-management-system-immich-edition/)
+
+---
+
+## 📮 订阅
+
+- **RSS订阅**: [feed.xml](https://raw.githubusercontent.com/{username}/{repo}/main/feed.xml)
+- **更新时间**: 每6小时自动更新
+- **生成方式**: GitHub Actions + OpenAI GPT-4o-mini
+
+---
+
+*本项目自动聚合科技新闻，由AI筛选最有价值的内容*
+
+## 📮 订阅
+
+- **RSS订阅**: [feed.xml](https://raw.githubusercontent.com/{username}/{repo}/main/feed.xml)
+- **更新时间**: 每6小时自动更新
+- **生成方式**: GitHub Actions + OpenAI GPT-4o-mini
+
+---
+
+*本项目自动聚合科技新闻，由AI筛选最有价值的内容*
+### 20. CERN获得10亿美元私人资金用于未来圆形对撞机
+
+**📌 来源**: Hacker News | **🏷️ 分类**: 技术 | **⭐ 评分**: 7.7/10
+
+**📝 摘要**:
+欧洲核子研究中心（CERN）成功筹集了10亿美元私人资金，用于建设未来圆形对撞机。这一举措将加速粒子物理学的进展，对整个科技行业具有深远影响。
+
+**💡 关键要点**:
+- CERN获得巨额私人资金支持
+- 未来圆形对撞机建设加速
+- 对粒子物理学和科技行业具有重大意义
+
+**🔗 原文链接**: [CERN accepts $1B in private cash towards Future Circular Collider](https://physicsworld.com/a/cern-accepts-1bn-in-private-cash-towards-future-circular-collider/)
+
+---
+
+## 📮 订阅
+
+- **RSS订阅**: [feed.xml](https://raw.githubusercontent.com/{username}/{repo}/main/feed.xml)
+- **更新时间**: 每6小时自动更新
+- **生成方式**: GitHub Actions + OpenAI GPT-4o-mini
+
+---
+
+*本项目自动聚合科技新闻，由AI筛选最有价值的内容*
+
+## 📮 订阅
+
+- **RSS订阅**: [feed.xml](https://raw.githubusercontent.com/{username}/{repo}/main/feed.xml)
+- **更新时间**: 每6小时自动更新
+- **生成方式**: GitHub Actions + OpenAI GPT-4o-mini
+
+---
+
+*本项目自动聚合科技新闻，由AI筛选最有价值的内容*
+]]></content:encoded>
     </item>
     <item>
         <title>2026年01月31日 新闻汇总</title>
         <link>https://Jamyein.github.io/news-coma/</link>
-        <description>本期精选 4 条高质量科技新闻</description>
-        <pubDate>Sat, 31 Jan 2026 10:12:27 GMT</pubDate>
+        <description>本期精选 1 条高质量科技新闻</description>
+        <pubDate>Sat, 31 Jan 2026 10:23:58 GMT</pubDate>
         <guid>docs/latest.md</guid>
         <category>科技新闻</category>
+        <content:encoded><![CDATA[# 📰 科技新闻精选
+
+> 🕐 更新时间: 2026年01月31日 18:23 (北京时间)  
+> 📊 本期精选 **1** 条高质量科技新闻  
+> 🤖 由 AI 自动筛选、翻译和总结
+
+---
+
+### 1. CERN获得10亿美元私人资金用于未来圆形对撞机
+
+**📌 来源**: Hacker News | **🏷️ 分类**: 技术 | **⭐ 评分**: 7.7/10
+
+**📝 摘要**:
+欧洲核子研究中心（CERN）成功筹集了10亿美元私人资金，用于建设未来圆形对撞机。这一举措将加速粒子物理学的进展，对整个科技行业具有深远影响。
+
+**💡 关键要点**:
+- CERN获得巨额私人资金支持
+- 未来圆形对撞机建设加速
+- 对粒子物理学和科技行业具有重大意义
+
+**🔗 原文链接**: [CERN accepts $1B in private cash towards Future Circular Collider](https://physicsworld.com/a/cern-accepts-1bn-in-private-cash-towards-future-circular-collider/)
+
+---
+
+## 📮 订阅
+
+- **RSS订阅**: [feed.xml](https://raw.githubusercontent.com/{username}/{repo}/main/feed.xml)
+- **更新时间**: 每6小时自动更新
+- **生成方式**: GitHub Actions + OpenAI GPT-4o-mini
+
+---
+
+*本项目自动聚合科技新闻，由AI筛选最有价值的内容*
+]]></content:encoded>
     </item>
 </channel>
 </rss>
