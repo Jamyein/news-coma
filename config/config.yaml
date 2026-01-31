@@ -42,10 +42,11 @@ rss_sources:
 # 只需修改 ai_provider 字段即可切换
 # ==========================================
 
+
 ai:
 # 当前使用的提供商
 # 可选值: gemini, openai, azure, claude, deepseek, zhipu, kimi, qwen, wenxin, spark, yi, minimax, ollama
-  ai_provider: "gemini"
+  ai_provider: "zhipu"
 
   ai_providers:
   
@@ -55,9 +56,9 @@ ai:
       model: "gemini-3-flash-preview"
       max_tokens: 4000
       temperature: 0.3
-      rate_limit_rpm: 3
-      batch_size: 3
-      max_concurrent: 2
+      rate_limit_rpm: 5
+      batch_size: 5
+      max_concurrent: 1
     
     openai:
       api_key: "${OPENAI_API_KEY}"
@@ -105,7 +106,7 @@ ai:
       max_tokens: 2000
       temperature: 0.3
       rate_limit_rpm: 30
-      batch_size: 3
+      batch_size: 5
       max_concurrent: 2
     
     qwen:
@@ -133,7 +134,7 @@ ai:
     enabled: true
     max_retries_per_provider: 2
     fallback_chain:
-      - "zhipu"
+      - "gemini"
       - "deepseek"
     
 # ==========================================
