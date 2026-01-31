@@ -57,32 +57,81 @@ class MarkdownGenerator:
         return str(latest_path), str(archive_path)
     
     def _build_content(self, items: List[NewsItem], timestamp: datetime) -> str:
-        """构建Markdown内容"""
-        # 转换为北京时间 (UTC+8)
+        """构建Markdown内容（三板块分区布局）"""
         from datetime import timedelta
         beijing_time = timestamp + timedelta(hours=8)
-        
-        header = f"""# 📰 科技新闻精选
+
+        # 按 ai_category 分组
+        finance_items = [item for item in items if item.ai_category == "财经"]
+        tech_items = [item for item in items if item.ai_category == "科技"]
+        politics_items = [item for item in items if item.ai_category == "社会政治"]
+
+        # 计算各板块精选数量
+        total_count = len(items)
+
+        header = f"""# 📰 新闻精选
 
 > 🕐 更新时间: {beijing_time.strftime("%Y年%m月%d日 %H:%M")} (北京时间)  
-> 📊 本期精选 **{len(items)}** 条高质量科技新闻  
-> 🤖 由 AI 自动筛选、翻译和总结
+> 📊 本期精选 **{total_count}** 条高质量新闻  
+> 📰 分为三大板块：财经(40%)、科技(30%)、社会政治(30%)  
+> 🤖 由 AI 自动分类、筛选、翻译和总结
 
 ---
 
 """
-        
-        if not items:
-            body = "*本期暂无符合条件的新闻*\n\n"
-        else:
-            body = ""
-            for i, item in enumerate(items, 1):
-                # 格式化关键要点
-                key_points_str = "\n".join([f"- {point}" for point in (item.key_points or ["暂无要点"])])
-                
-                body += f"""### {i}. {item.translated_title or item.title}
 
-**📌 来源**: {item.source} | **🏷️ 分类**: {item.category} | **⭐ 评分**: {item.ai_score or 'N/A'}/10
+        # 构建三板块内容
+        body = ""
+
+        # 财经板块
+        body += self._build_section("💰 财经新闻", finance_items, "财经")
+
+        # 科技板块
+        body += self._build_section("🔬 科技新闻", tech_items, "科技")
+
+        # 社会政治板块
+        body += self._build_section("🏛️ 社会政治", politics_items, "社会政治")
+
+        # 页脚
+        footer = """## 📮 订阅
+
+- **RSS订阅**: [feed.xml](https://raw.githubusercontent.com/{username}/{repo}/main/feed.xml)
+- **更新时间**: 每6小时自动更新
+- **生成方式**: GitHub Actions + OpenAI GPT-4o-mini
+
+---
+
+*本项目自动聚合新闻，由AI智能分类筛选最有价值的内容*
+"""
+
+        return header + body + footer
+
+    def _build_section(self, title: str, items: List[NewsItem], category: str) -> str:
+        """构建单个板块的内容"""
+        if not items:
+            return f"""## {title} (0条)
+
+*暂无{category}板块新闻*
+
+---
+
+"""
+
+        # 按AI评分排序
+        sorted_items = sorted(items, key=lambda x: (x.ai_score or 0, x.published_at), reverse=True)
+
+        section = f"""## {title} ({len(items)}条)
+
+精选 **{len(sorted_items)}** 条{category}新闻
+
+"""
+
+        for i, item in enumerate(sorted_items, 1):
+            key_points_str = "\n".join([f"- {point}" for point in (item.key_points or ["暂无要点"])])
+
+            section += f"""### {i}. {item.translated_title or item.title}
+
+**📌 来源**: {item.source} | **🏷️ AI分类**: {item.ai_category} | **⭐ 评分**: {item.ai_score or 'N/A'}/10
 
 **📝 摘要**:
 {item.ai_summary or '暂无摘要'}
@@ -95,20 +144,8 @@ class MarkdownGenerator:
 ---
 
 """
-        
-        # 添加页脚
-        footer = """## 📮 订阅
 
-- **RSS订阅**: [feed.xml](https://raw.githubusercontent.com/{username}/{repo}/main/feed.xml)
-- **更新时间**: 每6小时自动更新
-- **生成方式**: GitHub Actions + OpenAI GPT-4o-mini
-
----
-
-*本项目自动聚合科技新闻，由AI筛选最有价值的内容*
-"""
-        
-        return header + body + footer
+        return section
     
     def _merge_archive_content(self, existing: str, new: str) -> str:
         """

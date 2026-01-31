@@ -207,15 +207,16 @@ class RSSAggregator:
         return filtered
     
     def _select_top_news(self, items: List[NewsItem]) -> List[NewsItem]:
-        """选择Top N新闻（根据新闻总量动态决定N）"""
-        # 按AI评分排序
-        sorted_items = sorted(
-            items,
-            key=lambda x: (x.ai_score or 0, x.published_at),
-            reverse=True
-        )
+        """选择Top N新闻（按三板块4:3:3比例分配）"""
+        if not items:
+            return []
 
-        # 根据新闻总数动态决定精选数量
+        # 按 ai_category 分组
+        finance_items = [item for item in items if item.ai_category == "财经"]
+        tech_items = [item for item in items if item.ai_category == "科技"]
+        politics_items = [item for item in items if item.ai_category == "社会政治"]
+
+        # 计算精选总数
         total_count = len(items)
         if total_count <= 100:
             max_count = 10
@@ -224,9 +225,43 @@ class RSSAggregator:
         else:
             max_count = 30
 
-        # 取前N条（不超过总数）
-        top_items = sorted_items[:min(max_count, total_count)]
+        # 按 4:3:3 比例分配
+        finance_count = max(int(max_count * 0.4), 3)  # 最少3条
+        tech_count = max(int(max_count * 0.3), 2)       # 最少2条
+        politics_count = max(int(max_count * 0.3), 2)   # 最少2条
 
+        # 调整配额（如果某板块新闻不足，分配给其他板块）
+        # 从财经开始调整
+        if len(finance_items) < finance_count:
+            extra = finance_count - len(finance_items)
+            finance_count = len(finance_items)
+            tech_count += extra // 2
+            politics_count += extra - extra // 2
+
+        if len(tech_items) < tech_count:
+            extra = tech_count - len(tech_items)
+            tech_count = len(tech_items)
+            politics_count += extra
+
+        if len(politics_items) < politics_count:
+            extra = politics_count - len(politics_items)
+            politics_count = len(politics_items)
+            # 多余的配额分配给财经
+            finance_count = min(finance_count + extra, len(finance_items))
+
+        # 各自板块内按AI评分排序并选取
+        def sort_by_score(item_list):
+            return sorted(item_list, key=lambda x: (x.ai_score or 0, x.published_at), reverse=True)
+
+        selected_finance = sort_by_score(finance_items)[:finance_count]
+        selected_tech = sort_by_score(tech_items)[:tech_count]
+        selected_politics = sort_by_score(politics_items)[:politics_count]
+
+        # 合并所有选中新闻
+        top_items = selected_finance + selected_tech + selected_politics
+
+        # 记录各板块选取情况
+        logger.info(f"📊 三板块选取: 财经 {len(selected_finance)}条 | 科技 {len(selected_tech)}条 | 社会政治 {len(selected_politics)}条")
         logger.info(f"📋 从 {total_count} 条中精选 Top {len(top_items)} 条新闻")
 
         return top_items

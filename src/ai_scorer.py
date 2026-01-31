@@ -279,21 +279,54 @@ class AIScorer:
         return f"""
 你是一位资深科技新闻编辑。请对以下{len(items)}条科技新闻进行批量评分和分析。
 
-评分维度（1-10分制）：
+【核心任务】
+1. 新闻分类：将每条新闻分类到三板块之一
+2. 按板块评分：根据所属板块使用对应的评分标准
+
+【三板块分类标准】
+- 财经板块：涉及金融市场、经济数据、企业财务、投资理财等
+- 科技板块：涉及技术创新、产品研发、IT行业、人工智能等  
+- 社会政治板块：涉及政策法规、社会事件、国际关系、公共事务等
+
+【按板块评分标准】
+- 财经新闻（5维度）：
+  * 市场影响(40%)：对股市、债市、汇市等的影响程度
+  * 投资价值(30%)：对投资决策的参考价值
+  * 时效性(20%)：新闻的及时性和新鲜度
+  * 深度(10%)：分析的深度和专业性
+  * 受众广度(0%)：财经新闻此项权重为0
+
+- 科技新闻（5维度）：
+  * 技术创新(40%)：技术突破和创新程度
+  * 实用性(30%)：实际应用价值和可行性
+  * 影响力(20%)：对行业和社会的影响
+  * 深度(10%)：技术解读的专业深度
+  * 受众广度(0%)：科技新闻此项权重为0
+
+- 社会政治新闻（5维度）：
+  * 政策影响(40%)：对政策制定和执行的影响
+  * 公众关注度(30%)：社会关注度和讨论热度
+  * 时效性(20%)：新闻的及时性和紧迫性
+  * 深度(10%)：背景分析的深入程度
+  * 受众广度(0%)：社会政治新闻此项权重为0
+
+【评分维度（1-10分制）】
 {chr(10).join(criteria_desc)}
 
 新闻列表:
 {''.join(news_sections)}
 
-请严格按照以下JSON数组格式返回(不要添加markdown代码块标记)：
+【返回JSON数组格式】
 [
     {{
         "news_index": 1,
-        "importance": 8,
+        "category": "财经",
+        "category_confidence": 0.85,
+        "market_impact": 8,
+        "investment_value": 7,
         "timeliness": 9,
-        "technical_depth": 7,
-        "audience_breadth": 6,
-        "practicality": 8,
+        "depth": 6,
+        "audience_breadth": 0,
         "total_score": 7.5,
         "chinese_title": "翻译成中文的标题",
         "chinese_summary": "200字左右的中文总结",
@@ -302,13 +335,16 @@ class AIScorer:
     ...
 ]
 
-重要说明:
+【重要说明】
 1. news_index必须对应新闻列表中的序号(从1开始)
-2. total_score根据权重自动计算: importance×{self.criteria.get('importance', 0.3)} + timeliness×{self.criteria.get('timeliness', 0.2)} + technical_depth×{self.criteria.get('technical_depth', 0.2)} + audience_breadth×{self.criteria.get('audience_breadth', 0.15)} + practicality×{self.criteria.get('practicality', 0.15)}
-3. chinese_title要准确传达原意，适合中文读者
-4. chinese_summary要突出核心价值和影响
-5. key_points列出3-5个关键要点
-6. 确保返回的是合法JSON数组，不要有其他文字说明
+2. category只能是"财经"、"科技"或"社会政治"之一
+3. category_confidence是分类置信度，范围0-1
+4. 评分字段根据category自动选择对应的5个维度
+5. total_score根据对应板块的权重自动计算
+6. chinese_title要准确传达原意，适合中文读者
+7. chinese_summary要突出核心价值和影响
+8. key_points列出3-5个关键要点
+9. 确保返回的是合法JSON数组，不要有其他文字说明
 """
     
     async def _score_batch_api(

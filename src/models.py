@@ -25,6 +25,10 @@ class NewsItem:
     translated_title: Optional[str] = None
     key_points: List[str] = field(default_factory=list)
     
+    # AI分类字段（新增）
+    ai_category: str = ""  # 分类结果："财经" | "科技" | "社会政治"
+    ai_category_confidence: float = 0.0  # 分类置信度 0-1
+    
     def __post_init__(self):
         """初始化后处理"""
         if isinstance(self.published_at, str):

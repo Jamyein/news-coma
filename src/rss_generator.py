@@ -278,33 +278,36 @@ class RSSGenerator:
         return rss
     
     def _build_item_xml(self, file_info: Dict) -> str:
-        """构建单个item XML"""
+        """构建单个item XML（支持三板块分类）"""
         title = escape(file_info.get('title', ''))
         link = file_info.get('link', '')
         description = escape(file_info.get('description', ''))
         pub_date = file_info.get('pub_date', '')
         guid = escape(file_info.get('guid', ''))
-        
+
+        # 获取分类信息（从新闻列表中提取，默认为综合）
+        category = file_info.get('category', '综合新闻')
+
         # 获取完整内容并转换为HTML
         full_content = file_info.get('full_content', '')
-        
+
         # 删除重复的订阅部分（从## 订阅开始到文件结束）
         subscription_pattern = r'##\s*📮\s*订阅.*$'
         full_content = re.sub(subscription_pattern, '', full_content, flags=re.DOTALL)
-        
+
         # 替换占位符
         repo_url = os.getenv('GITHUB_REPOSITORY', 'username/news')
         username, repo = repo_url.split('/') if '/' in repo_url else ('username', 'news')
         full_content = full_content.replace('{username}', username)
         full_content = full_content.replace('{repo}', repo)
-        
+
         # 转换为HTML
         if full_content:
             html_content = self._markdown_to_html(full_content)
             content_encoded = f"<![CDATA[{html_content}]]>"
         else:
             content_encoded = ""
-        
+
         return f"""
     <item>
         <title>{title}</title>
@@ -312,7 +315,7 @@ class RSSGenerator:
         <description>{description}</description>
         <pubDate>{pub_date}</pubDate>
         <guid>{guid}</guid>
-        <category>科技新闻</category>
+        <category>{category}</category>
         <content:encoded>{content_encoded}</content:encoded>
     </item>"""
     
