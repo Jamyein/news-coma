@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-01-31T10:23:43.192365",
+  "last_run": "2026-01-31T12:01:09.830820",
   "processed_urls": [
     "https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding",
     "https://viewfromthewing.com/court-filings-ice-uses-mobile-fortify-to-identify-protesters-global-entry-and-precheck-get-revoked/",
@@ -82,12 +82,365 @@
     "https://somehowmanage.com/2026/01/22/a-step-behind-the-bleeding-edge-monarchs-philosophy-on-ai-in-dev/",
     "https://jaisenmathai.com/articles/my-ridiculously-robust-photo-management-system-immich-edition/",
     "https://physicsworld.com/a/cern-accepts-1bn-in-private-cash-towards-future-circular-collider/",
-    "https://news.ycombinator.com/item?id=46834977"
+    "https://news.ycombinator.com/item?id=46834977",
+    "https://www.marketwatch.com/story/bearish-engulfing-patterns-are-warning-you-dont-buy-the-dip-in-gold-miner-stocks-05ee0e59?mod=mw_rss_topstories",
+    "https://www.marketwatch.com/story/luxury-phobia-is-turning-the-chinese-away-from-conspicuous-consumption-and-toward-local-hero-domestic-brands-7de8be25?mod=mw_rss_topstories",
+    "https://www.ft.com/content/5c1af439-a1a1-4684-b27e-21a527abe676",
+    "https://www.ft.com/content/c8bba149-8ce2-4ed7-b7a6-dd0e214f1600",
+    "https://www.wsj.com/business/media/news-quiz-for-jan-31-b7eabb70?mod=pls_whats_news_us_business_f",
+    "https://36kr.com/newsflashes/3663191012615046?f=rss",
+    "https://www.theregister.com/2026/01/30/euro_firms_must_ditch_us/",
+    "https://www.wsj.com/business/autos/no-one-knows-how-many-deadly-air-bags-are-on-u-s-roads-46ec160c?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/economy/central-banking/kevin-warshs-three-tasks-shrink-the-fed-tame-inflation-manage-the-president-2640eace",
+    "https://36kr.com/newsflashes/3663186982085505?f=rss",
+    "https://wallstreetcn.com/articles/3764664",
+    "https://antirez.com/news/159",
+    "https://36kr.com/newsflashes/3663055871910533?f=rss",
+    "https://www.ft.com/content/e29721dc-2a70-42b8-9fdc-c1e93792c359",
+    "https://36kr.com/newsflashes/3662954043531906?f=rss",
+    "https://blog.globalping.io/we-have-ipinfo-at-home-or-how-to-geolocate-ips-in-your-cli-using-latency/",
+    "https://www.ft.com/content/4914b8d9-4066-4d5d-ade0-50364b3c68e4",
+    "https://36kr.com/newsflashes/3662956754035331?f=rss",
+    "https://36kr.com/newsflashes/3663052426289792?f=rss",
+    "https://wallstreetcn.com/articles/3764659",
+    "https://36kr.com/newsflashes/3662838846890883?f=rss",
+    "https://wallstreetcn.com/articles/3764657",
+    "https://36kr.com/newsflashes/3662837010129794?f=rss",
+    "https://wallstreetcn.com/articles/3764654",
+    "https://36kr.com/newsflashes/3662836024353411?f=rss",
+    "https://wallstreetcn.com/articles/3764651",
+    "https://36kr.com/newsflashes/3662776733966979?f=rss",
+    "https://www.ft.com/content/bcf99216-d61f-4dbd-86f3-fa9be33edaf8",
+    "https://www.ft.com/content/6f9080ca-035d-4843-b877-f72b80aa184c",
+    "https://36kr.com/newsflashes/3662828269970048?f=rss",
+    "https://www.wsj.com/us-news/law/what-we-know-so-far-about-the-latest-release-of-epstein-files-260dafba?mod=pls_whats_news_us_business_f",
+    "https://www.marketwatch.com/story/the-irs-is-trying-to-make-the-best-of-a-government-shutdown-heres-how-to-protect-your-refund-156c1294?mod=mw_rss_topstories",
+    "https://36kr.com/newsflashes/3662707099329159?f=rss",
+    "https://wallstreetcn.com/articles/3764646",
+    "https://36kr.com/newsflashes/3662716044075909?f=rss",
+    "https://36kr.com/newsflashes/3662711893615235?f=rss",
+    "https://wallstreetcn.com/articles/3764644",
+    "https://wallstreetcn.com/articles/3764642",
+    "https://www.bbc.com/news/articles/cwy10ye2030o?at_medium=RSS&at_campaign=rss",
+    "https://www.ft.com/content/3772f653-ff06-41e6-b23c-8c79e75ac08b",
+    "https://wallstreetcn.com/articles/3764638",
+    "https://www.wsj.com/economy/trump-bls-brett-matsumoto-f728acde",
+    "https://www.wsj.com/tech/elon-musks-spacex-and-xai-are-planning-a-megamerger-of-rockets-and-ai-28e72fa9?mod=pls_whats_news_us_business_f",
+    "https://wallstreetcn.com/articles/3764641",
+    "https://36kr.com/p/3662644247323264?f=rss",
+    "https://www.ft.com/content/d9c81261-a7ac-40ae-956c-a8a9b6e57ab8",
+    "https://www.marketwatch.com/story/my-distrustful-and-selfish-brother-is-executor-of-our-family-estate-how-can-i-clip-his-wings-a1958a91?mod=mw_rss_topstories",
+    "https://wallstreetcn.com/articles/3764623",
+    "https://www.marketwatch.com/story/trump-picked-kevin-warsh-to-boost-markets-what-this-means-for-your-portfolio-f83826cb?mod=mw_rss_topstories",
+    "https://www.ft.com/content/cb16718c-7e03-4d0e-ba29-a3c5604dbab0",
+    "https://www.marketwatch.com/story/most-of-us-make-assumptions-about-growth-and-value-stocks-heres-what-we-get-wrong-19da9b31?mod=mw_rss_topstories",
+    "https://wallstreetcn.com/articles/3764633",
+    "https://wallstreetcn.com/articles/3764632",
+    "https://www.ft.com/content/3acdf81d-c94a-4438-a35f-23cfa75ca3b4",
+    "https://wallstreetcn.com/articles/3764541",
+    "https://www.wsj.com/economy/central-banking/feds-bowman-says-policy-still-restrictive-c0c53443",
+    "https://www.wsj.com/articles/ups-finance-chief-says-delivery-giant-is-hard-at-work-right-sizing-0530b6a0?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/opinion/kevin-warsh-on-the-feds-mistakes-and-the-consequences-7922f46f?mod=rss_markets_main",
+    "https://www.bbc.com/news/articles/cgm4kyw482eo?at_medium=RSS&at_campaign=rss",
+    "https://www.marketwatch.com/story/gold-and-silvers-7-trillion-wipeout-delivers-a-painful-lesson-about-risk-22dbf70f?mod=mw_rss_topstories",
+    "https://www.wsj.com/finance/investing/wall-street-cant-decide-whether-kevin-warsh-will-be-a-friend-or-foe-3d344c67?mod=rss_markets_main",
+    "https://www.marketwatch.com/story/oil-prices-unexpectedly-score-first-monthly-gain-in-half-a-year-so-whats-the-next-move-for-opec-eac5bd6f?mod=mw_rss_topstories",
+    "https://www.wsj.com/business/telecom/verizon-vz-q4-earnings-report-2025-70b537de?mod=pls_whats_news_us_business_f",
+    "https://www.bbc.com/news/articles/czx1qrx5jgzo?at_medium=RSS&at_campaign=rss",
+    "http://stock.eastmoney.com/news/11784,202601313637459396.html",
+    "https://wallstreetcn.com/articles/3764627",
+    "https://wallstreetcn.com/articles/3764630",
+    "https://www.wsj.com/finance/commodities-futures/gold-and-silver-plunge-in-worst-day-since-1980-df812b73?mod=rss_markets_main",
+    "https://www.wsj.com/business/basic-materials-roundup-market-talk-7633b041?mod=rss_markets_main",
+    "https://www.marketwatch.com/story/trump-picking-kevin-warsh-as-fed-chair-wasnt-enough-to-soothe-shaky-markets-2f0137ad?mod=mw_rss_topstories",
+    "https://www.wsj.com/business/media/iger-has-told-associates-he-plans-to-leave-ceo-role-before-contract-expires-35406a7b?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/articles/sec-names-retired-ey-partner-to-run-audit-watchdog-f6eac6e9?mod=pls_whats_news_us_business_f",
+    "https://wallstreetcn.com/articles/3764628",
+    "https://www.marketwatch.com/story/these-are-college-students-not-nfl-players-deion-sanderss-new-5-000-fines-for-colorado-players-blur-the-lines-around-professional-sports-dc9f5364?mod=mw_rss_topstories",
+    "https://wallstreetcn.com/articles/3764626",
+    "https://www.wsj.com/opinion/donald-j-trump-my-tariffs-have-brought-america-back-2248391b?mod=rss_markets_main",
+    "https://www.wsj.com/opinion/virginians-will-pay-through-the-nose-for-affordable-energy-3f729161?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/finance/jgb-futures-edge-higher-tracking-price-gains-in-u-s-treasury-market-7c0e31e6?mod=rss_markets_main",
+    "https://www.wsj.com/business/logistics/why-a-ruling-over-ck-hutchisons-panama-canal-ports-mattersand-whats-next-a2f09720?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/deals/onlyfans-in-talks-to-sell-majority-stake-to-investment-firm-61f9971f?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/finance/commodities-futures/oil-prices-mixed-lingering-u-s-iran-tensions-may-support-397d3f64?mod=rss_markets_main",
+    "https://www.cnbc.com/2026/01/30/trump-nominates-kevin-warsh-for-federal-reserve-chair-to-succeed-jerome-powell.html",
+    "https://www.wsj.com/articles/european-ttf-gas-rises-with-geopolitical-risks-adding-to-concerns-market-talk-dfad850d?mod=pls_whats_news_us_business_f",
+    "https://www.cnbc.com/2026/01/30/overseas-markets-international-stocks-investing-etfs.html",
+    "https://www.wsj.com/economy/central-banking/kevin-warsh-a-fed-critic-is-now-poised-to-lead-it-7f447414",
+    "https://www.wsj.com/economy/central-banking/who-is-kevin-warsh-trumps-fed-chair-pick-a77dc602",
+    "https://wallstreetcn.com/articles/3764625",
+    "https://www.bbc.com/news/articles/c87r2700dq8o?at_medium=RSS&at_campaign=rss",
+    "https://www.cnbc.com/2026/01/30/american-express-credit-card-high-spenders.html",
+    "https://www.wsj.com/economy/central-banking/feds-musalem-rejects-further-rate-cuts-6611cff8",
+    "https://www.wsj.com/finance/commodities-futures/gold-rises-amid-ongoing-iran-tensions-7cdad827?mod=rss_markets_main",
+    "https://www.wsj.com/business/earnings/exxon-chevron-post-slimmest-annual-profits-since-2021-b9b2e7aa?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/economy/central-banking/fed-policymakers-will-find-kevin-warsh-persuasive-governor-stephen-miran-says-c1f8c7c9",
+    "https://www.cnbc.com/2026/01/30/who-is-kevin-warsh-trumps-fed-chair-pick.html",
+    "https://www.wsj.com/business/earnings/charter-revenue-hurt-by-declines-in-internet-subscriber-volumes-afa31d47?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/uber-eats-ordered-to-pay-3-5-million-over-nyc-delivery-worker-pay-295908cb?mod=pls_whats_news_us_business_f",
+    "https://wallstreetcn.com/articles/3764614",
+    "https://www.wsj.com/articles/auto-transport-roundup-market-talk-ab0dd669?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/impossible-foods-ceo-mcguinness-to-step-down-5ddaec33?mod=pls_whats_news_us_business_f",
+    "https://www.economist.com/finance-and-economics/2026/01/30/what-will-kevin-warshs-federal-reserve-look-like",
+    "https://wallstreetcn.com/articles/3764617",
+    "https://wallstreetcn.com/articles/3764620",
+    "https://wallstreetcn.com/articles/3764619",
+    "https://www.wsj.com/business/hospitality/protein-food-restaurant-chain-406b5f2f?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/earnings/colgate-palmolive-swings-to-a-loss-on-charges-9c5715f2?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/opinion/e-ledgers-put-corporate-climate-accountability-at-risk-7ceaedb5?mod=pls_whats_news_us_business_f",
+    "https://www.cnbc.com/2026/01/29/software-stocks-enter-bear-market-on-ai-disruption-fear-with-servicenow-plunging-11percent-thursday.html",
+    "https://www.wsj.com/economy/central-banking/canada-gdp-remains-soft-in-final-months-of-last-year-11fd9178",
+    "https://www.bbc.com/news/articles/c2d7yddrl2xo?at_medium=RSS&at_campaign=rss",
+    "https://www.wsj.com/economy/central-banking/the-long-campaign-of-kevin-warsh-e5bd26d6",
+    "https://www.wsj.com/business/earnings/american-express-profit-revenue-rise-on-increased-member-spending-2b3c010e?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/media/john-grisham-routine-widow-firm-6229b181?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/pennsylvania-wins-bid-for-eli-lilly-weight-loss-drug-factory-651f9e8a?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/finance/currencies/asian-currencies-consolidate-ongoing-u-s-iran-tensions-may-weigh-536f96e9?mod=rss_markets_main",
+    "https://wallstreetcn.com/articles/3764612",
+    "https://www.bbc.com/news/articles/ce8rk0je220o?at_medium=RSS&at_campaign=rss",
+    "https://wallstreetcn.com/articles/3764611",
+    "https://www.wsj.com/economy/central-banking/feds-waller-says-weak-job-market-supported-rate-cut-00753e08",
+    "https://www.bbc.com/news/articles/c78eyv1zdl3o?at_medium=RSS&at_campaign=rss",
+    "https://www.wsj.com/economy/central-banking/wholesale-prices-rose-more-than-expected-in-december-ead013c5",
+    "https://www.wsj.com/arts-culture/books/nothing-random-review-he-was-his-own-best-seller-85422459?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/finance/investing/the-high-price-you-pay-to-get-on-board-hot-companies-before-they-go-public-392353b9?mod=rss_markets_main",
+    "https://www.wsj.com/business/earnings/canadian-national-railway-profit-revenue-rise-9a1f03f1?mod=pls_whats_news_us_business_f",
+    "https://www.bbc.com/news/videos/cx2xk9w6ewzo?at_medium=RSS&at_campaign=rss",
+    "https://wallstreetcn.com/articles/3764609",
+    "https://wallstreetcn.com/articles/3764608",
+    "http://finance.eastmoney.com/news/1353,202601303637253226.html",
+    "https://www.wsj.com/business/earnings/church-dwight-logs-sales-growth-becc0a1a?mod=pls_whats_news_us_business_f",
+    "http://finance.eastmoney.com/news/1353,202601303637276986.html",
+    "https://wallstreetcn.com/articles/3764606",
+    "https://www.wsj.com/business/logistics/panamas-high-court-rules-against-hong-kong-firm-running-canal-ports-714c23c8?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/finance/currencies/yen-rally-wasnt-government-engineered-finance-ministry-data-show-17365393?mod=rss_markets_main",
+    "https://wallstreetcn.com/articles/3764605",
+    "https://www.wsj.com/business/autos/the-end-of-the-model-s-is-the-start-of-a-new-tesla-379cb74e?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/earnings/air-products-posts-higher-profit-revenue-on-pricing-76d4086c?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/earnings/swatch-posts-2025-revenue-decline-despite-second-half-sales-recovery-42c8583e?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/finance/stocks/cruise-investors-got-a-cabin-upgrade-1de373fb?mod=rss_markets_main",
+    "https://wallstreetcn.com/articles/3764596",
+    "https://www.bbc.com/news/articles/cedw468e50wo?at_medium=RSS&at_campaign=rss",
+    "https://www.wsj.com/business/earnings/lg-electronics-reports-first-quarterly-net-loss-in-a-year-784ddcc8?mod=pls_whats_news_us_business_f",
+    "https://wallstreetcn.com/articles/3764592",
+    "https://www.wsj.com/articles/four-more-states-weigh-bans-on-private-equity-interference-in-medical-care-fb4ddd0a?mod=rss_markets_main",
+    "https://36kr.com/p/3661725998523267?f=rss",
+    "https://wallstreetcn.com/articles/3764579",
+    "https://wallstreetcn.com/articles/3764591",
+    "https://www.wsj.com/lifestyle/workplace/cracker-barrel-work-trip-travel-expenses-meals-25eaf050?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/tech/memory-shortage-haunts-apples-blowout-iphone-sales-0410e375?mod=rss_markets_main",
+    "https://www.wsj.com/business/earnings/bosch-expects-market-challenges-to-remain-this-year-eaf62396?mod=pls_whats_news_us_business_f",
+    "https://wallstreetcn.com/articles/3764574",
+    "https://36kr.com/p/3661493683643272?f=rss",
+    "https://wallstreetcn.com/articles/3764587",
+    "https://wallstreetcn.com/articles/3764590",
+    "https://wallstreetcn.com/articles/3764584",
+    "https://www.cnbc.com/2026/01/30/china-beijing-trade-tariffs-trump-starmer-carney.html",
+    "https://wallstreetcn.com/articles/3764589",
+    "https://wallstreetcn.com/articles/3764588",
+    "https://www.wsj.com/business/retail/adidas-shares-gain-after-buyback-plan-revenue-rise-cbabb486?mod=rss_markets_main",
+    "https://wallstreetcn.com/articles/3764586",
+    "https://www.bbc.com/news/articles/c0keyyeyr41o?at_medium=RSS&at_campaign=rss",
+    "https://36kr.com/p/3661687880147849?f=rss",
+    "https://wallstreetcn.com/articles/3764585",
+    "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-01-30-2026?mod=rss_markets_main",
+    "https://wallstreetcn.com/articles/3764577",
+    "https://36kr.com/p/3661668026737287?f=rss",
+    "https://wallstreetcn.com/articles/3764578",
+    "https://wallstreetcn.com/articles/3764567",
+    "https://www.bbc.com/news/articles/cm2j04lk83zo?at_medium=RSS&at_campaign=rss",
+    "http://finance.eastmoney.com/news/1345,202601303636855729.html",
+    "https://www.bbc.com/news/articles/cy8yw190q83o?at_medium=RSS&at_campaign=rss",
+    "https://www.wsj.com/finance/commodities-futures/london-metal-exchange-resumes-trade-after-technical-glitch-37c2db93?mod=rss_markets_main",
+    "https://www.bbc.com/news/articles/c74vyr44xn3o?at_medium=RSS&at_campaign=rss",
+    "https://www.wsj.com/business/chinalco-rio-tinto-to-buy-controlling-stake-in-companhia-brasileira-de-aluminio-b1592515?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/finance/stocks/gamestop-ceo-plans-e8440c4b?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/finance/commodities-futures/gold-silver-retail-investors-f1daa1f4?mod=rss_markets_main",
+    "https://www.wsj.com/finance/currencies/coinbase-ceo-brian-armstrong-wall-street-a7895786?mod=rss_markets_main",
+    "https://www.bbc.com/news/articles/c23r2xkdk2go?at_medium=RSS&at_campaign=rss",
+    "https://36kr.com/p/3654915542130816?f=rss",
+    "https://www.bbc.com/news/articles/cp80r4rdp3yo?at_medium=RSS&at_campaign=rss",
+    "https://www.bbc.com/news/articles/cq5y7dd284do?at_medium=RSS&at_campaign=rss",
+    "https://www.bbc.com/news/articles/czjg2rlyvyzo?at_medium=RSS&at_campaign=rss",
+    "https://www.wsj.com/tech/personal-tech/chinese-ev-test-drive-xiaomi-su7-c3e59282?mod=pls_whats_news_us_business_f",
+    "https://36kr.com/p/3660312420180864?f=rss",
+    "https://www.wsj.com/finance/currencies/asian-currencies-mostly-strengthen-amid-fed-rate-cut-prospects-7b0ae056?mod=rss_markets_main",
+    "https://www.wsj.com/opinion/america-needs-restraintand-facts-85293b6d?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/opinion/first-brands-indictment-lenders-patrick-james-580cf860?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/opinion/viktor-orban-hungary-electric-vehicles-subsidies-climate-953b330a?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/finance/stocks/microsoft-earnings-prompt-tech-stock-selloff-227edca1?mod=rss_markets_main",
+    "http://stock.eastmoney.com/news/11784,202601303635843336.html",
+    "https://www.wsj.com/business/health-care-roundup-market-talk-06f1d919?mod=rss_markets_main",
+    "https://www.wsj.com/business/retail/saks-to-close-most-of-its-off-5th-discount-stores-as-part-of-bankruptcy-461219a5?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/energy-utilities-roundup-market-talk-e4c76ae5?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/financial-services-roundup-market-talk-2ab14ec3?mod=rss_markets_main",
+    "https://www.wsj.com/business/airlines/southwest-now-charges-for-seats-next-stop-quadrupling-profit-434c4607?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/articles/blackstones-portfolio-data-helps-firm-see-through-the-fog-as-it-invests-af139843?mod=rss_markets_main",
+    "https://www.cnbc.com/2026/01/29/trump-minnesota-ice-action-ceos-speaking-out.html",
+    "https://www.wsj.com/articles/first-brands-founder-patrick-james-indicted-on-fraud-charges-f55e8cb2?mod=rss_markets_main",
+    "https://www.wsj.com/economy/trade/china-agrees-to-lower-tariffs-by-half-on-u-k-whisky-9a68469d",
+    "https://www.wsj.com/opinion/the-new-bipolar-world-of-ai-d0af971a?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/articles/trump-picks-new-leader-for-maritime-regulator-0c966417?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/finance/investing/how-a-blackrock-loss-reignited-worries-about-what-is-hiding-in-private-credit-d6e221ce?mod=rss_markets_main",
+    "https://www.bbc.com/news/articles/cy4qejvqv4no?at_medium=RSS&at_campaign=rss",
+    "https://www.wsj.com/finance/currencies/trump-regulators-say-they-are-ready-to-lay-out-crypto-rules-to-foster-growth-9fab9d12?mod=rss_markets_main",
+    "https://www.bbc.com/news/articles/cg5gpe3jdl9o?at_medium=RSS&at_campaign=rss",
+    "https://www.wsj.com/style/iphone-call-screening-feature-executives-511e51c4?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/what-ceos-areand-are-notsaying-about-ice-and-minneapolis-8860151b?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/autos/waymo-robotaxi-hits-child-near-elementary-school-prompting-nhtsa-investigation-efc1699d?mod=pls_whats_news_us_business_f",
+    "https://www.bbc.com/news/articles/c1jeyn3yxn9o?at_medium=RSS&at_campaign=rss",
+    "https://www.wsj.com/economy/jobs/u-s-companies-are-still-slashing-jobs-to-reverse-pandemic-hiring-boom-abf1b94e?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/energy-oil/vse-to-acquire-precision-aviation-group-for-2-billion-59b187fb?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/energy-oil/the-agonizing-decline-of-one-of-europes-core-industries-49d4231b?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/economy/jobs/u-s-jobless-claims-remain-subdued-last-week-96eb2033",
+    "https://www.wsj.com/economy/trade/u-s-trade-deficit-grew-in-november-18c570d7",
+    "https://www.wsj.com/business/logistics/norfolk-southern-profit-revenue-falls-603c1a69?mod=pls_whats_news_us_business_f",
+    "https://www.bbc.com/news/articles/cre2l5qxy9do?at_medium=RSS&at_campaign=rss",
+    "https://www.bbc.com/news/articles/c8e524n23rno?at_medium=RSS&at_campaign=rss",
+    "https://www.cnbc.com/2026/01/28/powell-cook-fed-court-case.html",
+    "https://36kr.com/p/3660433916093313?f=rss",
+    "https://www.wsj.com/economy/global/irish-economy-soared-in-2025-on-weight-loss-drugs-boom-ca42978e",
+    "https://www.wsj.com/finance/stocks/stocks-could-go-on-a-sugar-high-41e25991?mod=rss_markets_main",
+    "https://www.wsj.com/business/deals/russias-lukoil-to-sell-carlyle-its-international-assets-b7574718?mod=pls_whats_news_us_business_f",
+    "https://36kr.com/p/3660353540236168?f=rss",
+    "https://www.wsj.com/tech/ai/meta-overshadows-microsoft-by-showing-ai-payoff-in-ad-business-39f392e0?mod=rss_markets_main",
+    "https://www.wsj.com/finance/currencies/a-weaker-dollar-has-always-been-part-of-trumps-plan-733c9adc?mod=rss_markets_main",
+    "https://www.economist.com/finance-and-economics/2026/01/29/the-fate-of-japans-6trn-foreign-portfolio-rattles-global-markets",
+    "https://www.economist.com/finance-and-economics/2026/01/29/why-is-the-yen-still-so-weak",
+    "https://www.economist.com/finance-and-economics/2026/01/29/our-big-mac-index-carries-an-asian-warning",
+    "https://www.bbc.com/news/articles/cwy12qj9e20o?at_medium=RSS&at_campaign=rss",
+    "https://www.bbc.com/news/articles/cq8415jjw92o?at_medium=RSS&at_campaign=rss",
+    "https://www.bbc.com/news/articles/cz9v42ep8n0o?at_medium=RSS&at_campaign=rss",
+    "http://finance.eastmoney.com/news/1345,202601293635165781.html",
+    "https://www.wsj.com/economy/housing/u-k-property-market-recovers-post-budget-jitters-but-price-growth-still-slow-bce5e9fc",
+    "https://www.bbc.com/news/videos/cz6y2580eeqo?at_medium=RSS&at_campaign=rss",
+    "https://www.wsj.com/finance/gold-hits-new-high-oil-rises-as-iran-tensions-rekindle-fc112871?mod=rss_markets_main",
+    "https://www.wsj.com/economy/housing/how-remaking-the-neighborhood-could-boost-poor-kids-futures-90b94e6d",
+    "https://www.bbc.com/news/articles/c620177qdg5o?at_medium=RSS&at_campaign=rss",
+    "https://www.wsj.com/business/earnings/samsungs-fourth-quarter-net-profit-beats-consensus-3aaafebb?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/media/brett-ratner-melania-trump-movie-c44bbe6b?mod=pls_whats_news_us_business_f",
+    "https://www.cnbc.com/2026/01/28/jpmorgan-chase-trump-accounts.html",
+    "https://www.bbc.com/news/articles/cn8jkyk78gno?at_medium=RSS&at_campaign=rss",
+    "https://www.bbc.com/news/articles/cy9y1wvq3pdo?at_medium=RSS&at_campaign=rss",
+    "https://www.bbc.com/news/articles/cn56p0qkky7o?at_medium=RSS&at_campaign=rss",
+    "https://www.bbc.com/news/articles/clymp4ynldlo?at_medium=RSS&at_campaign=rss",
+    "https://www.wsj.com/business/media/barry-diller-told-warner-discovery-hes-interested-in-buying-cnn-a261c536?mod=pls_whats_news_us_business_f",
+    "https://www.cnbc.com/2026/01/28/fed-rate-decision-january-2026.html",
+    "https://www.wsj.com/business/earnings/las-vegas-sands-logs-higher-fourth-quarter-profit-revenue-0288342f?mod=pls_whats_news_us_business_f",
+    "https://www.bbc.com/news/articles/czej9n578k9o?at_medium=RSS&at_campaign=rss",
+    "https://www.wsj.com/arts-culture/music/kanye-west-apology-1a8122cd?mod=pls_whats_news_us_business_f",
+    "https://www.economist.com/finance-and-economics/2026/01/28/just-how-debased-is-the-dollar",
+    "http://finance.eastmoney.com/news/1351,202601293634188234.html",
+    "https://www.wsj.com/opinion/donald-trump-weak-dollar-economy-exchange-rates-101b278a?mod=rss_markets_main",
+    "https://www.wsj.com/business/earnings/starbucks-sbux-q1-earnings-report-stock-sales-2026-c67057be?mod=pls_whats_news_us_business_f",
+    "https://www.bbc.com/news/articles/c9wxedz9v22o?at_medium=RSS&at_campaign=rss",
+    "https://www.cnbc.com/2026/01/28/here-are-the-five-key-takeaways-from-wednesdays-fed-rate-decision.html",
+    "https://www.wsj.com/tech/google-aims-knockout-blow-at-chinese-company-linked-to-massive-cyber-weapon-3c3fdc40?mod=pls_whats_news_us_business_f",
+    "http://finance.eastmoney.com/news/1351,202601293634153368.html",
+    "http://finance.eastmoney.com/news/1351,202601293634143639.html",
+    "https://www.cnbc.com/2026/01/28/doublelines-jeffrey-gundlach-sees-no-more-fed-rate-cuts-under-jerome-powell.html",
+    "http://finance.eastmoney.com/news/1345,202601283633995761.html",
+    "https://www.wsj.com/tech/google-to-pay-135-million-to-settle-lawsuit-over-handling-of-cellular-data-7cb58598?mod=pls_whats_news_us_business_f",
+    "https://www.cnbc.com/2026/01/28/january-fed-meeting-what-changed-in-new-statement-redline.html",
+    "https://www.wsj.com/buyside/personal-finance/banking/money-market-accounts?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/logistics/firms-strike-deal-for-10-billion-shipping-ports-venture-cc29badc?mod=pls_whats_news_us_business_f",
+    "https://www.cnbc.com/2026/01/27/fed-preview-january-2026.html",
+    "https://www.wsj.com/business/deutsche-bank-offices-searched-by-german-prosecutors-93499c7b?mod=rss_markets_main",
+    "http://finance.eastmoney.com/news/1351,202601293634108723.html",
+    "https://www.cnbc.com/2026/01/27/gamestop-meme-stocks-retail-investors-wall-street.html",
+    "http://finance.eastmoney.com/news/1354,202601283634001978.html",
+    "http://finance.eastmoney.com/news/1354,202601283633999093.html",
+    "http://finance.eastmoney.com/news/1354,202601283633997086.html",
+    "http://global.eastmoney.com/news/11798,202601283633997413.html",
+    "http://finance.eastmoney.com/news/1354,202601283633996534.html",
+    "http://finance.eastmoney.com/news/1354,202601283633991779.html",
+    "http://finance.eastmoney.com/news/1354,202601283633991617.html",
+    "http://finance.eastmoney.com/news/1354,202601283633985092.html",
+    "https://www.wsj.com/business/energy-oil/u-s-crude-oil-stockpiles-post-weekly-decline-as-imports-fall-b9b08724?mod=pls_whats_news_us_business_f",
+    "http://finance.eastmoney.com/news/1354,202601283633906956.html",
+    "http://hk.eastmoney.com/news/11792,202601283634047346.html",
+    "https://www.wsj.com/economy/trade/the-painstaking-reality-of-turning-trumps-tariffs-into-new-u-s-exports-a514f4da",
+    "https://www.cnbc.com/2026/01/28/keir-starmer-china-visit-business-delegation-2026.html",
+    "https://www.wsj.com/finance/banking/prosperity-bancshares-to-acquire-stellar-bancorp-in-2-billion-deal-4cf54bbb?mod=rss_markets_main",
+    "https://www.wsj.com/finance/banking/wells-fargo-proxy-adviser-iss-cc4851d6?mod=rss_markets_main",
+    "https://www.wsj.com/politics/policy/investors-assumed-medicare-advantage-was-safe-under-the-gop-they-were-wrong-d6300cd4?mod=rss_markets_main",
+    "https://www.cnbc.com/2026/01/28/chinese-tech-companies-accelerate-ai-model-rollouts-us-rivals-deepseek-moonshot-kimi.html",
+    "https://www.wsj.com/us-news/faa-failures-created-conditions-for-deadly-reagan-airport-crash-ntsb-says-5c96a74d?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/finance/regulation/adm-to-pay-40-million-to-settle-sec-accounting-fraud-claims-ed36715a?mod=pls_whats_news_us_business_f",
+    "https://www.cnbc.com/2026/01/27/dollar-worst-one-day-rout-since-april-trump-says-hasnt-fallen-too-low.html",
+    "https://www.bbc.com/news/videos/cz0p2xy38d0o?at_medium=RSS&at_campaign=rss",
+    "https://www.wsj.com/business/earnings/boeing-ba-q4-earnings-report-2025-ae981355?mod=pls_whats_news_us_business_f",
+    "http://finance.eastmoney.com/news/1351,202601283632690493.html",
+    "http://finance.eastmoney.com/news/1345,202601273632560617.html",
+    "https://www.wsj.com/articles/companies-reveal-big-mystery-where-they-pay-taxes-and-how-much-61393cfb?mod=pls_whats_news_us_business_f",
+    "http://finance.eastmoney.com/news/1351,202601283632686770.html",
+    "https://www.wsj.com/finance/banking/former-citi-executive-sues-bank-alleging-sexual-harassment-bbf6b5b0?mod=rss_markets_main",
+    "https://www.economist.com/finance-and-economics/2026/01/27/the-west-and-ukraine-are-capsizing-russias-shadow-fleet",
+    "http://finance.eastmoney.com/news/1351,202601283632671519.html",
+    "https://www.wsj.com/opinion/the-answer-to-trumps-good-question-about-interest-rates-6d4c8c3f?mod=rss_markets_main",
+    "http://biz.eastmoney.com/news/1670,202601283632652337.html",
+    "http://finance.eastmoney.com/news/1354,202601273632573514.html",
+    "http://finance.eastmoney.com/news/1354,202601283632627037.html",
+    "http://finance.eastmoney.com/news/1354,202601273632601659.html",
+    "http://stock.eastmoney.com/news/11791,202601273632562416.html",
+    "http://finance.eastmoney.com/news/1354,202601273632529132.html",
+    "http://finance.eastmoney.com/news/1348,202601273632603443.html",
+    "http://finance.eastmoney.com/news/1354,202601273632607220.html",
+    "http://finance.eastmoney.com/news/1354,202601273632588617.html",
+    "http://finance.eastmoney.com/news/1354,202601273632572282.html",
+    "http://finance.eastmoney.com/news/1354,202601273632585565.html",
+    "http://finance.eastmoney.com/news/1354,202601283632616964.html",
+    "http://finance.eastmoney.com/news/1354,202601273632574052.html",
+    "http://finance.eastmoney.com/news/1354,202601273632572351.html",
+    "https://www.wsj.com/economy/consumers/consumer-confidence-dropped-to-12-year-low-in-january-per-conference-board-6dfa664d",
+    "https://www.wsj.com/tech/meta-enters-up-to-6-billion-data-center-fiber-optic-cable-deal-with-corning-4a085f73?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/economy/trade/eu-and-india-reach-free-trade-deal-as-world-responds-to-trump-tariffs-bbbdb8d2",
+    "https://www.economist.com/finance-and-economics/2026/01/27/what-is-driving-golds-relentless-rally",
+    "https://www.archyl.com/",
+    "https://www.wsj.com/finance/stocks/regencell-bioscience-holdings-stock-value-b1b859e3?mod=rss_markets_main",
+    "https://www.wsj.com/economy/jobs/spanish-unemployment-fell-in-final-quarter-of-2025-59ab736b",
+    "http://finance.eastmoney.com/news/1345,202601273632120182.html",
+    "https://www.bbc.com/news/articles/cn40j0772vwo?at_medium=RSS&at_campaign=rss",
+    "https://www.wsj.com/opinion/gold-price-5000-markets-donald-trump-de17d26d?mod=rss_markets_main",
+    "http://finance.eastmoney.com/news/1351,202601273631089552.html",
+    "http://finance.eastmoney.com/news/1351,202601273631084076.html",
+    "https://www.economist.com/finance-and-economics/2026/01/26/why-ai-wont-wipe-out-white-collar-jobs",
+    "http://stock.eastmoney.com/news/1768,202601273631074675.html",
+    "http://finance.eastmoney.com/news/1354,202601273631067042.html",
+    "http://finance.eastmoney.com/news/1354,202601263631045666.html",
+    "http://stock.eastmoney.com/news/1416,202601263631046155.html",
+    "http://finance.eastmoney.com/news/1354,202601263631021660.html",
+    "http://finance.eastmoney.com/news/1354,202601263630938896.html",
+    "http://stock.eastmoney.com/news/1768,202601263631015871.html",
+    "https://www.wsj.com/articles/forgent-power-solutions-ipo-terms-could-push-market-cap-above-8-8-billion-1c07a552?mod=pls_whats_news_us_business_f",
+    "http://finance.eastmoney.com/news/1354,202601273631053084.html",
+    "http://pmetal.eastmoney.com/news/11793,202601263631047624.html",
+    "http://biz.eastmoney.com/news/1670,202601263631047713.html",
+    "http://finance.eastmoney.com/news/1354,202601263631037128.html",
+    "http://finance.eastmoney.com/news/1354,202601263631048821.html",
+    "http://finance.eastmoney.com/news/1354,202601263631034027.html",
+    "http://finance.eastmoney.com/news/1354,202601263631044765.html",
+    "https://www.wsj.com/business/retail/the-wait-list-for-a-birkin-or-rolex-is-getting-shorter-fad4b109?mod=rss_markets_main",
+    "https://www.wsj.com/personal-finance/taxes/tax-deductions-2025-refunds-7a6a64bd?mod=rss_markets_main",
+    "https://www.wsj.com/business/telecom/governments-new-must-have-their-own-satellites-e7e801a3?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/entrepreneurship/nvidia-backed-ai-startup-synthesia-raises-funding-at-4-billion-valuation-7941abae?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/earnings/ryanair-upgrades-fiscal-2026-outlook-on-strong-demand-169fc04e?mod=pls_whats_news_us_business_f",
+    "http://finance.eastmoney.com/news/1345,202601263630580057.html",
+    "https://www.bbc.com/news/articles/c62ndp17jv0o?at_medium=RSS&at_campaign=rss",
+    "https://www.wsj.com/economy/global/the-world-economy-is-hooked-on-government-debt-71491482",
+    "https://www.wsj.com/economy/central-banking/how-trumps-ally-at-the-fed-is-remaking-bank-oversight-b1f0fab3?mod=rss_markets_main",
+    "https://www.cnbc.com/2026/01/26/china-isnt-grabbing-headlines-at-davos-but-its-the-elephant-in-the-room.html",
+    "http://pmetal.eastmoney.com/news/11793,202601263630017241.html",
+    "http://biz.eastmoney.com/news/1670,202601263630014658.html",
+    "https://www.wsj.com/finance/investing/wall-street-has-fallen-out-of-love-with-software-stocks-b050b457?mod=rss_markets_main",
+    "https://www.wsj.com/economy/housing/these-developers-stand-to-win-in-trumps-housing-investor-crackdown-fed348a7",
+    "https://www.wsj.com/personal-finance/taxes/why-it-pays-to-check-your-tax-withholding-this-year-6d443417?mod=rss_markets_main"
   ],
   "stats": {
-    "total_runs": 7,
-    "total_news_processed": 147,
-    "avg_news_per_run": 21.0
+    "total_runs": 8,
+    "total_news_processed": 500,
+    "avg_news_per_run": 62.5
   },
   "source_stats": {
     "The Verge": {
@@ -95,7 +448,7 @@
       "selected": 6
     },
     "Hacker News": {
-      "fetched": 76,
+      "fetched": 80,
       "selected": 19
     },
     "TechCrunch": {
@@ -105,6 +458,50 @@
     "GitHub Blog": {
       "fetched": 10,
       "selected": 1
+    },
+    "MarketWatch": {
+      "fetched": 10,
+      "selected": 0
+    },
+    "Financial Times": {
+      "fetched": 10,
+      "selected": 0
+    },
+    "WSJ 经济": {
+      "fetched": 72,
+      "selected": 0
+    },
+    "36氪": {
+      "fetched": 23,
+      "selected": 1
+    },
+    "WSJ 全球经济": {
+      "fetched": 23,
+      "selected": 1
+    },
+    "华尔街见闻": {
+      "fetched": 44,
+      "selected": 8
+    },
+    "BBC Business": {
+      "fetched": 36,
+      "selected": 0
+    },
+    "WSJ 市场": {
+      "fetched": 45,
+      "selected": 0
+    },
+    "东方财富": {
+      "fetched": 59,
+      "selected": 0
+    },
+    "CNBC": {
+      "fetched": 19,
+      "selected": 0
+    },
+    "The Economist": {
+      "fetched": 8,
+      "selected": 0
     }
   },
   "ai_cache": {
@@ -461,10 +858,511 @@
       ],
       "cached_at": "2026-01-31T10:23:58.933623",
       "source": "Hacker News"
+    },
+    "8ac1831087a86735": {
+      "ai_score": 7.7,
+      "translated_title": "SpaceX申请部署100万颗卫星，打造太空数据中心",
+      "ai_summary": "SpaceX计划部署由100万颗卫星组成的轨道数据中心系统，旨在提供前所未有的计算能力，支持全球大规模AI推理和数据中心应用。此举将显著影响太空行业和AI技术的发展。",
+      "key_points": [
+        "SpaceX计划部署100万颗卫星",
+        "轨道数据中心系统",
+        "AI推理和数据中心应用",
+        "太空行业影响"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544000",
+      "source": "华尔街见闻"
+    },
+    "a1f47c75cb5611bf": {
+      "ai_score": 7.7,
+      "translated_title": "SpaceX去年收入150-160亿美元、利润约80亿，而预计的IPO估值超过1.5万亿美元",
+      "ai_summary": "SpaceX去年实现150亿至160亿美元收入，EBITDA利润约80亿美元，预计IPO估值超过1.5万亿美元。星链业务成为公司主要收入来源。",
+      "key_points": [
+        "SpaceX财务数据",
+        "收入和利润",
+        "IPO估值",
+        "星链业务"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544019",
+      "source": "华尔街见闻"
+    },
+    "bd5f3272b2241f96": {
+      "ai_score": 6.7,
+      "translated_title": "特朗普威胁与寒潮双击！欧洲天然气1月狂飙38%",
+      "ai_summary": "欧洲天然气市场因寒潮和库存告急，1月价格涨幅达38%。地缘政治因素和市场供需影响显著。",
+      "key_points": [
+        "欧洲天然气价格",
+        "寒潮影响",
+        "地缘政治因素",
+        "市场供需"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544029",
+      "source": "华尔街见闻"
+    },
+    "35bf4148126f7ef1": {
+      "ai_score": 7.0,
+      "translated_title": "36氪研究院 | 2026年具身智能产业发展研究报告",
+      "ai_summary": "中国具身智能产业进入快速发展阶段，2025年前11个月融资额达到334.73亿元，产业升级面临核心瓶颈。",
+      "key_points": [
+        "具身智能产业",
+        "快速发展",
+        "融资额",
+        "产业升级"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544037",
+      "source": "36氪"
+    },
+    "37ad2bd85df66188": {
+      "ai_score": 6.0,
+      "translated_title": "India and the European Union have reached a free-trade agreement that will open a new market for European cars and other products",
+      "ai_summary": "印度和欧盟达成自由贸易协定，将为欧洲汽车和其他产品打开新市场。",
+      "key_points": [
+        "自由贸易协定",
+        "印度和欧盟",
+        "欧洲市场"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544045",
+      "source": "WSJ 全球经济"
+    },
+    "b17900dc96824ddd": {
+      "ai_score": 6.2,
+      "translated_title": "Meta Overshadows Microsoft by Showing AI Payoff in Ad Business",
+      "ai_summary": "Meta在广告业务中展示出AI的收益，超越微软。",
+      "key_points": [
+        "Meta",
+        "AI收益",
+        "广告业务",
+        "微软"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544052",
+      "source": "WSJ 市场"
+    },
+    "f7b13d49d0e3c100": {
+      "ai_score": 6.0,
+      "translated_title": "The fate of Japan’s $6trn foreign portfolio rattles global markets",
+      "ai_summary": "日本6万亿美元的外国投资组合的命运震撼全球市场。",
+      "key_points": [
+        "日本外国投资",
+        "全球市场影响",
+        "投资组合"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544059",
+      "source": "The Economist"
+    },
+    "99be6d8f8c86c2d9": {
+      "ai_score": 5.7,
+      "translated_title": "‘Bearish engulfing’ patterns are warning you: Don’t buy the dip in gold-miner stocks",
+      "ai_summary": "熊市吞噬模式警告投资者不要在黄金矿业股票中抄底。",
+      "key_points": [
+        "熊市吞噬模式",
+        "黄金矿业股票",
+        "投资警告"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544070",
+      "source": "MarketWatch"
+    },
+    "01e5ec904ca44fc3": {
+      "ai_score": 5.1,
+      "translated_title": "高盛首席律师卷入“爱泼斯坦丑闻”，亲昵直呼“爱泼斯坦叔叔”，并获赠爱马仕",
+      "ai_summary": "高盛首席律师Kathy Ruemmler与杰弗里·爱泼斯坦的关系被曝光，曾获赠爱马仕等礼物。",
+      "key_points": [
+        "高盛律师",
+        "爱泼斯坦丑闻",
+        "关系曝光",
+        "爱马仕礼物"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544079",
+      "source": "华尔街见闻"
+    },
+    "0b5dd2842e794e75": {
+      "ai_score": 5.7,
+      "translated_title": "东莞：2025年地区生产总值12760.2亿元 同比增长4%",
+      "ai_summary": "东莞2025年地区生产总值同比增长4%，第一、二、三产业增加值分别为36.90亿元、7165.44亿元、5557.87亿元。",
+      "key_points": [
+        "东莞GDP",
+        "同比增长",
+        "产业增加值"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544087",
+      "source": "36氪"
+    },
+    "41e4b3665095bd7d": {
+      "ai_score": 7.7,
+      "translated_title": "柯睿辰将接替高翔出任宝马集团大中华区总裁兼首席执行官",
+      "ai_summary": "宝马集团宣布柯睿辰将接替高翔担任大中华区总裁兼首席执行官，柯睿辰在宝马集团拥有丰富的管理经验，此次任命对宝马集团在中国市场的发展具有重要意义。",
+      "key_points": [
+        "柯睿辰接替高翔",
+        "宝马集团大中华区总裁",
+        "行业影响重大",
+        "管理经验丰富"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544094",
+      "source": "36氪"
+    },
+    "a11c905f6af201eb": {
+      "ai_score": 6.5,
+      "translated_title": "关于爱泼斯坦文件最新发布的消息",
+      "ai_summary": "美国司法部发布了超过80万份关于爱泼斯坦调查的记录，包括与埃隆·马斯克和比尔·盖茨的邮件。",
+      "key_points": [
+        "爱泼斯坦文件",
+        "最新发布",
+        "司法部调查",
+        "涉及名人邮件"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544101",
+      "source": "WSJ 经济"
+    },
+    "01beaf6355306d7d": {
+      "ai_score": 7.0,
+      "translated_title": "金银领衔主演，2026年市场“开年大戏”格外精彩",
+      "ai_summary": "本周市场波动剧烈，贵金属价格暴跌，市场对美联储紧缩立场的预期导致美股指集体下挫。",
+      "key_points": [
+        "市场波动",
+        "贵金属价格暴跌",
+        "美联储紧缩预期",
+        "美股指下跌"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544108",
+      "source": "华尔街见闻"
+    },
+    "ef71753b7fb1e37a": {
+      "ai_score": 6.8,
+      "translated_title": "前高盛高管：沃什任美联储主席，“卖出美国”风险降低",
+      "ai_summary": "特朗普提名凯文·沃什为美联储主席，预计他将坚决防范通胀，有助于降低美国资产大规模抛售的风险。",
+      "key_points": [
+        "沃什任美联储主席",
+        "防范通胀",
+        "降低抛售风险",
+        "市场预期"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544116",
+      "source": "华尔街见闻"
+    },
+    "2ceff8a50e6fe290": {
+      "ai_score": 6.8,
+      "translated_title": "沃什冲击！金属遭遇“黑色星期五”，金铂钯大跳水超10%，白银一度暴跌37%，铜跌4%，美股指齐跌，原油逆市收涨",
+      "ai_summary": "特朗普提名沃什为美联储主席，市场对美联储紧缩立场的预期导致金属价格暴跌，美股指集体下跌。",
+      "key_points": [
+        "沃什提名美联储主席",
+        "金属价格暴跌",
+        "美股指下跌",
+        "市场预期"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544125",
+      "source": "华尔街见闻"
+    },
+    "c3162b595b8afdf1": {
+      "ai_score": 6.2,
+      "translated_title": "华尔街无法决定凯文·沃什是朋友还是敌人",
+      "ai_summary": "沃什曾主张降低利率，但支持较小的美联储资产负债表。",
+      "key_points": [
+        "凯文·沃什",
+        "利率政策",
+        "美联储资产负债表",
+        "市场预期"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544134",
+      "source": "WSJ 市场"
+    },
+    "8c7e94f3601c9fdc": {
+      "ai_score": 6.2,
+      "translated_title": "艾格表示计划在合同到期前离开CEO职位",
+      "ai_summary": "迪士尼董事会计划下周开会，预计将投票决定新的CEO。",
+      "key_points": [
+        "迪士尼CEO",
+        "艾格离职",
+        "董事会会议",
+        "新CEO任命"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544141",
+      "source": "WSJ 经济"
+    },
+    "1a1f94c5318632b3": {
+      "ai_score": 6.8,
+      "translated_title": "半年暴涨1142%后，高盛再将闪迪目标价上调至700美元",
+      "ai_summary": "高盛将闪迪股票目标价从320美元大幅上调至700美元，反映出对存储芯片市场复苏前景的乐观判断。",
+      "key_points": [
+        "闪迪股票",
+        "高盛上调目标价",
+        "存储芯片市场",
+        "市场复苏前景"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544148",
+      "source": "华尔街见闻"
+    },
+    "ddc2611df2fb5107": {
+      "ai_score": 6.2,
+      "translated_title": "石油因美伊紧张关系而周度上涨",
+      "ai_summary": "美国和伊朗表示愿意进行会谈，油价在会谈迹象出现后下跌，但本周油价上涨幅度为10月以来的最大涨幅。",
+      "key_points": [
+        "美伊紧张关系",
+        "石油价格上涨",
+        "会谈迹象",
+        "市场预期"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544155",
+      "source": "WSJ 市场"
+    },
+    "7991e1a2cf2b8fcd": {
+      "ai_score": 6.5,
+      "translated_title": "特朗普提名凯文·沃什为联邦储备委员会主席以接替杰罗姆·鲍威尔",
+      "ai_summary": "特朗普总统提名凯文·沃什接替杰罗姆·鲍威尔担任联邦储备委员会主席。",
+      "key_points": [
+        "特朗普提名沃什",
+        "联邦储备委员会主席",
+        "接替鲍威尔",
+        "政治任命"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544161",
+      "source": "CNBC"
+    },
+    "c565ad33fe84fd12": {
+      "ai_score": 7.7,
+      "translated_title": "凯文·沃什已为领导美联储准备了十多年",
+      "ai_summary": "美国总统特朗普提名凯文·沃什接替杰罗姆·鲍威尔担任美联储主席，沃什为此职位准备了多年。",
+      "key_points": [
+        "凯文·沃什",
+        "美联储主席",
+        "提名",
+        "准备多年"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544167",
+      "source": "WSJ 全球经济"
+    },
+    "61e6ac2fcfbb2e08": {
+      "ai_score": 8.2,
+      "translated_title": "沃什提名引爆金银“血洗”！盘中白银创纪录跌超35%、黄金跌超10%",
+      "ai_summary": "美国总统特朗普提名沃什出任美联储主席引发贵金属市场剧烈波动，白银和黄金价格大幅下跌。",
+      "key_points": [
+        "沃什提名",
+        "美联储主席",
+        "贵金属市场",
+        "价格下跌"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544175",
+      "source": "华尔街见闻"
+    },
+    "43037251588bbd38": {
+      "ai_score": 7.1,
+      "translated_title": "Comex黄金本月上涨8.98%至4713.90美元",
+      "ai_summary": "Comex黄金本月结算价上涨8.98%，而银价下跌31%，但两者在本月均有所上涨。",
+      "key_points": [
+        "Comex黄金",
+        "价格上涨",
+        "银价下跌"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544181",
+      "source": "WSJ 市场"
+    },
+    "43fed658d62b9555": {
+      "ai_score": 7.9,
+      "translated_title": "移民收紧之下，美国或迎来史上首次人口负增长！",
+      "ai_summary": "美国可能在2026年迎来建国以来的首次人口负增长，这一历史性转折点主要由净移民数量锐减和低出生率共同驱动。",
+      "key_points": [
+        "人口负增长",
+        "移民政策",
+        "低出生率",
+        "经济影响"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544188",
+      "source": "华尔街见闻"
+    },
+    "8d24bbb655614ccb": {
+      "ai_score": 7.3,
+      "translated_title": "日本财务省：1月份未进行日元干预操作",
+      "ai_summary": "日本财务省公布数据显示，1月份大部分时间里，当局并未直接干预汇市。",
+      "key_points": [
+        "日元干预",
+        "日本财务省",
+        "汇市",
+        "未干预"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544195",
+      "source": "华尔街见闻"
+    },
+    "ad18fb96d3668681": {
+      "ai_score": 7.3,
+      "translated_title": "美国运通收入上升，高收入消费者持续消费",
+      "ai_summary": "美国运通表示，高收入客户在餐厅和奢侈品上的消费增加，并继续寻求其高端信用卡。",
+      "key_points": [
+        "美国运通",
+        "收入上升",
+        "高收入消费者",
+        "信用卡"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544202",
+      "source": "WSJ 经济"
+    },
+    "934694a766691dd2": {
+      "ai_score": 7.5,
+      "translated_title": "美国12月PPI同比3%超预期，核心PPI环比上涨0.7%，服务成本大幅攀升",
+      "ai_summary": "美国12月PPI环比上涨0.5%，创三个月来最大涨幅，核心指标同比增速亦攀升至年内高位。",
+      "key_points": [
+        "PPI",
+        "同比上涨",
+        "服务成本",
+        "通胀"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544228",
+      "source": "华尔街见闻"
+    },
+    "a07b9931164e7a28": {
+      "ai_score": 6.8,
+      "translated_title": "‘Nothing Random’评论：他是自己的最佳卖家",
+      "ai_summary": "本尼特·瑟夫的兰登书屋从一家小型初创公司成长为出版巨头。",
+      "key_points": [
+        "兰登书屋",
+        "出版巨头",
+        "本尼特·瑟夫"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544236",
+      "source": "WSJ 经济"
+    },
+    "64814fcd8c90cca9": {
+      "ai_score": 7.5,
+      "translated_title": "中际旭创预计2025年净利润同比增长89.50%-128.17%，光模块业务净利翻倍破百亿 | 财报见闻",
+      "ai_summary": "中际旭创股份有限公司预计2025年全年盈利将实现爆发式增长，净利润规模有望突破百亿元大关。",
+      "key_points": [
+        "中际旭创",
+        "净利润增长",
+        "光模块业务",
+        "业绩预告"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544245",
+      "source": "华尔街见闻"
+    },
+    "ce71cbfaf22a0118": {
+      "ai_score": 7.3,
+      "translated_title": "巴拿马最高法院通过罢免香港港口运营商击败特朗普",
+      "ai_summary": "巴拿马最高法院表示，和记黄埔的合同违反了宪法。",
+      "key_points": [
+        "巴拿马最高法院",
+        "和记黄埔",
+        "合同",
+        "宪法"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544252",
+      "source": "WSJ 经济"
+    },
+    "27c312cfdf4002cd": {
+      "ai_score": 7.7,
+      "translated_title": "国轩高科预计全年净利润同比翻番，奇瑞IPO大幅增加账面盈利",
+      "ai_summary": "国轩高科预计2025年净利润同比翻番，主要得益于参股奇瑞赴港上市及新能源汽车与储能市场需求爆发。公司扣非净利润及每股收益均显著增长，业绩增长首要得益于新一代高能量密度磷酸铁锂电池产品销量大增。",
+      "key_points": [
+        "国轩高科净利润同比翻番",
+        "奇瑞IPO增加账面盈利",
+        "新能源汽车与储能市场需求爆发"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544260",
+      "source": "华尔街见闻"
+    },
+    "5cd757e69b019cad": {
+      "ai_score": 7.3,
+      "translated_title": "“重金砸入”AI研发，昆仑万维2025年预亏13.5亿-19.5亿",
+      "ai_summary": "昆仑万维因AI大模型、市场推广和研发领域的持续重投入，预计2025年仍为亏损。公司收入同比增长超过40%，但亏损幅度有所扩大。",
+      "key_points": [
+        "昆仑万维持续投入AI研发",
+        "预计2025年亏损扩大",
+        "收入同比增长"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544267",
+      "source": "华尔街见闻"
+    },
+    "72f522228c12460e": {
+      "ai_score": 7.5,
+      "translated_title": "中金2025年净利润同比预增50%-85%，“投资+投行+投研”一体化优势显著",
+      "ai_summary": "中金公司预计2025年净利润同比上升50%以上，主要得益于投资银行、股票业务和财富管理等核心板块的稳健表现。",
+      "key_points": [
+        "中金公司净利润预增",
+        "投资银行、股票业务稳健增长",
+        "一体化优势显著"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544274",
+      "source": "华尔街见闻"
+    },
+    "ac9cec6f7e51ddc0": {
+      "ai_score": 7.8,
+      "translated_title": "首次年度盈利！寒武纪2025年营收预增超4倍，净利润18.5亿元到21.5亿元",
+      "ai_summary": "寒武纪预计2025年将迎来业绩拐点，实现大幅盈利。公司营业收入预计增长约411%，净利润达到18.5亿元至21.5亿元。",
+      "key_points": [
+        "寒武纪首次年度盈利",
+        "营业收入大幅增长",
+        "净利润显著提升"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544282",
+      "source": "华尔街见闻"
+    },
+    "4da1c867638d4175": {
+      "ai_score": 7.5,
+      "translated_title": "中金公司发布“业绩预告”：2025年净利润或超百亿元，同比增长50%~85%",
+      "ai_summary": "中金公司预计2025年净利润将超百亿元，同比增长50%至85%。公司业绩增长主要得益于核心业务板块的协同效应与战略聚焦。",
+      "key_points": [
+        "中金公司净利润预增超百亿元",
+        "业绩增长50%至85%",
+        "核心业务板块协同效应"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544289",
+      "source": "华尔街见闻"
+    },
+    "a89f531b05c04c47": {
+      "ai_score": 7.2,
+      "translated_title": "门店增近四成的遇见小面，挺进亿元利润俱乐部",
+      "ai_summary": "遇见小面预计2025年净利润达到1.0亿至1.15亿元，同比增长64.7%至89.5%。公司通过规模扩张和经营效率提升实现利润增长。",
+      "key_points": [
+        "遇见小面净利润增长",
+        "门店数量增长",
+        "经营效率提升"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544296",
+      "source": "华尔街见闻"
+    },
+    "70026657e9979d8a": {
+      "ai_score": 7.3,
+      "translated_title": "高盛、花旗评苹果财报：业绩超预期，25亿活跃用户有望支撑iPhone新周期",
+      "ai_summary": "苹果公司2026财年第一财季业绩超出预期，iPhone销售强劲。华尔街投行看好苹果设备安装基数突破25亿所带来的服务收入增长潜力。",
+      "key_points": [
+        "苹果公司业绩超预期",
+        "iPhone销售强劲",
+        "设备安装基数突破25亿"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544303",
+      "source": "华尔街见闻"
+    },
+    "216d4975269cc34f": {
+      "ai_score": 6.1,
+      "translated_title": "Trump threatens tariffs on Canada planes and nations selling oil to Cuba",
+      "ai_summary": "特朗普威胁对加拿大飞机和向古巴出售石油的国家征收关税。",
+      "key_points": [
+        "特朗普威胁征收关税",
+        "针对加拿大和古巴"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544309",
+      "source": "BBC Business"
+    },
+    "d81e5fdd13f34c0f": {
+      "ai_score": 6.1,
+      "translated_title": "Chinalco, Rio Tinto to Buy Control of Brazilian Aluminum Maker",
+      "ai_summary": "中国铝业和力拓将收购巴西铝生产商Companhia Brasileira de Aluminio的控股权。",
+      "key_points": [
+        "中国铝业和力拓收购巴西铝生产商",
+        "控股权收购"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544315",
+      "source": "WSJ 经济"
+    },
+    "9fa930513710e7c2": {
+      "ai_score": 6.1,
+      "translated_title": "I Test Drove a Chinese EV. Now I Don’t Want to Buy American Cars Anymore.",
+      "ai_summary": "试驾了一款中国电动汽车后，作者不再想购买美国汽车。",
+      "key_points": [
+        "中国电动汽车受欢迎",
+        "作者改变购车意愿"
+      ],
+      "cached_at": "2026-01-31T12:14:20.544322",
+      "source": "WSJ 经济"
     }
   },
   "cache_hits": 6,
-  "cache_lookups": 82,
+  "cache_lookups": 435,
   "run_metrics": [
     {
       "run_time": "2026-01-31T06:47:45.364104",
@@ -531,6 +1429,17 @@
       "semantic_duplicates": 0,
       "duration_seconds": 15.744205,
       "avg_score": 7.7
+    },
+    {
+      "run_time": "2026-01-31T12:01:09.830820",
+      "news_count": 353,
+      "api_calls": 40,
+      "cache_hits": 0,
+      "cache_misses": 0,
+      "duplicates_removed": 0,
+      "semantic_duplicates": 0,
+      "duration_seconds": 790.717743,
+      "avg_score": 7.74
     }
   ]
 }
