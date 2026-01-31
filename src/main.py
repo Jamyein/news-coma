@@ -207,20 +207,28 @@ class RSSAggregator:
         return filtered
     
     def _select_top_news(self, items: List[NewsItem]) -> List[NewsItem]:
-        """选择Top N新闻"""
+        """选择Top N新闻（根据新闻总量动态决定N）"""
         # 按AI评分排序
         sorted_items = sorted(
-            items, 
-            key=lambda x: (x.ai_score or 0, x.published_at), 
+            items,
+            key=lambda x: (x.ai_score or 0, x.published_at),
             reverse=True
         )
-        
-        # 取前N条
-        max_count = self.config.output_config.max_news_count
-        top_items = sorted_items[:max_count]
-        
-        logger.info(f"📋 精选Top {len(top_items)} 条新闻")
-        
+
+        # 根据新闻总数动态决定精选数量
+        total_count = len(items)
+        if total_count <= 100:
+            max_count = 10
+        elif total_count <= 200:
+            max_count = 20
+        else:
+            max_count = 30
+
+        # 取前N条（不超过总数）
+        top_items = sorted_items[:min(max_count, total_count)]
+
+        logger.info(f"📋 从 {total_count} 条中精选 Top {len(top_items)} 条新闻")
+
         return top_items
     
     def _generate_outputs(self, items: List[NewsItem]):
