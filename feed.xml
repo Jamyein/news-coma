@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <channel>
     <title>科技新闻精选</title>
-    <link>https://github.com/username/news</link>
+    <link>https://github.com/Jamyein/news-coma</link>
     <description>由 AI 筛选的高质量科技新闻聚合，每6小时自动更新</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 31 Jan 2026 09:22:12 GMT</lastBuildDate>
-    <pubDate>Sat, 31 Jan 2026 09:22:12 GMT</pubDate>
-    <atom:link href="https://username.github.io/news/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Jan 2026 10:12:27 GMT</lastBuildDate>
+    <pubDate>Sat, 31 Jan 2026 10:12:27 GMT</pubDate>
+    <atom:link href="https://Jamyein.github.io/news-coma/feed.xml" rel="self" type="application/rss+xml" />
     <image>
         <url>https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</url>
         <title>科技新闻精选</title>
-        <link>https://github.com/username/news</link>
+        <link>https://github.com/Jamyein/news-coma</link>
     </image>
 
     <item>
         <title>2026年01月31日 新闻汇总</title>
-        <link>https://raw.githubusercontent.com/username/news/main/archive/2026-01-31.md</link>
-        <description>本期精选 3 条高质量科技新闻</description>
-        <pubDate>Sat, 31 Jan 2026 16:21:17 GMT</pubDate>
+        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-01-31.md</link>
+        <description>本期精选 4 条高质量科技新闻</description>
+        <pubDate>Sat, 31 Jan 2026 10:12:27 GMT</pubDate>
         <guid>archive/2026-01-31.md</guid>
         <category>科技新闻</category>
     </item>
     <item>
         <title>2026年01月31日 新闻汇总</title>
-        <link>https://username.github.io/news/</link>
-        <description>本期精选 3 条高质量科技新闻</description>
-        <pubDate>Sat, 31 Jan 2026 16:21:17 GMT</pubDate>
+        <link>https://Jamyein.github.io/news-coma/</link>
+        <description>本期精选 4 条高质量科技新闻</description>
+        <pubDate>Sat, 31 Jan 2026 10:12:27 GMT</pubDate>
         <guid>docs/latest.md</guid>
         <category>科技新闻</category>
     </item>

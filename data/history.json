@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-01-31T08:32:50.897431",
+  "last_run": "2026-01-31T10:11:57.554952",
   "processed_urls": [
     "https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding",
     "https://viewfromthewing.com/court-filings-ice-uses-mobile-fortify-to-identify-protesters-global-entry-and-precheck-get-revoked/",
@@ -76,12 +76,16 @@
     "https://www.wsj.com/world/how-america-first-risks-becoming-america-alone-6592701a",
     "https://blog.plover.com/2026/01/26/#wrterm",
     "https://archaeologyworlds.com/5500-year-old-sumerian-star-map-recorded/",
-    "https://codemanship.wordpress.com/2026/01/30/coding-is-when-were-least-productive/"
+    "https://codemanship.wordpress.com/2026/01/30/coding-is-when-were-least-productive/",
+    "https://piunikaweb.com/2026/01/28/youtube-background-play-samsung-internet-brave/",
+    "https://terraformindustries.wordpress.com/2026/01/30/direct-current-data-centers/",
+    "https://somehowmanage.com/2026/01/22/a-step-behind-the-bleeding-edge-monarchs-philosophy-on-ai-in-dev/",
+    "https://jaisenmathai.com/articles/my-ridiculously-robust-photo-management-system-immich-edition/"
   ],
   "stats": {
-    "total_runs": 5,
-    "total_news_processed": 141,
-    "avg_news_per_run": 28.2
+    "total_runs": 6,
+    "total_news_processed": 145,
+    "avg_news_per_run": 24.2
   },
   "source_stats": {
     "The Verge": {
@@ -89,8 +93,8 @@
       "selected": 6
     },
     "Hacker News": {
-      "fetched": 70,
-      "selected": 14
+      "fetched": 74,
+      "selected": 18
     },
     "TechCrunch": {
       "fetched": 40,
@@ -375,10 +379,66 @@
       ],
       "cached_at": "2026-01-31T08:33:08.451267",
       "source": "Hacker News"
+    },
+    "e3d3ff1ab2d6abf8": {
+      "ai_score": 7.7,
+      "translated_title": "YouTube禁止Brave和其他浏览器后台播放视频",
+      "ai_summary": "YouTube近日宣布将禁止Brave和其他浏览器后台播放视频，这一举措可能会影响这些浏览器的用户体验，并对广告收入产生一定影响。",
+      "key_points": [
+        "YouTube",
+        "Brave浏览器",
+        "后台播放视频",
+        "用户体验",
+        "广告收入"
+      ],
+      "cached_at": "2026-01-31T10:12:27.620222",
+      "source": "Hacker News"
+    },
+    "7731cb4a147dbeb0": {
+      "ai_score": 7.3,
+      "translated_title": "直流数据中心",
+      "ai_summary": "直流数据中心是一种新型的数据中心设计，它使用直流电源而不是传统的交流电源，旨在提高能源效率和降低成本。",
+      "key_points": [
+        "直流电源",
+        "数据中心",
+        "能源效率",
+        "成本降低",
+        "新型设计"
+      ],
+      "cached_at": "2026-01-31T10:12:27.620231",
+      "source": "Hacker News"
+    },
+    "4c3b04de4140b73a": {
+      "ai_score": 7.4,
+      "translated_title": "站在AI开发前沿的背后：关于AI的哲学思考",
+      "ai_summary": "本文探讨了在AI开发过程中的一些哲学思考，包括AI的伦理、责任和未来发展方向。",
+      "key_points": [
+        "AI开发",
+        "哲学思考",
+        "伦理",
+        "责任",
+        "未来发展方向"
+      ],
+      "cached_at": "2026-01-31T10:12:27.620235",
+      "source": "Hacker News"
+    },
+    "18c88d43b0584b9e": {
+      "ai_score": 7.2,
+      "translated_title": "我那令人难以置信的强大照片管理系统（Immich版）",
+      "ai_summary": "本文介绍了一种名为Immich的照片管理系统，它提供了一种高效且易于使用的照片管理解决方案。",
+      "key_points": [
+        "照片管理系统",
+        "Immich",
+        "高效管理",
+        "易于使用",
+        "解决方案"
+      ],
+      "cached_at": "2026-01-31T10:12:27.620240",
+      "source": "Hacker News"
     }
   },
   "cache_hits": 6,
-  "cache_lookups": 76,
+  "cache_lookups": 80,
   "run_metrics": [
     {
       "run_time": "2026-01-31T06:47:45.364104",
@@ -423,6 +483,17 @@
       "semantic_duplicates": 0,
       "duration_seconds": 17.556299,
       "avg_score": 7.25
+    },
+    {
+      "run_time": "2026-01-31T10:11:57.554952",
+      "news_count": 4,
+      "api_calls": 1,
+      "cache_hits": 0,
+      "cache_misses": 0,
+      "duplicates_removed": 0,
+      "semantic_duplicates": 0,
+      "duration_seconds": 30.067631,
+      "avg_score": 7.4
     }
   ]
 }
