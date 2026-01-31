@@ -85,26 +85,26 @@ jobs:
         continue-on-error: false
       
        # 5. 提交生成的文件
-       - name: Commit and push changes
-         run: |
-           git config --local user.email "action@github.com"
-           git config --local user.name "GitHub Action"
-           
-           # 检查是否有变更
-           if [ -n "$(git status --porcelain)" ]; then
-             git add docs/ archive/ feed.xml data/
-             git commit -m "📰 Update news aggregation [$(date -u +'%Y-%m-%d %H:%M UTC')]"
-             git push
-             echo "✅ Changes committed and pushed"
-           else
-             echo "ℹ️ No changes to commit"
-           fi
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          # 检查是否有变更
+          if [ -n "$(git status --porcelain)" ]; then
+            git add docs/ archive/ feed.xml data/
+            git commit -m "📰 Update news aggregation [$(date -u +'%Y-%m-%d %H:%M UTC')]"
+            git push
+            echo "✅ Changes committed and pushed"
+          else
+            echo "ℹ️ No changes to commit"
+          fi
        
        # 6. 上传feed.xml到工作流制品
-       - name: Upload feed.xml artifact
-         uses: actions/upload-pages-artifact@v3
-         with:
-           path: feed.xml
+      - name: Upload feed.xml artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: feed.xml
   
   # GitHub Pages部署任务
   deploy:
