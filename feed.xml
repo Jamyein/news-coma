@@ -5,8 +5,8 @@
     <link>https://github.com/Jamyein/news-coma</link>
     <description>由 AI 筛选的高质量科技新闻聚合，每6小时自动更新</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 31 Jan 2026 06:48:32 GMT</lastBuildDate>
-    <pubDate>Sat, 31 Jan 2026 06:48:32 GMT</pubDate>
+    <lastBuildDate>Sat, 31 Jan 2026 06:55:53 GMT</lastBuildDate>
+    <pubDate>Sat, 31 Jan 2026 06:55:53 GMT</pubDate>
     <atom:link href="https://raw.githubusercontent.com/Jamyein/news-coma/main/feed.xml" rel="self" type="application/rss+xml" />
     <image>
         <url>https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</url>
@@ -23,12 +23,76 @@
         <category>技术</category>
     </item>
     <item>
+        <title>参议院通过预算，国土安全部获得两周资金延期</title>
+        <link>https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding</link>
+        <description>美国参议院通过联邦预算，除国土安全部外，所有部门获得资金。国土安全部获得两周资金延期以就移民和海关执法局（ICE）的新规则进行谈判。若无法达成协议，国土安全部资金将中断。</description>
+        <pubDate>Sat, 31 Jan 2026 02:38:04 GMT</pubDate>
+        <guid isPermaLink="true">https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding</guid>
+        <category>科技</category>
+    </item>
+    <item>
+        <title>使用GitHub Copilot CLI在终端中实现强大的代理工作流程</title>
+        <link>https://github.blog/ai-and-ml/github-copilot/power-agentic-workflows-in-your-terminal-with-github-copilot-cli/</link>
+        <description>GitHub博客发布了一篇关于GitHub Copilot CLI的文章，介绍了如何直接从终端与Copilot交互，探索了这一工具在开发领域的应用和潜力。</description>
+        <pubDate>Mon, 26 Jan 2026 18:54:49 GMT</pubDate>
+        <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/power-agentic-workflows-in-your-terminal-with-github-copilot-cli/</guid>
+        <category>开发</category>
+    </item>
+    <item>
+        <title>iPhone创下最佳季度销售记录</title>
+        <link>https://techcrunch.com/2026/01/29/the-iphone-just-had-its-best-quarter-ever/</link>
+        <description>得益于中国和印度等地区市场的增长，苹果的iPhone销量创下历史新高。</description>
+        <pubDate>Thu, 29 Jan 2026 23:57:21 GMT</pubDate>
+        <guid isPermaLink="true">https://techcrunch.com/2026/01/29/the-iphone-just-had-its-best-quarter-ever/</guid>
+        <category>科技</category>
+    </item>
+    <item>
+        <title>俄罗斯黑客因安全漏洞入侵波兰电网</title>
+        <link>https://techcrunch.com/2026/01/30/russian-hackers-breached-polish-power-grid-thanks-to-bad-security-report-says/</link>
+        <description>波兰政府指责俄罗斯政府黑客组织利用默认用户名和密码入侵能源设施。</description>
+        <pubDate>Fri, 30 Jan 2026 16:50:24 GMT</pubDate>
+        <guid isPermaLink="true">https://techcrunch.com/2026/01/30/russian-hackers-breached-polish-power-grid-thanks-to-bad-security-report-says/</guid>
+        <category>科技</category>
+    </item>
+    <item>
+        <title>SpaceX的IPO可能开启大门，同时二级市场繁荣</title>
+        <link>https://techcrunch.com/2026/01/30/spacexs-ipo-could-open-the-floodgates-and-secondaries-are-booming-in-the-meantime/</link>
+        <description>SpaceX的IPO讨论引发关注，同时其二级市场交易活跃。Rainmaker Securities的Greg Martin分析了私人流动性在IPO前的运作方式。</description>
+        <pubDate>Fri, 30 Jan 2026 19:41:25 GMT</pubDate>
+        <guid isPermaLink="true">https://techcrunch.com/2026/01/30/spacexs-ipo-could-open-the-floodgates-and-secondaries-are-booming-in-the-meantime/</guid>
+        <category>科技</category>
+    </item>
+    <item>
+        <title>Uber在自动驾驶汽车领域占据领先地位</title>
+        <link>https://techcrunch.com/video/uber-is-literally-in-the-drivers-seat-when-it-comes-to-av-bets/</link>
+        <description>Uber通过投资自动驾驶卡车初创公司Waabi，进一步扩大其机器人出租车业务。这笔交易是Uber在自动驾驶领域的又一重要举措。</description>
+        <pubDate>Fri, 30 Jan 2026 18:56:17 GMT</pubDate>
+        <guid isPermaLink="true">https://techcrunch.com/video/uber-is-literally-in-the-drivers-seat-when-it-comes-to-av-bets/</guid>
+        <category>科技</category>
+    </item>
+    <item>
         <title>设计一个被动安全的API</title>
         <link>https://www.danealbaugh.com/articles/passively-safe-apis</link>
         <description>一篇技术文章探讨了如何设计一个既安全又易于使用的API，这对于软件开发者来说是一个重要的参考。</description>
         <pubDate>Mon, 26 Jan 2026 19:03:04 GMT</pubDate>
         <guid isPermaLink="true">https://www.danealbaugh.com/articles/passively-safe-apis</guid>
         <category>技术</category>
+    </item>
+    <item>
+        <title>谷歌推出AI世界生成工具，游戏公司股价下跌</title>
+        <link>https://www.theverge.com/games/871348/google-project-genie-take-two-roblox-unity</link>
+        <description>谷歌宣布其Project Genie工具，允许用户通过AI生成互动体验，导致一些主要游戏公司的股价下跌。</description>
+        <pubDate>Fri, 30 Jan 2026 22:45:16 GMT</pubDate>
+        <guid isPermaLink="true">https://www.theverge.com/games/871348/google-project-genie-take-two-roblox-unity</guid>
+        <category>科技</category>
+    </item>
+    <item>
+        <title>Sequoia支持的Ethos成功上市，而竞争对手未能如愿</title>
+        <link>https://techcrunch.com/2026/01/29/how-sequoia-backed-ethos-reached-the-public-market-while-rivals-fell-short/</link>
+        <description>盈利的生命保险平台Ethos成为首批测试2026年公开市场的科技巨头之一。</description>
+        <pubDate>Fri, 30 Jan 2026 01:33:13 GMT</pubDate>
+        <guid isPermaLink="true">https://techcrunch.com/2026/01/29/how-sequoia-backed-ethos-reached-the-public-market-while-rivals-fell-short/</guid>
+        <category>科技</category>
     </item>
     <item>
         <title>展示HN：噬菌体探索器</title>
@@ -45,14 +109,6 @@
         <pubDate>Sat, 31 Jan 2026 03:53:06 GMT</pubDate>
         <guid isPermaLink="true">https://lareviewofbooks.org/article/foundational-anxieties-modern-mathematics-and-the-political-imagination/</guid>
         <category>技术</category>
-    </item>
-    <item>
-        <title>参议院通过预算，国土安全部获得两周资金延期以协商移民海关执法新规定</title>
-        <link>https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding</link>
-        <description>美国参议院于2026年1月31日通过联邦预算，除国土安全部外，所有部门均获得资金。国土安全部获得两周资金延期，以协商移民海关执法（ICE）的新规定。若无法达成协议，国土安全部将面临资金中断。这一决定对国家安全和移民政策产生重要影响。</description>
-        <pubDate>Sat, 31 Jan 2026 02:38:04 GMT</pubDate>
-        <guid isPermaLink="true">https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding</guid>
-        <category>科技</category>
     </item>
     <item>
         <title>法院文件显示ICE应用程序识别抗议者；全球入口和预检服务被撤销</title>
