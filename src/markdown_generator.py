@@ -58,9 +58,13 @@ class MarkdownGenerator:
     
     def _build_content(self, items: List[NewsItem], timestamp: datetime) -> str:
         """构建Markdown内容"""
+        # 转换为北京时间 (UTC+8)
+        from datetime import timedelta
+        beijing_time = timestamp + timedelta(hours=8)
+        
         header = f"""# 📰 科技新闻精选
 
-> 🕐 更新时间: {timestamp.strftime("%Y年%m月%d日 %H:%M")} UTC  
+> 🕐 更新时间: {beijing_time.strftime("%Y年%m月%d日 %H:%M")} (北京时间)  
 > 📊 本期精选 **{len(items)}** 条高质量科技新闻  
 > 🤖 由 AI 自动筛选、翻译和总结
 
