@@ -115,7 +115,10 @@ class RSSAggregator:
         )
         
         logger.info(f"✓ 已加载 {len(self.config.rss_sources)} 个RSS源")
-        logger.info(f"✓ AI模型: {self.config.ai_config.model}")
+        ai_config = self.config.ai_config
+        current_provider = ai_config.provider
+        provider_config = ai_config.providers_config[current_provider]
+        logger.info(f"✓ AI模型: {current_provider} ({provider_config.model})")
     
     def _fetch_news(self) -> List[NewsItem]:
         """获取新闻"""
