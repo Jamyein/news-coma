@@ -1,6 +1,7 @@
 """
 RSS获取模块
 负责从多个RSS源获取新闻并解析
+新增：语义去重(Semantic Deduplication)支持
 """
 import hashlib
 import logging
@@ -8,7 +9,7 @@ import re
 import socket
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta
-from typing import List
+from typing import List, Optional
 
 import feedparser
 from dateutil import parser as date_parser
@@ -22,14 +23,52 @@ socket.setdefaulttimeout(10)
 
 
 class RSSFetcher:
-    """RSS获取器"""
+    """RSS获取器 - 支持语义去重"""
     
-    def __init__(self, sources: List[RSSSource], output_config: OutputConfig, 
-                 filter_config: FilterConfig):
+    def __init__(
+        self, 
+        sources: List[RSSSource], 
+        output_config: OutputConfig, 
+        filter_config: FilterConfig
+    ):
         self.sources = sources
         self.output_config = output_config
         self.filter_config = filter_config
         self.time_window = timedelta(days=output_config.time_window_days)
+        
+        # 轻量级语义去重配置 (TF-IDF版，GitHub Actions友好，~10MB内存)
+        self._semantic_dedup_enabled = getattr(filter_config, 'use_semantic_dedup', True)
+        self._semantic_threshold = getattr(filter_config, 'semantic_similarity', 0.85)
+        
+        # TF-IDF向量化器 (轻量级替代sentence-transformers)
+        self._vectorizer = None
+        
+        # 统计信息
+        self.semantic_duplicates_removed = 0
+    
+    def _get_vectorizer(self):
+        """延迟初始化TF-IDF向量化器 (轻量级，GitHub Actions友好)"""
+        if self._vectorizer is None and self._semantic_dedup_enabled:
+            try:
+                from sklearn.feature_extraction.text import TfidfVectorizer
+                
+                logger.info("📦 初始化TF-IDF向量化器(轻量级，~10MB)...")
+                # 轻量级配置，内存友好
+                self._vectorizer = TfidfVectorizer(
+                    max_features=500,       # 限制特征数，节省内存
+                    ngram_range=(1, 2),     # 单词和双词组合
+                    stop_words='english',   # 移除英文停用词
+                    min_df=1,               # 最少出现1次
+                    max_df=0.95,            # 忽略过于常见的词
+                    lowercase=True,
+                    strip_accents='unicode'
+                )
+                logger.info("✓ TF-IDF向量化器初始化完成 (~10MB)")
+            except Exception as e:
+                logger.error(f"❌ 向量化器初始化失败，禁用语义去重: {e}")
+                self._semantic_dedup_enabled = False
+        
+        return self._vectorizer
     
     def fetch_all(self) -> List[NewsItem]:
         """
@@ -52,9 +91,9 @@ class RSSFetcher:
                 try:
                     items = future.result(timeout=30)
                     all_items.extend(items)
-                    logger.info(f"成功从 {source.name} 获取 {len(items)} 条新闻")
+                    logger.info(f"✓ 成功从 {source.name} 获取 {len(items)} 条新闻")
                 except Exception as e:
-                    logger.error(f"从 {source.name} 获取失败: {e}")
+                    logger.error(f"❌ 从 {source.name} 获取失败: {e}")
         
         # 去重
         unique_items = self._deduplicate(all_items)
@@ -62,7 +101,11 @@ class RSSFetcher:
         # 按发布时间排序(最新的在前)
         unique_items.sort(key=lambda x: x.published_at, reverse=True)
         
-        logger.info(f"去重后共有 {len(unique_items)} 条新闻")
+        logger.info(
+            f"📊 获取完成: 原始 {len(all_items)} 条 → "
+            f"去重后 {len(unique_items)} 条 "
+            f"(语义去重 {self.semantic_duplicates_removed} 条)"
+        )
         return unique_items
     
     def _fetch_single(self, source: RSSSource) -> List[NewsItem]:
@@ -74,7 +117,7 @@ class RSSFetcher:
             feed = feedparser.parse(source.url)
             
             if feed.bozo:  # 解析警告
-                logger.warning(f"{source.name} RSS解析警告: {feed.bozo_exception}")
+                logger.warning(f"⚠️ {source.name} RSS解析警告: {feed.bozo_exception}")
             
             # 获取当前时间窗口
             cutoff_time = datetime.now() - self.time_window
@@ -88,11 +131,11 @@ class RSSFetcher:
                         items.append(item)
                     
                 except Exception as e:
-                    logger.warning(f"解析条目失败: {e}")
+                    logger.warning(f"⚠️ 解析条目失败: {e}")
                     continue
                     
         except Exception as e:
-            logger.error(f"获取RSS源 {source.name} 失败: {e}")
+            logger.error(f"❌ 获取RSS源 {source.name} 失败: {e}")
             raise
         
         return items
@@ -141,7 +184,23 @@ class RSSFetcher:
         )
     
     def _deduplicate(self, items: List[NewsItem]) -> List[NewsItem]:
-        """去重(基于URL和标题相似度)"""
+        """
+        去重 - 两阶段去重策略
+        阶段1: URL + Levenshtein (快速去重)
+        阶段2: 语义相似度 (精准去重，可选)
+        """
+        # 阶段1: 快速去重
+        unique_items = self._fast_dedup(items)
+        
+        # 阶段2: 语义去重 (如果启用)
+        if self._semantic_dedup_enabled and len(unique_items) > 1:
+            logger.info(f"🔍 启动语义去重检查: {len(unique_items)} 条")
+            unique_items = self._semantic_deduplicate(unique_items)
+        
+        return unique_items
+    
+    def _fast_dedup(self, items: List[NewsItem]) -> List[NewsItem]:
+        """快速去重 - 基于URL和Levenshtein距离"""
         seen_urls = set()
         seen_titles = []
         unique_items = []
@@ -168,21 +227,85 @@ class RSSFetcher:
         
         return unique_items
     
+    def _semantic_deduplicate(self, items: List[NewsItem]) -> List[NewsItem]:
+        """
+        轻量级语义去重 - 使用TF-IDF (GitHub Actions友好，~10MB内存)
+        识别语义相似但表述不同的标题
+        """
+        vectorizer = self._get_vectorizer()
+        if vectorizer is None:
+            return items
+        
+        try:
+            from sklearn.metrics.pairwise import cosine_similarity
+            import numpy as np
+            
+            # 准备文本 (标题 + 摘要前100字)
+            texts = []
+            for item in items:
+                text = f"{item.title} {item.summary[:100]}"
+                texts.append(text.lower())
+            
+            # TF-IDF编码 (内存友好)
+            logger.info(f"🧮 TF-IDF编码 {len(texts)} 条新闻...")
+            tfidf_matrix = vectorizer.fit_transform(texts)
+            
+            # 计算相似度矩阵
+            similarity_matrix = cosine_similarity(tfidf_matrix)
+            
+            # 聚类去重
+            unique_items = []
+            processed_indices = set()
+            semantic_duplicates = 0
+            
+            for i, item in enumerate(items):
+                if i in processed_indices:
+                    continue
+                
+                # 找到所有语义相似的新闻
+                similar_indices = [
+                    j for j in range(len(items))
+                    if similarity_matrix[i][j] > self._semantic_threshold
+                    and j != i and j not in processed_indices
+                ]
+                
+                if similar_indices:
+                    logger.debug(
+                        f"🎯 TF-IDF去重: '{item.title[:40]}...' "
+                        f"与 {len(similar_indices)} 条相似"
+                    )
+                    semantic_duplicates += len(similar_indices)
+                
+                # 保留第一条，标记其余为重复
+                unique_items.append(item)
+                processed_indices.add(i)
+                processed_indices.update(similar_indices)
+            
+            self.semantic_duplicates_removed = semantic_duplicates
+            
+            logger.info(
+                f"✓ TF-IDF语义去重完成: {len(items)} → {len(unique_items)} 条 "
+                f"(去除 {semantic_duplicates} 条语义重复)"
+            )
+            
+            return unique_items
+            
+        except Exception as e:
+            logger.error(f"❌ TF-IDF语义去重失败: {e}")
+            return items  # 失败时返回原始列表
+    
     def _title_similarity(self, title1: str, title2: str) -> float:
         """计算两个标题的相似度(基于Levenshtein距离)"""
-        # 简单的相似度计算
         title1 = title1.lower().strip()
         title2 = title2.lower().strip()
         
         if title1 == title2:
             return 1.0
         
-        # 计算Levenshtein距离
         len1, len2 = len(title1), len(title2)
         if len1 == 0 or len2 == 0:
             return 0.0
         
-        # 使用简单的编辑距离
         max_len = max(len1, len2)
         distance = self._levenshtein_distance(title1, title2)
         similarity = 1 - (distance / max_len)
@@ -211,7 +334,6 @@ class RSSFetcher:
     
     def _clean_html(self, html: str) -> str:
         """简单清理HTML标签"""
-        import re
         if not html:
             return ""
         # 移除script和style标签及其内容
@@ -223,3 +345,11 @@ class RSSFetcher:
         html = html.replace('&amp;', '&').replace('&quot;', '"')
         html = html.replace('&#39;', "'").replace('&nbsp;', ' ')
         return html.strip()
+    
+    def get_stats(self) -> dict:
+        """获取去重统计"""
+        return {
+            "semantic_dedup_enabled": self._semantic_dedup_enabled,
+            "semantic_threshold": self._semantic_threshold,
+            "semantic_duplicates_removed": self.semantic_duplicates_removed
+        }

@@ -87,6 +87,18 @@ class Config:
             'practicality': 0.15
         })
         
+        # 读取缓存配置
+        cache_ttl_hours = ai_data.get('cache_ttl_hours', 24)
+        
+        # 读取真批处理配置
+        use_true_batch = ai_data.get('use_true_batch', True)
+        true_batch_size = ai_data.get('true_batch_size', 10)
+        
+        # 读取2-Pass评分配置
+        use_2pass = ai_data.get('use_2pass', True)
+        pass1_threshold = ai_data.get('pass1_threshold', 7.0)
+        pass1_max_items = ai_data.get('pass1_max_items', 40)
+        
         # Validate that the selected provider has an API key
         current_config = providers_config.get(current_provider)
         if not current_config or not current_config.api_key:
@@ -108,7 +120,13 @@ class Config:
             providers_config=providers_config,
             fallback=fallback,
             scoring_criteria=scoring_criteria,
-            retry_attempts=ai_data.get('retry_attempts', 3)
+            retry_attempts=ai_data.get('retry_attempts', 3),
+            cache_ttl_hours=cache_ttl_hours,
+            use_true_batch=use_true_batch,
+            true_batch_size=true_batch_size,
+            use_2pass=use_2pass,
+            pass1_threshold=pass1_threshold,
+            pass1_max_items=pass1_max_items
         )
     
     @property
@@ -129,5 +147,7 @@ class Config:
         return FilterConfig(
             min_score_threshold=filter_data.get('min_score_threshold', 6.0),
             dedup_similarity=filter_data.get('dedup_similarity', 0.85),
-            blocked_keywords=filter_data.get('blocked_keywords', [])
+            blocked_keywords=filter_data.get('blocked_keywords', []),
+            use_semantic_dedup=filter_data.get('use_semantic_dedup', True),
+            semantic_similarity=filter_data.get('semantic_similarity', 0.85)
         )

@@ -71,6 +71,12 @@ class AIConfig:
     fallback: FallbackConfig                         # 回退配置
     scoring_criteria: Dict[str, float]
     retry_attempts: int = 3
+    cache_ttl_hours: int = 24                        # AI评分缓存有效期(小时)
+    use_true_batch: bool = True                      # 是否启用真批处理
+    true_batch_size: int = 10                        # 真批处理每批数量
+    use_2pass: bool = True                           # 是否启用2-Pass评分
+    pass1_threshold: float = 7.0                     # Pass 1预筛阈值
+    pass1_max_items: int = 40                        # Pass 1最大保留数量
 
 
 @dataclass
@@ -88,3 +94,5 @@ class FilterConfig:
     min_score_threshold: float
     dedup_similarity: float
     blocked_keywords: List[str]
+    use_semantic_dedup: bool = True                 # 是否启用TF-IDF语义去重
+    semantic_similarity: float = 0.85               # 语义相似度阈值
