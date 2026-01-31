@@ -144,7 +144,8 @@ class RSSGenerator:
             'pub_date': self._format_rfc822(pub_date),
             'guid': guid,
             'file_path': str(file_path),
-            'news_count': news_count
+            'news_count': news_count,
+            'full_content': content  # 添加完整Markdown内容
         }
     
     def _build_rss_xml(self, file_infos: List[Dict]) -> str:
@@ -193,6 +194,10 @@ class RSSGenerator:
         pub_date = file_info.get('pub_date', '')
         guid = escape(file_info.get('guid', ''))
         
+        # 添加完整内容（使用CDATA避免转义问题）
+        full_content = file_info.get('full_content', '')
+        content_encoded = f"<![CDATA[{full_content}]]>" if full_content else ""
+        
         return f"""
     <item>
         <title>{title}</title>
@@ -201,6 +206,7 @@ class RSSGenerator:
         <pubDate>{pub_date}</pubDate>
         <guid>{guid}</guid>
         <category>科技新闻</category>
+        <content:encoded>{content_encoded}</content:encoded>
     </item>"""
     
     def _format_rfc822(self, dt: datetime) -> str:
