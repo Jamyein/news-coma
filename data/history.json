@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-01-31T06:47:45.364104",
+  "last_run": "2026-01-31T06:53:03.932446",
   "processed_urls": [
     "https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding",
     "https://viewfromthewing.com/court-filings-ice-uses-mobile-fortify-to-identify-protesters-global-entry-and-precheck-get-revoked/",
@@ -74,26 +74,26 @@
     "https://www.danealbaugh.com/articles/passively-safe-apis"
   ],
   "stats": {
-    "total_runs": 2,
-    "total_news_processed": 71,
-    "avg_news_per_run": 35.5
+    "total_runs": 3,
+    "total_news_processed": 136,
+    "avg_news_per_run": 45.3
   },
   "source_stats": {
     "The Verge": {
-      "fetched": 10,
-      "selected": 3
+      "fetched": 20,
+      "selected": 5
     },
     "Hacker News": {
-      "fetched": 36,
-      "selected": 8
+      "fetched": 66,
+      "selected": 10
     },
     "TechCrunch": {
-      "fetched": 20,
-      "selected": 3
+      "fetched": 40,
+      "selected": 8
     },
     "GitHub Blog": {
-      "fetched": 5,
-      "selected": 0
+      "fetched": 10,
+      "selected": 1
     }
   },
   "ai_cache": {
@@ -174,10 +174,144 @@
       ],
       "cached_at": "2026-01-31T06:48:32.864252",
       "source": "Hacker News"
+    },
+    "5cb8095f81938ecc": {
+      "ai_score": 7.7,
+      "translated_title": "参议院通过预算，国土安全部获得两周资金延期",
+      "ai_summary": "美国参议院通过联邦预算，除国土安全部外，所有部门获得资金。国土安全部获得两周资金延期以就移民和海关执法局（ICE）的新规则进行谈判。若无法达成协议，国土安全部资金将中断。",
+      "key_points": [
+        "参议院通过预算",
+        "国土安全部资金延期",
+        "ICE新规则谈判"
+      ],
+      "cached_at": "2026-01-31T06:55:53.752279",
+      "source": "The Verge"
+    },
+    "301363b9dcdf69ec": {
+      "ai_score": 7.0,
+      "translated_title": "谷歌推出AI世界生成工具，游戏公司股价下跌",
+      "ai_summary": "谷歌宣布其Project Genie工具，允许用户通过AI生成互动体验，导致一些主要游戏公司的股价下跌。",
+      "key_points": [
+        "谷歌AI工具",
+        "游戏公司股价下跌",
+        "AI对游戏行业的影响"
+      ],
+      "cached_at": "2026-01-31T06:55:53.752292",
+      "source": "The Verge"
+    },
+    "9742d7e4da1f760f": {
+      "ai_score": 7.3,
+      "translated_title": "SpaceX的IPO可能开启大门，同时二级市场繁荣",
+      "ai_summary": "SpaceX的IPO讨论引发关注，同时其二级市场交易活跃。Rainmaker Securities的Greg Martin分析了私人流动性在IPO前的运作方式。",
+      "key_points": [
+        "SpaceX IPO",
+        "二级市场交易",
+        "私人流动性"
+      ],
+      "cached_at": "2026-01-31T06:55:53.752302",
+      "source": "TechCrunch"
+    },
+    "bd1bfb567fe2c0e5": {
+      "ai_score": 7.3,
+      "translated_title": "Uber在自动驾驶汽车领域占据领先地位",
+      "ai_summary": "Uber通过投资自动驾驶卡车初创公司Waabi，进一步扩大其机器人出租车业务。这笔交易是Uber在自动驾驶领域的又一重要举措。",
+      "key_points": [
+        "Uber自动驾驶",
+        "Waabi融资",
+        "机器人出租车"
+      ],
+      "cached_at": "2026-01-31T06:55:53.752311",
+      "source": "TechCrunch"
+    },
+    "b193ceab184c3340": {
+      "ai_score": 7.4,
+      "translated_title": "俄罗斯黑客因安全漏洞入侵波兰电网",
+      "ai_summary": "波兰政府指责俄罗斯政府黑客组织利用默认用户名和密码入侵能源设施。",
+      "key_points": [
+        "俄罗斯黑客入侵",
+        "波兰电网",
+        "安全漏洞"
+      ],
+      "cached_at": "2026-01-31T06:55:53.752317",
+      "source": "TechCrunch"
+    },
+    "a2508d7f6f2fc26d": {
+      "ai_score": 7.0,
+      "translated_title": "Sequoia支持的Ethos成功上市，而竞争对手未能如愿",
+      "ai_summary": "盈利的生命保险平台Ethos成为首批测试2026年公开市场的科技巨头之一。",
+      "key_points": [
+        "Ethos上市",
+        "公开市场测试",
+        "生命保险平台"
+      ],
+      "cached_at": "2026-01-31T06:55:53.752324",
+      "source": "TechCrunch"
+    },
+    "6ea9849700284383": {
+      "ai_score": 7.5,
+      "translated_title": "iPhone创下最佳季度销售记录",
+      "ai_summary": "得益于中国和印度等地区市场的增长，苹果的iPhone销量创下历史新高。",
+      "key_points": [
+        "iPhone销售记录",
+        "市场增长",
+        "苹果公司"
+      ],
+      "cached_at": "2026-01-31T06:55:53.752329",
+      "source": "TechCrunch"
+    },
+    "13cefb997e28becc": {
+      "ai_score": 6.4,
+      "translated_title": "GitHub创新图回顾和未来目标",
+      "ai_summary": "GitHub通过创新图数据，回顾了2025年第三季度的公共软件开发活动趋势和洞察。",
+      "key_points": [
+        "GitHub创新图",
+        "软件开发活动",
+        "数据趋势"
+      ],
+      "cached_at": "2026-01-31T06:55:53.752337",
+      "source": "GitHub Blog"
+    },
+    "a953b69a3b0ac35a": {
+      "ai_score": 6.6,
+      "translated_title": "C#和TypeScript架构师Anders Hejlsberg的7个经验教训",
+      "ai_summary": "Anders Hejlsberg分享了关于C#和TypeScript的快速反馈循环、软件扩展、开源可视性和构建持久工具的经验。",
+      "key_points": [
+        "Anders Hejlsberg",
+        "C#",
+        "TypeScript",
+        "经验教训"
+      ],
+      "cached_at": "2026-01-31T06:55:53.752344",
+      "source": "GitHub Blog"
+    },
+    "5339f1ccc5b8ca1b": {
+      "ai_score": 5.8,
+      "translated_title": "帮助塑造欧洲开源的未来",
+      "ai_summary": "阅读GitHub对欧洲开放数字生态系统战略的立场，了解如何参与其中。",
+      "key_points": [
+        "欧洲开源",
+        "GitHub立场",
+        "参与方式"
+      ],
+      "cached_at": "2026-01-31T06:55:53.752352",
+      "source": "GitHub Blog"
+    },
+    "e402afedfe8d781d": {
+      "ai_score": 7.7,
+      "translated_title": "使用GitHub Copilot CLI在终端中实现强大的代理工作流程",
+      "ai_summary": "GitHub博客发布了一篇关于GitHub Copilot CLI的文章，介绍了如何直接从终端与Copilot交互，探索了这一工具在开发领域的应用和潜力。",
+      "key_points": [
+        "GitHub Copilot CLI",
+        "终端交互",
+        "开发工具",
+        "工作流程优化"
+      ],
+      "cached_at": "2026-01-31T06:55:53.752357",
+      "source": "GitHub Blog"
     }
   },
-  "cache_hits": 0,
-  "cache_lookups": 6,
+  "cache_hits": 6,
+  "cache_lookups": 71,
   "run_metrics": [
     {
       "run_time": "2026-01-31T06:47:45.364104",
@@ -189,6 +323,17 @@
       "semantic_duplicates": 0,
       "duration_seconds": 47.501665,
       "avg_score": 6.75
+    },
+    {
+      "run_time": "2026-01-31T06:53:03.932446",
+      "news_count": 65,
+      "api_calls": 8,
+      "cache_hits": 0,
+      "cache_misses": 0,
+      "duplicates_removed": 0,
+      "semantic_duplicates": 0,
+      "duration_seconds": 169.821657,
+      "avg_score": 7.389999999999999
     }
   ]
 }
