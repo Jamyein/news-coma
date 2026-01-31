@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-01-31T12:01:09.830820",
+  "last_run": "2026-01-31T12:45:40.837785",
   "processed_urls": [
     "https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding",
     "https://viewfromthewing.com/court-filings-ice-uses-mobile-fortify-to-identify-protesters-global-entry-and-precheck-get-revoked/",
@@ -435,12 +435,18 @@
     "http://biz.eastmoney.com/news/1670,202601263630014658.html",
     "https://www.wsj.com/finance/investing/wall-street-has-fallen-out-of-love-with-software-stocks-b050b457?mod=rss_markets_main",
     "https://www.wsj.com/economy/housing/these-developers-stand-to-win-in-trumps-housing-investor-crackdown-fed348a7",
-    "https://www.wsj.com/personal-finance/taxes/why-it-pays-to-check-your-tax-withholding-this-year-6d443417?mod=rss_markets_main"
+    "https://www.wsj.com/personal-finance/taxes/why-it-pays-to-check-your-tax-withholding-this-year-6d443417?mod=rss_markets_main",
+    "https://www.marketwatch.com/story/im-worried-about-cash-flow-im-71-with-a-2-7-million-ira-and-470k-in-stocks-why-cant-i-relax-9caaec66?mod=mw_rss_topstories",
+    "https://www.marketwatch.com/story/eager-for-an-openai-or-anthropic-ipo-then-trumps-fed-pick-is-good-news-b7049dbc?mod=mw_rss_topstories",
+    "https://www.ft.com/content/608af6ec-54fd-48a9-88e7-7ee31f12ae94",
+    "https://www.ycombinator.com/companies/goldbridge/jobs/78gGEHh-forward-deployed-engineer",
+    "https://wallstreetcn.com/articles/3764666",
+    "https://wallstreetcn.com/articles/3764667"
   ],
   "stats": {
-    "total_runs": 8,
-    "total_news_processed": 500,
-    "avg_news_per_run": 62.5
+    "total_runs": 9,
+    "total_news_processed": 506,
+    "avg_news_per_run": 56.2
   },
   "source_stats": {
     "The Verge": {
@@ -448,7 +454,7 @@
       "selected": 6
     },
     "Hacker News": {
-      "fetched": 80,
+      "fetched": 81,
       "selected": 19
     },
     "TechCrunch": {
@@ -460,12 +466,12 @@
       "selected": 1
     },
     "MarketWatch": {
-      "fetched": 10,
-      "selected": 0
+      "fetched": 12,
+      "selected": 2
     },
     "Financial Times": {
-      "fetched": 10,
-      "selected": 0
+      "fetched": 11,
+      "selected": 1
     },
     "WSJ 经济": {
       "fetched": 72,
@@ -480,8 +486,8 @@
       "selected": 1
     },
     "华尔街见闻": {
-      "fetched": 44,
-      "selected": 8
+      "fetched": 46,
+      "selected": 10
     },
     "BBC Business": {
       "fetched": 36,
@@ -1359,10 +1365,84 @@
       ],
       "cached_at": "2026-01-31T12:14:20.544322",
       "source": "WSJ 经济"
+    },
+    "8774d727997d0eba": {
+      "ai_score": 7.7,
+      "translated_title": "71岁老人拥有270万美元IRA和47万美元股票，为何仍无法放松？",
+      "ai_summary": "本文探讨了71岁老人尽管拥有相当财富，却因现金流问题而感到焦虑。文章揭示了个人财务规划的重要性以及退休规划中的风险。",
+      "key_points": [
+        "个人财务规划",
+        "退休焦虑",
+        "现金流管理"
+      ],
+      "cached_at": "2026-01-31T12:47:25.503238",
+      "source": "MarketWatch"
+    },
+    "7d3758e53268781f": {
+      "ai_score": 7.6,
+      "translated_title": "特朗普的联邦储备委员会提名者支持低利率，对AI IPO有何影响？",
+      "ai_summary": "文章分析了特朗普提名的联邦储备委员会提名者对低利率的支持，以及这一政策可能对人工智能公司IPO的潜在影响。",
+      "key_points": [
+        "联邦储备委员会",
+        "低利率政策",
+        "AI公司IPO"
+      ],
+      "cached_at": "2026-01-31T12:47:25.503257",
+      "source": "MarketWatch"
+    },
+    "a544f98255496ede": {
+      "ai_score": 6.4,
+      "translated_title": "彼得·曼德尔森的杰弗里·爱泼斯坦联系被揭露",
+      "ai_summary": "文章报道了曼德尔森与爱泼斯坦之间的财务往来，揭示了金融界与性犯罪者之间的联系。",
+      "key_points": [
+        "彼得·曼德尔森",
+        "杰弗里·爱泼斯坦",
+        "金融丑闻"
+      ],
+      "cached_at": "2026-01-31T12:47:25.503266",
+      "source": "Financial Times"
+    },
+    "c0392571ecaed119": {
+      "ai_score": 5.7,
+      "translated_title": "Insane Growth Goldbridge (YC F25) 正在招聘Forward Deployed Engineer",
+      "ai_summary": "Goldbridge公司正在招聘工程师，这是一家快速增长的技术公司。",
+      "key_points": [
+        "Goldbridge",
+        "工程师招聘",
+        "技术公司"
+      ],
+      "cached_at": "2026-01-31T12:47:25.503274",
+      "source": "Hacker News"
+    },
+    "7710437408c1b952": {
+      "ai_score": 6.8,
+      "translated_title": "爱泼斯坦邮件继续爆大料：盖茨“向妻子隐瞒性病”，马斯克多次询问“上岛”",
+      "ai_summary": "文章报道了爱泼斯坦邮件档案中的新发现，涉及比尔·盖茨和埃隆·马斯克等人的隐私。",
+      "key_points": [
+        "爱泼斯坦邮件",
+        "比尔·盖茨",
+        "埃隆·马斯克",
+        "隐私泄露"
+      ],
+      "cached_at": "2026-01-31T12:47:25.503283",
+      "source": "华尔街见闻"
+    },
+    "ff8072bd9483f093": {
+      "ai_score": 7.0,
+      "translated_title": "凯文·沃什的三大挑战：美联储、通胀和特朗普",
+      "ai_summary": "文章分析了凯文·沃什作为美联储主席人选所面临的挑战，包括通胀管理、美联储独立性和特朗普的干预。",
+      "key_points": [
+        "凯文·沃什",
+        "美联储",
+        "通胀管理",
+        "特朗普"
+      ],
+      "cached_at": "2026-01-31T12:47:25.503291",
+      "source": "华尔街见闻"
     }
   },
   "cache_hits": 6,
-  "cache_lookups": 435,
+  "cache_lookups": 441,
   "run_metrics": [
     {
       "run_time": "2026-01-31T06:47:45.364104",
@@ -1440,6 +1520,17 @@
       "semantic_duplicates": 0,
       "duration_seconds": 790.717743,
       "avg_score": 7.74
+    },
+    {
+      "run_time": "2026-01-31T12:45:40.837785",
+      "news_count": 6,
+      "api_calls": 1,
+      "cache_hits": 0,
+      "cache_misses": 0,
+      "duplicates_removed": 0,
+      "semantic_duplicates": 0,
+      "duration_seconds": 104.669736,
+      "avg_score": 7.1
     }
   ]
 }
