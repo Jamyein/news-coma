@@ -120,7 +120,7 @@ class RSSGenerator:
         repo_url = os.getenv('GITHUB_REPOSITORY', 'username/news')
         username, repo = repo_url.split('/') if '/' in repo_url else ('username', 'news')
         
-        feed_url = f"https://raw.githubusercontent.com/{username}/{repo}/main/feed.xml"
+        feed_url = f"https://{username}.github.io/{repo}/feed.xml"
         project_url = f"https://github.com/{username}/{repo}"
         
         # 构建items XML
