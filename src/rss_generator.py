@@ -23,6 +23,97 @@ class RSSGenerator:
         self.docs_dir = Path(docs_dir)
         self.max_items = max_items
     
+    def _markdown_to_html(self, markdown_text: str) -> str:
+        """
+        将Markdown文本转换为HTML
+        
+        Args:
+            markdown_text: Markdown格式的文本
+            
+        Returns:
+            HTML格式的文本
+        """
+        if not markdown_text:
+            return ""
+        
+        html = markdown_text
+        
+        # 1. 转换标题 (### → <h3>)
+        html = re.sub(r'^###\s+(.+?)$', r'<h3>\1</h3>', html, flags=re.MULTILINE)
+        
+        # 2. 转换粗体 (** → <strong>)
+        html = re.sub(r'\*\*([^*]+?)\*\*', r'<strong>\1</strong>', html)
+        
+        # 3. 转换链接 ([文本](URL) → <a>)
+        def replace_link(match):
+            link_text = match.group(1)
+            url = match.group(2)
+            return f'<a href="{url}">{link_text}</a>'
+        html = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', replace_link, html)
+        
+        # 4. 转换列表 (- → <ul><li>)
+        lines = html.split('\n')
+        result_lines = []
+        in_list = False
+        list_items = []
+        
+        for line in lines:
+            stripped = line.strip()
+            list_match = re.match(r'^[-\*]\s+(.+)$', stripped)
+            
+            if list_match:
+                if not in_list:
+                    in_list = True
+                    list_items = []
+                item_text = list_match.group(1)
+                list_items.append(f'<li>{item_text}</li>')
+            else:
+                if in_list:
+                    result_lines.append('<ul>')
+                    result_lines.extend(list_items)
+                    result_lines.append('</ul>')
+                    in_list = False
+                    list_items = []
+                result_lines.append(line)
+        
+        if in_list:
+            result_lines.append('<ul>')
+            result_lines.extend(list_items)
+            result_lines.append('</ul>')
+        
+        html = '\n'.join(result_lines)
+        
+        # 5. 转换分隔线 (--- → <hr/>)
+        html = re.sub(r'^---\s*$', '<hr/>', html, flags=re.MULTILINE)
+        
+        # 6. 包裹段落
+        lines = html.split('\n')
+        result_lines = []
+        current_para = []
+        
+        for line in lines:
+            stripped = line.strip()
+            
+            if not stripped or (stripped.startswith('<') and stripped.endswith('>')):
+                if current_para:
+                    para_text = ' '.join(current_para)
+                    if para_text:
+                        result_lines.append(f'<p>{para_text}</p>')
+                    current_para = []
+                if stripped:
+                    result_lines.append(line)
+            else:
+                current_para.append(stripped)
+        
+        if current_para:
+            para_text = ' '.join(current_para)
+            if para_text:
+                result_lines.append(f'<p>{para_text}</p>')
+        
+        html = '\n'.join(result_lines)
+        
+        return html.strip()
+    
     def generate(self) -> str:
         """
         基于Markdown文件生成RSS feed.xml
@@ -194,9 +285,25 @@ class RSSGenerator:
         pub_date = file_info.get('pub_date', '')
         guid = escape(file_info.get('guid', ''))
         
-        # 添加完整内容（使用CDATA避免转义问题）
+        # 获取完整内容并转换为HTML
         full_content = file_info.get('full_content', '')
-        content_encoded = f"<![CDATA[{full_content}]]>" if full_content else ""
+        
+        # 删除重复的订阅部分（从## 订阅开始到文件结束）
+        subscription_pattern = r'##\s*📮\s*订阅.*$'
+        full_content = re.sub(subscription_pattern, '', full_content, flags=re.DOTALL)
+        
+        # 替换占位符
+        repo_url = os.getenv('GITHUB_REPOSITORY', 'username/news')
+        username, repo = repo_url.split('/') if '/' in repo_url else ('username', 'news')
+        full_content = full_content.replace('{username}', username)
+        full_content = full_content.replace('{repo}', repo)
+        
+        # 转换为HTML
+        if full_content:
+            html_content = self._markdown_to_html(full_content)
+            content_encoded = f"<![CDATA[{html_content}]]>"
+        else:
+            content_encoded = ""
         
         return f"""
     <item>
