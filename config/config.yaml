@@ -15,7 +15,7 @@ rss_sources:
   
   - name: "GitHub Blog"
     url: "https://github.blog/feed/"
-    weight: 1.2
+    weight: 1.0
     category: "开发"
     enabled: true
   
@@ -31,10 +31,76 @@ rss_sources:
     category: "科技"
     enabled: true
   
-  - name: "InfoQ"
-    url: "https://feed.infoq.cn/"
-    weight: 1.1
-    category: "架构"
+  - name: "The Economist"
+    url: "https://www.economist.com/finance-and-economics/rss.xml"
+    weight: 1.2
+    category: "国际财经"
+    enabled: true
+  
+  - name: "CNBC"
+    url: "https://www.cnbc.com/id/10000664/device/rss/rss.html"
+    weight: 1.4
+    category: "国际财经"
+    enabled: true
+  
+  - name: "BBC Business"
+    url: "https://feeds.bbci.co.uk/news/business/rss.xml"
+    weight: 1.3
+    category: "国际财经"
+    enabled: true
+  
+  - name: "MarketWatch"
+    url: "https://www.marketwatch.com/rss/topstories"
+    weight: 1.0
+    category: "国际财经"
+    enabled: true
+  
+  - name: "Financial Times"
+    url: "https://www.ft.com/rss/home/international"
+    weight: 1.2
+    category: "国际财经"
+    enabled: true
+  
+  - name: "华尔街见闻"
+    url: "https://dedicated.wallstreetcn.com/rss.xml"
+    weight: 1.6
+    category: "国内财经"
+    enabled: true
+  
+  - name: "36氪"
+    url: "https://36kr.com/feed"
+    weight: 1.6
+    category: "国内财经"
+    enabled: true
+  
+  - name: "香港經濟日報"
+    url: "https://www.hket.com/rss/china"
+    weight: 1.4
+    category: "国内财经"
+    enabled: true
+  
+  - name: "东方财富"
+    url: "http://rss.eastmoney.com/rss_partener.xml"
+    weight: 1.6
+    category: "国内财经"
+    enabled: true
+  
+  - name: "WSJ 经济"
+    url: "https://feeds.content.dowjones.io/public/rss/WSJcomUSBusiness"
+    weight: 1.4
+    category: "国际财经"
+    enabled: true
+  
+  - name: "WSJ 市场"
+    url: "https://feeds.content.dowjones.io/public/rss/RSSMarketsMain"
+    weight: 1.3
+    category: "国际财经"
+    enabled: true
+  
+  - name: "WSJ 全球经济"
+    url: "https://feeds.content.dowjones.io/public/rss/socialeconomyfeed"
+    weight: 1.2
+    category: "国际财经"
     enabled: true
 
 # ==========================================
