@@ -3,6 +3,7 @@ RSS订阅文件生成模块
 负责生成和更新RSS feed.xml文件
 """
 import logging
+import os
 import xml.etree.ElementTree as ET
 from datetime import datetime
 from typing import List, Dict

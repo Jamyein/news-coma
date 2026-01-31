@@ -92,12 +92,12 @@ ai:
     zhipu:
       api_key: "${ZHIPU_API_KEY}"
       base_url: "https://open.bigmodel.cn/api/paas/v4"
-      model: "glm-4.6v-flash"
-      max_tokens: 2000
+      model: "glm-4.7-flash"
+      max_tokens: 65536
       temperature: 0.3
-      rate_limit_rpm: 1
+      rate_limit_rpm: 60
       batch_size: 5
-      max_concurrent: 3
+      max_concurrent: 1
     
     kimi:
       api_key: "${KIMI_API_KEY}"
