@@ -107,13 +107,99 @@ class MarkdownGenerator:
         return header + body + footer
     
     def _merge_archive_content(self, existing: str, new: str) -> str:
-        """合并归档内容(简单去重)"""
-        # 如果内容相同，返回新的
+        """
+        合并归档内容，基于链接去重
+        
+        解析现有和新内容中的新闻条目，基于链接URL去重，
+        合并后重新编号，保持Markdown格式
+        """
+        import re
+
+        # 边界情况：内容为空或相同
+        if not existing:
+            return new
         if existing == new:
             return new
-        
-        # 否则保留新的(或可以合并逻辑)
-        return new
+
+        try:
+            # 解析条目：返回 {url: (title, full_entry_content)}
+            def parse_entries(content: str) -> dict:
+                entries = {}
+                # 匹配条目：从 ### N. 开始到 --- 结束
+                # 使用非贪婪匹配，直到遇到下一个 ### 或文件结束
+                entry_pattern = r'###\s+\d+\.\s+(.*?)(?=###\s+\d+\.\s+|\Z)'
+                # 链接模式：**🔗 原文链接**: [标题](URL)
+                link_pattern = r'\*\*🔗 原文链接\*\*:\s*\[.*?\]\((.+?)\)'
+
+                for match in re.finditer(entry_pattern, content, re.DOTALL):
+                    entry_content = match.group(0)
+                    # 提取链接
+                    link_match = re.search(link_pattern, entry_content)
+                    if link_match:
+                        url = link_match.group(1)
+                        # 提取标题（第一行）
+                        title_match = re.match(r'###\s+\d+\.\s+(.+?)\n', entry_content)
+                        title = title_match.group(1) if title_match else ""
+                        entries[url] = (title, entry_content)
+                return entries
+
+            # 提取header（第一个 ### 之前的内容）
+            def extract_header(content: str) -> str:
+                first_entry_match = re.search(r'###\s+\d+\.', content)
+                if first_entry_match:
+                    return content[:first_entry_match.start()]
+                return ""
+
+            # 提取footer（最后一个 --- 之后的内容）
+            def extract_footer(content: str) -> str:
+                # 查找订阅部分（通常是最后一部分）
+                footer_match = re.search(r'##\s+📮\s+订阅', content)
+                if footer_match:
+                    return content[footer_match.start():]
+                return ""
+
+            # 解析现有和新内容的条目
+            existing_entries = parse_entries(existing)
+            new_entries = parse_entries(new)
+
+            # 合并条目：新条目覆盖或追加（保留最新）
+            merged_entries = {**existing_entries, **new_entries}
+
+            # 如果没有解析到任何条目，使用保守策略
+            if not merged_entries:
+                return existing + '\n\n' + new
+
+            # 提取header和footer（使用新内容的header和footer）
+            header = extract_header(new)
+            footer = extract_footer(new)
+
+            # 重新生成条目内容，重新编号
+            body_parts = []
+            for idx, (url, (title, entry_content)) in enumerate(merged_entries.items(), 1):
+                # 替换条目编号
+                renumbered_entry = re.sub(
+                    r'^###\s+\d+\.\s+',
+                    f'### {idx}. ',
+                    entry_content,
+                    count=1
+                )
+                body_parts.append(renumbered_entry)
+
+            # 组装最终内容
+            result = header + ''.join(body_parts)
+            if footer:
+                # 移除body末尾的---（如果有），然后添加footer
+                result = result.rstrip()
+                if result.endswith('---'):
+                    result = result[:-3].rstrip()
+                result = result + '\n\n' + footer
+
+            return result
+
+        except Exception as e:
+            # 解析失败，保守策略：直接追加
+            logger.warning(f"合并归档内容时解析失败，使用保守追加策略: {e}")
+            return existing + '\n\n---\n\n' + new
     
     def _write_file(self, path: Path, content: str):
         """写入文件"""
