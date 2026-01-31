@@ -5,15 +5,39 @@
     <link>https://github.com/Jamyein/news-coma</link>
     <description>由 AI 筛选的高质量科技新闻聚合，每6小时自动更新</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 31 Jan 2026 06:55:53 GMT</lastBuildDate>
-    <pubDate>Sat, 31 Jan 2026 06:55:53 GMT</pubDate>
-    <atom:link href="https://raw.githubusercontent.com/Jamyein/news-coma/main/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Jan 2026 08:01:51 GMT</lastBuildDate>
+    <pubDate>Sat, 31 Jan 2026 08:01:51 GMT</pubDate>
+    <atom:link href="https://Jamyein.github.io/news-coma/feed.xml" rel="self" type="application/rss+xml" />
     <image>
         <url>https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</url>
         <title>科技新闻精选</title>
         <link>https://github.com/Jamyein/news-coma</link>
     </image>
 
+    <item>
+        <title>最新富士拍立得打印机：价格昂贵但值得升级</title>
+        <link>https://www.theverge.com/tech/870603/fujifilm-instax-mini-link-plus-reivew-improved-photos</link>
+        <description>富士胶片的Instax Mini Link 3打印机是我旅行日记套件中备受喜爱的100美元配件。我经常将打印的图像贴在手写的想法旁边，以保存一个时刻。然而，这种即时胶片打印出的图像可能会显得模糊不清，而新的Instax Mini Link+则承诺解决这个问题。</description>
+        <pubDate>Sat, 31 Jan 2026 08:00:00 GMT</pubDate>
+        <guid isPermaLink="true">https://www.theverge.com/tech/870603/fujifilm-instax-mini-link-plus-reivew-improved-photos</guid>
+        <category>科技</category>
+    </item>
+    <item>
+        <title>关于向后兼容性的轶事</title>
+        <link>https://blog.plover.com/2026/01/26/#wrterm</link>
+        <description>评论。</description>
+        <pubDate>Mon, 26 Jan 2026 17:07:37 GMT</pubDate>
+        <guid isPermaLink="true">https://blog.plover.com/2026/01/26/#wrterm</guid>
+        <category>技术</category>
+    </item>
+    <item>
+        <title>美国优先可能使美国孤立无援</title>
+        <link>https://www.wsj.com/world/how-america-first-risks-becoming-america-alone-6592701a</link>
+        <description>评论。</description>
+        <pubDate>Sat, 31 Jan 2026 06:53:16 GMT</pubDate>
+        <guid isPermaLink="true">https://www.wsj.com/world/how-america-first-risks-becoming-america-alone-6592701a</guid>
+        <category>技术</category>
+    </item>
     <item>
         <title>星链更新隐私政策，允许消费者数据用于训练</title>
         <link>https://finance.yahoo.com/news/musks-starlink-updates-privacy-policy-230853500.html</link>
