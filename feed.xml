@@ -1,11 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <channel>
     <title>科技新闻精选</title>
-    <link>https://github.com/username/news</link>
-    <description>由 AI 筛选的高质量科技新闻聚合</description>
+    <link>https://github.com/Jamyein/news-coma</link>
+    <description>由 AI 筛选的高质量科技新闻聚合，每6小时自动更新</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 30 Jan 2026 12:00:00 GMT</lastBuildDate>
-    <atom:link href="https://raw.githubusercontent.com/username/news/main/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Jan 2026 05:47:54 GMT</lastBuildDate>
+    <pubDate>Sat, 31 Jan 2026 05:47:54 GMT</pubDate>
+    <atom:link href="https://raw.githubusercontent.com/Jamyein/news-coma/main/feed.xml" rel="self" type="application/rss+xml" />
+    <image>
+        <url>https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</url>
+        <title>科技新闻精选</title>
+        <link>https://github.com/Jamyein/news-coma</link>
+    </image>
+
+    <item>
+        <title>参议院通过预算，国土安全部获得两周资金延期以协商移民海关执法新规定</title>
+        <link>https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding</link>
+        <description>美国参议院于2026年1月31日通过联邦预算，除国土安全部外，所有部门均获得资金。国土安全部获得两周资金延期，以协商移民海关执法（ICE）的新规定。若无法达成协议，国土安全部将面临资金中断。这一决定对国家安全和移民政策产生重要影响。</description>
+        <pubDate>Sat, 31 Jan 2026 02:38:04 GMT</pubDate>
+        <guid isPermaLink="true">https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding</guid>
+        <category>科技</category>
+    </item>
+    <item>
+        <title>法院文件显示ICE应用程序识别抗议者；全球入口和预检服务被撤销</title>
+        <link>https://viewfromthewing.com/court-filings-ice-uses-mobile-fortify-to-identify-protesters-global-entry-and-precheck-get-revoked/</link>
+        <description>据Hacker News报道，一份法院文件显示，美国移民和海关执法局（ICE）使用的一款应用程序被用于识别抗议者。同时，全球入口（Global Entry）和预检服务（PreCheck）被撤销。这一事件引发了人们对隐私和安全的关注，并对相关技术和服务产生了影响。</description>
+        <pubDate>Sat, 31 Jan 2026 02:29:45 GMT</pubDate>
+        <guid isPermaLink="true">https://viewfromthewing.com/court-filings-ice-uses-mobile-fortify-to-identify-protesters-global-entry-and-precheck-get-revoked/</guid>
+        <category>技术</category>
+    </item>
+    <item>
+        <title>a16z合伙人Kofi Ampadu因TxO项目暂停离职，或预示该篇章结束</title>
+        <link>https://techcrunch.com/2026/01/30/a16z-partner-kofi-ampadu-to-leave-firm-after-txo-program-pause/</link>
+        <description>知名风险投资公司a16z的合伙人Kofi Ampadu宣布离职，这一消息可能标志着TxO项目的结束。该项目旨在通过捐赠建议基金，为未被充分服务的创始人提供技术网络和投资资本。Ampadu的离职引发了业界对项目未来走向的关注。</description>
+        <pubDate>Sat, 31 Jan 2026 01:23:12 GMT</pubDate>
+        <guid isPermaLink="true">https://techcrunch.com/2026/01/30/a16z-partner-kofi-ampadu-to-leave-firm-after-txo-program-pause/</guid>
+        <category>科技</category>
+    </item>
+    <item>
+        <title>训练9M语音模型以纠正普通话声调：展示HN</title>
+        <link>https://simedw.com/2026/01/31/ear-pronunication-via-ctc/</link>
+        <description>一位开发者成功训练了一个包含900万参数的语音模型，旨在纠正普通话中的声调问题。这一技术突破对于提高普通话语音识别和合成系统的准确性具有重要意义。新闻发布于2026年1月31日，具有较高时效性，对语言处理领域的开发者具有实用价值。</description>
+        <pubDate>Sat, 31 Jan 2026 00:51:27 GMT</pubDate>
+        <guid isPermaLink="true">https://simedw.com/2026/01/31/ear-pronunication-via-ctc/</guid>
+        <category>技术</category>
+    </item>
+    <item>
+        <title>杰弗里·爱泼斯坦被永久禁止使用Xbox Live</title>
+        <link>https://www.theverge.com/tech/871425/jeffrey-epstein-xbox-live-ban-microsoft-sex-offender</link>
+        <description>微软宣布永久禁止杰弗里·爱泼斯坦使用Xbox Live在线游戏平台。据XboxEra发现，爱泼斯坦在2013年12月因骚扰、威胁和/或其他玩家滥用行为被永久封禁。这一决定背后的原因可能更为简单。该新闻揭示了科技巨头对网络暴力和不当行为的零容忍态度。</description>
+        <pubDate>Sat, 31 Jan 2026 00:34:17 GMT</pubDate>
+        <guid isPermaLink="true">https://www.theverge.com/tech/871425/jeffrey-epstein-xbox-live-ban-microsoft-sex-offender</guid>
+        <category>科技</category>
+    </item>
+    <item>
+        <title>探秘硅谷最热门机器人大脑初创公司Physical Intelligence</title>
+        <link>https://techcrunch.com/2026/01/30/physical-intelligence-stripe-veteran-lachy-grooms-latest-bet-is-building-silicon-valleys-buzziest-robot-brains/</link>
+        <description>科技新闻网站TechCrunch报道，Physical Intelligence初创公司正在开发硅谷备受关注的机器人大脑技术。公司联合创始人Lachy Groom表示，他与拥有数十年经验的专家团队一起工作，并相信现在是技术突破的最佳时机。该新闻突显了机器人技术领域的重要进展，对行业影响深远。</description>
+        <pubDate>Sat, 31 Jan 2026 00:09:54 GMT</pubDate>
+        <guid isPermaLink="true">https://techcrunch.com/2026/01/30/physical-intelligence-stripe-veteran-lachy-grooms-latest-bet-is-building-silicon-valleys-buzziest-robot-brains/</guid>
+        <category>科技</category>
+    </item>
+    <item>
+        <title>OpenAI与Nvidia价值1000亿美元的巨资合作暂停</title>
+        <link>https://www.wsj.com/tech/ai/the-100-billion-megadeal-between-openai-and-nvidia-is-on-ice-aa3025e3</link>
+        <description>OpenAI与Nvidia之间的价值1000亿美元的巨资合作计划因故暂停。这一合作对人工智能行业具有重要意义，涉及的技术突破和行业影响巨大。虽然目前合作暂停，但双方的合作前景仍备受关注。</description>
+        <pubDate>Sat, 31 Jan 2026 00:02:30 GMT</pubDate>
+        <guid isPermaLink="true">https://www.wsj.com/tech/ai/the-100-billion-megadeal-between-openai-and-nvidia-is-on-ice-aa3025e3</guid>
+        <category>技术</category>
+    </item>
+    <item>
+        <title>OnlyFans考虑向Architect Capital出售多数股权</title>
+        <link>https://techcrunch.com/2026/01/30/onlyfans-considering-selling-majority-stake-to-architect-capital/</link>
+        <description>科技新闻网站TechCrunch报道，成人内容平台OnlyFans正在考虑将其多数股权出售给投资公司Architect Capital。这是OnlyFans近期内第二次传出出售业务的传闻，该事件对成人内容行业及投资市场具有重要意义。</description>
+        <pubDate>Fri, 30 Jan 2026 23:54:09 GMT</pubDate>
+        <guid isPermaLink="true">https://techcrunch.com/2026/01/30/onlyfans-considering-selling-majority-stake-to-architect-capital/</guid>
+        <category>科技</category>
+    </item>
+    <item>
+        <title>Peloton在推出AI硬件仅数月后裁员11%，行业影响引发关注</title>
+        <link>https://www.theverge.com/gadgets/871422/peloton-layoffs-cost-cutting-2026</link>
+        <description>运动科技公司Peloton宣布裁员约11%，主要影响负责技术和企业相关工作的工程师。这是继去年8月裁员6%之后，Peloton再次进行全球裁员，旨在减少至少1亿美元的开支。此举反映了公司在AI硬件领域的挑战和市场压力。</description>
+        <pubDate>Fri, 30 Jan 2026 23:53:55 GMT</pubDate>
+        <guid isPermaLink="true">https://www.theverge.com/gadgets/871422/peloton-layoffs-cost-cutting-2026</guid>
+        <category>科技</category>
+    </item>
+    <item>
+        <title>Stonebraker关于CAP定理和数据库的讨论（2010年）</title>
+        <link>https://perspectives.mvdirona.com/2010/04/stonebraker-on-cap-theorem-and-databases/</link>
+        <description>这篇新闻回顾了Stonebraker在2010年对CAP定理和数据库技术的讨论。文章深入分析了CAP定理在数据库设计中的应用，对理解现代数据库系统的设计原则具有重要意义。尽管新闻发布时间较久，但其内容对数据库领域的专业人士仍具有很高的参考价值。</description>
+        <pubDate>Fri, 30 Jan 2026 23:47:28 GMT</pubDate>
+        <guid isPermaLink="true">https://perspectives.mvdirona.com/2010/04/stonebraker-on-cap-theorem-and-databases/</guid>
+        <category>技术</category>
+    </item>
 </channel>
 </rss>
