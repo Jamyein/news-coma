@@ -42,108 +42,109 @@ rss_sources:
 # 只需修改 ai_provider 字段即可切换
 # ==========================================
 
+ai:
 # 当前使用的提供商
 # 可选值: gemini, openai, azure, claude, deepseek, zhipu, kimi, qwen, wenxin, spark, yi, minimax, ollama
-ai_provider: "gemini"
+  ai_provider: "gemini"
 
-ai_providers:
+  ai_providers:
   
-  gemini:
-    api_key: "${GEMINI_API_KEY}"
-    base_url: "https://generativelanguage.googleapis.com/v1beta/openai/"
-    model: "gemini-3-flash"
-    max_tokens: 2000
-    temperature: 0.3
-    rate_limit_rpm: 3
-    batch_size: 3
-    max_concurrent: 2
-  
-  openai:
-    api_key: "${OPENAI_API_KEY}"
-    base_url: "https://api.openai.com/v1"
-    model: "gpt-4o-mini"
-    max_tokens: 2000
-    temperature: 0.3
-    batch_size: 5
-    max_concurrent: 3
-  
-  claude:
-    api_key: "${ANTHROPIC_API_KEY}"
-    base_url: "https://api.anthropic.com/v1"
-    model: "claude-3-haiku-20240307"
-    max_tokens: 2000
-    temperature: 0.3
-    rate_limit_rpm: 50
-    batch_size: 5
-    max_concurrent: 3
-  
-  deepseek:
-    api_key: "${DEEPSEEK_API_KEY}"
-    base_url: "https://api.deepseek.com/v1"
-    model: "deepseek-chat"
-    max_tokens: 2000
-    temperature: 0.3
-    rate_limit_rpm: 60
-    batch_size: 5
-    max_concurrent: 3
-  
-  zhipu:
-    api_key: "${ZHIPU_API_KEY}"
-    base_url: "https://open.bigmodel.cn/api/paas/v4"
-    model: "glm-4.6v-flash"
-    max_tokens: 2000
-    temperature: 0.3
-    rate_limit_rpm: 1
-    batch_size: 5
-    max_concurrent: 3
-  
-  kimi:
-    api_key: "${KIMI_API_KEY}"
-    base_url: "https://api.moonshot.cn/v1"
-    model: "moonshot-v1-8k"
-    max_tokens: 2000
-    temperature: 0.3
-    rate_limit_rpm: 30
-    batch_size: 3
-    max_concurrent: 2
-  
-  qwen:
-    api_key: "${DASHSCOPE_API_KEY}"
-    base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
-    model: "qwen-max"
-    max_tokens: 2000
-    temperature: 0.3
-    rate_limit_rpm: 60
-    batch_size: 5
-    max_concurrent: 3
-  
-  minimax:
-    api_key: "${MINIMAX_API_KEY}"
-    base_url: "https://api.minimax.chat/v1"
-    model: "abab6.5-chat"
-    max_tokens: 2000
-    temperature: 0.3
-    rate_limit_rpm: 60
-    batch_size: 5
-    max_concurrent: 3
+    gemini:
+      api_key: "${GEMINI_API_KEY}"
+      base_url: "https://generativelanguage.googleapis.com/v1beta/openai/"
+      model: "gemini-3-flash"
+      max_tokens: 2000
+      temperature: 0.3
+      rate_limit_rpm: 3
+      batch_size: 3
+      max_concurrent: 2
+    
+    openai:
+      api_key: "${OPENAI_API_KEY}"
+      base_url: "https://api.openai.com/v1"
+      model: "gpt-4o-mini"
+      max_tokens: 2000
+      temperature: 0.3
+      batch_size: 5
+      max_concurrent: 3
+    
+    claude:
+      api_key: "${ANTHROPIC_API_KEY}"
+      base_url: "https://api.anthropic.com/v1"
+      model: "claude-3-haiku-20240307"
+      max_tokens: 2000
+      temperature: 0.3
+      rate_limit_rpm: 50
+      batch_size: 5
+      max_concurrent: 3
+    
+    deepseek:
+      api_key: "${DEEPSEEK_API_KEY}"
+      base_url: "https://api.deepseek.com/v1"
+      model: "deepseek-chat"
+      max_tokens: 2000
+      temperature: 0.3
+      rate_limit_rpm: 60
+      batch_size: 5
+      max_concurrent: 3
+    
+    zhipu:
+      api_key: "${ZHIPU_API_KEY}"
+      base_url: "https://open.bigmodel.cn/api/paas/v4"
+      model: "glm-4.6v-flash"
+      max_tokens: 2000
+      temperature: 0.3
+      rate_limit_rpm: 1
+      batch_size: 5
+      max_concurrent: 3
+    
+    kimi:
+      api_key: "${KIMI_API_KEY}"
+      base_url: "https://api.moonshot.cn/v1"
+      model: "moonshot-v1-8k"
+      max_tokens: 2000
+      temperature: 0.3
+      rate_limit_rpm: 30
+      batch_size: 3
+      max_concurrent: 2
+    
+    qwen:
+      api_key: "${DASHSCOPE_API_KEY}"
+      base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+      model: "qwen-max"
+      max_tokens: 2000
+      temperature: 0.3
+      rate_limit_rpm: 60
+      batch_size: 5
+      max_concurrent: 3
+    
+    minimax:
+      api_key: "${MINIMAX_API_KEY}"
+      base_url: "https://api.minimax.chat/v1"
+      model: "abab6.5-chat"
+      max_tokens: 2000
+      temperature: 0.3
+      rate_limit_rpm: 60
+      batch_size: 5
+      max_concurrent: 3
 
 
-fallback:
-  enabled: true
-  max_retries_per_provider: 2
-  fallback_chain:
-    - "zhipu"
-    - "deepseek"
+  fallback:
+    enabled: true
+    max_retries_per_provider: 2
+    fallback_chain:
+      - "zhipu"
+      - "deepseek"
     
 # ==========================================
 # 全局评分标准（所有提供商共享）
 # ==========================================
-scoring_criteria:
-  importance: 0.30      # 重要性
-  timeliness: 0.20      # 时效性
-  technical_depth: 0.20 # 技术深度
-  audience_breadth: 0.15 # 受众广度
-  practicality: 0.15    # 实用性
+  scoring_criteria:
+    importance: 0.30      # 重要性
+    timeliness: 0.20      # 时效性
+    technical_depth: 0.20 # 技术深度
+    audience_breadth: 0.15 # 受众广度
+    practicality: 0.15    # 实用性
 
 # ==========================================
 # 系统配置
