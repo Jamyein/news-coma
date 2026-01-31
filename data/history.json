@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-01-31T06:53:03.932446",
+  "last_run": "2026-01-31T08:01:23.963474",
   "processed_urls": [
     "https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding",
     "https://viewfromthewing.com/court-filings-ice-uses-mobile-fortify-to-identify-protesters-global-entry-and-precheck-get-revoked/",
@@ -71,21 +71,24 @@
     "https://lareviewofbooks.org/article/foundational-anxieties-modern-mathematics-and-the-political-imagination/",
     "https://en.wikipedia.org/wiki/Ashcan_comic",
     "https://www.thetimes.com/culture/books/article/sicilian-man-leonardo-sciascia-rise-mafia-struggle-italy-soul-caroline-moorehead-review-lbsbd2p5w",
-    "https://www.danealbaugh.com/articles/passively-safe-apis"
+    "https://www.danealbaugh.com/articles/passively-safe-apis",
+    "https://www.theverge.com/tech/870603/fujifilm-instax-mini-link-plus-reivew-improved-photos",
+    "https://www.wsj.com/world/how-america-first-risks-becoming-america-alone-6592701a",
+    "https://blog.plover.com/2026/01/26/#wrterm"
   ],
   "stats": {
-    "total_runs": 3,
-    "total_news_processed": 136,
-    "avg_news_per_run": 45.3
+    "total_runs": 4,
+    "total_news_processed": 139,
+    "avg_news_per_run": 34.8
   },
   "source_stats": {
     "The Verge": {
-      "fetched": 20,
-      "selected": 5
+      "fetched": 21,
+      "selected": 6
     },
     "Hacker News": {
-      "fetched": 66,
-      "selected": 10
+      "fetched": 68,
+      "selected": 12
     },
     "TechCrunch": {
       "fetched": 40,
@@ -308,10 +311,46 @@
       ],
       "cached_at": "2026-01-31T06:55:53.752357",
       "source": "GitHub Blog"
+    },
+    "e46bc362fc329377": {
+      "ai_score": 7.7,
+      "translated_title": "最新富士拍立得打印机：价格昂贵但值得升级",
+      "ai_summary": "富士胶片的Instax Mini Link 3打印机是我旅行日记套件中备受喜爱的100美元配件。我经常将打印的图像贴在手写的想法旁边，以保存一个时刻。然而，这种即时胶片打印出的图像可能会显得模糊不清，而新的Instax Mini Link+则承诺解决这个问题。",
+      "key_points": [
+        "富士胶片发布新款Instax Mini Link+打印机",
+        "新打印机售价169.95美元",
+        "旨在改善即时胶片打印质量"
+      ],
+      "cached_at": "2026-01-31T08:01:51.223772",
+      "source": "The Verge"
+    },
+    "b470f741feb1de99": {
+      "ai_score": 6.1,
+      "translated_title": "美国优先可能使美国孤立无援",
+      "ai_summary": "评论。",
+      "key_points": [
+        "美国优先政策可能带来的孤立风险",
+        "评论性质的文章",
+        "未提供具体内容"
+      ],
+      "cached_at": "2026-01-31T08:01:51.223785",
+      "source": "Hacker News"
+    },
+    "e351ee874c14941f": {
+      "ai_score": 6.3,
+      "translated_title": "关于向后兼容性的轶事",
+      "ai_summary": "评论。",
+      "key_points": [
+        "向后兼容性的讨论",
+        "技术性话题",
+        "未提供具体内容"
+      ],
+      "cached_at": "2026-01-31T08:01:51.223791",
+      "source": "Hacker News"
     }
   },
   "cache_hits": 6,
-  "cache_lookups": 71,
+  "cache_lookups": 74,
   "run_metrics": [
     {
       "run_time": "2026-01-31T06:47:45.364104",
@@ -334,6 +373,17 @@
       "semantic_duplicates": 0,
       "duration_seconds": 169.821657,
       "avg_score": 7.389999999999999
+    },
+    {
+      "run_time": "2026-01-31T08:01:23.963474",
+      "news_count": 3,
+      "api_calls": 1,
+      "cache_hits": 0,
+      "cache_misses": 0,
+      "duplicates_removed": 0,
+      "semantic_duplicates": 0,
+      "duration_seconds": 27.262625,
+      "avg_score": 6.7
     }
   ]
 }
