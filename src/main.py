@@ -133,6 +133,8 @@ class RSSAggregator:
         
         self.rss_gen = RSSGenerator(
             feed_path="feed.xml",
+            archive_dir="archive",
+            docs_dir="docs",
             max_items=self.config.output_config.max_feed_items
         )
         
@@ -232,7 +234,7 @@ class RSSAggregator:
         logger.info(f"✓ Markdown: {latest_path}")
         
         # 生成RSS
-        self.rss_gen.generate(items)
+        self.rss_gen.generate()
         logger.info(f"✓ RSS feed: feed.xml")
     
     def _update_stats(self, run_time: datetime, all_items: List[NewsItem], 

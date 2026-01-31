@@ -2,209 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <channel>
     <title>科技新闻精选</title>
-    <link>https://github.com/Jamyein/news-coma</link>
+    <link>https://github.com/username/news</link>
     <description>由 AI 筛选的高质量科技新闻聚合，每6小时自动更新</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 31 Jan 2026 08:01:51 GMT</lastBuildDate>
-    <pubDate>Sat, 31 Jan 2026 08:01:51 GMT</pubDate>
-    <atom:link href="https://Jamyein.github.io/news-coma/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Jan 2026 09:22:12 GMT</lastBuildDate>
+    <pubDate>Sat, 31 Jan 2026 09:22:12 GMT</pubDate>
+    <atom:link href="https://username.github.io/news/feed.xml" rel="self" type="application/rss+xml" />
     <image>
         <url>https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</url>
         <title>科技新闻精选</title>
-        <link>https://github.com/Jamyein/news-coma</link>
+        <link>https://github.com/username/news</link>
     </image>
 
     <item>
-        <title>最新富士拍立得打印机：价格昂贵但值得升级</title>
-        <link>https://www.theverge.com/tech/870603/fujifilm-instax-mini-link-plus-reivew-improved-photos</link>
-        <description>富士胶片的Instax Mini Link 3打印机是我旅行日记套件中备受喜爱的100美元配件。我经常将打印的图像贴在手写的想法旁边，以保存一个时刻。然而，这种即时胶片打印出的图像可能会显得模糊不清，而新的Instax Mini Link+则承诺解决这个问题。</description>
-        <pubDate>Sat, 31 Jan 2026 08:00:00 GMT</pubDate>
-        <guid isPermaLink="true">https://www.theverge.com/tech/870603/fujifilm-instax-mini-link-plus-reivew-improved-photos</guid>
-        <category>科技</category>
+        <title>2026年01月31日 新闻汇总</title>
+        <link>https://raw.githubusercontent.com/username/news/main/archive/2026-01-31.md</link>
+        <description>本期精选 3 条高质量科技新闻</description>
+        <pubDate>Sat, 31 Jan 2026 16:21:17 GMT</pubDate>
+        <guid>archive/2026-01-31.md</guid>
+        <category>科技新闻</category>
     </item>
     <item>
-        <title>关于向后兼容性的轶事</title>
-        <link>https://blog.plover.com/2026/01/26/#wrterm</link>
-        <description>评论。</description>
-        <pubDate>Mon, 26 Jan 2026 17:07:37 GMT</pubDate>
-        <guid isPermaLink="true">https://blog.plover.com/2026/01/26/#wrterm</guid>
-        <category>技术</category>
-    </item>
-    <item>
-        <title>美国优先可能使美国孤立无援</title>
-        <link>https://www.wsj.com/world/how-america-first-risks-becoming-america-alone-6592701a</link>
-        <description>评论。</description>
-        <pubDate>Sat, 31 Jan 2026 06:53:16 GMT</pubDate>
-        <guid isPermaLink="true">https://www.wsj.com/world/how-america-first-risks-becoming-america-alone-6592701a</guid>
-        <category>技术</category>
-    </item>
-    <item>
-        <title>星链更新隐私政策，允许消费者数据用于训练</title>
-        <link>https://finance.yahoo.com/news/musks-starlink-updates-privacy-policy-230853500.html</link>
-        <description>星链公司更新了其隐私政策，允许使用消费者数据来训练其系统，这一举措引发了关于数据隐私和用户信任的讨论。</description>
-        <pubDate>Sat, 31 Jan 2026 05:44:49 GMT</pubDate>
-        <guid isPermaLink="true">https://finance.yahoo.com/news/musks-starlink-updates-privacy-policy-230853500.html</guid>
-        <category>技术</category>
-    </item>
-    <item>
-        <title>参议院通过预算，国土安全部获得两周资金延期</title>
-        <link>https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding</link>
-        <description>美国参议院通过联邦预算，除国土安全部外，所有部门获得资金。国土安全部获得两周资金延期以就移民和海关执法局（ICE）的新规则进行谈判。若无法达成协议，国土安全部资金将中断。</description>
-        <pubDate>Sat, 31 Jan 2026 02:38:04 GMT</pubDate>
-        <guid isPermaLink="true">https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding</guid>
-        <category>科技</category>
-    </item>
-    <item>
-        <title>使用GitHub Copilot CLI在终端中实现强大的代理工作流程</title>
-        <link>https://github.blog/ai-and-ml/github-copilot/power-agentic-workflows-in-your-terminal-with-github-copilot-cli/</link>
-        <description>GitHub博客发布了一篇关于GitHub Copilot CLI的文章，介绍了如何直接从终端与Copilot交互，探索了这一工具在开发领域的应用和潜力。</description>
-        <pubDate>Mon, 26 Jan 2026 18:54:49 GMT</pubDate>
-        <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/power-agentic-workflows-in-your-terminal-with-github-copilot-cli/</guid>
-        <category>开发</category>
-    </item>
-    <item>
-        <title>iPhone创下最佳季度销售记录</title>
-        <link>https://techcrunch.com/2026/01/29/the-iphone-just-had-its-best-quarter-ever/</link>
-        <description>得益于中国和印度等地区市场的增长，苹果的iPhone销量创下历史新高。</description>
-        <pubDate>Thu, 29 Jan 2026 23:57:21 GMT</pubDate>
-        <guid isPermaLink="true">https://techcrunch.com/2026/01/29/the-iphone-just-had-its-best-quarter-ever/</guid>
-        <category>科技</category>
-    </item>
-    <item>
-        <title>俄罗斯黑客因安全漏洞入侵波兰电网</title>
-        <link>https://techcrunch.com/2026/01/30/russian-hackers-breached-polish-power-grid-thanks-to-bad-security-report-says/</link>
-        <description>波兰政府指责俄罗斯政府黑客组织利用默认用户名和密码入侵能源设施。</description>
-        <pubDate>Fri, 30 Jan 2026 16:50:24 GMT</pubDate>
-        <guid isPermaLink="true">https://techcrunch.com/2026/01/30/russian-hackers-breached-polish-power-grid-thanks-to-bad-security-report-says/</guid>
-        <category>科技</category>
-    </item>
-    <item>
-        <title>SpaceX的IPO可能开启大门，同时二级市场繁荣</title>
-        <link>https://techcrunch.com/2026/01/30/spacexs-ipo-could-open-the-floodgates-and-secondaries-are-booming-in-the-meantime/</link>
-        <description>SpaceX的IPO讨论引发关注，同时其二级市场交易活跃。Rainmaker Securities的Greg Martin分析了私人流动性在IPO前的运作方式。</description>
-        <pubDate>Fri, 30 Jan 2026 19:41:25 GMT</pubDate>
-        <guid isPermaLink="true">https://techcrunch.com/2026/01/30/spacexs-ipo-could-open-the-floodgates-and-secondaries-are-booming-in-the-meantime/</guid>
-        <category>科技</category>
-    </item>
-    <item>
-        <title>Uber在自动驾驶汽车领域占据领先地位</title>
-        <link>https://techcrunch.com/video/uber-is-literally-in-the-drivers-seat-when-it-comes-to-av-bets/</link>
-        <description>Uber通过投资自动驾驶卡车初创公司Waabi，进一步扩大其机器人出租车业务。这笔交易是Uber在自动驾驶领域的又一重要举措。</description>
-        <pubDate>Fri, 30 Jan 2026 18:56:17 GMT</pubDate>
-        <guid isPermaLink="true">https://techcrunch.com/video/uber-is-literally-in-the-drivers-seat-when-it-comes-to-av-bets/</guid>
-        <category>科技</category>
-    </item>
-    <item>
-        <title>设计一个被动安全的API</title>
-        <link>https://www.danealbaugh.com/articles/passively-safe-apis</link>
-        <description>一篇技术文章探讨了如何设计一个既安全又易于使用的API，这对于软件开发者来说是一个重要的参考。</description>
-        <pubDate>Mon, 26 Jan 2026 19:03:04 GMT</pubDate>
-        <guid isPermaLink="true">https://www.danealbaugh.com/articles/passively-safe-apis</guid>
-        <category>技术</category>
-    </item>
-    <item>
-        <title>谷歌推出AI世界生成工具，游戏公司股价下跌</title>
-        <link>https://www.theverge.com/games/871348/google-project-genie-take-two-roblox-unity</link>
-        <description>谷歌宣布其Project Genie工具，允许用户通过AI生成互动体验，导致一些主要游戏公司的股价下跌。</description>
-        <pubDate>Fri, 30 Jan 2026 22:45:16 GMT</pubDate>
-        <guid isPermaLink="true">https://www.theverge.com/games/871348/google-project-genie-take-two-roblox-unity</guid>
-        <category>科技</category>
-    </item>
-    <item>
-        <title>Sequoia支持的Ethos成功上市，而竞争对手未能如愿</title>
-        <link>https://techcrunch.com/2026/01/29/how-sequoia-backed-ethos-reached-the-public-market-while-rivals-fell-short/</link>
-        <description>盈利的生命保险平台Ethos成为首批测试2026年公开市场的科技巨头之一。</description>
-        <pubDate>Fri, 30 Jan 2026 01:33:13 GMT</pubDate>
-        <guid isPermaLink="true">https://techcrunch.com/2026/01/29/how-sequoia-backed-ethos-reached-the-public-market-while-rivals-fell-short/</guid>
-        <category>科技</category>
-    </item>
-    <item>
-        <title>展示HN：噬菌体探索器</title>
-        <link>https://phage-explorer.org/</link>
-        <description>一个名为Phage Explorer的工具被发布在Hacker News上，它允许用户探索和比较噬菌体的基因组。</description>
-        <pubDate>Sat, 31 Jan 2026 05:22:03 GMT</pubDate>
-        <guid isPermaLink="true">https://phage-explorer.org/</guid>
-        <category>技术</category>
-    </item>
-    <item>
-        <title>那不勒斯1790年内战因对实分析的道德恐慌而加剧（2023）</title>
-        <link>https://lareviewofbooks.org/article/foundational-anxieties-modern-mathematics-and-the-political-imagination/</link>
-        <description>一篇研究指出，那不勒斯1790年的内战因对实分析的道德恐慌而加剧，这一发现将数学与历史联系起来。</description>
-        <pubDate>Sat, 31 Jan 2026 03:53:06 GMT</pubDate>
-        <guid isPermaLink="true">https://lareviewofbooks.org/article/foundational-anxieties-modern-mathematics-and-the-political-imagination/</guid>
-        <category>技术</category>
-    </item>
-    <item>
-        <title>法院文件显示ICE应用程序识别抗议者；全球入口和预检服务被撤销</title>
-        <link>https://viewfromthewing.com/court-filings-ice-uses-mobile-fortify-to-identify-protesters-global-entry-and-precheck-get-revoked/</link>
-        <description>据Hacker News报道，一份法院文件显示，美国移民和海关执法局（ICE）使用的一款应用程序被用于识别抗议者。同时，全球入口（Global Entry）和预检服务（PreCheck）被撤销。这一事件引发了人们对隐私和安全的关注，并对相关技术和服务产生了影响。</description>
-        <pubDate>Sat, 31 Jan 2026 02:29:45 GMT</pubDate>
-        <guid isPermaLink="true">https://viewfromthewing.com/court-filings-ice-uses-mobile-fortify-to-identify-protesters-global-entry-and-precheck-get-revoked/</guid>
-        <category>技术</category>
-    </item>
-    <item>
-        <title>a16z合伙人Kofi Ampadu因TxO项目暂停离职，或预示该篇章结束</title>
-        <link>https://techcrunch.com/2026/01/30/a16z-partner-kofi-ampadu-to-leave-firm-after-txo-program-pause/</link>
-        <description>知名风险投资公司a16z的合伙人Kofi Ampadu宣布离职，这一消息可能标志着TxO项目的结束。该项目旨在通过捐赠建议基金，为未被充分服务的创始人提供技术网络和投资资本。Ampadu的离职引发了业界对项目未来走向的关注。</description>
-        <pubDate>Sat, 31 Jan 2026 01:23:12 GMT</pubDate>
-        <guid isPermaLink="true">https://techcrunch.com/2026/01/30/a16z-partner-kofi-ampadu-to-leave-firm-after-txo-program-pause/</guid>
-        <category>科技</category>
-    </item>
-    <item>
-        <title>训练9M语音模型以纠正普通话声调：展示HN</title>
-        <link>https://simedw.com/2026/01/31/ear-pronunication-via-ctc/</link>
-        <description>一位开发者成功训练了一个包含900万参数的语音模型，旨在纠正普通话中的声调问题。这一技术突破对于提高普通话语音识别和合成系统的准确性具有重要意义。新闻发布于2026年1月31日，具有较高时效性，对语言处理领域的开发者具有实用价值。</description>
-        <pubDate>Sat, 31 Jan 2026 00:51:27 GMT</pubDate>
-        <guid isPermaLink="true">https://simedw.com/2026/01/31/ear-pronunication-via-ctc/</guid>
-        <category>技术</category>
-    </item>
-    <item>
-        <title>杰弗里·爱泼斯坦被永久禁止使用Xbox Live</title>
-        <link>https://www.theverge.com/tech/871425/jeffrey-epstein-xbox-live-ban-microsoft-sex-offender</link>
-        <description>微软宣布永久禁止杰弗里·爱泼斯坦使用Xbox Live在线游戏平台。据XboxEra发现，爱泼斯坦在2013年12月因骚扰、威胁和/或其他玩家滥用行为被永久封禁。这一决定背后的原因可能更为简单。该新闻揭示了科技巨头对网络暴力和不当行为的零容忍态度。</description>
-        <pubDate>Sat, 31 Jan 2026 00:34:17 GMT</pubDate>
-        <guid isPermaLink="true">https://www.theverge.com/tech/871425/jeffrey-epstein-xbox-live-ban-microsoft-sex-offender</guid>
-        <category>科技</category>
-    </item>
-    <item>
-        <title>探秘硅谷最热门机器人大脑初创公司Physical Intelligence</title>
-        <link>https://techcrunch.com/2026/01/30/physical-intelligence-stripe-veteran-lachy-grooms-latest-bet-is-building-silicon-valleys-buzziest-robot-brains/</link>
-        <description>科技新闻网站TechCrunch报道，Physical Intelligence初创公司正在开发硅谷备受关注的机器人大脑技术。公司联合创始人Lachy Groom表示，他与拥有数十年经验的专家团队一起工作，并相信现在是技术突破的最佳时机。该新闻突显了机器人技术领域的重要进展，对行业影响深远。</description>
-        <pubDate>Sat, 31 Jan 2026 00:09:54 GMT</pubDate>
-        <guid isPermaLink="true">https://techcrunch.com/2026/01/30/physical-intelligence-stripe-veteran-lachy-grooms-latest-bet-is-building-silicon-valleys-buzziest-robot-brains/</guid>
-        <category>科技</category>
-    </item>
-    <item>
-        <title>OpenAI与Nvidia价值1000亿美元的巨资合作暂停</title>
-        <link>https://www.wsj.com/tech/ai/the-100-billion-megadeal-between-openai-and-nvidia-is-on-ice-aa3025e3</link>
-        <description>OpenAI与Nvidia之间的价值1000亿美元的巨资合作计划因故暂停。这一合作对人工智能行业具有重要意义，涉及的技术突破和行业影响巨大。虽然目前合作暂停，但双方的合作前景仍备受关注。</description>
-        <pubDate>Sat, 31 Jan 2026 00:02:30 GMT</pubDate>
-        <guid isPermaLink="true">https://www.wsj.com/tech/ai/the-100-billion-megadeal-between-openai-and-nvidia-is-on-ice-aa3025e3</guid>
-        <category>技术</category>
-    </item>
-    <item>
-        <title>OnlyFans考虑向Architect Capital出售多数股权</title>
-        <link>https://techcrunch.com/2026/01/30/onlyfans-considering-selling-majority-stake-to-architect-capital/</link>
-        <description>科技新闻网站TechCrunch报道，成人内容平台OnlyFans正在考虑将其多数股权出售给投资公司Architect Capital。这是OnlyFans近期内第二次传出出售业务的传闻，该事件对成人内容行业及投资市场具有重要意义。</description>
-        <pubDate>Fri, 30 Jan 2026 23:54:09 GMT</pubDate>
-        <guid isPermaLink="true">https://techcrunch.com/2026/01/30/onlyfans-considering-selling-majority-stake-to-architect-capital/</guid>
-        <category>科技</category>
-    </item>
-    <item>
-        <title>Peloton在推出AI硬件仅数月后裁员11%，行业影响引发关注</title>
-        <link>https://www.theverge.com/gadgets/871422/peloton-layoffs-cost-cutting-2026</link>
-        <description>运动科技公司Peloton宣布裁员约11%，主要影响负责技术和企业相关工作的工程师。这是继去年8月裁员6%之后，Peloton再次进行全球裁员，旨在减少至少1亿美元的开支。此举反映了公司在AI硬件领域的挑战和市场压力。</description>
-        <pubDate>Fri, 30 Jan 2026 23:53:55 GMT</pubDate>
-        <guid isPermaLink="true">https://www.theverge.com/gadgets/871422/peloton-layoffs-cost-cutting-2026</guid>
-        <category>科技</category>
-    </item>
-    <item>
-        <title>Stonebraker关于CAP定理和数据库的讨论（2010年）</title>
-        <link>https://perspectives.mvdirona.com/2010/04/stonebraker-on-cap-theorem-and-databases/</link>
-        <description>这篇新闻回顾了Stonebraker在2010年对CAP定理和数据库技术的讨论。文章深入分析了CAP定理在数据库设计中的应用，对理解现代数据库系统的设计原则具有重要意义。尽管新闻发布时间较久，但其内容对数据库领域的专业人士仍具有很高的参考价值。</description>
-        <pubDate>Fri, 30 Jan 2026 23:47:28 GMT</pubDate>
-        <guid isPermaLink="true">https://perspectives.mvdirona.com/2010/04/stonebraker-on-cap-theorem-and-databases/</guid>
-        <category>技术</category>
+        <title>2026年01月31日 新闻汇总</title>
+        <link>https://username.github.io/news/</link>
+        <description>本期精选 3 条高质量科技新闻</description>
+        <pubDate>Sat, 31 Jan 2026 16:21:17 GMT</pubDate>
+        <guid>docs/latest.md</guid>
+        <category>科技新闻</category>
     </item>
 </channel>
 </rss>
