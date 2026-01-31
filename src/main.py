@@ -11,7 +11,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import logging
 import asyncio
 from datetime import datetime
-from typing import List
+from typing import List, Optional
 
 from src.config import Config
 from src.models import NewsItem
@@ -20,6 +20,7 @@ from src.ai_scorer import AIScorer
 from src.markdown_generator import MarkdownGenerator
 from src.rss_generator import RSSGenerator
 from src.history_manager import HistoryManager
+from src.monitoring import create_monitor, StageType, PerformanceMonitor
 
 # 配置日志
 logging.basicConfig(
@@ -36,13 +37,22 @@ logger = logging.getLogger(__name__)
 class RSSAggregator:
     """RSS新闻聚合器主类"""
     
-    def __init__(self):
+    def __init__(self, enable_monitoring: bool = True):
         self.config = Config()
         self.history = HistoryManager()
         self.fetcher = None
         self.scorer = None
         self.markdown_gen = None
         self.rss_gen = None
+        self.monitor = None
+        
+        # 初始化性能监控器
+        if enable_monitoring:
+            self.monitor = create_monitor(
+                output_dir="metrics",
+                enable_logging=True,
+                auto_save=True
+            )
     
     async def run(self) -> bool:
         """
@@ -57,26 +67,44 @@ class RSSAggregator:
         logger.info("=" * 50)
         
         try:
-            # 1. 初始化各模块
-            self._init_modules()
+            # 开始性能监控
+            if self.monitor:
+                self.monitor.start()
             
-            # 2. 获取RSS新闻
-            news_items = self._fetch_news()
-            if not news_items:
-                logger.warning("未获取到任何新闻")
-                return False
+            try:
+                # 1. 初始化各模块
+                self._init_modules()
+                
+                # 2. 获取RSS新闻
+                news_items = self._fetch_news()
+                if not news_items:
+                    logger.warning("未获取到任何新闻")
+                    return False
+                
+                # 3. AI评分和翻译
+                scored_items = await self._score_news(news_items)
+                
+                # 4. 筛选Top N
+                top_items = self._select_top_news(scored_items)
+                
+                # 5. 生成输出文件
+                self._generate_outputs(top_items)
+                
+                # 6. 更新历史统计
+                self._update_stats(start_time, news_items, top_items)
+                
+            except Exception as e:
+                # 记录错误
+                if self.monitor:
+                    self.monitor.increment('errors')
+                raise
             
-            # 3. AI评分和翻译
-            scored_items = await self._score_news(news_items)
-            
-            # 4. 筛选Top N
-            top_items = self._select_top_news(scored_items)
-            
-            # 5. 生成输出文件
-            self._generate_outputs(top_items)
-            
-            # 6. 更新历史统计
-            self._update_stats(start_time, news_items, top_items)
+            finally:
+                # 结束性能监控
+                if self.monitor:
+                    self.monitor.end()
+                    # 打印性能摘要
+                    self._print_performance_summary()
             
             end_time = datetime.now()
             duration = (end_time - start_time).total_seconds()
@@ -102,7 +130,10 @@ class RSSAggregator:
             filter_config=self.config.filter_config
         )
         
-        self.scorer = AIScorer(config=self.config.ai_config)
+        self.scorer = AIScorer(
+            config=self.config.ai_config,
+            monitor=self.monitor  # 传递监控器
+        )
         
         self.markdown_gen = MarkdownGenerator(
             output_dir="docs",
@@ -124,15 +155,26 @@ class RSSAggregator:
         """获取新闻"""
         logger.info("📡 开始获取RSS新闻...")
         
-        items = self.fetcher.fetch_all()
+        # 使用监控器记录RSS抓取阶段
+        stage_context = None
+        if self.monitor:
+            stage_context = self.monitor.stage('rss_fetch', StageType.RSS_FETCH)
+            stage_context.__enter__()
         
-        # 过滤已处理的URL
-        processed = self.history.get_processed_urls()
-        new_items = [item for item in items if item.link not in processed]
+        try:
+            items = self.fetcher.fetch_all()
+            
+            # 过滤已处理的URL
+            processed = self.history.get_processed_urls()
+            new_items = [item for item in items if item.link not in processed]
+            
+            logger.info(f"✓ 获取 {len(items)} 条，其中新内容 {len(new_items)} 条")
+            
+            return new_items if new_items else items  # 如果没有新内容，使用全部
         
-        logger.info(f"✓ 获取 {len(items)} 条，其中新内容 {len(new_items)} 条")
-        
-        return new_items if new_items else items  # 如果没有新内容，使用全部
+        finally:
+            if stage_context:
+                stage_context.__exit__(None, None, None)
     
     async def _score_news(self, items: List[NewsItem]) -> List[NewsItem]:
         """AI评分"""
@@ -169,15 +211,26 @@ class RSSAggregator:
         """生成输出文件"""
         logger.info("📝 生成输出文件...")
         
-        now = datetime.now()
+        # 使用监控器记录输出生成阶段
+        stage_context = None
+        if self.monitor:
+            stage_context = self.monitor.stage('generate_output', StageType.GENERATE_OUTPUT)
+            stage_context.__enter__()
         
-        # 生成Markdown
-        latest_path, archive_path = self.markdown_gen.generate(items, now)
-        logger.info(f"✓ Markdown: {latest_path}")
+        try:
+            now = datetime.now()
+            
+            # 生成Markdown
+            latest_path, archive_path = self.markdown_gen.generate(items, now)
+            logger.info(f"✓ Markdown: {latest_path}")
+            
+            # 生成RSS
+            self.rss_gen.generate(items)
+            logger.info(f"✓ RSS feed: feed.xml")
         
-        # 生成RSS
-        self.rss_gen.generate(items)
-        logger.info(f"✓ RSS feed: feed.xml")
+        finally:
+            if stage_context:
+                stage_context.__exit__(None, None, None)
     
     def _update_stats(self, run_time: datetime, all_items: List[NewsItem], 
                       selected_items: List[NewsItem]):
@@ -205,19 +258,51 @@ class RSSAggregator:
         stats = self.history.get_stats()
         logger.info(f"📈 总运行次数: {stats['total_runs']}")
         logger.info(f"📈 总处理新闻: {stats['total_news_processed']}")
-        logger.info(f"📈 平均每期: {stats['avg_news_per_run']}")
-
-
-async def main():
-    """主入口函数"""
-    # 创建聚合器并运行
-    # API key validation is now handled in Config class based on selected provider
-    aggregator = RSSAggregator()
-    success = await aggregator.run()
+            logger.info(f"📈 平均每期: {stats['avg_news_per_run']}")
     
-    if not success:
-        sys.exit(1)
-
-
+    def _print_performance_summary(self):
+        """打印性能监控摘要"""
+        if not self.monitor:
+            return
+        
+        try:
+            report = self.monitor.generate_report()
+            
+            logger.info("=" * 50)
+            logger.info("📊 性能监控摘要")
+            logger.info("=" * 50)
+            logger.info(f"总耗时: {report['summary']['total_duration']:.2f}秒")
+            logger.info(f"处理新闻: {report['summary']['news_items_processed']}条")
+            logger.info(f"API调用: {report['summary']['total_api_calls']}次")
+            
+            if report['summary']['total_tokens'] > 0:
+                logger.info(f"Token使用: {report['summary']['total_tokens']:,}")
+            
+            if report['summary']['cache_hits'] > 0 or report['summary']['cache_misses'] > 0:
+                hit_rate = report['summary']['cache_hit_rate']
+                hits = report['summary']['cache_hits']
+                misses = report['summary']['cache_misses']
+                logger.info(f"缓存命中率: {hit_rate:.1f}% (命中: {hits}, 未命中: {misses})")
+            
+            # 计算效率指标
+            efficiency = report['efficiency']
+            if efficiency['items_per_second'] > 0:
+                logger.info(f"处理速度: {efficiency['items_per_second']:.2f}条/秒")
+            
+            if efficiency['api_calls_per_item'] > 0:
+                logger.info(f"每新闻API调用: {efficiency['api_calls_per_item']:.3f}")
+            
+            # 阶段耗时详情
+            if report['stages']:
+                logger.info(f"\n阶段耗时详情:")
+                for name, data in report['stages'].items():
+                    duration = data['total_duration']
+                    logger.info(f"  {name}: {duration:.3f}秒 ({data['count']}次)")
+            
+            logger.info("=" * 50)
+            
+        except Exception as e:
+            logger.warning(f"性能摘要生成失败: {e}")
+ 
 if __name__ == "__main__":
     asyncio.run(main())

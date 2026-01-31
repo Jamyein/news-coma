@@ -13,6 +13,8 @@ from openai import AsyncOpenAI
 from tenacity import retry, stop_after_attempt, wait_exponential
 
 from src.models import NewsItem, AIConfig, ProviderConfig, FallbackConfig
+from src.ai_cache import AICache
+from src.monitoring import create_monitor, StageType, PerformanceMonitor
 
 logger = logging.getLogger(__name__)
 
@@ -66,12 +68,20 @@ class SimpleRateLimiter:
 class AIScorer:
     """AI新闻评分器 - 支持14家LLM提供商和自动回退"""
     
-    def __init__(self, config: AIConfig):
+    def __init__(self, config: AIConfig, enable_cache: bool = True, monitor: Optional[PerformanceMonitor] = None):
         self.config = config
         self.fallback = config.fallback
         self.current_provider_name = config.provider
         self.providers_config = config.providers_config
         self.criteria = config.scoring_criteria
+        self.enable_cache = enable_cache
+        self.monitor = monitor
+        
+        # 初始化缓存
+        if enable_cache:
+            self.cache = AICache(max_size=5000)
+        else:
+            self.cache = None
         
         # 初始化主提供商
         self._init_provider(self.current_provider_name)
@@ -105,37 +115,99 @@ class AIScorer:
     
     async def score_all(self, items: List[NewsItem]) -> List[NewsItem]:
         """
-        批量评分所有新闻，支持自动回退
+        批量评分所有新闻，支持自动回退和缓存
         """
-        if not self.fallback.enabled:
-            # 不回退，直接使用当前提供商
-            return await self._score_with_provider(items, self.current_provider_name)
+        if not items:
+            return []
         
-        # 构建回退链
-        fallback_chain = self._build_fallback_chain()
-        last_exception = None
+        # 如果有监控器，开始AI评分阶段
+        stage_context = None
+        if self.monitor:
+            stage_context = self.monitor.stage('ai_scoring', StageType.AI_SCORING)
+            stage_context.__enter__()
         
-        for provider_name in fallback_chain:
-            try:
-                logger.info(f"🔄 尝试使用提供商: {provider_name}")
+        try:
+            # 如果启用缓存，先检查缓存
+            cached_items = []
+            to_score_items = []
+            
+            if self.cache and self.enable_cache:
+                for item in items:
+                    cached = await self.cache.get_async(item)
+                    if cached:
+                        cached_items.append(cached)
+                        # 记录缓存命中
+                        if self.monitor:
+                            self.monitor.record_cache_hit()
+                    else:
+                        to_score_items.append(item)
+                        # 记录缓存未命中
+                        if self.monitor:
+                            self.monitor.record_cache_miss()
+            else:
+                to_score_items = items
+                # 记录缓存未命中
+                if self.monitor:
+                    self.monitor.record_cache_miss(len(items))
+            
+            logger.info(f"缓存状态: 命中 {len(cached_items)}/{len(items)} ({(len(cached_items)/len(items)*100):.1f}%)")
+            
+            # 如果没有需要评分的项目，直接返回缓存结果
+            if not to_score_items:
+                return cached_items
+            
+            # 对未命中缓存的进行评分
+            scored_items = []
+            if not self.fallback.enabled:
+                # 不回退，直接使用当前提供商
+                scored_items = await self._score_with_provider(to_score_items, self.current_provider_name)
+            else:
+                # 使用回退链
+                fallback_chain = self._build_fallback_chain()
+                last_exception = None
                 
-                # 临时切换到该提供商
-                self._init_provider(provider_name)
+                for provider_name in fallback_chain:
+                    try:
+                        logger.info(f"🔄 尝试使用提供商: {provider_name}")
+                        
+                        # 临时切换到该提供商
+                        self._init_provider(provider_name)
+                        
+                        # 执行评分
+                        scored_items = await self._score_with_provider(to_score_items, provider_name)
+                        
+                        logger.info(f"✅ 提供商 {provider_name} 调用成功")
+                        break
+                        
+                    except Exception as e:
+                        logger.error(f"❌ 提供商 {provider_name} 失败: {e}")
+                        last_exception = e
+                        continue
                 
-                # 执行评分
-                results = await self._score_with_provider(items, provider_name)
-                
-                logger.info(f"✅ 提供商 {provider_name} 调用成功")
-                return results
-                
-            except Exception as e:
-                logger.error(f"❌ 提供商 {provider_name} 失败: {e}")
-                last_exception = e
-                continue
+                # 所有提供商都失败
+                if not scored_items:
+                    logger.error("❌ 所有AI提供商均失败，无法完成评分")
+                    raise last_exception
+            
+            # 保存到缓存
+            if self.cache and self.enable_cache:
+                for item in scored_items:
+                    await self.cache.set_async(item)
+            
+            # 合并缓存和新鲜评分结果
+            all_items = cached_items + scored_items
+            
+            # 统计缓存效果
+            if self.cache:
+                stats = self.cache.get_stats()
+                logger.info(f"缓存统计: 大小={stats['size']}, 命中率={stats['hit_rate']}%, 命中/未命中={stats['hits']}/{stats['misses']}")
+            
+            return all_items
         
-        # 所有提供商都失败
-        logger.error("❌ 所有AI提供商均失败，无法完成评分")
-        raise last_exception
+        finally:
+            # 退出阶段上下文
+            if stage_context:
+                stage_context.__exit__(None, None, None)
     
     def _build_fallback_chain(self) -> List[str]:
         """构建回退链（去重）"""
@@ -238,11 +310,21 @@ class AIScorer:
                 response_format={"type": "json_object"}
             )
             
+            # 记录API调用和token使用
+            if self.monitor:
+                self.monitor.record_api_call(
+                    tokens_input=len(prompt) // 4,  # 估算输入token
+                    tokens_output=response.usage.completion_tokens if hasattr(response.usage, 'completion_tokens') else 0
+                )
+            
             content = response.choices[0].message.content
             return self._parse_response(item, content)
             
         except Exception as e:
             logger.error(f"API调用失败 ({self.current_provider_name}): {e}")
+            # 记录错误
+            if self.monitor:
+                self.monitor.increment('errors')
             raise
     
     def _build_prompt(self, item: NewsItem) -> str:
