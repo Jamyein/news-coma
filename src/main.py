@@ -4,6 +4,10 @@
 """
 import os
 import sys
+
+# Add project root to sys.path to allow imports from src package
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import logging
 import asyncio
 from datetime import datetime
