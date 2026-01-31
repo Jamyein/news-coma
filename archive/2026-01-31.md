@@ -1,171 +1,76 @@
 # 📰 科技新闻精选
 
-> 🕐 更新时间: 2026年01月31日 05:47 UTC  
-> 📊 本期精选 **10** 条高质量科技新闻  
+> 🕐 更新时间: 2026年01月31日 06:48 UTC  
+> 📊 本期精选 **4** 条高质量科技新闻  
 > 🤖 由 AI 自动筛选、翻译和总结
 
 ---
 
-### 1. 参议院通过预算，国土安全部获得两周资金延期以协商移民海关执法新规定
-
-**📌 来源**: The Verge | **🏷️ 分类**: 科技 | **⭐ 评分**: 7.7/10
-
-**📝 摘要**:
-美国参议院于2026年1月31日通过联邦预算，除国土安全部外，所有部门均获得资金。国土安全部获得两周资金延期，以协商移民海关执法（ICE）的新规定。若无法达成协议，国土安全部将面临资金中断。这一决定对国家安全和移民政策产生重要影响。
-
-**💡 关键要点**:
-- 参议院通过联邦预算，国土安全部获得两周资金延期
-- 资金延期用于协商ICE新规定
-- 若未达成协议，国土安全部将面临资金中断
-- 对国家安全和移民政策产生重要影响
-
-**🔗 原文链接**: [Senate passes budget with two more weeks of Homeland Security funding](https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding)
-
----
-
-### 2. 法院文件显示ICE应用程序识别抗议者；全球入口和预检服务被撤销
+### 1. 星链更新隐私政策，允许消费者数据用于训练
 
 **📌 来源**: Hacker News | **🏷️ 分类**: 技术 | **⭐ 评分**: 7.7/10
 
 **📝 摘要**:
-据Hacker News报道，一份法院文件显示，美国移民和海关执法局（ICE）使用的一款应用程序被用于识别抗议者。同时，全球入口（Global Entry）和预检服务（PreCheck）被撤销。这一事件引发了人们对隐私和安全的关注，并对相关技术和服务产生了影响。
+星链公司更新了其隐私政策，允许使用消费者数据来训练其系统，这一举措引发了关于数据隐私和用户信任的讨论。
 
 **💡 关键要点**:
-- ICE应用程序被用于识别抗议者
-- 全球入口和预检服务被撤销
-- 隐私和安全问题引发关注
+- 星链
+- 隐私政策
+- 数据训练
+- 用户信任
 
-**🔗 原文链接**: [Court Filings: ICE App Identifies Protesters; Global Entry, PreCheck Get Revoked](https://viewfromthewing.com/court-filings-ice-uses-mobile-fortify-to-identify-protesters-global-entry-and-precheck-get-revoked/)
+**🔗 原文链接**: [Starlink updates privacy policy to allow consumer data to train](https://finance.yahoo.com/news/musks-starlink-updates-privacy-policy-230853500.html)
 
 ---
 
-### 3. a16z合伙人Kofi Ampadu因TxO项目暂停离职，或预示该篇章结束
+### 2. 设计一个被动安全的API
 
-**📌 来源**: TechCrunch | **🏷️ 分类**: 科技 | **⭐ 评分**: 7.7/10
+**📌 来源**: Hacker News | **🏷️ 分类**: 技术 | **⭐ 评分**: 7.3/10
 
 **📝 摘要**:
-知名风险投资公司a16z的合伙人Kofi Ampadu宣布离职，这一消息可能标志着TxO项目的结束。该项目旨在通过捐赠建议基金，为未被充分服务的创始人提供技术网络和投资资本。Ampadu的离职引发了业界对项目未来走向的关注。
+一篇技术文章探讨了如何设计一个既安全又易于使用的API，这对于软件开发者来说是一个重要的参考。
 
 **💡 关键要点**:
-- a16z合伙人Kofi Ampadu宣布离职
-- TxO项目可能结束
-- 关注未被充分服务的创始人支持
+- API设计
+- 安全性
+- 易用性
+- 软件开发
 
-**🔗 原文链接**: [a16z partner Kofi Ampadu to leave firm after TxO program pause](https://techcrunch.com/2026/01/30/a16z-partner-kofi-ampadu-to-leave-firm-after-txo-program-pause/)
+**🔗 原文链接**: [Designing a Passively Safe API](https://www.danealbaugh.com/articles/passively-safe-apis)
 
 ---
 
-### 4. 训练9M语音模型以纠正普通话声调：展示HN
+### 3. 展示HN：噬菌体探索器
 
-**📌 来源**: Hacker News | **🏷️ 分类**: 技术 | **⭐ 评分**: 7.7/10
+**📌 来源**: Hacker News | **🏷️ 分类**: 技术 | **⭐ 评分**: 6.0/10
 
 **📝 摘要**:
-一位开发者成功训练了一个包含900万参数的语音模型，旨在纠正普通话中的声调问题。这一技术突破对于提高普通话语音识别和合成系统的准确性具有重要意义。新闻发布于2026年1月31日，具有较高时效性，对语言处理领域的开发者具有实用价值。
+一个名为Phage Explorer的工具被发布在Hacker News上，它允许用户探索和比较噬菌体的基因组。
 
 **💡 关键要点**:
-- 900万参数的语音模型训练成功
-- 普通话声调纠正技术突破
-- 对语言处理领域开发者具有实用价值
+- 噬菌体探索器
+- 基因组
+- Hacker News
+- 工具
 
-**🔗 原文链接**: [Show HN: I trained a 9M speech model to fix my Mandarin tones](https://simedw.com/2026/01/31/ear-pronunication-via-ctc/)
+**🔗 原文链接**: [Show HN: Phage Explorer](https://phage-explorer.org/)
 
 ---
 
-### 5. 杰弗里·爱泼斯坦被永久禁止使用Xbox Live
+### 4. 那不勒斯1790年内战因对实分析的道德恐慌而加剧（2023）
 
-**📌 来源**: The Verge | **🏷️ 分类**: 科技 | **⭐ 评分**: 7.7/10
-
-**📝 摘要**:
-微软宣布永久禁止杰弗里·爱泼斯坦使用Xbox Live在线游戏平台。据XboxEra发现，爱泼斯坦在2013年12月因骚扰、威胁和/或其他玩家滥用行为被永久封禁。这一决定背后的原因可能更为简单。该新闻揭示了科技巨头对网络暴力和不当行为的零容忍态度。
-
-**💡 关键要点**:
-- 杰弗里·爱泼斯坦被永久禁止使用Xbox Live
-- 微软对网络暴力和不当行为的零容忍态度
-- 爱泼斯坦在2013年因不当行为被永久封禁
-
-**🔗 原文链接**: [Jeffrey Epstein was permanently banned from Xbox Live](https://www.theverge.com/tech/871425/jeffrey-epstein-xbox-live-ban-microsoft-sex-offender)
-
----
-
-### 6. 探秘硅谷最热门机器人大脑初创公司Physical Intelligence
-
-**📌 来源**: TechCrunch | **🏷️ 分类**: 科技 | **⭐ 评分**: 7.7/10
+**📌 来源**: Hacker News | **🏷️ 分类**: 技术 | **⭐ 评分**: 6.0/10
 
 **📝 摘要**:
-科技新闻网站TechCrunch报道，Physical Intelligence初创公司正在开发硅谷备受关注的机器人大脑技术。公司联合创始人Lachy Groom表示，他与拥有数十年经验的专家团队一起工作，并相信现在是技术突破的最佳时机。该新闻突显了机器人技术领域的重要进展，对行业影响深远。
+一篇研究指出，那不勒斯1790年的内战因对实分析的道德恐慌而加剧，这一发现将数学与历史联系起来。
 
 **💡 关键要点**:
-- Physical Intelligence公司专注于机器人大脑技术的研究和开发
-- 联合创始人Lachy Groom对技术突破充满信心
-- 该技术有望成为硅谷机器人领域的热点
-- 报道强调了行业专家对技术突破的认可
+- 那不勒斯内战
+- 实分析
+- 道德恐慌
+- 历史研究
 
-**🔗 原文链接**: [A peek inside Physical Intelligence, the startup building Silicon Valley’s buzziest robot brains](https://techcrunch.com/2026/01/30/physical-intelligence-stripe-veteran-lachy-grooms-latest-bet-is-building-silicon-valleys-buzziest-robot-brains/)
-
----
-
-### 7. OpenAI与Nvidia价值1000亿美元的巨资合作暂停
-
-**📌 来源**: Hacker News | **🏷️ 分类**: 技术 | **⭐ 评分**: 7.7/10
-
-**📝 摘要**:
-OpenAI与Nvidia之间的价值1000亿美元的巨资合作计划因故暂停。这一合作对人工智能行业具有重要意义，涉及的技术突破和行业影响巨大。虽然目前合作暂停，但双方的合作前景仍备受关注。
-
-**💡 关键要点**:
-- OpenAI与Nvidia的合作计划暂停
-- 合作价值高达1000亿美元
-- 对人工智能行业具有重要影响
-- 合作暂停的原因尚不明确
-
-**🔗 原文链接**: [The $100B megadeal between OpenAI and Nvidia is on ice](https://www.wsj.com/tech/ai/the-100-billion-megadeal-between-openai-and-nvidia-is-on-ice-aa3025e3)
-
----
-
-### 8. OnlyFans考虑向Architect Capital出售多数股权
-
-**📌 来源**: TechCrunch | **🏷️ 分类**: 科技 | **⭐ 评分**: 7.7/10
-
-**📝 摘要**:
-科技新闻网站TechCrunch报道，成人内容平台OnlyFans正在考虑将其多数股权出售给投资公司Architect Capital。这是OnlyFans近期内第二次传出出售业务的传闻，该事件对成人内容行业及投资市场具有重要意义。
-
-**💡 关键要点**:
-- OnlyFans考虑出售多数股权
-- 潜在买家为投资公司Architect Capital
-- 成人内容行业市场动态
-
-**🔗 原文链接**: [OnlyFans considering selling majority stake to Architect Capital](https://techcrunch.com/2026/01/30/onlyfans-considering-selling-majority-stake-to-architect-capital/)
-
----
-
-### 9. Peloton在推出AI硬件仅数月后裁员11%，行业影响引发关注
-
-**📌 来源**: The Verge | **🏷️ 分类**: 科技 | **⭐ 评分**: 7.7/10
-
-**📝 摘要**:
-运动科技公司Peloton宣布裁员约11%，主要影响负责技术和企业相关工作的工程师。这是继去年8月裁员6%之后，Peloton再次进行全球裁员，旨在减少至少1亿美元的开支。此举反映了公司在AI硬件领域的挑战和市场压力。
-
-**💡 关键要点**:
-- Peloton宣布裁员11%，主要影响技术和企业相关工程师
-- 裁员发生在推出AI硬件仅数月之后
-- 公司试图通过裁员减少开支，应对市场压力
-
-**🔗 原文链接**: [Peloton lays off 11 percent of its staff just a few months after launching its AI hardware](https://www.theverge.com/gadgets/871422/peloton-layoffs-cost-cutting-2026)
-
----
-
-### 10. Stonebraker关于CAP定理和数据库的讨论（2010年）
-
-**📌 来源**: Hacker News | **🏷️ 分类**: 技术 | **⭐ 评分**: 7.7/10
-
-**📝 摘要**:
-这篇新闻回顾了Stonebraker在2010年对CAP定理和数据库技术的讨论。文章深入分析了CAP定理在数据库设计中的应用，对理解现代数据库系统的设计原则具有重要意义。尽管新闻发布时间较久，但其内容对数据库领域的专业人士仍具有很高的参考价值。
-
-**💡 关键要点**:
-- CAP定理在数据库设计中的应用
-- Stonebraker对数据库技术的见解
-- 对现代数据库系统设计原则的讨论
-
-**🔗 原文链接**: [Stonebraker on CAP theorem and Databases (2010)](https://perspectives.mvdirona.com/2010/04/stonebraker-on-cap-theorem-and-databases/)
+**🔗 原文链接**: [Naples' 1790s civil war was intensified by moral panic over Real Analysis (2023)](https://lareviewofbooks.org/article/foundational-anxieties-modern-mathematics-and-the-political-imagination/)
 
 ---
 

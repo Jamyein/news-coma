@@ -5,8 +5,8 @@
     <link>https://github.com/Jamyein/news-coma</link>
     <description>由 AI 筛选的高质量科技新闻聚合，每6小时自动更新</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 31 Jan 2026 05:47:54 GMT</lastBuildDate>
-    <pubDate>Sat, 31 Jan 2026 05:47:54 GMT</pubDate>
+    <lastBuildDate>Sat, 31 Jan 2026 06:48:32 GMT</lastBuildDate>
+    <pubDate>Sat, 31 Jan 2026 06:48:32 GMT</pubDate>
     <atom:link href="https://raw.githubusercontent.com/Jamyein/news-coma/main/feed.xml" rel="self" type="application/rss+xml" />
     <image>
         <url>https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</url>
@@ -14,6 +14,38 @@
         <link>https://github.com/Jamyein/news-coma</link>
     </image>
 
+    <item>
+        <title>星链更新隐私政策，允许消费者数据用于训练</title>
+        <link>https://finance.yahoo.com/news/musks-starlink-updates-privacy-policy-230853500.html</link>
+        <description>星链公司更新了其隐私政策，允许使用消费者数据来训练其系统，这一举措引发了关于数据隐私和用户信任的讨论。</description>
+        <pubDate>Sat, 31 Jan 2026 05:44:49 GMT</pubDate>
+        <guid isPermaLink="true">https://finance.yahoo.com/news/musks-starlink-updates-privacy-policy-230853500.html</guid>
+        <category>技术</category>
+    </item>
+    <item>
+        <title>设计一个被动安全的API</title>
+        <link>https://www.danealbaugh.com/articles/passively-safe-apis</link>
+        <description>一篇技术文章探讨了如何设计一个既安全又易于使用的API，这对于软件开发者来说是一个重要的参考。</description>
+        <pubDate>Mon, 26 Jan 2026 19:03:04 GMT</pubDate>
+        <guid isPermaLink="true">https://www.danealbaugh.com/articles/passively-safe-apis</guid>
+        <category>技术</category>
+    </item>
+    <item>
+        <title>展示HN：噬菌体探索器</title>
+        <link>https://phage-explorer.org/</link>
+        <description>一个名为Phage Explorer的工具被发布在Hacker News上，它允许用户探索和比较噬菌体的基因组。</description>
+        <pubDate>Sat, 31 Jan 2026 05:22:03 GMT</pubDate>
+        <guid isPermaLink="true">https://phage-explorer.org/</guid>
+        <category>技术</category>
+    </item>
+    <item>
+        <title>那不勒斯1790年内战因对实分析的道德恐慌而加剧（2023）</title>
+        <link>https://lareviewofbooks.org/article/foundational-anxieties-modern-mathematics-and-the-political-imagination/</link>
+        <description>一篇研究指出，那不勒斯1790年的内战因对实分析的道德恐慌而加剧，这一发现将数学与历史联系起来。</description>
+        <pubDate>Sat, 31 Jan 2026 03:53:06 GMT</pubDate>
+        <guid isPermaLink="true">https://lareviewofbooks.org/article/foundational-anxieties-modern-mathematics-and-the-political-imagination/</guid>
+        <category>技术</category>
+    </item>
     <item>
         <title>参议院通过预算，国土安全部获得两周资金延期以协商移民海关执法新规定</title>
         <link>https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding</link>

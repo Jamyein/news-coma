@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-01-31T05:45:34.248529",
+  "last_run": "2026-01-31T06:47:45.364104",
   "processed_urls": [
     "https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding",
     "https://viewfromthewing.com/court-filings-ice-uses-mobile-fortify-to-identify-protesters-global-entry-and-precheck-get-revoked/",
@@ -65,12 +65,18 @@
     "https://www.youtube.com/watch?v=QKSPk_0N4Jc",
     "https://github.blog/ai-and-ml/github-copilot/power-agentic-workflows-in-your-terminal-with-github-copilot-cli/",
     "https://tongue-twister.net",
-    "https://technicshistory.com/2026/01/25/the-home-computer-hybrids/"
+    "https://technicshistory.com/2026/01/25/the-home-computer-hybrids/",
+    "https://finance.yahoo.com/news/musks-starlink-updates-privacy-policy-230853500.html",
+    "https://phage-explorer.org/",
+    "https://lareviewofbooks.org/article/foundational-anxieties-modern-mathematics-and-the-political-imagination/",
+    "https://en.wikipedia.org/wiki/Ashcan_comic",
+    "https://www.thetimes.com/culture/books/article/sicilian-man-leonardo-sciascia-rise-mafia-struggle-italy-soul-caroline-moorehead-review-lbsbd2p5w",
+    "https://www.danealbaugh.com/articles/passively-safe-apis"
   ],
   "stats": {
-    "total_runs": 1,
-    "total_news_processed": 65,
-    "avg_news_per_run": 65.0
+    "total_runs": 2,
+    "total_news_processed": 71,
+    "avg_news_per_run": 35.5
   },
   "source_stats": {
     "The Verge": {
@@ -78,8 +84,8 @@
       "selected": 3
     },
     "Hacker News": {
-      "fetched": 30,
-      "selected": 4
+      "fetched": 36,
+      "selected": 8
     },
     "TechCrunch": {
       "fetched": 20,
@@ -89,5 +95,100 @@
       "fetched": 5,
       "selected": 0
     }
-  }
+  },
+  "ai_cache": {
+    "a329f0a2952dc281": {
+      "ai_score": 7.7,
+      "translated_title": "星链更新隐私政策，允许消费者数据用于训练",
+      "ai_summary": "星链公司更新了其隐私政策，允许使用消费者数据来训练其系统，这一举措引发了关于数据隐私和用户信任的讨论。",
+      "key_points": [
+        "星链",
+        "隐私政策",
+        "数据训练",
+        "用户信任"
+      ],
+      "cached_at": "2026-01-31T06:48:32.864215",
+      "source": "Hacker News"
+    },
+    "fff0780e282a7435": {
+      "ai_score": 6.0,
+      "translated_title": "展示HN：噬菌体探索器",
+      "ai_summary": "一个名为Phage Explorer的工具被发布在Hacker News上，它允许用户探索和比较噬菌体的基因组。",
+      "key_points": [
+        "噬菌体探索器",
+        "基因组",
+        "Hacker News",
+        "工具"
+      ],
+      "cached_at": "2026-01-31T06:48:32.864229",
+      "source": "Hacker News"
+    },
+    "f2ca383ab9bdb11b": {
+      "ai_score": 6.0,
+      "translated_title": "那不勒斯1790年内战因对实分析的道德恐慌而加剧（2023）",
+      "ai_summary": "一篇研究指出，那不勒斯1790年的内战因对实分析的道德恐慌而加剧，这一发现将数学与历史联系起来。",
+      "key_points": [
+        "那不勒斯内战",
+        "实分析",
+        "道德恐慌",
+        "历史研究"
+      ],
+      "cached_at": "2026-01-31T06:48:32.864236",
+      "source": "Hacker News"
+    },
+    "8931118e87613e1b": {
+      "ai_score": 5.3,
+      "translated_title": "废纸箱漫画",
+      "ai_summary": "一个名为Ashcan Comic的项目被发布在Hacker News上，该项目旨在通过漫画形式讲述技术故事。",
+      "key_points": [
+        "废纸箱漫画",
+        "技术故事",
+        "漫画",
+        "Hacker News"
+      ],
+      "cached_at": "2026-01-31T06:48:32.864242",
+      "source": "Hacker News"
+    },
+    "94234ed036daf797": {
+      "ai_score": 5.2,
+      "translated_title": "一位与意大利黑手党对抗并幸存下来的小说家",
+      "ai_summary": "一位小说家讲述了她与意大利黑手党的对抗经历，这一故事引起了人们对犯罪和正义的关注。",
+      "key_points": [
+        "小说家",
+        "意大利黑手党",
+        "犯罪",
+        "正义"
+      ],
+      "cached_at": "2026-01-31T06:48:32.864247",
+      "source": "Hacker News"
+    },
+    "920ab78f993421fe": {
+      "ai_score": 7.3,
+      "translated_title": "设计一个被动安全的API",
+      "ai_summary": "一篇技术文章探讨了如何设计一个既安全又易于使用的API，这对于软件开发者来说是一个重要的参考。",
+      "key_points": [
+        "API设计",
+        "安全性",
+        "易用性",
+        "软件开发"
+      ],
+      "cached_at": "2026-01-31T06:48:32.864252",
+      "source": "Hacker News"
+    }
+  },
+  "cache_hits": 0,
+  "cache_lookups": 6,
+  "run_metrics": [
+    {
+      "run_time": "2026-01-31T06:47:45.364104",
+      "news_count": 6,
+      "api_calls": 1,
+      "cache_hits": 0,
+      "cache_misses": 0,
+      "duplicates_removed": 0,
+      "semantic_duplicates": 0,
+      "duration_seconds": 47.501665,
+      "avg_score": 6.75
+    }
+  ]
 }
