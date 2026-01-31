@@ -87,6 +87,22 @@ class Config:
             'practicality': 0.15
         })
         
+        # Validate that the selected provider has an API key
+        current_config = providers_config.get(current_provider)
+        if not current_config or not current_config.api_key:
+            # Get the env var name from the raw config
+            env_var_name = "OPENAI_API_KEY"  # default
+            provider_config_raw = ai_data.get('ai_providers', {}).get(current_provider, {})
+            api_key_template = provider_config_raw.get('api_key', '')
+            if api_key_template.startswith('${') and api_key_template.endswith('}'):
+                env_var_name = api_key_template[2:-1]
+            
+            raise ValueError(
+                f"❌ 当前选择的AI提供商 '{current_provider}' 未配置API Key\n"
+                f"请在环境变量中设置: {env_var_name}\n"
+                f"或在GitHub仓库 Settings -> Secrets and variables -> Actions 中配置"
+            )
+        
         return AIConfig(
             provider=current_provider,
             providers_config=providers_config,

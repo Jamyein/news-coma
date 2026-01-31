@@ -207,14 +207,8 @@ class RSSAggregator:
 
 async def main():
     """主入口函数"""
-    # 检查环境变量
-    api_key = os.getenv('OPENAI_API_KEY')
-    if not api_key:
-        logger.error("❌ 环境变量 OPENAI_API_KEY 未设置")
-        logger.error("请在GitHub仓库Settings -> Secrets and variables -> Actions中设置")
-        sys.exit(1)
-    
     # 创建聚合器并运行
+    # API key validation is now handled in Config class based on selected provider
     aggregator = RSSAggregator()
     success = await aggregator.run()
     
