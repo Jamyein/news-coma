@@ -17,6 +17,8 @@ on:
 # 权限配置 (最小权限原则)
 permissions:
   contents: write  # 用于提交生成的文件
+  pages: write     # 用于部署到GitHub Pages
+  id-token: write  # 用于Pages认证
 
 # 并发控制 - 防止多个工作流同时运行
 concurrency:
@@ -82,18 +84,37 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
         continue-on-error: false
       
-      # 5. 提交生成的文件
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          
-          # 检查是否有变更
-          if [ -n "$(git status --porcelain)" ]; then
-            git add docs/ archive/ feed.xml data/
-            git commit -m "📰 Update news aggregation [$(date -u +'%Y-%m-%d %H:%M UTC')]"
-            git push
-            echo "✅ Changes committed and pushed"
-          else
-            echo "ℹ️ No changes to commit"
-          fi
+       # 5. 提交生成的文件
+       - name: Commit and push changes
+         run: |
+           git config --local user.email "action@github.com"
+           git config --local user.name "GitHub Action"
+           
+           # 检查是否有变更
+           if [ -n "$(git status --porcelain)" ]; then
+             git add docs/ archive/ feed.xml data/
+             git commit -m "📰 Update news aggregation [$(date -u +'%Y-%m-%d %H:%M UTC')]"
+             git push
+             echo "✅ Changes committed and pushed"
+           else
+             echo "ℹ️ No changes to commit"
+           fi
+       
+       # 6. 上传feed.xml到工作流制品
+       - name: Upload feed.xml artifact
+         uses: actions/upload-pages-artifact@v3
+         with:
+           path: feed.xml
+  
+  # GitHub Pages部署任务
+  deploy:
+    runs-on: ubuntu-latest
+    needs: aggregate
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
