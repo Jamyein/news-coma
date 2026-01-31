@@ -5,8 +5,8 @@
     <link>https://github.com/Jamyein/news-coma</link>
     <description>由 AI 筛选的高质量科技新闻聚合，每6小时自动更新</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 31 Jan 2026 08:01:51 GMT</lastBuildDate>
-    <pubDate>Sat, 31 Jan 2026 08:01:51 GMT</pubDate>
+    <lastBuildDate>Sat, 31 Jan 2026 08:33:08 GMT</lastBuildDate>
+    <pubDate>Sat, 31 Jan 2026 08:33:08 GMT</pubDate>
     <atom:link href="https://Jamyein.github.io/news-coma/feed.xml" rel="self" type="application/rss+xml" />
     <image>
         <url>https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</url>
@@ -14,6 +14,22 @@
         <link>https://github.com/Jamyein/news-coma</link>
     </image>
 
+    <item>
+        <title>苏美尔星图记录了小行星撞击事件</title>
+        <link>https://archaeologyworlds.com/5500-year-old-sumerian-star-map-recorded/</link>
+        <description>一项新的研究揭示了苏美尔星图记录了约公元前2300年一次小行星撞击地球的事件，这一发现对理解古代天文学和地球环境变化具有重要意义。</description>
+        <pubDate>Sat, 31 Jan 2026 07:32:51 GMT</pubDate>
+        <guid isPermaLink="true">https://archaeologyworlds.com/5500-year-old-sumerian-star-map-recorded/</guid>
+        <category>技术</category>
+    </item>
+    <item>
+        <title>编码时我们最不 productive</title>
+        <link>https://codemanship.wordpress.com/2026/01/30/coding-is-when-were-least-productive/</link>
+        <description>一项研究表明，在编码过程中，程序员可能会因为各种原因而降低工作效率，了解这些原因有助于提高编程效率和团队协作。</description>
+        <pubDate>Sat, 31 Jan 2026 02:08:26 GMT</pubDate>
+        <guid isPermaLink="true">https://codemanship.wordpress.com/2026/01/30/coding-is-when-were-least-productive/</guid>
+        <category>技术</category>
+    </item>
     <item>
         <title>最新富士拍立得打印机：价格昂贵但值得升级</title>
         <link>https://www.theverge.com/tech/870603/fujifilm-instax-mini-link-plus-reivew-improved-photos</link>
