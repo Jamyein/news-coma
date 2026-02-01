@@ -103,6 +103,18 @@ class AIConfig:
     category_quota_finance: float = 0.40             # 财经配额 40%
     category_quota_tech: float = 0.30                # 科技配额 30%
     category_quota_politics: float = 0.30            # 社会政治配额 30%
+    
+    # Pass2 全文获取配置（新增）
+    pass2_fetch_fulltext_enabled: bool = True       # 是否启用全文获取
+    pass2_fulltext_max_items: int = 30              # 每次最多获取全文的文章数
+    pass2_fulltext_timeout: int = 10                # 全文获取超时时间(秒)
+    pass2_max_concurrent_fetches: int = 5          # 并发获取数限制
+    
+    # 深度分析配置（新增）
+    deep_analysis_enabled: bool = True              # 是否启用深度分析
+    deep_analysis_dimensions: List[str] = field(default_factory=lambda: [
+        "core_insight", "key_arguments", "impact_forecast", "sentiment", "credibility_score"
+    ])  # 分析维度
 
 
 @dataclass

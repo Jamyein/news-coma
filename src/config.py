@@ -144,7 +144,17 @@ class Config:
             pass1_use_category_specific=pass1_use_category_specific,
             category_quota_finance=category_quota_finance,
             category_quota_tech=category_quota_tech,
-            category_quota_politics=category_quota_politics
+            category_quota_politics=category_quota_politics,
+            # Pass2全文获取配置
+            pass2_fetch_fulltext_enabled=ai_data.get('pass2_fetch_fulltext_enabled', True),
+            pass2_fulltext_max_items=ai_data.get('pass2_fulltext_max_items', 30),
+            pass2_fulltext_timeout=ai_data.get('pass2_fulltext_timeout', 10),
+            pass2_max_concurrent_fetches=ai_data.get('pass2_max_concurrent_fetches', 5),
+            # 深度分析配置
+            deep_analysis_enabled=ai_data.get('deep_analysis_enabled', True),
+            deep_analysis_dimensions=ai_data.get('deep_analysis_dimensions', [
+                "core_insight", "key_arguments", "impact_forecast", "sentiment", "credibility_score"
+            ])
         )
     
     @property
