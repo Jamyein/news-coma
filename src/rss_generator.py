@@ -17,11 +17,12 @@ class RSSGenerator:
     """基于Markdown文件的RSS订阅文件生成器"""
     
     def __init__(self, feed_path: str = "feed.xml", archive_dir: str = "archive", 
-                 docs_dir: str = "docs", max_items: int = 50):
+                 docs_dir: str = "docs", max_items: int = 50, use_smart_switch: bool = True):
         self.feed_path = Path(feed_path)
         self.archive_dir = Path(archive_dir)
         self.docs_dir = Path(docs_dir)
         self.max_items = max_items
+        self.use_smart_switch = use_smart_switch
     
     def _markdown_to_html(self, markdown_text: str) -> str:
         """
@@ -145,12 +146,38 @@ class RSSGenerator:
         
         # 写入文件
         self.feed_path.write_text(rss_xml, encoding='utf-8')
+        # 记录智能切换统计信息
+        if self.use_smart_switch:
+            self._log_smart_switch_stats(file_infos)
+        
         logger.info(f"已更新RSS feed: {self.feed_path} ({len(file_infos)} 个文件)")
         
         return rss_xml
     
+    def _log_smart_switch_stats(self, file_infos: List[Dict]):
+        """记录智能切换的统计信息"""
+        try:
+            latest_count = 0
+            archive_count = 0
+            
+            for file_info in file_infos:
+                file_path = file_info.get('file_path', '')
+                if file_path.endswith('latest.md'):
+                    latest_count += 1
+                else:
+                    archive_count += 1
+            
+            logger.info(f"智能切换统计: {archive_count}个archive文件, {latest_count}个latest文件")
+            
+            # 记录具体文件信息
+            if latest_count > 0:
+                logger.info("本次使用了latest.md文件（未找到对应archive文件）")
+            
+        except Exception as e:
+            logger.error(f"记录智能切换统计失败: {e}")
+    
     def _collect_markdown_files(self) -> List[Path]:
-        """收集archive和docs目录中的所有Markdown文件"""
+        """收集archive和docs目录中的所有Markdown文件，支持智能切换逻辑"""
         markdown_files = []
         
         # 收集archive目录中的文件
@@ -158,14 +185,81 @@ class RSSGenerator:
             for file_path in self.archive_dir.glob("*.md"):
                 markdown_files.append(file_path)
         
-        # 收集docs目录中的文件(latest.md)
+        # 处理latest.md文件（智能切换逻辑）
         if self.docs_dir.exists():
             latest_file = self.docs_dir / "latest.md"
+            
             if latest_file.exists():
-                markdown_files.append(latest_file)
+                if self.use_smart_switch:
+                    # 智能切换逻辑：检查是否有对应日期的archive文件
+                    try:
+                        # 从latest.md中提取日期
+                        latest_date = self._extract_date_from_latest(latest_file)
+                        if latest_date:
+                            # 构建对应的archive文件名
+                            archive_filename = latest_date.strftime("%Y-%m-%d") + ".md"
+                            archive_file = self.archive_dir / archive_filename
+                            
+                            if archive_file.exists():
+                                # 如果archive文件存在，使用archive文件
+                                logger.info(f"智能切换：检测到archive文件 {archive_filename} 存在，使用archive文件")
+                                # 不添加latest.md，稍后会添加对应的archive文件
+                                # 确保archive文件已经在列表中（可能已经添加）
+                                if archive_file not in markdown_files:
+                                    markdown_files.append(archive_file)
+                            else:
+                                # 如果archive文件不存在，使用latest.md
+                                logger.info(f"智能切换：未找到对应archive文件，使用latest.md")
+                                markdown_files.append(latest_file)
+                        else:
+                            # 无法从latest.md提取日期，使用latest.md
+                            logger.warning(f"无法从latest.md提取日期，使用latest.md")
+                            markdown_files.append(latest_file)
+                    except Exception as e:
+                        # 智能切换失败，使用latest.md
+                        logger.error(f"智能切换失败: {e}，使用latest.md")
+                        markdown_files.append(latest_file)
+                else:
+                    # 不使用智能切换，直接添加latest.md
+                    markdown_files.append(latest_file)
         
-        logger.info(f"找到 {len(markdown_files)} 个Markdown文件")
+        # 日志记录
+        if self.use_smart_switch:
+            logger.info(f"智能切换模式：找到 {len(markdown_files)} 个Markdown文件")
+        else:
+            logger.info(f"传统模式：找到 {len(markdown_files)} 个Markdown文件")
+            
         return markdown_files
+    
+    def _extract_date_from_latest(self, latest_file: Path) -> datetime:
+        """从latest.md文件中提取日期"""
+        try:
+            content = latest_file.read_text(encoding='utf-8')
+            
+            # 模式1：从"更新时间:"中提取日期
+            date_match = re.search(r'更新时间:\s*(\d{4})年(\d{2})月(\d{2})日', content)
+            if date_match:
+                year, month, day = int(date_match.group(1)), int(date_match.group(2)), int(date_match.group(3))
+                return datetime(year, month, day)
+            
+            # 模式2：从标题中提取日期
+            title_match = re.search(r'#\s*(\d{4})年(\d{2})月(\d{2})日', content)
+            if title_match:
+                year, month, day = int(title_match.group(1)), int(title_match.group(2)), int(title_match.group(3))
+                return datetime(year, month, day)
+            
+            # 模式3：从文件名中尝试提取（如果使用日期格式命名的软链接）
+            filename_match = re.match(r'(\d{4})-(\d{2})-(\d{2})\.md$', latest_file.name)
+            if filename_match:
+                year, month, day = int(filename_match.group(1)), int(filename_match.group(2)), int(filename_match.group(3))
+                return datetime(year, month, day)
+                
+            logger.warning(f"无法从latest.md中提取日期: {latest_file}")
+            return None
+            
+        except Exception as e:
+            logger.error(f"从latest.md提取日期失败: {e}")
+            return None
     
     def _parse_markdown_file(self, file_path: Path) -> Dict:
         """解析Markdown文件，提取信息"""
@@ -174,23 +268,8 @@ class RSSGenerator:
         
         content = file_path.read_text(encoding='utf-8')
         
-        # 提取日期
-        date_match = None
-        if file_path.name == "latest.md":
-            # latest.md: 从更新时间提取日期
-            date_match = re.search(r'更新时间:\s*(\d{4})年(\d{2})月(\d{2})日', content)
-        else:
-            # 归档文件: 从文件名提取日期 (YYYY-MM-DD.md)
-            date_match = re.match(r'(\d{4})-(\d{2})-(\d{2})\.md$', file_path.name)
-        
-        file_date = None
-        if date_match:
-            if file_path.name == "latest.md":
-                year, month, day = int(date_match.group(1)), int(date_match.group(2)), int(date_match.group(3))
-                file_date = datetime(year, month, day)
-            else:
-                year, month, day = int(date_match.group(1)), int(date_match.group(2)), int(date_match.group(3))
-                file_date = datetime(year, month, day)
+        # 提取日期（使用增强的日期提取逻辑）
+        file_date = self._extract_date_from_file(file_path, content)
         
         # 提取新闻数量
         news_count = 0
@@ -238,6 +317,53 @@ class RSSGenerator:
             'news_count': news_count,
             'full_content': content  # 添加完整Markdown内容
         }
+    
+    def _extract_date_from_file(self, file_path: Path, content: str) -> datetime:
+        """从文件内容中提取日期（增强版）"""
+        try:
+            if file_path.name == "latest.md":
+                # latest.md: 使用多种模式提取精确时间
+                
+                # 模式1：从"更新时间:"中提取日期和时间
+                update_time_match = re.search(r'更新时间:\s*(\d{4})年(\d{2})月(\d{2})日\s*(\d{2}):(\d{2})', content)
+                if update_time_match:
+                    year, month, day = int(update_time_match.group(1)), int(update_time_match.group(2)), int(update_time_match.group(3))
+                    hour, minute = int(update_time_match.group(4)), int(update_time_match.group(5))
+                    return datetime(year, month, day, hour, minute)
+                
+                # 模式2：从"更新时间:"中提取日期（无时间）
+                update_date_match = re.search(r'更新时间:\s*(\d{4})年(\d{2})月(\d{2})日', content)
+                if update_date_match:
+                    year, month, day = int(update_date_match.group(1)), int(update_date_match.group(2)), int(update_date_match.group(3))
+                    return datetime(year, month, day)
+                
+                # 模式3：从标题中提取日期
+                title_match = re.search(r'#\s*(\d{4})年(\d{2})月(\d{2})日', content)
+                if title_match:
+                    year, month, day = int(title_match.group(1)), int(title_match.group(2)), int(title_match.group(3))
+                    return datetime(year, month, day)
+                
+                # 模式4：从生成时间中提取
+                generation_time_match = re.search(r'生成时间:\s*(\d{4})-(\d{2})-(\d{2})\s*(\d{2}):(\d{2}):(\d{2})', content)
+                if generation_time_match:
+                    year, month, day = int(generation_time_match.group(1)), int(generation_time_match.group(2)), int(generation_time_match.group(3))
+                    hour, minute, second = int(generation_time_match.group(4)), int(generation_time_match.group(5)), int(generation_time_match.group(6))
+                    return datetime(year, month, day, hour, minute, second)
+                
+                logger.warning(f"无法从latest.md中提取精确时间: {file_path}")
+                
+            else:
+                # 归档文件: 从文件名提取日期 (YYYY-MM-DD.md)
+                date_match = re.match(r'(\d{4})-(\d{2})-(\d{2})\.md$', file_path.name)
+                if date_match:
+                    year, month, day = int(date_match.group(1)), int(date_match.group(2)), int(date_match.group(3))
+                    return datetime(year, month, day)
+            
+            return None
+            
+        except Exception as e:
+            logger.error(f"从文件提取日期失败 {file_path}: {e}")
+            return None
     
     def _build_rss_xml(self, file_infos: List[Dict]) -> str:
         """构建RSS 2.0 XML"""

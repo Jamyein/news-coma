@@ -90,6 +90,7 @@ class OutputConfig:
     max_feed_items: int
     archive_days: int
     time_window_days: int
+    use_smart_switch: bool = True  # 是否启用智能切换（首次用archive，后续用latest）
 
 
 @dataclass

@@ -43,3 +43,6 @@ env/
 *.log
 src/__init__.py
 /.sisyphus
+test_smart_switch.py
+nul
+test_config.py

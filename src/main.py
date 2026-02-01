@@ -135,7 +135,8 @@ class RSSAggregator:
             feed_path="feed.xml",
             archive_dir="archive",
             docs_dir="docs",
-            max_items=self.config.output_config.max_feed_items
+            max_items=self.config.output_config.max_feed_items,
+            use_smart_switch=self.config.output_config.use_smart_switch
         )
         
         logger.info(f"✓ 已加载 {len(self.config.rss_sources)} 个RSS源")
