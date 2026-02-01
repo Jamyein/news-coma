@@ -245,6 +245,27 @@ ai:
   category_quota_politics: 0.30 # 社会政治配额 30%
 
 # ==========================================
+# Pass2 全文获取配置
+# ==========================================
+pass2:
+  fetch_fulltext_enabled: true      # 是否启用全文获取
+  fulltext_max_items: 30            # 每次最多获取全文的文章数
+  fulltext_timeout: 10              # 全文获取超时时间(秒)
+  max_concurrent_fetches: 5         # 并发获取数限制
+
+# ==========================================
+# 深度分析配置
+# ==========================================
+deep_analysis:
+  enabled: true                     # 是否启用深度分析
+  dimensions:                       # 分析维度
+    - "core_insight"               # 核心观点
+    - "key_arguments"              # 关键论据
+    - "impact_forecast"            # 影响预测
+    - "sentiment"                  # 情感倾向
+    - "credibility_score"          # 可信度评分
+
+# ==========================================
 # 语义去重配置(TF-IDF轻量级，GitHub Actions友好)
 # ==========================================
 
