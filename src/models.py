@@ -25,6 +25,10 @@ class NewsItem:
     translated_title: Optional[str] = None
     key_points: List[str] = field(default_factory=list)
     
+    # Pass2阶段添加的全文内容字段（新增）
+    full_content: Optional[str] = None  # 通过trafilatura获取的完整正文内容
+    has_full_content: bool = False  # 是否成功获取全文
+    
     # AI分类字段（新增）
     ai_category: str = ""  # 分类结果："财经" | "科技" | "社会政治"
     ai_category_confidence: float = 0.0  # 分类置信度 0-1
@@ -32,6 +36,9 @@ class NewsItem:
     # 预分类字段（新增，用于Pass 1差异化评分）
     pre_category: str = ""  # 预分类结果："财经" | "科技" | "社会政治" | ""
     pre_category_confidence: float = 0.0  # 预分类置信度
+    
+    # Pass2阶段深度分析结果（新增）
+    deep_analysis: Optional[Dict] = None  # 深度分析结构化结果
     
     def __post_init__(self):
         """初始化后处理"""
