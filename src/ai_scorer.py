@@ -8,6 +8,7 @@ import json
 import logging
 import asyncio
 import time
+from datetime import datetime
 from typing import List, Dict
 
 from openai import AsyncOpenAI
@@ -1260,3 +1261,601 @@ class AIScorer:
                 logger.info(f"   {category}: {len(items)}条 → {passed_count}条通过 (阈值≥{threshold})")
         
         logger.info(f"   总计: {total_passed}/{total_input}条通过 (上限{self.pass1_max_items}条)")
+
+    # ==================== TopN深度分析功能 (新增) ====================
+
+    async def deep_analysis_topn(self, items: List[NewsItem]) -> List[NewsItem]:
+        """
+        对TopN新闻进行深度分析
+        只对已有全文内容的新闻进行分析，生成多维度深度分析结果
+        
+        Args:
+            items: 经过Pass2评分并选择出的TopN新闻列表
+            
+        Returns:
+            添加了deep_analysis字段的新闻列表
+        """
+        if not items:
+            return []
+        
+        # 筛选有全文内容的新闻
+        valid_items = [item for item in items if item.has_full_content and item.full_content]
+        
+        if not valid_items:
+            logger.warning("⚠️ 没有符合条件的新闻(has_full_content=True)进行深度分析")
+            return items
+        
+        logger.info(f"🔍 开始深度分析: {len(valid_items)} 条有全文的新闻")
+        
+        # 使用与score_all相同的提供商和回退机制
+        if not self.fallback.enabled:
+            return await self._analyze_with_provider(valid_items, self.current_provider_name)
+        
+        # 构建回退链
+        fallback_chain = self._build_fallback_chain()
+        last_exception = None
+        
+        for provider_name in fallback_chain:
+            try:
+                logger.info(f"🔄 尝试使用提供商进行深度分析: {provider_name}")
+                self._init_provider(provider_name)
+                results = await self._analyze_with_provider(valid_items, provider_name)
+                logger.info(f"✅ 深度分析成功 (提供商: {provider_name})")
+                return results
+            except Exception as e:
+                logger.error(f"❌ 深度分析失败 ({provider_name}): {e}")
+                last_exception = e
+                continue
+        
+        # 所有提供商都失败
+        logger.error("❌ 所有提供商深度分析均失败，返回原始数据")
+        # 设置默认分析结果
+        for item in valid_items:
+            item.deep_analysis = self._get_default_deep_analysis()
+        return items
+    
+    async def _analyze_with_provider(
+        self, 
+        items: List[NewsItem], 
+        provider_name: str
+    ) -> List[NewsItem]:
+        """
+        使用指定提供商进行深度分析
+        
+        Args:
+            items: 需要分析的新闻列表
+            provider_name: 提供商名称
+            
+        Returns:
+            添加了deep_analysis字段的新闻列表
+        """
+        provider_config = self.providers_config[provider_name]
+        
+        if self.use_true_batch:
+            # 真批处理模式：一次API调用处理多条
+            batch_size = self.true_batch_size
+            logger.info(f"[{provider_name}] 深度分析使用真批处理: 每批{batch_size}条")
+        else:
+            # 传统模式：并发单条处理
+            batch_size = provider_config.batch_size
+        
+        # 分批处理
+        batches = [
+            items[i:i+batch_size] 
+            for i in range(0, len(items), batch_size)
+        ]
+        
+        all_results = []
+        
+        for batch_idx, batch in enumerate(batches):
+            logger.info(
+                f"[{provider_name}] 深度分析第 {batch_idx+1}/{len(batches)} 批, "
+                f"共 {len(batch)} 条"
+            )
+            
+            if self.use_true_batch:
+                # 真批处理：一次API调用处理整批
+                try:
+                    results = await self._analyze_batch_api(batch, provider_config)
+                    all_results.extend(results)
+                    self.api_call_count += 1
+                except Exception as e:
+                    logger.error(f"深度分析真批处理失败，降级为单条处理: {e}")
+                    # 降级：逐条处理
+                    results = await self._analyze_batch_single(batch, provider_config)
+                    all_results.extend(results)
+            else:
+                # 传统模式：并发单条处理
+                semaphore = asyncio.Semaphore(provider_config.max_concurrent)
+                tasks = []
+                for item in batch:
+                    task = self._analyze_single_with_semaphore(semaphore, item, provider_config)
+                    tasks.append(task)
+                
+                results = await asyncio.gather(*tasks, return_exceptions=True)
+                
+                for item, result in zip(batch, results):
+                    if isinstance(result, Exception):
+                        logger.error(
+                            f"[{provider_name}] 深度分析失败: {item.title[:50]}... "
+                            f"错误: {result}"
+                        )
+                        item.deep_analysis = self._get_default_deep_analysis()
+                        all_results.append(item)
+                        self.api_call_count += 1  # 失败也算一次调用尝试
+                    else:
+                        all_results.append(result)
+                        self.api_call_count += 1
+        
+        logger.info(f"[{provider_name}] 深度分析完成: {len(all_results)}条")
+        return all_results
+    
+    def _build_deep_analysis_prompt(self, items: List[NewsItem]) -> str:
+        """
+        构建批量深度分析Prompt
+        支持一次分析多条新闻，返回JSON数组
+        
+        Args:
+            items: 需要分析的新闻列表
+            
+        Returns:
+            构建好的Prompt字符串
+        """
+        # 构建新闻列表
+        news_sections = []
+        for i, item in enumerate(items, 1):
+            # 截取全文内容，限制长度避免token过多
+            content_preview = item.full_content[:5000] if item.full_content else ""
+            news_sections.append(f"""
+--- 新闻{i} ---
+标题: {item.translated_title or item.title}
+来源: {item.source}
+分类: {item.ai_category or item.category}
+原文链接: {item.link}
+发布时间: {item.published_at.strftime('%Y-%m-%d %H:%M')}
+AI评分: {item.ai_score}
+AI摘要: {item.ai_summary[:300] if item.ai_summary else 'N/A'}
+
+新闻全文:
+{content_preview}
+""")
+        
+        return f"""
+你是一位资深新闻分析师，拥有丰富的多维度新闻分析经验。请对以下{len(items)}条已评分新闻进行深度分析。
+
+【分析任务】
+你需要从5个维度对每条新闻进行深度分析：
+
+1. 核心观点 (core_insight): 用100字以内概括新闻的核心观点和主旨
+2. 关键论据 (key_arguments): 列出3-5个支撑核心观点的关键论据或事实
+3. 影响预测 (impact_forecast): 预测该新闻可能产生的影响（200字以内），包括：
+   - 行业层面：对相关行业的影响
+   - 市场层面：对市场、投资的影响
+   - 社会层面：对社会、政策的影响
+4. 情感倾向 (sentiment): 判断新闻的整体情感倾向（三选一）：
+   - "positive": 积极乐观
+   - "neutral": 中立客观
+   - "negative": 消极悲观
+5. 可信度评分 (credibility_score): 评估新闻内容的可信度（0-10分）：
+   - 0-3分: 可信度很低，信息源不明，内容存在明显问题
+   - 4-6分: 可信度一般，有基本事实但可能有偏见或夸大
+   - 7-8分: 可信度较高，有权威来源支撑，内容相对客观
+   - 9-10分: 可信度很高，来自权威信源，内容严谨可靠
+
+新闻列表:
+{''.join(news_sections)}
+
+【返回JSON数组格式】
+[
+    {{
+        "news_index": 1,
+        "core_insight": "核心观点总结，100字以内...",
+        "key_arguments": ["论据1", "论据2", "论据3", "论据4"],
+        "impact_forecast": "影响预测，200字以内...",
+        "sentiment": "positive",
+        "credibility_score": 7.5
+    }},
+    {{
+        "news_index": 2,
+        "core_insight": "...",
+        "key_arguments": ["...", "...", "..."],
+        "impact_forecast": "...",
+        "sentiment": "neutral",
+        "credibility_score": 8.0
+    }},
+    ...
+]
+
+【重要说明】
+1. news_index必须对应新闻列表中的序号(从1开始)
+2. core_insight要精炼准确，抓住新闻本质
+3. key_arguments应该是具体事实或数据，而不是主观评价
+4. impact_forecast要基于事实进行分析，避免无根据的猜测
+5. sentiment必须严格选择"positive"、"neutral"或"negative"之一
+6. credibility_score要考虑信息来源权威性、内容一致性、数据支持等因素
+7. 确保返回的是合法JSON数组，不要有其他文字说明
+8. 每条新闻的分析应该是独立的，不受其他新闻影响
+"""
+    
+    async def _analyze_batch_api(
+        self, 
+        items: List[NewsItem], 
+        provider_config: ProviderConfig
+    ) -> List[NewsItem]:
+        """
+        深度分析真批处理API调用
+        一次API调用分析多条新闻
+        
+        Args:
+            items: 需要分析的新闻列表
+            provider_config: 提供商配置
+            
+        Returns:
+            添加了deep_analysis字段的新闻列表
+        """
+        if not items:
+            return []
+        
+        # 应用速率限制
+        if self.rate_limiter:
+            await self.rate_limiter.acquire()
+        
+        prompt = self._build_deep_analysis_prompt(items)
+        
+        try:
+            # 估算token需求：每条新闻约800-1000 tokens加上Prompt
+            estimated_tokens = 1500 + len(items) * 900
+            max_tokens = min(estimated_tokens, 10000)  # 上限10000
+            
+            response = await self.client.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {
+                        "role": "system", 
+                        "content": "你是一位资深新闻分析师，擅长多维度深度分析。你必须严格返回JSON数组格式，不要添加任何其他文字。"
+                    },
+                    {"role": "user", "content": prompt}
+                ],
+                max_tokens=max_tokens,
+                temperature=provider_config.temperature,
+                response_format={"type": "json_object"}
+            )
+            
+            content = response.choices[0].message.content
+            return self._parse_deep_analysis_response(items, content)
+            
+        except Exception as e:
+            logger.error(f"深度分析真批处理API调用失败: {e}")
+            raise  # 抛出异常，让上层处理降级
+    
+    def _parse_deep_analysis_response(
+        self, 
+        items: List[NewsItem], 
+        content: str
+    ) -> List[NewsItem]:
+        """
+        解析深度分析批量响应
+        将JSON数组映射回新闻条目的deep_analysis字段
+        
+        Args:
+            items: 原始新闻列表
+            content: AI返回的JSON响应
+            
+        Returns:
+            更新后的新闻列表
+        """
+        try:
+            # 清理可能的markdown标记
+            content = content.strip()
+            if content.startswith('```json'):
+                content = content[7:]
+            if content.startswith('```'):
+                content = content[3:]
+            if content.endswith('```'):
+                content = content[:-3]
+            content = content.strip()
+            
+            data = json.loads(content)
+            
+            # 处理可能的对象包装(某些模型会包装数组)
+            if isinstance(data, dict):
+                # 寻找数组字段
+                for key, value in data.items():
+                    if isinstance(value, list):
+                        data = value
+                        break
+            
+            if not isinstance(data, list):
+                raise ValueError(f"期望JSON数组，得到: {type(data)}")
+            
+            # 映射结果到新闻条目
+            results = []
+            processed_indices = set()
+            
+            for item_data in data:
+                try:
+                    index = item_data.get('news_index', 0) - 1
+                    if 0 <= index < len(items) and index not in processed_indices:
+                        item = items[index]
+                        
+                        # 构建deep_analysis字典
+                        deep_analysis = {
+                            "core_insight": item_data.get('core_insight', ''),
+                            "key_arguments": item_data.get('key_arguments', []),
+                            "impact_forecast": item_data.get('impact_forecast', ''),
+                            "sentiment": item_data.get('sentiment', 'neutral'),
+                            "credibility_score": float(item_data.get('credibility_score', 5.0)),
+                            "analysis_timestamp": datetime.utcnow().isoformat() + 'Z'
+                        }
+                        
+                        # 验证和标准化数据
+                        # 确保key_arguments是列表
+                        if not isinstance(deep_analysis["key_arguments"], list):
+                            deep_analysis["key_arguments"] = [str(deep_analysis["key_arguments"])]
+                        
+                        # 确保sentiment是有效值
+                        if deep_analysis["sentiment"] not in ["positive", "neutral", "negative"]:
+                            deep_analysis["sentiment"] = "neutral"
+                        
+                        # 确保credibility_score在0-10范围内
+                        deep_analysis["credibility_score"] = max(0.0, min(10.0, deep_analysis["credibility_score"]))
+                        
+                        item.deep_analysis = deep_analysis
+                        results.append(item)
+                        processed_indices.add(index)
+                        
+                except Exception as e:
+                    logger.error(f"解析单条深度分析结果失败: {e}")
+                    continue
+            
+            # 处理未返回结果的条目
+            for i, item in enumerate(items):
+                if i not in processed_indices:
+                    logger.warning(f"深度分析未返回结果[{i}]: {item.title[:50]}...")
+                    item.deep_analysis = self._get_default_deep_analysis()
+                    results.append(item)
+            
+            logger.info(f"深度分析解析成功: {len(results)}/{len(items)} 条")
+            return results
+            
+        except json.JSONDecodeError as e:
+            logger.error(f"深度分析JSON解析失败: {content[:500]}... 错误: {e}")
+            # 返回默认值
+            for item in items:
+                item.deep_analysis = self._get_default_deep_analysis()
+            return items
+        except Exception as e:
+            logger.error(f"深度分析响应解析失败: {e}")
+            for item in items:
+                item.deep_analysis = self._get_default_deep_analysis()
+            return items
+    
+    async def _analyze_batch_single(
+        self, 
+        items: List[NewsItem], 
+        provider_config: ProviderConfig
+    ) -> List[NewsItem]:
+        """
+        降级为单条处理(当深度分析真批处理失败时)
+        
+        Args:
+            items: 需要分析的新闻列表
+            provider_config: 提供商配置
+            
+        Returns:
+            添加了deep_analysis字段的新闻列表
+        """
+        results = []
+        for item in items:
+            try:
+                analyzed = await self._analyze_single(item, provider_config)
+                results.append(analyzed)
+                self.api_call_count += 1
+            except Exception as e:
+                logger.error(f"深度分析单条处理也失败: {e}")
+                item.deep_analysis = self._get_default_deep_analysis()
+                results.append(item)
+                self.api_call_count += 1
+        return results
+    
+    async def _analyze_single_with_semaphore(
+        self, 
+        semaphore: asyncio.Semaphore, 
+        item: NewsItem,
+        provider_config: ProviderConfig
+    ) -> NewsItem:
+        """
+        使用信号量限制并发(传统模式)
+        
+        Args:
+            semaphore: 并发信号量
+            item: 需要分析的新闻
+            provider_config: 提供商配置
+            
+        Returns:
+            添加了deep_analysis字段的新闻
+        """
+        async with semaphore:
+            return await self._analyze_single(item, provider_config)
+    
+    @retry(
+        stop=stop_after_attempt(2),
+        wait=wait_exponential(multiplier=1, min=2, max=5),
+        reraise=True
+    )
+    async def _analyze_single(self, item: NewsItem, provider_config: ProviderConfig) -> NewsItem:
+        """
+        单条新闻深度分析(传统模式，用于降级)
+        
+        Args:
+            item: 需要分析的新闻
+            provider_config: 提供商配置
+            
+        Returns:
+            添加了deep_analysis字段的新闻
+        """
+        # 应用速率限制
+        if self.rate_limiter:
+            await self.rate_limiter.acquire()
+        
+        prompt = self._build_single_deep_analysis_prompt(item)
+        
+        try:
+            response = await self.client.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {
+                        "role": "system", 
+                        "content": "你是一位资深新闻分析师，擅长多维度深度分析。你必须严格返回JSON格式，不要添加任何其他文字。"
+                    },
+                    {"role": "user", "content": prompt}
+                ],
+                max_tokens=1500,
+                temperature=provider_config.temperature,
+                response_format={"type": "json_object"}
+            )
+            
+            content = response.choices[0].message.content
+            return self._parse_single_deep_analysis_response(item, content)
+            
+        except Exception as e:
+            logger.error(f"深度分析API调用失败 ({self.current_provider_name}): {e}")
+            raise
+    
+    def _build_single_deep_analysis_prompt(self, item: NewsItem) -> str:
+        """
+        构建单条深度分析Prompt
+        
+        Args:
+            item: 需要分析的新闻
+            
+        Returns:
+            构建好的Prompt字符串
+        """
+        content_preview = item.full_content[:5000] if item.full_content else ""
+        
+        return f"""
+你是一位资深新闻分析师，拥有丰富的多维度新闻分析经验。请对以下已评分新闻进行深度分析。
+
+【分析任务】
+你需要从5个维度对这条新闻进行深度分析：
+
+1. 核心观点 (core_insight): 用100字以内概括新闻的核心观点和主旨
+2. 关键论据 (key_arguments): 列出3-5个支撑核心观点的关键论据或事实
+3. 影响预测 (impact_forecast): 预测该新闻可能产生的影响（200字以内），包括：
+   - 行业层面：对相关行业的影响
+   - 市场层面：对市场、投资的影响
+   - 社会层面：对社会、政策的影响
+4. 情感倾向 (sentiment): 判断新闻的整体情感倾向（三选一）：
+   - "positive": 积极乐观
+   - "neutral": 中立客观
+   - "negative": 消极悲观
+5. 可信度评分 (credibility_score): 评估新闻内容的可信度（0-10分）：
+   - 0-3分: 可信度很低，信息源不明，内容存在明显问题
+   - 4-6分: 可信度一般，有基本事实但可能有偏见或夸大
+   - 7-8分: 可信度较高，有权威来源支撑，内容相对客观
+   - 9-10分: 可信度很高，来自权威信源，内容严谨可靠
+
+新闻信息:
+标题: {item.translated_title or item.title}
+来源: {item.source}
+分类: {item.ai_category or item.category}
+原文链接: {item.link}
+发布时间: {item.published_at.strftime('%Y-%m-%d %H:%M')}
+AI评分: {item.ai_score}
+AI摘要: {item.ai_summary[:300] if item.ai_summary else 'N/A'}
+
+新闻全文:
+{content_preview}
+
+【返回JSON格式】
+{{
+    "core_insight": "核心观点总结，100字以内...",
+    "key_arguments": ["论据1", "论据2", "论据3", "论据4"],
+    "impact_forecast": "影响预测，200字以内...",
+    "sentiment": "positive",
+    "credibility_score": 7.5
+}}
+
+【重要说明】
+1. core_insight要精炼准确，抓住新闻本质
+2. key_arguments应该是具体事实或数据，而不是主观评价
+3. impact_forecast要基于事实进行分析，避免无根据的猜测
+4. sentiment必须严格选择"positive"、"neutral"或"negative"之一
+5. credibility_score要考虑信息来源权威性、内容一致性、数据支持等因素
+6. 确保返回的是合法JSON，不要有其他文字说明
+"""
+    
+    def _parse_single_deep_analysis_response(self, item: NewsItem, content: str) -> NewsItem:
+        """
+        解析单条深度分析AI响应
+        
+        Args:
+            item: 原始新闻
+            content: AI返回的JSON响应
+            
+        Returns:
+            更新后的新闻
+        """
+        try:
+            # 清理可能的markdown标记
+            content = content.strip()
+            if content.startswith('```json'):
+                content = content[7:]
+            if content.startswith('```'):
+                content = content[3:]
+            if content.endswith('```'):
+                content = content[:-3]
+            content = content.strip()
+            
+            data = json.loads(content)
+            
+            # 构建deep_analysis字典
+            deep_analysis = {
+                "core_insight": data.get('core_insight', ''),
+                "key_arguments": data.get('key_arguments', []),
+                "impact_forecast": data.get('impact_forecast', ''),
+                "sentiment": data.get('sentiment', 'neutral'),
+                "credibility_score": float(data.get('credibility_score', 5.0)),
+                "analysis_timestamp": datetime.utcnow().isoformat() + 'Z'
+            }
+            
+            # 验证和标准化数据
+            # 确保key_arguments是列表
+            if not isinstance(deep_analysis["key_arguments"], list):
+                deep_analysis["key_arguments"] = [str(deep_analysis["key_arguments"])]
+            
+            # 确保sentiment是有效值
+            if deep_analysis["sentiment"] not in ["positive", "neutral", "negative"]:
+                deep_analysis["sentiment"] = "neutral"
+            
+            # 确保credibility_score在0-10范围内
+            deep_analysis["credibility_score"] = max(0.0, min(10.0, deep_analysis["credibility_score"]))
+            
+            item.deep_analysis = deep_analysis
+            return item
+            
+        except json.JSONDecodeError as e:
+            logger.error(f"深度分析JSON解析失败: {content[:200]}... 错误: {e}")
+            item.deep_analysis = self._get_default_deep_analysis()
+            return item
+        except Exception as e:
+            logger.error(f"深度分析响应解析失败: {e}")
+            item.deep_analysis = self._get_default_deep_analysis()
+            return item
+    
+    def _get_default_deep_analysis(self) -> Dict:
+        """
+        获取默认深度分析结果
+        
+        Returns:
+            默认的深度分析字典
+        """
+        return {
+            "core_insight": "深度分析失败，无法获取核心观点",
+            "key_arguments": [],
+            "impact_forecast": "无法预测该新闻可能产生的影响",
+            "sentiment": "neutral",
+            "credibility_score": 5.0,
+            "analysis_timestamp": datetime.utcnow().isoformat() + 'Z'
+        }
