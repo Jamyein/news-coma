@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-02-01T07:54:27.596870",
+  "last_run": "2026-02-01T10:54:59.233595",
   "processed_urls": [
     "https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding",
     "https://viewfromthewing.com/court-filings-ice-uses-mobile-fortify-to-identify-protesters-global-entry-and-precheck-get-revoked/",
@@ -554,12 +554,40 @@
     "https://36kr.com/newsflashes/3664158509720193?f=rss",
     "https://36kr.com/newsflashes/3664094138377094?f=rss",
     "http://finance.eastmoney.com/news/1345,202602013637882425.html",
-    "https://www.wsj.com/business/deals/kkr-led-group-set-to-buy-singapore-data-center-firm-valued-at-over-10-billion-a022c5e3?mod=pls_whats_news_us_business_f"
+    "https://www.wsj.com/business/deals/kkr-led-group-set-to-buy-singapore-data-center-firm-valued-at-over-10-billion-a022c5e3?mod=pls_whats_news_us_business_f",
+    "https://netbird.io/",
+    "https://mariozechner.at/posts/2025-11-30-pi-coding-agent/",
+    "https://www.businessinsider.com/tech-ai-boycott-february-protest-ice-scott-galloway-2026-2",
+    "https://www.bbc.com/news/articles/ckgkv814p37o?at_medium=RSS&at_campaign=rss",
+    "https://www.bbc.com/news/articles/c3dm790vxlko?at_medium=RSS&at_campaign=rss",
+    "https://www.ft.com/content/c948b978-c22b-44b7-ba3d-4798e641e673",
+    "https://www.ft.com/content/03d2b3e7-d52c-484d-a9a0-f18356818823",
+    "https://wallstreetcn.com/articles/3764694",
+    "https://wallstreetcn.com/articles/3764688",
+    "https://wallstreetcn.com/articles/3764685",
+    "https://36kr.com/newsflashes/3664583824499585?f=rss",
+    "https://36kr.com/newsflashes/3664583519609731?f=rss",
+    "https://36kr.com/newsflashes/3664581529330568?f=rss",
+    "https://36kr.com/newsflashes/3664475562500997?f=rss",
+    "https://36kr.com/newsflashes/3664561094517378?f=rss",
+    "https://36kr.com/newsflashes/3664558324065152?f=rss",
+    "https://36kr.com/newsflashes/3664473896428421?f=rss",
+    "https://36kr.com/newsflashes/3664451345326728?f=rss",
+    "https://36kr.com/newsflashes/3664502137955205?f=rss",
+    "https://36kr.com/newsflashes/3664446434255495?f=rss",
+    "https://36kr.com/newsflashes/3664456913462150?f=rss",
+    "https://36kr.com/newsflashes/3664462392157063?f=rss",
+    "https://36kr.com/newsflashes/3664403767059073?f=rss",
+    "http://finance.eastmoney.com/news/1345,202602013637906123.html",
+    "https://www.wsj.com/business/retail/luxury-brands-need-a-comeback-in-china-they-shouldnt-count-on-it-2f111ec8?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/finance/commodities-futures/the-silver-market-is-messed-up-these-buyers-are-feeling-the-pain-8ab7f954?mod=rss_markets_main",
+    "https://www.wsj.com/finance/investing/an-investors-guide-to-the-boom-and-bust-in-gold-and-silver-fec49df3?mod=rss_markets_main",
+    "https://www.wsj.com/business/retail/luxury-brands-need-a-comeback-in-china-they-shouldnt-count-on-it-2f111ec8?mod=rss_markets_main"
   ],
   "stats": {
-    "total_runs": 12,
-    "total_news_processed": 619,
-    "avg_news_per_run": 51.6
+    "total_runs": 13,
+    "total_news_processed": 648,
+    "avg_news_per_run": 49.8
   },
   "source_stats": {
     "The Verge": {
@@ -567,8 +595,8 @@
       "selected": 6
     },
     "Hacker News": {
-      "fetched": 98,
-      "selected": 20
+      "fetched": 101,
+      "selected": 23
     },
     "TechCrunch": {
       "fetched": 45,
@@ -583,35 +611,35 @@
       "selected": 2
     },
     "Financial Times": {
-      "fetched": 22,
-      "selected": 3
+      "fetched": 24,
+      "selected": 5
     },
     "WSJ 经济": {
-      "fetched": 76,
-      "selected": 0
+      "fetched": 77,
+      "selected": 1
     },
     "36氪": {
-      "fetched": 53,
-      "selected": 7
+      "fetched": 66,
+      "selected": 11
     },
     "WSJ 全球经济": {
       "fetched": 24,
       "selected": 1
     },
     "华尔街见闻": {
-      "fetched": 62,
+      "fetched": 65,
       "selected": 15
     },
     "BBC Business": {
-      "fetched": 38,
-      "selected": 0
+      "fetched": 41,
+      "selected": 3
     },
     "WSJ 市场": {
-      "fetched": 54,
-      "selected": 0
+      "fetched": 57,
+      "selected": 3
     },
     "东方财富": {
-      "fetched": 63,
+      "fetched": 64,
       "selected": 1
     },
     "CNBC": {
@@ -2220,10 +2248,327 @@
       ],
       "cached_at": "2026-02-01T07:58:48.841390",
       "source": "36氪"
+    },
+    "65b81e9c951c081d": {
+      "ai_score": 7.5,
+      "translated_title": "极氪1月交付量同比增长99.7%，极氪8X今年上半年上市",
+      "ai_summary": "极氪公布2026年1月交付量为23852辆，同比增长99.7%。新车型极氪8X将于今年上半年上市。",
+      "key_points": [
+        "极氪",
+        "交付量",
+        "极氪8X"
+      ],
+      "cached_at": "2026-02-01T10:58:38.340955",
+      "source": "BBC Business"
+    },
+    "3d0461b8e16c9f48": {
+      "ai_score": 7.5,
+      "translated_title": "奕派科技1月销量21269辆，同比增长145%",
+      "ai_summary": "奕派科技公布2026年1月销量为21269辆，同比增长145%。公司计划推出多款新车型。",
+      "key_points": [
+        "奕派科技",
+        "销量",
+        "新车型"
+      ],
+      "cached_at": "2026-02-01T10:58:38.340962",
+      "source": "36氪"
+    },
+    "d235a48c1045c76d": {
+      "ai_score": 7.5,
+      "translated_title": "赛力斯：1月新能源汽车销量43034辆，同比增长140.33%",
+      "ai_summary": "赛力斯1月新能源汽车产量44098辆，同比增长121.72%；销量43034辆，同比增长140.33%。",
+      "key_points": [
+        "赛力斯",
+        "新能源汽车",
+        "销量"
+      ],
+      "cached_at": "2026-02-01T10:58:38.340971",
+      "source": "36氪"
+    },
+    "43a24e21afc0220b": {
+      "ai_score": 7.5,
+      "translated_title": "中信证券：部分资产长期逻辑难因沃什而发生改变",
+      "ai_summary": "中信证券研报认为，沃什重返美联储或代表货币主义的回归，但部分资产长期逻辑难因沃什而发生改变。",
+      "key_points": [
+        "中信证券",
+        "沃什",
+        "资产逻辑"
+      ],
+      "cached_at": "2026-02-01T10:58:38.340979",
+      "source": "36氪"
+    },
+    "fe4d6ae3f5de829b": {
+      "ai_score": 8.0,
+      "translated_title": "Netbird：德国Tailscale替代方案（基于P2P WireGuard的overlay网络）",
+      "ai_summary": "Netbird是一款基于P2P WireGuard的overlay网络，作为德国Tailscale的替代方案。",
+      "key_points": [
+        "Netbird",
+        "Tailscale",
+        "overlay网络"
+      ],
+      "cached_at": "2026-02-01T10:58:38.340986",
+      "source": "36氪"
+    },
+    "3cd9deda830b301b": {
+      "ai_score": 7.5,
+      "translated_title": "稀土和数据中心：印度推动本地产业以应对全球紧张局势",
+      "ai_summary": "印度预算关注基础设施和防务支出，并为数据中心投资提供税收减免。",
+      "key_points": [
+        "稀土",
+        "数据中心",
+        "印度"
+      ],
+      "cached_at": "2026-02-01T10:58:38.340992",
+      "source": "Hacker News"
+    },
+    "e6596b5cd44f3675": {
+      "ai_score": 7.5,
+      "translated_title": "习近平呼吁人民币达到全球储备货币地位",
+      "ai_summary": "习近平表示，人民币应成为在贸易和外汇中发挥更大作用的“强大货币”。",
+      "key_points": [
+        "人民币",
+        "全球储备货币",
+        "习近平"
+      ],
+      "cached_at": "2026-02-01T10:58:38.340999",
+      "source": "BBC Business"
+    },
+    "ce6ea9285a328960": {
+      "ai_score": 7.5,
+      "translated_title": "黄仁勋澄清：对OpenAI的千亿投资'从未承诺'，英伟达将逐步评估",
+      "ai_summary": "黄仁勋表示，英伟达对OpenAI的千亿投资计划并非承诺，将逐步评估投资决策。",
+      "key_points": [
+        "黄仁勋",
+        "OpenAI",
+        "英伟达"
+      ],
+      "cached_at": "2026-02-01T10:58:38.341008",
+      "source": "Financial Times"
+    },
+    "02072adeb0fab69b": {
+      "ai_score": 5.0,
+      "translated_title": "黄仁勋澄清：对OpenAI的千亿投资\"从未承诺\"，英伟达将逐步评估",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-01T10:58:38.341017",
+      "source": "华尔街见闻"
+    },
+    "47242e19b08bac3f": {
+      "ai_score": 7.5,
+      "translated_title": "华尔街最看好闪迪，目标价上调至1000美元",
+      "ai_summary": "闪迪财报强劲，分析师上调目标价至1000美元，预计2027财年每股收益90.96美元，对应市盈率11倍。",
+      "key_points": [
+        "闪迪财报强劲",
+        "目标价上调至1000美元",
+        "预计2027财年每股收益90.96美元"
+      ],
+      "cached_at": "2026-02-01T10:58:38.341024",
+      "source": "华尔街见闻"
+    },
+    "4c7492da9f1eed27": {
+      "ai_score": 6.8,
+      "translated_title": "广汽集团1月汽车销量11.66万辆，同比增长18.47%",
+      "ai_summary": "广汽集团1月汽车销量11.66万辆，同比增长18.47%，新能源汽车销量2.6万辆，同比增长162.9%。",
+      "key_points": [
+        "广汽集团1月销量",
+        "同比增长18.47%",
+        "新能源汽车销量增长显著"
+      ],
+      "cached_at": "2026-02-01T10:58:38.341027",
+      "source": "36氪"
+    },
+    "6df894d94a292d70": {
+      "ai_score": 6.0,
+      "translated_title": "长城汽车1月汽车销量9.03万辆，同比增长11.59%",
+      "ai_summary": "长城汽车1月汽车销量9.03万辆，同比增长11.59%。",
+      "key_points": [
+        "长城汽车1月销量",
+        "同比增长11.59%"
+      ],
+      "cached_at": "2026-02-01T10:58:38.341031",
+      "source": "36氪"
+    },
+    "0284d0e796284f0f": {
+      "ai_score": 6.8,
+      "translated_title": "蔚来1月交付27182台，同比增长96.1%",
+      "ai_summary": "蔚来1月交付新车27182台，同比增长96.1%，累计交付量达到1024774台。",
+      "key_points": [
+        "蔚来1月交付量",
+        "同比增长96.1%",
+        "累计交付量超过102万辆"
+      ],
+      "cached_at": "2026-02-01T10:58:38.341035",
+      "source": "36氪"
+    },
+    "537f3f788f48650f": {
+      "ai_score": 6.8,
+      "translated_title": "全球商品市场巨震后 A股如何应对？",
+      "ai_summary": "分析A股市场在海外动荡后的应对策略，强调流动性充裕和国内基本面支持。",
+      "key_points": [
+        "全球商品市场巨震",
+        "A股市场应对策略",
+        "流动性充裕和国内基本面支持"
+      ],
+      "cached_at": "2026-02-01T10:58:38.341040",
+      "source": "东方财富"
+    },
+    "5eacdf5c278cb8e1": {
+      "ai_score": 7.1,
+      "translated_title": "构建一个有偏见的和最小化编码的智能体",
+      "ai_summary": "探讨构建一个有偏见的和最小化编码的智能体的经验。",
+      "key_points": [
+        "构建智能体",
+        "有偏见和最小化编码",
+        "技术经验"
+      ],
+      "cached_at": "2026-02-01T10:58:38.341043",
+      "source": "Hacker News"
+    },
+    "bf628809a71f70ed": {
+      "ai_score": 6.8,
+      "translated_title": "特朗普称伊朗在核武器问题上“认真”谈判",
+      "ai_summary": "美国总统特朗普表示，伊朗在核武器问题上正在认真谈判，同时区域盟友试图缓和紧张局势。",
+      "key_points": [
+        "特朗普评论伊朗核谈判",
+        "区域盟友试图缓和紧张局势"
+      ],
+      "cached_at": "2026-02-01T10:58:38.341047",
+      "source": "Financial Times"
+    },
+    "c979c002bb078428": {
+      "ai_score": 7.1,
+      "translated_title": "尽管Moltbook“吹太过”，但15万个全自动AI Agent仍然是“前所未见”",
+      "ai_summary": "前特斯拉AI总监Andrej Karpathy对Moltbook发表评论，称其15万个全自动AI Agent规模在技术层面上是“前所未见”的。",
+      "key_points": [
+        "Moltbook AI Agent",
+        "Andrej Karpathy评论",
+        "技术规模"
+      ],
+      "cached_at": "2026-02-01T10:58:38.341051",
+      "source": "华尔街见闻"
+    },
+    "543e7d7ce174f87e": {
+      "ai_score": 6.9,
+      "translated_title": "腾讯“元宝派”公测上线",
+      "ai_summary": "腾讯旗下AI助手元宝的“元宝派”公测上线，探索AI社交赛道。",
+      "key_points": [
+        "腾讯元宝派公测",
+        "AI社交赛道",
+        "元宝APP功能"
+      ],
+      "cached_at": "2026-02-01T10:58:38.341055",
+      "source": "36氪"
+    },
+    "dbbdd4b0b9ed101a": {
+      "ai_score": 6.8,
+      "translated_title": "2026年电影票房破20亿",
+      "ai_summary": "截至2月1日，2026年年度票房已超过20亿元。",
+      "key_points": [
+        "2026年电影票房",
+        "超过20亿元"
+      ],
+      "cached_at": "2026-02-01T10:58:38.341059",
+      "source": "36氪"
+    },
+    "dd139fbbd2c70743": {
+      "ai_score": 7.5,
+      "translated_title": "奢侈品品牌在中国需要复苏，但不应寄希望于它",
+      "ai_summary": "尽管股市表现优于标普500指数，但中国消费者并没有像以前那样蜂拥而至购买奢侈品。",
+      "key_points": [
+        "奢侈品市场",
+        "中国消费者",
+        "股市表现"
+      ],
+      "cached_at": "2026-02-01T10:58:38.341062",
+      "source": "WSJ 经济"
+    },
+    "e0639c5461c11daa": {
+      "ai_score": 7.5,
+      "translated_title": "投资者指南：黄金和白银的繁荣与崩溃",
+      "ai_summary": "周五贵金属价格的暴跌表明，在现实之外远超预期的涨势中，过早介入的风险。",
+      "key_points": [
+        "黄金和白银市场",
+        "投资者指南",
+        "价格暴跌"
+      ],
+      "cached_at": "2026-02-01T10:58:38.341066",
+      "source": "WSJ 市场"
+    },
+    "73fc99a0f5e03835": {
+      "ai_score": 7.5,
+      "translated_title": "奢侈品品牌在中国需要复苏，但不应寄希望于它",
+      "ai_summary": "尽管股市表现优于标普500指数，但中国消费者并没有像以前那样蜂拥而至购买奢侈品。",
+      "key_points": [
+        "奢侈品市场",
+        "中国消费者",
+        "股市表现"
+      ],
+      "cached_at": "2026-02-01T10:58:38.341069",
+      "source": "WSJ 市场"
+    },
+    "43121c151ebe8267": {
+      "ai_score": 7.5,
+      "translated_title": "‘取消订阅’和‘退订’：新的科技巨头抵制活动以抗议ICE",
+      "ai_summary": "用户呼吁取消订阅和退订，以抗议对ICE的支持。",
+      "key_points": [
+        "科技抵制",
+        "ICE",
+        "用户行动"
+      ],
+      "cached_at": "2026-02-01T10:58:38.341071",
+      "source": "Hacker News"
+    },
+    "83714f9dac2eb94f": {
+      "ai_score": 7.5,
+      "translated_title": "湖南黄金：公司黄金产品未来市场价格能否继续上涨或维持高位存在不确定性",
+      "ai_summary": "湖南黄金公告，公司股票交易异常波动，未来黄金产品市场价格存在不确定性。",
+      "key_points": [
+        "湖南黄金",
+        "黄金市场价格",
+        "股票交易异常波动"
+      ],
+      "cached_at": "2026-02-01T10:58:38.341078",
+      "source": "36氪"
+    },
+    "9bd4ad0bab4443d0": {
+      "ai_score": 7.0,
+      "translated_title": "小鹏汽车：1月共交付新车20011台",
+      "ai_summary": "小鹏汽车1月份交付新车20011台，显示公司销售势头良好。",
+      "key_points": [
+        "小鹏汽车",
+        "新车交付",
+        "销售势头"
+      ],
+      "cached_at": "2026-02-01T10:58:38.341084",
+      "source": "36氪"
+    },
+    "2b3070e72e614ad4": {
+      "ai_score": 7.0,
+      "translated_title": "嘉美包装：股票交易停牌核查结束，股票明起复牌",
+      "ai_summary": "嘉美包装股票交易停牌核查结束，股票将于2月2日复牌。",
+      "key_points": [
+        "嘉美包装",
+        "股票交易",
+        "停牌核查"
+      ],
+      "cached_at": "2026-02-01T10:58:38.341090",
+      "source": "36氪"
+    },
+    "9c21724262b2c31b": {
+      "ai_score": 7.5,
+      "translated_title": "银市场混乱。这些买家正在感到痛苦",
+      "ai_summary": "贵金属市场的繁荣被周五的暴跌打断，炼油商们感到疯狂，而需要这种材料的公司则感到痛苦。",
+      "key_points": [
+        "银市场",
+        "贵金属价格",
+        "市场波动"
+      ],
+      "cached_at": "2026-02-01T10:58:38.341097",
+      "source": "WSJ 市场"
     }
   },
   "cache_hits": 6,
-  "cache_lookups": 554,
+  "cache_lookups": 583,
   "run_metrics": [
     {
       "run_time": "2026-01-31T06:47:45.364104",
@@ -2345,24 +2690,35 @@
       "semantic_duplicates": 0,
       "duration_seconds": 261.249007,
       "avg_score": 7.756249999999999
+    },
+    {
+      "run_time": "2026-02-01T10:54:59.233595",
+      "news_count": 29,
+      "api_calls": 7,
+      "cache_hits": 0,
+      "cache_misses": 0,
+      "duplicates_removed": 0,
+      "semantic_duplicates": 0,
+      "duration_seconds": 219.112628,
+      "avg_score": 7.4624999999999995
     }
   ],
   "source_last_fetch": {
-    "TechCrunch": "2026-02-01T07:54:27.720486",
-    "GitHub Blog": "2026-02-01T07:54:27.891521",
-    "Hacker News": "2026-02-01T07:54:28.055613",
-    "The Verge": "2026-02-01T07:54:28.139162",
-    "The Economist": "2026-02-01T07:54:28.347544",
-    "CNBC": "2026-02-01T07:54:28.508099",
-    "BBC Business": "2026-02-01T07:54:28.585372",
-    "MarketWatch": "2026-02-01T07:54:28.853862",
-    "Financial Times": "2026-02-01T07:54:29.195436",
-    "华尔街见闻": "2026-02-01T07:54:32.321170",
-    "36氪": "2026-02-01T07:54:34.062944",
-    "香港經濟日報": "2026-02-01T07:54:34.217502",
-    "东方财富": "2026-02-01T07:54:36.526444",
-    "WSJ 经济": "2026-02-01T07:54:36.606554",
-    "WSJ 市场": "2026-02-01T07:54:36.691148",
-    "WSJ 全球经济": "2026-02-01T07:54:36.765820"
+    "TechCrunch": "2026-02-01T10:54:59.412898",
+    "GitHub Blog": "2026-02-01T10:54:59.523828",
+    "Hacker News": "2026-02-01T10:54:59.903291",
+    "The Verge": "2026-02-01T10:54:59.997706",
+    "The Economist": "2026-02-01T10:55:00.507106",
+    "CNBC": "2026-02-01T10:55:00.681856",
+    "BBC Business": "2026-02-01T10:55:00.852678",
+    "MarketWatch": "2026-02-01T10:55:01.256406",
+    "Financial Times": "2026-02-01T10:55:01.542262",
+    "华尔街见闻": "2026-02-01T10:55:04.608232",
+    "36氪": "2026-02-01T10:55:06.491921",
+    "香港經濟日報": "2026-02-01T10:55:06.694750",
+    "东方财富": "2026-02-01T10:55:08.969420",
+    "WSJ 经济": "2026-02-01T10:55:09.083085",
+    "WSJ 市场": "2026-02-01T10:55:09.181603",
+    "WSJ 全球经济": "2026-02-01T10:55:09.270979"
   }
 }
