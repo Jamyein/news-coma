@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-01-31T12:45:40.837785",
+  "last_run": "2026-02-01T02:08:33.310488",
   "processed_urls": [
     "https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding",
     "https://viewfromthewing.com/court-filings-ice-uses-mobile-fortify-to-identify-protesters-global-entry-and-precheck-get-revoked/",
@@ -441,24 +441,98 @@
     "https://www.ft.com/content/608af6ec-54fd-48a9-88e7-7ee31f12ae94",
     "https://www.ycombinator.com/companies/goldbridge/jobs/78gGEHh-forward-deployed-engineer",
     "https://wallstreetcn.com/articles/3764666",
-    "https://wallstreetcn.com/articles/3764667"
+    "https://wallstreetcn.com/articles/3764667",
+    "https://www.wsj.com/politics/policy/spy-sheikh-secret-stake-trump-crypto-tahnoon-ea4d97e8?mod=pls_whats_news_us_business_f",
+    "https://36kr.com/newsflashes/3664059868210056?f=rss",
+    "https://36kr.com/newsflashes/3664058030596737?f=rss",
+    "https://wallstreetcn.com/articles/3764675",
+    "https://wallstreetcn.com/articles/3764674",
+    "https://36kr.com/p/3660098751538053?f=rss",
+    "https://36kr.com/newsflashes/3664044747907713?f=rss",
+    "https://36kr.com/newsflashes/3664059127079810?f=rss",
+    "https://36kr.com/newsflashes/3664042643661703?f=rss",
+    "https://36kr.com/newsflashes/3664056087880322?f=rss",
+    "https://36kr.com/p/3660481331241864?f=rss",
+    "https://36kr.com/newsflashes/3664046024303239?f=rss",
+    "https://www.wsj.com/business/telecom/high-speed-internet-boom-hits-low-tech-snag-a-labor-shortage-9c92b514?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/economy/trade/south-korea-exports-off-to-strong-start-in-2026-95978aa1",
+    "https://www.theverge.com/tech/871818/nvidia-ceo-jensen-huang-unhappy-openai",
+    "https://www.marketwatch.com/story/warsh-pick-doesnt-end-talk-that-powell-may-stay-on-to-protect-feds-independence-26e9175b?mod=mw_rss_topstories",
+    "https://www.ft.com/content/17288a86-bbcc-4428-a081-902d0cb86f65",
+    "https://www.marketwatch.com/story/im-rich-in-everything-but-parents-i-inherited-400k-is-it-unwise-to-use-this-money-to-buy-a-house-with-my-boyfriend-37837138?mod=mw_rss_topstories",
+    "https://www.marketwatch.com/story/i-feel-like-this-does-us-a-disservice-my-brother-wants-his-1-million-inheritance-in-advance-should-he-pay-interest-023155f6?mod=mw_rss_topstories",
+    "https://www.marketwatch.com/story/think-you-cant-afford-a-house-more-than-half-of-down-payment-assistance-programs-are-now-open-to-buyers-earning-over-100k-061ea673?mod=mw_rss_topstories",
+    "https://techcrunch.com/2026/01/31/waymo-reportedly-raising-a-16-billion-funding-round/",
+    "https://www.marketwatch.com/story/they-upset-me-every-time-i-see-them-how-long-do-i-keep-my-mothers-irs-and-medical-records-she-died-4-years-ago-22a436fc?mod=mw_rss_topstories",
+    "https://techcrunch.com/2026/01/31/spacex-seeks-federal-approval-to-launch-1-million-solar-powered-satellite-data-centers/",
+    "https://wikiedu.org/blog/2026/01/29/generative-ai-and-wikipedia-editing-what-we-learned-in-2025/",
+    "https://www.ycombinator.com/companies/collectwise/jobs/ZunnO6k-ai-agent-engineer",
+    "https://github.com/zupat/related_post_gen",
+    "https://www.theregister.com/2026/01/30/road_sign_hijack_ai/",
+    "https://www.theverge.com/policy/871606/minneapolis-general-strike-anti-ice-protest",
+    "https://www.marketwatch.com/story/this-single-mom-saved-1-million-in-15-years-to-retire-at-49-how-to-use-her-strategies-to-catch-up-on-retirement-savings-0953b686?mod=mw_rss_topstories",
+    "https://www.ft.com/content/faeb72a0-62ce-4d60-968e-5b932ea9c7e4",
+    "https://arxiv.org/abs/2512.21473",
+    "https://github.com/rtvkiz/minimal",
+    "https://www.marketwatch.com/story/loading-up-on-your-employers-stock-is-tempting-in-a-bull-market-but-how-much-is-too-much-ec90fec9?mod=mw_rss_topstories",
+    "https://www.ft.com/content/94663caf-6c98-4883-b3f0-cc763a3b95ff",
+    "https://www.theverge.com/tech/871641/spacex-fcc-1-million-solar-powered-data-centers-satellites-orbit",
+    "https://www.ft.com/content/678a173f-0387-46a0-a1c2-b28c4f8a64d4",
+    "https://genode.org/about/index",
+    "https://techcrunch.com/2026/01/31/nvidia-ceo-pushes-back-against-report-that-his-companys-100b-openai-investment-has-stalled/",
+    "https://www.bloomberg.com/news/articles/2026-01-29/us-has-investigated-claims-that-whatsapp-chats-aren-t-private",
+    "https://an.dywa.ng/carrier-gnss.html",
+    "https://yle.fi/a/74-20207494",
+    "https://www.wsj.com/finance/currencies/the-vibe-in-the-crypto-market-right-now-stay-alive-9f3ee79c?mod=rss_markets_main",
+    "https://techcrunch.com/2026/01/31/homeboosts-app-will-show-you-where-to-save-on-your-utility-bills/",
+    "https://www.theverge.com/gadgets/871092/airpods-4-anc-google-tv-streamer-4k-deal-sale",
+    "https://www.theverge.com/games/867020/cassette-boy-review-pc-playstation-xbox-nintendo-switch",
+    "https://www.wsj.com/business/autos/the-ceo-steering-hyundais-26-billion-u-s-betand-its-push-into-robots-755da56e?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/tech/elon-musks-spacex-and-xai-are-planning-a-megamerger-of-rockets-and-ai-28e72fa9?mod=rss_markets_main",
+    "https://www.theverge.com/report/870910/ai-chatbots-citing-grokipedia",
+    "https://www.theverge.com/tech/871493/apple-airtags-yahoo-scout-wonder-man-installer",
+    "https://mail.openjdk.org/pipermail/hotspot-dev/2026-January/118080.html",
+    "https://wallstreetcn.com/articles/3764648",
+    "https://www.ft.com/content/b474855e-66b0-4e6e-9b73-7e252bd88938",
+    "https://www.ft.com/content/68f60392-88bf-419c-96c7-c3d580ec9d97",
+    "https://www.bbc.com/news/articles/c5y28w0de91o?at_medium=RSS&at_campaign=rss",
+    "https://www.ft.com/content/0d6c67f6-37ef-4973-ade1-2f8e7610fb39",
+    "https://wallstreetcn.com/articles/3764631",
+    "https://www.wsj.com/articles/european-ttf-gas-rises-with-geopolitical-risks-adding-to-concerns-market-talk-dfad850d?mod=rss_markets_main",
+    "https://wallstreetcn.com/articles/3764621",
+    "https://www.wsj.com/articles/auto-transport-roundup-market-talk-ab0dd669?mod=rss_markets_main",
+    "https://wallstreetcn.com/articles/3764613",
+    "https://wallstreetcn.com/articles/3764601",
+    "https://www.bbc.com/news/articles/c5y3z9yjpx9o?at_medium=RSS&at_campaign=rss",
+    "https://www.wsj.com/business/chinalco-rio-tinto-to-buy-controlling-stake-in-companhia-brasileira-de-aluminio-b1592515?mod=rss_markets_main",
+    "https://www.wsj.com/finance/stocks/gamestop-ceo-plans-e8440c4b?mod=rss_markets_main",
+    "https://www.wsj.com/opinion/first-brands-indictment-lenders-patrick-james-580cf860?mod=rss_markets_main",
+    "https://ferrari-imports.enigmatechnologies.dev/",
+    "https://www.wsj.com/buyside/personal-finance/banking/money-market-accounts?mod=rss_markets_main",
+    "https://github.com/narwhal-io/narwhal",
+    "https://www.scientificamerican.com/article/smallpox-eradication-champion-william-foege-dies-at-89/",
+    "https://arstechnica.com/space/2026/01/one-of-nasas-three-wb-57-aircraft-just-did-a-belly-landing-in-houston/",
+    "https://www.wsj.com/finance/regulation/adm-to-pay-40-million-to-settle-sec-accounting-fraud-claims-ed36715a?mod=rss_markets_main",
+    "http://finance.eastmoney.com/news/1354,202601283632613176.html",
+    "https://minidump.net/writing-a-net-gc-in-c-part-6/",
+    "http://finance.eastmoney.com/news/1345,202601263631013986.html"
   ],
   "stats": {
-    "total_runs": 9,
-    "total_news_processed": 506,
-    "avg_news_per_run": 56.2
+    "total_runs": 10,
+    "total_news_processed": 580,
+    "avg_news_per_run": 58.0
   },
   "source_stats": {
     "The Verge": {
-      "fetched": 21,
+      "fetched": 28,
       "selected": 6
     },
     "Hacker News": {
-      "fetched": 81,
+      "fetched": 97,
       "selected": 19
     },
     "TechCrunch": {
-      "fetched": 40,
+      "fetched": 44,
       "selected": 8
     },
     "GitHub Blog": {
@@ -466,39 +540,39 @@
       "selected": 1
     },
     "MarketWatch": {
-      "fetched": 12,
+      "fetched": 19,
       "selected": 2
     },
     "Financial Times": {
-      "fetched": 11,
+      "fetched": 18,
       "selected": 1
     },
     "WSJ 经济": {
-      "fetched": 72,
+      "fetched": 75,
       "selected": 0
     },
     "36氪": {
-      "fetched": 23,
+      "fetched": 32,
       "selected": 1
     },
     "WSJ 全球经济": {
-      "fetched": 23,
+      "fetched": 24,
       "selected": 1
     },
     "华尔街见闻": {
-      "fetched": 46,
+      "fetched": 53,
       "selected": 10
     },
     "BBC Business": {
-      "fetched": 36,
+      "fetched": 38,
       "selected": 0
     },
     "WSJ 市场": {
-      "fetched": 45,
+      "fetched": 54,
       "selected": 0
     },
     "东方财富": {
-      "fetched": 59,
+      "fetched": 61,
       "selected": 0
     },
     "CNBC": {
@@ -1439,10 +1513,210 @@
       ],
       "cached_at": "2026-01-31T12:47:25.503291",
       "source": "华尔街见闻"
+    },
+    "c341b43aafa26add": {
+      "ai_score": 5.0,
+      "translated_title": "“间谍谢赫”在特朗普公司购买了秘密股份",
+      "ai_summary": "据《华尔街日报》报道，一位名为“间谍谢赫”的人士在几个月前投资了5亿美元购买了World Liberty公司49%的股份，该公司获得了访问美国严格保护的AI芯片的机会。",
+      "key_points": [
+        "间谍谢赫",
+        "特朗普公司",
+        "投资",
+        "AI芯片",
+        "美国"
+      ],
+      "cached_at": "2026-02-01T02:12:30.747735",
+      "source": "WSJ 经济"
+    },
+    "587652557107f3cc": {
+      "ai_score": 5.0,
+      "translated_title": "Waymo拟募资约160亿美元，估值接近1100亿美元",
+      "ai_summary": "据知情人士透露，Alphabet公司旗下自动驾驶子公司Waymo计划在新一轮融资中募资约160亿美元，融资完成后该子公司估值将接近1100亿美元。",
+      "key_points": [
+        "Waymo",
+        "募资",
+        "估值",
+        "自动驾驶",
+        "Alphabet"
+      ],
+      "cached_at": "2026-02-01T02:12:30.747751",
+      "source": "36氪"
+    },
+    "3ec8fbd27abd23c8": {
+      "ai_score": 4.8,
+      "translated_title": "汇川技术董事长朱兴明3小时深度反省：我们这两年最大的问题，不是战略，而是“人”",
+      "ai_summary": "汇川技术董事长朱兴明在年度演讲中表示，过去两年公司面临的最大问题是“人”，而非战略或产品。",
+      "key_points": [
+        "汇川技术",
+        "朱兴明",
+        "反省",
+        "战略",
+        "人"
+      ],
+      "cached_at": "2026-02-01T02:12:30.747761",
+      "source": "36氪"
+    },
+    "1414b41bcaedf284": {
+      "ai_score": 4.8,
+      "translated_title": "韩国2026年出口强劲开局",
+      "ai_summary": "韩国的出口在2026年1月强劲开局，出口量因工作日增多和半导体需求强劲而激增。",
+      "key_points": [
+        "韩国",
+        "出口",
+        "半导体",
+        "需求",
+        "强劲"
+      ],
+      "cached_at": "2026-02-01T02:12:30.747769",
+      "source": "WSJ 全球经济"
+    },
+    "d5891bc8bee3af14": {
+      "ai_score": 4.5,
+      "translated_title": "Waymo reportedly raising a $16B funding round",
+      "ai_summary": "据报道称，Waymo正在完成新一轮融资，该轮融资将使这家自动驾驶公司估值达到1100亿美元。",
+      "key_points": [
+        "Waymo",
+        "融资",
+        "估值",
+        "自动驾驶",
+        "投资"
+      ],
+      "cached_at": "2026-02-01T02:12:30.747776",
+      "source": "TechCrunch"
+    },
+    "56d55cba3bd67c5a": {
+      "ai_score": 4.7,
+      "translated_title": "SpaceX寻求联邦批准发射100万颗太阳能卫星数据中心",
+      "ai_summary": "SpaceX提交的文件称，这些卫星将是“成为卡尔达舍夫II级文明的第一步——能够利用太阳的全部能量。”",
+      "key_points": [
+        "SpaceX",
+        "卫星",
+        "太阳能",
+        "数据中心",
+        "卡尔达舍夫II级文明"
+      ],
+      "cached_at": "2026-02-01T02:12:30.747785",
+      "source": "TechCrunch"
+    },
+    "af2dc33a8914682b": {
+      "ai_score": 4.8,
+      "translated_title": "在牛市中持有雇主股票很有吸引力。但多少是过多的？",
+      "ai_summary": "员工面临着“双重困境”，即股票下跌的证券投资组合和增加的就业风险。",
+      "key_points": [
+        "牛市",
+        "雇主股票",
+        "投资",
+        "风险",
+        "就业"
+      ],
+      "cached_at": "2026-02-01T02:12:30.747793",
+      "source": "MarketWatch"
+    },
+    "1e662a90018fecbe": {
+      "ai_score": 5.0,
+      "translated_title": "Waymo完成160亿美元融资，估值1100亿美元",
+      "ai_summary": "谷歌的自动驾驶汽车初创公司Waymo在全球扩张和与埃隆·马斯克的特斯拉竞争之际，吸引了新的投资者。",
+      "key_points": [
+        "Waymo",
+        "融资",
+        "估值",
+        "自动驾驶",
+        "谷歌"
+      ],
+      "cached_at": "2026-02-01T02:12:30.747803",
+      "source": "Financial Times"
+    },
+    "326565d8ef543498": {
+      "ai_score": 4.4,
+      "translated_title": "Nvidia CEO反驳其公司1000亿美元OpenAI投资停滞的报告",
+      "ai_summary": "Nvidia首席执行官黄仁勋表示，最近关于其公司与OpenAI之间出现摩擦的报告是“无稽之谈。”",
+      "key_points": [
+        "Nvidia",
+        "投资",
+        "OpenAI",
+        "黄仁勋",
+        "摩擦"
+      ],
+      "cached_at": "2026-02-01T02:12:30.747811",
+      "source": "TechCrunch"
+    },
+    "a6968bebffa823e9": {
+      "ai_score": 4.4,
+      "translated_title": "芬兰将结束对青少年社交媒体的“无控制的人类实验”",
+      "ai_summary": "芬兰计划禁止青少年使用社交媒体，以结束这一“无控制的人类实验”。",
+      "key_points": [
+        "芬兰",
+        "社交媒体",
+        "青少年",
+        "禁止",
+        "实验"
+      ],
+      "cached_at": "2026-02-01T02:12:30.747818",
+      "source": "Hacker News"
+    },
+    "5b16274328d211a9": {
+      "ai_score": 5.0,
+      "translated_title": "现代汽车CEO推动26亿美元美国投资并加速机器人工厂建设",
+      "ai_summary": "现代汽车首位非韩国籍CEO José Muñoz在接受采访时表示，他希望加快在美国建设工厂的步伐。",
+      "key_points": [
+        "现代汽车CEO Muñoz计划加快美国工厂建设",
+        "投资26亿美元",
+        "推动机器人技术发展"
+      ],
+      "cached_at": "2026-02-01T02:12:30.747825",
+      "source": "WSJ 经济"
+    },
+    "b0af6b37b9aa1943": {
+      "ai_score": 5.0,
+      "translated_title": "马斯克帝国大合并？AI太烧钱，首富也得“翻遍每一个口袋”",
+      "ai_summary": "随着人工智能投入成本持续攀升，马斯克的商业帝国被迫进入“重组模式”，探讨旗下企业资本结构及资金来源。",
+      "key_points": [
+        "马斯克商业帝国重组",
+        "AI投入成本高企",
+        "探讨资金来源和资本结构"
+      ],
+      "cached_at": "2026-02-01T02:12:30.747834",
+      "source": "华尔街见闻"
+    },
+    "fee743c2270da6c5": {
+      "ai_score": 4.8,
+      "translated_title": "中国的天才计划",
+      "ai_summary": "中国的一流高中人才网络正在培养科技和科学领域的杰出人才。",
+      "key_points": [
+        "中国高中人才网络",
+        "培养科技和科学人才",
+        "科技和科学领域的杰出人才"
+      ],
+      "cached_at": "2026-02-01T02:12:30.747843",
+      "source": "Financial Times"
+    },
+    "5b0bcc3576a7b2cc": {
+      "ai_score": 5.0,
+      "translated_title": "美银Hartnett预警：全球股市陷入“超买”困境，技术指标触及历史性卖出信号",
+      "ai_summary": "美国银行策略师发出警告，全球股市已进入危险的“超买”状态，技术指标显示潜在逆转风险。",
+      "key_points": [
+        "全球股市超买",
+        "技术指标预示回调风险",
+        "美银策略师发出警告"
+      ],
+      "cached_at": "2026-02-01T02:12:30.747852",
+      "source": "华尔街见闻"
+    },
+    "02a34d17c8043324": {
+      "ai_score": 4.8,
+      "translated_title": "ADM支付4000万美元和解SEC会计欺诈指控",
+      "ai_summary": "监管机构还对前CFO提起诉讼，指控其指导误导性交易。",
+      "key_points": [
+        "ADM支付4000万美元和解指控",
+        "SEC会计欺诈指控",
+        "前CFO被控误导性交易"
+      ],
+      "cached_at": "2026-02-01T02:12:30.747859",
+      "source": "WSJ 市场"
     }
   },
   "cache_hits": 6,
-  "cache_lookups": 441,
+  "cache_lookups": 515,
   "run_metrics": [
     {
       "run_time": "2026-01-31T06:47:45.364104",
@@ -1531,6 +1805,17 @@
       "semantic_duplicates": 0,
       "duration_seconds": 104.669736,
       "avg_score": 7.1
+    },
+    {
+      "run_time": "2026-02-01T02:08:33.310488",
+      "news_count": 74,
+      "api_calls": 10,
+      "cache_hits": 0,
+      "cache_misses": 0,
+      "duplicates_removed": 0,
+      "semantic_duplicates": 0,
+      "duration_seconds": 237.440269,
+      "avg_score": 0
     }
   ]
 }
