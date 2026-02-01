@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-02-01T02:08:33.310488",
+  "last_run": "2026-02-01T02:22:00.415376",
   "processed_urls": [
     "https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding",
     "https://viewfromthewing.com/court-filings-ice-uses-mobile-fortify-to-identify-protesters-global-entry-and-precheck-get-revoked/",
@@ -515,12 +515,15 @@
     "https://www.wsj.com/finance/regulation/adm-to-pay-40-million-to-settle-sec-accounting-fraud-claims-ed36715a?mod=rss_markets_main",
     "http://finance.eastmoney.com/news/1354,202601283632613176.html",
     "https://minidump.net/writing-a-net-gc-in-c-part-6/",
-    "http://finance.eastmoney.com/news/1345,202601263631013986.html"
+    "http://finance.eastmoney.com/news/1345,202601263631013986.html",
+    "https://36kr.com/newsflashes/3664116356293256?f=rss",
+    "https://wallstreetcn.com/articles/3764665",
+    "http://money.eastmoney.com/news/1583,202601273632594018.html"
   ],
   "stats": {
-    "total_runs": 10,
-    "total_news_processed": 580,
-    "avg_news_per_run": 58.0
+    "total_runs": 11,
+    "total_news_processed": 583,
+    "avg_news_per_run": 53.0
   },
   "source_stats": {
     "The Verge": {
@@ -552,7 +555,7 @@
       "selected": 0
     },
     "36氪": {
-      "fetched": 32,
+      "fetched": 33,
       "selected": 1
     },
     "WSJ 全球经济": {
@@ -560,7 +563,7 @@
       "selected": 1
     },
     "华尔街见闻": {
-      "fetched": 53,
+      "fetched": 54,
       "selected": 10
     },
     "BBC Business": {
@@ -572,7 +575,7 @@
       "selected": 0
     },
     "东方财富": {
-      "fetched": 61,
+      "fetched": 62,
       "selected": 0
     },
     "CNBC": {
@@ -1713,10 +1716,49 @@
       ],
       "cached_at": "2026-02-01T02:12:30.747859",
       "source": "WSJ 市场"
+    },
+    "abe43c224fd2ff3b": {
+      "ai_score": 5.0,
+      "translated_title": "理想汽车1月交付27668辆，累计交付量突破156万辆",
+      "ai_summary": "理想汽车在2026年1月交付了27668辆新车，累计交付量达到1567883辆，展现了良好的市场表现。",
+      "key_points": [
+        "理想汽车",
+        "1月交付量",
+        "累计交付量",
+        "市场表现"
+      ],
+      "cached_at": "2026-02-01T02:23:34.433448",
+      "source": "36氪"
+    },
+    "7b2a6dd5433a6664": {
+      "ai_score": 4.8,
+      "translated_title": "中国AI交易：不确定‘谁是最终赢家’，押注‘AI应用大战’的受益者",
+      "ai_summary": "摩根大通发布报告，分析中国AI应用市场的二阶受益者，指出目前市场尚未准备好对AI应用赢家进行定价。",
+      "key_points": [
+        "AI交易",
+        "摩根大通",
+        "AI应用市场",
+        "二阶受益者"
+      ],
+      "cached_at": "2026-02-01T02:23:34.433465",
+      "source": "华尔街见闻"
+    },
+    "8261b640cdac1ffb": {
+      "ai_score": 4.8,
+      "translated_title": "资源品LOF限购升级，石油基金LOF暂停大额申购",
+      "ai_summary": "资源品行情强劲，相关LOF限购升级，华安基金暂停石油基金LOF的大额申购及大额定期定额投资业务。",
+      "key_points": [
+        "资源品LOF",
+        "限购升级",
+        "石油基金LOF",
+        "大额申购暂停"
+      ],
+      "cached_at": "2026-02-01T02:23:34.433475",
+      "source": "东方财富"
     }
   },
   "cache_hits": 6,
-  "cache_lookups": 515,
+  "cache_lookups": 518,
   "run_metrics": [
     {
       "run_time": "2026-01-31T06:47:45.364104",
@@ -1815,6 +1857,17 @@
       "duplicates_removed": 0,
       "semantic_duplicates": 0,
       "duration_seconds": 237.440269,
+      "avg_score": 0
+    },
+    {
+      "run_time": "2026-02-01T02:22:00.415376",
+      "news_count": 3,
+      "api_calls": 1,
+      "cache_hits": 0,
+      "cache_misses": 0,
+      "duplicates_removed": 0,
+      "semantic_duplicates": 0,
+      "duration_seconds": 94.02115,
       "avg_score": 0
     }
   ]
