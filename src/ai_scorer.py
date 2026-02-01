@@ -421,7 +421,7 @@ class AIScorer:
                 messages=[
                     {
                         "role": "system", 
-                        "content": "你是一位资深科技新闻编辑，擅长评估新闻价值和撰写中文摘要。你必须严格返回JSON数组格式。"
+                        "content": "你是一位资深新闻编辑和筛选员，擅长评估新闻价值和撰写中文摘要。你必须严格返回JSON数组格式。"
                     },
                     {"role": "user", "content": prompt}
                 ],
@@ -637,7 +637,7 @@ class AIScorer:
                 messages=[
                     {
                         "role": "system", 
-                        "content": "你是一位资深科技新闻编辑，擅长评估新闻价值和撰写中文摘要。"
+                        "content": "你是一位资深新闻编辑，擅长评估新闻价值和撰写中文摘要。"
                     },
                     {"role": "user", "content": prompt}
                 ],
@@ -667,7 +667,7 @@ class AIScorer:
             criteria_desc.append(f"- {desc}: {int(weight*100)}%")
         
         return f"""
-你是一位资深科技新闻编辑。请对以下新闻进行评分和分析。
+你是一位资深新闻编辑。请对以下新闻进行评分和分析。
 
 评分维度（1-10分制）：
 {chr(10).join(criteria_desc)}
@@ -950,13 +950,13 @@ class AIScorer:
         # 科技来源关键词
         tech_sources = [
             "the verge", "techcrunch", "hacker news", "github blog",
-            "arstechnica", "wired", "engadget"
+            "arstechnica", "wired", "engadget", "36氪", "华尔街见闻"
         ]
         
         # 社会政治来源关键词
         politics_sources = [
             "bbc", "the guardian", "politico", "wsj 时政",
-            "reuters", "associated press", "ap news"
+            "reuters", "associated press", "ap news", "36氪", "华尔街见闻"
         ]
         
         # 财经标题关键词
