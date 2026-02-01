@@ -29,6 +29,10 @@ class NewsItem:
     ai_category: str = ""  # 分类结果："财经" | "科技" | "社会政治"
     ai_category_confidence: float = 0.0  # 分类置信度 0-1
     
+    # 预分类字段（新增，用于Pass 1差异化评分）
+    pre_category: str = ""  # 预分类结果："财经" | "科技" | "社会政治" | ""
+    pre_category_confidence: float = 0.0  # 预分类置信度
+    
     def __post_init__(self):
         """初始化后处理"""
         if isinstance(self.published_at, str):
@@ -81,6 +85,17 @@ class AIConfig:
     use_2pass: bool = True                           # 是否启用2-Pass评分
     pass1_threshold: float = 7.0                     # Pass 1预筛阈值
     pass1_max_items: int = 40                        # Pass 1最大保留数量
+    
+    # 三大板块差异化评分配置（新增）
+    pass1_threshold_finance: float = 5.5             # 财经新闻阈值
+    pass1_threshold_tech: float = 6.0                # 科技新闻阈值
+    pass1_threshold_politics: float = 5.5            # 社会政治新闻阈值
+    pass1_use_category_specific: bool = True         # 启用三大板块差异化评分
+    
+    # 板块配额配置（固定比例 40%:30%:30%）
+    category_quota_finance: float = 0.40             # 财经配额 40%
+    category_quota_tech: float = 0.30                # 科技配额 30%
+    category_quota_politics: float = 0.30            # 社会政治配额 30%
 
 
 @dataclass

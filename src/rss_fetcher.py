@@ -108,8 +108,17 @@ class RSSFetcher:
         )
         return unique_items
     
-    def _fetch_single(self, source: RSSSource) -> List[NewsItem]:
-        """获取单个RSS源的新闻"""
+    def _fetch_single(self, source: RSSSource, last_fetch_time: Optional[datetime] = None) -> List[NewsItem]:
+        """
+        获取单个RSS源的新闻（支持基于时间节点的增量获取）
+        
+        Args:
+            source: RSS源配置
+            last_fetch_time: 上次获取时间，如果为None则使用time_window_days作为fallback
+        
+        Returns:
+            新闻列表
+        """
         items = []
         
         try:
@@ -119,14 +128,21 @@ class RSSFetcher:
             if feed.bozo:  # 解析警告
                 logger.warning(f"⚠️ {source.name} RSS解析警告: {feed.bozo_exception}")
             
-            # 获取当前时间窗口
-            cutoff_time = datetime.now() - self.time_window
+            # 确定时间过滤阈值
+            if last_fetch_time:
+                # 使用上次获取时间（增量模式）
+                cutoff_time = last_fetch_time
+                logger.info(f"⏰ {source.name} 使用增量获取，上次时间: {cutoff_time}")
+            else:
+                # Fallback: 使用time_window_days（全量模式）
+                cutoff_time = datetime.now() - self.time_window
+                logger.info(f"⏰ {source.name} 使用全量获取，时间窗口: {self.output_config.time_window_days}天")
             
             for entry in feed.entries:
                 try:
                     item = self._parse_entry(entry, source)
                     
-                    # 只保留时间窗口内的新闻
+                    # 时间过滤：只保留 cutoff_time 之后的新闻
                     if item.published_at > cutoff_time:
                         items.append(item)
                     
@@ -163,7 +179,15 @@ class RSSFetcher:
             try:
                 published = date_parser.parse(entry.published)
             except:
+                logger.debug(f"⚠️ {source.name} 条目发布时间解析失败，使用当前时间")
                 pass
+        
+        # 边界情况处理：检查时间戳是否在未来
+        if published > datetime.now():
+            logger.warning(
+                f"⚠️ {source.name} 条目时间在未来: {published}，使用当前时间"
+            )
+            published = datetime.now()
         
         # 获取摘要/内容
         summary = entry.get('summary', '') or entry.get('description', '')

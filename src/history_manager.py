@@ -31,6 +31,9 @@ class HistoryManager:
             self._data["cache_lookups"] = 0
         if "run_metrics" not in self._data:
             self._data["run_metrics"] = []
+        # 确保RSS源最后获取时间字段存在（增量获取支持）
+        if "source_last_fetch" not in self._data:
+            self._data["source_last_fetch"] = {}
     
     def _load(self) -> Dict[str, Any]:
         """加载历史数据"""
@@ -54,7 +57,8 @@ class HistoryManager:
             "ai_cache": {},
             "cache_hits": 0,
             "cache_lookups": 0,
-            "run_metrics": []
+            "run_metrics": [],
+            "source_last_fetch": {}  # RSS源最后获取时间（增量获取支持）
         }
     
     def save(self):
@@ -321,3 +325,57 @@ class HistoryManager:
         """清理旧的历史记录(可选)"""
         # 这里可以实现定期清理逻辑
         pass
+    
+    # ==================== RSS源最后获取时间 (增量获取支持) ====================
+    
+    def get_source_last_fetch(self, source_name: str) -> Optional[datetime]:
+        """
+        获取指定RSS源的最后获取时间
+        
+        Args:
+            source_name: RSS源名称
+            
+        Returns:
+            最后获取时间(datetime对象)，如果不存在则返回None
+        """
+        source_fetch_times = self._data.get("source_last_fetch", {})
+        last_fetch_str = source_fetch_times.get(source_name)
+        
+        if last_fetch_str:
+            try:
+                return datetime.fromisoformat(last_fetch_str)
+            except ValueError:
+                logger.warning(f"无法解析 {source_name} 的时间戳: {last_fetch_str}")
+        
+        return None
+    
+    def update_source_last_fetch(self, source_name: str, fetch_time: datetime):
+        """
+        更新指定RSS源的最后获取时间
+        
+        Args:
+            source_name: RSS源名称
+            fetch_time: 获取时间(datetime对象)
+        """
+        if "source_last_fetch" not in self._data:
+            self._data["source_last_fetch"] = {}
+        
+        self._data["source_last_fetch"][source_name] = fetch_time.isoformat()
+        logger.debug(f"✓ 更新 {source_name} 最后获取时间: {fetch_time}")
+    
+    def get_fallback_last_fetch(self) -> Optional[datetime]:
+        """
+        获取fallback最后获取时间（用于向后兼容）
+        
+        当source_last_fetch不存在时，使用last_run作为fallback
+        
+        Returns:
+            fallback时间(datetime对象)，如果不存在则返回None
+        """
+        last_run_str = self._data.get("last_run")
+        if last_run_str:
+            try:
+                return datetime.fromisoformat(last_run_str)
+            except ValueError:
+                pass
+        return None

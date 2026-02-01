@@ -99,6 +99,17 @@ class Config:
         pass1_threshold = ai_data.get('pass1_threshold', 7.0)
         pass1_max_items = ai_data.get('pass1_max_items', 40)
         
+        # 读取三大板块差异化评分配置
+        pass1_threshold_finance = ai_data.get('pass1_threshold_finance', 5.5)
+        pass1_threshold_tech = ai_data.get('pass1_threshold_tech', 6.0)
+        pass1_threshold_politics = ai_data.get('pass1_threshold_politics', 5.5)
+        pass1_use_category_specific = ai_data.get('pass1_use_category_specific', True)
+        
+        # 读取板块配额配置
+        category_quota_finance = ai_data.get('category_quota_finance', 0.40)
+        category_quota_tech = ai_data.get('category_quota_tech', 0.30)
+        category_quota_politics = ai_data.get('category_quota_politics', 0.30)
+        
         # Validate that the selected provider has an API key
         current_config = providers_config.get(current_provider)
         if not current_config or not current_config.api_key:
@@ -126,7 +137,14 @@ class Config:
             true_batch_size=true_batch_size,
             use_2pass=use_2pass,
             pass1_threshold=pass1_threshold,
-            pass1_max_items=pass1_max_items
+            pass1_max_items=pass1_max_items,
+            pass1_threshold_finance=pass1_threshold_finance,
+            pass1_threshold_tech=pass1_threshold_tech,
+            pass1_threshold_politics=pass1_threshold_politics,
+            pass1_use_category_specific=pass1_use_category_specific,
+            category_quota_finance=category_quota_finance,
+            category_quota_tech=category_quota_tech,
+            category_quota_politics=category_quota_politics
         )
     
     @property
@@ -148,6 +166,8 @@ class Config:
             min_score_threshold=filter_data.get('min_score_threshold', 6.0),
             dedup_similarity=filter_data.get('dedup_similarity', 0.85),
             blocked_keywords=filter_data.get('blocked_keywords', []),
-            use_semantic_dedup=filter_data.get('use_semantic_dedup', True),
-            semantic_similarity=filter_data.get('semantic_similarity', 0.85)
+            # 语义去重默认关闭（避免误判"相似但较新"的内容）
+            use_semantic_dedup=filter_data.get('use_semantic_dedup', False),
+            # 语义相似度阈值提高到0.90（更严格，减少误判）
+            semantic_similarity=filter_data.get('semantic_similarity', 0.90)
         )

@@ -83,6 +83,17 @@ class AIScorer:
         self.pass1_threshold = getattr(config, 'pass1_threshold', 7.0)
         self.pass1_max_items = getattr(config, 'pass1_max_items', 40)
         
+        # 三大板块差异化评分配置
+        self.pass1_threshold_finance = getattr(config, 'pass1_threshold_finance', 5.5)
+        self.pass1_threshold_tech = getattr(config, 'pass1_threshold_tech', 6.0)
+        self.pass1_threshold_politics = getattr(config, 'pass1_threshold_politics', 5.5)
+        self.pass1_use_category_specific = getattr(config, 'pass1_use_category_specific', True)
+        
+        # 板块配额配置
+        self.category_quota_finance = getattr(config, 'category_quota_finance', 0.40)
+        self.category_quota_tech = getattr(config, 'category_quota_tech', 0.30)
+        self.category_quota_politics = getattr(config, 'category_quota_politics', 0.30)
+        
         # API调用计数(用于监控)
         self.api_call_count = 0
         
@@ -332,6 +343,34 @@ class AIScorer:
         "chinese_summary": "200字左右的中文总结",
         "key_points": ["要点1", "要点2", "要点3"]
     }},
+    {{
+        "news_index": 2,
+        "category": "科技",
+        "category_confidence": 0.90,
+        "innovation": 9,
+        "practicality": 7,
+        "influence": 8,
+        "depth": 6,
+        "audience_breadth": 0,
+        "total_score": 8.0,
+        "chinese_title": "翻译成中文的标题",
+        "chinese_summary": "200字左右的中文总结",
+        "key_points": ["要点1", "要点2", "要点3"]
+    }},
+    {{
+        "news_index": 3,
+        "category": "社会政治",
+        "category_confidence": 0.75,
+        "policy_impact": 7,
+        "public_attention": 8,
+        "timeliness": 9,
+        "depth": 5,
+        "audience_breadth": 0,
+        "total_score": 7.4,
+        "chinese_title": "翻译成中文的标题",
+        "chinese_summary": "200字左右的中文总结",
+        "key_points": ["要点1", "要点2", "要点3"]
+    }},
     ...
 ]
 
@@ -339,8 +378,14 @@ class AIScorer:
 1. news_index必须对应新闻列表中的序号(从1开始)
 2. category只能是"财经"、"科技"或"社会政治"之一
 3. category_confidence是分类置信度，范围0-1
-4. 评分字段根据category自动选择对应的5个维度
-5. total_score根据对应板块的权重自动计算
+4. 评分字段根据category自动选择对应的5个维度：
+   - 财经新闻: market_impact, investment_value, timeliness, depth, audience_breadth
+   - 科技新闻: innovation, practicality, influence, depth, audience_breadth
+   - 社会政治新闻: policy_impact, public_attention, timeliness, depth, audience_breadth
+5. total_score根据对应板块的权重自动计算：
+   - 财经: market_impact×0.4 + investment_value×0.3 + timeliness×0.2 + depth×0.1
+   - 科技: innovation×0.4 + practicality×0.3 + influence×0.2 + depth×0.1
+   - 社会政治: policy_impact×0.4 + public_attention×0.3 + timeliness×0.2 + depth×0.1
 6. chinese_title要准确传达原意，适合中文读者
 7. chinese_summary要突出核心价值和影响
 8. key_points列出3-5个关键要点
@@ -435,14 +480,57 @@ class AIScorer:
                     if 0 <= index < len(items) and index not in processed_indices:
                         item = items[index]
                         
-                        # 计算加权总分
-                        total_score = (
-                            item_data.get('importance', 5) * self.criteria.get('importance', 0.3) +
-                            item_data.get('timeliness', 5) * self.criteria.get('timeliness', 0.2) +
-                            item_data.get('technical_depth', 5) * self.criteria.get('technical_depth', 0.2) +
-                            item_data.get('audience_breadth', 5) * self.criteria.get('audience_breadth', 0.15) +
-                            item_data.get('practicality', 5) * self.criteria.get('practicality', 0.15)
-                        )
+                        # 获取AI分类结果
+                        category = item_data.get('category', '')
+                        category_confidence = item_data.get('category_confidence', 0.0)
+                        
+                        # 存储分类信息到NewsItem
+                        item.ai_category = category  # 使用AI分类结果
+                        item.ai_category_confidence = category_confidence
+                        
+                        # 优先使用AI计算的total_score，如果不存在则自己计算
+                        if 'total_score' in item_data:
+                            # 使用AI计算的分数
+                            total_score = float(item_data['total_score'])
+                        else:
+                            # 根据分类使用不同的权重计算分数
+                            category = category.lower()
+                            if '财经' in category:
+                                # 财经新闻权重：市场影响40%，投资价值30%，时效性20%，深度10%，受众广度0%
+                                total_score = (
+                                    item_data.get('market_impact', 5) * 0.4 +
+                                    item_data.get('investment_value', 5) * 0.3 +
+                                    item_data.get('timeliness', 5) * 0.2 +
+                                    item_data.get('depth', 5) * 0.1 +
+                                    item_data.get('audience_breadth', 0) * 0.0
+                                )
+                            elif '科技' in category:
+                                # 科技新闻权重：技术创新40%，实用性30%，影响力20%，深度10%，受众广度0%
+                                total_score = (
+                                    item_data.get('innovation', 5) * 0.4 +
+                                    item_data.get('practicality', 5) * 0.3 +
+                                    item_data.get('influence', 5) * 0.2 +
+                                    item_data.get('depth', 5) * 0.1 +
+                                    item_data.get('audience_breadth', 0) * 0.0
+                                )
+                            elif '社会政治' in category or '政治' in category:
+                                # 社会政治新闻权重：政策影响40%，公众关注度30%，时效性20%，深度10%，受众广度0%
+                                total_score = (
+                                    item_data.get('policy_impact', 5) * 0.4 +
+                                    item_data.get('public_attention', 5) * 0.3 +
+                                    item_data.get('timeliness', 5) * 0.2 +
+                                    item_data.get('depth', 5) * 0.1 +
+                                    item_data.get('audience_breadth', 0) * 0.0
+                                )
+                            else:
+                                # 未分类新闻使用通用权重
+                                total_score = (
+                                    item_data.get('importance', 5) * self.criteria.get('importance', 0.3) +
+                                    item_data.get('timeliness', 5) * self.criteria.get('timeliness', 0.2) +
+                                    item_data.get('technical_depth', 5) * self.criteria.get('technical_depth', 0.2) +
+                                    item_data.get('audience_breadth', 5) * self.criteria.get('audience_breadth', 0.15) +
+                                    item_data.get('practicality', 5) * self.criteria.get('practicality', 0.15)
+                                )
                         
                         item.ai_score = round(total_score, 1)
                         item.translated_title = item_data.get('chinese_title', item.title)
@@ -466,6 +554,8 @@ class AIScorer:
                     item.translated_title = item.title
                     item.ai_summary = "批处理解析失败"
                     item.key_points = []
+                    # 保持原始分类信息
+                    item.ai_category_confidence = 0.0
                     results.append(item)
             
             logger.info(f"批处理解析成功: {len(results)}/{len(items)} 条")
@@ -479,6 +569,7 @@ class AIScorer:
                 item.translated_title = item.title
                 item.ai_summary = "JSON解析失败"
                 item.key_points = []
+                item.ai_category_confidence = 0.0
             return items
         except Exception as e:
             logger.error(f"批处理响应解析失败: {e}")
@@ -488,6 +579,7 @@ class AIScorer:
                 item.translated_title = item.title
                 item.ai_summary = "解析失败"
                 item.key_points = []
+                item.ai_category_confidence = 0.0
             return items
     
     async def _score_batch_single(
@@ -679,24 +771,47 @@ class AIScorer:
     
     async def _pass1_pre_screen(self, items: List[NewsItem]) -> List[NewsItem]:
         """
-        Pass 1: 快速预筛
-        使用简化Prompt，只评估2个维度，快速过滤低价值新闻
+        Pass 1: 按板块差异化快速预筛
+        根据新闻分类使用不同的评分标准和阈值
         """
-        # 构建简化Prompt模板
-        prompt_template = """
-快速评估这条科技新闻对开发者的价值(0-10分)。
-
-评估标准:
-- 影响力(行业影响+受众范围): 0-10分
-- 质量(技术深度+实用性+时效性): 0-10分
-
-新闻: {title}
-来源: {source}
-摘要: {summary}
-
-只需返回JSON格式: {{"impact": 8, "quality": 7, "total": 7.5}}
-不要其他解释。
-"""
+        # 如果未启用差异化评分，使用传统方法
+        if not self.pass1_use_category_specific:
+            return await self._pass1_pre_screen_legacy(items)
+        
+        # 1. 预分类：基于来源和关键词快速分类
+        categorized_items = self._pre_categorize_items(items)
+        
+        # 2. 按板块分别进行快速评分
+        all_scored_items = []
+        
+        # 处理财经新闻
+        if categorized_items["财经"]:
+            finance_passed = await self._pass1_finance_screen(categorized_items["财经"])
+            all_scored_items.extend(finance_passed)
+        
+        # 处理科技新闻
+        if categorized_items["科技"]:
+            tech_passed = await self._pass1_tech_screen(categorized_items["科技"])
+            all_scored_items.extend(tech_passed)
+        
+        # 处理社会政治新闻
+        if categorized_items["社会政治"]:
+            politics_passed = await self._pass1_politics_screen(categorized_items["社会政治"])
+            all_scored_items.extend(politics_passed)
+        
+        # 处理未分类新闻（使用默认阈值）
+        if categorized_items["未分类"]:
+            uncategorized_passed = await self._pass1_generic_screen(categorized_items["未分类"])
+            all_scored_items.extend(uncategorized_passed)
+        
+        # 3. 按分数排序，限制数量
+        all_scored_items.sort(key=lambda x: x.ai_score, reverse=True)
+        passed_items = all_scored_items[:self.pass1_max_items]
+        
+        # 4. 记录日志
+        self._log_pass1_results(categorized_items, passed_items)
+        
+        return passed_items
         
         scored_items = []
         
@@ -808,3 +923,340 @@ class AIScorer:
         
         logger.error("❌ Pass 2所有AI提供商均失败")
         raise last_exception
+    
+    # ==================== 三大板块差异化 Pass 1 方法 ====================
+    
+    def _pre_categorize_items(self, items: List[NewsItem]) -> Dict[str, List[NewsItem]]:
+        """
+        预分类：基于来源和关键词快速将新闻分为三大板块
+        
+        返回: {"财经": [], "科技": [], "社会政治": [], "未分类": []}
+        """
+        categorized = {
+            "财经": [],
+            "科技": [],
+            "社会政治": [],
+            "未分类": []
+        }
+        
+        # 财经来源关键词
+        finance_sources = [
+            "wsj 经济", "wsj 市场", "financial times", "bloomberg", 
+            "cnbc", "marketwatch", "ft.com", "华尔街见闻", 
+            "东方财富", "财新", "经济观察", "36氪", "香港經濟日報",
+            "the economist", "bbc business", "wsj 全球经济"
+        ]
+        
+        # 科技来源关键词
+        tech_sources = [
+            "the verge", "techcrunch", "hacker news", "github blog",
+            "arstechnica", "wired", "engadget"
+        ]
+        
+        # 社会政治来源关键词
+        politics_sources = [
+            "bbc", "the guardian", "politico", "wsj 时政",
+            "reuters", "associated press", "ap news"
+        ]
+        
+        # 财经标题关键词
+        finance_keywords = [
+            "股票", "股市", "投资", "银行", "利率", "通胀", "财报", "earnings", 
+            "stock", "investment", "market", "economy", "economic", "finance",
+            "financial", "business", "company", "corporate", "profit", "revenue",
+            "dollar", "yuan", "currency", "trade", "export", "import", "gdp",
+            "央行", "美联储", "利率决议", "货币政策", "财政政策", "经济数据"
+        ]
+        
+        # 科技标题关键词
+        tech_keywords = [
+            "ai", "artificial intelligence", "机器学习", "芯片", "软件", "app", 
+            "tech", "technology", "digital", "computer", "internet", "web",
+            "mobile", "phone", "smartphone", "device", "hardware", "software",
+            "algorithm", "data", "cloud", "cybersecurity", "hack", "security",
+            "startup", "innovation", "research", "development", "engineering",
+            "人工智能", "机器学习", "深度学习", "神经网络", "算法", "大数据",
+            "云计算", "区块链", "物联网", "5g", "芯片", "半导体", "处理器"
+        ]
+        
+        # 社会政治标题关键词
+        politics_keywords = [
+            "政策", "选举", "政府", "特朗普", "拜登", "election", "policy", 
+            "government", "political", "politics", "law", "regulation", "bill",
+            "congress", "senate", "house", "parliament", "minister", "president",
+            "prime minister", "diplomacy", "foreign", "international", "war",
+            "peace", "conflict", "security", "defense", "military", "army",
+            "environment", "climate", "energy", "health", "education", "welfare",
+            "社会", "政治", "政策", "法规", "法律", "选举", "政府", "国会",
+            "议会", "外交", "国际", "战争", "和平", "安全", "国防", "军事",
+            "环境", "气候", "能源", "健康", "教育", "福利"
+        ]
+        
+        for item in items:
+            source_lower = item.source.lower()
+            title_lower = item.title.lower()
+            
+            # 检查来源
+            category_found = False
+            
+            # 检查财经来源
+            if any(s in source_lower for s in finance_sources):
+                item.pre_category = "财经"
+                item.pre_category_confidence = 0.8  # 来源匹配，置信度高
+                categorized["财经"].append(item)
+                category_found = True
+            
+            # 检查科技来源
+            elif any(s in source_lower for s in tech_sources):
+                item.pre_category = "科技"
+                item.pre_category_confidence = 0.8
+                categorized["科技"].append(item)
+                category_found = True
+            
+            # 检查社会政治来源
+            elif any(s in source_lower for s in politics_sources):
+                item.pre_category = "社会政治"
+                item.pre_category_confidence = 0.8
+                categorized["社会政治"].append(item)
+                category_found = True
+            
+            # 如果来源未匹配，检查标题关键词
+            if not category_found:
+                # 检查财经关键词
+                finance_match_count = sum(1 for k in finance_keywords if k in title_lower)
+                tech_match_count = sum(1 for k in tech_keywords if k in title_lower)
+                politics_match_count = sum(1 for k in politics_keywords if k in title_lower)
+                
+                # 选择匹配最多的类别
+                max_count = max(finance_match_count, tech_match_count, politics_match_count)
+                
+                if max_count > 0:
+                    if max_count == finance_match_count:
+                        item.pre_category = "财经"
+                        item.pre_category_confidence = 0.6  # 关键词匹配，置信度中等
+                        categorized["财经"].append(item)
+                    elif max_count == tech_match_count:
+                        item.pre_category = "科技"
+                        item.pre_category_confidence = 0.6
+                        categorized["科技"].append(item)
+                    elif max_count == politics_match_count:
+                        item.pre_category = "社会政治"
+                        item.pre_category_confidence = 0.6
+                        categorized["社会政治"].append(item)
+                else:
+                    # 未匹配任何关键词
+                    item.pre_category = ""
+                    item.pre_category_confidence = 0.0
+                    categorized["未分类"].append(item)
+        
+        return categorized
+    
+    async def _pass1_finance_screen(self, items: List[NewsItem]) -> List[NewsItem]:
+        """
+        财经新闻 Pass 1 快速预筛
+        针对财经新闻特点优化的快速评分
+        """
+        prompt_template = """
+快速评估这条财经新闻的价值(0-10分)。
+
+评估标准（针对财经新闻优化）:
+- 市场影响(40%): 对股市/债市/汇市的影响程度，重大政策、企业财报、市场波动等
+- 投资价值(30%): 对投资决策的参考价值，是否能指导投资行为
+- 时效性(20%): 新闻的及时性和新鲜度，市场反应时间
+- 深度(10%): 分析的深度和专业性，数据支撑和逻辑性
+
+新闻标题: {title}
+来源: {source}
+摘要: {summary}
+
+只需返回JSON格式: {{"market_impact": 8, "investment_value": 7, "timeliness": 9, "depth": 6, "total": 7.5}}
+不要其他解释。
+"""
+        return await self._pass1_screen_with_prompt(items, prompt_template, self.pass1_threshold_finance)
+    
+    async def _pass1_tech_screen(self, items: List[NewsItem]) -> List[NewsItem]:
+        """
+        科技新闻 Pass 1 快速预筛
+        针对科技新闻特点优化的快速评分
+        """
+        prompt_template = """
+快速评估这条科技新闻的价值(0-10分)。
+
+评估标准（针对科技新闻优化）:
+- 技术创新(40%): 技术突破和创新程度，是否是重大技术进展
+- 实用性(30%): 实际应用价值和可行性，落地可能性
+- 影响力(20%): 对行业和社会的影响范围，关注度和传播度
+- 深度(10%): 技术解读的专业深度，技术细节和原理阐述
+
+新闻标题: {title}
+来源: {source}
+摘要: {summary}
+
+只需返回JSON格式: {{"innovation": 8, "practicality": 7, "impact": 9, "depth": 6, "total": 7.5}}
+不要其他解释。
+"""
+        return await self._pass1_screen_with_prompt(items, prompt_template, self.pass1_threshold_tech)
+    
+    async def _pass1_politics_screen(self, items: List[NewsItem]) -> List[NewsItem]:
+        """
+        社会政治新闻 Pass 1 快速预筛
+        针对社会政治新闻特点优化的快速评分
+        """
+        prompt_template = """
+快速评估这条社会政治新闻的价值(0-10分)。
+
+评估标准（针对社会政治新闻优化）:
+- 政策影响(40%): 对政策制定和执行的影响程度，政策变化和法规调整
+- 公众关注度(30%): 社会关注度和讨论热度，媒体报道和舆论反响
+- 时效性(20%): 新闻及时性和紧迫性，事件发展速度和最新进展
+- 深度(10%): 背景分析深入程度，历史脉络和多方观点
+
+新闻标题: {title}
+来源: {source}
+摘要: {summary}
+
+只需返回JSON格式: {{"policy_impact": 8, "public_attention": 7, "timeliness": 9, "depth": 6, "total": 7.5}}
+不要其他解释。
+"""
+        return await self._pass1_screen_with_prompt(items, prompt_template, self.pass1_threshold_politics)
+    
+    async def _pass1_generic_screen(self, items: List[NewsItem]) -> List[NewsItem]:
+        """
+        未分类新闻 Pass 1 通用预筛
+        使用通用标准
+        """
+        prompt_template = """
+快速评估这条新闻的价值(0-10分)。
+
+评估标准:
+- 重要性(40%): 新闻的重要程度和影响力
+- 时效性(30%): 新闻的及时性和新鲜度
+- 质量(30%): 内容质量和信息密度
+
+新闻标题: {title}
+来源: {source}
+摘要: {summary}
+
+只需返回JSON格式: {{"importance": 8, "timeliness": 7, "quality": 7, "total": 7.4}}
+不要其他解释。
+"""
+        return await self._pass1_screen_with_prompt(items, prompt_template, self.pass1_threshold)
+    
+    async def _pass1_screen_with_prompt(
+        self, 
+        items: List[NewsItem], 
+        prompt_template: str,
+        threshold: float
+    ) -> List[NewsItem]:
+        """
+        通用的 Pass 1 筛查方法，使用指定的 prompt 模板
+        """
+        scored_items = []
+        
+        # 批量处理
+        batch_size = min(self.true_batch_size, len(items))
+        for i in range(0, len(items), batch_size):
+            batch = items[i:i+batch_size]
+            
+            # 构建批量 Prompt
+            batch_prompt = "请对以下新闻进行批量快速评分:\n\n"
+            for idx, item in enumerate(batch, 1):
+                batch_prompt += f"新闻{idx}:\n"
+                batch_prompt += f"标题: {item.title}\n"
+                batch_prompt += f"来源: {item.source}\n"
+                batch_prompt += f"摘要: {item.summary[:200]}\n\n"
+            
+            batch_prompt += """
+请返回JSON数组格式:
+[{"news_index": 1, "total": 7.5}, ...]
+"""
+            
+            try:
+                # 应用速率限制
+                if self.rate_limiter:
+                    await self.rate_limiter.acquire()
+                
+                # 调用API进行快速评分
+                response = await self.client.chat.completions.create(
+                    model=self.model,
+                    messages=[
+                        {"role": "system", "content": "快速评分助手，只返回JSON"},
+                        {"role": "user", "content": batch_prompt}
+                    ],
+                    max_tokens=500,
+                    temperature=0.3,
+                    response_format={"type": "json_object"}
+                )
+                
+                self.api_call_count += 1
+                
+                content = response.choices[0].message.content
+                data = json.loads(content)
+                
+                # 处理数组或对象包装
+                if isinstance(data, dict):
+                    for key, value in data.items():
+                        if isinstance(value, list):
+                            data = value
+                            break
+                
+                # 映射评分结果
+                if isinstance(data, list):
+                    for item_data in data:
+                        idx = item_data.get('news_index', 0) - 1
+                        if 0 <= idx < len(batch):
+                            item = batch[idx]
+                            item.ai_score = item_data.get('total', 5.0)
+                            scored_items.append(item)
+                
+            except Exception as e:
+                logger.error(f"Pass 1快速评分失败: {e}")
+                # 失败时给所有条目默认分数
+                for item in batch:
+                    item.ai_score = 5.0
+                    scored_items.append(item)
+        
+        # 按分类保留≥阈值的新闻
+        passed_items = [item for item in scored_items if item.ai_score >= threshold]
+        
+        return passed_items
+    
+    async def _pass1_pre_screen_legacy(self, items: List[NewsItem]) -> List[NewsItem]:
+        """
+        传统 Pass 1 快速预筛（向后兼容）
+        使用简化Prompt，只评估2个维度，快速过滤低价值新闻
+        """
+        # 构建简化Prompt模板
+        prompt_template = """
+快速评估这条科技新闻对开发者的价值(0-10分)。
+
+评估标准:
+- 影响力(行业影响+受众范围): 0-10分
+- 质量(技术深度+实用性+时效性): 0-10分
+
+新闻: {title}
+来源: {source}
+摘要: {summary}
+
+只需返回JSON格式: {{"impact": 8, "quality": 7, "total": 7.5}}
+不要其他解释。
+"""
+        return await self._pass1_screen_with_prompt(items, prompt_template, self.pass1_threshold)
+    
+    def _log_pass1_results(self, categorized_items: Dict[str, List[NewsItem]], passed_items: List[NewsItem]) -> None:
+        """
+        记录 Pass 1 结果日志
+        """
+        total_input = sum(len(items) for items in categorized_items.values())
+        total_passed = len(passed_items)
+        
+        logger.info(f"🎯 Pass 1 差异化预筛完成:")
+        logger.info(f"   输入: {total_input}条新闻")
+        
+        for category, items in categorized_items.items():
+            if items:
+                passed_count = sum(1 for item in passed_items if item.pre_category == category)
+                threshold = getattr(self, f"pass1_threshold_{category.lower()}", self.pass1_threshold)
+                logger.info(f"   {category}: {len(items)}条 → {passed_count}条通过 (阈值≥{threshold})")
+        
+        logger.info(f"   总计: {total_passed}/{total_input}条通过 (上限{self.pass1_max_items}条)")

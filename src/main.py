@@ -146,18 +146,57 @@ class RSSAggregator:
         logger.info(f"✓ AI模型: {current_provider} ({provider_config.model})")
     
     def _fetch_news(self) -> List[NewsItem]:
-        """获取新闻"""
+        """
+        获取新闻（支持基于时间节点的增量获取）
+        """
         logger.info("📡 开始获取RSS新闻...")
         
-        items = self.fetcher.fetch_all()
+        all_items = []
+        source_stats = {}
         
-        # 过滤已处理的URL
+        for source in self.config.rss_sources:
+            if not source.enabled:
+                continue
+            
+            # 获取该源的最后获取时间
+            last_fetch = self.history.get_source_last_fetch(source.name)
+            
+            # 如果该源没有记录，尝试使用fallback
+            if not last_fetch:
+                last_fetch = self.history.get_fallback_last_fetch()
+                if last_fetch:
+                    logger.info(f"⏰ {source.name} 使用全局fallback时间: {last_fetch}")
+            
+            try:
+                # 获取该源的新闻（传入last_fetch实现增量获取）
+                items = self.fetcher._fetch_single(source, last_fetch)
+                all_items.extend(items)
+                source_stats[source.name] = len(items)
+                
+                # 更新该源的最后获取时间（使用当前时间）
+                self.history.update_source_last_fetch(source.name, datetime.now())
+                
+                if last_fetch:
+                    logger.info(
+                        f"✓ {source.name}: 增量获取 {len(items)} 条 "
+                        f"(上次: {last_fetch.strftime('%m-%d %H:%M')})"
+                    )
+                else:
+                    logger.info(f"✓ {source.name}: 全量获取 {len(items)} 条")
+                    
+            except Exception as e:
+                logger.error(f"❌ 获取 {source.name} 失败: {e}")
+                # 失败时不更新时间戳，下次会重试
+                continue
+        
+        # 过滤已处理的URL（保持原有逻辑）
         processed = self.history.get_processed_urls()
-        new_items = [item for item in items if item.link not in processed]
+        new_items = [item for item in all_items if item.link not in processed]
         
-        logger.info(f"✓ 获取 {len(items)} 条，其中新内容 {len(new_items)} 条")
+        logger.info(f"📊 总计: 获取 {len(all_items)} 条，新内容 {len(new_items)} 条")
+        logger.info(f"📊 各源统计: {source_stats}")
         
-        return new_items if new_items else items  # 如果没有新内容，使用全部
+        return new_items if new_items else all_items  # 如果没有新内容，使用全部
     
     async def _score_news(self, items: List[NewsItem]) -> List[NewsItem]:
         """AI评分 (集成缓存检查)"""
@@ -208,7 +247,7 @@ class RSSAggregator:
         return filtered
     
     def _select_top_news(self, items: List[NewsItem]) -> List[NewsItem]:
-        """选择Top N新闻（按三板块4:3:3比例分配）"""
+        """选择Top N新闻（按三板块4:3:3固定比例分配）"""
         if not items:
             return []
 
@@ -216,54 +255,79 @@ class RSSAggregator:
         finance_items = [item for item in items if item.ai_category == "财经"]
         tech_items = [item for item in items if item.ai_category == "科技"]
         politics_items = [item for item in items if item.ai_category == "社会政治"]
+        
+        # 未分类新闻单独处理
+        uncategorized_items = [item for item in items if item.ai_category not in ["财经", "科技", "社会政治"]]
 
-        # 计算精选总数
-        total_count = len(items)
-        if total_count <= 100:
-            max_count = 10
-        elif total_count <= 200:
-            max_count = 20
-        else:
-            max_count = 30
-
-        # 按 4:3:3 比例分配
-        finance_count = max(int(max_count * 0.4), 3)  # 最少3条
-        tech_count = max(int(max_count * 0.3), 2)       # 最少2条
-        politics_count = max(int(max_count * 0.3), 2)   # 最少2条
-
-        # 调整配额（如果某板块新闻不足，分配给其他板块）
-        # 从财经开始调整
-        if len(finance_items) < finance_count:
-            extra = finance_count - len(finance_items)
-            finance_count = len(finance_items)
-            tech_count += extra // 2
-            politics_count += extra - extra // 2
-
-        if len(tech_items) < tech_count:
-            extra = tech_count - len(tech_items)
-            tech_count = len(tech_items)
-            politics_count += extra
-
-        if len(politics_items) < politics_count:
-            extra = politics_count - len(politics_items)
-            politics_count = len(politics_items)
-            # 多余的配额分配给财经
-            finance_count = min(finance_count + extra, len(finance_items))
+        # 固定总数：30条（根据配置）
+        max_count = self.config.output_config.max_news_count  # 从配置读取，默认为30
+        
+        # 固定比例分配：财经40%，科技30%，社会政治30%
+        target_finance_count = int(max_count * self.config.ai_config.category_quota_finance)  # 12条
+        target_tech_count = int(max_count * self.config.ai_config.category_quota_tech)        # 9条
+        target_politics_count = int(max_count * self.config.ai_config.category_quota_politics)  # 9条
+        
+        # 实际可选取数量（不能超过实际可用数量）
+        actual_finance_count = min(target_finance_count, len(finance_items))
+        actual_tech_count = min(target_tech_count, len(tech_items))
+        actual_politics_count = min(target_politics_count, len(politics_items))
+        
+        # 计算剩余配额
+        remaining_quota = max_count - (actual_finance_count + actual_tech_count + actual_politics_count)
+        
+        # 如果某板块新闻不足，按优先级重新分配配额
+        # 优先级：财经 > 科技 > 社会政治 > 未分类
+        if remaining_quota > 0:
+            # 首先尝试补充财经
+            if actual_finance_count < target_finance_count:
+                can_add = min(remaining_quota, target_finance_count - actual_finance_count)
+                actual_finance_count += can_add
+                remaining_quota -= can_add
+            
+            # 然后尝试补充科技
+            if remaining_quota > 0 and actual_tech_count < target_tech_count:
+                can_add = min(remaining_quota, target_tech_count - actual_tech_count)
+                actual_tech_count += can_add
+                remaining_quota -= can_add
+            
+            # 然后尝试补充社会政治
+            if remaining_quota > 0 and actual_politics_count < target_politics_count:
+                can_add = min(remaining_quota, target_politics_count - actual_politics_count)
+                actual_politics_count += can_add
+                remaining_quota -= can_add
+            
+            # 最后用未分类新闻填充剩余配额
+            if remaining_quota > 0 and uncategorized_items:
+                # 从未分类新闻中选取评分最高的
+                uncategorized_sorted = sorted(uncategorized_items, key=lambda x: (x.ai_score or 0, x.published_at), reverse=True)
+                extra_from_uncategorized = min(remaining_quota, len(uncategorized_sorted))
+                # 将这些未分类新闻标记为"未分类"板块
+                for item in uncategorized_sorted[:extra_from_uncategorized]:
+                    item.ai_category = "未分类"
+                uncategorized_selected = uncategorized_sorted[:extra_from_uncategorized]
+                remaining_quota -= extra_from_uncategorized
+            else:
+                uncategorized_selected = []
 
         # 各自板块内按AI评分排序并选取
         def sort_by_score(item_list):
             return sorted(item_list, key=lambda x: (x.ai_score or 0, x.published_at), reverse=True)
 
-        selected_finance = sort_by_score(finance_items)[:finance_count]
-        selected_tech = sort_by_score(tech_items)[:tech_count]
-        selected_politics = sort_by_score(politics_items)[:politics_count]
-
+        selected_finance = sort_by_score(finance_items)[:actual_finance_count]
+        selected_tech = sort_by_score(tech_items)[:actual_tech_count]
+        selected_politics = sort_by_score(politics_items)[:actual_politics_count]
+        
         # 合并所有选中新闻
-        top_items = selected_finance + selected_tech + selected_politics
+        if 'uncategorized_selected' in locals():
+            top_items = selected_finance + selected_tech + selected_politics + uncategorized_selected
+        else:
+            top_items = selected_finance + selected_tech + selected_politics
 
         # 记录各板块选取情况
-        logger.info(f"📊 三板块选取: 财经 {len(selected_finance)}条 | 科技 {len(selected_tech)}条 | 社会政治 {len(selected_politics)}条")
-        logger.info(f"📋 从 {total_count} 条中精选 Top {len(top_items)} 条新闻")
+        logger.info(f"📊 三板块选取: 财经 {len(selected_finance)}/{target_finance_count}条 | 科技 {len(selected_tech)}/{target_tech_count}条 | 社会政治 {len(selected_politics)}/{target_politics_count}条")
+        if 'uncategorized_selected' in locals() and uncategorized_selected:
+            logger.info(f"📊 补充未分类新闻: {len(uncategorized_selected)}条")
+        logger.info(f"📋 从 {len(items)} 条中精选 Top {len(top_items)} 条新闻 (目标: {max_count}条)")
 
         return top_items
     

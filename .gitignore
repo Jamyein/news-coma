@@ -46,3 +46,4 @@ src/__init__.py
 test_smart_switch.py
 nul
 test_config.py
+docs/2pass-system.md
