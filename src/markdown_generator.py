@@ -71,9 +71,8 @@ class MarkdownGenerator:
 
         header = f"""# 📰 新闻精选
 
-> 🕐 更新时间: {beijing_time.strftime("%Y年%m月%d日 %H:%M")} (北京时间)  
-> 📊 本期精选 **{total_count}** 条高质量新闻  
-> 📰 分为三大板块：财经(40%)、科技(30%)、社会政治(30%)  
+> 🕐 更新时间: {beijing_time.strftime("%Y年%m月%d日 %H:%M")}
+> 📊 本期精选 **{total_count}** 条高质量新闻
 > 🤖 由 AI 自动分类、筛选、翻译和总结
 
 ---
@@ -95,9 +94,7 @@ class MarkdownGenerator:
         # 页脚
         footer = """## 📮 订阅
 
-- **RSS订阅**: [feed.xml](https://raw.githubusercontent.com/{username}/{repo}/main/feed.xml)
-- **更新时间**: 每6小时自动更新
-- **生成方式**: GitHub Actions + OpenAI GPT-4o-mini
+- **RSS订阅**: [feed.xml](https://{username}.github.io/{repo}/feed.xml)
 
 ---
 
