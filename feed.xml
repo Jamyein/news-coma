@@ -5,8 +5,8 @@
     <link>https://github.com/Jamyein/news-coma</link>
     <description>由 AI 筛选的高质量科技新闻聚合，每6小时自动更新</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 01 Feb 2026 02:23:34 GMT</lastBuildDate>
-    <pubDate>Sun, 01 Feb 2026 02:23:34 GMT</pubDate>
+    <lastBuildDate>Sun, 01 Feb 2026 07:58:48 GMT</lastBuildDate>
+    <pubDate>Sun, 01 Feb 2026 07:58:48 GMT</pubDate>
     <atom:link href="https://Jamyein.github.io/news-coma/feed.xml" rel="self" type="application/rss+xml" />
     <image>
         <url>https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</url>
@@ -17,48 +17,207 @@
     <item>
         <title>2026年02月01日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-01.md</link>
-        <description>本期精选 0 条高质量科技新闻</description>
-        <pubDate>Sun, 01 Feb 2026 02:23:34 GMT</pubDate>
+        <description>本期精选 16 条高质量科技新闻</description>
+        <pubDate>Sun, 01 Feb 2026 07:58:48 GMT</pubDate>
         <guid>archive/2026-02-01.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<p># 📰 新闻精选</p>
-<p>> 🕐 更新时间: 2026年02月01日 10:12 (北京时间) > 📊 本期精选 <strong>0</strong> 条高质量新闻 > 📰 分为三大板块：财经(40%)、科技(30%)、社会政治(30%) > 🤖 由 AI 自动分类、筛选、翻译和总结</p>
+<p>> 🕐 更新时间: 2026年02月01日 15:58 (北京时间) > 📊 本期精选 <strong>16</strong> 条高质量新闻 > 📰 分为三大板块：财经(40%)、科技(30%)、社会政治(30%) > 🤖 由 AI 自动分类、筛选、翻译和总结</p>
 <hr/>
-<p>## 💰 财经新闻 (0条)</p>
-<p>*暂无财经板块新闻*</p>
+<p>## 💰 财经新闻 (12条)</p>
+<p>精选 <strong>12</strong> 条财经新闻</p>
+<h3>1. 高盛交易员：大逻辑没有变化，不要'过度解读'过去两天的暴跌</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.1/10</p>
+<p><strong>📝 摘要</strong>: 高盛交易部门负责人Mark Wilson表示，尽管市场近期出现剧烈波动，但投资者不应过度解读这场'持仓清洗'。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>高盛</li>
+<li>市场波动</li>
+<li>投资建议</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3764676">高盛交易员：大逻辑没有变化，不要"过度解读"过去两天的暴跌，尤其要考虑1月的大涨</a>
 <hr/>
-<p>## 🔬 科技新闻 (0条)</p>
-<p>*暂无科技板块新闻*</p>
+<h3>2. 中信证券：维持保险板块处于重大机遇期判断</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 中信证券研报认为，险资作为耐心资本主力，将成为重大受益者，预计险资将积极参与战略投资。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>中信证券维持保险板块机遇期判断</li>
+<li>险资积极参与战略投资</li>
+<li>资本市场共赢</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3664403283092099?f=rss">中信证券：维持保险板块处于重大机遇期判断</a>
 <hr/>
-<p>## 🏛️ 社会政治 (0条)</p>
-<p>*暂无社会政治板块新闻*</p>
-<hr/>]]></content:encoded>
-    </item>
-    <item>
-        <title>2026年02月01日 新闻汇总</title>
-        <link>https://Jamyein.github.io/news-coma/</link>
-        <description>本期精选 0 条高质量科技新闻</description>
-        <pubDate>Sun, 01 Feb 2026 02:23:34 GMT</pubDate>
-        <guid>docs/latest.md</guid>
-        <category>综合新闻</category>
-        <content:encoded><![CDATA[<p># 📰 新闻精选</p>
-<p>> 🕐 更新时间: 2026年02月01日 10:23 (北京时间) > 📊 本期精选 <strong>0</strong> 条高质量新闻 > 📰 分为三大板块：财经(40%)、科技(30%)、社会政治(30%) > 🤖 由 AI 自动分类、筛选、翻译和总结</p>
+<h3>3. 从元宝10亿拉新，看腾讯的「用户姿态」急转</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 腾讯元宝推广红包在微信群里快速蔓延，用户参与瓜分。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>腾讯元宝推广红包</li>
+<li>用户参与瓜分</li>
+<li>腾讯产品逻辑</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3764681">从元宝10亿拉新，看腾讯的「用户姿态」急转</a>
 <hr/>
-<p>## 💰 财经新闻 (0条)</p>
-<p>*暂无财经板块新闻*</p>
+<h3>4. 昊铂埃安告别舒适区</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 昊铂埃安推出多款新车，计划未来2-3年推出不少于30款新车及改款车型，冲击高端市场。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>昊铂埃安</li>
+<li>新车推出</li>
+<li>市场规划</li>
+<li>高端市场</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3764680">昊铂埃安告别舒适区</a>
 <hr/>
-<p>## 🔬 科技新闻 (0条)</p>
-<p>*暂无科技板块新闻*</p>
+<h3>5. 贵金属市场上演“过山车”行情</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 本周全球贵金属市场经历剧烈波动，国际金价断崖式回落，对国内市场产生影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>贵金属市场</li>
+<li>金价波动</li>
+<li>市场影响</li>
+<li>投资风险</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3664233674154882?f=rss">贵金属市场上演“过山车”行情</a>
 <hr/>
-<p>## 🏛️ 社会政治 (0条)</p>
-<p>*暂无社会政治板块新闻*</p>
+<h3>6. 以旧换新政策带动消费需求释放，部分地区家电订单量同比增64%</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 以旧换新政策带动消费需求，部分地区家电订单量同比增长64%，消费市场活跃。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>以旧换新</li>
+<li>消费需求</li>
+<li>家电订单</li>
+<li>市场活跃</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3664094138377094?f=rss">以旧换新政策带动消费需求释放，部分地区家电订单量同比增64%</a>
+<hr/>
+<h3>7. SpaceX投资人：今年的IPO将是“史上最大的造富事件”，马斯克仍被低估，火箭运力过剩催生太空数据中心</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 红杉资本合伙人Shaun Maguire认为SpaceX即将进行的IPO将是'史上最健康的财富创造事件'。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>SpaceX</li>
+<li>IPO</li>
+<li>马斯克</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3764683">Space X投资人：今年的IPO将是“史上最大的造富事件”，马斯克仍被低估，火箭运力过剩催生太空数据中心</a>
+<hr/>
+<h3>8. 周末要闻汇总：白银史诗级暴跌 黄金创40年最大跌幅</h3>
+<p><strong>📌 来源</strong>: 东方财富 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 周末影响市场的重要资讯包括证监会座谈会、战略投资者类型扩大、贵金属期货保证金上调等。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>证监会座谈会</li>
+<li>战略投资者类型扩大</li>
+<li>贵金属期货保证金上调</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="http://finance.eastmoney.com/news/1345,202602013637882425.html">周末要闻汇总：白银史诗级暴跌 黄金创40年最大跌幅</a>
+<hr/>
+<h3>9. 美银Hartnett：终结"黄金大牛市"的只能是"更大的事件"'</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 美银首席投资策略师认为，只有更大的事件才能终结黄金大牛市。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>美银</li>
+<li>黄金大牛市</li>
+<li>投资策略</li>
+<li>市场预测</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3764682">美银Hartnett：终结"黄金大牛市"的只能是"更大的事件"</a>
+<hr/>
+<h3>10. 问界1月交付40016辆，同比增长83%</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 问界汽车在2026年1月交付量达到40016辆，同比增长83%，显示出良好的市场表现。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>问界</li>
+<li>交付量</li>
+<li>同比增长</li>
+<li>市场表现</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3664323425969024?f=rss">问界：1月交付40016辆，同比增长83%</a>
+<hr/>
+<h3>11. 6只黄金股披露2025年度业绩预告</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 6家黄金上市公司披露2025年度业绩预告，紫金矿业净利润同比预增59%-62%，中金黄金Q4净利预计环比增长14%-75%。该新闻对市场影响较大，对投资者有参考价值。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>紫金矿业净利润预增</li>
+<li>中金黄金Q4净利预计增长</li>
+<li>黄金股业绩预告</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3664268404990592?f=rss">6只黄金股披露2025年度业绩预告</a>
+<hr/>
+<h3>12. 俄罗斯努力摆脱对外国技术进口的依赖</h3>
+<p><strong>📌 来源</strong>: Financial Times | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 分析师表示，莫斯科实现到2030年实现独立的目标过于乐观。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>俄罗斯</li>
+<li>技术独立</li>
+<li>分析师预测</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/80cd2d5a-9aa4-40a4-b0fc-a2d1080622f7">Russia struggles to shake reliance on foreign technology imports</a>
+<hr/>
+<p>## 🔬 科技新闻 (3条)</p>
+<p>精选 <strong>3</strong> 条科技新闻</p>
+<h3>13. 华为推出首个服务基层医院端云协同智慧病理解决方案</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.3/10</p>
+<p><strong>📝 摘要</strong>: 华为云发布智慧医疗专区，提供服务基层医院的端云协同智慧病理解决方案，提升基层医疗水平。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>华为云</li>
+<li>智慧医疗</li>
+<li>基层医院</li>
+<li>病理解决方案</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3664185894462088?f=rss">华为推出首个服务基层医院端云协同智慧病理解决方案</a>
+<hr/>
+<h3>14. Meet the new European unicorns of 2026</h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.1/10</p>
+<p><strong>📝 摘要</strong>: 从比利时到乌克兰，五家新的欧洲独角兽公司在本月诞生。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>欧洲</li>
+<li>独角兽公司</li>
+<li>科技发展</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/01/31/meet-the-new-european-unicorns-of-2026/">Meet the new European unicorns of 2026</a>
+<hr/>
+<h3>15. Apple-1 Computer Prototype Board #0 sold for $2.75M</h3>
+<p><strong>📌 来源</strong>: Hacker News | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: Apple-1计算机原型板以27.5万美元的价格售出，展示了技术创新和收藏价值。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>Apple-1计算机原型板</li>
+<li>高价售出</li>
+<li>技术创新</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.rrauction.com/auctions/lot-detail/350902407346003-apple-1-computer-prototype-board-0-the-celebration-board-representing-the-earliest-known-fiberglass-apple-1-prototype/">Apple-1 Computer Prototype Board #0 sold for $2.75M</a>
+<hr/>
+<p>## 🏛️ 社会政治 (1条)</p>
+<p>精选 <strong>1</strong> 条社会政治新闻</p>
+<h3>16. 车臣战争头目的健康危机威胁普京对该地区的计划</h3>
+<p><strong>📌 来源</strong>: Financial Times | <strong>🏷️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 拉姆赞·卡德罗夫据说生病了，他的可能的继承人严重受伤，这威胁到克里姆林宫的继位策略。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>车臣</li>
+<li>政治危机</li>
+<li>普京</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/e746e47b-16d6-4f06-91c0-72355216088d">Chechen warlords’ health crises threaten Putin’s plan for the region</a>
 <hr/>]]></content:encoded>
     </item>
     <item>
         <title>2026年01月31日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-01-31.md</link>
         <description>本期精选 5 条高质量科技新闻</description>
-        <pubDate>Sun, 01 Feb 2026 02:21:44 GMT</pubDate>
+        <pubDate>Sun, 01 Feb 2026 07:54:10 GMT</pubDate>
         <guid>archive/2026-01-31.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<p># 📰 科技新闻精选</p>

@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-02-01T02:22:00.415376",
+  "last_run": "2026-02-01T07:54:27.596870",
   "processed_urls": [
     "https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding",
     "https://viewfromthewing.com/court-filings-ice-uses-mobile-fortify-to-identify-protesters-global-entry-and-precheck-get-revoked/",
@@ -518,12 +518,48 @@
     "http://finance.eastmoney.com/news/1345,202601263631013986.html",
     "https://36kr.com/newsflashes/3664116356293256?f=rss",
     "https://wallstreetcn.com/articles/3764665",
-    "http://money.eastmoney.com/news/1583,202601273632594018.html"
+    "http://money.eastmoney.com/news/1583,202601273632594018.html",
+    "https://techcrunch.com/2026/01/31/meet-the-new-european-unicorns-of-2026/",
+    "https://www.rrauction.com/auctions/lot-detail/350902407346003-apple-1-computer-prototype-board-0-the-celebration-board-representing-the-earliest-known-fiberglass-apple-1-prototype/",
+    "https://www.ft.com/content/80cd2d5a-9aa4-40a4-b0fc-a2d1080622f7",
+    "https://www.ft.com/content/e746e47b-16d6-4f06-91c0-72355216088d",
+    "https://www.ft.com/content/a92cd27a-8b47-4c1f-8457-205da9edf2d9",
+    "https://www.ft.com/content/88177d81-0217-4d44-9b37-03a834b3d1c1",
+    "https://wallstreetcn.com/articles/3764683",
+    "https://wallstreetcn.com/articles/3764682",
+    "https://wallstreetcn.com/articles/3764681",
+    "https://wallstreetcn.com/articles/3764680",
+    "https://wallstreetcn.com/articles/3764679",
+    "https://wallstreetcn.com/articles/3764678",
+    "https://wallstreetcn.com/articles/3764676",
+    "https://wallstreetcn.com/articles/3764677",
+    "https://36kr.com/newsflashes/3664403283092099?f=rss",
+    "https://36kr.com/newsflashes/3664442523918981?f=rss",
+    "https://36kr.com/newsflashes/3664355037962884?f=rss",
+    "https://36kr.com/newsflashes/3664331418231681?f=rss",
+    "https://36kr.com/newsflashes/3664322030985861?f=rss",
+    "https://36kr.com/newsflashes/3664323425969024?f=rss",
+    "https://36kr.com/newsflashes/3664268404990592?f=rss",
+    "https://36kr.com/newsflashes/3664258946048905?f=rss",
+    "https://36kr.com/newsflashes/3664257627693955?f=rss",
+    "https://36kr.com/newsflashes/3664233674154882?f=rss",
+    "https://36kr.com/newsflashes/3664267161690753?f=rss",
+    "https://36kr.com/newsflashes/3664226892833664?f=rss",
+    "https://36kr.com/newsflashes/3664214389121928?f=rss",
+    "https://36kr.com/newsflashes/3664212175282819?f=rss",
+    "https://36kr.com/newsflashes/3664185894462088?f=rss",
+    "https://36kr.com/newsflashes/3664166232122243?f=rss",
+    "https://36kr.com/newsflashes/3664095116452483?f=rss",
+    "https://36kr.com/newsflashes/3664167376216707?f=rss",
+    "https://36kr.com/newsflashes/3664158509720193?f=rss",
+    "https://36kr.com/newsflashes/3664094138377094?f=rss",
+    "http://finance.eastmoney.com/news/1345,202602013637882425.html",
+    "https://www.wsj.com/business/deals/kkr-led-group-set-to-buy-singapore-data-center-firm-valued-at-over-10-billion-a022c5e3?mod=pls_whats_news_us_business_f"
   ],
   "stats": {
-    "total_runs": 11,
-    "total_news_processed": 583,
-    "avg_news_per_run": 53.0
+    "total_runs": 12,
+    "total_news_processed": 619,
+    "avg_news_per_run": 51.6
   },
   "source_stats": {
     "The Verge": {
@@ -531,12 +567,12 @@
       "selected": 6
     },
     "Hacker News": {
-      "fetched": 97,
-      "selected": 19
+      "fetched": 98,
+      "selected": 20
     },
     "TechCrunch": {
-      "fetched": 44,
-      "selected": 8
+      "fetched": 45,
+      "selected": 9
     },
     "GitHub Blog": {
       "fetched": 10,
@@ -547,24 +583,24 @@
       "selected": 2
     },
     "Financial Times": {
-      "fetched": 18,
-      "selected": 1
+      "fetched": 22,
+      "selected": 3
     },
     "WSJ 经济": {
-      "fetched": 75,
+      "fetched": 76,
       "selected": 0
     },
     "36氪": {
-      "fetched": 33,
-      "selected": 1
+      "fetched": 53,
+      "selected": 7
     },
     "WSJ 全球经济": {
       "fetched": 24,
       "selected": 1
     },
     "华尔街见闻": {
-      "fetched": 54,
-      "selected": 10
+      "fetched": 62,
+      "selected": 15
     },
     "BBC Business": {
       "fetched": 38,
@@ -575,8 +611,8 @@
       "selected": 0
     },
     "东方财富": {
-      "fetched": 62,
-      "selected": 0
+      "fetched": 63,
+      "selected": 1
     },
     "CNBC": {
       "fetched": 19,
@@ -1755,10 +1791,439 @@
       ],
       "cached_at": "2026-02-01T02:23:34.433475",
       "source": "东方财富"
+    },
+    "11d41b782c4edcb2": {
+      "ai_score": 7.5,
+      "translated_title": "俄罗斯努力摆脱对外国技术进口的依赖",
+      "ai_summary": "分析师表示，莫斯科实现到2030年实现独立的目标过于乐观。",
+      "key_points": [
+        "俄罗斯",
+        "技术独立",
+        "分析师预测"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841077",
+      "source": "Financial Times"
+    },
+    "02cb658f1856800e": {
+      "ai_score": 8.1,
+      "translated_title": "高盛交易员：大逻辑没有变化，不要'过度解读'过去两天的暴跌",
+      "ai_summary": "高盛交易部门负责人Mark Wilson表示，尽管市场近期出现剧烈波动，但投资者不应过度解读这场'持仓清洗'。",
+      "key_points": [
+        "高盛",
+        "市场波动",
+        "投资建议"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841096",
+      "source": "华尔街见闻"
+    },
+    "18d0976520374786": {
+      "ai_score": 6.8,
+      "translated_title": "世界最大直径竖井掘进机“启明号”顺利贯通",
+      "ai_summary": "世界最大直径竖井掘进机“启明号”在崇太长江隧道2号竖井顺利贯通，创造了新纪录。",
+      "key_points": [
+        "竖井掘进机",
+        "新纪录",
+        "隧道建设"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841108",
+      "source": "36氪"
+    },
+    "a9cc6f3b914e5c0a": {
+      "ai_score": 6.8,
+      "translated_title": "市场消息：由KKR牵头的财团将收购ST Telemedia Global Data Centres",
+      "ai_summary": "由KKR牵头的财团将以超100亿美元的价格收购新加坡数据中心公司ST Telemedia Global Data Centres。",
+      "key_points": [
+        "收购",
+        "数据中心",
+        "KKR"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841117",
+      "source": "36氪"
+    },
+    "7ba8b2d032903804": {
+      "ai_score": 6.8,
+      "translated_title": "Kimi K2.5成为OpenClaw首个宣布免费使用的主力模型",
+      "ai_summary": "AI智能体OpenClaw宣布，用户调用Kimi K2.5 模型和Kimi Coding相关能力，均可免费体验。",
+      "key_points": [
+        "AI",
+        "免费使用",
+        "OpenClaw"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841126",
+      "source": "36氪"
+    },
+    "7f2876c17d0e57b4": {
+      "ai_score": 8.1,
+      "translated_title": "Meet the new European unicorns of 2026",
+      "ai_summary": "从比利时到乌克兰，五家新的欧洲独角兽公司在本月诞生。",
+      "key_points": [
+        "欧洲",
+        "独角兽公司",
+        "科技发展"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841133",
+      "source": "TechCrunch"
+    },
+    "a344462099794d11": {
+      "ai_score": 7.6,
+      "translated_title": "车臣战争头目的健康危机威胁普京对该地区的计划",
+      "ai_summary": "拉姆赞·卡德罗夫据说生病了，他的可能的继承人严重受伤，这威胁到克里姆林宫的继位策略。",
+      "key_points": [
+        "车臣",
+        "政治危机",
+        "普京"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841141",
+      "source": "Financial Times"
+    },
+    "6c6576ac6a998612": {
+      "ai_score": 7.5,
+      "translated_title": "SpaceX投资人：今年的IPO将是“史上最大的造富事件”，马斯克仍被低估，火箭运力过剩催生太空数据中心",
+      "ai_summary": "红杉资本合伙人Shaun Maguire认为SpaceX即将进行的IPO将是'史上最健康的财富创造事件'。",
+      "key_points": [
+        "SpaceX",
+        "IPO",
+        "马斯克"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841152",
+      "source": "华尔街见闻"
+    },
+    "8ce541cbcc52cced": {
+      "ai_score": 6.8,
+      "translated_title": "“门徒”一统财政部和美联储，是时候学习“德鲁肯米勒经济学”了",
+      "ai_summary": "随着特朗普总统宣布沃什为美联储主席人选，华尔街传奇投资者德鲁肯米勒正以一种独特方式成为全球经济政策最具影响力的人物。",
+      "key_points": [
+        "德鲁肯米勒",
+        "美联储",
+        "经济政策"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841162",
+      "source": "华尔街见闻"
+    },
+    "4854db98568512cc": {
+      "ai_score": 6.8,
+      "translated_title": "华尔街聚焦沃什：“降息+缩表”如何同时做到？，“导师”德鲁肯米勒：他不一定是鹰派",
+      "ai_summary": "特朗普提名沃什执掌美联储，引发市场对政策方向的重新定价。",
+      "key_points": [
+        "美联储",
+        "沃什",
+        "经济政策"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841171",
+      "source": "华尔街见闻"
+    },
+    "ddc42bc3af3bb393": {
+      "ai_score": 7.5,
+      "translated_title": "问界1月交付40016辆，同比增长83%",
+      "ai_summary": "问界汽车在2026年1月交付量达到40016辆，同比增长83%，显示出良好的市场表现。",
+      "key_points": [
+        "问界",
+        "交付量",
+        "同比增长",
+        "市场表现"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841178",
+      "source": "36氪"
+    },
+    "fe564408f037a6ff": {
+      "ai_score": 7.8,
+      "translated_title": "贵金属市场上演“过山车”行情",
+      "ai_summary": "本周全球贵金属市场经历剧烈波动，国际金价断崖式回落，对国内市场产生影响。",
+      "key_points": [
+        "贵金属市场",
+        "金价波动",
+        "市场影响",
+        "投资风险"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841186",
+      "source": "36氪"
+    },
+    "2703e4ec399ecd62": {
+      "ai_score": 6.8,
+      "translated_title": "提前拉开“春运”序幕，拱北口岸单日客流再创新高",
+      "ai_summary": "拱北口岸单日客流创新高，拉开春运序幕，预计春运期间客流总量同比增长36.4%。",
+      "key_points": [
+        "春运",
+        "拱北口岸",
+        "客流创新高",
+        "同比增长"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841193",
+      "source": "36氪"
+    },
+    "b099fd5715ca5fc5": {
+      "ai_score": 8.3,
+      "translated_title": "华为推出首个服务基层医院端云协同智慧病理解决方案",
+      "ai_summary": "华为云发布智慧医疗专区，提供服务基层医院的端云协同智慧病理解决方案，提升基层医疗水平。",
+      "key_points": [
+        "华为云",
+        "智慧医疗",
+        "基层医院",
+        "病理解决方案"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841201",
+      "source": "36氪"
+    },
+    "3c621c783cac4261": {
+      "ai_score": 7.5,
+      "translated_title": "岚图汽车1月交付10515辆，同比增长31%",
+      "ai_summary": "岚图汽车2026年1月交付量达到10515辆，同比增长31%，市场表现良好。",
+      "key_points": [
+        "岚图汽车",
+        "交付量",
+        "同比增长",
+        "市场表现"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841208",
+      "source": "36氪"
+    },
+    "924700799be8a427": {
+      "ai_score": 7.8,
+      "translated_title": "以旧换新政策带动消费需求释放，部分地区家电订单量同比增64%",
+      "ai_summary": "以旧换新政策带动消费需求，部分地区家电订单量同比增长64%，消费市场活跃。",
+      "key_points": [
+        "以旧换新",
+        "消费需求",
+        "家电订单",
+        "市场活跃"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841216",
+      "source": "36氪"
+    },
+    "669bc1f822059815": {
+      "ai_score": 7.8,
+      "translated_title": "KKR-Led Group Set to Buy Singapore Data-Center Firm Valued at Over $10 Billion",
+      "ai_summary": "KKR领导的集团即将收购新加坡数据中心公司，估值超过100亿美元。",
+      "key_points": [
+        "KKR",
+        "数据中心收购",
+        "新加坡",
+        "高估值"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841225",
+      "source": "WSJ 经济"
+    },
+    "a29e2d4d600becc1": {
+      "ai_score": 7.8,
+      "translated_title": "Who wants to live forever?",
+      "ai_summary": "不朽之梦不再仅限于科幻小说。",
+      "key_points": [
+        "不朽之梦",
+        "科幻小说",
+        "现实意义"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841233",
+      "source": "Financial Times"
+    },
+    "31daa64fd9fe22d6": {
+      "ai_score": 7.5,
+      "translated_title": "美银Hartnett：终结\"黄金大牛市\"的只能是\"更大的事件\"'",
+      "ai_summary": "美银首席投资策略师认为，只有更大的事件才能终结黄金大牛市。",
+      "key_points": [
+        "美银",
+        "黄金大牛市",
+        "投资策略",
+        "市场预测"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841243",
+      "source": "华尔街见闻"
+    },
+    "af8daddf95bd25fd": {
+      "ai_score": 7.8,
+      "translated_title": "昊铂埃安告别舒适区",
+      "ai_summary": "昊铂埃安推出多款新车，计划未来2-3年推出不少于30款新车及改款车型，冲击高端市场。",
+      "key_points": [
+        "昊铂埃安",
+        "新车推出",
+        "市场规划",
+        "高端市场"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841250",
+      "source": "华尔街见闻"
+    },
+    "6e62698e9685fe27": {
+      "ai_score": 7.5,
+      "translated_title": "币安发布“1010历史级别清仓”详细报告，赵长鹏否认从崩盘获利，徐明星“就是币安不负责任导致的”",
+      "ai_summary": "全球最大加密货币交易所币安发布报告，否认核心交易系统故障是主因，但解释未能平息行业对其营销策略和市场影响力的质疑。",
+      "key_points": [
+        "币安发布清仓报告",
+        "赵长鹏否认获利",
+        "徐明星指责币安营销策略"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841264",
+      "source": "华尔街见闻"
+    },
+    "ad1e3a1a7a541458": {
+      "ai_score": 7.8,
+      "translated_title": "中信证券：维持保险板块处于重大机遇期判断",
+      "ai_summary": "中信证券研报认为，险资作为耐心资本主力，将成为重大受益者，预计险资将积极参与战略投资。",
+      "key_points": [
+        "中信证券维持保险板块机遇期判断",
+        "险资积极参与战略投资",
+        "资本市场共赢"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841272",
+      "source": "36氪"
+    },
+    "4a21419d063d59c5": {
+      "ai_score": 6.8,
+      "translated_title": "申万宏源：市场仍预期2026年美联储降息2次",
+      "ai_summary": "申万宏源研报称，市场仍预期2026年美联储降息2次，特朗普提名沃什为下届美联储主席。",
+      "key_points": [
+        "市场预期美联储降息",
+        "特朗普提名沃什为美联储主席",
+        "金融市场波动"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841281",
+      "source": "36氪"
+    },
+    "0c452fa350c6d1f9": {
+      "ai_score": 7.5,
+      "translated_title": "陈茂波：海外企业和投资者对投资香港的信心加强",
+      "ai_summary": "香港特区政府财政司司长陈茂波表示，海外企业和投资者对投资香港的信心正在加强。",
+      "key_points": [
+        "海外投资者信心加强",
+        "香港投资前景乐观",
+        "经济发展提质增量"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841291",
+      "source": "36氪"
+    },
+    "4579a21dd22e51ae": {
+      "ai_score": 6.8,
+      "translated_title": "国家税务总局明确起征点标准等增值税征管事项",
+      "ai_summary": "国家税务总局明确起征点标准等增值税征管事项，细化操作要求。",
+      "key_points": [
+        "国家税务总局明确增值税征管事项",
+        "起征点标准判定",
+        "税收优惠政策"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841298",
+      "source": "36氪"
+    },
+    "7288a3fb3bdaf1f2": {
+      "ai_score": 6.3,
+      "translated_title": "后视摄像头故障，丰田在美召回超16万辆坦途",
+      "ai_summary": "丰田汽车因后视摄像头故障召回部分车型。",
+      "key_points": [
+        "丰田召回坦途",
+        "后视摄像头故障",
+        "汽车召回"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841305",
+      "source": "36氪"
+    },
+    "6c6ae8cb8cc0823f": {
+      "ai_score": 7.5,
+      "translated_title": "周末要闻汇总：白银史诗级暴跌 黄金创40年最大跌幅",
+      "ai_summary": "周末影响市场的重要资讯包括证监会座谈会、战略投资者类型扩大、贵金属期货保证金上调等。",
+      "key_points": [
+        "证监会座谈会",
+        "战略投资者类型扩大",
+        "贵金属期货保证金上调"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841313",
+      "source": "东方财富"
+    },
+    "270ab765a7315aea": {
+      "ai_score": 7.5,
+      "translated_title": "Musk reaffirms Republican ties with $10mn in donations",
+      "ai_summary": "世界首富Musk通过捐款修复与特朗普的关系，并放弃组建右翼政党的威胁。",
+      "key_points": [
+        "Musk捐款修复与特朗普关系",
+        "放弃组建右翼政党",
+        "共和党关系"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841319",
+      "source": "Financial Times"
+    },
+    "2031e42f650588f3": {
+      "ai_score": 7.8,
+      "translated_title": "从元宝10亿拉新，看腾讯的「用户姿态」急转",
+      "ai_summary": "腾讯元宝推广红包在微信群里快速蔓延，用户参与瓜分。",
+      "key_points": [
+        "腾讯元宝推广红包",
+        "用户参与瓜分",
+        "腾讯产品逻辑"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841328",
+      "source": "华尔街见闻"
+    },
+    "788b5913c6ede650": {
+      "ai_score": 6.8,
+      "translated_title": "印尼解除禁令，允许马斯克旗下Grok重启服务",
+      "ai_summary": "印尼通信和数字事务部宣布，在马斯克旗下X平台就Grok人工智能工具制作色情内容一事作出保证后，已允许该工具恢复服务。",
+      "key_points": [
+        "印尼解除Grok禁令",
+        "Grok恢复服务",
+        "人工智能工具"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841336",
+      "source": "36氪"
+    },
+    "3e799900e672a7ff": {
+      "ai_score": 7.5,
+      "translated_title": "6只黄金股披露2025年度业绩预告",
+      "ai_summary": "6家黄金上市公司披露2025年度业绩预告，紫金矿业净利润同比预增59%-62%，中金黄金Q4净利预计环比增长14%-75%。该新闻对市场影响较大，对投资者有参考价值。",
+      "key_points": [
+        "紫金矿业净利润预增",
+        "中金黄金Q4净利预计增长",
+        "黄金股业绩预告"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841362",
+      "source": "36氪"
+    },
+    "5c288fda2c3bcd65": {
+      "ai_score": 7.0,
+      "translated_title": "小米否认与福特探索成立电车合资企业",
+      "ai_summary": "小米否认与福特汽车公司商谈合资企业制造电动汽车的报道。该新闻对市场有一定影响，但投资价值有限。",
+      "key_points": [
+        "小米否认合资企业报道",
+        "福特汽车",
+        "电动汽车"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841370",
+      "source": "36氪"
+    },
+    "2675d686002112d9": {
+      "ai_score": 8.0,
+      "translated_title": "Apple-1 Computer Prototype Board #0 sold for $2.75M",
+      "ai_summary": "Apple-1计算机原型板以27.5万美元的价格售出，展示了技术创新和收藏价值。",
+      "key_points": [
+        "Apple-1计算机原型板",
+        "高价售出",
+        "技术创新"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841376",
+      "source": "Hacker News"
+    },
+    "59e228226eea2b4b": {
+      "ai_score": 6.5,
+      "translated_title": "锋龙股份：优必选承诺36个月内不注入资产",
+      "ai_summary": "锋龙股份收到优必选关于本次交易的进一步承诺，承诺在收购完成后36个月内，不存在向上市公司注入其持有资产的计划。该新闻对市场有一定影响，但投资价值有限。",
+      "key_points": [
+        "锋龙股份",
+        "优必选",
+        "资产注入承诺"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841383",
+      "source": "36氪"
+    },
+    "4eccfd265dede291": {
+      "ai_score": 6.5,
+      "translated_title": "印度周日安排股市特别交易时段",
+      "ai_summary": "印度政府将于2月1日公布2026-27财年年度预算案，印度股市今日为预算案举行特别交易时段。该新闻对市场有一定影响，但投资价值有限。",
+      "key_points": [
+        "印度股市",
+        "特别交易时段",
+        "年度预算案"
+      ],
+      "cached_at": "2026-02-01T07:58:48.841390",
+      "source": "36氪"
     }
   },
   "cache_hits": 6,
-  "cache_lookups": 518,
+  "cache_lookups": 554,
   "run_metrics": [
     {
       "run_time": "2026-01-31T06:47:45.364104",
@@ -1869,6 +2334,35 @@
       "semantic_duplicates": 0,
       "duration_seconds": 94.02115,
       "avg_score": 0
+    },
+    {
+      "run_time": "2026-02-01T07:54:27.596870",
+      "news_count": 36,
+      "api_calls": 9,
+      "cache_hits": 0,
+      "cache_misses": 0,
+      "duplicates_removed": 0,
+      "semantic_duplicates": 0,
+      "duration_seconds": 261.249007,
+      "avg_score": 7.756249999999999
     }
-  ]
+  ],
+  "source_last_fetch": {
+    "TechCrunch": "2026-02-01T07:54:27.720486",
+    "GitHub Blog": "2026-02-01T07:54:27.891521",
+    "Hacker News": "2026-02-01T07:54:28.055613",
+    "The Verge": "2026-02-01T07:54:28.139162",
+    "The Economist": "2026-02-01T07:54:28.347544",
+    "CNBC": "2026-02-01T07:54:28.508099",
+    "BBC Business": "2026-02-01T07:54:28.585372",
+    "MarketWatch": "2026-02-01T07:54:28.853862",
+    "Financial Times": "2026-02-01T07:54:29.195436",
+    "华尔街见闻": "2026-02-01T07:54:32.321170",
+    "36氪": "2026-02-01T07:54:34.062944",
+    "香港經濟日報": "2026-02-01T07:54:34.217502",
+    "东方财富": "2026-02-01T07:54:36.526444",
+    "WSJ 经济": "2026-02-01T07:54:36.606554",
+    "WSJ 市场": "2026-02-01T07:54:36.691148",
+    "WSJ 全球经济": "2026-02-01T07:54:36.765820"
+  }
 }
