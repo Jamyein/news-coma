@@ -93,10 +93,6 @@ news-coma/
 └── outputs/                # 输出文件
 ```
 
-## 详细文档
-
-- [2-Pass 评分系统详细文档](docs/2pass-system.md) - 系统架构、配置说明、技术实现
-
 ## 许可证
 
 MIT License
