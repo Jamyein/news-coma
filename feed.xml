@@ -5,8 +5,8 @@
     <link>https://github.com/Jamyein/news-coma</link>
     <description>由 AI 筛选的高质量科技新闻聚合，每6小时自动更新</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 01 Feb 2026 10:58:38 GMT</lastBuildDate>
-    <pubDate>Sun, 01 Feb 2026 10:58:38 GMT</pubDate>
+    <lastBuildDate>Mon, 02 Feb 2026 01:52:09 GMT</lastBuildDate>
+    <pubDate>Mon, 02 Feb 2026 01:52:09 GMT</pubDate>
     <atom:link href="https://Jamyein.github.io/news-coma/feed.xml" rel="self" type="application/rss+xml" />
     <image>
         <url>https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</url>
@@ -15,10 +15,314 @@
     </image>
 
     <item>
+        <title>2026年02月02日 新闻汇总</title>
+        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-02.md</link>
+        <description>本期精选 24 条高质量科技新闻</description>
+        <pubDate>Mon, 02 Feb 2026 01:52:09 GMT</pubDate>
+        <guid>archive/2026-02-02.md</guid>
+        <category>综合新闻</category>
+        <content:encoded><![CDATA[<p># 📰 新闻精选</p>
+<p>> 🕐 更新时间: 2026年02月02日 09:52 > 📊 本期精选 <strong>24</strong> 条高质量新闻 > 🤖 由 AI 自动分类、筛选、翻译和总结</p>
+<hr/>
+<p>## 💰 财经新闻 (12条)</p>
+<p>精选 <strong>12</strong> 条财经新闻</p>
+<h3>1. KKR 领导集团即将以超过 100 亿美元的价格收购新加坡数据中心公司</h3>
+<p><strong>📌 来源</strong>: WSJ 市场 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.1/10</p>
+<p><strong>📝 摘要</strong>: 该财团即将达成协议，收购市值超过 100 亿美元的 ST Telemedia Global Data Centres。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>KKR</li>
+<li>收购</li>
+<li>数据中心</li>
+<li>新加坡</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/business/deals/kkr-led-group-set-to-buy-singapore-data-center-firm-valued-at-over-10-billion-a022c5e3?mod=rss_markets_main">KKR-Led Group Set to Buy Singapore Data-Center Firm Valued at Over $10 Billion</a>
+<hr/>
+<h3>2. 巨人网络《超自然行动组》DAU突破1千万</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 36氪报道，巨人网络宣布旗下《超自然行动组》日活跃用户（DAU）突破1000万。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>巨人网络</li>
+<li>超自然行动组</li>
+<li>DAU突破1千万</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3665490494940038?f=rss">巨人网络《超自然行动组》DAU突破1千万</a>
+<hr/>
+<h3>3. 上海黄金交易所：调整白银延期合约保证金水平和涨跌停板</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 36氪报道，鉴于目前白银价格波动幅度较大，上海黄金交易所经研究决定，对白银延期合约交易保证金水平和涨跌停板比例进行调整。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>上海黄金交易所</li>
+<li>白银延期合约</li>
+<li>保证金水平</li>
+<li>涨跌停板</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3665468896666246?f=rss">上海黄金交易所：调整白银延期合约保证金水平和涨跌停板</a>
+<hr/>
+<h3>4. 中信证券：看好后续AI产业持续推进以及IP商业化对传媒板块行业的推动</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 36氪报道，中信证券指出，看好后续AI产业持续推进以及IP商业化对传媒板块行业的推动，建议关注游戏板块新产品周期带来的业绩提升。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>中信证券</li>
+<li>AI产业</li>
+<li>IP商业化</li>
+<li>传媒板块</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3665461317886594?f=rss">中信证券：看好后续AI产业持续推进以及IP商业化对传媒板块行业的推动</a>
+<hr/>
+<h3>5. 中金：沃什的提名短期对降息路径影响有限，但可能导致美元流动性的预期修正</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 36氪报道，中金指出，沃什的提名对降息路径影响有限，但可能导致美元流动性的预期修正，美元贬值压力或阶段性缓和。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>中金</li>
+<li>沃什提名</li>
+<li>降息路径</li>
+<li>美元流动性</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3665448903025288?f=rss">中金：沃什的提名短期对降息路径影响有限，但可能导致美元流动性的预期修正</a>
+<hr/>
+<h3>6. 海外游客激增40%！“中国入境游”火爆，或推动人民币继续走强</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 华尔街见闻报道，中国入境旅游的强劲复苏正在为人民币汇率带来新的上行压力，主要旅游目的地去年接待的海外游客激增约40%，带来旅游相关资金流入的双位数增长。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>中国入境游</li>
+<li>人民币汇率</li>
+<li>旅游资金流入</li>
+<li>人民币走强</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3764709">海外游客激增40%！“中国入境游”火爆，或推动人民币继续走强</a>
+<hr/>
+<h3>7. 人形机器人公司逐际动力完成2亿美元新融资，海外头部基金参与，上汽、蔚来加注｜硬氪独家</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 36氪报道，人形机器人公司逐际动力LimX Dynamics已完成2亿美元的B轮融资，本轮融资的机构投资方包括阿联酋磊石资本等。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>逐际动力</li>
+<li>2亿美元融资</li>
+<li>人形机器人</li>
+<li>上汽、蔚来</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/p/3664227663651718?f=rss">人形机器人公司逐际动力完成2亿美元新融资，海外头部基金参与，上汽、蔚来加注｜硬氪独家</a>
+<hr/>
+<h3>8. Kimi海外收入已超国内，要做“Anthropic + Manus”｜智能涌现独家</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 36氪报道，Kimi公司的海外收入已超过国内收入，新模型K2.5发布后，全球付费用户已有4倍增长。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>Kimi</li>
+<li>海外收入</li>
+<li>新模型K2.5</li>
+<li>付费用户增长</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/p/3664711869850499?f=rss">Kimi海外收入已超国内，要做“Anthropic + Manus”｜智能涌现独家</a>
+<hr/>
+<h3>9. 想做制药届的AGI，「深度智耀」再获6000万美元融资｜36氪首发</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 36氪报道，AI制药独角兽企业深度智耀近期已完成6000万美元新一轮融资，募集资金将主要用于核心技术体系升级。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>深度智耀</li>
+<li>6000万美元融资</li>
+<li>AI制药</li>
+<li>核心技术体系</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/p/3664481484333700?f=rss">想做制药届的AGI，「深度智耀」再获6000万美元融资｜36氪首发</a>
+<hr/>
+<h3>10. 迪士尼可能很快将有一位新CEO。这里可能就是人选。</h3>
+<p><strong>📌 来源</strong>: MarketWatch | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 据MarketWatch报道，华特迪士尼公司可能在未来几天内宣布新任CEO，据报道，鲍勃·艾格将在合同到期前提前离职。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>迪士尼</li>
+<li>新CEO</li>
+<li>鲍勃·艾格</li>
+<li>离职</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/disney-may-soon-have-a-new-ceo-heres-who-it-might-be-3f7eeb10?mod=mw_rss_topstories">Disney may soon have a new CEO. Here’s who it might be.</a>
+<hr/>
+<h3>11. 现货黄金日内跌幅扩大至4%</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 黄金价格下跌，对金融市场和投资决策有重要影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>黄金价格</li>
+<li>金融市场</li>
+<li>投资决策</li>
+<li>经济数据</li>
+<li>价格波动</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3665473142907776?f=rss">现货黄金日内跌幅扩大至4%</a>
+<hr/>
+<h3>12. 摩根士丹利：美联储政策短期内难转向，缩表至少要等到明年</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 摩根士丹利分析美联储政策变化，对金融市场和投资决策有重要影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>美联储政策</li>
+<li>货币政策</li>
+<li>金融市场</li>
+<li>投资决策</li>
+<li>经济数据</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3764702">摩根士丹利：美联储政策短期内难转向，缩表至少要等到明年</a>
+<hr/>
+<p>## 🔬 科技新闻 (9条)</p>
+<p>精选 <strong>9</strong> 条科技新闻</p>
+<h3>1. 印度提出到 2047 年免征税收以吸引全球人工智能工作负载</h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.3/10</p>
+<p><strong>📝 摘要</strong>: 新德里的新举措正值亚马逊、谷歌和微软在印度扩大数据中心投资之际。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>印度</li>
+<li>税收</li>
+<li>人工智能</li>
+<li>数据中心</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/01/india-offers-zero-taxes-through-2047-to-lure-global-ai-workloads/">India offers zero taxes through 2047 to lure global AI workloads</a>
+<hr/>
+<h3>2. 中信建投：外骨骼机器人迈入商业化加速阶段</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: 中信建投指出，外骨骼机器人商业化加速，市场需求扩张，技术成熟，对行业发展有重要影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>外骨骼机器人</li>
+<li>商业化加速</li>
+<li>市场需求</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3665447379935875?f=rss">中信建投：外骨骼机器人迈入商业化加速阶段</a>
+<hr/>
+<h3>3. Two kinds of AI users are emerging. The gap between them is astonishing</h3>
+<p><strong>📌 来源</strong>: Hacker News | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: AI用户分为两类，差距令人震惊。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>AI用户分类</li>
+<li>用户差距</li>
+<li>AI应用</li>
+<li>技术影响</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://martinalderson.com/posts/two-kinds-of-ai-users-are-emerging/">Two kinds of AI users are emerging. The gap between them is astonishing</a>
+<hr/>
+<h3>4. AI layoffs or ‘AI-washing’?</h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: 一些公司以AI裁员为借口，但实际裁员原因可能并非AI技术。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>AI裁员</li>
+<li>AI-washing</li>
+<li>裁员原因</li>
+<li>技术影响</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/01/ai-layoffs-or-ai-washing/">AI layoffs or ‘AI-washing’?</a>
+<hr/>
+<h3>5. Shedding light on Iran’s longest internet blackout</h3>
+<p><strong>📌 来源</strong>: The Verge | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: 伊朗互联网最长断电期间，抗议活动仍在继续。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>伊朗互联网断电</li>
+<li>抗议活动</li>
+<li>信息传播</li>
+<li>社会政治</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.theverge.com/policy/871848/iran-blackout-internet-mahsa-alimardani">Shedding light on Iran’s longest internet blackout</a>
+<hr/>
+<h3>6. A Crisis comes to Wordle: Reusing old words</h3>
+<p><strong>📌 来源</strong>: Hacker News | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: Wordle游戏面临危机，开始重复使用旧词。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>Wordle游戏</li>
+<li>重复使用旧词</li>
+<li>游戏危机</li>
+<li>技术影响</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://forkingmad.blog/wordle-crisis/">A Crisis comes to Wordle: Reusing old words</a>
+<hr/>
+<h3>7. Bye-bye corporate conglomerates. Hello personal conglomerates.</h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: Elon Musk将SpaceX、xAI和Tesla合并，类似于通用电气或镀金时代的垄断者。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>Elon Musk合并公司</li>
+<li>个人垄断</li>
+<li>公司合并</li>
+<li>商业策略</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/01/bye-bye-corporate-conglomerates-hello-personal-conglomerates/">Bye-bye corporate conglomerates. Hello personal conglomerates.</a>
+<hr/>
+<h3>8. I don’t hate the robot barista like I thought I would</h3>
+<p><strong>📌 来源</strong>: The Verge | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: 在Seattle，人们对机器人咖啡师的态度有所改变。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>机器人咖啡师</li>
+<li>消费者态度</li>
+<li>技术应用</li>
+<li>社会影响</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.theverge.com/tech/871350/artly-robot-coffee-jarvis-seattle">I don’t hate the robot barista like I thought I would</a>
+<hr/>
+<h3>9. 不要害怕人工智能‘就业末日’</h3>
+<p><strong>📌 来源</strong>: Financial Times | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: 这项技术尚未对就业产生显著影响，并可能创造更多的工作机会。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>人工智能</li>
+<li>就业影响</li>
+<li>技术发展</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/7d9a2d8f-5fda-4b2b-a58f-fc8aea22558a">Don’t fear the AI ‘jobpocalypse’</a>
+<hr/>
+<p>## 🏛️ 社会政治 (3条)</p>
+<p>精选 <strong>3</strong> 条社会政治新闻</p>
+<h3>1. 俄防长绍伊古来华，受普京总统委派沟通战略</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏷️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.4/10</p>
+<p><strong>📝 摘要</strong>: 华尔街见闻报道，俄罗斯联邦安全会议秘书绍伊古受普京总统委派来华，与中方就国际与地区安全形势等议题进行磋商。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>绍伊古</li>
+<li>普京</li>
+<li>战略沟通</li>
+<li>国际安全形势</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3764700">俄防长绍伊古来华，受普京总统委派沟通战略</a>
+<hr/>
+<h3>2. 一边兵临城下 一边喊话谈判：特朗普到底想怎么搞伊朗？</h3>
+<p><strong>📌 来源</strong>: 东方财富 | <strong>🏷️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.4/10</p>
+<p><strong>📝 摘要</strong>: 特朗普在施压伊朗的同时，也在寻求谈判，美伊关系成为国际关注的焦点。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>特朗普</li>
+<li>伊朗</li>
+<li>谈判</li>
+<li>美伊关系</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="http://global.eastmoney.com/news/11798,202602013637972849.html">一边兵临城下 一边喊话谈判：特朗普到底想怎么搞伊朗？</a>
+<hr/>
+<h3>3. French Firm to Sell Division That Helps ICE Track Immigrants</h3>
+<p><strong>📌 来源</strong>: WSJ 经济 | <strong>🏷️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.4/10</p>
+<p><strong>📝 摘要</strong>: 法国公司Capgemini因合同问题出售帮助ICE追踪移民的部门。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>Capgemini出售部门</li>
+<li>ICE追踪移民</li>
+<li>合同问题</li>
+<li>移民政策</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/world/europe/french-firm-to-sell-division-that-helps-ice-track-immigrants-4c284600?mod=pls_whats_news_us_business_f">French Firm to Sell Division That Helps ICE Track Immigrants</a>
+<hr/>]]></content:encoded>
+    </item>
+    <item>
         <title>2026年02月01日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-01.md</link>
         <description>本期精选 16 条高质量科技新闻</description>
-        <pubDate>Sun, 01 Feb 2026 10:58:38 GMT</pubDate>
+        <pubDate>Mon, 02 Feb 2026 01:42:40 GMT</pubDate>
         <guid>archive/2026-02-01.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<p># 📰 新闻精选</p>
@@ -217,7 +521,7 @@
         <title>2026年01月31日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-01-31.md</link>
         <description>本期精选 5 条高质量科技新闻</description>
-        <pubDate>Sun, 01 Feb 2026 10:54:43 GMT</pubDate>
+        <pubDate>Mon, 02 Feb 2026 01:42:40 GMT</pubDate>
         <guid>archive/2026-01-31.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<p># 📰 科技新闻精选</p>
