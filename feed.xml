@@ -5,8 +5,8 @@
     <link>https://github.com/Jamyein/news-coma</link>
     <description>由 AI 筛选的高质量科技新闻聚合，每6小时自动更新</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 02 Feb 2026 02:41:10 GMT</lastBuildDate>
-    <pubDate>Mon, 02 Feb 2026 02:41:10 GMT</pubDate>
+    <lastBuildDate>Mon, 02 Feb 2026 14:30:20 GMT</lastBuildDate>
+    <pubDate>Mon, 02 Feb 2026 14:30:20 GMT</pubDate>
     <atom:link href="https://Jamyein.github.io/news-coma/feed.xml" rel="self" type="application/rss+xml" />
     <image>
         <url>https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</url>
@@ -17,16 +17,11 @@
     <item>
         <title>2026年02月02日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-02.md</link>
-        <description>本期精选 13 条高质量科技新闻</description>
-        <pubDate>Mon, 02 Feb 2026 02:41:10 GMT</pubDate>
+        <description>本期精选 0 条高质量科技新闻</description>
+        <pubDate>Mon, 02 Feb 2026 14:30:20 GMT</pubDate>
         <guid>archive/2026-02-02.md</guid>
         <category>综合新闻</category>
-        <content:encoded><![CDATA[<p># 📰 新闻精选</p>
-<p>> 🕐 更新时间: 2026年02月02日 10:41 > 📊 本期精选 <strong>13</strong> 条高质量新闻 > 🤖 由 AI 自动分类、筛选、翻译和总结</p>
-<hr/>
-<p>## 💰 财经新闻 (12条)</p>
-<p>精选 <strong>12</strong> 条财经新闻</p>
-<h3>1. KKR 领导集团即将以超过 100 亿美元的价格收购新加坡数据中心公司</h3>
+        <content:encoded><![CDATA[<h3>1. KKR 领导集团即将以超过 100 亿美元的价格收购新加坡数据中心公司</h3>
 <p><strong>📌 来源</strong>: WSJ 市场 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.1/10</p>
 <p><strong>📝 摘要</strong>: 该财团即将达成协议，收购市值超过 100 亿美元的 ST Telemedia Global Data Centres。</p>
 <p><strong>💡 关键要点</strong>:</p>
@@ -322,7 +317,7 @@
         <title>2026年02月01日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-01.md</link>
         <description>本期精选 16 条高质量科技新闻</description>
-        <pubDate>Mon, 02 Feb 2026 02:38:56 GMT</pubDate>
+        <pubDate>Mon, 02 Feb 2026 14:29:46 GMT</pubDate>
         <guid>archive/2026-02-01.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<p># 📰 新闻精选</p>
@@ -521,7 +516,7 @@
         <title>2026年01月31日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-01-31.md</link>
         <description>本期精选 5 条高质量科技新闻</description>
-        <pubDate>Mon, 02 Feb 2026 02:38:56 GMT</pubDate>
+        <pubDate>Mon, 02 Feb 2026 14:29:46 GMT</pubDate>
         <guid>archive/2026-01-31.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<p># 📰 科技新闻精选</p>
