@@ -18,3 +18,4 @@ tenacity>=8.2.0,<9.0
 
 # 轻量级语义去重 (TF-IDF，GitHub Actions友好，~10MB)
 scikit-learn>=1.3.0
+trafilatura>=2.0.0
