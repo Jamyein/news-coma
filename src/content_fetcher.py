@@ -8,6 +8,9 @@ import logging
 from typing import Optional, List, Dict, Tuple
 from functools import partial
 
+# trafilatura 2.0.0 imports
+from trafilatura.settings import Extractor
+
 logger = logging.getLogger(__name__)
 
 # 全局设置
@@ -207,16 +210,21 @@ class ContentFetcher:
             return None
         
         try:
-            # trafilatura.fetch_url 是同步函数，使用 to_thread 在异步环境中运行
+            # trafilatura 2.0.0: 使用 Extractor 配置对象
             from asyncio import to_thread
+
+            # 创建 Extractor 配置对象（trafilatura 2.0.0 API）
+            extractor = Extractor(
+                comments=False,  # 对应原 include_comments=False
+                tables=True      # 对应原 include_tables=True
+            )
+
+            # 使用新版 API：fetch_url(url, no_ssl, options)
             content = await to_thread(
                 self._trafilatura.fetch_url,
                 url,
-                include_comments=False,
-                include_tables=True,
-                output_format="txt",
-                no_fallback=True,
-                timeout=15  # trafilatura 内部超时
+                no_ssl=False,
+                options=extractor
             )
             
             # 清理和验证内容
