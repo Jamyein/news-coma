@@ -109,7 +109,8 @@ class AIScorer:
             content = await self.provider_manager.execute_with_fallback(
                 "标准评分",
                 self._execute_scoring,
-                prompt
+                prompt,
+                items
             )
             
             # 3. 解析响应
@@ -126,18 +127,19 @@ class AIScorer:
             ErrorHandler.log_error("标准评分", e, logger)
             return ErrorHandler.apply_batch_defaults(items, 'parse_failed')
     
-    async def _execute_scoring(self, prompt: str) -> str:
+    async def _execute_scoring(self, prompt: str, items: List[NewsItem]) -> str:
         """
         执行评分API调用
         
         Args:
             prompt: 评分Prompt
+            items: 新闻项列表（用于估算token需求）
             
         Returns:
             str: API响应内容
         """
         # 估算token需求并设置上限
-        item_count = len(self.prompt_builder.config.get('items', []))
+        item_count = len(items) if items else 0
         estimated_tokens = min(1000 + item_count * 500, 8000)
         
         return await self.provider_manager.call_batch_api(
@@ -298,7 +300,8 @@ class AIScorer:
             content = await self.provider_manager.execute_with_fallback(
                 "Pass2深度分析",
                 self._execute_scoring,
-                prompt
+                prompt,
+                items
             )
             
             # 3. 解析响应
