@@ -3,6 +3,7 @@
 
 从原 ai_scorer.py 的 _pre_categorize_items 方法提取，使其独立可测试
 """
+import re
 from typing import List, Dict, Tuple
 from src.models import NewsItem
 
