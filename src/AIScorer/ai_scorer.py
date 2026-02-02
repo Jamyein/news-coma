@@ -401,9 +401,23 @@ class AIScorer:
             'providers_available': self.provider_manager.get_available_providers(),
         }
     
+    # 向后兼容方法
+    def get_api_call_count(self) -> int:
+        """
+        获取API调用计数（向后兼容）
+        
+        Returns:
+            int: 调用次数
+        """
+        return self.provider_manager.get_api_call_count()
+    
+    def reset_api_call_count(self):
+        """重置API调用计数（向后兼容）"""
+        self.provider_manager.reset_api_call_count()
+    
     def reset_stats(self):
         """重置统计信息"""
-        self.provider_manager.reset_api_call_count()
+        self.reset_api_call_count()
     
     def get_config_summary(self) -> dict:
         """

@@ -16,7 +16,7 @@ from typing import List
 from src.config import Config
 from src.models import NewsItem
 from src.rss_fetcher import RSSFetcher
-from src.ai_scorer import AIScorer
+from src.AIScorer import AIScorer
 from src.markdown_generator import MarkdownGenerator
 from src.rss_generator import RSSGenerator
 from src.history_manager import HistoryManager
