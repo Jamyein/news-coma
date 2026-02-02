@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-02-02T02:39:15.997325",
+  "last_run": "2026-02-02T14:30:08.582751",
   "processed_urls": [
     "https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding",
     "https://viewfromthewing.com/court-filings-ice-uses-mobile-fortify-to-identify-protesters-global-entry-and-precheck-get-revoked/",
@@ -720,24 +720,159 @@
     "https://36kr.com/newsflashes/3665511130555016?f=rss",
     "https://36kr.com/newsflashes/3665508789445256?f=rss",
     "https://www.wsj.com/finance/regulation/polymarket-prediction-markets-kalshi-dd4702d6?mod=rss_markets_main",
-    "https://www.wsj.com/economy/china-manufacturing-gauge-shows-pickup-in-activity-0905245f"
+    "https://www.wsj.com/economy/china-manufacturing-gauge-shows-pickup-in-activity-0905245f",
+    "https://techcrunch.com/2026/02/02/upscrolleds-founder-says-the-social-network-has-zoomed-past-2-5m-users/",
+    "https://techcrunch.com/2026/02/02/linq-raises-20m-to-enable-ai-assistants-to-live-within-messaging-apps/",
+    "https://techcrunch.com/2026/02/02/ai-notetaker-hardware-devices-pins-pendants-record-transcribe/",
+    "https://techcrunch.com/2026/02/01/tiktok-says-its-services-are-restored-after-the-outage/",
+    "https://neutree.ai/blog/nano-vllm-part-1",
+    "https://github.com/termux/termux-app",
+    "https://github.com/surprisetalk/AdBoost",
+    "https://anil.recoil.org/notes/oxcaml-httpz",
+    "https://www.koi.ai/blog/maliciouscorgi-the-cute-looking-ai-extensions-leaking-code-from-1-5-million-developers",
+    "https://lapcatsoftware.com/articles/2026/2/1.html",
+    "https://www.bbc.co.uk/news/articles/cp80dpzdg37o",
+    "https://libraryofjuggling.com/",
+    "https://spacenews.com/eu-launches-government-satcom-program-in-sovereignty-push/",
+    "https://www.wired.com/story/the-red-bull-leaks/",
+    "https://www.windowscentral.com/microsoft/windows-11/microsoft-is-reevaluating-its-ai-efforts-on-windows-11-plans-to-reduce-copilot-integrations-and-evolve-recall",
+    "https://www.theverge.com/report/872062/grok-still-undressing-men",
+    "https://www.theverge.com/tech/871916/search-party-non-ring-owners-neighbors-app",
+    "https://www.theverge.com/gadgets/872058/pgytech-telephoto-extender-iphone",
+    "https://www.theverge.com/tech/871250/supernatural-meta-vr-fitness-community",
+    "https://www.cnbc.com/2026/02/02/rare-earth-miners-jump-as-trump-is-reportedly-eyeing-mineral-stockpile-.html",
+    "https://www.bbc.com/news/articles/cpdy0y3jle4o?at_medium=RSS&at_campaign=rss",
+    "https://www.bbc.com/news/articles/cx2kzmnr14lo?at_medium=RSS&at_campaign=rss",
+    "https://www.bbc.com/news/articles/cp80dpzdg37o?at_medium=RSS&at_campaign=rss",
+    "https://www.bbc.com/news/articles/cj4lg1xqp0zo?at_medium=RSS&at_campaign=rss",
+    "https://www.bbc.com/news/articles/crrn8rplklgo?at_medium=RSS&at_campaign=rss",
+    "https://www.bbc.com/news/articles/c4g0ygqvq21o?at_medium=RSS&at_campaign=rss",
+    "https://www.marketwatch.com/story/theres-another-big-oil-and-gas-merger-but-shareholders-arent-happy-477170a4?mod=mw_rss_topstories",
+    "https://www.marketwatch.com/story/walt-disney-misses-on-net-profit-despite-record-theme-park-revenue-eae1edb2?mod=mw_rss_topstories",
+    "https://www.marketwatch.com/story/europe-just-started-building-a-kill-switch-for-u-s-tech-and-the-market-isnt-priced-for-it-says-this-strategist-8dd51d4b?mod=mw_rss_topstories",
+    "https://www.marketwatch.com/story/nvidias-openai-investment-may-not-be-as-big-as-once-hoped-adding-to-a-jittery-tech-trade-49bbb1b1?mod=mw_rss_topstories",
+    "https://www.marketwatch.com/story/the-appointment-of-kevin-warsh-is-a-market-stabilizing-mechanism-claims-morgan-stanley-ad71b9d2?mod=mw_rss_topstories",
+    "https://www.marketwatch.com/story/gold-now-down-nearly-1-000-from-peak-as-silver-struggles-following-record-31-slump-56067f2a?mod=mw_rss_topstories",
+    "https://www.marketwatch.com/story/michael-saylors-bitcoin-holdings-briefly-went-underwater-2d63d929?mod=mw_rss_topstories",
+    "https://www.marketwatch.com/story/oil-prices-are-falling-sharply-lowered-u-s-iran-tensions-and-metals-spillover-is-being-blamed-79da244d?mod=mw_rss_topstories",
+    "https://www.ft.com/content/6a760873-606b-46b9-8cdc-af23b8b8ce2e",
+    "https://www.ft.com/content/deb9c336-fe01-47ce-a1a1-bdda049b94ad",
+    "https://www.ft.com/content/fd1d2e57-dce7-489d-956a-22b839cfadd8",
+    "https://www.ft.com/content/89d0f1b2-3524-429b-b328-b2cb9ba11d15",
+    "https://www.ft.com/content/a8705e20-1c99-47a3-b86c-4346db79a8a3",
+    "https://www.ft.com/content/fdf7afe9-9ad3-4325-8843-f590dcdd7e57",
+    "https://www.ft.com/content/e830a2cd-604f-4207-8ab8-fefafc6b5d70",
+    "https://www.ft.com/content/057a215b-763c-450d-931c-4a92f9cc4ec1",
+    "https://www.ft.com/content/5230100f-dfbd-428a-a554-f671e46ba3db",
+    "https://www.ft.com/content/1945c0ed-df44-45f0-8e7a-fabcc0f9bc50",
+    "https://www.ft.com/content/b4f22a34-8ad1-4062-b395-aa71cd7be130",
+    "https://wallstreetcn.com/articles/3764761",
+    "https://wallstreetcn.com/articles/3764758",
+    "https://wallstreetcn.com/articles/3764766",
+    "https://wallstreetcn.com/articles/3764763",
+    "https://wallstreetcn.com/articles/3764759",
+    "https://wallstreetcn.com/articles/3764760",
+    "https://wallstreetcn.com/articles/3764730",
+    "https://wallstreetcn.com/articles/3764757",
+    "https://wallstreetcn.com/articles/3764765",
+    "https://wallstreetcn.com/articles/3764754",
+    "https://wallstreetcn.com/articles/3764755",
+    "https://wallstreetcn.com/articles/3764753",
+    "https://wallstreetcn.com/articles/3764745",
+    "https://wallstreetcn.com/articles/3764749",
+    "https://wallstreetcn.com/articles/3764750",
+    "https://wallstreetcn.com/articles/3764747",
+    "https://wallstreetcn.com/articles/3764736",
+    "https://wallstreetcn.com/articles/3764742",
+    "https://wallstreetcn.com/articles/3764739",
+    "https://wallstreetcn.com/articles/3764741",
+    "https://wallstreetcn.com/articles/3764735",
+    "https://wallstreetcn.com/articles/3764727",
+    "https://wallstreetcn.com/articles/3764731",
+    "https://wallstreetcn.com/articles/3764737",
+    "https://wallstreetcn.com/articles/3764733",
+    "https://wallstreetcn.com/articles/3764729",
+    "https://wallstreetcn.com/articles/3764734",
+    "https://wallstreetcn.com/articles/3764711",
+    "https://wallstreetcn.com/articles/3764726",
+    "https://wallstreetcn.com/articles/3764724",
+    "https://wallstreetcn.com/articles/3764721",
+    "https://36kr.com/p/3666200370143873?f=rss",
+    "https://36kr.com/p/3665581867737728?f=rss",
+    "https://36kr.com/p/3666013876380294?f=rss",
+    "https://36kr.com/p/3665940852581250?f=rss",
+    "https://36kr.com/p/3662222911710084?f=rss",
+    "https://36kr.com/p/3665812539957894?f=rss",
+    "https://36kr.com/newsflashes/3666165125833349?f=rss",
+    "https://36kr.com/newsflashes/3666164646306692?f=rss",
+    "https://36kr.com/newsflashes/3666163795354240?f=rss",
+    "https://36kr.com/newsflashes/3666154645201800?f=rss",
+    "https://36kr.com/newsflashes/3666151569187456?f=rss",
+    "https://36kr.com/newsflashes/3666141297861256?f=rss",
+    "https://36kr.com/newsflashes/3666134095962753?f=rss",
+    "https://36kr.com/newsflashes/3666125961667203?f=rss",
+    "https://36kr.com/newsflashes/3666121219416960?f=rss",
+    "https://36kr.com/newsflashes/3666109229818500?f=rss",
+    "https://36kr.com/newsflashes/3666107904156294?f=rss",
+    "https://36kr.com/newsflashes/3666107245240969?f=rss",
+    "https://36kr.com/newsflashes/3666084687356803?f=rss",
+    "https://36kr.com/newsflashes/3666092497838982?f=rss",
+    "https://36kr.com/newsflashes/3666083372868483?f=rss",
+    "https://36kr.com/newsflashes/3666081769136771?f=rss",
+    "https://36kr.com/newsflashes/3666077009044102?f=rss",
+    "https://36kr.com/newsflashes/3666073772745346?f=rss",
+    "https://36kr.com/newsflashes/3666066858566278?f=rss",
+    "https://36kr.com/newsflashes/3666054821258117?f=rss",
+    "http://finance.eastmoney.com/news/1353,202602023638931391.html",
+    "http://finance.eastmoney.com/news/1353,202602023638946793.html",
+    "http://finance.eastmoney.com/news/1345,202602023638867389.html",
+    "http://finance.eastmoney.com/news/1345,202602023638591947.html",
+    "https://www.wsj.com/business/media/disney-dis-q1-earnings-report-2026-1170ca66?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/media/stephen-kings-the-body-gets-a-new-releasewith-a-familiar-voice-f6aed269?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/articles/why-prices-at-five-below-are-nudging-above-5-bb054fb8?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/articles/maritime-regulators-new-head-targets-global-risks-to-shipping-a4597118?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/deals/devon-coterra-to-merge-in-58-billion-deal-c6509a75?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/deals/eldorado-gold-to-buy-foran-mining-for-about-c-3-8-billion-54a939bd?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/auto-transport-roundup-market-talk-061a8e4c?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/earnings/intesa-plans-to-cut-6-100-jobs-by-2029-in-savings-push-e3c22d41?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/tech-media-telecom-roundup-market-talk-69c4e5ac?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/autos/french-new-car-sales-slide-as-economic-clouds-keep-consumers-gloomy-ba248c79?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/energy-utilities-roundup-market-talk-b157aae3?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/bluescope-steel-open-to-better-offers-after-spurning-8-8-billion-takeover-bid-f228a6e2?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-02-02-2026?mod=rss_markets_main",
+    "https://www.wsj.com/finance/investing/vanguard-slashes-fees-again-this-time-on-a-quarter-of-its-funds-ec968a30?mod=rss_markets_main",
+    "https://www.wsj.com/finance/cboe-in-talks-to-bring-back-all-or-nothing-options-to-vie-with-prediction-markets-3acd64e4?mod=rss_markets_main",
+    "https://www.wsj.com/finance/stocks/want-to-feel-dumb-try-picking-stocks-7b0916cc?mod=rss_markets_main",
+    "https://www.wsj.com/tech/how-a-silicon-valley-startup-became-a-crypto-lifeline-for-venezuela-2ec5da99?mod=rss_markets_main",
+    "https://www.wsj.com/economy/central-banking/saying-you-want-to-shrink-the-fed-is-one-thing-doing-it-is-another-3ed0e517?mod=rss_markets_main",
+    "https://www.wsj.com/finance/banking/julius-baer-posts-expected-drop-in-profit-8e18a46e?mod=rss_markets_main",
+    "https://www.wsj.com/business/basic-materials-roundup-market-talk-3f79fa07?mod=rss_markets_main",
+    "https://www.wsj.com/business/financial-services-roundup-market-talk-7dc2d427?mod=rss_markets_main",
+    "https://www.wsj.com/business/auto-transport-roundup-market-talk-061a8e4c?mod=rss_markets_main",
+    "https://www.wsj.com/business/tech-media-telecom-roundup-market-talk-69c4e5ac?mod=rss_markets_main",
+    "https://www.wsj.com/articles/natural-gas-prices-pull-back-after-weather-driven-rally-4f77624d?mod=rss_markets_main",
+    "https://www.wsj.com/finance/currencies/asian-currencies-mixed-traders-digest-warshs-nomination-as-next-fed-chair-92e67ef3?mod=rss_markets_main",
+    "https://www.wsj.com/economy/central-banking/saying-you-want-to-shrink-the-fed-is-one-thing-doing-it-is-another-3ed0e517",
+    "https://www.wsj.com/articles/ecb-and-boe-on-hold-as-dollar-weakens-and-imports-from-china-surge-0aa18874",
+    "https://www.wsj.com/economy/asia-pmis-signal-solid-start-for-manufacturers-in-2026-4545fa08",
+    "https://www.wsj.com/economy/central-banking/yen-moves-causing-more-worry-at-boj-opinions-summary-shows-be4800f0"
   ],
   "stats": {
-    "total_runs": 15,
-    "total_news_processed": 788,
-    "avg_news_per_run": 52.5
+    "total_runs": 16,
+    "total_news_processed": 924,
+    "avg_news_per_run": 57.8
   },
   "source_stats": {
     "The Verge": {
-      "fetched": 35,
+      "fetched": 39,
       "selected": 8
     },
     "Hacker News": {
-      "fetched": 121,
+      "fetched": 132,
       "selected": 26
     },
     "TechCrunch": {
-      "fetched": 52,
+      "fetched": 56,
       "selected": 12
     },
     "GitHub Blog": {
@@ -745,43 +880,43 @@
       "selected": 1
     },
     "MarketWatch": {
-      "fetched": 26,
+      "fetched": 34,
       "selected": 4
     },
     "Financial Times": {
-      "fetched": 32,
+      "fetched": 43,
       "selected": 6
     },
     "WSJ 经济": {
-      "fetched": 83,
+      "fetched": 95,
       "selected": 2
     },
     "36氪": {
-      "fetched": 99,
+      "fetched": 125,
       "selected": 27
     },
     "WSJ 全球经济": {
-      "fetched": 25,
+      "fetched": 29,
       "selected": 1
     },
     "华尔街见闻": {
-      "fetched": 81,
+      "fetched": 112,
       "selected": 21
     },
     "BBC Business": {
-      "fetched": 43,
+      "fetched": 50,
       "selected": 3
     },
     "WSJ 市场": {
-      "fetched": 66,
+      "fetched": 79,
       "selected": 5
     },
     "东方财富": {
-      "fetched": 87,
+      "fetched": 91,
       "selected": 2
     },
     "CNBC": {
-      "fetched": 19,
+      "fetched": 20,
       "selected": 0
     },
     "The Economist": {
@@ -3931,10 +4066,642 @@
       ],
       "cached_at": "2026-02-02T02:41:09.101514",
       "source": "WSJ 市场"
+    },
+    "35dfa479fb95c177": {
+      "ai_score": 5.0,
+      "translated_title": "Rare earth miners jump as Trump is reportedly eyeing mineral stockpile to reduce China dependence",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194586",
+      "source": "CNBC"
+    },
+    "3cb287000b976364": {
+      "ai_score": 5.0,
+      "translated_title": "Gold and silver prices fall after Friday's losses",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194599",
+      "source": "BBC Business"
+    },
+    "c873fc9547e8eff8": {
+      "ai_score": 5.0,
+      "translated_title": "Faisal Islam: Mandelson, Darling and the conversation I can't forget",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194605",
+      "source": "BBC Business"
+    },
+    "76d9cb0a9eb8d65a": {
+      "ai_score": 5.0,
+      "translated_title": "Drivers can compare fuel prices at different petrol stations - how does it work?",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194616",
+      "source": "BBC Business"
+    },
+    "10569ce0200a5128": {
+      "ai_score": 5.0,
+      "translated_title": "The 'fantastic' baby bundles not every mum will get",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194621",
+      "source": "BBC Business"
+    },
+    "d962dd4778df5c6a": {
+      "ai_score": 5.0,
+      "translated_title": "'I have to use savings to afford to use university laundrette'",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194626",
+      "source": "BBC Business"
+    },
+    "ad48c70e99b7aa83": {
+      "ai_score": 5.0,
+      "translated_title": "School pantries mean 'food on table' for families",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194633",
+      "source": "BBC Business"
+    },
+    "699ee18405512108": {
+      "ai_score": 5.0,
+      "translated_title": "There’s another big oil-and-gas merger, but shareholders aren’t happy",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194641",
+      "source": "MarketWatch"
+    },
+    "0642167024829c50": {
+      "ai_score": 5.0,
+      "translated_title": "Walt Disney reports solid gains in revenue but sees decline in net profit due to higher costs",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194647",
+      "source": "MarketWatch"
+    },
+    "c62069be0deadb30": {
+      "ai_score": 5.0,
+      "translated_title": "Europe just started building a ‘kill switch’ for U.S. tech — and the market isn’t priced for it, says this strategist",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194653",
+      "source": "MarketWatch"
+    },
+    "aa0ea74021f54f2e": {
+      "ai_score": 5.0,
+      "translated_title": "Nvidia’s OpenAI investment may not be as big as once hoped — and tech stocks are falling",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194659",
+      "source": "MarketWatch"
+    },
+    "f84c7ad4aadc24d2": {
+      "ai_score": 5.0,
+      "translated_title": "The appointment of Kevin Warsh is a market stabilizing mechanism, claims Morgan Stanley",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194665",
+      "source": "MarketWatch"
+    },
+    "766c9e7e4ecc7724": {
+      "ai_score": 5.0,
+      "translated_title": "Gold now down nearly $1,000 from peak as silver attempts to stabilize following record 31% slump",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194669",
+      "source": "MarketWatch"
+    },
+    "56b14efdc5a7adee": {
+      "ai_score": 5.0,
+      "translated_title": "Michael Saylor’s Strategy sees bitcoin holdings trade below purchase price",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194696",
+      "source": "MarketWatch"
+    },
+    "a6c06684e9ded36b": {
+      "ai_score": 5.0,
+      "translated_title": "Oil prices are falling sharply. Lowered U.S.-Iran tensions and metals spillover is being blamed.",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194702",
+      "source": "MarketWatch"
+    },
+    "da9ee49df5ea46ac": {
+      "ai_score": 5.0,
+      "translated_title": "Epstein asked for Snow White costume weeks before Jes Staley email",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194708",
+      "source": "Financial Times"
+    },
+    "1f8b1264fda8c4d2": {
+      "ai_score": 5.0,
+      "translated_title": "Norway’s elite engulfed by Epstein scandal",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194715",
+      "source": "Financial Times"
+    },
+    "88ecc971021a2823": {
+      "ai_score": 5.0,
+      "translated_title": "A world without nuclear arms control begins this week",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194720",
+      "source": "Financial Times"
+    },
+    "dbd35d19fc80ea45": {
+      "ai_score": 5.0,
+      "translated_title": "Wanted: CEOs with backbone",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194727",
+      "source": "Financial Times"
+    },
+    "275351d391b7239c": {
+      "ai_score": 5.0,
+      "translated_title": "The dilemmas for the UK created by a rupturing world",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194732",
+      "source": "Financial Times"
+    },
+    "b42366cf14fc235c": {
+      "ai_score": 5.0,
+      "translated_title": "Mandelson leaked sensitive UK government tax plans to Epstein",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194738",
+      "source": "Financial Times"
+    },
+    "0ec9b59146f1ebdc": {
+      "ai_score": 5.0,
+      "translated_title": "Gold and silver extend declines after historic slump",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194743",
+      "source": "Financial Times"
+    },
+    "c41ce36568443af2": {
+      "ai_score": 5.0,
+      "translated_title": "Kevin Warsh: you have to make a bet",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194748",
+      "source": "Financial Times"
+    },
+    "e2fa95115f035812": {
+      "ai_score": 5.0,
+      "translated_title": "Disney warns of hit to US theme parks as foreign tourist numbers fall",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194754",
+      "source": "Financial Times"
+    },
+    "fd96fef370b59aed": {
+      "ai_score": 5.0,
+      "translated_title": "Devon and Coterra agree merger to create $58bn US shale group",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194760",
+      "source": "Financial Times"
+    },
+    "f73fc8183ea8df13": {
+      "ai_score": 5.0,
+      "translated_title": "Europe’s oil majors prepare to cut billions in shareholder payouts",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194766",
+      "source": "Financial Times"
+    },
+    "b3aea0d930b8fe47": {
+      "ai_score": 5.0,
+      "translated_title": "谷歌财报前瞻：业绩大概率超预期，资本开支指引是最大看点",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194774",
+      "source": "华尔街见闻"
+    },
+    "b851808cf34f72c8": {
+      "ai_score": 5.0,
+      "translated_title": "2026年AI最大的叙事变化是什么？",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194782",
+      "source": "华尔街见闻"
+    },
+    "9017755f64ea6151": {
+      "ai_score": 5.0,
+      "translated_title": "报道：特朗普拟投资120亿美元储备关键矿产",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194789",
+      "source": "华尔街见闻"
+    },
+    "cf5dd9408cc6325c": {
+      "ai_score": 5.0,
+      "translated_title": "特斯拉欧洲开门黑：1月法国销量创三年新低，挪威注册量暴跌88%",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194796",
+      "source": "华尔街见闻"
+    },
+    "2091ca58188a954f": {
+      "ai_score": 5.0,
+      "translated_title": "黄金接近首个关键支撑位",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194803",
+      "source": "华尔街见闻"
+    },
+    "27f62afe0d398f6e": {
+      "ai_score": 5.0,
+      "translated_title": "报道：SpaceX正与xAI就合并进行深度谈判，最早或于本周宣布协议",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194811",
+      "source": "华尔街见闻"
+    },
+    "73cb3b30562f419e": {
+      "ai_score": 5.0,
+      "translated_title": "商品暴跌震动市场！纳指期货跌超1%，甲骨文盘前上涨4%，现货金银“V”型反转，布油跌5%",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194819",
+      "source": "华尔街见闻"
+    },
+    "e4a7cdd03c6d761d": {
+      "ai_score": 5.0,
+      "translated_title": "存储芯片被错杀？DRAM涨价预期再次暴力上调",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194826",
+      "source": "华尔街见闻"
+    },
+    "a302256b1c136440": {
+      "ai_score": 5.0,
+      "translated_title": "刚入场就遭重击！“散户大军”涌入金银市场，却撞上历史性暴跌",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194834",
+      "source": "华尔街见闻"
+    },
+    "d53b1dda520fe3fe": {
+      "ai_score": 5.0,
+      "translated_title": "150万用户99%是水军，爆红Moltbook一夜塌房？",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194840",
+      "source": "华尔街见闻"
+    },
+    "2a6cddb72aadcdc2": {
+      "ai_score": 5.0,
+      "translated_title": "活久见！黄金30日波动率升至44%超过比特币，创2008年以来最高水平",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194847",
+      "source": "华尔街见闻"
+    },
+    "e72c9bd49eb25b74": {
+      "ai_score": 5.0,
+      "translated_title": "越跌越买？新加坡散户排长龙抢购黄金",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194854",
+      "source": "华尔街见闻"
+    },
+    "834e833dc3b5c6ba": {
+      "ai_score": 5.0,
+      "translated_title": "台积电2nm产能告急：苹果包揽首批，AMD谷歌排队，英伟达已瞄准1.6nm",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194861",
+      "source": "华尔街见闻"
+    },
+    "a7cf63e35d6d926b": {
+      "ai_score": 5.0,
+      "translated_title": "锂电池重大突破！马斯克：特斯拉实现干电极电池规模化生产",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194868",
+      "source": "华尔街见闻"
+    },
+    "4895bda4c04dfdf1": {
+      "ai_score": 5.0,
+      "translated_title": "这次白银暴跌是人为操纵的？",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194874",
+      "source": "华尔街见闻"
+    },
+    "65969873991ac21f": {
+      "ai_score": 5.0,
+      "translated_title": "亚洲最大财险巨头研究报告：系统性布局科创企业投资",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194881",
+      "source": "华尔街见闻"
+    },
+    "0311fc103a25e9c3": {
+      "ai_score": 5.0,
+      "translated_title": "金银“史诗级巨震”之后，可以抄底了吗？",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194887",
+      "source": "华尔街见闻"
+    },
+    "d202e88a516955f9": {
+      "ai_score": 5.0,
+      "translated_title": "市场担心沃什重启QT？但真正的工具可能是SOMA",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194894",
+      "source": "华尔街见闻"
+    },
+    "08dc2cf966eb14ad": {
+      "ai_score": 5.0,
+      "translated_title": "甲骨文盘前大跌5%，银行不借钱、股价腰斩，计划再融资500亿美元“续命”！",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194901",
+      "source": "华尔街见闻"
+    },
+    "30476ce5485b689b": {
+      "ai_score": 5.0,
+      "translated_title": "忘掉1月非农！年度就业或下修100万，美国就业正在被系统性高估",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194908",
+      "source": "华尔街见闻"
+    },
+    "0b55e8e7aa62b764": {
+      "ai_score": 5.0,
+      "translated_title": "对比2013年，本轮“抢金潮”有何不同？",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194915",
+      "source": "华尔街见闻"
+    },
+    "57e0a61e1c50f2a5": {
+      "ai_score": 5.0,
+      "translated_title": "屋漏偏逢连夜雨！商品暴跌拖累，印尼股市重挫6%",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194922",
+      "source": "华尔街见闻"
+    },
+    "7c3a9cdd1fd5c8c3": {
+      "ai_score": 5.0,
+      "translated_title": "茅台动销超预期，白酒板块全线沸腾：十年大底正在形成？",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194929",
+      "source": "华尔街见闻"
+    },
+    "f1671df4c28847c3": {
+      "ai_score": 5.0,
+      "translated_title": "日本豪赌财政扩张、美国迎接中期大考，大选年如何重塑全球市场？",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194936",
+      "source": "华尔街见闻"
+    },
+    "4f4fad05fbf36a77": {
+      "ai_score": 5.0,
+      "translated_title": "目标年产百万台！特斯拉三代擎天柱即将亮相，Model S/X二季度停产为量产机器人让路",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194942",
+      "source": "华尔街见闻"
+    },
+    "ee3dff6c82194cc6": {
+      "ai_score": 5.0,
+      "translated_title": "金银大跌，摩根大通分析师：别慌！上涨势头还会持续，年底仍看至6300",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194949",
+      "source": "华尔街见闻"
+    },
+    "2688d806b66b5095": {
+      "ai_score": 5.0,
+      "translated_title": "日元目标150！瑞穗资管巨头：日本4月加息不可避免，看好日债",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194956",
+      "source": "华尔街见闻"
+    },
+    "8b827d270a2f1c7e": {
+      "ai_score": 5.0,
+      "translated_title": "黄金最脆弱的时刻？仅需5%的获利盘出逃，就足以抵消全球实物需求",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194962",
+      "source": "华尔街见闻"
+    },
+    "bda8dc8580238c5a": {
+      "ai_score": 5.0,
+      "translated_title": "千问30亿免单上线解析：阿里把AI推到春节消费前台",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194969",
+      "source": "华尔街见闻"
+    },
+    "b6b4b9ac785f1733": {
+      "ai_score": 5.0,
+      "translated_title": "元宝能否成为腾讯的“新中枢”",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194976",
+      "source": "华尔街见闻"
+    },
+    "f084f7d9f3f255e9": {
+      "ai_score": 5.0,
+      "translated_title": "黄金估值已达极端水平！下半年避险情绪消退将成最大利空",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194983",
+      "source": "华尔街见闻"
+    },
+    "c679bb62d717d7b4": {
+      "ai_score": 5.0,
+      "translated_title": "邵氏兄弟：百年港牌，今成华人文化上市跳板",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.194993",
+      "source": "36氪"
+    },
+    "ed11e6b349ef840d": {
+      "ai_score": 5.0,
+      "translated_title": "氪星晚报｜智元机器人将举办全球首个大型机器人晚会“机器人奇妙夜”；黄金一度暴跌1000美元，业内提示警惕抄底风险；中共中央、国务院：培育京津雄地区创新三角",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.195003",
+      "source": "36氪"
+    },
+    "1411a6511d99d76a": {
+      "ai_score": 5.0,
+      "translated_title": "解码消费新浪潮，世研指数发布《2025年度消费榜单》趋势报告",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.195010",
+      "source": "36氪"
+    },
+    "5a5e304faa9314ad": {
+      "ai_score": 5.0,
+      "translated_title": "23亿元天价官司，没有吓退车企自制电池包",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.195017",
+      "source": "36氪"
+    },
+    "88519eb585f73fa5": {
+      "ai_score": 5.0,
+      "translated_title": "何小鹏内部分享：智能座舱和智能驾驶会技术合流，组成“超级智能体”｜36氪独家",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.195023",
+      "source": "36氪"
+    },
+    "4f2257bd845d7cf6": {
+      "ai_score": 5.0,
+      "translated_title": "团圆的N种方式：年轻人花式过春节",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.195030",
+      "source": "36氪"
+    },
+    "730d9d2305da9e98": {
+      "ai_score": 5.0,
+      "translated_title": "阿里系高管加盟擎天租",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.195037",
+      "source": "36氪"
+    },
+    "9666cbd4e0e2774c": {
+      "ai_score": 5.0,
+      "translated_title": "抖音与2026年总台春晚达成合作",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.195044",
+      "source": "36氪"
+    },
+    "1a3892621313b2ac": {
+      "ai_score": 5.0,
+      "translated_title": "海思科：两名股东拟合计减持公司不超0.89%股份",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.195051",
+      "source": "36氪"
+    },
+    "1e3932d2cd534c81": {
+      "ai_score": 5.0,
+      "translated_title": "热门中概股美股盘前多数下跌，小鹏汽车跌超4%",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.195057",
+      "source": "36氪"
+    },
+    "86f8cc592cbdb337": {
+      "ai_score": 5.0,
+      "translated_title": "美股大型科技股盘前多数走弱，甲骨文涨近5%",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.195062",
+      "source": "36氪"
+    },
+    "9a62b9688db59c13": {
+      "ai_score": 5.0,
+      "translated_title": "ST泉为：被债权人申请重整及预重整",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.195069",
+      "source": "36氪"
+    },
+    "ac6d1fc395745ba9": {
+      "ai_score": 5.0,
+      "translated_title": "沪市首份年报出炉，芯导科技2025年净利润1.06亿元",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.195076",
+      "source": "36氪"
+    },
+    "591a93050431efba": {
+      "ai_score": 5.0,
+      "translated_title": "报道称德文能源与科泰拉能源将以股票交易方式合并",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.195081",
+      "source": "36氪"
+    },
+    "c2929968a1197382": {
+      "ai_score": 5.0,
+      "translated_title": "*ST东易：公司注入算力相关资产的时间、规模等存在较大不确定性",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.195088",
+      "source": "36氪"
+    },
+    "7675f898a330f08d": {
+      "ai_score": 5.0,
+      "translated_title": "苹果在印度赢得重大利好，向代工商提供设备五年内将免税",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.195094",
+      "source": "36氪"
+    },
+    "6dea65ecf3201efc": {
+      "ai_score": 5.0,
+      "translated_title": "迪士尼2026财年Q1营收259.8亿美元，同比增长5%",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.195100",
+      "source": "36氪"
+    },
+    "47b47c3093cf28fc": {
+      "ai_score": 5.0,
+      "translated_title": "深圳市绿联科技股份有限公司向港交所提交上市申请书",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.195106",
+      "source": "36氪"
+    },
+    "c2b6dacd1a610c67": {
+      "ai_score": 5.0,
+      "translated_title": "道恩股份：拟1573.7万美元收购境外公司股权",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.195112",
+      "source": "36氪"
+    },
+    "832bb5244ff2a24d": {
+      "ai_score": 5.0,
+      "translated_title": "汉堡王股份出售交易完成，CPE源峰3.5亿美元控股",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.195118",
+      "source": "36氪"
+    },
+    "6798040230e92ec9": {
+      "ai_score": 5.0,
+      "translated_title": "丰田“无意”提高以340亿美元将丰田工业公司私有化的收购报价",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.195124",
+      "source": "36氪"
+    },
+    "47b75ebd69609e62": {
+      "ai_score": 5.0,
+      "translated_title": "SpaceX与xAI深入洽谈合并，最早本周宣布达成协议",
+      "ai_summary": "解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-02T14:30:20.195129",
+      "source": "36氪"
     }
   },
   "cache_hits": 6,
-  "cache_lookups": 723,
+  "cache_lookups": 859,
   "run_metrics": [
     {
       "run_time": "2026-01-31T06:47:45.364104",
@@ -4089,24 +4856,35 @@
       "semantic_duplicates": 0,
       "duration_seconds": 114.615619,
       "avg_score": 7.253846153846154
+    },
+    {
+      "run_time": "2026-02-02T14:30:08.582751",
+      "news_count": 136,
+      "api_calls": 0,
+      "cache_hits": 0,
+      "cache_misses": 0,
+      "duplicates_removed": 0,
+      "semantic_duplicates": 0,
+      "duration_seconds": 11.618799,
+      "avg_score": 0
     }
   ],
   "source_last_fetch": {
-    "TechCrunch": "2026-02-02T02:39:16.511373",
-    "GitHub Blog": "2026-02-02T02:39:16.903517",
-    "Hacker News": "2026-02-02T02:39:17.231564",
-    "The Verge": "2026-02-02T02:39:17.415113",
-    "The Economist": "2026-02-02T02:39:17.727747",
-    "CNBC": "2026-02-02T02:39:17.935893",
-    "BBC Business": "2026-02-02T02:39:18.252240",
-    "MarketWatch": "2026-02-02T02:39:18.913025",
-    "Financial Times": "2026-02-02T02:39:19.582933",
-    "华尔街见闻": "2026-02-02T02:39:21.345785",
-    "36氪": "2026-02-02T02:39:22.954489",
-    "香港經濟日報": "2026-02-02T02:39:23.301193",
-    "东方财富": "2026-02-02T02:39:25.179975",
-    "WSJ 经济": "2026-02-02T02:39:26.103783",
-    "WSJ 市场": "2026-02-02T02:39:26.305515",
-    "WSJ 全球经济": "2026-02-02T02:39:26.429954"
+    "TechCrunch": "2026-02-02T14:30:08.791477",
+    "GitHub Blog": "2026-02-02T14:30:09.031923",
+    "Hacker News": "2026-02-02T14:30:09.245571",
+    "The Verge": "2026-02-02T14:30:09.415985",
+    "The Economist": "2026-02-02T14:30:09.733328",
+    "CNBC": "2026-02-02T14:30:10.053689",
+    "BBC Business": "2026-02-02T14:30:11.264599",
+    "MarketWatch": "2026-02-02T14:30:11.891629",
+    "Financial Times": "2026-02-02T14:30:12.410624",
+    "华尔街见闻": "2026-02-02T14:30:15.985204",
+    "36氪": "2026-02-02T14:30:17.324191",
+    "香港經濟日報": "2026-02-02T14:30:17.552259",
+    "东方财富": "2026-02-02T14:30:19.717236",
+    "WSJ 经济": "2026-02-02T14:30:19.869723",
+    "WSJ 市场": "2026-02-02T14:30:20.008002",
+    "WSJ 全球经济": "2026-02-02T14:30:20.130874"
   }
 }
