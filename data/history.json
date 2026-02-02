@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-02-02T01:42:57.991461",
+  "last_run": "2026-02-02T02:39:15.997325",
   "processed_urls": [
     "https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding",
     "https://viewfromthewing.com/court-filings-ice-uses-mobile-fortify-to-identify-protesters-global-entry-and-precheck-get-revoked/",
@@ -703,12 +703,29 @@
     "https://www.wsj.com/opinion/medicare-advantage-trump-administration-entitlements-healthcare-ccf7d26c?mod=rss_markets_main",
     "https://www.wsj.com/opinion/bidens-antidiscrimination-work-succeeded-cb847f03?mod=rss_markets_main",
     "https://www.wsj.com/finance/commodities-futures/oil-prices-fall-amid-signs-of-u-s-iran-negotiations-82eee722?mod=rss_markets_main",
-    "https://www.wsj.com/finance/commodities-futures/gold-falls-as-markets-further-price-in-warsh-led-fed-ae49c8d5?mod=rss_markets_main"
+    "https://www.wsj.com/finance/commodities-futures/gold-falls-as-markets-further-price-in-warsh-led-fed-ae49c8d5?mod=rss_markets_main",
+    "https://notepad-plus-plus.org/news/hijacked-incident-info-update/",
+    "https://www.marketwatch.com/story/oracle-amps-up-its-ai-bet-with-a-plan-to-raise-as-much-as-50-billion-this-year-872a2dba?mod=mw_rss_topstories",
+    "https://www.ft.com/content/8cdc0be2-a957-40f9-8731-7b1718ced693",
+    "https://wallstreetcn.com/articles/3764715",
+    "https://wallstreetcn.com/articles/3764717",
+    "https://wallstreetcn.com/articles/3764718",
+    "https://36kr.com/newsflashes/3665554685944712?f=rss",
+    "https://36kr.com/newsflashes/3665545949078402?f=rss",
+    "https://36kr.com/newsflashes/3665545073156998?f=rss",
+    "https://36kr.com/newsflashes/3665536992256645?f=rss",
+    "https://36kr.com/newsflashes/3665528881832579?f=rss",
+    "https://36kr.com/newsflashes/3665528712716930?f=rss",
+    "https://36kr.com/newsflashes/3665527634404228?f=rss",
+    "https://36kr.com/newsflashes/3665511130555016?f=rss",
+    "https://36kr.com/newsflashes/3665508789445256?f=rss",
+    "https://www.wsj.com/finance/regulation/polymarket-prediction-markets-kalshi-dd4702d6?mod=rss_markets_main",
+    "https://www.wsj.com/economy/china-manufacturing-gauge-shows-pickup-in-activity-0905245f"
   ],
   "stats": {
-    "total_runs": 14,
-    "total_news_processed": 771,
-    "avg_news_per_run": 55.1
+    "total_runs": 15,
+    "total_news_processed": 788,
+    "avg_news_per_run": 52.5
   },
   "source_stats": {
     "The Verge": {
@@ -716,8 +733,8 @@
       "selected": 8
     },
     "Hacker News": {
-      "fetched": 120,
-      "selected": 25
+      "fetched": 121,
+      "selected": 26
     },
     "TechCrunch": {
       "fetched": 52,
@@ -728,11 +745,11 @@
       "selected": 1
     },
     "MarketWatch": {
-      "fetched": 25,
-      "selected": 3
+      "fetched": 26,
+      "selected": 4
     },
     "Financial Times": {
-      "fetched": 31,
+      "fetched": 32,
       "selected": 6
     },
     "WSJ 经济": {
@@ -740,24 +757,24 @@
       "selected": 2
     },
     "36氪": {
-      "fetched": 90,
-      "selected": 20
+      "fetched": 99,
+      "selected": 27
     },
     "WSJ 全球经济": {
-      "fetched": 24,
+      "fetched": 25,
       "selected": 1
     },
     "华尔街见闻": {
-      "fetched": 78,
-      "selected": 18
+      "fetched": 81,
+      "selected": 21
     },
     "BBC Business": {
       "fetched": 43,
       "selected": 3
     },
     "WSJ 市场": {
-      "fetched": 65,
-      "selected": 4
+      "fetched": 66,
+      "selected": 5
     },
     "东方财富": {
       "fetched": 87,
@@ -3700,10 +3717,224 @@
       ],
       "cached_at": "2026-02-02T01:52:06.734858",
       "source": "The Verge"
+    },
+    "dfaac4523005e09f": {
+      "ai_score": 7.5,
+      "translated_title": "甲骨文今年计划筹集高达500亿美元，加大人工智能投资",
+      "ai_summary": "甲骨文公司继去年秋季发行180亿美元债券后，计划在2026年再次进入债务和股权市场，以加大人工智能投资。",
+      "key_points": [
+        "甲骨文",
+        "人工智能投资",
+        "债券发行",
+        "市场筹集"
+      ],
+      "cached_at": "2026-02-02T02:41:09.101388",
+      "source": "MarketWatch"
+    },
+    "0968c2c5910c9f0f": {
+      "ai_score": 6.8,
+      "translated_title": "千问App投入30亿开启春节攻势，全面接入阿里生态业务",
+      "ai_summary": "千问App宣布投入30亿启动春节攻势，全面接入淘宝闪购、大麦、飞猪、盒马等阿里生态业务，计划于2月6日上线。",
+      "key_points": [
+        "千问App",
+        "春节攻势",
+        "阿里生态",
+        "投资"
+      ],
+      "cached_at": "2026-02-02T02:41:09.101402",
+      "source": "36氪"
+    },
+    "e91e19adc758d6ba": {
+      "ai_score": 7.2,
+      "translated_title": "记事本++被国家支持的行为者黑入",
+      "ai_summary": "记事本++被国家支持的行为者黑入，引发安全担忧。",
+      "key_points": [
+        "记事本++",
+        "黑入",
+        "安全",
+        "国家支持"
+      ],
+      "cached_at": "2026-02-02T02:41:09.101409",
+      "source": "Hacker News"
+    },
+    "37e489c52e411a8d": {
+      "ai_score": 7.5,
+      "translated_title": "A股震荡下跌，金银股大面积跌停，CPO盘初活跃、新易盛大涨超10%，恒科指大跌超2%，科网股集体调整",
+      "ai_summary": "A股有色金属再现跌停潮，金银板块集体重挫。CPO板块盘初活跃，新易盛大涨超10%。债市方面，国债期货震荡上涨。",
+      "key_points": [
+        "A股",
+        "下跌",
+        "金银股",
+        "CPO",
+        "债市"
+      ],
+      "cached_at": "2026-02-02T02:41:09.101421",
+      "source": "华尔街见闻"
+    },
+    "4071b4de09b39815": {
+      "ai_score": 7.5,
+      "translated_title": "澳洲央行要逆势加息？澳大利亚10年期国债收益率逼近5%",
+      "ai_summary": "在美联储及全球多数央行转向降息路径之际，澳大利亚可能正酝酿一场激进的政策“调头”。10年期国债收益率逼近5%关口。",
+      "key_points": [
+        "澳洲央行",
+        "加息",
+        "国债收益率",
+        "政策调整"
+      ],
+      "cached_at": "2026-02-02T02:41:09.101429",
+      "source": "华尔街见闻"
+    },
+    "3a5d8d0e9be967ca": {
+      "ai_score": 6.8,
+      "translated_title": "“千寻AI聘”获千万级天使+轮融资，重点用于AI Agent技术迭代",
+      "ai_summary": "AI智能招聘平台“千寻AI聘”宣布完成千万级天使+轮融资，重点用于自研AI Agent的底层技术迭代。",
+      "key_points": [
+        "千寻AI聘",
+        "天使+轮融资",
+        "AI Agent",
+        "技术迭代"
+      ],
+      "cached_at": "2026-02-02T02:41:09.101437",
+      "source": "36氪"
+    },
+    "84813726bade8174": {
+      "ai_score": 6.8,
+      "translated_title": "Revolut计划未来三年将新加坡员工人数增至3倍，突破300人",
+      "ai_summary": "英国金融科技公司Revolut计划在未来三年扩大在新加坡的业务规模，员工数量计划增至三倍，突破300人。",
+      "key_points": [
+        "Revolut",
+        "新加坡",
+        "员工人数",
+        "业务扩张"
+      ],
+      "cached_at": "2026-02-02T02:41:09.101446",
+      "source": "36氪"
+    },
+    "906b12c773579498": {
+      "ai_score": 6.8,
+      "translated_title": "市场监管总局：2025年累计帮扶中小企业超12万家",
+      "ai_summary": "市场监管总局组织开展“计量服务中小企业行”活动，累计帮扶中小企业超过12万家，解决计量技术问题3.6万多个。",
+      "key_points": [
+        "市场监管总局",
+        "中小企业",
+        "帮扶",
+        "计量技术"
+      ],
+      "cached_at": "2026-02-02T02:41:09.101456",
+      "source": "36氪"
+    },
+    "513bcda9193e79c6": {
+      "ai_score": 6.8,
+      "translated_title": "特朗普将关闭肯尼迪中心两年进行翻修",
+      "ai_summary": "美国特朗普总统计划将肯尼迪中心关闭两年进行翻修，这是他试图在华盛顿留下印记的最新尝试。",
+      "key_points": [
+        "特朗普",
+        "肯尼迪中心",
+        "翻修",
+        "艺术"
+      ],
+      "cached_at": "2026-02-02T02:41:09.101463",
+      "source": "Financial Times"
+    },
+    "d8219e132406692a": {
+      "ai_score": 7.5,
+      "translated_title": "中国1月RatingDog制造业PMI 50.3，销售价格14个月来首次上升",
+      "ai_summary": "中国1月RatingDog制造业PMI 50.3，连续两个月站上荣枯线并创三个月新高，销售价格14个月来首次上升。",
+      "key_points": [
+        "中国",
+        "制造业",
+        "PMI",
+        "销售价格",
+        "经济"
+      ],
+      "cached_at": "2026-02-02T02:41:09.101473",
+      "source": "华尔街见闻"
+    },
+    "888a6317c584d669": {
+      "ai_score": 7.5,
+      "translated_title": "瑞浦兰钧预计2025年净利润6.30亿元-7.30亿元",
+      "ai_summary": "瑞浦兰钧发布盈利预喜公告，预计2025年净利润将实现扭亏为盈，主要得益于动力及储能电池产品出货量增加和产能利用率提升。",
+      "key_points": [
+        "瑞浦兰钧",
+        "2025年净利润",
+        "扭亏为盈",
+        "动力及储能电池",
+        "产能利用率"
+      ],
+      "cached_at": "2026-02-02T02:41:09.101482",
+      "source": "36氪"
+    },
+    "745b2f20958a907d": {
+      "ai_score": 7.0,
+      "translated_title": "腾讯回应‘元宝崩了’：瞬时流量激增导致，目前已经恢复",
+      "ai_summary": "腾讯针对‘元宝崩了’的传闻回应称，是由于瞬时流量激增导致部分服务短暂不稳定，目前已恢复。",
+      "key_points": [
+        "腾讯",
+        "元宝崩了",
+        "流量激增",
+        "服务不稳定",
+        "恢复"
+      ],
+      "cached_at": "2026-02-02T02:41:09.101491",
+      "source": "36氪"
+    },
+    "71ddc800a4449abd": {
+      "ai_score": 7.5,
+      "translated_title": "沪深两市成交额突破1万亿元",
+      "ai_summary": "沪深两市成交额突破1万亿元，显示出市场活跃度提升。",
+      "key_points": [
+        "沪深两市",
+        "成交额",
+        "1万亿元",
+        "市场活跃度"
+      ],
+      "cached_at": "2026-02-02T02:41:09.101497",
+      "source": "36氪"
+    },
+    "a8b58bf9e4892401": {
+      "ai_score": 7.5,
+      "translated_title": "中国1月RatingDog制造业PMI 50.3",
+      "ai_summary": "中国1月RatingDog制造业PMI为50.3，较上月上升，显示出制造业活动有所改善。",
+      "key_points": [
+        "中国",
+        "1月",
+        "RatingDog制造业PMI",
+        "50.3",
+        "制造业活动"
+      ],
+      "cached_at": "2026-02-02T02:41:09.101502",
+      "source": "36氪"
+    },
+    "442efea6c60a04d5": {
+      "ai_score": 7.0,
+      "translated_title": "沪深两市成交额突破5000亿元",
+      "ai_summary": "沪深两市成交额突破5000亿元，市场交易活跃。",
+      "key_points": [
+        "沪深两市",
+        "成交额",
+        "5000亿元",
+        "市场交易活跃"
+      ],
+      "cached_at": "2026-02-02T02:41:09.101507",
+      "source": "36氪"
+    },
+    "e74930a5af160c1f": {
+      "ai_score": 7.0,
+      "translated_title": "The Wild Markets Behind Polymarket’s ‘Truth Machine’",
+      "ai_summary": "加密赌博平台Polymarket的‘真理机器’背后的疯狂市场，美国司法部暂停了对该公司的调查。",
+      "key_points": [
+        "Polymarket",
+        "真理机器",
+        "加密赌博",
+        "美国司法部",
+        "调查暂停"
+      ],
+      "cached_at": "2026-02-02T02:41:09.101514",
+      "source": "WSJ 市场"
     }
   },
   "cache_hits": 6,
-  "cache_lookups": 706,
+  "cache_lookups": 723,
   "run_metrics": [
     {
       "run_time": "2026-01-31T06:47:45.364104",
@@ -3847,24 +4078,35 @@
       "semantic_duplicates": 0,
       "duration_seconds": 551.256037,
       "avg_score": 7.8125
+    },
+    {
+      "run_time": "2026-02-02T02:39:15.997325",
+      "news_count": 17,
+      "api_calls": 5,
+      "cache_hits": 0,
+      "cache_misses": 0,
+      "duplicates_removed": 0,
+      "semantic_duplicates": 0,
+      "duration_seconds": 114.615619,
+      "avg_score": 7.253846153846154
     }
   ],
   "source_last_fetch": {
-    "TechCrunch": "2026-02-02T01:42:58.446789",
-    "GitHub Blog": "2026-02-02T01:42:58.563939",
-    "Hacker News": "2026-02-02T01:42:58.932970",
-    "The Verge": "2026-02-02T01:42:59.095174",
-    "The Economist": "2026-02-02T01:42:59.393117",
-    "CNBC": "2026-02-02T01:42:59.608518",
-    "BBC Business": "2026-02-02T01:42:59.792232",
-    "MarketWatch": "2026-02-02T01:43:00.096324",
-    "Financial Times": "2026-02-02T01:43:00.627892",
-    "华尔街见闻": "2026-02-02T01:43:02.553050",
-    "36氪": "2026-02-02T01:43:04.320668",
-    "香港經濟日報": "2026-02-02T01:43:04.555707",
-    "东方财富": "2026-02-02T01:43:06.628174",
-    "WSJ 经济": "2026-02-02T01:43:06.778917",
-    "WSJ 市场": "2026-02-02T01:43:06.905437",
-    "WSJ 全球经济": "2026-02-02T01:43:07.006353"
+    "TechCrunch": "2026-02-02T02:39:16.511373",
+    "GitHub Blog": "2026-02-02T02:39:16.903517",
+    "Hacker News": "2026-02-02T02:39:17.231564",
+    "The Verge": "2026-02-02T02:39:17.415113",
+    "The Economist": "2026-02-02T02:39:17.727747",
+    "CNBC": "2026-02-02T02:39:17.935893",
+    "BBC Business": "2026-02-02T02:39:18.252240",
+    "MarketWatch": "2026-02-02T02:39:18.913025",
+    "Financial Times": "2026-02-02T02:39:19.582933",
+    "华尔街见闻": "2026-02-02T02:39:21.345785",
+    "36氪": "2026-02-02T02:39:22.954489",
+    "香港經濟日報": "2026-02-02T02:39:23.301193",
+    "东方财富": "2026-02-02T02:39:25.179975",
+    "WSJ 经济": "2026-02-02T02:39:26.103783",
+    "WSJ 市场": "2026-02-02T02:39:26.305515",
+    "WSJ 全球经济": "2026-02-02T02:39:26.429954"
   }
 }

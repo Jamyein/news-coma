@@ -5,8 +5,8 @@
     <link>https://github.com/Jamyein/news-coma</link>
     <description>由 AI 筛选的高质量科技新闻聚合，每6小时自动更新</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 02 Feb 2026 01:52:09 GMT</lastBuildDate>
-    <pubDate>Mon, 02 Feb 2026 01:52:09 GMT</pubDate>
+    <lastBuildDate>Mon, 02 Feb 2026 02:41:10 GMT</lastBuildDate>
+    <pubDate>Mon, 02 Feb 2026 02:41:10 GMT</pubDate>
     <atom:link href="https://Jamyein.github.io/news-coma/feed.xml" rel="self" type="application/rss+xml" />
     <image>
         <url>https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</url>
@@ -17,12 +17,12 @@
     <item>
         <title>2026年02月02日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-02.md</link>
-        <description>本期精选 24 条高质量科技新闻</description>
-        <pubDate>Mon, 02 Feb 2026 01:52:09 GMT</pubDate>
+        <description>本期精选 13 条高质量科技新闻</description>
+        <pubDate>Mon, 02 Feb 2026 02:41:10 GMT</pubDate>
         <guid>archive/2026-02-02.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<p># 📰 新闻精选</p>
-<p>> 🕐 更新时间: 2026年02月02日 09:52 > 📊 本期精选 <strong>24</strong> 条高质量新闻 > 🤖 由 AI 自动分类、筛选、翻译和总结</p>
+<p>> 🕐 更新时间: 2026年02月02日 10:41 > 📊 本期精选 <strong>13</strong> 条高质量新闻 > 🤖 由 AI 自动分类、筛选、翻译和总结</p>
 <hr/>
 <p>## 💰 财经新闻 (12条)</p>
 <p>精选 <strong>12</strong> 条财经新闻</p>
@@ -173,7 +173,7 @@
 <hr/>
 <p>## 🔬 科技新闻 (9条)</p>
 <p>精选 <strong>9</strong> 条科技新闻</p>
-<h3>1. 印度提出到 2047 年免征税收以吸引全球人工智能工作负载</h3>
+<h3>13. 印度提出到 2047 年免征税收以吸引全球人工智能工作负载</h3>
 <p><strong>📌 来源</strong>: TechCrunch | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.3/10</p>
 <p><strong>📝 摘要</strong>: 新德里的新举措正值亚马逊、谷歌和微软在印度扩大数据中心投资之际。</p>
 <p><strong>💡 关键要点</strong>:</p>
@@ -185,7 +185,7 @@
 </ul>
 <strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/01/india-offers-zero-taxes-through-2047-to-lure-global-ai-workloads/">India offers zero taxes through 2047 to lure global AI workloads</a>
 <hr/>
-<h3>2. 中信建投：外骨骼机器人迈入商业化加速阶段</h3>
+<h3>14. 中信建投：外骨骼机器人迈入商业化加速阶段</h3>
 <p><strong>📌 来源</strong>: 36氪 | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
 <p><strong>📝 摘要</strong>: 中信建投指出，外骨骼机器人商业化加速，市场需求扩张，技术成熟，对行业发展有重要影响。</p>
 <p><strong>💡 关键要点</strong>:</p>
@@ -196,7 +196,7 @@
 </ul>
 <strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3665447379935875?f=rss">中信建投：外骨骼机器人迈入商业化加速阶段</a>
 <hr/>
-<h3>3. Two kinds of AI users are emerging. The gap between them is astonishing</h3>
+<h3>15. Two kinds of AI users are emerging. The gap between them is astonishing</h3>
 <p><strong>📌 来源</strong>: Hacker News | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
 <p><strong>📝 摘要</strong>: AI用户分为两类，差距令人震惊。</p>
 <p><strong>💡 关键要点</strong>:</p>
@@ -208,7 +208,7 @@
 </ul>
 <strong>🔗 原文链接</strong>: <a href="https://martinalderson.com/posts/two-kinds-of-ai-users-are-emerging/">Two kinds of AI users are emerging. The gap between them is astonishing</a>
 <hr/>
-<h3>4. AI layoffs or ‘AI-washing’?</h3>
+<h3>16. AI layoffs or ‘AI-washing’?</h3>
 <p><strong>📌 来源</strong>: TechCrunch | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
 <p><strong>📝 摘要</strong>: 一些公司以AI裁员为借口，但实际裁员原因可能并非AI技术。</p>
 <p><strong>💡 关键要点</strong>:</p>
@@ -220,7 +220,7 @@
 </ul>
 <strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/01/ai-layoffs-or-ai-washing/">AI layoffs or ‘AI-washing’?</a>
 <hr/>
-<h3>5. Shedding light on Iran’s longest internet blackout</h3>
+<h3>17. Shedding light on Iran’s longest internet blackout</h3>
 <p><strong>📌 来源</strong>: The Verge | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
 <p><strong>📝 摘要</strong>: 伊朗互联网最长断电期间，抗议活动仍在继续。</p>
 <p><strong>💡 关键要点</strong>:</p>
@@ -232,7 +232,7 @@
 </ul>
 <strong>🔗 原文链接</strong>: <a href="https://www.theverge.com/policy/871848/iran-blackout-internet-mahsa-alimardani">Shedding light on Iran’s longest internet blackout</a>
 <hr/>
-<h3>6. A Crisis comes to Wordle: Reusing old words</h3>
+<h3>18. A Crisis comes to Wordle: Reusing old words</h3>
 <p><strong>📌 来源</strong>: Hacker News | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
 <p><strong>📝 摘要</strong>: Wordle游戏面临危机，开始重复使用旧词。</p>
 <p><strong>💡 关键要点</strong>:</p>
@@ -244,7 +244,7 @@
 </ul>
 <strong>🔗 原文链接</strong>: <a href="https://forkingmad.blog/wordle-crisis/">A Crisis comes to Wordle: Reusing old words</a>
 <hr/>
-<h3>7. Bye-bye corporate conglomerates. Hello personal conglomerates.</h3>
+<h3>19. Bye-bye corporate conglomerates. Hello personal conglomerates.</h3>
 <p><strong>📌 来源</strong>: TechCrunch | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
 <p><strong>📝 摘要</strong>: Elon Musk将SpaceX、xAI和Tesla合并，类似于通用电气或镀金时代的垄断者。</p>
 <p><strong>💡 关键要点</strong>:</p>
@@ -256,7 +256,7 @@
 </ul>
 <strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/01/bye-bye-corporate-conglomerates-hello-personal-conglomerates/">Bye-bye corporate conglomerates. Hello personal conglomerates.</a>
 <hr/>
-<h3>8. I don’t hate the robot barista like I thought I would</h3>
+<h3>20. I don’t hate the robot barista like I thought I would</h3>
 <p><strong>📌 来源</strong>: The Verge | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
 <p><strong>📝 摘要</strong>: 在Seattle，人们对机器人咖啡师的态度有所改变。</p>
 <p><strong>💡 关键要点</strong>:</p>
@@ -268,7 +268,7 @@
 </ul>
 <strong>🔗 原文链接</strong>: <a href="https://www.theverge.com/tech/871350/artly-robot-coffee-jarvis-seattle">I don’t hate the robot barista like I thought I would</a>
 <hr/>
-<h3>9. 不要害怕人工智能‘就业末日’</h3>
+<h3>21. 不要害怕人工智能‘就业末日’</h3>
 <p><strong>📌 来源</strong>: Financial Times | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
 <p><strong>📝 摘要</strong>: 这项技术尚未对就业产生显著影响，并可能创造更多的工作机会。</p>
 <p><strong>💡 关键要点</strong>:</p>
@@ -281,7 +281,7 @@
 <hr/>
 <p>## 🏛️ 社会政治 (3条)</p>
 <p>精选 <strong>3</strong> 条社会政治新闻</p>
-<h3>1. 俄防长绍伊古来华，受普京总统委派沟通战略</h3>
+<h3>22. 俄防长绍伊古来华，受普京总统委派沟通战略</h3>
 <p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏷️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.4/10</p>
 <p><strong>📝 摘要</strong>: 华尔街见闻报道，俄罗斯联邦安全会议秘书绍伊古受普京总统委派来华，与中方就国际与地区安全形势等议题进行磋商。</p>
 <p><strong>💡 关键要点</strong>:</p>
@@ -293,7 +293,7 @@
 </ul>
 <strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3764700">俄防长绍伊古来华，受普京总统委派沟通战略</a>
 <hr/>
-<h3>2. 一边兵临城下 一边喊话谈判：特朗普到底想怎么搞伊朗？</h3>
+<h3>23. 一边兵临城下 一边喊话谈判：特朗普到底想怎么搞伊朗？</h3>
 <p><strong>📌 来源</strong>: 东方财富 | <strong>🏷️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.4/10</p>
 <p><strong>📝 摘要</strong>: 特朗普在施压伊朗的同时，也在寻求谈判，美伊关系成为国际关注的焦点。</p>
 <p><strong>💡 关键要点</strong>:</p>
@@ -305,7 +305,7 @@
 </ul>
 <strong>🔗 原文链接</strong>: <a href="http://global.eastmoney.com/news/11798,202602013637972849.html">一边兵临城下 一边喊话谈判：特朗普到底想怎么搞伊朗？</a>
 <hr/>
-<h3>3. French Firm to Sell Division That Helps ICE Track Immigrants</h3>
+<h3>24. French Firm to Sell Division That Helps ICE Track Immigrants</h3>
 <p><strong>📌 来源</strong>: WSJ 经济 | <strong>🏷️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.4/10</p>
 <p><strong>📝 摘要</strong>: 法国公司Capgemini因合同问题出售帮助ICE追踪移民的部门。</p>
 <p><strong>💡 关键要点</strong>:</p>
@@ -322,7 +322,7 @@
         <title>2026年02月01日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-01.md</link>
         <description>本期精选 16 条高质量科技新闻</description>
-        <pubDate>Mon, 02 Feb 2026 01:42:40 GMT</pubDate>
+        <pubDate>Mon, 02 Feb 2026 02:38:56 GMT</pubDate>
         <guid>archive/2026-02-01.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<p># 📰 新闻精选</p>
@@ -521,7 +521,7 @@
         <title>2026年01月31日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-01-31.md</link>
         <description>本期精选 5 条高质量科技新闻</description>
-        <pubDate>Mon, 02 Feb 2026 01:42:40 GMT</pubDate>
+        <pubDate>Mon, 02 Feb 2026 02:38:56 GMT</pubDate>
         <guid>archive/2026-01-31.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<p># 📰 科技新闻精选</p>
