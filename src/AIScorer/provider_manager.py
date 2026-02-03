@@ -16,6 +16,20 @@ from .error_handler import ErrorHandler
 logger = logging.getLogger(__name__)
 
 
+def _split_into_batches(items: list, batch_size: int) -> list:
+    """
+    将列表分割成多个批次
+
+    Args:
+        items: 待分割的列表
+        batch_size: 每批大小
+
+    Returns:
+        list: 分割后的批次列表
+    """
+    return [items[i:i+batch_size] for i in range(0, len(items), batch_size)]
+
+
 class ProviderManager:
     """
     LLM提供商管理器
@@ -395,17 +409,17 @@ class ProviderManager:
     async def test_provider(self, provider_name: str) -> bool:
         """
         测试提供商是否可用
-        
+
         Args:
             provider_name: 提供商名称
-            
+
         Returns:
             bool: 是否可用
         """
         try:
             original_provider = self.current_provider_name
             self._init_provider(provider_name)
-            
+
             # 发送一个简单的测试请求
             response = await self.client.chat.completions.create(
                 model=self.model,
@@ -414,12 +428,167 @@ class ProviderManager:
                 ],
                 max_tokens=5
             )
-            
+
             # 恢复原来的提供商
             self._init_provider(original_provider)
-            
+
             return True
-            
+
         except Exception as e:
             logger.error(f"测试提供商 {provider_name} 失败: {e}")
             return False
+
+    # ==================== 真批处理方法 ====================
+
+    async def _process_batch_with_fallback(
+        self,
+        batch: List[NewsItem],
+        batch_index: int,
+        total_batches: int,
+        call_batch_api_func: Callable,
+        **api_kwargs
+    ) -> tuple:
+        """
+        处理单个批次的API调用（带回退机制）
+
+        Args:
+            batch: 当前批次的新闻项列表
+            batch_index: 批次索引（从1开始）
+            total_batches: 总批次数
+            call_batch_api_func: 批量API调用函数
+            **api_kwargs: 传递给API调用函数的额外参数
+
+        Returns:
+            tuple: (批次索引, API响应内容或None, 异常或None)
+        """
+        try:
+            logger.info(
+                f"📦 处理批次 {batch_index}/{total_batches} "
+                f"({len(batch)} 条新闻)"
+            )
+
+            # 调用批量API
+            response = await call_batch_api_func(**api_kwargs)
+            self.api_call_count += 1
+
+            return (batch_index, response, None)
+
+        except Exception as e:
+            logger.warning(
+                f"⚠️ 批次 {batch_index}/{total_batches} API调用失败: {e}"
+            )
+            return (batch_index, None, e)
+
+    async def execute_batch_with_fallback(
+        self,
+        items: List[NewsItem],
+        batch_size: int,
+        call_batch_api_func: Callable,
+        fallback_single_func: Callable = None,
+        default_score: float = 5.0,
+        **api_kwargs
+    ) -> tuple:
+        """
+        执行带真批处理和回退的批量API调用
+
+        降级策略：
+        1. 首选：批量API调用（按batch_size分批）
+        2. 降级1：单条API调用
+        3. 降级2：使用默认分数
+
+        Args:
+            items: 新闻项列表
+            batch_size: 每批大小
+            call_batch_api_func: 批量API调用函数
+            fallback_single_func: 单条处理函数（可选）
+            default_score: 默认分数
+            **api_kwargs: 传递给API调用函数的额外参数
+
+        Returns:
+            tuple: (results: List[dict], api_call_count: int)
+        """
+        if not items:
+            return [], 0
+
+        original_count = len(items)
+        logger.info(f"🚀 开始真批处理: {original_count} 条新闻")
+
+        # 1. 分割成批次
+        batches = _split_into_batches(items, batch_size)
+        total_batches = len(batches)
+        logger.info(f"📦 分割为 {total_batches} 个批次 (每批 ≤{batch_size})")
+
+        # 2. 尝试批量处理
+        batch_results = {}
+        batch_failures = []
+
+        for batch in batches:
+            batch_idx = batches.index(batch) + 1
+            batch_idx_outcome, response, error = (
+                await self._process_batch_with_fallback(
+                    batch=batch,
+                    batch_index=batch_idx,
+                    total_batches=total_batches,
+                    call_batch_api_func=call_batch_api_func,
+                    prompt=api_kwargs.get('prompt'),
+                    max_tokens=api_kwargs.get('max_tokens', 8000),
+                    temperature=api_kwargs.get('temperature', 0.3)
+                )
+            )
+
+            if response:
+                batch_results[batch_idx_outcome] = response
+            else:
+                batch_failures.append((batch_idx_outcome, batch, error))
+
+        # 3. 如果有失败的批次，尝试回退
+        if batch_failures:
+            logger.warning(
+                f"⚠️ {len(batch_failures)}/{total_batches} 批次失败，尝试回退..."
+            )
+
+            for batch_idx, batch, error in batch_failures:
+                if fallback_single_func:
+                    # 降级1：单条处理
+                    logger.info(
+                        f"🔄 批次 {batch_idx} 降级为单条处理 "
+                        f"({len(batch)} 条)"
+                    )
+
+                    for item in batch:
+                        try:
+                            result = await fallback_single_func(
+                                item=item,
+                                **api_kwargs
+                            )
+                            if result:
+                                item.ai_score = result.get('score', default_score)
+                            else:
+                                item.ai_score = default_score
+                        except Exception as e:
+                            logger.error(
+                                f"❌ 单条处理失败: {e}，使用默认分数"
+                            )
+                            item.ai_score = default_score
+                else:
+                    # 降级2：使用默认分数
+                    logger.warning(
+                        f"⚠️ 批次 {batch_idx} 使用默认分数 {default_score}"
+                    )
+                    for item in batch:
+                        item.ai_score = default_score
+
+        # 4. 合并结果
+        all_results = []
+        for batch_idx in range(1, total_batches + 1):
+            if batch_idx in batch_results:
+                all_results.append(batch_results[batch_idx])
+
+        total_api_calls = self.api_call_count
+
+        logger.info(
+            f"✅ 真批处理完成: {original_count} 条 → "
+            f"{len(all_results)} 批成功, {total_api_calls} 次API调用"
+        )
+
+        return all_results, total_api_calls
