@@ -318,14 +318,10 @@ class RSSAggregator:
                 # 失败时不更新时间戳，下次会重试
                 continue
         
-        # 过滤已处理的URL（保持原有逻辑）
-        processed = self.history.get_processed_urls()
-        new_items = [item for item in all_items if item.link not in processed]
-        
-        logger.info(f"📊 总计: 获取 {len(all_items)} 条，新内容 {len(new_items)} 条")
+        logger.info(f"📊 总计: 获取 {len(all_items)} 条")
         logger.info(f"📊 各源统计: {source_stats}")
         
-        return new_items if new_items else all_items  # 如果没有新内容，使用全部
+        return all_items
     
     async def _score_news(self, items: List[NewsItem]) -> List[NewsItem]:
         """AI评分"""
@@ -464,10 +460,6 @@ class RSSAggregator:
         # 更新历史 (带详细指标)
         self.history.update_stats(run_time, len(all_items), source_stats, **metrics)
         
-        # 记录已处理的URL
-        for item in all_items:
-            self.history.add_processed(item.link)
-        
         # 更新源选中统计
         for item in selected_items:
             self.history.update_source_selected(item.source, 1)
@@ -480,13 +472,13 @@ class RSSAggregator:
         logger.info(f"📈 总运行次数: {stats['total_runs']}")
         logger.info(f"📈 总处理新闻: {stats['total_news_processed']}")
         logger.info(f"📈 平均每期: {stats['avg_news_per_run']}")
-        
-            # 输出性能报告
-            report = self.history.get_performance_report()
-            if 'recent_runs' in report:
-                logger.info("📊 性能报告(最近10次平均):")
-                logger.info(f"   API调用: {report['avg_api_calls_per_run']:.1f} 次/运行")
-                logger.info(f"   平均时长: {report['avg_duration_seconds']:.1f} 秒")
+
+        # 输出性能报告
+        report = self.history.get_performance_report()
+        if 'recent_runs' in report:
+            logger.info("📊 性能报告(最近10次平均):")
+            logger.info(f"   API调用: {report['avg_api_calls_per_run']:.1f} 次/运行")
+            logger.info(f"   平均时长: {report['avg_duration_seconds']:.1f} 秒")
 
 
 async def main():

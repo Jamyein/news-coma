@@ -37,7 +37,6 @@ class HistoryManager:
         # 返回默认结构
         return {
             "last_run": None,
-            "processed_urls": [],
             "stats": {
                 "total_runs": 0,
                 "total_news_processed": 0,
@@ -56,18 +55,6 @@ class HistoryManager:
                 json.dump(self._data, f, ensure_ascii=False, indent=2)
         except Exception as e:
             logger.error(f"保存历史数据失败: {e}")
-    
-    def is_processed(self, url: str) -> bool:
-        """检查URL是否已处理"""
-        return url in self._data.get("processed_urls", [])
-    
-    def add_processed(self, url: str):
-        """添加已处理URL"""
-        if url not in self._data["processed_urls"]:
-            self._data["processed_urls"].append(url)
-            # 限制历史记录数量(保留最近1000条)
-            if len(self._data["processed_urls"]) > 1000:
-                self._data["processed_urls"] = self._data["processed_urls"][-1000:]
     
     # ==================== 原有统计功能 ====================
     
@@ -115,8 +102,6 @@ class HistoryManager:
             "api_calls": kwargs.get("api_calls", 0),
             "cache_hits": kwargs.get("cache_hits", 0),
             "cache_misses": kwargs.get("cache_misses", 0),
-            "duplicates_removed": kwargs.get("duplicates_removed", 0),
-            "semantic_duplicates": kwargs.get("semantic_duplicates", 0),
             "duration_seconds": kwargs.get("duration_seconds", 0),
             "avg_score": kwargs.get("avg_score", 0),
         }
@@ -143,10 +128,6 @@ class HistoryManager:
         """获取统计信息"""
         return self._data["stats"]
     
-    def get_processed_urls(self) -> Set[str]:
-        """获取已处理URL集合"""
-        return set(self._data.get("processed_urls", []))
-    
     # ==================== 性能报告功能 (新增) ====================
     
     def get_performance_report(self) -> Dict[str, Any]:
@@ -168,7 +149,6 @@ class HistoryManager:
         total_cache_hits = sum(m.get("cache_hits", 0) for m in recent_metrics)
         total_cache_lookups = sum(m.get("cache_hits", 0) + m.get("cache_misses", 0) for m in recent_metrics)
         total_duration = sum(m.get("duration_seconds", 0) for m in recent_metrics)
-        total_duplicates = sum(m.get("duplicates_removed", 0) for m in recent_metrics)
         
         n = len(recent_metrics)
         
@@ -182,7 +162,6 @@ class HistoryManager:
             "avg_api_calls_per_run": total_api_calls / n,
             "avg_cache_hit_rate": total_cache_hits / max(total_cache_lookups, 1),
             "avg_duration_seconds": total_duration / n,
-            "total_duplicates_removed": total_duplicates,
             "estimated_cost_per_run": estimated_cost / n,
             "estimated_cost_per_run_usd": f"${estimated_cost / n:.4f}",
             "cache_stats": self.get_cache_stats(),
