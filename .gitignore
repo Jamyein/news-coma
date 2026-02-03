@@ -49,3 +49,11 @@ test_config.py
 docs/2pass-system.md
 /tests
 AGENTS.md
+src/prompts/codemap.md
+src/codemap.md
+src/AIScorer/codemap.md
+D
+config/codemap.md
+codemap.md
+.slim/cartography.json
+test_simplify.py

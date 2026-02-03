@@ -45,20 +45,13 @@ class Config:
         """获取AI配置（支持多提供商）"""
         ai_data = self._config.get('ai', {})
         
-        # 读取当前提供商（简化版核心）
         current_provider = ai_data.get('ai_provider', 'openai')
-        
-        # 读取所有提供商配置
         providers_raw = ai_data.get('ai_providers', {})
-        providers_config = {}
         
+        # 解析提供商配置
+        providers_config = {}
         for name, config in providers_raw.items():
-            # 解析api_key环境变量
-            api_key = config.get('api_key', '')
-            if api_key.startswith('${') and api_key.endswith('}'):
-                env_var = api_key[2:-1]
-                api_key = os.getenv(env_var, '')
-            
+            api_key = self._resolve_api_key(config.get('api_key', ''))
             providers_config[name] = ProviderConfig(
                 api_key=api_key,
                 base_url=config.get('base_url', ''),
@@ -69,6 +62,71 @@ class Config:
                 batch_size=config.get('batch_size', 5),
                 max_concurrent=config.get('max_concurrent', 3)
             )
+        
+        # 验证当前提供商的API key
+        current_config = providers_config.get(current_provider)
+        if not current_config or not current_config.api_key:
+            self._raise_api_key_error(current_provider, ai_data)
+        
+        return AIConfig(
+            provider=current_provider,
+            providers_config=providers_config,
+            fallback=self._build_fallback_config(ai_data.get('fallback', {})),
+            scoring_criteria=ai_data.get('scoring_criteria', {
+                'importance': 0.30, 'timeliness': 0.20, 'technical_depth': 0.20,
+                'audience_breadth': 0.15, 'practicality': 0.15
+            }),
+            retry_attempts=ai_data.get('retry_attempts', 3),
+            cache_ttl_hours=ai_data.get('cache_ttl_hours', 24),
+            use_true_batch=ai_data.get('use_true_batch', True),
+            true_batch_size=ai_data.get('true_batch_size', 10),
+            use_2pass=ai_data.get('use_2pass', True),
+            pass1_threshold=ai_data.get('pass1_threshold', 7.0),
+            pass1_max_items=ai_data.get('pass1_max_items', 40),
+            pass1_threshold_finance=ai_data.get('pass1_threshold_finance', 5.5),
+            pass1_threshold_tech=ai_data.get('pass1_threshold_tech', 6.0),
+            pass1_threshold_politics=ai_data.get('pass1_threshold_politics', 5.5),
+            pass1_use_category_specific=ai_data.get('pass1_use_category_specific', True),
+            category_quota_finance=ai_data.get('category_quota_finance', 0.40),
+            category_quota_tech=ai_data.get('category_quota_tech', 0.30),
+            category_quota_politics=ai_data.get('category_quota_politics', 0.30),
+            pass2_fetch_fulltext_enabled=ai_data.get('pass2_fetch_fulltext_enabled', True),
+            pass2_fulltext_max_items=ai_data.get('pass2_fulltext_max_items', 30),
+            pass2_fulltext_timeout=ai_data.get('pass2_fulltext_timeout', 10),
+            pass2_max_concurrent_fetches=ai_data.get('pass2_max_concurrent_fetches', 5),
+            deep_analysis_enabled=ai_data.get('deep_analysis_enabled', True),
+            deep_analysis_dimensions=ai_data.get('deep_analysis_dimensions', [
+                "core_insight", "key_arguments", "impact_forecast", "sentiment", "credibility_score"
+            ])
+        )
+    
+    def _resolve_api_key(self, api_key_template: str) -> str:
+        """解析API Key模板（支持环境变量）"""
+        if api_key_template.startswith('${') and api_key_template.endswith('}'):
+            env_var = api_key_template[2:-1]
+            return os.getenv(env_var, '')
+        return api_key_template
+    
+    def _raise_api_key_error(self, provider: str, ai_data: dict):
+        """抛出API Key错误"""
+        env_var = "OPENAI_API_KEY"  # default
+        provider_config = ai_data.get('ai_providers', {}).get(provider, {})
+        api_key_template = provider_config.get('api_key', '')
+        if api_key_template.startswith('${') and api_key_template.endswith('}'):
+            env_var = api_key_template[2:-1]
+        
+        raise ValueError(
+            f"❌ 当前选择的AI提供商 '{provider}' 未配置API Key\n"
+            f"请在环境变量中设置: {env_var}"
+        )
+    
+    def _build_fallback_config(self, fallback_data: dict) -> FallbackConfig:
+        """构建回退配置"""
+        return FallbackConfig(
+            enabled=fallback_data.get('enabled', False),
+            max_retries_per_provider=fallback_data.get('max_retries_per_provider', 2),
+            fallback_chain=fallback_data.get('fallback_chain', [])
+        )
         
         # 读取回退配置
         fallback_data = ai_data.get('fallback', {})

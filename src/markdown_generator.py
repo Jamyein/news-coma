@@ -160,25 +160,22 @@ class MarkdownGenerator:
     
     def _format_deep_analysis(self, deep_analysis: Dict) -> str:
         """格式化深度分析结果为Markdown"""
+        # 字段到中文标签的映射
+        field_labels = {
+            'core_insight': '核心观点',
+            'key_arguments': '关键论据',
+            'impact_forecast': '影响预测',
+            'sentiment': '情感倾向',
+            'credibility_score': '可信度评分',
+            'analysis_timestamp': '分析时间',
+        }
+        
         lines = []
-        
-        if deep_analysis.get('core_insight'):
-            lines.append(f"- **核心观点**: {deep_analysis['core_insight']}")
-        
-        if deep_analysis.get('key_arguments'):
-            lines.append(f"- **关键论据**: {deep_analysis['key_arguments']}")
-        
-        if deep_analysis.get('impact_forecast'):
-            lines.append(f"- **影响预测**: {deep_analysis['impact_forecast']}")
-        
-        if deep_analysis.get('sentiment'):
-            lines.append(f"- **情感倾向**: {deep_analysis['sentiment']}")
-        
-        if deep_analysis.get('credibility_score'):
-            lines.append(f"- **可信度评分**: {deep_analysis['credibility_score']}/10")
-        
-        if deep_analysis.get('analysis_timestamp'):
-            lines.append(f"- **分析时间**: {deep_analysis['analysis_timestamp']}")
+        for field, label in field_labels.items():
+            value = deep_analysis.get(field)
+            if value:
+                suffix = "/10" if field == 'credibility_score' else ""
+                lines.append(f"- **{label}**: {value}{suffix}")
         
         return "\n".join(lines)
     

@@ -128,45 +128,26 @@ class HistoryManager:
         """获取统计信息"""
         return self._data["stats"]
     
-    # ==================== 性能报告功能 (新增) ====================
+    # ==================== 性能报告功能 ====================
     
     def get_performance_report(self) -> Dict[str, Any]:
-        """
-        获取性能报告
-        
-        Returns:
-            包含最近运行指标的字典
-        """
+        """获取性能报告（简化版）"""
         metrics = self._data.get("run_metrics", [])
-        
         if not metrics:
-            return {"message": "暂无运行数据", "total_runs": self._data["stats"]["total_runs"]}
+            return {"message": "暂无运行数据"}
         
-        # 使用最近10次运行数据
-        recent_metrics = metrics[-10:]
+        # 取最近10次运行数据
+        recent = metrics[-10:]
+        n = len(recent)
         
-        total_api_calls = sum(m.get("api_calls", 0) for m in recent_metrics)
-        total_cache_hits = sum(m.get("cache_hits", 0) for m in recent_metrics)
-        total_cache_lookups = sum(m.get("cache_hits", 0) + m.get("cache_misses", 0) for m in recent_metrics)
-        total_duration = sum(m.get("duration_seconds", 0) for m in recent_metrics)
-        
-        n = len(recent_metrics)
-        
-        # 估算成本 (基于平均token数)
-        # 单次API调用成本约$0.0002-0.001 (取决于模型和token数)
-        avg_cost_per_call = 0.0005  # 保守估算
-        estimated_cost = total_api_calls * avg_cost_per_call
+        total_api = sum(m.get("api_calls", 0) for m in recent)
+        total_duration = sum(m.get("duration_seconds", 0) for m in recent)
         
         return {
             "recent_runs": n,
-            "avg_api_calls_per_run": total_api_calls / n,
-            "avg_cache_hit_rate": total_cache_hits / max(total_cache_lookups, 1),
-            "avg_duration_seconds": total_duration / n,
-            "estimated_cost_per_run": estimated_cost / n,
-            "estimated_cost_per_run_usd": f"${estimated_cost / n:.4f}",
-            "cache_stats": self.get_cache_stats(),
-            "total_runs_all_time": self._data["stats"]["total_runs"],
-            "total_news_processed_all_time": self._data["stats"]["total_news_processed"],
+            "avg_api_calls": total_api / n if n > 0 else 0,
+            "avg_duration": total_duration / n if n > 0 else 0,
+            "total_runs": self._data["stats"]["total_runs"],
         }
     
     def clear_old_entries(self, keep_days: int = 30):
@@ -177,53 +158,25 @@ class HistoryManager:
     # ==================== RSS源最后获取时间 (增量获取支持) ====================
     
     def get_source_last_fetch(self, source_name: str) -> Optional[datetime]:
-        """
-        获取指定RSS源的最后获取时间
-        
-        Args:
-            source_name: RSS源名称
-            
-        Returns:
-            最后获取时间(datetime对象)，如果不存在则返回None
-        """
-        source_fetch_times = self._data.get("source_last_fetch", {})
-        last_fetch_str = source_fetch_times.get(source_name)
-        
+        """获取指定RSS源的最后获取时间"""
+        last_fetch_str = self._data.get("source_last_fetch", {}).get(source_name)
         if last_fetch_str:
             try:
                 return datetime.fromisoformat(last_fetch_str)
             except ValueError:
-                logger.warning(f"无法解析 {source_name} 的时间戳: {last_fetch_str}")
-        
+                pass
         return None
     
     def update_source_last_fetch(self, source_name: str, fetch_time: datetime):
-        """
-        更新指定RSS源的最后获取时间
-        
-        Args:
-            source_name: RSS源名称
-            fetch_time: 获取时间(datetime对象)
-        """
-        if "source_last_fetch" not in self._data:
-            self._data["source_last_fetch"] = {}
-        
-        self._data["source_last_fetch"][source_name] = fetch_time.isoformat()
-        logger.debug(f"✓ 更新 {source_name} 最后获取时间: {fetch_time}")
+        """更新指定RSS源的最后获取时间"""
+        self._data.setdefault("source_last_fetch", {})[source_name] = fetch_time.isoformat()
     
     def get_fallback_last_fetch(self) -> Optional[datetime]:
-        """
-        获取fallback最后获取时间（用于向后兼容）
-        
-        当source_last_fetch不存在时，使用last_run作为fallback
-        
-        Returns:
-            fallback时间(datetime对象)，如果不存在则返回None
-        """
-        last_run_str = self._data.get("last_run")
-        if last_run_str:
+        """获取fallback最后获取时间（向后兼容）"""
+        last_run = self._data.get("last_run")
+        if last_run:
             try:
-                return datetime.fromisoformat(last_run_str)
+                return datetime.fromisoformat(last_run)
             except ValueError:
                 pass
         return None

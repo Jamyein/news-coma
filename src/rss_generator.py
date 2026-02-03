@@ -319,45 +319,33 @@ class RSSGenerator:
         }
     
     def _extract_date_from_file(self, file_path: Path, content: str) -> datetime:
-        """从文件内容中提取日期（增强版）"""
+        """从文件内容中提取日期"""
         try:
             if file_path.name == "latest.md":
-                # latest.md: 使用多种模式提取精确时间
+                # latest.md: 尝试多种模式提取日期
+                patterns = [
+                    # 完整日期时间
+                    (r'更新时间:\s*(\d{4})年(\d{2})月(\d{2})日\s*(\d{2}):(\d{2})', 5),
+                    # 仅日期
+                    (r'更新时间:\s*(\d{4})年(\d{2})月(\d{2})日', 3),
+                    (r'#\s*(\d{4})年(\d{2})月(\d{2})日', 3),
+                ]
                 
-                # 模式1：从"更新时间:"中提取日期和时间
-                update_time_match = re.search(r'更新时间:\s*(\d{4})年(\d{2})月(\d{2})日\s*(\d{2}):(\d{2})', content)
-                if update_time_match:
-                    year, month, day = int(update_time_match.group(1)), int(update_time_match.group(2)), int(update_time_match.group(3))
-                    hour, minute = int(update_time_match.group(4)), int(update_time_match.group(5))
-                    return datetime(year, month, day, hour, minute)
+                for pattern, group_count in patterns:
+                    match = re.search(pattern, content)
+                    if match:
+                        nums = [int(match.group(i)) for i in range(1, group_count + 1)]
+                        if group_count == 5:
+                            return datetime(*nums)
+                        return datetime(*nums)
                 
-                # 模式2：从"更新时间:"中提取日期（无时间）
-                update_date_match = re.search(r'更新时间:\s*(\d{4})年(\d{2})月(\d{2})日', content)
-                if update_date_match:
-                    year, month, day = int(update_date_match.group(1)), int(update_date_match.group(2)), int(update_date_match.group(3))
-                    return datetime(year, month, day)
-                
-                # 模式3：从标题中提取日期
-                title_match = re.search(r'#\s*(\d{4})年(\d{2})月(\d{2})日', content)
-                if title_match:
-                    year, month, day = int(title_match.group(1)), int(title_match.group(2)), int(title_match.group(3))
-                    return datetime(year, month, day)
-                
-                # 模式4：从生成时间中提取
-                generation_time_match = re.search(r'生成时间:\s*(\d{4})-(\d{2})-(\d{2})\s*(\d{2}):(\d{2}):(\d{2})', content)
-                if generation_time_match:
-                    year, month, day = int(generation_time_match.group(1)), int(generation_time_match.group(2)), int(generation_time_match.group(3))
-                    hour, minute, second = int(generation_time_match.group(4)), int(generation_time_match.group(5)), int(generation_time_match.group(6))
-                    return datetime(year, month, day, hour, minute, second)
-                
-                logger.warning(f"无法从latest.md中提取精确时间: {file_path}")
+                logger.warning(f"无法从latest.md提取日期: {file_path}")
                 
             else:
                 # 归档文件: 从文件名提取日期 (YYYY-MM-DD.md)
-                date_match = re.match(r'(\d{4})-(\d{2})-(\d{2})\.md$', file_path.name)
-                if date_match:
-                    year, month, day = int(date_match.group(1)), int(date_match.group(2)), int(date_match.group(3))
-                    return datetime(year, month, day)
+                match = re.match(r'(\d{4})-(\d{2})-(\d{2})\.md$', file_path.name)
+                if match:
+                    return datetime(*[int(x) for x in match.groups()])
             
             return None
             
