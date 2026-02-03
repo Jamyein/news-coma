@@ -3,13 +3,10 @@
 负责管理已处理的新闻URL、统计数据和AI评分缓存
 """
 import json
-import hashlib
 import logging
 from datetime import datetime, timedelta
 from typing import List, Set, Dict, Any, Optional
 from pathlib import Path
-
-from src.models import NewsItem
 
 logger = logging.getLogger(__name__)
 
@@ -17,18 +14,11 @@ logger = logging.getLogger(__name__)
 class HistoryManager:
     """历史数据管理器 - 扩展AI评分缓存功能"""
     
-    def __init__(self, history_path: str = "data/history.json", cache_ttl_hours: int = 24):
+    def __init__(self, history_path: str = "data/history.json"):
         self.history_path = Path(history_path)
-        self.cache_ttl = timedelta(hours=cache_ttl_hours)
         self._data = self._load()
-        
-        # 确保AI缓存字段存在
-        if "ai_cache" not in self._data:
-            self._data["ai_cache"] = {}
-        if "cache_hits" not in self._data:
-            self._data["cache_hits"] = 0
-        if "cache_lookups" not in self._data:
-            self._data["cache_lookups"] = 0
+
+        # 确保run_metrics字段存在
         if "run_metrics" not in self._data:
             self._data["run_metrics"] = []
         # 确保RSS源最后获取时间字段存在（增量获取支持）
@@ -54,9 +44,6 @@ class HistoryManager:
                 "avg_news_per_run": 0
             },
             "source_stats": {},
-            "ai_cache": {},
-            "cache_hits": 0,
-            "cache_lookups": 0,
             "run_metrics": [],
             "source_last_fetch": {}  # RSS源最后获取时间（增量获取支持）
         }
@@ -82,125 +69,7 @@ class HistoryManager:
             if len(self._data["processed_urls"]) > 1000:
                 self._data["processed_urls"] = self._data["processed_urls"][-1000:]
     
-    # ==================== AI评分缓存功能 (新增) ====================
-    
-    def _generate_content_fingerprint(self, item: NewsItem) -> str:
-        """
-        生成新闻内容指纹 (用于缓存键)
-        使用标题+摘要前200字符+来源生成MD5哈希
-        """
-        content = f"{item.title}:{item.summary[:200]}:{item.source}"
-        return hashlib.md5(content.encode('utf-8')).hexdigest()[:16]
-    
-    def get_ai_score_from_cache(self, item: NewsItem) -> Optional[Dict[str, Any]]:
-        """
-        从缓存获取AI评分结果
-        
-        Args:
-            item: 新闻条目
-            
-        Returns:
-            如果缓存命中且未过期，返回包含ai_score等字段的字典
-            否则返回None
-        """
-        fingerprint = self._generate_content_fingerprint(item)
-        cached = self._data["ai_cache"].get(fingerprint)
-        
-        if not cached:
-            return None
-        
-        # 检查是否过期
-        try:
-            cached_time = datetime.fromisoformat(cached.get('cached_at', '2000-01-01T00:00:00'))
-            if datetime.now() - cached_time > self.cache_ttl:
-                # 过期，删除缓存
-                del self._data["ai_cache"][fingerprint]
-                return None
-        except (ValueError, KeyError):
-            # 时间格式错误，视为过期
-            del self._data["ai_cache"][fingerprint]
-            return None
-        
-        self._data["cache_hits"] = self._data.get("cache_hits", 0) + 1
-        logger.debug(f"AI缓存命中: {item.title[:50]}...")
-        return cached
-    
-    def save_ai_score_to_cache(self, item: NewsItem) -> bool:
-        """
-        缓存AI评分结果
-        
-        Args:
-            item: 已评分的新闻条目
-            
-        Returns:
-            是否成功缓存
-        """
-        if item.ai_score is None:
-            return False
-        
-        fingerprint = self._generate_content_fingerprint(item)
-        self._data["ai_cache"][fingerprint] = {
-            'ai_score': item.ai_score,
-            'translated_title': item.translated_title,
-            'ai_summary': item.ai_summary,
-            'key_points': item.key_points if item.key_points else [],
-            'cached_at': datetime.now().isoformat(),
-            'source': item.source
-        }
-        return True
-    
-    def record_cache_lookup(self):
-        """记录缓存查询次数"""
-        self._data["cache_lookups"] = self._data.get("cache_lookups", 0) + 1
-    
-    def get_cache_stats(self) -> Dict[str, Any]:
-        """获取缓存统计信息"""
-        total = len(self._data.get("ai_cache", {}))
-        hits = self._data.get("cache_hits", 0)
-        lookups = self._data.get("cache_lookups", 1)
-        
-        # 计算过期条目
-        expired = 0
-        now = datetime.now()
-        for fingerprint, cached in list(self._data.get("ai_cache", {}).items()):
-            try:
-                cached_time = datetime.fromisoformat(cached.get('cached_at', '2000-01-01T00:00:00'))
-                if now - cached_time > self.cache_ttl:
-                    expired += 1
-            except:
-                expired += 1
-        
-        return {
-            'total_cached': total,
-            'expired_entries': expired,
-            'cache_hits': hits,
-            'cache_lookups': lookups,
-            'hit_rate': hits / max(lookups, 1),
-            'hit_rate_percent': f"{hits / max(lookups, 1) * 100:.1f}%"
-        }
-    
-    def clear_expired_cache(self) -> int:
-        """清理过期的AI评分缓存"""
-        now = datetime.now()
-        expired_keys = []
-        
-        for fingerprint, cached in list(self._data.get("ai_cache", {}).items()):
-            try:
-                cached_time = datetime.fromisoformat(cached.get('cached_at', '2000-01-01T00:00:00'))
-                if now - cached_time > self.cache_ttl:
-                    expired_keys.append(fingerprint)
-            except:
-                expired_keys.append(fingerprint)
-        
-        for key in expired_keys:
-            del self._data["ai_cache"][key]
-        
-        if expired_keys:
-            logger.info(f"清理 {len(expired_keys)} 条过期AI缓存")
-        
-        return len(expired_keys)
-    
-    # ==================== 原有统计功能 (保持不变) ====================
+    # ==================== 原有统计功能 ====================
     
     def update_stats(
         self, 

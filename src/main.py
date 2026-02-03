@@ -39,9 +39,7 @@ class RSSAggregator:
     
     def __init__(self):
         self.config = Config()
-        # 初始化HistoryManager，带AI评分缓存(24小时TTL)
-        cache_ttl = getattr(self.config.ai_config, 'cache_ttl_hours', 24)
-        self.history = HistoryManager(cache_ttl_hours=cache_ttl)
+        self.history = HistoryManager()
         self.fetcher = None
         self.scorer = None
         self.markdown_gen = None
@@ -63,8 +61,6 @@ class RSSAggregator:
         # 初始化运行指标
         run_metrics = {
             "api_calls": 0,
-            "cache_hits": 0,
-            "cache_misses": 0,
             "duplicates_removed": 0,
             "semantic_duplicates": 0,
         }
@@ -332,51 +328,18 @@ class RSSAggregator:
         return new_items if new_items else all_items  # 如果没有新内容，使用全部
     
     async def _score_news(self, items: List[NewsItem]) -> List[NewsItem]:
-        """AI评分 (集成缓存检查)"""
+        """AI评分"""
         logger.info(f"🤖 开始AI评分(共 {len(items)} 条)...")
-        
-        # 分离已缓存和未缓存的项目
-        cached_items = []
-        uncached_items = []
-        
-        for item in items:
-            self.history.record_cache_lookup()  # 记录查询
-            cached_data = self.history.get_ai_score_from_cache(item)
-            
-            if cached_data:
-                # 缓存命中，填充数据
-                item.ai_score = cached_data['ai_score']
-                item.translated_title = cached_data['translated_title']
-                item.ai_summary = cached_data['ai_summary']
-                item.key_points = cached_data['key_points'] if cached_data['key_points'] else []
-                cached_items.append(item)
-            else:
-                # 缓存未命中，需要评分
-                uncached_items.append(item)
-        
-        cache_stats = self.history.get_cache_stats()
-        logger.info(f"💾 缓存命中: {len(cached_items)} 条 (命中率: {cache_stats['hit_rate_percent']}), 需评分: {len(uncached_items)} 条")
-        
-        # 只对未缓存的项目评分
-        if uncached_items:
-            scored_uncached = await self.scorer.score_all(uncached_items)
-            
-            # 缓存新评分结果
-            for item in scored_uncached:
-                self.history.save_ai_score_to_cache(item)
-            
-            # 合并结果
-            scored_items = cached_items + scored_uncached
-        else:
-            scored_items = cached_items
-            logger.info("✅ 全部来自缓存，无需API调用")
-        
+
+        # 对所有项目进行评分
+        scored_items = await self.scorer.score_all(items)
+
         # 过滤低于阈值的
         threshold = self.config.filter_config.min_score_threshold
         filtered = [item for item in scored_items if (item.ai_score or 0) >= threshold]
-        
+
         logger.info(f"✓ 评分完成: {len(scored_items)}条，≥{threshold}分: {len(filtered)}条")
-        
+
         return filtered
     
     def _select_top_news(self, items: List[NewsItem]) -> List[NewsItem]:
@@ -518,14 +481,12 @@ class RSSAggregator:
         logger.info(f"📈 总处理新闻: {stats['total_news_processed']}")
         logger.info(f"📈 平均每期: {stats['avg_news_per_run']}")
         
-        # 输出性能报告
-        report = self.history.get_performance_report()
-        if 'recent_runs' in report:
-            logger.info("📊 性能报告(最近10次平均):")
-            logger.info(f"   API调用: {report['avg_api_calls_per_run']:.1f} 次/运行")
-            logger.info(f"   缓存命中率: {report['cache_stats']['hit_rate_percent']}")
-            logger.info(f"   平均时长: {report['avg_duration_seconds']:.1f} 秒")
-            logger.info(f"   估算成本: {report['estimated_cost_per_run_usd']}/运行")
+            # 输出性能报告
+            report = self.history.get_performance_report()
+            if 'recent_runs' in report:
+                logger.info("📊 性能报告(最近10次平均):")
+                logger.info(f"   API调用: {report['avg_api_calls_per_run']:.1f} 次/运行")
+                logger.info(f"   平均时长: {report['avg_duration_seconds']:.1f} 秒")
 
 
 async def main():
