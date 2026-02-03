@@ -5,8 +5,8 @@
     <link>https://github.com/Jamyein/news-coma</link>
     <description>由 AI 筛选的高质量科技新闻聚合，每6小时自动更新</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 02 Feb 2026 14:30:20 GMT</lastBuildDate>
-    <pubDate>Mon, 02 Feb 2026 14:30:20 GMT</pubDate>
+    <lastBuildDate>Tue, 03 Feb 2026 01:43:21 GMT</lastBuildDate>
+    <pubDate>Tue, 03 Feb 2026 01:43:21 GMT</pubDate>
     <atom:link href="https://Jamyein.github.io/news-coma/feed.xml" rel="self" type="application/rss+xml" />
     <image>
         <url>https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</url>
@@ -15,10 +15,139 @@
     </image>
 
     <item>
+        <title>2026年02月03日 新闻汇总</title>
+        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-03.md</link>
+        <description>本期精选 10 条高质量科技新闻</description>
+        <pubDate>Tue, 03 Feb 2026 01:43:21 GMT</pubDate>
+        <guid>archive/2026-02-03.md</guid>
+        <category>综合新闻</category>
+        <content:encoded><![CDATA[<p># 📰 新闻精选</p>
+<p>> 🕐 更新时间: 2026年02月03日 09:43 > 📊 本期精选 <strong>10</strong> 条高质量新闻 > 🤖 由 AI 自动分类、筛选、翻译和总结</p>
+<hr/>
+<p>## 💰 财经新闻 (10条)</p>
+<p>精选 <strong>10</strong> 条财经新闻</p>
+<h3>1. 美国与印度达成长期贸易休战</h3>
+<p><strong>📌 来源</strong>: The Economist | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.1/10</p>
+<p><strong>📝 摘要</strong>: 美国与印度达成一项长期贸易休战协议，对两国及全球贸易关系产生重大影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>美国与印度贸易休战</li>
+<li>全球贸易关系</li>
+<li>长期协议</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.economist.com/finance-and-economics/2026/02/02/a-long-awaited-trade-truce-between-america-and-india">A long-awaited trade truce between America and India</a>
+<hr/>
+<h3>2. 欧盟表示，与英国开启关税同盟谈判的大门</h3>
+<p><strong>📌 来源</strong>: BBC Business | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.9/10</p>
+<p><strong>📝 摘要</strong>: 欧盟表示愿意与英国进行关税同盟谈判，以应对全球不确定性。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>欧盟</li>
+<li>关税同盟谈判</li>
+<li>英国</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.bbc.com/news/articles/cn56dnrvq03o?at_medium=RSS&at_campaign=rss">Door is open to customs union talks with UK, EU says</a>
+<hr/>
+<h3>3. AI并非唯一威胁大型科技公司的因素</h3>
+<p><strong>📌 来源</strong>: The Economist | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.9/10</p>
+<p><strong>📝 摘要</strong>: 除了AI，还有其他因素可能威胁大型科技公司，如广告收入可能受到经济衰退的影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>大型科技公司</li>
+<li>AI威胁</li>
+<li>广告收入</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.economist.com/finance-and-economics/2026/02/02/ai-is-not-the-only-threat-menacing-big-tech">AI is not the only threat menacing big tech</a>
+<hr/>
+<h3>4. SpaceX将接管埃隆·马斯克的AI公司</h3>
+<p><strong>📌 来源</strong>: BBC Business | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 马斯克的太空探索公司与他的AI初创公司合并。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>SpaceX</li>
+<li>AI公司</li>
+<li>马斯克</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.bbc.com/news/articles/cq6vnrye06po?at_medium=RSS&at_campaign=rss">SpaceX to take over Elon Musk's AI firm</a>
+<hr/>
+<h3>5. 游艇行业寻找替代柚木</h3>
+<p><strong>📌 来源</strong>: BBC Business | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 柚木供应短缺，迫使游艇行业寻找替代品。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>游艇行业</li>
+<li>柚木</li>
+<li>替代品</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.bbc.com/news/articles/clygdez8d41o?at_medium=RSS&at_campaign=rss">The yachting industry searches for alternatives to teak</a>
+<hr/>
+<h3>6. 比特币短暂跌破加密公司关键盈亏平衡点后策略下滑</h3>
+<p><strong>📌 来源</strong>: CNBC | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 比特币价格一度跌至约74500美元，低于Strategy的平均购买价格76052美元。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>比特币价格</li>
+<li>盈亏平衡点</li>
+<li>策略下滑</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.cnbc.com/2026/02/02/strategy-slides-after-bitcoin-briefly-dips-below-crypto-firms-key-breakeven-level-.html">Strategy slides after bitcoin briefly dips below crypto firm's key breakeven level</a>
+<hr/>
+<h3>7. 我们有了更多理由去爱这两只投资组合股票</h3>
+<p><strong>📌 来源</strong>: CNBC | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 高盛被选中为价值580亿美元的合并提供建议，三菱日联建议购买博通股票。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>投资组合股票</li>
+<li>高盛建议</li>
+<li>博通股票</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.cnbc.com/2026/02/02/we-just-got-reasons-to-love-these-2-portfolio-stocks-even-more.html">We just got reasons to love these 2 portfolio stocks even more</a>
+<hr/>
+<h3>8. 迪士尼警告，由于外国游客减少，将受到打击</h3>
+<p><strong>📌 来源</strong>: BBC Business | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 迪士尼表示，由于国际游客减少，其美国公园的游客数量正在减弱。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>迪士尼</li>
+<li>外国游客</li>
+<li>游客减少</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.bbc.com/news/articles/cy8pzzmpdz9o?at_medium=RSS&at_campaign=rss">Disney warns of hit from flagging foreign visits</a>
+<hr/>
+<h3>9. 在金价和银价波动中，卖家应谨慎行事</h3>
+<p><strong>📌 来源</strong>: BBC Business | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 专家表示，在出售黄金或白银之前，有一些事情需要考虑。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>金价</li>
+<li>银价</li>
+<li>卖家谨慎</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.bbc.com/news/articles/clymp0ngg36o?at_medium=RSS&at_campaign=rss">Warning for sellers amid rollercoaster gold and silver prices</a>
+<hr/>
+<h3>10. 船长因北海油轮事故死亡被判有罪</h3>
+<p><strong>📌 来源</strong>: BBC Business | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: Vladimir Motin因疏忽大意导致船员死亡而被定罪。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>船长</li>
+<li>油轮事故</li>
+<li>定罪</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.bbc.com/news/articles/c9dv240w0w3o?at_medium=RSS&at_campaign=rss">Captain guilty of North Sea tanker crash death</a>
+<hr/>
+<p>## 🔬 科技新闻 (0条)</p>
+<p>*暂无科技板块新闻*</p>
+<hr/>
+<p>## 🏛️ 社会政治 (0条)</p>
+<p>*暂无社会政治板块新闻*</p>
+<hr/>]]></content:encoded>
+    </item>
+    <item>
         <title>2026年02月02日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-02.md</link>
         <description>本期精选 0 条高质量科技新闻</description>
-        <pubDate>Mon, 02 Feb 2026 14:30:20 GMT</pubDate>
+        <pubDate>Tue, 03 Feb 2026 01:42:19 GMT</pubDate>
         <guid>archive/2026-02-02.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h3>1. KKR 领导集团即将以超过 100 亿美元的价格收购新加坡数据中心公司</h3>
@@ -317,7 +446,7 @@
         <title>2026年02月01日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-01.md</link>
         <description>本期精选 16 条高质量科技新闻</description>
-        <pubDate>Mon, 02 Feb 2026 14:29:46 GMT</pubDate>
+        <pubDate>Tue, 03 Feb 2026 01:42:19 GMT</pubDate>
         <guid>archive/2026-02-01.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<p># 📰 新闻精选</p>
@@ -516,7 +645,7 @@
         <title>2026年01月31日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-01-31.md</link>
         <description>本期精选 5 条高质量科技新闻</description>
-        <pubDate>Mon, 02 Feb 2026 14:29:46 GMT</pubDate>
+        <pubDate>Tue, 03 Feb 2026 01:42:19 GMT</pubDate>
         <guid>archive/2026-01-31.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<p># 📰 科技新闻精选</p>

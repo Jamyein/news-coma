@@ -1,26 +1,6 @@
 {
-  "last_run": "2026-02-02T14:30:08.582751",
+  "last_run": "2026-02-03T01:42:37.998111",
   "processed_urls": [
-    "https://www.theverge.com/policy/870419/senate-passes-budget-with-two-more-weeks-of-homeland-security-funding",
-    "https://viewfromthewing.com/court-filings-ice-uses-mobile-fortify-to-identify-protesters-global-entry-and-precheck-get-revoked/",
-    "https://techcrunch.com/2026/01/30/a16z-partner-kofi-ampadu-to-leave-firm-after-txo-program-pause/",
-    "https://simedw.com/2026/01/31/ear-pronunication-via-ctc/",
-    "https://www.theverge.com/tech/871425/jeffrey-epstein-xbox-live-ban-microsoft-sex-offender",
-    "https://techcrunch.com/2026/01/30/physical-intelligence-stripe-veteran-lachy-grooms-latest-bet-is-building-silicon-valleys-buzziest-robot-brains/",
-    "https://www.wsj.com/tech/ai/the-100-billion-megadeal-between-openai-and-nvidia-is-on-ice-aa3025e3",
-    "https://techcrunch.com/2026/01/30/onlyfans-considering-selling-majority-stake-to-architect-capital/",
-    "https://www.theverge.com/gadgets/871422/peloton-layoffs-cost-cutting-2026",
-    "https://perspectives.mvdirona.com/2010/04/stonebraker-on-cap-theorem-and-databases/",
-    "https://techcrunch.com/2026/01/30/openclaws-ai-assistants-are-now-building-their-own-social-network/",
-    "https://www.theverge.com/games/871348/google-project-genie-take-two-roblox-unity",
-    "https://apps.apple.com/us/app/talkbits-speak-naturally/id6756824177",
-    "https://techcrunch.com/2026/01/30/informant-told-fbi-that-jeffrey-epstein-had-a-personal-hacker/",
-    "https://www.youtube.com/watch?v=7fNYj0EXxMs",
-    "https://writings.stephenwolfram.com/2026/01/p-vs-np-and-the-difficulty-of-computation-a-ruliological-approach/",
-    "https://techcrunch.com/2026/01/30/instagram-might-soon-let-you-remove-yourself-from-someones-close-friends-list/",
-    "https://techcrunch.com/2026/01/30/blue-origin-pauses-space-tourism-flights-to-focus-on-the-moon/",
-    "https://www.theverge.com/gadgets/871054/sonos-super-bowl-deal-sale-era-beam-arc-ultra-sub",
-    "https://peerweb.lol/",
     "https://www.theverge.com/gadgets/871218/fitbit-account-migration-google-deadline-may-2026",
     "https://antirender.com/",
     "https://techcrunch.com/2026/01/30/spacexs-ipo-could-open-the-floodgates-and-secondaries-are-booming-in-the-meantime/",
@@ -855,73 +835,238 @@
     "https://www.wsj.com/economy/central-banking/saying-you-want-to-shrink-the-fed-is-one-thing-doing-it-is-another-3ed0e517",
     "https://www.wsj.com/articles/ecb-and-boe-on-hold-as-dollar-weakens-and-imports-from-china-surge-0aa18874",
     "https://www.wsj.com/economy/asia-pmis-signal-solid-start-for-manufacturers-in-2026-4545fa08",
-    "https://www.wsj.com/economy/central-banking/yen-moves-causing-more-worry-at-boj-opinions-summary-shows-be4800f0"
+    "https://www.wsj.com/economy/central-banking/yen-moves-causing-more-worry-at-boj-opinions-summary-shows-be4800f0",
+    "https://techcrunch.com/2026/02/02/fintech-ceo-and-forbes-30-under-30-alum-has-been-charged-for-alleged-fraud/",
+    "https://techcrunch.com/2026/02/02/waymo-raises-16-billion-round-to-scale-robotaxi-fleet-london-tokyo/",
+    "https://techcrunch.com/2026/02/02/elon-musk-spacex-acquires-xai-data-centers-space-merger/",
+    "https://techcrunch.com/2026/02/02/china-is-leading-the-fight-against-hidden-car-door-handles/",
+    "https://techcrunch.com/2026/02/02/adobe-animate-is-shutting-down-as-company-focuses-on-ai/",
+    "https://techcrunch.com/2026/02/02/two-stanford-students-launch-2m-startup-accelerator-for-students-nationwide/",
+    "https://techcrunch.com/2026/02/02/what-snowflakes-deal-with-openai-tells-us-about-the-enterprise-ai-race/",
+    "https://techcrunch.com/2026/02/02/firefox-will-soon-let-you-block-all-of-its-generative-ai-features/",
+    "https://techcrunch.com/2026/02/02/grubhub-waives-delivery-service-fees-orders-over-50/",
+    "https://techcrunch.com/2026/02/02/openai-launches-new-macos-app-for-agentic-coding/",
+    "https://techcrunch.com/2026/02/02/notepad-says-chinese-government-hackers-hijacked-its-software-updates-for-months/",
+    "https://techcrunch.com/2026/02/02/ring-brings-its-search-party-feature-for-finding-lost-dogs-to-non-ring-camera-owners/",
+    "https://techcrunch.com/2026/02/02/carbon-robotics-built-an-ai-model-that-detects-and-identifies-plants/",
+    "https://techcrunch.com/2026/02/02/coalition-demands-federal-grok-ban-over-nonconsensual-sexual-content/",
+    "https://github.blog/ai-and-ml/github-copilot/how-to-maximize-github-copilots-agentic-capabilities/",
+    "https://www.spacex.com/updates#xai-joins-spacex",
+    "https://alignment.anthropic.com/2026/hot-mess-of-ai/",
+    "https://openai.com/index/introducing-the-codex-app/",
+    "https://forums.ankiweb.net/t/ankis-growing-up/68610",
+    "https://www.githubstatus.com?todayis=2026-02-02",
+    "https://borretti.me/fiction/julia",
+    "https://news.ycombinator.com/item?id=46857488",
+    "https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys",
+    "https://arstechnica.com/science/2026/02/court-orders-restart-of-all-us-offshore-wind-construction/",
+    "https://www.macrumors.com/2026/02/02/firefox-ai-toggle/",
+    "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/kaggle-game-arena-updates/",
+    "https://www.millert.dev/",
+    "https://tromp.github.io/blog/2026/01/28/largest-number-revised",
+    "https://ziglang.org/devlog/2026/#2026-01-31",
+    "https://news.ycombinator.com/item?id=46857487",
+    "https://github.com/stelviodev/stelvio",
+    "https://www.cnbc.com/2026/02/02/nvidia-stock-price-openai-funding.html",
+    "https://www.frommers.com/tips/airfare/the-tsa-new-45-fee-to-fly-without-id-is-illegal-says-regulatory-expert/",
+    "https://www.theverge.com/news/872731/adobe-animate-app-shutdown-date",
+    "https://www.theverge.com/transportation/872651/waymo-raises-16-billion-investment-value-robotaxi",
+    "https://www.theverge.com/21289209/best-apple-watch-deals",
+    "https://www.theverge.com/tech/872619/elon-musk-merges-spacex-with-xai-and-x",
+    "https://www.theverge.com/tech/872450/elon-musk-jeffrey-epstein-emails-spacex-ipo-tesla",
+    "https://www.theverge.com/tech/872462/notepad-plus-plus-server-hijacking",
+    "https://www.theverge.com/tech/872434/ikea-wireless-bluetooth-speaker-grejsimojs-kid-friendly-purple-mouse",
+    "https://www.theverge.com/news/872489/mozilla-firefox-ai-features-off-button",
+    "https://www.theverge.com/entertainment/872468/crunchyroll-price-hike-raise-fan-mega-ultimate-tier",
+    "https://www.theverge.com/gadgets/872328/amazon-fourth-gen-echo-show-8-smart-display-deal-sale",
+    "https://www.economist.com/finance-and-economics/2026/02/02/a-long-awaited-trade-truce-between-america-and-india",
+    "https://www.economist.com/finance-and-economics/2026/02/02/ai-is-not-the-only-threat-menacing-big-tech",
+    "https://www.cnbc.com/2026/02/02/we-just-got-reasons-to-love-these-2-portfolio-stocks-even-more.html",
+    "https://www.cnbc.com/2026/02/02/strategy-slides-after-bitcoin-briefly-dips-below-crypto-firms-key-breakeven-level-.html",
+    "https://www.bbc.com/news/articles/cn56dnrvq03o?at_medium=RSS&at_campaign=rss",
+    "https://www.bbc.com/news/articles/cq6vnrye06po?at_medium=RSS&at_campaign=rss",
+    "https://www.bbc.com/news/articles/clymp0ngg36o?at_medium=RSS&at_campaign=rss",
+    "https://www.bbc.com/news/articles/cy8pzzmpdz9o?at_medium=RSS&at_campaign=rss",
+    "https://www.bbc.com/news/articles/clygdez8d41o?at_medium=RSS&at_campaign=rss",
+    "https://www.bbc.com/news/articles/c9dv240w0w3o?at_medium=RSS&at_campaign=rss",
+    "https://www.marketwatch.com/story/this-is-our-second-marriage-were-in-our-60s-how-do-we-split-expenses-if-we-move-in-together-and-rent-one-house-46d77656?mod=mw_rss_topstories",
+    "https://www.marketwatch.com/story/amds-stock-rises-ahead-of-earnings-why-investors-are-feeling-upbeat-e027e473?mod=mw_rss_topstories",
+    "https://www.marketwatch.com/story/hell-of-a-story-isnt-it-my-brother-stole-500k-from-my-ailing-father-can-we-get-justice-e2848289?mod=mw_rss_topstories",
+    "https://www.marketwatch.com/story/palantirs-stock-surges-as-ai-demand-drives-another-record-quarter-deb6b082?mod=mw_rss_topstories",
+    "https://www.marketwatch.com/story/where-home-buyers-have-landed-the-best-deals-weve-seen-on-houses-in-over-a-decade-6077d81e?mod=mw_rss_topstories",
+    "https://www.marketwatch.com/story/teslas-stock-falls-as-bleak-new-sales-figures-signal-more-pain-for-beleaguered-ev-business-ca1a7c50?mod=mw_rss_topstories",
+    "https://www.marketwatch.com/story/this-micron-stock-chart-is-sending-an-ominous-signal-if-history-is-any-guide-0b38ff07?mod=mw_rss_topstories",
+    "https://www.marketwatch.com/story/spacex-officially-acquires-xai-heres-how-elon-musk-justifies-the-move-f38d999f?mod=mw_rss_topstories",
+    "https://www.ft.com/content/8ee76f65-74d9-4679-a2b0-cd8fc3721a8d",
+    "https://www.ft.com/content/3be7216b-b96b-43a4-85bd-2d9dbf781435",
+    "https://www.ft.com/content/1fdb1850-7ff8-4ca5-bc91-f4b683aad063",
+    "https://www.ft.com/content/72f1947e-20aa-4a46-bd29-c2f563f24054",
+    "https://www.ft.com/content/99fdde76-a545-4a31-b1bb-0034a4e902f0",
+    "https://www.ft.com/content/5038f2b1-6334-4d28-85e6-312d06796ca7",
+    "https://wallstreetcn.com/articles/3764796",
+    "https://wallstreetcn.com/articles/3764798",
+    "https://wallstreetcn.com/articles/3764797",
+    "https://wallstreetcn.com/articles/3764794",
+    "https://wallstreetcn.com/articles/3764795",
+    "https://wallstreetcn.com/articles/3764789",
+    "https://wallstreetcn.com/articles/3764793",
+    "https://wallstreetcn.com/articles/3764792",
+    "https://wallstreetcn.com/articles/3764790",
+    "https://wallstreetcn.com/articles/3764779",
+    "https://wallstreetcn.com/articles/3764781",
+    "https://wallstreetcn.com/articles/3764784",
+    "https://wallstreetcn.com/articles/3764782",
+    "https://wallstreetcn.com/articles/3764783",
+    "https://wallstreetcn.com/articles/3764780",
+    "https://wallstreetcn.com/articles/3764767",
+    "https://wallstreetcn.com/articles/3764776",
+    "https://wallstreetcn.com/articles/3764775",
+    "https://wallstreetcn.com/articles/3764772",
+    "https://wallstreetcn.com/articles/3764773",
+    "https://wallstreetcn.com/articles/3764769",
+    "https://wallstreetcn.com/articles/3764771",
+    "https://36kr.com/p/3666915646218885?f=rss",
+    "https://36kr.com/p/3666826665075331?f=rss",
+    "https://36kr.com/newsflashes/3666918031532676?f=rss",
+    "https://36kr.com/newsflashes/3666907811079048?f=rss",
+    "https://36kr.com/newsflashes/3666907411882883?f=rss",
+    "https://36kr.com/newsflashes/3666903018824322?f=rss",
+    "https://36kr.com/newsflashes/3666899539354500?f=rss",
+    "https://36kr.com/newsflashes/3666898967618183?f=rss",
+    "https://36kr.com/newsflashes/3666888771494528?f=rss",
+    "https://36kr.com/newsflashes/3666886824813186?f=rss",
+    "https://36kr.com/newsflashes/3666878787576706?f=rss",
+    "https://36kr.com/newsflashes/3666873402794882?f=rss",
+    "https://36kr.com/newsflashes/3666872606892677?f=rss",
+    "https://36kr.com/newsflashes/3666869124162177?f=rss",
+    "https://36kr.com/newsflashes/3666867941515906?f=rss",
+    "https://36kr.com/newsflashes/3666867568124809?f=rss",
+    "https://36kr.com/newsflashes/3666858947634048?f=rss",
+    "https://36kr.com/newsflashes/3666857535038081?f=rss",
+    "https://36kr.com/newsflashes/3666855056876422?f=rss",
+    "https://36kr.com/newsflashes/3666854234432133?f=rss",
+    "https://36kr.com/newsflashes/3666852968850056?f=rss",
+    "https://36kr.com/newsflashes/3666849923818368?f=rss",
+    "http://stock.eastmoney.com/news/11784,202602033639138780.html",
+    "http://finance.eastmoney.com/news/1351,202602033639124819.html",
+    "http://finance.eastmoney.com/news/1345,202602023639026675.html",
+    "http://stock.eastmoney.com/news/1768,202602033639120679.html",
+    "http://finance.eastmoney.com/news/1350,202602033639113191.html",
+    "http://finance.eastmoney.com/news/1351,202602033639113389.html",
+    "http://finance.eastmoney.com/news/11060,202602033639145147.html",
+    "http://finance.eastmoney.com/news/1351,202602033639095930.html",
+    "http://finance.eastmoney.com/news/1354,202602023639037874.html",
+    "http://finance.eastmoney.com/news/1354,202602023639034615.html",
+    "http://finance.eastmoney.com/news/1351,202602023639034861.html",
+    "http://finance.eastmoney.com/news/1354,202602023639031557.html",
+    "http://pmetal.eastmoney.com/news/11793,202602023639057571.html",
+    "http://finance.eastmoney.com/news/1354,202602023638952735.html",
+    "http://finance.eastmoney.com/news/1354,202602023639020784.html",
+    "http://finance.eastmoney.com/news/1354,202602023639069335.html",
+    "http://finance.eastmoney.com/news/1350,202602023639047416.html",
+    "http://finance.eastmoney.com/news/1354,202602023639046335.html",
+    "http://finance.eastmoney.com/news/1354,202602023639067633.html",
+    "http://finance.eastmoney.com/news/1351,202602023639068112.html",
+    "http://finance.eastmoney.com/news/1354,202602023639068235.html",
+    "http://finance.eastmoney.com/news/1351,202602023639052696.html",
+    "http://finance.eastmoney.com/news/1354,202602023639067592.html",
+    "https://www.wsj.com/tech/elon-musk-says-spacex-has-acquired-xai-038a4072?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/media/mother-of-today-co-anchor-savannah-guthrie-is-missing-in-apparent-crime-4e82710e?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/tech/ai/what-oracle-has-to-lose-from-openai-and-nvidias-rocky-relationship-b1ec1e9d?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/earnings/ppalantir-earnings-q4-2025-pltr-stock-791cbd24?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/deals/brookfield-to-buy-peakstone-realty-trust-in-1-2-billion-deal-4b56abb0?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/retail/saks-is-shutting-down-its-luxury-partnership-with-amazon-a95e30cc?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/retail/safety-toes-and-work-pants-clothing-for-trades-is-having-a-moment-c37ff1ee?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/earnings/teradyne-profit-rises-as-sales-surge-on-ai-related-demand-d400ed38?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/business/earnings/nxp-semiconductors-logs-higher-sales-amid-improving-demand-95d8af5b?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/opinion/usa-rare-earth-commerce-department-trump-administration-china-cd010507?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/opinion/don-lemon-tucker-carlson-and-the-fear-of-disappearing-57402e24?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/articles/energy-utilities-roundup-market-talk-b157aae3?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/finance/investing/wsj-invest-live-event-kicks-off-with-peltz-griffin-interviews-39e12d5d?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/arts-culture/film/iron-lung-markiplier-box-office-ef4e520d?mod=pls_whats_news_us_business_f",
+    "https://www.wsj.com/finance/commodities-futures/what-to-know-about-the-wild-swings-in-gold-and-silver-2fcad7a8?mod=rss_markets_main",
+    "https://www.wsj.com/finance/stocks/global-stocks-markets-dow-news-02-02-2026-15226e6f?mod=rss_markets_main",
+    "https://www.wsj.com/finance/investing/wsj-invest-live-event-kicks-off-with-peltz-griffin-interviews-39e12d5d?mod=rss_markets_main",
+    "https://www.wsj.com/economy/central-banking/what-kevin-warsh-learned-working-for-stanley-druckenmiller-7fc07efe?mod=rss_markets_main",
+    "https://www.wsj.com/finance/investing/a-michigan-pension-funds-failed-coffee-farm-bet-highlights-private-market-risks-a76f79bf?mod=rss_markets_main",
+    "https://www.wsj.com/tech/ai/what-oracle-has-to-lose-from-openai-and-nvidias-rocky-relationship-b1ec1e9d?mod=rss_markets_main",
+    "https://www.wsj.com/finance/investing/jgb-futures-fall-tracking-declines-in-u-s-treasury-market-2e823883?mod=rss_markets_main",
+    "https://www.wsj.com/articles/health-care-roundup-market-talk-7222deca?mod=rss_markets_main",
+    "https://www.wsj.com/opinion/kevin-warsh-and-the-parable-of-the-two-sons-efb8e247?mod=rss_markets_main",
+    "https://www.wsj.com/finance/commodities-futures/oil-edges-higher-as-traders-digest-u-s-india-trade-deal-a09f398b?mod=rss_markets_main",
+    "https://www.wsj.com/finance/commodities-futures/gold-rises-on-likely-technical-recovery-dip-buying-interest-d0cfcd1c?mod=rss_markets_main",
+    "https://www.wsj.com/finance/currencies/yen-mixed-as-traders-digest-japanese-finance-ministers-fx-remarks-96314604?mod=rss_markets_main",
+    "https://www.wsj.com/personal-finance/car-price-purchase-negotiate-d0bef925?mod=rss_markets_main",
+    "https://www.wsj.com/economy/south-korea-inflation-eases-to-five-month-low-099ee864",
+    "https://www.wsj.com/politics/policy/federal-shutdown-delays-fridays-jobs-report-5397e815",
+    "https://www.wsj.com/economy/central-banking/what-kevin-warsh-learned-working-for-stanley-druckenmiller-7fc07efe",
+    "https://www.wsj.com/economy/u-s-factory-activity-posts-fastest-gains-since-2022-45d767c7"
   ],
   "stats": {
-    "total_runs": 16,
-    "total_news_processed": 924,
-    "avg_news_per_run": 57.8
+    "total_runs": 17,
+    "total_news_processed": 1093,
+    "avg_news_per_run": 64.3
   },
   "source_stats": {
     "The Verge": {
-      "fetched": 39,
+      "fetched": 49,
       "selected": 8
     },
     "Hacker News": {
-      "fetched": 132,
+      "fetched": 150,
       "selected": 26
     },
     "TechCrunch": {
-      "fetched": 56,
+      "fetched": 70,
       "selected": 12
     },
     "GitHub Blog": {
-      "fetched": 10,
+      "fetched": 11,
       "selected": 1
     },
     "MarketWatch": {
-      "fetched": 34,
+      "fetched": 42,
       "selected": 4
     },
     "Financial Times": {
-      "fetched": 43,
+      "fetched": 49,
       "selected": 6
     },
     "WSJ 经济": {
-      "fetched": 95,
+      "fetched": 112,
       "selected": 2
     },
     "36氪": {
-      "fetched": 125,
+      "fetched": 147,
       "selected": 27
     },
     "WSJ 全球经济": {
-      "fetched": 29,
+      "fetched": 33,
       "selected": 1
     },
     "华尔街见闻": {
-      "fetched": 112,
+      "fetched": 134,
       "selected": 21
     },
     "BBC Business": {
-      "fetched": 50,
-      "selected": 3
+      "fetched": 57,
+      "selected": 9
     },
     "WSJ 市场": {
-      "fetched": 79,
+      "fetched": 92,
       "selected": 5
     },
     "东方财富": {
-      "fetched": 91,
+      "fetched": 114,
       "selected": 2
     },
     "CNBC": {
-      "fetched": 20,
-      "selected": 0
+      "fetched": 22,
+      "selected": 2
     },
     "The Economist": {
-      "fetched": 9,
-      "selected": 0
+      "fetched": 11,
+      "selected": 2
     }
   },
   "ai_cache": {
@@ -4698,10 +4843,678 @@
       "key_points": [],
       "cached_at": "2026-02-02T14:30:20.195129",
       "source": "36氪"
+    },
+    "28191b66a07178d0": {
+      "ai_score": 8.1,
+      "translated_title": "美国与印度达成长期贸易休战",
+      "ai_summary": "美国与印度达成一项长期贸易休战协议，对两国及全球贸易关系产生重大影响。",
+      "key_points": [
+        "美国与印度贸易休战",
+        "全球贸易关系",
+        "长期协议"
+      ],
+      "cached_at": "2026-02-03T01:43:07.801260",
+      "source": "The Economist"
+    },
+    "bfc4d0853066f92a": {
+      "ai_score": 7.9,
+      "translated_title": "AI并非唯一威胁大型科技公司的因素",
+      "ai_summary": "除了AI，还有其他因素可能威胁大型科技公司，如广告收入可能受到经济衰退的影响。",
+      "key_points": [
+        "大型科技公司",
+        "AI威胁",
+        "广告收入"
+      ],
+      "cached_at": "2026-02-03T01:43:07.801275",
+      "source": "The Economist"
+    },
+    "c9d30fffd20915fb": {
+      "ai_score": 7.8,
+      "translated_title": "我们有了更多理由去爱这两只投资组合股票",
+      "ai_summary": "高盛被选中为价值580亿美元的合并提供建议，三菱日联建议购买博通股票。",
+      "key_points": [
+        "投资组合股票",
+        "高盛建议",
+        "博通股票"
+      ],
+      "cached_at": "2026-02-03T01:43:07.801282",
+      "source": "CNBC"
+    },
+    "172407c034204919": {
+      "ai_score": 7.8,
+      "translated_title": "比特币短暂跌破加密公司关键盈亏平衡点后策略下滑",
+      "ai_summary": "比特币价格一度跌至约74500美元，低于Strategy的平均购买价格76052美元。",
+      "key_points": [
+        "比特币价格",
+        "盈亏平衡点",
+        "策略下滑"
+      ],
+      "cached_at": "2026-02-03T01:43:07.801289",
+      "source": "CNBC"
+    },
+    "df3205c49e2ec83a": {
+      "ai_score": 7.9,
+      "translated_title": "欧盟表示，与英国开启关税同盟谈判的大门",
+      "ai_summary": "欧盟表示愿意与英国进行关税同盟谈判，以应对全球不确定性。",
+      "key_points": [
+        "欧盟",
+        "关税同盟谈判",
+        "英国"
+      ],
+      "cached_at": "2026-02-03T01:43:07.801295",
+      "source": "BBC Business"
+    },
+    "9e0e21208ef04946": {
+      "ai_score": 7.8,
+      "translated_title": "SpaceX将接管埃隆·马斯克的AI公司",
+      "ai_summary": "马斯克的太空探索公司与他的AI初创公司合并。",
+      "key_points": [
+        "SpaceX",
+        "AI公司",
+        "马斯克"
+      ],
+      "cached_at": "2026-02-03T01:43:07.801301",
+      "source": "BBC Business"
+    },
+    "9b8b48467523714c": {
+      "ai_score": 5.0,
+      "translated_title": "Warning for sellers amid rollercoaster gold and silver prices",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801333",
+      "source": "BBC Business"
+    },
+    "c4748ed4a4c0d0b4": {
+      "ai_score": 7.8,
+      "translated_title": "迪士尼警告，由于外国游客减少，将受到打击",
+      "ai_summary": "迪士尼表示，由于国际游客减少，其美国公园的游客数量正在减弱。",
+      "key_points": [
+        "迪士尼",
+        "外国游客",
+        "游客减少"
+      ],
+      "cached_at": "2026-02-03T01:43:07.801313",
+      "source": "BBC Business"
+    },
+    "e356d2bcd7ee5b48": {
+      "ai_score": 7.8,
+      "translated_title": "游艇行业寻找替代柚木",
+      "ai_summary": "柚木供应短缺，迫使游艇行业寻找替代品。",
+      "key_points": [
+        "游艇行业",
+        "柚木",
+        "替代品"
+      ],
+      "cached_at": "2026-02-03T01:43:07.801323",
+      "source": "BBC Business"
+    },
+    "b76de12502981f2d": {
+      "ai_score": 7.8,
+      "translated_title": "船长因北海油轮事故死亡被判有罪",
+      "ai_summary": "Vladimir Motin因疏忽大意导致船员死亡而被定罪。",
+      "key_points": [
+        "船长",
+        "油轮事故",
+        "定罪"
+      ],
+      "cached_at": "2026-02-03T01:43:07.801328",
+      "source": "BBC Business"
+    },
+    "4e790fef78904bdb": {
+      "ai_score": 5.0,
+      "translated_title": "‘This is our second marriage’: We’re in our 60s. How do we split expenses if we move in together and rent one house?",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801340",
+      "source": "MarketWatch"
+    },
+    "9542c6b80fe972c5": {
+      "ai_score": 5.0,
+      "translated_title": "AMD’s stock rises ahead of earnings. Why investors are feeling upbeat.",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801347",
+      "source": "MarketWatch"
+    },
+    "df821cf1b2c5162b": {
+      "ai_score": 5.0,
+      "translated_title": "‘Hell of a story, isn’t it?’: My brother stole $500K from my ailing father. Can we get justice?",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801352",
+      "source": "MarketWatch"
+    },
+    "2e311af62a3921e8": {
+      "ai_score": 5.0,
+      "translated_title": "Palantir’s stock surges as AI demand drives another record quarter",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801366",
+      "source": "MarketWatch"
+    },
+    "2ae113853f20bd4f": {
+      "ai_score": 5.0,
+      "translated_title": "Where home buyers have landed the best deals we’ve seen on houses in over a decade",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801372",
+      "source": "MarketWatch"
+    },
+    "7c640e20f37333e3": {
+      "ai_score": 5.0,
+      "translated_title": "Tesla’s stock falls as bleak new sales figures signal more pain for beleaguered EV business",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801378",
+      "source": "MarketWatch"
+    },
+    "baf9c0ea1aa16cdc": {
+      "ai_score": 5.0,
+      "translated_title": "This Micron stock chart is sending an ominous signal, if history is any guide",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801383",
+      "source": "MarketWatch"
+    },
+    "78f5bd91f5ce2c21": {
+      "ai_score": 5.0,
+      "translated_title": "SpaceX officially acquires xAI. Here’s how Elon Musk justifies the move.",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801389",
+      "source": "MarketWatch"
+    },
+    "9a47bfc7b3e73dcf": {
+      "ai_score": 5.0,
+      "translated_title": "SpaceX buys xAI in $1.25tn deal to unite crucial parts of Musk’s empire",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801395",
+      "source": "Financial Times"
+    },
+    "8c2953cc0bba0647": {
+      "ai_score": 5.0,
+      "translated_title": "This is what a proper Brexit looks like",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801400",
+      "source": "Financial Times"
+    },
+    "4ee2f7095785f0d2": {
+      "ai_score": 5.0,
+      "translated_title": "Epstein emails reveal extensive ties with top Goldman Sachs lawyer",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801406",
+      "source": "Financial Times"
+    },
+    "9012bfa247037f53": {
+      "ai_score": 5.0,
+      "translated_title": "Trump to slash India tariffs after Modi ‘agrees’ to stop buying Russian oil",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801411",
+      "source": "Financial Times"
+    },
+    "acc812fd9adfe6f7": {
+      "ai_score": 5.0,
+      "translated_title": "Palantir shares jump as US government and business contracts power growth",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801419",
+      "source": "Financial Times"
+    },
+    "c1c162f166aafb2b": {
+      "ai_score": 5.0,
+      "translated_title": "Tech billionaires fuel Trump’s $429mn haul ahead of midterm elections",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801424",
+      "source": "Financial Times"
+    },
+    "7a59b5e34de81fd8": {
+      "ai_score": 5.0,
+      "translated_title": "存储超级周期面临考验，韩股波动率“创新高”，对冲成本急升",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801432",
+      "source": "华尔街见闻"
+    },
+    "9c838d0ceda3a272": {
+      "ai_score": 5.0,
+      "translated_title": "美光“高歌猛进”，但“历史阴霾”开始笼罩",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801441",
+      "source": "华尔街见闻"
+    },
+    "4565afec4bbfc1d3": {
+      "ai_score": 5.0,
+      "translated_title": "利率“围城”！保险创纪录年“吸金”超4.3万亿元，哪些险种最“吸金”？",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801447",
+      "source": "华尔街见闻"
+    },
+    "fa53be094f0145b8": {
+      "ai_score": 5.0,
+      "translated_title": "矿企CEO：黄金顺风全开，高价将持续",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801470",
+      "source": "华尔街见闻"
+    },
+    "07eb26a67c9219d1": {
+      "ai_score": 5.0,
+      "translated_title": "硅谷和币圈砸重金，特朗普中选前募资创纪录",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801477",
+      "source": "华尔街见闻"
+    },
+    "abc8793f61b6c684": {
+      "ai_score": 5.0,
+      "translated_title": "面对美元贬值，欧、英央行本周或按兵不动",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801484",
+      "source": "华尔街见闻"
+    },
+    "c00df7a21b9d48c7": {
+      "ai_score": 5.0,
+      "translated_title": "日韩股市走高，贵金属反弹，黄金站上4800美元",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801490",
+      "source": "华尔街见闻"
+    },
+    "dfe406ac0c8ffde4": {
+      "ai_score": 5.0,
+      "translated_title": "特朗普：对鲍威尔要“一查到底”",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801497",
+      "source": "华尔街见闻"
+    },
+    "4a6658310ff3e535": {
+      "ai_score": 5.0,
+      "translated_title": "为德雷肯米勒工作，沃什学到了什么？",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801504",
+      "source": "华尔街见闻"
+    },
+    "09f695c2fa1d246d": {
+      "ai_score": 5.0,
+      "translated_title": "Space X收购xAI，“火箭+AI+社交平台”超级巨头成型，马斯克剑指太空数据中心",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801511",
+      "source": "华尔街见闻"
+    },
+    "08084468eaf0c931": {
+      "ai_score": 5.0,
+      "translated_title": "华尔街见闻早餐FM-Radio | 2026年2月3日",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801520",
+      "source": "华尔街见闻"
+    },
+    "58a7e2529da1aed0": {
+      "ai_score": 5.0,
+      "translated_title": "美国总统特朗普：正与众议长约翰逊合作，推动众议院批准拨款协议",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801527",
+      "source": "华尔街见闻"
+    },
+    "c7874eb6e1af7e97": {
+      "ai_score": 5.0,
+      "translated_title": "报道称OpenAI对英伟达AI芯片不满意，寻求推理芯片替代",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801534",
+      "source": "华尔街见闻"
+    },
+    "90c3db4f0258d808": {
+      "ai_score": 5.0,
+      "translated_title": "Palantir营收同比暴增70%，全年指引远超市场预期，股价盘后涨约8% | 财报见闻",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801541",
+      "source": "华尔街见闻"
+    },
+    "f3ec6f8d39b39846": {
+      "ai_score": 5.0,
+      "translated_title": "Q4营收与指引双双超预期，汽车业务拖后腿，恩智浦股价盘后跌超6% | 财报见闻",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801547",
+      "source": "华尔街见闻"
+    },
+    "1ca104fd27c587b4": {
+      "ai_score": 5.0,
+      "translated_title": "甲骨文开启250亿美元债发行，拟分八部分募资，全力冲刺云基建",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801553",
+      "source": "华尔街见闻"
+    },
+    "45da03cdd753bdc6": {
+      "ai_score": 5.0,
+      "translated_title": "非农报告又延期！职位空缺数据也未能幸免，美政府停摆让关键数据再次\"迟到\"",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801560",
+      "source": "华尔街见闻"
+    },
+    "01ffed35a9026b54": {
+      "ai_score": 5.0,
+      "translated_title": "特朗普：莫迪同意停购俄油，美印达成贸易协议，将降低印度关税",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801566",
+      "source": "华尔街见闻"
+    },
+    "2bcfd3428808d1fb": {
+      "ai_score": 5.0,
+      "translated_title": "美联储与财政部迎来“新契约”？沃什力主缩表，流动性现实恐成最大绊脚石",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801622",
+      "source": "华尔街见闻"
+    },
+    "7028360a2e83012d": {
+      "ai_score": 5.0,
+      "translated_title": "印度加码AI雄心：对全球超大规模云服务商实施20年免税优惠",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801635",
+      "source": "华尔街见闻"
+    },
+    "9c6e2175e3b33519": {
+      "ai_score": 5.0,
+      "translated_title": "迪士尼26财年一季度营收同增5%，净利下滑6%，娱乐与体育板块拖累盈利｜财报见闻",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801643",
+      "source": "华尔街见闻"
+    },
+    "2ffa0efb90d3ff4d": {
+      "ai_score": 5.0,
+      "translated_title": "远超预期！美国1月ISM制造业PMI创2022年2月以来最快",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801650",
+      "source": "华尔街见闻"
+    },
+    "725087b50dc09bac": {
+      "ai_score": 5.0,
+      "translated_title": "上交+清华团队做端侧AI：连续两轮融资过亿、服务苹果比亚迪宁德丨36氪首发",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801656",
+      "source": "36氪"
+    },
+    "60fd50ce3958b298": {
+      "ai_score": 5.0,
+      "translated_title": "8点1氪丨“杰我睿”后，水贝又一黄金平台现兑付异常；马斯克否认上过爱泼斯坦私人小岛；SpaceX宣布收购人工智能企业xAI",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801663",
+      "source": "36氪"
+    },
+    "9ca55950c38d9928": {
+      "ai_score": 5.0,
+      "translated_title": "特斯拉在美国将Model Y全轮驱动版车型定价为41990美元。",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801668",
+      "source": "36氪"
+    },
+    "a3c93e27ab2d2334": {
+      "ai_score": 5.0,
+      "translated_title": "上海去年新设民营经营主体39.2万户",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801674",
+      "source": "36氪"
+    },
+    "74f77e06890c01ad": {
+      "ai_score": 5.0,
+      "translated_title": "上海日均新增科技企业超320家，新集聚海内外人才15万人",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801680",
+      "source": "36氪"
+    },
+    "dba02b6b27af6e2c": {
+      "ai_score": 5.0,
+      "translated_title": "A股三大指数集体高开，四川黄金跌停",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801686",
+      "source": "36氪"
+    },
+    "70a1da0f94bd8587": {
+      "ai_score": 5.0,
+      "translated_title": "央行2月3日公开市场开展1055亿元7天期逆回购操作",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801691",
+      "source": "36氪"
+    },
+    "5b7013fd60c53abe": {
+      "ai_score": 5.0,
+      "translated_title": "恒生指数开盘涨0.82%，恒生科技指数涨0.68%",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801697",
+      "source": "36氪"
+    },
+    "2725267030d0ec6d": {
+      "ai_score": 5.0,
+      "translated_title": "消息称苹果M6芯片沿用台积电2nm N2制程",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801703",
+      "source": "36氪"
+    },
+    "de7a58c8035ef418": {
+      "ai_score": 5.0,
+      "translated_title": "软银子公司与英特尔合作，将下一代内存技术商业化",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801708",
+      "source": "36氪"
+    },
+    "777e4a0adb9dff91": {
+      "ai_score": 5.0,
+      "translated_title": "智谱正式发布并开源GLM-OCR",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801713",
+      "source": "36氪"
+    },
+    "42a13e10f945aba3": {
+      "ai_score": 5.0,
+      "translated_title": "韩国股指暴跌后今日暴涨，再次触发熔断机制",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801718",
+      "source": "36氪"
+    },
+    "388affa525bacfff": {
+      "ai_score": 5.0,
+      "translated_title": "消费电子公司抢抓AI发展机遇谋增长",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801724",
+      "source": "36氪"
+    },
+    "879f2c055d256bbb": {
+      "ai_score": 5.0,
+      "translated_title": "第十届新加坡航展今日开幕，中国商用飞机将进行静态展示",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801731",
+      "source": "36氪"
+    },
+    "58730d559e271abd": {
+      "ai_score": 5.0,
+      "translated_title": "两市融资余额减少59.3亿元",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801739",
+      "source": "36氪"
+    },
+    "6b71b3ab8e01d673": {
+      "ai_score": 5.0,
+      "translated_title": "国务院国资委：加快科技领军企业和启航企业培育，打造一批专精特新“小巨人”和单项冠军企业",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801746",
+      "source": "36氪"
+    },
+    "43a6244c2d900a0b": {
+      "ai_score": 5.0,
+      "translated_title": "特斯拉法国销量跌至三年新低，挪威市场注册量锐减近九成",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801753",
+      "source": "36氪"
+    },
+    "dc283190ff367b1f": {
+      "ai_score": 5.0,
+      "translated_title": "戴文能源将收购美国页岩油竞争对手Coterra，合并后企业价值近580亿美元",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801760",
+      "source": "36氪"
+    },
+    "c5dc17422171662a": {
+      "ai_score": 5.0,
+      "translated_title": "中信证券：预计家电龙头业绩稳健增长，建议积极关注",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801766",
+      "source": "36氪"
+    },
+    "287738aeaf916651": {
+      "ai_score": 5.0,
+      "translated_title": "全球首款混合动力无人运输机首飞成功",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801771",
+      "source": "36氪"
+    },
+    "ca042df962ee9836": {
+      "ai_score": 5.0,
+      "translated_title": "红杉中国宣布完成对莫西沙星全球业务收购",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801777",
+      "source": "36氪"
+    },
+    "c405393bf29c2f33": {
+      "ai_score": 5.0,
+      "translated_title": "马斯克宣布SpaceX和xAI合并：打造太空数据中心",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801783",
+      "source": "36氪"
+    },
+    "73c4f389b2ec4f1d": {
+      "ai_score": 5.0,
+      "translated_title": "全球市场：美股三大指数收涨 道指涨超1% 存储概念股大涨",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801790",
+      "source": "东方财富"
+    },
+    "e237cdb7bb22b787": {
+      "ai_score": 5.0,
+      "translated_title": "SpaceX官宣与xAI合并 估值将达1.25万亿美元",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801797",
+      "source": "东方财富"
+    },
+    "c57dde7342d6f2de": {
+      "ai_score": 5.0,
+      "translated_title": "美股三大指数集体收涨 道指涨超1% 闪迪涨超15%",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801803",
+      "source": "东方财富"
+    },
+    "8b175a41dca83b33": {
+      "ai_score": 5.0,
+      "translated_title": "特朗普：美印达成贸易协议 印度同意停购俄油+5000亿商品采购",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801809",
+      "source": "东方财富"
+    },
+    "f08d508eb642d312": {
+      "ai_score": 5.0,
+      "translated_title": "《现代化首都都市圈空间协同规划（2023—2035年）》获批",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801816",
+      "source": "东方财富"
+    },
+    "03003d08e34c254b": {
+      "ai_score": 5.0,
+      "translated_title": "市场巨震 沃什“背锅”？黄金白银遭遇恐慌性抛售",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801822",
+      "source": "东方财富"
+    },
+    "6278fd0bc862da02": {
+      "ai_score": 5.0,
+      "translated_title": "成品油价年内第二涨要来 加满一箱预计多花9元",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801829",
+      "source": "东方财富"
+    },
+    "336a26fb3678c7d2": {
+      "ai_score": 5.0,
+      "translated_title": "美国将把印度“对等”关税税率从25%下调至18% 即日起生效",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801834",
+      "source": "东方财富"
+    },
+    "300d60c37028e4e2": {
+      "ai_score": 5.0,
+      "translated_title": "利通电子2连板！公司否认多个市场传闻！",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801840",
+      "source": "东方财富"
+    },
+    "cdf42fc1f25cae7f": {
+      "ai_score": 5.0,
+      "translated_title": "最新！黄金与白银价格新高后剧烈波动 多家银行紧急调整！",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801847",
+      "source": "东方财富"
+    },
+    "fa9701350c96b090": {
+      "ai_score": 5.0,
+      "translated_title": "美国、伊朗可能在数日内启动谈判！国际油价大幅跳水",
+      "ai_summary": "批处理解析失败",
+      "key_points": [],
+      "cached_at": "2026-02-03T01:43:07.801853",
+      "source": "东方财富"
     }
   },
   "cache_hits": 6,
-  "cache_lookups": 859,
+  "cache_lookups": 1028,
   "run_metrics": [
     {
       "run_time": "2026-01-31T06:47:45.364104",
@@ -4867,24 +5680,35 @@
       "semantic_duplicates": 0,
       "duration_seconds": 11.618799,
       "avg_score": 0
+    },
+    {
+      "run_time": "2026-02-03T01:42:37.998111",
+      "news_count": 169,
+      "api_calls": 2,
+      "cache_hits": 0,
+      "cache_misses": 0,
+      "duplicates_removed": 0,
+      "semantic_duplicates": 0,
+      "duration_seconds": 43.630844,
+      "avg_score": 7.849999999999999
     }
   ],
   "source_last_fetch": {
-    "TechCrunch": "2026-02-02T14:30:08.791477",
-    "GitHub Blog": "2026-02-02T14:30:09.031923",
-    "Hacker News": "2026-02-02T14:30:09.245571",
-    "The Verge": "2026-02-02T14:30:09.415985",
-    "The Economist": "2026-02-02T14:30:09.733328",
-    "CNBC": "2026-02-02T14:30:10.053689",
-    "BBC Business": "2026-02-02T14:30:11.264599",
-    "MarketWatch": "2026-02-02T14:30:11.891629",
-    "Financial Times": "2026-02-02T14:30:12.410624",
-    "华尔街见闻": "2026-02-02T14:30:15.985204",
-    "36氪": "2026-02-02T14:30:17.324191",
-    "香港經濟日報": "2026-02-02T14:30:17.552259",
-    "东方财富": "2026-02-02T14:30:19.717236",
-    "WSJ 经济": "2026-02-02T14:30:19.869723",
-    "WSJ 市场": "2026-02-02T14:30:20.008002",
-    "WSJ 全球经济": "2026-02-02T14:30:20.130874"
+    "TechCrunch": "2026-02-03T01:42:38.131123",
+    "GitHub Blog": "2026-02-03T01:42:38.247706",
+    "Hacker News": "2026-02-03T01:42:38.637554",
+    "The Verge": "2026-02-03T01:42:38.788531",
+    "The Economist": "2026-02-03T01:42:39.099792",
+    "CNBC": "2026-02-03T01:42:39.193839",
+    "BBC Business": "2026-02-03T01:42:39.565641",
+    "MarketWatch": "2026-02-03T01:42:40.231068",
+    "Financial Times": "2026-02-03T01:42:40.651653",
+    "华尔街见闻": "2026-02-03T01:42:42.850268",
+    "36氪": "2026-02-03T01:42:44.669432",
+    "香港經濟日報": "2026-02-03T01:42:44.889341",
+    "东方财富": "2026-02-03T01:42:47.048846",
+    "WSJ 经济": "2026-02-03T01:42:47.158659",
+    "WSJ 市场": "2026-02-03T01:42:47.244957",
+    "WSJ 全球经济": "2026-02-03T01:42:47.315373"
   }
 }
