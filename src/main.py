@@ -61,8 +61,6 @@ class RSSAggregator:
         # 初始化运行指标
         run_metrics = {
             "api_calls": 0,
-            "duplicates_removed": 0,
-            "semantic_duplicates": 0,
         }
         
         try:
@@ -74,10 +72,7 @@ class RSSAggregator:
             if not news_items:
                 logger.warning("未获取到任何新闻")
                 return False
-            
-            # 记录去重前数量
-            run_metrics["duplicates_removed"] = 0  # 将在后续步骤中计算
-            
+
             # 3. AI评分和翻译 (集成缓存)
             scored_items = await self._score_news(news_items)
             
