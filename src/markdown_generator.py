@@ -125,6 +125,11 @@ class MarkdownGenerator:
 
         for i, item in enumerate(sorted_items, 1):
             key_points_str = "\n".join([f"- {point}" for point in (item.key_points or ["暂无要点"])])
+            
+            # 构建深度分析内容
+            deep_analysis_str = ""
+            if item.deep_analysis:
+                deep_analysis_str = self._format_deep_analysis(item.deep_analysis)
 
             section += f"""### {i}. {item.translated_title or item.title}
 
@@ -135,7 +140,16 @@ class MarkdownGenerator:
 
 **💡 关键要点**:
 {key_points_str}
-
+"""
+            
+            # 添加深度分析部分
+            if deep_analysis_str:
+                section += f"""
+**🔍 深度分析**:
+{deep_analysis_str}
+"""
+            
+            section += f"""
 **🔗 原文链接**: [{item.title}]({item.link})
 
 ---
@@ -143,6 +157,30 @@ class MarkdownGenerator:
 """
 
         return section
+    
+    def _format_deep_analysis(self, deep_analysis: Dict) -> str:
+        """格式化深度分析结果为Markdown"""
+        lines = []
+        
+        if deep_analysis.get('core_insight'):
+            lines.append(f"- **核心观点**: {deep_analysis['core_insight']}")
+        
+        if deep_analysis.get('key_arguments'):
+            lines.append(f"- **关键论据**: {deep_analysis['key_arguments']}")
+        
+        if deep_analysis.get('impact_forecast'):
+            lines.append(f"- **影响预测**: {deep_analysis['impact_forecast']}")
+        
+        if deep_analysis.get('sentiment'):
+            lines.append(f"- **情感倾向**: {deep_analysis['sentiment']}")
+        
+        if deep_analysis.get('credibility_score'):
+            lines.append(f"- **可信度评分**: {deep_analysis['credibility_score']}/10")
+        
+        if deep_analysis.get('analysis_timestamp'):
+            lines.append(f"- **分析时间**: {deep_analysis['analysis_timestamp']}")
+        
+        return "\n".join(lines)
     
     def _merge_archive_content(self, existing: str, new: str) -> str:
         """
