@@ -500,6 +500,12 @@ class ProviderManager:
         call_batch_api_func: Callable,
         fallback_single_func: Callable = None,
         default_score: float = 5.0,
+        # 新增参数：并行批处理配置
+        use_parallel_batches: bool = False,
+        max_parallel_batches: int = 3,
+        # 新增参数：超时控制配置
+        batch_timeout_seconds: int = 120,
+        timeout_fallback_strategy: str = "single",
         **api_kwargs
     ) -> tuple:
         """
@@ -516,6 +522,10 @@ class ProviderManager:
             call_batch_api_func: 批量API调用函数
             fallback_single_func: 单条处理函数（可选）
             default_score: 默认分数
+            use_parallel_batches: 是否启用并行批处理
+            max_parallel_batches: 最大并行批次
+            batch_timeout_seconds: 批次超时时间（秒）
+            timeout_fallback_strategy: 超时降级策略
             **api_kwargs: 传递给API调用函数的额外参数
 
         Returns:
@@ -532,28 +542,45 @@ class ProviderManager:
         total_batches = len(batches)
         logger.info(f"📦 分割为 {total_batches} 个批次 (每批 ≤{batch_size})")
 
-        # 2. 尝试批量处理
+        # 2. 尝试批量处理（支持并行或串行）
         batch_results = {}
         batch_failures = []
 
-        for batch in batches:
-            batch_idx = batches.index(batch) + 1
-            batch_idx_outcome, response, error = (
-                await self._process_batch_with_fallback(
-                    batch=batch,
-                    batch_index=batch_idx,
-                    total_batches=total_batches,
-                    call_batch_api_func=call_batch_api_func,
-                    prompt=api_kwargs.get('prompt'),
-                    max_tokens=api_kwargs.get('max_tokens', 8000),
-                    temperature=api_kwargs.get('temperature', 0.3)
-                )
+        if use_parallel_batches:
+            # 并行模式：使用asyncio.gather并行处理所有批次
+            logger.info(f"⚡ 启用并行模式 (并发: {max_parallel_batches})")
+            batch_results = await self._process_batches_parallel(
+                batches=batches,
+                batch_size=batch_size,
+                call_batch_api_func=call_batch_api_func,
+                max_concurrent=max_parallel_batches,
+                **api_kwargs
             )
+            # 找出失败的批次
+            for batch_idx in range(1, total_batches + 1):
+                if batch_idx not in batch_results:
+                    batch_failures.append((batch_idx, batches[batch_idx - 1], "parallel_failed"))
+        else:
+            # 串行模式：逐个处理批次（原有逻辑）
+            logger.info("📋 使用串行模式")
+            for batch in batches:
+                batch_idx = batches.index(batch) + 1
+                batch_idx_outcome, response, error = (
+                    await self._process_batch_with_fallback(
+                        batch=batch,
+                        batch_index=batch_idx,
+                        total_batches=total_batches,
+                        call_batch_api_func=call_batch_api_func,
+                        prompt=api_kwargs.get('prompt'),
+                        max_tokens=api_kwargs.get('max_tokens', 8000),
+                        temperature=api_kwargs.get('temperature', 0.3)
+                    )
+                )
 
-            if response:
-                batch_results[batch_idx_outcome] = response
-            else:
-                batch_failures.append((batch_idx_outcome, batch, error))
+                if response:
+                    batch_results[batch_idx_outcome] = response
+                else:
+                    batch_failures.append((batch_idx_outcome, batch, error))
 
         # 3. 如果有失败的批次，尝试回退
         if batch_failures:
@@ -606,3 +633,156 @@ class ProviderManager:
         )
 
         return all_results, total_api_calls
+
+    # ==================== 并行批处理（方案A）====================
+
+    def _get_semaphore(self, max_concurrent: int):
+        """获取或创建并发控制信号量"""
+        if not hasattr(self, '_semaphore') or self._semaphore is None:
+            self._semaphore = asyncio.Semaphore(max_concurrent)
+        return self._semaphore
+
+    async def _process_batches_parallel(
+        self,
+        batches: List[List[NewsItem]],
+        batch_size: int,
+        call_batch_api_func: Callable,
+        max_concurrent: int = 3,
+        **api_kwargs
+    ) -> Dict[int, str]:
+        """
+        并行处理所有批次（核心优化）
+        
+        使用asyncio.gather实现真正的并行执行，通过信号量控制并发数
+        
+        Args:
+            batches: 批次列表
+            batch_size: 批次大小
+            call_batch_api_func: 批量API调用函数
+            max_concurrent: 最大并发数（默认3）
+            **api_kwargs: API调用参数
+        
+        Returns:
+            Dict[int, str]: 批次索引到响应的映射
+        """
+        semaphore = self._get_semaphore(max_concurrent)
+        
+        async def _process_single_batch_limited(batch, batch_idx, total):
+            """带并发限制的单个批次处理"""
+            async with semaphore:
+                logger.info(f"📦 [并行] 处理批次 {batch_idx}/{total} ({len(batch)} 条)")
+                try:
+                    result = await self._process_batch_with_fallback(
+                        batch=batch,
+                        batch_index=batch_idx,
+                        total_batches=total,
+                        call_batch_api_func=call_batch_api_func,
+                        prompt=api_kwargs.get('prompt'),
+                        max_tokens=api_kwargs.get('max_tokens', 8000),
+                        temperature=api_kwargs.get('temperature', 0.3)
+                    )
+                    logger.info(f"✅ 批次 {batch_idx}/{total} 完成")
+                    return result
+                except Exception as e:
+                    logger.error(f"❌ 批次 {batch_idx}/{total} 失败: {e}")
+                    return (batch_idx, None, str(e))
+        
+        # 创建所有任务
+        tasks = []
+        for idx, batch in enumerate(batches, 1):
+            task = _process_single_batch_limited(batch, idx, len(batches))
+            tasks.append(task)
+        
+        # 并行执行所有批次
+        logger.info(f"⚡ 启动并行模式 (最大并发: {max_concurrent})")
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+        
+        # 处理结果
+        batch_results = {}
+        for result in results:
+            if isinstance(result, Exception):
+                logger.error(f"批次执行异常: {result}")
+                continue
+            batch_idx, response, error = result
+            if response:
+                batch_results[batch_idx] = response
+        
+        return batch_results
+
+    # ==================== 超时控制（方案C）====================
+
+    async def _process_batch_with_timeout(
+        self,
+        batch: List[NewsItem],
+        batch_index: int,
+        call_batch_api_func: Callable,
+        timeout_seconds: int = 120,
+        fallback_strategy: str = "single",
+        **kwargs
+    ) -> tuple:
+        """
+        带超时的批次处理（稳定性优化）
+        
+        超时后降级为单条处理或使用默认分数
+        
+        Args:
+            batch: 当前批次的新闻项
+            batch_index: 批次索引
+            call_batch_api_func: 批量API调用函数
+            timeout_seconds: 超时时间（秒）
+            fallback_strategy: 降级策略（single/default_score）
+            **kwargs: 其他参数
+        
+        Returns:
+            tuple: (batch_idx, response, error)
+        """
+        try:
+            # 使用wait_for添加超时
+            result = await asyncio.wait_for(
+                self._process_batch_with_fallback(
+                    batch=batch,
+                    batch_index=batch_index,
+                    call_batch_api_func=call_batch_api_func,
+                    prompt=kwargs.get('prompt'),
+                    max_tokens=kwargs.get('max_tokens', 8000),
+                    temperature=kwargs.get('temperature', 0.3)
+                ),
+                timeout=timeout_seconds
+            )
+            return result
+        except asyncio.TimeoutError:
+            logger.warning(f"⏱️ 批次 {batch_index} 超时({timeout_seconds}s)")
+            
+            if fallback_strategy == "single":
+                logger.info(f"🔄 批次 {batch_index} 降级为单条处理")
+                return await self._handle_batch_timeout_single(batch, batch_index, **kwargs)
+            else:
+                logger.warning(f"⚠️ 批次 {batch_index} 使用默认分数")
+                default_score = kwargs.get('default_score', 5.0)
+                for item in batch:
+                    item.ai_score = default_score
+                return batch_index, None, "timeout_with_default"
+
+    async def _handle_batch_timeout_single(
+        self,
+        batch: List[NewsItem],
+        batch_index: int,
+        **kwargs
+    ) -> tuple:
+        """超时后单条降级处理"""
+        results = []
+        for item in batch:
+            try:
+                # 简化版单条处理提示词
+                prompt = kwargs.get('prompt', '')
+                # 提取与当前item相关的部分（简化处理）
+                response = await self.call_single_scoring_api(
+                    prompt=f"请为以下新闻评分（1-10分）并返回JSON:\\n标题: {item.title}\\n摘要: {item.summary[:200]}",
+                    max_tokens=500
+                )
+                results.append(response)
+            except Exception as e:
+                logger.error(f"单条处理失败 {item.id}: {e}")
+                item.ai_score = kwargs.get('default_score', 5.0)
+        
+        return batch_index, "\\n".join(results) if results else None, None
