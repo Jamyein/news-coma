@@ -35,23 +35,82 @@ class ResponseParser:
     def clean_json_content(content: str) -> str:
         """
         清理JSON响应中的markdown标记
-        
+
         Args:
             content: 原始响应内容
-            
+
         Returns:
             str: 清理后的内容
         """
         if not content:
             return "{}"
-        
+
         # 移除markdown代码块标记
         cleaned = content.strip()
-        
+
         for pattern, replacement in ResponseParser.MARKDOWN_PATTERNS:
             cleaned = re.sub(pattern, replacement, cleaned)
-        
+
         return cleaned.strip()
+
+    @staticmethod
+    def fix_truncated_json(content: str) -> str:
+        """
+        修复可能被截断的JSON字符串
+
+        Args:
+            content: 原始JSON内容
+
+        Returns:
+            str: 修复后的JSON内容
+        """
+        if not content:
+            return "{}"
+
+        content = content.strip()
+
+        # 统计开闭括号
+        open_braces = content.count('{') - content.count('}')
+        open_brackets = content.count('[') - content.count(']')
+
+        # 如果字符串在引号中未闭合，尝试截断到最后一个完整键值对
+        in_string = False
+        escape_next = False
+        last_safe_index = len(content)
+
+        for i, char in enumerate(content):
+            if escape_next:
+                escape_next = False
+                continue
+            if char == '\\':
+                escape_next = True
+                continue
+            if char == '"' and not in_string:
+                in_string = True
+            elif char == '"' and in_string:
+                in_string = False
+                last_safe_index = i + 1
+
+        # 如果字符串未闭合，截断到最后安全位置
+        if in_string and last_safe_index < len(content):
+            content = content[:last_safe_index]
+            # 重新计算括号
+            open_braces = content.count('{') - content.count('}')
+            open_brackets = content.count('[') - content.count(']')
+
+        # 补齐括号
+        while open_braces > 0:
+            content += '}'
+            open_braces -= 1
+        while open_brackets > 0:
+            content += ']'
+            open_brackets -= 1
+
+        # 处理多余的闭括号（在开头截断的情况）
+        while content and content[0] in '}]':
+            content = content[1:]
+
+        return content if content else "{}"
     
     @staticmethod
     def extract_data_list(data: Any) -> List[Dict]:
@@ -108,19 +167,33 @@ class ResponseParser:
             cleaned = cls.clean_json_content(content)
             data = json.loads(cleaned)
             data_list = cls.extract_data_list(data)
-            
+
             if not data_list:
                 raise ValueError("响应中未找到数据列表")
-            
+
             return data_list
-            
+
         except json.JSONDecodeError as e:
             ErrorHandler.log_error(
                 context="JSON解析",
                 error=e,
                 logger=logger,
-                level='error'
+                level='warning'
             )
+            # 尝试修复截断的JSON
+            try:
+                fixed = cls.fix_truncated_json(content)
+                data = json.loads(fixed)
+                data_list = cls.extract_data_list(data)
+
+                if data_list:
+                    if logger:
+                        logger.info(f"[JSON修复] 成功修复截断的JSON，提取到 {len(data_list)} 条数据")
+                    return data_list
+            except Exception as fix_error:
+                if logger:
+                    logger.warning(f"[JSON修复] 修复失败: {fix_error}")
+
             raise ValueError(f"JSON解析失败: {e}")
     
     @classmethod
