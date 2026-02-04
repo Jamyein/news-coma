@@ -57,3 +57,4 @@ config/codemap.md
 codemap.md
 .slim/cartography.json
 test_simplify.py
+/.opencode
