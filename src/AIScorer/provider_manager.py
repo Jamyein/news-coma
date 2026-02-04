@@ -5,9 +5,13 @@
 """
 import asyncio
 import logging
+import time
 from typing import List, Callable, Any, Optional
-from openai import AsyncOpenAI
-from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+from openai import AsyncOpenAI, RateLimitError
+from tenacity import (
+    retry, stop_after_attempt, wait_random_exponential,
+    retry_if_exception_type, before_sleep_log
+)
 
 from src.models import NewsItem, AIConfig, ProviderConfig
 from .rate_limiter import SimpleRateLimiter
@@ -173,9 +177,11 @@ class ProviderManager:
         raise last_exception
     
     @retry(
-        stop=stop_after_attempt(2),
-        wait=wait_exponential(multiplier=1, min=2, max=5),
-        reraise=True
+        stop=stop_after_attempt(3),
+        wait=wait_random_exponential(min=5, max=30),
+        retry=retry_if_exception_type(RateLimitError),
+        reraise=True,
+        before_sleep=before_sleep_log(logger, logging.WARNING)
     )
     async def call_api(
         self,
@@ -238,6 +244,14 @@ class ProviderManager:
             return response.choices[0].message.content
             
         except Exception as e:
+            # Special handling for 429 errors (rate limit)
+            if hasattr(e, 'status') and e.status == 429:
+                logger.warning(
+                    f"⚠️ 收到429速率限制错误 ({self.current_provider_name})，"
+                    f"额外等待10秒后重试"
+                )
+                await asyncio.sleep(10)
+            
             ErrorHandler.log_error(
                 context=f"API调用 ({self.current_provider_name})",
                 error=e,
