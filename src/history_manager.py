@@ -145,8 +145,8 @@ class HistoryManager:
         
         return {
             "recent_runs": n,
-            "avg_api_calls": total_api / n if n > 0 else 0,
-            "avg_duration": total_duration / n if n > 0 else 0,
+            "avg_api_calls_per_run": total_api / n if n > 0 else 0,
+            "avg_duration_seconds": total_duration / n if n > 0 else 0,
             "total_runs": self._data["stats"]["total_runs"],
         }
     
