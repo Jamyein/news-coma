@@ -115,6 +115,14 @@ class AIConfig:
     deep_analysis_dimensions: List[str] = field(default_factory=lambda: [
         "core_insight", "key_arguments", "impact_forecast", "sentiment", "credibility_score"
     ])  # 分析维度
+    
+    # 并行批处理配置（新增）
+    use_parallel_batches: bool = False              # 是否启用并行批处理
+    max_parallel_batches: int = 3                   # 最大并行批次
+    
+    # 超时控制配置（新增）
+    batch_timeout_seconds: int = 120                # 批次超时时间（秒）
+    timeout_fallback_strategy: str = "single"       # 超时降级策略
 
 
 @dataclass

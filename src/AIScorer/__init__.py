@@ -31,7 +31,9 @@ from .scoring_strategy import (
     ScoringDimension
 )
 from .category_classifier import CategoryClassifier
+from .adaptive_classifier import AdaptiveNewsClassifier, ClassifiedItem
 from .rate_limiter import SimpleRateLimiter, AdaptiveRateLimiter
+from .adaptive_batcher import AdaptiveBatchProcessor, BatchContext, BatchHistoryEntry
 
 __all__ = [
     # 主类
@@ -43,8 +45,15 @@ __all__ = [
     'ResponseParser',
     'ErrorHandler',
     'CategoryClassifier',
+    'AdaptiveNewsClassifier',
+    'ClassifiedItem',
     'SimpleRateLimiter',
     'AdaptiveRateLimiter',
+    
+    # 离散优化类
+    'AdaptiveBatchProcessor',
+    'BatchContext',
+    'BatchHistoryEntry',
     
     # 策略类
     'BaseScoringStrategy',

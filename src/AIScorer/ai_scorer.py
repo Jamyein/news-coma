@@ -81,6 +81,16 @@ class AIScorer:
             'threshold_adjustments': []
         }
         
+        # 并行批处理配置（新增）
+        self.use_parallel_batches = getattr(config, 'use_parallel_batches', False)
+        self.max_parallel_batches = getattr(config, 'max_parallel_batches', 3)
+        
+        # 超时控制配置（新增）
+        self.batch_timeout_seconds = getattr(config, 'batch_timeout_seconds', 120)
+        self.timeout_fallback_strategy = getattr(
+            config, 'timeout_fallback_strategy', 'single'
+        )
+        
         logger.info("AIScorer 初始化完成")
     
     # ==================== 主入口 ====================
@@ -821,7 +831,7 @@ class AIScorer:
         # 构建Prompt
         prompt = self.prompt_builder.build_scoring_prompt(items)
 
-        # 使用真批处理执行
+        # 使用真批处理执行（支持并行和超时控制）
         results, api_call_count = (
             await self.provider_manager.execute_batch_with_fallback(
                 items=items,
@@ -831,7 +841,13 @@ class AIScorer:
                 default_score=5.0,
                 prompt=prompt,
                 max_tokens=min(1000 + len(items) * 500, 8000),
-                temperature=self.provider_manager.current_config.temperature
+                temperature=self.provider_manager.current_config.temperature,
+                # 新增：并行批处理参数
+                use_parallel_batches=self.use_parallel_batches,
+                max_parallel_batches=self.max_parallel_batches,
+                # 新增：超时控制参数
+                batch_timeout_seconds=self.batch_timeout_seconds,
+                timeout_fallback_strategy=self.timeout_fallback_strategy
             )
         )
 

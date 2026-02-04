@@ -58,3 +58,4 @@ codemap.md
 .slim/cartography.json
 test_simplify.py
 /.opencode
+pytest.ini

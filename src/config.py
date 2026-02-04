@@ -97,7 +97,13 @@ class Config:
             deep_analysis_enabled=ai_data.get('deep_analysis_enabled', True),
             deep_analysis_dimensions=ai_data.get('deep_analysis_dimensions', [
                 "core_insight", "key_arguments", "impact_forecast", "sentiment", "credibility_score"
-            ])
+            ]),
+            # 并行批处理配置（新增）
+            use_parallel_batches=ai_data.get('use_parallel_batches', False),
+            max_parallel_batches=ai_data.get('max_parallel_batches', 3),
+            # 超时控制配置（新增）
+            batch_timeout_seconds=ai_data.get('batch_timeout_seconds', 120),
+            timeout_fallback_strategy=ai_data.get('timeout_fallback_strategy', 'single')
         )
     
     def _resolve_api_key(self, api_key_template: str) -> str:
