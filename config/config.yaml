@@ -157,7 +157,7 @@ ai:
       temperature: 0.3
       rate_limit_rpm: 60
       batch_size: 5          # 基础批处理大小(向后兼容)
-      max_concurrent: 10     # 真批处理启用后，此值可适当降低
+      max_concurrent: 6     # 真批处理启用后，此值可适当降低
     
     kimi:
       api_key: "${KIMI_API_KEY}"
