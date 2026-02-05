@@ -90,14 +90,6 @@ class Config:
             category_quota_finance=ai_data.get('category_quota_finance', 0.40),
             category_quota_tech=ai_data.get('category_quota_tech', 0.30),
             category_quota_politics=ai_data.get('category_quota_politics', 0.30),
-            pass2_fetch_fulltext_enabled=ai_data.get('pass2_fetch_fulltext_enabled', True),
-            pass2_fulltext_max_items=ai_data.get('pass2_fulltext_max_items', 30),
-            pass2_fulltext_timeout=ai_data.get('pass2_fulltext_timeout', 10),
-            pass2_max_concurrent_fetches=ai_data.get('pass2_max_concurrent_fetches', 5),
-            deep_analysis_enabled=ai_data.get('deep_analysis_enabled', True),
-            deep_analysis_dimensions=ai_data.get('deep_analysis_dimensions', [
-                "core_insight", "key_arguments", "impact_forecast", "sentiment", "credibility_score"
-            ]),
             # 并行批处理配置（新增）
             use_parallel_batches=ai_data.get('use_parallel_batches', False),
             max_parallel_batches=ai_data.get('max_parallel_batches', 3),
