@@ -1,20 +1,195 @@
 # 📰 新闻精选
 
-> 🕐 更新时间: 2026年02月05日 20:20
-> 📊 本期精选 **0** 条高质量新闻
+> 🕐 更新时间: 2026年02月05日 20:46
+> 📊 本期精选 **11** 条高质量新闻
 > 🤖 由 AI 自动分类、筛选、翻译和总结
 
 ---
 
-## 💰 财经新闻 (0条)
+## 💰 财经新闻 (8条)
 
-*暂无财经板块新闻*
+精选 **8** 条财经新闻
+
+### 1. 港交所1月首次公开招股集资金额达393亿港元，同比上升555%
+
+**📌 来源**: BBC Business | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.9/10
+
+**📝 摘要**:
+香港交易所1月份的首次公开招股集资金额大幅上升，显示出市场对香港证券市场的信心。
+
+**💡 关键要点**:
+- 港交所
+- 首次公开招股
+- 集资金额上升
+
+**🔗 原文链接**: ['My bills are lower and I'm warmer in energy efficient home'](https://www.bbc.com/news/articles/cn42k0n40x8o?at_medium=RSS&at_campaign=rss)
 
 ---
 
-## 🔬 科技新闻 (0条)
+### 2. 美国1月挑战者企业裁员人数达10.8万人，创2009年以来同期最高
 
-*暂无科技板块新闻*
+**📌 来源**: WSJ 经济 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.9/10
+
+**📝 摘要**:
+美国1月份的裁员人数达到10.8万人，这是自2009年以来最高的一次，反映了当前经济形势的严峻。
+
+**💡 关键要点**:
+- 美国裁员人数
+- 2009年以来最高
+- 经济形势严峻
+
+**🔗 原文链接**: [Tapestry Boosts Outlook as Coach Sales Surge](https://www.wsj.com/business/earnings/tapestry-boosts-outlook-as-coach-sales-surge-6e7d44b9?mod=pls_whats_news_us_business_f)
+
+---
+
+### 3. 美国1月裁员人数达10.8万，创2009年以来最高
+
+**📌 来源**: MarketWatch | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.6/10
+
+**📝 摘要**:
+美国1月企业裁员人数达到10.8万人，为2009年以来同期最高，反映出当前就业市场的紧张状况。
+
+**💡 关键要点**:
+- 美国企业裁员
+- 创2009年以来最高
+- 就业市场紧张
+
+**🔗 原文链接**: [Powell probe by Trump DOJ will be resolved, clearing the way for Warsh’s confirmation, Senate Republican says](https://www.marketwatch.com/story/powell-probe-will-get-resolved-clearing-the-way-for-warshs-confirmation-key-republican-senator-says-a4dd0169?mod=mw_rss_topstories)
+
+---
+
+### 4. 港交所1月首次公开招股集资金额同比上升555%
+
+**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.6/10
+
+**📝 摘要**:
+香港交易所1月首次公开招股集资金额达393亿港元，同比上升555%，显示出市场活跃度提升。
+
+**💡 关键要点**:
+- 港交所
+- 首次公开招股
+- 集资金额上升
+
+**🔗 原文链接**: [华尔街点评谷歌财报：“逆天”资本开支指引下，利润率成最大担忧](https://wallstreetcn.com/articles/3765076)
+
+---
+
+### 5. 美国1月挑战者企业裁员人数达10.8万人，创2009年以来同期最高
+
+**📌 来源**: 36氪 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.5/10
+
+**📝 摘要**:
+美国1月份企业裁员人数达到10.8万人，为2009年以来同期最高，反映了就业市场的紧张局势。
+
+**💡 关键要点**:
+- 美国裁员人数
+- 挑战者企业
+- 2009年以来最高
+- 就业市场紧张
+
+**🔗 原文链接**: [CHALLENGER报告显示美国企业1月裁员10.8万人，创2009年以来同期最高](https://36kr.com/newsflashes/3670390087295881?f=rss)
+
+---
+
+### 6. 港交所1月首次公开招股集资金额为393亿港元，同比上升555%
+
+**📌 来源**: 36氪 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.5/10
+
+**📝 摘要**:
+香港交易所1月份首次公开招股集资金额大幅上升，显示出市场对香港资本市场的信心。
+
+**💡 关键要点**:
+- 港交所
+- 首次公开招股
+- 集资金额上升
+- 市场信心
+
+**🔗 原文链接**: [港交所：1月首次公开招股集资金额为393亿港元，同比上升555%](https://36kr.com/newsflashes/3670388874453641?f=rss)
+
+---
+
+### 7. 港交所1月首次公开招股集资金额同比上升555%
+
+**📌 来源**: WSJ 市场 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.5/10
+
+**📝 摘要**:
+香港交易所1月首次公开招股集资金额达到393亿港元，同比上升555%，显示出市场活跃度提升。
+
+**💡 关键要点**:
+- 港交所
+- 首次公开招股
+- 集资金额上升
+
+**🔗 原文链接**: [Dollar Lifted by Tech Selloff, Metals Volatility](https://www.wsj.com/finance/currencies/yen-consolidates-amid-risks-of-japans-verbal-intervention-f3a32df4?mod=rss_markets_main)
+
+---
+
+### 8. 美国1月裁员人数达10.8万，创2009年以来同期最高
+
+**📌 来源**: WSJ 经济 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.5/10
+
+**📝 摘要**:
+美国1月挑战者企业裁员人数达到10.8万人，为2009年以来同期最高，反映出就业市场的紧张。
+
+**💡 关键要点**:
+- 美国裁员人数
+- 2009年以来最高
+- 就业市场紧张
+
+**🔗 原文链接**: [Estee Lauder Lifts Outlook, Warns of Tariff Impact](https://www.wsj.com/business/retail/estee-lauder-lifts-outlook-warns-of-tariff-impact-62459669?mod=pls_whats_news_us_business_f)
+
+---
+
+## 🔬 科技新闻 (3条)
+
+精选 **3** 条科技新闻
+
+### 1. 谷歌订阅用户增长，YouTube年营收达600亿美元
+
+**📌 来源**: TechCrunch | **🏏️ AI分类**: 科技 | **⭐ 评分**: 7.5/10
+
+**📝 摘要**:
+谷歌报告称，其订阅用户数量增长，YouTube年营收达到600亿美元。
+
+**💡 关键要点**:
+- 谷歌
+- 订阅用户
+- YouTube
+- 营收增长
+
+**🔗 原文链接**: [Google’s subscriptions rise in Q4 as YouTube pulls $60B in yearly revenue](https://techcrunch.com/2026/02/05/googles-subscriptions-rise-in-q4-as-youtube-pulls-60b-in-yearly-revenue/)
+
+---
+
+### 2. 谷歌订阅用户增长，YouTube年营收达600亿美元
+
+**📌 来源**: WSJ 经济 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 7.2/10
+
+**📝 摘要**:
+谷歌订阅用户数量增长，YouTube年营收达到600亿美元。
+
+**💡 关键要点**:
+- 谷歌订阅用户
+- YouTube营收
+- 增长
+
+**🔗 原文链接**: [Hershey Profit Dragged Down by Tariffs, Cocoa Costs](https://www.wsj.com/business/earnings/hershey-profit-dragged-down-by-tariffs-cocoa-costs-996814d4?mod=pls_whats_news_us_business_f)
+
+---
+
+### 3. 谷歌订阅用户增长，YouTube年营收达600亿美元
+
+**📌 来源**: WSJ 经济 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 7.0/10
+
+**📝 摘要**:
+谷歌订阅用户增长至3.25亿，YouTube年营收达600亿美元。
+
+**💡 关键要点**:
+- 谷歌订阅用户
+- YouTube营收
+- 增长
+
+**🔗 原文链接**: [Cardinal Health Lifts Outlook After Posting Higher Profit](https://www.wsj.com/business/earnings/cardinal-health-lifts-outlook-after-posting-higher-profit-a12eb285?mod=pls_whats_news_us_business_f)
 
 ---
 
