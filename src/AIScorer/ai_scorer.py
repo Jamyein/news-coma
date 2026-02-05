@@ -853,14 +853,37 @@ class AIScorer:
 
         # 解析响应
         if results:
-            content = results[0]
-            parsed_results = self.response_parser.parse_batch_response(
-                items,
-                content,
-                None
-            )
-            logger.info(f"✅ Pass2深度分析(真批处理)完成: {len(parsed_results)} 条")
-            return parsed_results
+            # 合并所有批次的解析结果
+            all_parsed_results = []
+            total_items_parsed = 0
+
+            for batch_idx, content in enumerate(results, 1):
+                if content:
+                    try:
+                        # 计算当前批次对应的新闻项范围
+                        start_idx = (batch_idx - 1) * self.true_batch_size
+                        end_idx = min(start_idx + self.true_batch_size, len(items))
+                        batch_items = items[start_idx:end_idx]
+
+                        parsed_batch = self.response_parser.parse_batch_response(
+                            batch_items,
+                            content,
+                            None
+                        )
+                        all_parsed_results.extend(parsed_batch)
+                        total_items_parsed += len(parsed_batch)
+                        logger.debug(f"✅ 批次 {batch_idx} 解析完成: {len(parsed_batch)} 条")
+                    except Exception as e:
+                        logger.error(f"❌ 批次 {batch_idx} 解析失败: {e}")
+                        # 为当前批次使用默认分数
+                        start_idx = (batch_idx - 1) * self.true_batch_size
+                        end_idx = min(start_idx + self.true_batch_size, len(items))
+                        for item in items[start_idx:end_idx]:
+                            item.ai_score = 5.0
+                            all_parsed_results.append(item)
+
+            logger.info(f"✅ Pass2深度分析(真批处理)完成: {total_items_parsed}/{len(items)} 条")
+            return all_parsed_results if all_parsed_results else items
         else:
             logger.warning("所有批次都失败，使用默认分数")
             return ErrorHandler.apply_batch_defaults(items, 'parse_failed')
