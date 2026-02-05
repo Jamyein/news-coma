@@ -268,7 +268,7 @@ output:
   max_news_count: 30      # 每期精选新闻数量（增加到30条，12财经+9科技+9政治）
   max_feed_items: 50      # RSS feed 保留条数
   archive_days: 30        # 归档保留天数
-  time_window_days: 7     # 只处理最近 N 天的新闻
+  time_window_days: 1     # 只处理最近 N 天的新闻
   use_smart_switch: true # 是否启用智能切换（首次用archive，后续用latest）
 
 # ==========================================
