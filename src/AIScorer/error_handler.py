@@ -88,46 +88,6 @@ class ErrorHandler:
         return [cls.apply_default_values(item, error_type) for item in items]
     
     @classmethod
-    def apply_deep_analysis_defaults(cls, item: NewsItem) -> NewsItem:
-        """
-        应用深度分析默认值
-        
-        Args:
-            item: 新闻项
-            
-        Returns:
-            NewsItem: 设置了深度分析默认值的新闻项
-        """
-        from datetime import datetime
-        
-        item.deep_analysis = {
-            "core_insight": "深度分析失败，无法获取核心观点",
-            "key_arguments": [],
-            "impact_forecast": "无法预测该新闻可能产生的影响",
-            "sentiment": "neutral",
-            "credibility_score": 5.0,
-            "analysis_timestamp": datetime.utcnow().isoformat() + 'Z'
-        }
-        
-        return item
-    
-    @classmethod
-    def apply_batch_deep_analysis_defaults(
-        cls, 
-        items: List[NewsItem]
-    ) -> List[NewsItem]:
-        """
-        批量应用深度分析默认值
-        
-        Args:
-            items: 新闻项列表
-            
-        Returns:
-            List[NewsItem]: 设置了深度分析默认值的新闻项列表
-        """
-        return [cls.apply_deep_analysis_defaults(item) for item in items]
-    
-    @classmethod
     def handle_exception(
         cls,
         item: NewsItem,

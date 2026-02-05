@@ -38,21 +38,33 @@ class RSSGenerator:
             return ""
         
         html = markdown_text
-        
-        # 1. 转换标题 (### → <h3>)
+
+        # 1. 转换一级标题 (# → <h1>)
+        html = re.sub(r'^#\s+(.+?)$', r'<h1>\1</h1>', html, flags=re.MULTILINE)
+
+        # 2. 转换二级标题 (## → <h2>)
+        html = re.sub(r'^##\s+(.+?)$', r'<h2>\1</h2>', html, flags=re.MULTILINE)
+
+        # 3. 转换三级标题 (### → <h3>)
         html = re.sub(r'^###\s+(.+?)$', r'<h3>\1</h3>', html, flags=re.MULTILINE)
         
         # 2. 转换粗体 (** → <strong>)
         html = re.sub(r'\*\*([^*]+?)\*\*', r'<strong>\1</strong>', html)
         
-        # 3. 转换链接 ([文本](URL) → <a>)
+        # 4. 转换引用块 (> → <blockquote>)
+        def replace_quote(match):
+            quote_content = match.group(1)
+            return f'<blockquote>{quote_content}</blockquote>'
+        html = re.sub(r'^>\s+(.+?)$', replace_quote, html, flags=re.MULTILINE)
+
+        # 5. 转换链接 ([文本](URL) → <a>)
         def replace_link(match):
             link_text = match.group(1)
             url = match.group(2)
             return f'<a href="{url}">{link_text}</a>'
         html = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', replace_link, html)
-        
-        # 4. 转换列表 (- → <ul><li>)
+
+        # 6. 转换列表 (- → <ul><li>)
         lines = html.split('\n')
         result_lines = []
         in_list = False
@@ -83,11 +95,11 @@ class RSSGenerator:
             result_lines.append('</ul>')
         
         html = '\n'.join(result_lines)
-        
-        # 5. 转换分隔线 (--- → <hr/>)
+
+        # 7. 转换分隔线 (--- → <hr/>)
         html = re.sub(r'^---\s*$', '<hr/>', html, flags=re.MULTILINE)
-        
-        # 6. 包裹段落
+
+        # 8. 包裹段落
         lines = html.split('\n')
         result_lines = []
         current_para = []
