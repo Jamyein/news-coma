@@ -254,13 +254,13 @@ class AIScorer:
     async def _score_2pass(self, items: List[NewsItem]) -> List[NewsItem]:
         """
         2-Pass评分流程
-        
+
         Pass 1: 快速预筛
-        Pass 2: 深度分析
-        
+        Pass 2: 评分
+
         Args:
             items: 新闻项列表
-            
+
         Returns:
             List[NewsItem]: 评分后的新闻项列表
         """
@@ -271,87 +271,333 @@ class AIScorer:
             logger.warning("预筛后无新闻通过")
             return items
         
-        logger.info(f"🥈 Pass 2: 深度分析 {len(pre_screen_items)} 条...")
-        return await self._pass2_deep_analysis(pre_screen_items)
+        logger.info(f"🥈 Pass 2: 评分 {len(pre_screen_items)} 条...")
+        return await self._pass2_scoring(pre_screen_items)
     
     async def _pass1_pre_screen(self, items: List[NewsItem]) -> List[NewsItem]:
         """
-        Pass 1: 快速预筛
-        对分类后新闻分别调用真批处理接口进行批量快速评分，
-        以实现更真实的权重评估，降低对人工干预的依赖。
-        每批次使用提供商的真批处理接口，并在失败时回退到单条处理。
+        Pass 1: AI智能分类+打分一体化预筛
+
+        使用AI在一次API调用中完成分类和打分，替代原有的关键词分类方式。
+        对于分类置信度低的新闻，会进行重分类（最多2次重试）。
+
+        Args:
+            items: 新闻项列表
+
+        Returns:
+            List[NewsItem]: 通过预筛的新闻项列表
+
+        Raises:
+            Exception: API调用失败时抛出异常
         """
-        # 1) 预分类
-        categorized = self.category_classifier.classify(items)
-        scored_items: List[NewsItem] = []
-        
+        logger.info(f"🎯 Pass 1: AI智能分类+打分一体化 ({len(items)}条新闻)")
+
         # 更新统计
         self._prescreen_stats['total_runs'] += 1
-        
-        # 2) 按分类批量打分，并标注 pre_category
-        for category, category_items in categorized.items():
-            if not category_items:
-                continue
-            for it in category_items:
-                it.pre_category = category
-            
-            batch = category_items
-            try:
-                # 尝试批量API调用
-                results = await self._score_category_batch(batch, category)
-                
-                # 使用增强的阈值检查
-                threshold = self._get_pass1_threshold(category)
-                passed_results = [
-                    item for item in results 
-                    if item.ai_score is not None and item.ai_score >= threshold
-                ]
-                
-                scored_items.extend(passed_results)
-                
+
+        # 1) AI批量分类+打分
+        ai_results = await self._pass1_ai_classification_batch(items)
+
+        # 2) 处理结果，收集低置信度项进行重分类
+        low_confidence_items = []
+        normal_items = []
+
+        for item, result in zip(items, ai_results):
+            item.pre_category = result.get('category', '社会政治')
+            item.ai_score = result.get('total', 5.0)
+            item.pre_category_confidence = result.get('category_confidence', 0.5)
+
+            # 检查置信度
+            if item.pre_category_confidence < 0.6:
+                low_confidence_items.append((item, result))
+            else:
+                normal_items.append(item)
+
+        # 3) 对低置信度项进行重分类（最多2次重试）
+        retry_count = 0
+        if low_confidence_items:
+            retry_items = [item for item, _ in low_confidence_items]
+            logger.info(f"   发现{len(low_confidence_items)}条低置信度新闻，开始重分类...")
+
+            for attempt in range(2):  # 最多2次重试
+                retry_results = await self._retry_classification(retry_items, f"置信度<0.6 (第{attempt+1}次重试)")
+                retry_count += 1
+
+                # 检查重试后的置信度
+                still_low = []
+                for item, result in zip(retry_items, retry_results):
+                    confidence = result.get('category_confidence', 0)
+                    if confidence >= 0.6:
+                        # 重分类成功
+                        item.pre_category = result.get('category', item.pre_category)
+                        item.ai_score = result.get('total', item.ai_score)
+                        item.pre_category_confidence = confidence
+                        normal_items.append(item)
+                    else:
+                        still_low.append(item)
+
+                retry_items = still_low
+                if not retry_items:
+                    break
+
+            # 如果重试后仍有低置信度项，保留原结果但标记
+            for item in retry_items:
+                item.pre_category_confidence = 0.5  # 标记为中等置信度
+                normal_items.append(item)
+
+        # 4) 应用阈值过滤
+        scored_items = []
+        for item in normal_items:
+            threshold = self._get_pass1_threshold(item.pre_category, item)
+            if item.ai_score is not None and item.ai_score >= threshold:
+                scored_items.append(item)
+
                 # 更新统计
-                self._prescreen_stats['by_category'][category]['input'] += len(batch)
-                self._prescreen_stats['by_category'][category]['passed'] += len(passed_results)
-                if passed_results:
-                    avg_score = sum(item.ai_score for item in passed_results) / len(passed_results)
-                    self._prescreen_stats['by_category'][category]['avg_score'] = avg_score
-                
-            except Exception as e:
-                logger.error(f"Pass1批量快速评分失败（{category}）: {e}")
-                # 降级：对当前分类逐条进行快速评分
-                for item in batch:
-                    try:
-                        scored = await self._score_single_fallback(item, category)
-                        
-                        # 使用增强的阈值检查
-                        threshold = self._get_pass1_threshold(category, item)
-                        if scored.ai_score is not None and scored.ai_score >= threshold:
-                            scored_items.append(scored)
-                            
-                            # 更新统计
-                            self._prescreen_stats['by_category'][category]['input'] += 1
-                            self._prescreen_stats['by_category'][category]['passed'] += 1
-                    except Exception:
-                        # 单条也失败，使用默认分数
-                        item.ai_score = 5.0
-        
-        # 3) 应用板块配额
+                self._prescreen_stats['by_category'][item.pre_category]['input'] += 1
+                self._prescreen_stats['by_category'][item.pre_category]['passed'] += 1
+
+        # 计算平均分
+        for category in ['财经', '科技', '社会政治']:
+            cat_items = [item for item in scored_items if item.pre_category == category]
+            if cat_items:
+                avg_score = sum(item.ai_score for item in cat_items) / len(cat_items)
+                self._prescreen_stats['by_category'][category]['avg_score'] = avg_score
+
+        # 5) 应用板块配额
         categorized_with_scores = self._group_by_category(scored_items)
         quota_applied = self._apply_category_quotas(categorized_with_scores)
-        
+
         # 收集所有通过阈值的项目
         passed_items = []
-        for category, items in quota_applied.items():
+        for category, cat_items in quota_applied.items():
             if category != '未分类':
-                passed_items.extend(items)
-        
-        # 4) 根据分数排序，保留前 pass1_max_items 条
+                passed_items.extend(cat_items)
+
+        # 6) 根据分数排序，保留前 pass1_max_items 条
         passed_items.sort(key=lambda x: x.ai_score if x.ai_score is not None else 0.0, reverse=True)
         final_passed_items = passed_items[:self.pass1_max_items]
-        
-        # 5) 记录日志
-        self._log_pass1_results(categorized, final_passed_items)
+
+        # 7) 构建分类结果用于日志（模拟原有关键词分类的格式）
+        categorized_result = self._build_categorized_result(items)
+
+        # 8) 记录日志
+        self._log_pass1_results(categorized_result, final_passed_items, retry_count)
+
+        logger.info(f"✅ Pass 1完成: {len(final_passed_items)}/{len(items)}条通过预筛")
         return final_passed_items
+
+    def _build_categorized_result(self, items: List[NewsItem]) -> Dict[str, List[NewsItem]]:
+        """构建分类结果（用于日志）"""
+        result = {
+            "财经": [],
+            "科技": [],
+            "社会政治": [],
+            "未分类": []
+        }
+        for item in items:
+            category = getattr(item, 'pre_category', '未分类')
+            if category in result:
+                result[category].append(item)
+            else:
+                result["未分类"].append(item)
+        return result
+
+    async def _pass1_ai_classification_batch(
+        self,
+        items: List[NewsItem]
+    ) -> List[Dict]:
+        """
+        Pass 1: AI批量分类+打分
+
+        使用AI在一次API调用中完成分类和打分。
+
+        Args:
+            items: 新闻项列表
+
+        Returns:
+            List[Dict]: 分类结果列表，每个元素包含 category, category_confidence, total
+
+        Raises:
+            Exception: API调用失败时抛出异常
+        """
+        if not items:
+            return []
+
+        # 构建Prompt
+        prompt = self.prompt_builder.build_pass1_ai_classification_prompt(items)
+
+        try:
+            # 调用API
+            content = await self.provider_manager.call_batch_api(
+                prompt=prompt,
+                max_tokens=2000,
+                temperature=self.provider_manager.current_config.temperature
+            )
+
+            # 解析响应
+            results = self._parse_pass1_ai_classification_response(items, content)
+
+            logger.debug(f"AI分类完成: {len(results)}条新闻")
+            return results
+
+        except Exception as e:
+            logger.error(f"Pass 1 AI分类API调用失败: {e}")
+            raise  # 向上抛出异常，中断评分流程
+
+    async def _retry_classification(
+        self,
+        items: List[NewsItem],
+        reason: str = "置信度低"
+    ) -> List[Dict]:
+        """
+        对低置信度新闻进行重分类
+
+        使用更明确的Prompt重新调用AI进行分类。
+
+        Args:
+            items: 需要重分类的新闻项列表
+            reason: 重分类原因（用于日志）
+
+        Returns:
+            List[Dict]: 重分类结果
+        """
+        if not items:
+            return []
+
+        logger.debug(f"重分类{len(items)}条新闻: {reason}")
+
+        # 构建新闻块（更简洁的格式）
+        news_blocks = []
+        for i, item in enumerate(items, 1):
+            news_blocks.append(
+                f"【{i}】{item.title}\n"
+                f"    来源: {item.source}\n"
+                f"    摘要: {item.summary[:150] if item.summary else 'N/A'}\n"
+            )
+
+        prompt = f"""你是一位资深新闻编辑，请对以下{len(items)}条新闻进行分类判断。
+
+【重要提示】
+上一次的分类置信度较低，请仔细分析以下内容特征，给出更准确的分类：
+
+{''.join(news_blocks)}
+
+【分类指南】
+1. 财经：聚焦金融市场、经济数据、企业财报、投资相关
+2. 科技：聚焦技术创新、AI、芯片、互联网、科研突破
+3. 社会政治：聚焦政策、法律、国际关系、社会事件
+
+【判断要点】
+- 优先看标题中的核心关键词
+- 看新闻内容的主要关注点
+- 考虑新闻对哪个领域影响最大
+
+【输出格式】
+请返回JSON数组：
+[
+    {{"news_index": 1, "category": "财经", "category_confidence": 0.90, "total": 7.5}},
+    ...
+]
+
+category只能是"财经"、"科技"或"社会政治"。
+category_confidence表示你的确定程度（0-1，数字越大越确定）。"""
+
+        try:
+            content = await self.provider_manager.call_batch_api(
+                prompt=prompt,
+                max_tokens=1500,
+                temperature=0.3  # 使用较低温度增加确定性
+            )
+
+            return self._parse_pass1_ai_classification_response(items, content)
+
+        except Exception as e:
+            logger.error(f"重分类失败: {e}")
+            # 重分类失败时返回原项目列表，标记为低置信度
+            return [
+                {
+                    'news_index': i,
+                    'category': getattr(item, 'pre_category', '社会政治'),
+                    'category_confidence': 0.5,
+                    'total': getattr(item, 'ai_score', 5.0)
+                }
+                for i, item in enumerate(items, 1)
+            ]
+
+    def _parse_pass1_ai_classification_response(
+        self,
+        items: List[NewsItem],
+        content: str
+    ) -> List[Dict]:
+        """
+        解析Pass 1 AI分类响应
+
+        Args:
+            items: 原始新闻项列表
+            content: API响应内容
+
+        Returns:
+            List[Dict]: 解析后的分类结果
+        """
+        import json
+
+        results = []
+        valid_categories = {'财经', '科技', '社会政治'}
+
+        try:
+            # 尝试解析JSON数组
+            parsed = json.loads(content)
+
+            if not isinstance(parsed, list):
+                logger.error(f"AI分类响应不是JSON数组格式")
+                raise ValueError("响应格式错误")
+
+            # 创建索引映射
+            index_map = {}
+            for result in parsed:
+                if 'news_index' in result:
+                    idx = result['news_index']
+                    # 标准化分类值
+                    category = result.get('category', '社会政治')
+                    if category not in valid_categories:
+                        logger.warning(f"无效分类值 '{category}'，修正为'社会政治'")
+                        category = '社会政治'
+
+                    index_map[idx] = {
+                        'news_index': idx,
+                        'category': category,
+                        'category_confidence': result.get('category_confidence', 0.5),
+                        'total': result.get('total', 5.0)
+                    }
+
+            # 为每个新闻项匹配结果
+            for i, item in enumerate(items, 1):
+                if i in index_map:
+                    results.append(index_map[i])
+                else:
+                    # 未匹配到结果，使用默认值
+                    logger.warning(f"新闻{i}未匹配到AI分类结果，使用默认值")
+                    results.append({
+                        'news_index': i,
+                        'category': '社会政治',
+                        'category_confidence': 0.5,
+                        'total': 5.0
+                    })
+
+        except (json.JSONDecodeError, ValueError) as e:
+            logger.error(f"AI分类响应解析失败: {e}")
+            # 返回默认结果
+            results = [
+                {
+                    'news_index': i,
+                    'category': '社会政治',
+                    'category_confidence': 0.5,
+                    'total': 5.0
+                }
+                for i in range(1, len(items) + 1)
+            ]
+
+        return results
     
     def _group_by_category(
         self, items: List[NewsItem]
@@ -589,181 +835,65 @@ class AIScorer:
         # 简化处理：返回默认分数
         # 实际实现应该调用 _pass1_quick_api
         return 7.0
-
-    async def _score_category_batch(
-        self,
-        items: List[NewsItem],
-        category: str
-    ) -> List[NewsItem]:
-        """
-        使用真实API对单个分类进行批量评分
-
-        Args:
-            items: 新闻项列表
-            category: 新闻分类
-
-        Returns:
-            List[NewsItem]: 评分后的新闻项列表
-        """
-        # 1) 构建批量Prompt
-        prompt = self.prompt_builder.build_pass1_batch_prompt(items, category)
-
-        # 2) 调用批量API
-        content = await self.provider_manager.call_batch_api(
-            prompt=prompt,
-            max_tokens=4000,
-            temperature=self.provider_manager.current_config.temperature
-        )
-
-        # 3) 解析响应（只提取total分数）
-        scored_items = self._parse_pass1_batch_response(items, content)
-
-        return scored_items
-
-    def _parse_pass1_batch_response(
-        self,
-        items: List[NewsItem],
-        content: str
-    ) -> List[NewsItem]:
-        """
-        解析Pass1批量评分响应
-
-        Args:
-            items: 原始新闻项列表
-            content: API响应内容
-
-        Returns:
-            List[NewsItem]: 添加了ai_score的新闻项列表
-        """
-        import json
-
-        scored_items = []
-
-        try:
-            # 尝试解析JSON数组
-            results = json.loads(content)
-        except (json.JSONDecodeError, TypeError) as e:
-            logger.error(f"Pass1响应JSON解析失败: {e}")
-            # 降级：所有项使用默认分数
-            for item in items:
-                item.ai_score = 5.0
-                scored_items.append(item)
-            return scored_items
-
-        # 创建索引映射
-        if not isinstance(results, list):
-            logger.error(f"Pass1响应不是JSON数组格式")
-            for item in items:
-                item.ai_score = 5.0
-                scored_items.append(item)
-            return scored_items
-
-        index_map = {}
-        for result in results:
-            if 'news_index' in result:
-                index_map[result['news_index']] = result
-
-        # 为每个新闻项分配分数
-        for i, item in enumerate(items, 1):
-            if i in index_map:
-                result = index_map[i]
-                item.ai_score = result.get('total', result.get('score', 5.0))
-            else:
-                # 没有匹配到分数，使用默认
-                logger.warning(f"Pass1: 新闻{i}没有匹配到分数，使用默认5.0")
-                item.ai_score = 5.0
-            scored_items.append(item)
-
-        return scored_items
-
-    async def _score_single_fallback(
-        self,
-        item: NewsItem,
-        category: str
-    ) -> NewsItem:
-        """
-        单条评分降级处理
-
-        Args:
-            item: 新闻项
-            category: 新闻分类
-
-        Returns:
-            NewsItem: 添加了ai_score的新闻项
-        """
-        # 构建单条Prompt
-        prompt_template = self.prompt_builder.build_pass1_prompt(category)
-        prompt = prompt_template.format(
-            title=item.title,
-            source=item.source,
-            summary=item.summary[:200] if item.summary else ''
-        )
-
-        # 调用单条API
-        content = await self.provider_manager.call_single_scoring_api(
-            prompt=prompt,
-            max_tokens=500,
-            temperature=self.provider_manager.current_config.temperature
-        )
-
-        # 解析响应
-        import json
-        try:
-            result = json.loads(content)
-            item.ai_score = result.get('total', result.get('score', 5.0))
-        except (json.JSONDecodeError, TypeError) as e:
-            logger.warning(f"单条评分解析失败: {e}，使用默认分数5.0")
-            item.ai_score = 5.0
-
-        return item
     
     def _log_pass1_results(
         self,
         categorized: dict,
-        passed_items: List[NewsItem]
+        passed_items: List[NewsItem],
+        retry_count: int = 0
     ):
-        """记录Pass1结果日志（增强版）"""
+        """记录Pass1结果日志（增强版 - AI智能分类）"""
         total_input = sum(len(items) for items in categorized.values())
         total_passed = len(passed_items)
-        
-        logger.info(f"🎯 Pass 1 差异化预筛完成:")
+
+        logger.info(f"🎯 Pass 1 AI智能分类预筛完成:")
         logger.info(f"   输入: {total_input}条新闻")
-        
+
         # 记录各板块详细信息
         category_stats = {}
         for category, items in categorized.items():
             if items:
                 passed_count = sum(
-                    1 for item in passed_items 
+                    1 for item in passed_items
                     if getattr(item, 'pre_category', '') == category
                 )
                 threshold = self._get_pass1_threshold(category)
-                
+
                 # 计算平均分数
                 if passed_count > 0:
                     avg_score = sum(
-                        item.ai_score for item in passed_items 
+                        item.ai_score for item in passed_items
                         if getattr(item, 'pre_category', '') == category
                     ) / passed_count
                 else:
                     avg_score = 0.0
-                
+
                 # 计算通过率
                 pass_rate = (passed_count / len(items) * 100) if items else 0
-                
+
+                # 计算平均置信度
+                cat_all_items = [item for item in items if hasattr(item, 'pre_category_confidence')]
+                if cat_all_items:
+                    avg_confidence = sum(
+                        getattr(item, 'pre_category_confidence', 0.5) for item in cat_all_items
+                    ) / len(cat_all_items)
+                else:
+                    avg_confidence = 0.0
+
                 category_stats[category] = {
                     'input': len(items),
                     'passed': passed_count,
                     'threshold': threshold,
                     'avg_score': avg_score,
-                    'pass_rate': pass_rate
+                    'pass_rate': pass_rate,
+                    'avg_confidence': avg_confidence
                 }
-                
+
                 logger.info(
                     f"   {category}: {len(items)}条 → {passed_count}条通过 "
-                    f"(阈值≥{threshold}, 通过率{pass_rate:.1f}%, 均分{avg_score:.2f})"
+                    f"(阈值≥{threshold}, 通过率{pass_rate:.1f}%, 均分{avg_score:.2f}, 平均置信度{avg_confidence:.2f})"
                 )
-        
+
         # 记录配额信息
         quota_info = {
             '财经': self.category_quota_finance,
@@ -771,23 +901,100 @@ class AIScorer:
             '社会政治': self.category_quota_politics
         }
         logger.info(f"   板块配额: {quota_info}")
-        
+
+        # 记录重分类统计
+        if retry_count > 0:
+            logger.info(f"   重分类: {retry_count}次重试")
+
+        # 记录置信度分布
+        all_confidences = [getattr(item, 'pre_category_confidence', 0.5) for item in passed_items]
+        if all_confidences:
+            high_conf = sum(1 for c in all_confidences if c >= 0.8)
+            medium_conf = sum(1 for c in all_confidences if 0.6 <= c < 0.8)
+            low_conf = sum(1 for c in all_confidences if c < 0.6)
+            logger.info(f"   置信度分布: 高({high_conf}) 中({medium_conf}) 低({low_conf})")
+
         # 记录阈值调整历史
         if self.threshold_adjustment_history:
             recent_adjustments = self.threshold_adjustment_history[-5:]  # 最近5次
             logger.debug(f"   阈值调整: {len(recent_adjustments)}次调整")
-        
+
         logger.info(
             f"   总计: {total_passed}/{total_input}条通过 "
             f"(上限{self.pass1_max_items}条)"
         )
+
+    # ==================== Pass2 分类特定总结优化 ====================
+
+    def _standardize_category(self, category: str) -> str:
+        """
+        标准化新闻分类
+
+        将各种分类名称映射到三大类：'财经', '科技', '社会政治'
+        使用关键词匹配进行标准化
+
+        Args:
+            category: 原始分类名称（可能来源ai_category、pre_category或category）
+
+        Returns:
+            str: 标准化的分类名称
+        """
+        if not category:
+            return '未分类'
+
+        category_lower = str(category).lower()
+
+        # 财经类关键词列表
+        finance_keywords = [
+            '财经', 'finance', '经济', 'economy', '投资', 'investment',
+            '股票', 'stock', '市场', 'market', '金融', 'financial',
+            '银行', 'bank', '基金', 'fund', '债券', 'bond',
+            '货币', 'currency', '贸易', 'trade', '企业', 'company'
+        ]
+
+        # 科技类关键词列表
+        tech_keywords = [
+            '科技', 'tech', 'technology', '技术', 'ai', '人工智能',
+            'artificial intelligence', '创新', 'innovation', '芯片',
+            'semiconductor', '软件', 'software', '互联网', 'internet',
+            '云计算', 'cloud', '大数据', 'big data', '区块链', 'blockchain',
+            '5g', '6g', '物联网', 'iot', '机器人', 'robot',
+            '自动驾驶', 'autonomous', '虚拟现实', 'vr', '增强现实', 'ar'
+        ]
+
+        # 社会政治类关键词列表
+        politics_keywords = [
+            '政治', 'politics', '社会', 'society', '政策', 'policy',
+            '国际', 'international', '外交', 'diplomacy', '时事',
+            'current affairs', '民生', 'livelihood', '法律', 'law',
+            '监管', 'regulation', '政府', 'government', '选举',
+            'election', '战争', 'war', '冲突', 'conflict', '疫情',
+            'pandemic', '环保', 'environment', '教育', 'education',
+            '医疗', 'healthcare', '交通', 'transportation'
+        ]
+
+        # 检查分类名称中是否包含关键词
+        for keyword in finance_keywords:
+            if keyword in category_lower:
+                return '财经'
+
+        for keyword in tech_keywords:
+            if keyword in category_lower:
+                return '科技'
+
+        for keyword in politics_keywords:
+            if keyword in category_lower:
+                return '社会政治'
+
+        # 如果无法识别，返回原分类名称或默认值
+        return category
     
-    async def _pass2_deep_analysis(
+    async def _pass2_scoring(
         self,
         items: List[NewsItem]
     ) -> List[NewsItem]:
         """
-        Pass 2: 深度分析
+        Pass 2: 评分
 
         对预筛通过的新闻进行完整的5维度评分
 
@@ -800,22 +1007,23 @@ class AIScorer:
         try:
             # 根据配置选择批处理模式
             if self.use_true_batch and len(items) > self.true_batch_size:
-                return await self._pass2_deep_analysis_true_batch(items)
+                return await self._pass2_scoring_true_batch(items)
             else:
-                return await self._pass2_deep_analysis_batch(items)
+                return await self._pass2_scoring_batch(items)
 
         except Exception as e:
-            ErrorHandler.log_error("Pass2深度分析", e, logger)
+            ErrorHandler.log_error("Pass2评分", e, logger)
             return ErrorHandler.apply_batch_defaults(items, 'parse_failed')
 
-    async def _pass2_deep_analysis_true_batch(
+    async def _pass2_scoring_true_batch(
         self,
         items: List[NewsItem]
     ) -> List[NewsItem]:
         """
-        Pass 2: 深度分析 - 真批处理模式
+        Pass 2: 评分 - 真批处理模式
 
         使用真批处理（一次API调用处理多条）
+        使用分类特定的总结Prompt，根据新闻分类动态选择总结模板
 
         Args:
             items: 通过预筛的新闻项列表
@@ -825,11 +1033,19 @@ class AIScorer:
         """
         logger.info(
             f"🎯 Pass2 真批处理模式: {len(items)} 条新闻 "
-            f"(batch_size={self.true_batch_size})"
+            f"(batch_size={self.true_batch_size}, 使用分类特定总结)"
         )
 
-        # 构建Prompt
-        prompt = self.prompt_builder.build_scoring_prompt(items)
+        # 构建分类映射
+        category_map = {}
+        for i, item in enumerate(items, 1):
+            category = item.ai_category or item.pre_category or item.category
+            standardized_category = self._standardize_category(category)
+            category_map[i] = standardized_category
+            logger.debug(f"新闻{i}分类: {category} -> {standardized_category}")
+
+        # 构建分类特定的Pass2 Prompt
+        prompt = self.prompt_builder.build_pass2_scoring_prompt(items, category_map)
 
         # 使用真批处理执行（支持并行和超时控制）
         results, api_call_count = (
@@ -882,18 +1098,18 @@ class AIScorer:
                             item.ai_score = 5.0
                             all_parsed_results.append(item)
 
-            logger.info(f"✅ Pass2深度分析(真批处理)完成: {total_items_parsed}/{len(items)} 条")
+            logger.info(f"✅ Pass2评分(真批处理)完成: {total_items_parsed}/{len(items)} 条")
             return all_parsed_results if all_parsed_results else items
         else:
             logger.warning("所有批次都失败，使用默认分数")
             return ErrorHandler.apply_batch_defaults(items, 'parse_failed')
 
-    async def _pass2_deep_analysis_batch(
+    async def _pass2_scoring_batch(
         self,
         items: List[NewsItem]
     ) -> List[NewsItem]:
         """
-        Pass 2: 深度分析 - 普通批处理模式
+        Pass 2: 评分 - 普通批处理模式
 
         Args:
             items: 通过预筛的新闻项列表
@@ -906,7 +1122,7 @@ class AIScorer:
 
         # 2. 调用API（带回退）
         content = await self.provider_manager.execute_with_fallback(
-            "Pass2深度分析",
+            "Pass2评分",
             self._execute_scoring,
             prompt,
             items
@@ -919,8 +1135,84 @@ class AIScorer:
             None  # 使用AI返回的total_score
         )
 
-        logger.info(f"Pass 2 深度分析完成: {len(results)} 条")
+        logger.info(f"Pass 2 评分完成: {len(results)} 条")
         return results
+
+    async def _pass2_single_item_with_category_summary(
+        self,
+        item: NewsItem
+    ) -> NewsItem:
+        """
+        Pass 2: 对单条新闻进行分类特定的深度总结
+
+        使用分类特定的总结Prompt生成差异化的中文总结
+
+        Args:
+            item: 新闻项
+
+        Returns:
+            NewsItem: 添加了分类特定总结的新闻项
+        """
+        try:
+            # 1. 获取并标准化分类
+            category = item.ai_category or item.pre_category or item.category
+            standardized_category = self._standardize_category(category)
+
+            logger.debug(f"Pass2单条总结: {item.title[:50]}... 分类: {standardized_category}")
+
+            # 2. 构建分类特定Prompt
+            prompt = self.prompt_builder.build_category_specific_summary_prompt(
+                item,
+                standardized_category
+            )
+
+            # 3. 调用API
+            content = await self.provider_manager.call_single_scoring_api(
+                prompt=prompt,
+                max_tokens=1000,
+                temperature=self.provider_manager.current_config.temperature
+            )
+
+            # 4. 解析响应
+            import json
+            try:
+                result = json.loads(content)
+                # 更新新闻项的总结信息
+                if 'chinese_summary' in result:
+                    item.ai_summary = result['chinese_summary']
+                if 'key_points' in result:
+                    item.ai_key_points = result['key_points']
+                if 'impact_forecast' in result:
+                    item.ai_impact_forecast = result['impact_forecast']
+
+                logger.debug(f"✅ Pass2单条总结成功: {item.title[:30]}...")
+            except (json.JSONDecodeError, TypeError) as e:
+                logger.warning(f"单条总结解析失败: {e}")
+                # 使用通用Prompt作为回退
+                fallback_prompt = self.prompt_builder.build_category_specific_summary_prompt(
+                    item,
+                    '未分类'
+                )
+                fallback_content = await self.provider_manager.call_single_scoring_api(
+                    prompt=fallback_prompt,
+                    max_tokens=1000,
+                    temperature=self.provider_manager.current_config.temperature
+                )
+                try:
+                    fallback_result = json.loads(fallback_content)
+                    if 'chinese_summary' in fallback_result:
+                        item.ai_summary = fallback_result['chinese_summary']
+                    if 'key_points' in fallback_result:
+                        item.ai_key_points = fallback_result['key_points']
+                    if 'impact_forecast' in fallback_result:
+                        item.ai_impact_forecast = fallback_result['impact_forecast']
+                except Exception:
+                    pass
+
+        except Exception as e:
+            ErrorHandler.log_error(f"Pass2单条总结: {item.title[:30]}", e, logger)
+
+        return item
     
     # ==================== 统计和工具方法 ====================
     

@@ -287,34 +287,6 @@ class ProviderManager:
             is_json=True
         )
     
-    async def call_deep_analysis_api(
-        self,
-        prompt: str,
-        max_tokens: int = 10000,
-        temperature: float = 0.3
-    ) -> str:
-        """
-        调用深度分析API
-        
-        Args:
-            prompt: 深度分析Prompt
-            max_tokens: 最大生成token数
-            temperature: 温度参数
-            
-        Returns:
-            str: AI生成的响应内容
-        """
-        return await self.call_api(
-            prompt=prompt,
-            max_tokens=max_tokens,
-            temperature=temperature,
-            system_message=(
-                "你是一位资深新闻分析师，擅长多维度深度分析。"
-                "你必须严格返回JSON数组格式，不要添加任何其他文字。"
-            ),
-            is_json=True
-        )
-    
     async def call_single_scoring_api(
         self,
         prompt: str,
