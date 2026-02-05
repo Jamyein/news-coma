@@ -2,10 +2,10 @@
 AdaptivePass1Pipeline - Main pipeline integrating all adaptive components
 
 Integrates 5 completed components:
-- SafeRateLimiter: Concurrency control via Semaphore
+- SafeRateLimiter: Concurrency control via Semaphore with static rate limiting from config.yaml
 - AdaptiveNewsClassifier: Intelligent classification with confidence scoring
 - AdaptiveBatchProcessor: Dynamic batching based on similarity and success history
-- AdaptiveRateLimiter: Adaptive rate limiting with PID control
+- SimpleRateLimiter: Static rate limiting using rate_limit_rpm from config.yaml
 - Retry strategy: Exponential backoff
 
 Implements 4-layer processing architecture:
@@ -24,7 +24,7 @@ from dataclasses import dataclass, field
 from src.models import NewsItem, AIConfig
 from .adaptive_classifier import AdaptiveNewsClassifier
 from .adaptive_batcher import AdaptiveBatchProcessor, BatchContext
-from .rate_limiter import SafeRateLimiter, AdaptiveRateLimiter
+from .rate_limiter import SafeRateLimiter, SimpleRateLimiter
 
 logger = logging.getLogger(__name__)
 
@@ -38,7 +38,7 @@ class PipelineStats:
     l3_after_quota: int = 0
     final_output: int = 0
     api_calls: int = 0
-    total_duration_ms: float = = 0.0
+    total_duration_ms: float = 0.0
     by_category: Dict[str, Dict] = field(default_factory=dict)
     batch_stats: Dict[str, Any] = field(default_factory=dict)
     rate_limiter_stats: Dict[str, Any] = field(default_factory=dict)
@@ -89,18 +89,14 @@ class AdaptivePass1Pipeline:
             target_success_rate=0.85,
             history_window=50
         )
+        # Get rate limit from config (static configuration from config.yaml)
+        rate_limit_rpm = self._get_rate_limit_rpm_from_config()
+        
         self.safe_rate_limiter = SafeRateLimiter(
-            max_requests=60,
+            max_requests=rate_limit_rpm,
             time_window=60.0,
             timeout=120.0,
             max_concurrent=self.max_concurrent
-        )
-        self.adaptive_rate_limiter = AdaptiveRateLimiter(
-            max_requests=60,
-            time_window=60.0,
-            target_success_rate=0.90,
-            min_rate=5,
-            max_rate=100
         )
         self.retry_attempts = self.DEFAULT_RETRY_ATTEMPTS
         self.retry_delay = self.DEFAULT_RETRY_DELAY
@@ -219,8 +215,6 @@ class AdaptivePass1Pipeline:
     
     async def _process_batch(self, batch: List[NewsItem], category: str, api_call_func: Optional[Callable]) -> List[NewsItem]:
         """Process single batch with rate limiting"""
-        context = {'priority': 0.7, 'load': 0.5, 'provider': 'default'}
-        await self.adaptive_rate_limiter.acquire_with_context(context)
         await self.safe_rate_limiter.acquire()
         
         try:
@@ -330,21 +324,24 @@ class AdaptivePass1Pipeline:
         )
         return sorted_items[:self.max_items]
     
+    def _get_rate_limit_rpm_from_config(self) -> int:
+        """
+        从配置中获取速率限制 (RPM)
+        优先从当前提供商配置中读取 rate_limit_rpm
+        """
+        if not self.config:
+            return 60  # 默认值
+        
+        # 从当前提供商配置中获取
+        provider_config = self.config.providers_config.get(self.config.provider)
+        if provider_config and provider_config.rate_limit_rpm:
+            return provider_config.rate_limit_rpm
+        
+        return 60  # 默认 60 RPM
+    
     def _save_pipeline_history(self):
-        """Save pipeline history"""
-        history_entry = {
-            'timestamp': datetime.now().isoformat(),
-            'stats': {
-                'total_input': = self._stats.total_input,
-                'l1_screened': self._stats.l1_screened,
-                'l2_processed': self._stats.l2_processed,
-                'l3_after_quota': self._stats.l3_after_quota,
-                'final_output': self._stats.final_output,
-                'api_calls': self._stats.api_calls,
-                'total_duration_ms': self._stats.total_duration_ms
-            }
-        }
-        self._pipeline_history.append(history_entry)
+        """Save pipeline run history for analytics"""
+        # Keep last 100 runs in memory
         if len(self._pipeline_history) > 100:
             self._pipeline_history = self._pipeline_history[-100:]
     
@@ -362,7 +359,7 @@ class AdaptivePass1Pipeline:
             },
             'classifier_stats': self.classifier.get_stats(),
             'batch_processor_stats': self.batch_processor.get_stats(),
-            'adaptive_rate_limiter_stats': self.adaptive_rate_limiter.get_stats(),
+            'safe_rate_limiter_stats': self.safe_rate_limiter.get_stats() if hasattr(self.safe_rate_limiter, 'get_stats') else {},
             'thresholds': self.thresholds,
             'quotas': self.quotas,
             'history_count': len(self._pipeline_history)
@@ -379,7 +376,6 @@ class AdaptivePass1Pipeline:
         self.classifier.reset_stats()
         self.batch_processor.reset_stats()
         self.safe_rate_limiter.reset()
-        self.adaptive_rate_limiter.reset()
     
     def update_threshold(self, category: str, new_threshold: float):
         """Update category threshold"""
