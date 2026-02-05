@@ -5,8 +5,8 @@
     <link>https://github.com/Jamyein/news-coma</link>
     <description>由 AI 筛选的高质量科技新闻聚合，每6小时自动更新</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 05 Feb 2026 01:41:41 GMT</lastBuildDate>
-    <pubDate>Thu, 05 Feb 2026 01:41:41 GMT</pubDate>
+    <lastBuildDate>Thu, 05 Feb 2026 12:46:15 GMT</lastBuildDate>
+    <pubDate>Thu, 05 Feb 2026 12:46:15 GMT</pubDate>
     <atom:link href="https://Jamyein.github.io/news-coma/feed.xml" rel="self" type="application/rss+xml" />
     <image>
         <url>https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</url>
@@ -17,418 +17,140 @@
     <item>
         <title>2026年02月05日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-05.md</link>
-        <description>本期精选 21 条高质量科技新闻</description>
-        <pubDate>Thu, 05 Feb 2026 01:41:41 GMT</pubDate>
+        <description>本期精选 11 条高质量科技新闻</description>
+        <pubDate>Thu, 05 Feb 2026 12:46:15 GMT</pubDate>
         <guid>archive/2026-02-05.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<p># 📰 新闻精选</p>
-<p>> 🕐 更新时间: 2026年02月05日 09:41 > 📊 本期精选 <strong>21</strong> 条高质量新闻 > 🤖 由 AI 自动分类、筛选、翻译和总结</p>
+<p>> 🕐 更新时间: 2026年02月05日 20:46 > 📊 本期精选 <strong>11</strong> 条高质量新闻 > 🤖 由 AI 自动分类、筛选、翻译和总结</p>
 <hr/>
-<p>## 💰 财经新闻 (12条)</p>
-<p>精选 <strong>12</strong> 条财经新闻</p>
-<h3>1. 新兴市场能否持续其明星表现？</h3>
-<p><strong>📌 来源</strong>: The Economist | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
-<p><strong>📝 摘要</strong>: 本文探讨了新兴市场持续增长的动力，指出除了“卖出美国”之外，还有更多因素在推动新兴市场的表现。</p>
+<p>## 💰 财经新闻 (8条)</p>
+<p>精选 <strong>8</strong> 条财经新闻</p>
+<h3>1. 港交所1月首次公开招股集资金额达393亿港元，同比上升555%</h3>
+<p><strong>📌 来源</strong>: BBC Business | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.9/10</p>
+<p><strong>📝 摘要</strong>: 香港交易所1月份的首次公开招股集资金额大幅上升，显示出市场对香港证券市场的信心。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>新兴市场增长动力</li>
-<li>国际财经趋势</li>
-<li>市场分析</li>
+<li>港交所</li>
+<li>首次公开招股</li>
+<li>集资金额上升</li>
 </ul>
-<strong>🔗 原文链接</strong>: <a href="https://www.economist.com/finance-and-economics/2026/02/04/can-emerging-markets-stellar-run-continue">Can emerging markets’ stellar run continue?</a>
+<strong>🔗 原文链接</strong>: <a href="https://www.bbc.com/news/articles/cn42k0n40x8o?at_medium=RSS&at_campaign=rss">'My bills are lower and I'm warmer in energy efficient home'</a>
 <hr/>
-<h3>2. 谷歌电话会议：1850亿支出“不得不花”，确认与苹果合作，Gemini并非SaaS的“终结者”</h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: Alphabet在财报电话会议上强调AI投资的重要性，并确认与苹果的合作，同时反驳了AI将终结SaaS行业的观点。</p>
+<h3>2. 美国1月挑战者企业裁员人数达10.8万人，创2009年以来同期最高</h3>
+<p><strong>📌 来源</strong>: WSJ 经济 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.9/10</p>
+<p><strong>📝 摘要</strong>: 美国1月份的裁员人数达到10.8万人，这是自2009年以来最高的一次，反映了当前经济形势的严峻。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>谷歌AI战略</li>
-<li>市场投资</li>
-<li>行业分析</li>
+<li>美国裁员人数</li>
+<li>2009年以来最高</li>
+<li>经济形势严峻</li>
 </ul>
-<p><strong>🔍 深度分析</strong>:</p>
-<ul>
-<li><strong>核心观点</strong>: 谷歌加大AI投资，与苹果合作，Gemini非SaaS终结者。</li>
-<li><strong>关键论据</strong>: ['1850亿支出', '与苹果合作', 'Gemini非SaaS终结者']</li>
-<li><strong>影响预测</strong>: AI投资增加，行业竞争加剧，SaaS行业影响有限。</li>
-<li><strong>情感倾向</strong>: positive</li>
-<li><strong>可信度评分</strong>: 7.0/10</li>
-<li><strong>分析时间</strong>: 2026-02-05T01:41:41.798098Z</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765004">谷歌电话会：1850亿支出“不得不花”，确认与苹果合作，Gemini并非SaaS的“终结者”</a>
+<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/business/earnings/tapestry-boosts-outlook-as-coach-sales-surge-6e7d44b9?mod=pls_whats_news_us_business_f">Tapestry Boosts Outlook as Coach Sales Surge</a>
 <hr/>
-<h3>3. 英伟达投资的AI语音初创公司ElevenLabs完成新一轮融资</h3>
-<p><strong>📌 来源</strong>: 36氪 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: AI初创公司ElevenLabs宣布完成5亿美元融资，估值达110亿美元。</p>
+<h3>3. 美国1月裁员人数达10.8万，创2009年以来最高</h3>
+<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 美国1月企业裁员人数达到10.8万人，为2009年以来同期最高，反映出当前就业市场的紧张状况。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>AI初创公司</li>
-<li>融资消息</li>
-<li>市场分析</li>
+<li>美国企业裁员</li>
+<li>创2009年以来最高</li>
+<li>就业市场紧张</li>
 </ul>
-<p><strong>🔍 深度分析</strong>:</p>
-<ul>
-<li><strong>核心观点</strong>: ElevenLabs完成5亿美元融资，估值110亿美元。</li>
-<li><strong>关键论据</strong>: ['5亿美元融资', '110亿美元估值']</li>
-<li><strong>影响预测</strong>: AI语音领域融资活跃，ElevenLabs发展迅速。</li>
-<li><strong>情感倾向</strong>: positive</li>
-<li><strong>可信度评分</strong>: 7.0/10</li>
-<li><strong>分析时间</strong>: 2026-02-05T01:41:41.798108Z</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3669680249856642?f=rss">英伟达投资的AI语音初创公司ElevenLabs完成新一轮融资</a>
+<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/powell-probe-will-get-resolved-clearing-the-way-for-warshs-confirmation-key-republican-senator-says-a4dd0169?mod=mw_rss_topstories">Powell probe by Trump DOJ will be resolved, clearing the way for Warsh’s confirmation, Senate Republican says</a>
 <hr/>
-<h3>4. 谷歌全力押注AI：Q4云收入猛增48%，今年支出指引接近翻倍大超预期，盘后巨震</h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: 谷歌母公司Alphabet在最新财报中显示出全力押注AI的决心，资本支出指引达到惊人水平。</p>
+<h3>4. 港交所1月首次公开招股集资金额同比上升555%</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 香港交易所1月首次公开招股集资金额达393亿港元，同比上升555%，显示出市场活跃度提升。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>谷歌财报</li>
-<li>AI投资</li>
-<li>市场分析</li>
+<li>港交所</li>
+<li>首次公开招股</li>
+<li>集资金额上升</li>
 </ul>
-<p><strong>🔍 深度分析</strong>:</p>
-<ul>
-<li><strong>核心观点</strong>: 谷歌Q4云收入增长48%，AI投资增加。</li>
-<li><strong>关键论据</strong>: ['Q4云收入增长48%', 'AI投资增加']</li>
-<li><strong>影响预测</strong>: 谷歌全力押注AI，云服务市场竞争加剧。</li>
-<li><strong>情感倾向</strong>: positive</li>
-<li><strong>可信度评分</strong>: 7.0/10</li>
-<li><strong>分析时间</strong>: 2026-02-05T01:41:41.798112Z</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3764994">谷歌All in AI：Q4云收入猛增48%，今年支出指引接近翻倍大超预期，盘后巨震 | 财报见闻</a>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765076">华尔街点评谷歌财报：“逆天”资本开支指引下，利润率成最大担忧</a>
 <hr/>
-<h3>5. 谷歌计划将AI支出翻倍至1850亿美元</h3>
-<p><strong>📌 来源</strong>: Financial Times | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: 谷歌母公司Alphabet报告年度收入首次超过4000亿美元，并计划将AI支出增加一倍。</p>
+<h3>5. 美国1月挑战者企业裁员人数达10.8万人，创2009年以来同期最高</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 美国1月份企业裁员人数达到10.8万人，为2009年以来同期最高，反映了就业市场的紧张局势。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>谷歌财报</li>
-<li>AI投资</li>
-<li>市场分析</li>
+<li>美国裁员人数</li>
+<li>挑战者企业</li>
+<li>2009年以来最高</li>
+<li>就业市场紧张</li>
 </ul>
-<p><strong>🔍 深度分析</strong>:</p>
-<ul>
-<li><strong>核心观点</strong>: 谷歌母公司Alphabet收入首次超4000亿美元，AI支出增加一倍。</li>
-<li><strong>关键论据</strong>: ['4000亿美元收入', 'AI支出增加一倍']</li>
-<li><strong>影响预测</strong>: 谷歌母公司业绩强劲，AI投资成为重点。</li>
-<li><strong>情感倾向</strong>: positive</li>
-<li><strong>可信度评分</strong>: 7.0/10</li>
-<li><strong>分析时间</strong>: 2026-02-05T01:41:41.798114Z</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/22d97d8e-1101-4b1b-8a28-66054dfa363a">Google set to double AI spending to $185bn after strong earnings</a>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3670390087295881?f=rss">CHALLENGER报告显示美国企业1月裁员10.8万人，创2009年以来同期最高</a>
 <hr/>
-<h3>6. 比特币连续两天下跌，几乎触及7.2万美元</h3>
-<p><strong>📌 来源</strong>: CNBC | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: 比特币价格下跌至7.2万美元以下，连续两天跌破7.3万美元大关。</p>
+<h3>6. 港交所1月首次公开招股集资金额为393亿港元，同比上升555%</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 香港交易所1月份首次公开招股集资金额大幅上升，显示出市场对香港资本市场的信心。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>比特币价格</li>
-<li>加密货币市场</li>
-<li>投资分析</li>
+<li>港交所</li>
+<li>首次公开招股</li>
+<li>集资金额上升</li>
+<li>市场信心</li>
 </ul>
-<p><strong>🔍 深度分析</strong>:</p>
-<ul>
-<li><strong>核心观点</strong>: 比特币价格下跌，连续两天跌破7.3万美元。</li>
-<li><strong>关键论据</strong>: ['比特币价格下跌', '连续两天跌破7.3万美元']</li>
-<li><strong>影响预测</strong>: 加密市场波动，投资者信心受影响。</li>
-<li><strong>情感倾向</strong>: negative</li>
-<li><strong>可信度评分</strong>: 7.0/10</li>
-<li><strong>分析时间</strong>: 2026-02-05T01:41:41.798117Z</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://www.cnbc.com/2026/02/04/bitcoin-bleeds-for-second-straight-day-nearly-grazes-72000.html">Bitcoin bleeds for second straight day, nearly grazes $72,000</a>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3670388874453641?f=rss">港交所：1月首次公开招股集资金额为393亿港元，同比上升555%</a>
 <hr/>
-<h3>7. E.l.f. Beauty的乐观预测显示化妆品需求强劲</h3>
-<p><strong>📌 来源</strong>: MarketWatch | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 6.5/10</p>
-<p><strong>📝 摘要</strong>: E.l.f. Beauty的股价在提高销售和利润预测后上涨，化妆品需求持续增长。</p>
+<h3>7. 港交所1月首次公开招股集资金额同比上升555%</h3>
+<p><strong>📌 来源</strong>: WSJ 市场 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 香港交易所1月首次公开招股集资金额达到393亿港元，同比上升555%，显示出市场活跃度提升。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>化妆品市场</li>
-<li>公司业绩</li>
-<li>投资分析</li>
+<li>港交所</li>
+<li>首次公开招股</li>
+<li>集资金额上升</li>
 </ul>
-<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/e-l-f-beautys-more-upbeat-outlook-shows-demand-for-cosmetics-is-still-growing-0459cd41?mod=mw_rss_topstories">E.l.f. Beauty’s upbeat forecast shows cosmetics demand and Hailey Bieber’s ‘clean’ look are still going strong</a>
+<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/finance/currencies/yen-consolidates-amid-risks-of-japans-verbal-intervention-f3a32df4?mod=rss_markets_main">Dollar Lifted by Tech Selloff, Metals Volatility</a>
 <hr/>
-<h3>8. 特朗普：如果沃什敢加息就不可能获提名，他知道我想降息</h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 6.5/10</p>
-<p><strong>📝 摘要</strong>: 美国总统特朗普公开表示，如果其美联储主席提名人选沃什表达加息意愿，他根本不会获得提名。</p>
+<h3>8. 美国1月裁员人数达10.8万，创2009年以来同期最高</h3>
+<p><strong>📌 来源</strong>: WSJ 经济 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 美国1月挑战者企业裁员人数达到10.8万人，为2009年以来同期最高，反映出就业市场的紧张。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>政治经济</li>
-<li>美联储政策</li>
-<li>市场分析</li>
+<li>美国裁员人数</li>
+<li>2009年以来最高</li>
+<li>就业市场紧张</li>
 </ul>
-<p><strong>🔍 深度分析</strong>:</p>
-<ul>
-<li><strong>核心观点</strong>: 特朗普表示，若沃什加息则不会获提名。</li>
-<li><strong>关键论据</strong>: ['特朗普表示加息则不提名']</li>
-<li><strong>影响预测</strong>: 美联储加息政策可能受政治影响。</li>
-<li><strong>情感倾向</strong>: neutral</li>
-<li><strong>可信度评分</strong>: 6.5/10</li>
-<li><strong>分析时间</strong>: 2026-02-05T01:41:41.798120Z</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765007">特朗普：沃什敢加息就不可能获提名，他知道我想降息</a>
+<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/business/retail/estee-lauder-lifts-outlook-warns-of-tariff-impact-62459669?mod=pls_whats_news_us_business_f">Estee Lauder Lifts Outlook, Warns of Tariff Impact</a>
 <hr/>
-<h3>9. 中信证券：低轨通信卫星链是商业航天产业中最先有基本面逻辑和订单支持的细分领域</h3>
-<p><strong>📌 来源</strong>: 36氪 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 6.5/10</p>
-<p><strong>📝 摘要</strong>: 中信证券研报表示，低轨通信卫星链是最先有基本面逻辑和订单支持的细分领域。</p>
+<p>## 🔬 科技新闻 (3条)</p>
+<p>精选 <strong>3</strong> 条科技新闻</p>
+<h3>9. 谷歌订阅用户增长，YouTube年营收达600亿美元</h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 谷歌报告称，其订阅用户数量增长，YouTube年营收达到600亿美元。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>商业航天</li>
-<li>卫星产业</li>
-<li>市场分析</li>
+<li>谷歌</li>
+<li>订阅用户</li>
+<li>YouTube</li>
+<li>营收增长</li>
 </ul>
-<p><strong>🔍 深度分析</strong>:</p>
-<ul>
-<li><strong>核心观点</strong>: 中信证券认为低轨通信卫星链是商业航天产业先有基本面逻辑和订单支持的细分领域。</li>
-<li><strong>关键论据</strong>: ['低轨通信卫星链', '商业航天产业', '基本面逻辑和订单支持']</li>
-<li><strong>影响预测</strong>: 商业航天产业迎来发展机遇，低轨通信卫星链受关注。</li>
-<li><strong>情感倾向</strong>: positive</li>
-<li><strong>可信度评分</strong>: 6.5/10</li>
-<li><strong>分析时间</strong>: 2026-02-05T01:41:41.798122Z</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3669706102743683?f=rss">中信证券：低轨通信卫星链是商业航天产业中最先有基本面逻辑和订单支持的细分领域</a>
+<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/05/googles-subscriptions-rise-in-q4-as-youtube-pulls-60b-in-yearly-revenue/">Google’s subscriptions rise in Q4 as YouTube pulls $60B in yearly revenue</a>
 <hr/>
-<h3>10. 比特币一度跌破7万2，币圈信仰还有多少？</h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 6.5/10</p>
-<p><strong>📝 摘要</strong>: 比特币跌破7.2万美元关口，把加密市场的“信仰”问题推到台前。</p>
+<h3>10. 谷歌订阅用户增长，YouTube年营收达600亿美元</h3>
+<p><strong>📌 来源</strong>: WSJ 经济 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.2/10</p>
+<p><strong>📝 摘要</strong>: 谷歌订阅用户数量增长，YouTube年营收达到600亿美元。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>比特币价格</li>
-<li>加密货币市场</li>
-<li>投资分析</li>
+<li>谷歌订阅用户</li>
+<li>YouTube营收</li>
+<li>增长</li>
 </ul>
-<p><strong>🔍 深度分析</strong>:</p>
-<ul>
-<li><strong>核心观点</strong>: 比特币跌破7.2万美元，加密市场信仰受考验。</li>
-<li><strong>关键论据</strong>: ['比特币跌破7.2万美元', '加密市场信仰受考验']</li>
-<li><strong>影响预测</strong>: 加密市场信心受挫，投资者情绪波动。</li>
-<li><strong>情感倾向</strong>: negative</li>
-<li><strong>可信度评分</strong>: 6.5/10</li>
-<li><strong>分析时间</strong>: 2026-02-05T01:41:41.798130Z</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3764999">比特币一度跌破7万2，币圈信仰还有多少？</a>
+<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/business/earnings/hershey-profit-dragged-down-by-tariffs-cocoa-costs-996814d4?mod=pls_whats_news_us_business_f">Hershey Profit Dragged Down by Tariffs, Cocoa Costs</a>
 <hr/>
-<h3>11. 中信证券：建议关注成本转嫁能力强、产品结构优、全球化布局领先的整车企业</h3>
-<p><strong>📌 来源</strong>: 36氪 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 6.5/10</p>
-<p><strong>📝 摘要</strong>: 中信证券研报表示，建议关注成本转嫁能力强、产品结构优、全球化布局领先的整车企业。</p>
+<h3>11. 谷歌订阅用户增长，YouTube年营收达600亿美元</h3>
+<p><strong>📌 来源</strong>: WSJ 经济 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.0/10</p>
+<p><strong>📝 摘要</strong>: 谷歌订阅用户增长至3.25亿，YouTube年营收达600亿美元。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>汽车行业</li>
-<li>投资分析</li>
-<li>市场分析</li>
+<li>谷歌订阅用户</li>
+<li>YouTube营收</li>
+<li>增长</li>
 </ul>
-<p><strong>🔍 深度分析</strong>:</p>
-<ul>
-<li><strong>核心观点</strong>: 中信证券建议关注成本转嫁能力强、产品结构优、全球化布局领先的整车企业。</li>
-<li><strong>关键论据</strong>: ['成本转嫁能力强', '产品结构优', '全球化布局领先', '整车企业']</li>
-<li><strong>影响预测</strong>: 汽车行业面临成本压力，优质企业受关注。</li>
-<li><strong>情感倾向</strong>: neutral</li>
-<li><strong>可信度评分</strong>: 6.5/10</li>
-<li><strong>分析时间</strong>: 2026-02-05T01:41:41.798134Z</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3669685777245065?f=rss">中信证券：建议关注成本转嫁能力强、产品结构优、全球化布局领先的整车企业</a>
-<hr/>
-<h3>12. 银河证券：AI带来的收益主要体现在两条更容易被数据验证的路径</h3>
-<p><strong>📌 来源</strong>: 36氪 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 6.5/10</p>
-<p><strong>📝 摘要</strong>: 银河证券认为，AI带来的收益主要体现在两条更容易被数据验证的路径。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>AI应用</li>
-<li>投资分析</li>
-<li>市场分析</li>
-</ul>
-<p><strong>🔍 深度分析</strong>:</p>
-<ul>
-<li><strong>核心观点</strong>: 银河证券认为AI收益主要体现在平台端和内容端。</li>
-<li><strong>关键论据</strong>: ['AI收益', '平台端', '内容端']</li>
-<li><strong>影响预测</strong>: AI应用领域发展迅速，平台和内容端受益。</li>
-<li><strong>情感倾向</strong>: positive</li>
-<li><strong>可信度评分</strong>: 6.5/10</li>
-<li><strong>分析时间</strong>: 2026-02-05T01:41:41.798137Z</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3669672502485634?f=rss">银河证券：AI带来的收益主要体现在两条更容易被数据验证的路径</a>
-<hr/>
-<p>## 🔬 科技新闻 (9条)</p>
-<p>精选 <strong>9</strong> 条科技新闻</p>
-<h3>1. Sam Altman对Claude超级碗广告异常愤怒</h3>
-<p><strong>📌 来源</strong>: TechCrunch | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.5/10</p>
-<p><strong>📝 摘要</strong>: Sam Altman在社交媒体上发布了一篇长篇大论，指责其竞争对手的不诚实和独裁。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>科技行业争议</li>
-<li>人工智能发展</li>
-<li>商业竞争</li>
-</ul>
-<p><strong>🔍 深度分析</strong>:</p>
-<ul>
-<li><strong>核心观点</strong>: Sam Altman指责竞争对手不诚实和独裁。</li>
-<li><strong>关键论据</strong>: ['Sam Altman指责竞争对手', '不诚实', '独裁']</li>
-<li><strong>影响预测</strong>: AI领域竞争激烈，行业道德问题受关注。</li>
-<li><strong>情感倾向</strong>: negative</li>
-<li><strong>可信度评分</strong>: 7.5/10</li>
-<li><strong>分析时间</strong>: 2026-02-05T01:41:41.798142Z</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/04/sam-altman-got-exceptionally-testy-over-claude-super-bowl-ads/">Sam Altman got exceptionally testy over Claude Super Bowl ads</a>
-<hr/>
-<h3>2. Mundi Ventures为Kembara关闭7.5亿欧元，是其最大的深科技和气候基金</h3>
-<p><strong>📌 来源</strong>: TechCrunch | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: 西班牙的深科技和气候基金Kembara完成了7.5亿欧元的首次关闭，目标规模为10亿欧元。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>投资消息</li>
-<li>深科技基金</li>
-<li>市场分析</li>
-</ul>
-<p><strong>🔍 深度分析</strong>:</p>
-<ul>
-<li><strong>核心观点</strong>: Mundi Ventures为Kembara筹集7.5亿欧元，目标规模10亿欧元。</li>
-<li><strong>关键论据</strong>: ['7.5亿欧元筹集', '10亿欧元目标规模']</li>
-<li><strong>影响预测</strong>: 深科技和气候基金发展迅速，资金筹集成功。</li>
-<li><strong>情感倾向</strong>: positive</li>
-<li><strong>可信度评分</strong>: 7.0/10</li>
-<li><strong>分析时间</strong>: 2026-02-05T01:41:41.798145Z</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/04/mundi-ventures-closes-on-e750m-for-kembara-its-largest-deep-tech-and-climate-fund/">Mundi Ventures closes on €750M for Kembara, its largest deep tech and climate fund</a>
-<hr/>
-<h3>3. Stripe校友为Duna筹集3000万欧元A轮融资，由Stripe和Adyen高管支持</h3>
-<p><strong>📌 来源</strong>: TechCrunch | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: 业务身份验证初创公司Duna在由CapitalG领投的3000万欧元A轮融资中筹集资金。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>投资消息</li>
-<li>科技初创公司</li>
-<li>市场分析</li>
-</ul>
-<p><strong>🔍 深度分析</strong>:</p>
-<ul>
-<li><strong>核心观点</strong>: Duna完成3000万欧元A轮融资，由CapitalG领投。</li>
-<li><strong>关键论据</strong>: ['3000万欧元A轮融资', 'CapitalG领投']</li>
-<li><strong>影响预测</strong>: 业务身份验证领域融资活跃，Duna发展迅速。</li>
-<li><strong>情感倾向</strong>: positive</li>
-<li><strong>可信度评分</strong>: 7.0/10</li>
-<li><strong>分析时间</strong>: 2026-02-05T01:41:41.798147Z</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/04/stripe-alumni-raise-e30m-series-a-for-duna-backed-by-stripe-and-adyen-execs/">Stripe alumni raise €30M Series A for Duna, backed by Stripe and Adyen execs</a>
-<hr/>
-<h3>4. 谷歌的Gemini应用月活跃用户数超过7.5亿</h3>
-<p><strong>📌 来源</strong>: TechCrunch | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: 谷歌宣布其Gemini应用月活跃用户数超过7.5亿，与ChatGPT和Meta AI竞争。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>谷歌应用</li>
-<li>用户增长</li>
-<li>市场分析</li>
-</ul>
-<p><strong>🔍 深度分析</strong>:</p>
-<ul>
-<li><strong>核心观点</strong>: 谷歌Gemini应用月活跃用户数超过7.5亿。</li>
-<li><strong>关键论据</strong>: ['7.5亿月活跃用户数']</li>
-<li><strong>影响预测</strong>: 谷歌Gemini应用竞争激烈，用户规模扩大。</li>
-<li><strong>情感倾向</strong>: positive</li>
-<li><strong>可信度评分</strong>: 7.0/10</li>
-<li><strong>分析时间</strong>: 2026-02-05T01:41:41.798149Z</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/04/googles-gemini-app-has-surpassed-750m-monthly-active-users/">Google’s Gemini app has surpassed 750M monthly active users</a>
-<hr/>
-<h3>5. 谷歌的年度收入首次超过4000亿美元</h3>
-<p><strong>📌 来源</strong>: The Verge | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: 谷歌母公司Alphabet宣布年度收入首次超过4000亿美元。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>谷歌财报</li>
-<li>市场分析</li>
-<li>经济数据</li>
-</ul>
-<p><strong>🔍 深度分析</strong>:</p>
-<ul>
-<li><strong>核心观点</strong>: 谷歌母公司Alphabet年度收入首次超过4000亿美元。</li>
-<li><strong>关键论据</strong>: ['4000亿美元收入']</li>
-<li><strong>影响预测</strong>: 谷歌母公司业绩强劲，市场地位稳固。</li>
-<li><strong>情感倾向</strong>: positive</li>
-<li><strong>可信度评分</strong>: 7.0/10</li>
-<li><strong>分析时间</strong>: 2026-02-05T01:41:41.798151Z</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://www.theverge.com/news/874161/google-400-billion-revenue-q4-2025-earnings">Google&#8217;s annual revenue tops $400 billion for the first time</a>
-<hr/>
-<h3>6. AI SRE Resolve AI确认1.25亿美元融资，独角兽估值</h3>
-<p><strong>📌 来源</strong>: TechCrunch | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: 这家两岁的初创公司确认完成由Lightspeed领投的1亿美元融资。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>AI初创公司</li>
-<li>融资消息</li>
-<li>市场分析</li>
-</ul>
-<p><strong>🔍 深度分析</strong>:</p>
-<ul>
-<li><strong>核心观点</strong>: AI SRE Resolve AI完成1亿美元融资，估值10亿美元。</li>
-<li><strong>关键论据</strong>: ['1亿美元融资', '10亿美元估值']</li>
-<li><strong>影响预测</strong>: AI领域初创公司融资活跃，Resolve AI发展迅速。</li>
-<li><strong>情感倾向</strong>: positive</li>
-<li><strong>可信度评分</strong>: 7.0/10</li>
-<li><strong>分析时间</strong>: 2026-02-05T01:41:41.798153Z</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/04/ai-sre-resolve-ai-confirms-125m-raise-unicorn-valuation/">AI SRE Resolve AI confirms $125M raise, unicorn valuation</a>
-<hr/>
-<h3>7. Sam Altman回应Anthropic的“有趣”超级碗广告</h3>
-<p><strong>📌 来源</strong>: The Verge | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: Sam Altman在社交媒体上回应了Anthropic的新超级碗广告，指责其“明显不诚实”。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>科技行业争议</li>
-<li>人工智能发展</li>
-<li>商业竞争</li>
-</ul>
-<p><strong>🔍 深度分析</strong>:</p>
-<ul>
-<li><strong>核心观点</strong>: Sam Altman回应Anthropic的超级碗广告，指责其不诚实。</li>
-<li><strong>关键论据</strong>: ['Sam Altman回应', 'Anthropic超级碗广告', '不诚实']</li>
-<li><strong>影响预测</strong>: AI领域竞争激烈，广告战引发关注。</li>
-<li><strong>情感倾向</strong>: negative</li>
-<li><strong>可信度评分</strong>: 7.0/10</li>
-<li><strong>分析时间</strong>: 2026-02-05T01:41:41.798155Z</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://www.theverge.com/news/874084/ai-chatgpt-claude-super-bowl-ads-openai-anthropic">Sam Altman responds to Anthropic’s ‘funny’ Super Bowl ads</a>
-<hr/>
-<h3>8. 安德森・霍洛维茨(A16z)刚刚筹集了170亿美元资金，其中17亿美元用于AI基础设施</h3>
-<p><strong>📌 来源</strong>: TechCrunch | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: 安德森・霍洛维茨(A16z)刚刚筹集了150亿美元资金，其中17亿美元用于其基础设施团队。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>投资消息</li>
-<li>AI基础设施</li>
-<li>市场分析</li>
-</ul>
-<p><strong>🔍 深度分析</strong>:</p>
-<ul>
-<li><strong>核心观点</strong>: A16z筹集17亿美元用于AI基础设施。</li>
-<li><strong>关键论据</strong>: ['17亿美元筹集', 'AI基础设施']</li>
-<li><strong>影响预测</strong>: AI基础设施投资增加，AI行业发展加速。</li>
-<li><strong>情感倾向</strong>: positive</li>
-<li><strong>可信度评分</strong>: 7.0/10</li>
-<li><strong>分析时间</strong>: 2026-02-05T01:41:41.798158Z</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/video/a16z-just-raised-1-7b-for-ai-infrastructure-heres-where-its-going/">A16z just raised $1.7B for AI infrastructure. Here’s where it’s going.</a>
-<hr/>
-<h3>9. ElevenLabs从红杉资本筹集5亿美元，估值达到110亿美元</h3>
-<p><strong>📌 来源</strong>: TechCrunch | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: ElevenLabs的估值在过去12个月内翻了两番。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>AI初创公司</li>
-<li>融资消息</li>
-<li>市场分析</li>
-</ul>
-<p><strong>🔍 深度分析</strong>:</p>
-<ul>
-<li><strong>核心观点</strong>: ElevenLabs从Sequoia筹集5000万美元，估值110亿美元。</li>
-<li><strong>关键论据</strong>: ['5000万美元筹集', '110亿美元估值']</li>
-<li><strong>影响预测</strong>: AI语音领域融资活跃，ElevenLabs发展迅速。</li>
-<li><strong>情感倾向</strong>: positive</li>
-<li><strong>可信度评分</strong>: 7.0/10</li>
-<li><strong>分析时间</strong>: 2026-02-05T01:41:41.798160Z</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/04/elevenlabs-raises-500m-from-sequioia-at-a-11-billion-valuation/">ElevenLabs raises $500M from Sequoia at an $11 billion valuation</a>
+<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/business/earnings/cardinal-health-lifts-outlook-after-posting-higher-profit-a12eb285?mod=pls_whats_news_us_business_f">Cardinal Health Lifts Outlook After Posting Higher Profit</a>
 <hr/>
 <p>## 🏛️ 社会政治 (0条)</p>
 <p>*暂无社会政治板块新闻*</p>
@@ -438,7 +160,7 @@
         <title>2026年02月04日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-04.md</link>
         <description>本期精选 0 条高质量科技新闻</description>
-        <pubDate>Thu, 05 Feb 2026 01:26:28 GMT</pubDate>
+        <pubDate>Thu, 05 Feb 2026 12:43:20 GMT</pubDate>
         <guid>archive/2026-02-04.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<p># 📰 新闻精选</p>
@@ -458,7 +180,7 @@
         <title>2026年02月03日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-03.md</link>
         <description>本期精选 10 条高质量科技新闻</description>
-        <pubDate>Thu, 05 Feb 2026 01:26:28 GMT</pubDate>
+        <pubDate>Thu, 05 Feb 2026 12:43:20 GMT</pubDate>
         <guid>archive/2026-02-03.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<p># 📰 新闻精选</p>
@@ -587,7 +309,7 @@
         <title>2026年02月02日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-02.md</link>
         <description>本期精选 0 条高质量科技新闻</description>
-        <pubDate>Thu, 05 Feb 2026 01:26:28 GMT</pubDate>
+        <pubDate>Thu, 05 Feb 2026 12:43:20 GMT</pubDate>
         <guid>archive/2026-02-02.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h3>1. KKR 领导集团即将以超过 100 亿美元的价格收购新加坡数据中心公司</h3>
@@ -886,7 +608,7 @@
         <title>2026年02月01日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-01.md</link>
         <description>本期精选 16 条高质量科技新闻</description>
-        <pubDate>Thu, 05 Feb 2026 01:26:28 GMT</pubDate>
+        <pubDate>Thu, 05 Feb 2026 12:43:20 GMT</pubDate>
         <guid>archive/2026-02-01.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<p># 📰 新闻精选</p>
@@ -1085,7 +807,7 @@
         <title>2026年01月31日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-01-31.md</link>
         <description>本期精选 5 条高质量科技新闻</description>
-        <pubDate>Thu, 05 Feb 2026 01:26:28 GMT</pubDate>
+        <pubDate>Thu, 05 Feb 2026 12:43:20 GMT</pubDate>
         <guid>archive/2026-01-31.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<p># 📰 科技新闻精选</p>

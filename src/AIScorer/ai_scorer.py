@@ -853,14 +853,37 @@ class AIScorer:
 
         # 解析响应
         if results:
-            content = results[0]
-            parsed_results = self.response_parser.parse_batch_response(
-                items,
-                content,
-                None
-            )
-            logger.info(f"✅ Pass2深度分析(真批处理)完成: {len(parsed_results)} 条")
-            return parsed_results
+            # 合并所有批次的解析结果
+            all_parsed_results = []
+            total_items_parsed = 0
+
+            for batch_idx, content in enumerate(results, 1):
+                if content:
+                    try:
+                        # 计算当前批次对应的新闻项范围
+                        start_idx = (batch_idx - 1) * self.true_batch_size
+                        end_idx = min(start_idx + self.true_batch_size, len(items))
+                        batch_items = items[start_idx:end_idx]
+
+                        parsed_batch = self.response_parser.parse_batch_response(
+                            batch_items,
+                            content,
+                            None
+                        )
+                        all_parsed_results.extend(parsed_batch)
+                        total_items_parsed += len(parsed_batch)
+                        logger.debug(f"✅ 批次 {batch_idx} 解析完成: {len(parsed_batch)} 条")
+                    except Exception as e:
+                        logger.error(f"❌ 批次 {batch_idx} 解析失败: {e}")
+                        # 为当前批次使用默认分数
+                        start_idx = (batch_idx - 1) * self.true_batch_size
+                        end_idx = min(start_idx + self.true_batch_size, len(items))
+                        for item in items[start_idx:end_idx]:
+                            item.ai_score = 5.0
+                            all_parsed_results.append(item)
+
+            logger.info(f"✅ Pass2深度分析(真批处理)完成: {total_items_parsed}/{len(items)} 条")
+            return all_parsed_results if all_parsed_results else items
         else:
             logger.warning("所有批次都失败，使用默认分数")
             return ErrorHandler.apply_batch_defaults(items, 'parse_failed')
@@ -898,77 +921,6 @@ class AIScorer:
 
         logger.info(f"Pass 2 深度分析完成: {len(results)} 条")
         return results
-    
-    # ==================== 深度分析功能 ====================
-    
-    async def deep_analysis_topn(
-        self, 
-        items: List[NewsItem]
-    ) -> List[NewsItem]:
-        """
-        对TopN新闻进行深度分析
-        
-        Args:
-            items: 新闻项列表
-            
-        Returns:
-            List[NewsItem]: 添加了深度分析字段的新闻项列表
-        """
-        if not items:
-            return []
-        
-        # 筛选有全文内容的新闻
-        valid_items = [
-            item for item in items 
-            if getattr(item, 'has_full_content', False) and 
-               getattr(item, 'full_content', None)
-        ]
-        
-        if not valid_items:
-            logger.warning("⚠️ 没有符合条件的新闻进行深度分析")
-            return items
-        
-        logger.info(f"🔍 开始深度分析: {len(valid_items)} 条有全文的新闻")
-        
-        try:
-            # 1. 构建Prompt
-            prompt = self.prompt_builder.build_deep_analysis_prompt(valid_items)
-            
-            # 2. 调用API（带回退）
-            content = await self.provider_manager.execute_with_fallback(
-                "TopN深度分析",
-                self._execute_deep_analysis,
-                prompt
-            )
-            
-            # 3. 解析响应
-            results = self.response_parser.parse_deep_analysis_response(
-                valid_items,
-                content
-            )
-            
-            logger.info(f"✅ 深度分析完成: {len(results)} 条")
-            return results
-            
-        except Exception as e:
-            ErrorHandler.log_error("TopN深度分析", e, logger)
-            return ErrorHandler.apply_batch_deep_analysis_defaults(valid_items)
-    
-    async def _execute_deep_analysis(self, prompt: str) -> str:
-        """
-        执行深度分析API调用
-        
-        Args:
-            prompt: 深度分析Prompt
-            
-        Returns:
-            str: API响应内容
-        """
-        return await self.provider_manager.call_deep_analysis_api(
-            prompt=prompt,
-            max_tokens=10000,
-            temperature=self.provider_manager.current_config.temperature
-        )
     
     # ==================== 统计和工具方法 ====================
     

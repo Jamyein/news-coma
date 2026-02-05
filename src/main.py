@@ -20,7 +20,6 @@ from src.AIScorer import AIScorer
 from src.markdown_generator import MarkdownGenerator
 from src.rss_generator import RSSGenerator
 from src.history_manager import HistoryManager
-from src.content_fetcher import ContentFetcher
 
 # 配置日志
 logging.basicConfig(
@@ -44,7 +43,6 @@ class RSSAggregator:
         self.scorer = None
         self.markdown_gen = None
         self.rss_gen = None
-        self.content_fetcher = None  # 内容获取器
     
     async def run(self) -> bool:
         """
@@ -79,15 +77,7 @@ class RSSAggregator:
             # 4. 筛选Top N
             top_items = self._select_top_news(scored_items)
             
-            # 5. 获取全文内容 (如果启用)
-            if self.content_fetcher:
-                top_items = await self._fetch_full_content(top_items)
-            
-            # 6. 深度分析 (如果启用)
-            if self.scorer and self.config.ai_config.deep_analysis_enabled:
-                top_items = await self._perform_deep_analysis(top_items)
-            
-            # 7. 生成输出文件
+            # 5. 生成输出文件
             self._generate_outputs(top_items)
             
             # 计算持续时间
@@ -127,17 +117,6 @@ class RSSAggregator:
         
         self.scorer = AIScorer(config=self.config.ai_config)
         
-        # 初始化内容获取器（如果启用）
-        if getattr(self.config.ai_config, 'pass2_fetch_fulltext_enabled', True):
-            self.content_fetcher = ContentFetcher(
-                max_concurrent=getattr(self.config.ai_config, 'pass2_max_concurrent_fetches', 5),
-                timeout_range=(5, getattr(self.config.ai_config, 'pass2_fulltext_timeout', 10))
-            )
-            logger.info("✓ 内容获取器已初始化")
-        else:
-            self.content_fetcher = None
-            logger.info("ℹ️ 内容获取器已禁用")
-        
         self.markdown_gen = MarkdownGenerator(
             output_dir="docs",
             archive_dir="archive"
@@ -156,118 +135,6 @@ class RSSAggregator:
         current_provider = ai_config.provider
         provider_config = ai_config.providers_config[current_provider]
         logger.info(f"✓ AI模型: {current_provider} ({provider_config.model})")
-    
-    async def _fetch_full_content(self, items: List[NewsItem]) -> List[NewsItem]:
-        """
-        为新闻条目获取全文内容
-        
-        Args:
-            items: 新闻条目列表
-            
-        Returns:
-            已填充 full_content 的新闻条目列表
-        """
-        if not self.content_fetcher:
-            logger.info("ℹ️ 内容获取器未初始化，跳过全文获取")
-            return items
-        
-        # 检查是否启用全文获取
-        if not getattr(self.config.ai_config, 'pass2_fetch_fulltext_enabled', True):
-            logger.info("ℹ️ 全文获取已禁用")
-            return items
-        
-        max_items = getattr(self.config.ai_config, 'pass2_fulltext_max_items', 30)
-        
-        # 选择前N条新闻获取全文（通常是评分最高的）
-        items_to_fetch = items[:max_items]
-        
-        if not items_to_fetch:
-            logger.info("ℹ️ 没有需要获取全文的新闻")
-            return items
-        
-        logger.info(f"🌐 开始为 {len(items_to_fetch)} 条新闻获取全文...")
-        
-        # 获取所有需要获取全文的URL
-        urls = []
-        url_to_item = {}
-        for item in items_to_fetch:
-            if item.link and not item.has_full_content:
-                urls.append(item.link)
-                url_to_item[item.link] = item
-        
-        if not urls:
-            logger.info("ℹ️ 所有新闻已有全文内容")
-            return items
-        
-        try:
-            # 批量获取全文
-            results = await self.content_fetcher.fetch_multiple(
-                urls=urls,
-                max_concurrent=getattr(self.config.ai_config, 'pass2_max_concurrent_fetches', 5),
-                timeout=getattr(self.config.ai_config, 'pass2_fulltext_timeout', 10)
-            )
-            
-            # 填充获取到的全文到对应的 NewsItem
-            success_count = 0
-            for url, content in results.items():
-                if content and url in url_to_item:
-                    item = url_to_item[url]
-                    item.full_content = content
-                    item.has_full_content = True
-                    success_count += 1
-            
-            logger.info(f"✅ 全文获取完成: 成功 {success_count}/{len(urls)} 条")
-            
-        except Exception as e:
-            logger.error(f"❌ 全文获取过程出错: {e}")
-        
-        return items
-    
-    async def _perform_deep_analysis(self, items: List[NewsItem]) -> List[NewsItem]:
-        """
-        对新闻条目执行深度分析
-        
-        Args:
-            items: 新闻条目列表
-            
-        Returns:
-            已填充 deep_analysis 的新闻条目列表
-        """
-        # 检查是否启用深度分析
-        if not getattr(self.config.ai_config, 'deep_analysis_enabled', True):
-            logger.info("ℹ️ 深度分析已禁用")
-            return items
-        
-        if not items:
-            logger.info("ℹ️ 没有需要进行深度分析的新闻")
-            return items
-        
-        # 过滤出有全文内容的条目
-        items_with_full_content = [item for item in items if item.has_full_content and item.full_content]
-        
-        if not items_with_full_content:
-            logger.warning("⚠️ 没有符合条件的新闻(有全文内容)进行深度分析")
-            return items
-        
-        logger.info(f"🔍 开始对 {len(items_with_full_content)} 条有全文的新闻进行深度分析...")
-        
-        try:
-            # 调用 AIScorer 的 deep_analysis_topn 方法
-            analyzed_items = await self.scorer.deep_analysis_topn(items_with_full_content)
-            
-            # 将深度分析结果合并回原始列表
-            analyzed_items_dict = {item.id: item for item in analyzed_items}
-            for item in items:
-                if item.id in analyzed_items_dict:
-                    item.deep_analysis = analyzed_items_dict[item.id].deep_analysis
-            
-            success_count = sum(1 for item in items if item.deep_analysis is not None)
-            logger.info(f"✅ 深度分析完成: 成功 {success_count}/{len(items_with_full_content)} 条")
-            
-        except Exception as e:
-            logger.error(f"❌ 深度分析过程出错: {e}")
-        
-        return items
     
     def _fetch_news(self) -> List[NewsItem]:
         """

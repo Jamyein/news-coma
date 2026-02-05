@@ -356,7 +356,8 @@ class PromptBuilder:
         "total_score": 7.5,
         "chinese_title": "翻译成中文的标题",
         "chinese_summary": "200字左右的中文总结",
-        "key_points": ["要点1", "要点2", "要点3"]
+        "key_points": ["要点1", "要点2", "要点3"],
+        "impact_forecast": "分析该新闻可能产生的影响，以整段话形式输出（100字以内）"
     },
     ...
 ]
@@ -370,7 +371,8 @@ class PromptBuilder:
 6. chinese_title要准确传达原意，适合中文读者
 7. chinese_summary要突出核心价值和影响
 8. key_points列出3-5个关键要点
-9. 确保返回的是合法JSON数组，不要有其他文字说明
+9. impact_forecast分析新闻可能产生的影响，以整段话形式输出（100字以内）
+10. 确保返回的是合法JSON数组，不要有其他文字说明
 """
     
     def _build_single_output_format(self) -> str:

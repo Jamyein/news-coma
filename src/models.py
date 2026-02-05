@@ -25,10 +25,6 @@ class NewsItem:
     translated_title: Optional[str] = None
     key_points: List[str] = field(default_factory=list)
     
-    # Pass2阶段添加的全文内容字段（新增）
-    full_content: Optional[str] = None  # 通过trafilatura获取的完整正文内容
-    has_full_content: bool = False  # 是否成功获取全文
-    
     # AI分类字段（新增）
     ai_category: str = ""  # 分类结果："财经" | "科技" | "社会政治"
     ai_category_confidence: float = 0.0  # 分类置信度 0-1
@@ -37,8 +33,8 @@ class NewsItem:
     pre_category: str = ""  # 预分类结果："财经" | "科技" | "社会政治" | ""
     pre_category_confidence: float = 0.0  # 预分类置信度
     
-    # Pass2阶段深度分析结果（新增）
-    deep_analysis: Optional[Dict] = None  # 深度分析结构化结果
+    # Pass2阶段影响预测（新增）
+    impact_forecast: Optional[str] = None  # 影响预测文本
     
     def __post_init__(self):
         """初始化后处理"""
@@ -99,22 +95,10 @@ class AIConfig:
     pass1_threshold_politics: float = 5.5            # 社会政治新闻阈值
     pass1_use_category_specific: bool = True         # 启用三大板块差异化评分
     
-    # 板块配额配置（固定比例 40%:30%:30%）
-    category_quota_finance: float = 0.40             # 财经配额 40%
-    category_quota_tech: float = 0.30                # 科技配额 30%
-    category_quota_politics: float = 0.30            # 社会政治配额 30%
-    
-    # Pass2 全文获取配置（新增）
-    pass2_fetch_fulltext_enabled: bool = True       # 是否启用全文获取
-    pass2_fulltext_max_items: int = 30              # 每次最多获取全文的文章数
-    pass2_fulltext_timeout: int = 10                # 全文获取超时时间(秒)
-    pass2_max_concurrent_fetches: int = 5          # 并发获取数限制
-    
-    # 深度分析配置（新增）
-    deep_analysis_enabled: bool = True              # 是否启用深度分析
-    deep_analysis_dimensions: List[str] = field(default_factory=lambda: [
-        "core_insight", "key_arguments", "impact_forecast", "sentiment", "credibility_score"
-    ])  # 分析维度
+    # 板块配额配置（固定比例40%:30%:30%）
+    category_quota_finance: float = 0.40             # 财经配额40%
+    category_quota_tech: float = 0.30                # 科技配额30%
+    category_quota_politics: float = 0.30            # 社会政治配额30%
     
     # 并行批处理配置（新增）
     use_parallel_batches: bool = False              # 是否启用并行批处理

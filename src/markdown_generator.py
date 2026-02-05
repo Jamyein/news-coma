@@ -125,31 +125,17 @@ class MarkdownGenerator:
 
         for i, item in enumerate(sorted_items, 1):
             key_points_str = "\n".join([f"- {point}" for point in (item.key_points or ["暂无要点"])])
-            
-            # 构建深度分析内容
-            deep_analysis_str = ""
-            if item.deep_analysis:
-                deep_analysis_str = self._format_deep_analysis(item.deep_analysis)
 
             section += f"""### {i}. {item.translated_title or item.title}
 
-**📌 来源**: {item.source} | **🏷️ AI分类**: {item.ai_category} | **⭐ 评分**: {item.ai_score or 'N/A'}/10
+**📌 来源**: {item.source} | **🏏️ AI分类**: {item.ai_category} | **⭐ 评分**: {item.ai_score or 'N/A'}/10
 
 **📝 摘要**:
 {item.ai_summary or '暂无摘要'}
 
 **💡 关键要点**:
 {key_points_str}
-"""
-            
-            # 添加深度分析部分
-            if deep_analysis_str:
-                section += f"""
-**🔍 深度分析**:
-{deep_analysis_str}
-"""
-            
-            section += f"""
+
 **🔗 原文链接**: [{item.title}]({item.link})
 
 ---
@@ -158,27 +144,7 @@ class MarkdownGenerator:
 
         return section
     
-    def _format_deep_analysis(self, deep_analysis: Dict) -> str:
-        """格式化深度分析结果为Markdown"""
-        # 字段到中文标签的映射
-        field_labels = {
-            'core_insight': '核心观点',
-            'key_arguments': '关键论据',
-            'impact_forecast': '影响预测',
-            'sentiment': '情感倾向',
-            'credibility_score': '可信度评分',
-            'analysis_timestamp': '分析时间',
-        }
-        
-        lines = []
-        for field, label in field_labels.items():
-            value = deep_analysis.get(field)
-            if value:
-                suffix = "/10" if field == 'credibility_score' else ""
-                lines.append(f"- **{label}**: {value}{suffix}")
-        
-        return "\n".join(lines)
-    
+
     def _merge_archive_content(self, existing: str, new: str) -> str:
         """
         合并归档内容，基于链接去重
