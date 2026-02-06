@@ -5,8 +5,8 @@
     <link>https://github.com/Jamyein/news-coma</link>
     <description>由 AI 筛选的高质量科技新闻聚合，每6小时自动更新</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 06 Feb 2026 01:37:06 GMT</lastBuildDate>
-    <pubDate>Fri, 06 Feb 2026 01:37:06 GMT</pubDate>
+    <lastBuildDate>Fri, 06 Feb 2026 15:19:49 GMT</lastBuildDate>
+    <pubDate>Fri, 06 Feb 2026 15:19:49 GMT</pubDate>
     <atom:link href="https://Jamyein.github.io/news-coma/feed.xml" rel="self" type="application/rss+xml" />
     <image>
         <url>https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</url>
@@ -15,20 +15,35 @@
     </image>
 
     <item>
-        <title>2026年02月06日 新闻汇总</title>
-        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-06.md</link>
-        <description>本期精选 17 条高质量科技新闻</description>
-        <pubDate>Fri, 06 Feb 2026 01:37:06 GMT</pubDate>
-        <guid>archive/2026-02-06.md</guid>
+        <title>2026年02月06日 23:19 新闻汇总</title>
+        <link>https://Jamyein.github.io/news-coma/</link>
+        <description>本期精选 30 条高质量科技新闻</description>
+        <pubDate>Fri, 06 Feb 2026 15:19:49 GMT</pubDate>
+        <guid>docs/latest.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
-<blockquote>🕐 更新时间: 2026年02月06日 09:37</blockquote>
-<blockquote>📊 本期精选 <strong>17</strong> 条高质量新闻</blockquote>
+<blockquote>🕐 更新时间: 2026年02月06日 23:19</blockquote>
+<blockquote>📊 本期精选 <strong>30</strong> 条高质量新闻</blockquote>
 <blockquote>🤖 由 AI 自动分类、筛选、翻译和总结</blockquote>
 <hr/>
-<h2>💰 财经新闻 (12条)</h2>
-<p>精选 <strong>12</strong> 条财经新闻</p>
-<h3>1. 英国利率维持在3.75%，但银行表示未来可能降息</h3>
+<h2>💰 财经新闻 (0条)</h2>
+<p>*暂无财经板块新闻*</p>
+<hr/>
+<h2>🔬 科技新闻 (0条)</h2>
+<p>*暂无科技板块新闻*</p>
+<hr/>
+<h2>🏛️ 社会政治 (0条)</h2>
+<p>*暂无社会政治板块新闻*</p>
+<hr/>]]></content:encoded>
+    </item>
+    <item>
+        <title>2026年02月06日 新闻汇总</title>
+        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-06.md</link>
+        <description>本期精选 0 条高质量科技新闻</description>
+        <pubDate>Fri, 06 Feb 2026 15:19:49 GMT</pubDate>
+        <guid>archive/2026-02-06.md</guid>
+        <category>综合新闻</category>
+        <content:encoded><![CDATA[<h3>1. 英国利率维持在3.75%，但银行表示未来可能降息</h3>
 <p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
 <p><strong>📝 摘要</strong>: {'core_fact': '英国央行保持利率不变，但表示未来可能降息。', 'key_details': '这一声明表明，英国央行对经济前景持谨慎态度，并可能在未来调整利率。', 'impact_meaning': '这一声明可能对市场产生重大影响，投资者需要关注未来利率的变化。'}</p>
 <p><strong>💡 关键要点</strong>:</p>
@@ -162,7 +177,7 @@
 <hr/>
 <h2>🔬 科技新闻 (5条)</h2>
 <p>精选 <strong>5</strong> 条科技新闻</p>
-<h3>1. Sapiom筹集1500万美元，帮助AI代理购买自己的技术工具</h3>
+<h3>13. Sapiom筹集1500万美元，帮助AI代理购买自己的技术工具</h3>
 <p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 6.5/10</p>
 <p><strong>📝 摘要</strong>: {'a': 'Sapiom公司获得了Accel的支持，正在构建一个金融层，用于处理AI代理所需的身份验证和微支付。', 'b': '该公司的目标是建立一个金融层，以简化AI代理购买技术工具的过程，并为其商业化提供支持。', 'c': '这一举措可能会加速AI代理技术的发展，并推动相关行业的商业化进程。'}</p>
 <p><strong>💡 关键要点</strong>:</p>
@@ -173,7 +188,7 @@
 </ul>
 <strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3671116604629897?f=rss">千问App“春节30亿大免单”正式上线</a>
 <hr/>
-<h3>2. Sapiom筹集1500万美元，帮助AI代理购买自己的技术工具</h3>
+<h3>14. Sapiom筹集1500万美元，帮助AI代理购买自己的技术工具</h3>
 <p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 6.5/10</p>
 <p><strong>📝 摘要</strong>: {'core_facts': 'Sapiom获得了Accel的支持，正在构建一个金融层，用于处理AI代理所需的身份验证和微支付。', 'key_details': 'Sapiom的目标是简化AI代理的支付流程，为AI技术的发展提供支持。', 'impact_meaning': '这一举措将推动AI代理的商业化进程，对AI技术的发展具有积极意义。'}</p>
 <p><strong>💡 关键要点</strong>:</p>
@@ -184,7 +199,7 @@
 </ul>
 <strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765102">华尔街见闻早餐FM-Radio | 2026年2月6日</a>
 <hr/>
-<h3>3. Sapiom筹集1500万美元，帮助AI代理购买自己的技术工具</h3>
+<h3>15. Sapiom筹集1500万美元，帮助AI代理购买自己的技术工具</h3>
 <p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 6.5/10</p>
 <p><strong>📝 摘要</strong>: {'core_facts': 'Sapiom获得了Accel的支持，正在构建一个金融层，用于处理AI代理所需的身份验证和微支付。', 'key_details': '该初创公司旨在为AI代理提供购买技术工具的便利，这可能会加速AI技术的发展和应用。', 'impact_meaning': 'AI代理的购买能力将提高，有助于推动AI技术的商业化进程。'}</p>
 <p><strong>💡 关键要点</strong>:</p>
@@ -195,7 +210,7 @@
 </ul>
 <strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/people-who-work-for-a-paycheck-have-less-money-than-you-think-ec0e7f84?mod=mw_rss_topstories">Many U.S. households feel like they can’t get ahead financially — and they’re right</a>
 <hr/>
-<h3>4. Sapiom筹集1500万美元，帮助AI代理购买自己的技术工具</h3>
+<h3>16. Sapiom筹集1500万美元，帮助AI代理购买自己的技术工具</h3>
 <p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 6.5/10</p>
 <p><strong>📝 摘要</strong>: {'core_fact': 'Sapiom获得Accel的支持，正在构建一个金融层，用于处理AI代理所需的身份验证和微支付。', 'key_details': '该金融层旨在简化AI代理的支付流程，为AI代理提供更多的自主性，并可能推动AI技术的商业化。', 'impact_meaning': '这一举措可能加速AI代理的商业化进程，对行业竞争格局和未来发展产生积极影响。'}</p>
 <p><strong>💡 关键要点</strong>:</p>
@@ -206,7 +221,7 @@
 </ul>
 <strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/e036870a-8335-4ba5-9262-1dd4f31907b0">Prediction market Kalshi seeks US approval to offer margin trades</a>
 <hr/>
-<h3>5. Sapiom筹集1500万美元，帮助AI代理购买自己的技术工具</h3>
+<h3>17. Sapiom筹集1500万美元，帮助AI代理购买自己的技术工具</h3>
 <p><strong>📌 来源</strong>: BBC Business | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 6.5/10</p>
 <p><strong>📝 摘要</strong>: {'core_fact': 'Sapiom获得Accel的支持，正在构建一个金融层，用于处理AI代理所需的身份验证和微支付。', 'key_details': '该金融层旨在简化AI代理的购买流程，并可能推动AI代理市场的进一步发展。', 'impact_meaning': '这一举措可能加速AI代理的商业化进程，并为相关技术公司带来新的增长机会。'}</p>
 <p><strong>💡 关键要点</strong>:</p>
@@ -225,7 +240,7 @@
         <title>2026年02月05日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-05.md</link>
         <description>本期精选 11 条高质量科技新闻</description>
-        <pubDate>Fri, 06 Feb 2026 01:26:55 GMT</pubDate>
+        <pubDate>Fri, 06 Feb 2026 15:15:16 GMT</pubDate>
         <guid>archive/2026-02-05.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -369,7 +384,7 @@
         <title>2026年02月04日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-04.md</link>
         <description>本期精选 0 条高质量科技新闻</description>
-        <pubDate>Fri, 06 Feb 2026 01:26:55 GMT</pubDate>
+        <pubDate>Fri, 06 Feb 2026 15:15:16 GMT</pubDate>
         <guid>archive/2026-02-04.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -391,7 +406,7 @@
         <title>2026年02月03日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-03.md</link>
         <description>本期精选 10 条高质量科技新闻</description>
-        <pubDate>Fri, 06 Feb 2026 01:26:55 GMT</pubDate>
+        <pubDate>Fri, 06 Feb 2026 15:15:16 GMT</pubDate>
         <guid>archive/2026-02-03.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -522,7 +537,7 @@
         <title>2026年02月02日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-02.md</link>
         <description>本期精选 0 条高质量科技新闻</description>
-        <pubDate>Fri, 06 Feb 2026 01:26:55 GMT</pubDate>
+        <pubDate>Fri, 06 Feb 2026 15:15:16 GMT</pubDate>
         <guid>archive/2026-02-02.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h3>1. KKR 领导集团即将以超过 100 亿美元的价格收购新加坡数据中心公司</h3>
@@ -821,7 +836,7 @@
         <title>2026年02月01日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-01.md</link>
         <description>本期精选 16 条高质量科技新闻</description>
-        <pubDate>Fri, 06 Feb 2026 01:26:55 GMT</pubDate>
+        <pubDate>Fri, 06 Feb 2026 15:15:16 GMT</pubDate>
         <guid>archive/2026-02-01.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1023,7 +1038,7 @@
         <title>2026年01月31日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-01-31.md</link>
         <description>本期精选 5 条高质量科技新闻</description>
-        <pubDate>Fri, 06 Feb 2026 01:26:55 GMT</pubDate>
+        <pubDate>Fri, 06 Feb 2026 15:15:16 GMT</pubDate>
         <guid>archive/2026-01-31.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 科技新闻精选</h1>
