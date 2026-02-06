@@ -5,8 +5,8 @@
     <link>https://github.com/Jamyein/news-coma</link>
     <description>由 AI 筛选的高质量科技新闻聚合，每6小时自动更新</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 05 Feb 2026 12:46:15 GMT</lastBuildDate>
-    <pubDate>Thu, 05 Feb 2026 12:46:15 GMT</pubDate>
+    <lastBuildDate>Fri, 06 Feb 2026 14:47:51 GMT</lastBuildDate>
+    <pubDate>Fri, 06 Feb 2026 14:47:51 GMT</pubDate>
     <atom:link href="https://Jamyein.github.io/news-coma/feed.xml" rel="self" type="application/rss+xml" />
     <image>
         <url>https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</url>
@@ -15,16 +15,62 @@
     </image>
 
     <item>
+        <title>2026年02月06日 22:47 新闻汇总</title>
+        <link>https://Jamyein.github.io/news-coma/</link>
+        <description>本期精选 30 条高质量科技新闻</description>
+        <pubDate>Fri, 06 Feb 2026 14:47:51 GMT</pubDate>
+        <guid>docs/latest.md</guid>
+        <category>综合新闻</category>
+        <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
+<blockquote>🕐 更新时间: 2026年02月06日 22:47</blockquote>
+<blockquote>📊 本期精选 <strong>30</strong> 条高质量新闻</blockquote>
+<blockquote>🤖 由 AI 自动分类、筛选、翻译和总结</blockquote>
+<hr/>
+<h2>💰 财经新闻 (0条)</h2>
+<p>*暂无财经板块新闻*</p>
+<hr/>
+<h2>🔬 科技新闻 (0条)</h2>
+<p>*暂无科技板块新闻*</p>
+<hr/>
+<h2>🏛️ 社会政治 (0条)</h2>
+<p>*暂无社会政治板块新闻*</p>
+<hr/>]]></content:encoded>
+    </item>
+    <item>
+        <title>2026年02月06日 新闻汇总</title>
+        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-06.md</link>
+        <description>本期精选 30 条高质量科技新闻</description>
+        <pubDate>Fri, 06 Feb 2026 14:47:51 GMT</pubDate>
+        <guid>archive/2026-02-06.md</guid>
+        <category>综合新闻</category>
+        <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
+<blockquote>🕐 更新时间: 2026年02月06日 22:47</blockquote>
+<blockquote>📊 本期精选 <strong>30</strong> 条高质量新闻</blockquote>
+<blockquote>🤖 由 AI 自动分类、筛选、翻译和总结</blockquote>
+<hr/>
+<h2>💰 财经新闻 (0条)</h2>
+<p>*暂无财经板块新闻*</p>
+<hr/>
+<h2>🔬 科技新闻 (0条)</h2>
+<p>*暂无科技板块新闻*</p>
+<hr/>
+<h2>🏛️ 社会政治 (0条)</h2>
+<p>*暂无社会政治板块新闻*</p>
+<hr/>]]></content:encoded>
+    </item>
+    <item>
         <title>2026年02月05日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-05.md</link>
         <description>本期精选 11 条高质量科技新闻</description>
-        <pubDate>Thu, 05 Feb 2026 12:46:15 GMT</pubDate>
+        <pubDate>Fri, 06 Feb 2026 14:39:12 GMT</pubDate>
         <guid>archive/2026-02-05.md</guid>
         <category>综合新闻</category>
-        <content:encoded><![CDATA[<p># 📰 新闻精选</p>
-<p>> 🕐 更新时间: 2026年02月05日 20:46 > 📊 本期精选 <strong>11</strong> 条高质量新闻 > 🤖 由 AI 自动分类、筛选、翻译和总结</p>
+        <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
+<blockquote>🕐 更新时间: 2026年02月05日 20:46</blockquote>
+<blockquote>📊 本期精选 <strong>11</strong> 条高质量新闻</blockquote>
+<blockquote>🤖 由 AI 自动分类、筛选、翻译和总结</blockquote>
 <hr/>
-<p>## 💰 财经新闻 (8条)</p>
+<h2>💰 财经新闻 (8条)</h2>
 <p>精选 <strong>8</strong> 条财经新闻</p>
 <h3>1. 港交所1月首次公开招股集资金额达393亿港元，同比上升555%</h3>
 <p><strong>📌 来源</strong>: BBC Business | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.9/10</p>
@@ -116,7 +162,7 @@
 </ul>
 <strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/business/retail/estee-lauder-lifts-outlook-warns-of-tariff-impact-62459669?mod=pls_whats_news_us_business_f">Estee Lauder Lifts Outlook, Warns of Tariff Impact</a>
 <hr/>
-<p>## 🔬 科技新闻 (3条)</p>
+<h2>🔬 科技新闻 (3条)</h2>
 <p>精选 <strong>3</strong> 条科技新闻</p>
 <h3>9. 谷歌订阅用户增长，YouTube年营收达600亿美元</h3>
 <p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.5/10</p>
@@ -152,7 +198,7 @@
 </ul>
 <strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/business/earnings/cardinal-health-lifts-outlook-after-posting-higher-profit-a12eb285?mod=pls_whats_news_us_business_f">Cardinal Health Lifts Outlook After Posting Higher Profit</a>
 <hr/>
-<p>## 🏛️ 社会政治 (0条)</p>
+<h2>🏛️ 社会政治 (0条)</h2>
 <p>*暂无社会政治板块新闻*</p>
 <hr/>]]></content:encoded>
     </item>
@@ -160,19 +206,21 @@
         <title>2026年02月04日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-04.md</link>
         <description>本期精选 0 条高质量科技新闻</description>
-        <pubDate>Thu, 05 Feb 2026 12:43:20 GMT</pubDate>
+        <pubDate>Fri, 06 Feb 2026 14:39:12 GMT</pubDate>
         <guid>archive/2026-02-04.md</guid>
         <category>综合新闻</category>
-        <content:encoded><![CDATA[<p># 📰 新闻精选</p>
-<p>> 🕐 更新时间: 2026年02月04日 19:50 > 📊 本期精选 <strong>0</strong> 条高质量新闻 > 🤖 由 AI 自动分类、筛选、翻译和总结</p>
+        <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
+<blockquote>🕐 更新时间: 2026年02月04日 19:50</blockquote>
+<blockquote>📊 本期精选 <strong>0</strong> 条高质量新闻</blockquote>
+<blockquote>🤖 由 AI 自动分类、筛选、翻译和总结</blockquote>
 <hr/>
-<p>## 💰 财经新闻 (0条)</p>
+<h2>💰 财经新闻 (0条)</h2>
 <p>*暂无财经板块新闻*</p>
 <hr/>
-<p>## 🔬 科技新闻 (0条)</p>
+<h2>🔬 科技新闻 (0条)</h2>
 <p>*暂无科技板块新闻*</p>
 <hr/>
-<p>## 🏛️ 社会政治 (0条)</p>
+<h2>🏛️ 社会政治 (0条)</h2>
 <p>*暂无社会政治板块新闻*</p>
 <hr/>]]></content:encoded>
     </item>
@@ -180,13 +228,15 @@
         <title>2026年02月03日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-03.md</link>
         <description>本期精选 10 条高质量科技新闻</description>
-        <pubDate>Thu, 05 Feb 2026 12:43:20 GMT</pubDate>
+        <pubDate>Fri, 06 Feb 2026 14:39:12 GMT</pubDate>
         <guid>archive/2026-02-03.md</guid>
         <category>综合新闻</category>
-        <content:encoded><![CDATA[<p># 📰 新闻精选</p>
-<p>> 🕐 更新时间: 2026年02月03日 09:43 > 📊 本期精选 <strong>10</strong> 条高质量新闻 > 🤖 由 AI 自动分类、筛选、翻译和总结</p>
+        <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
+<blockquote>🕐 更新时间: 2026年02月03日 09:43</blockquote>
+<blockquote>📊 本期精选 <strong>10</strong> 条高质量新闻</blockquote>
+<blockquote>🤖 由 AI 自动分类、筛选、翻译和总结</blockquote>
 <hr/>
-<p>## 💰 财经新闻 (10条)</p>
+<h2>💰 财经新闻 (10条)</h2>
 <p>精选 <strong>10</strong> 条财经新闻</p>
 <h3>1. 美国与印度达成长期贸易休战</h3>
 <p><strong>📌 来源</strong>: The Economist | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.1/10</p>
@@ -298,10 +348,10 @@
 </ul>
 <strong>🔗 原文链接</strong>: <a href="https://www.bbc.com/news/articles/c9dv240w0w3o?at_medium=RSS&at_campaign=rss">Captain guilty of North Sea tanker crash death</a>
 <hr/>
-<p>## 🔬 科技新闻 (0条)</p>
+<h2>🔬 科技新闻 (0条)</h2>
 <p>*暂无科技板块新闻*</p>
 <hr/>
-<p>## 🏛️ 社会政治 (0条)</p>
+<h2>🏛️ 社会政治 (0条)</h2>
 <p>*暂无社会政治板块新闻*</p>
 <hr/>]]></content:encoded>
     </item>
@@ -309,7 +359,7 @@
         <title>2026年02月02日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-02.md</link>
         <description>本期精选 0 条高质量科技新闻</description>
-        <pubDate>Thu, 05 Feb 2026 12:43:20 GMT</pubDate>
+        <pubDate>Fri, 06 Feb 2026 14:39:12 GMT</pubDate>
         <guid>archive/2026-02-02.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h3>1. KKR 领导集团即将以超过 100 亿美元的价格收购新加坡数据中心公司</h3>
@@ -457,7 +507,7 @@
 </ul>
 <strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3764702">摩根士丹利：美联储政策短期内难转向，缩表至少要等到明年</a>
 <hr/>
-<p>## 🔬 科技新闻 (9条)</p>
+<h2>🔬 科技新闻 (9条)</h2>
 <p>精选 <strong>9</strong> 条科技新闻</p>
 <h3>13. 印度提出到 2047 年免征税收以吸引全球人工智能工作负载</h3>
 <p><strong>📌 来源</strong>: TechCrunch | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.3/10</p>
@@ -565,7 +615,7 @@
 </ul>
 <strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/7d9a2d8f-5fda-4b2b-a58f-fc8aea22558a">Don’t fear the AI ‘jobpocalypse’</a>
 <hr/>
-<p>## 🏛️ 社会政治 (3条)</p>
+<h2>🏛️ 社会政治 (3条)</h2>
 <p>精选 <strong>3</strong> 条社会政治新闻</p>
 <h3>22. 俄防长绍伊古来华，受普京总统委派沟通战略</h3>
 <p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏷️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.4/10</p>
@@ -608,13 +658,16 @@
         <title>2026年02月01日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-01.md</link>
         <description>本期精选 16 条高质量科技新闻</description>
-        <pubDate>Thu, 05 Feb 2026 12:43:20 GMT</pubDate>
+        <pubDate>Fri, 06 Feb 2026 14:39:12 GMT</pubDate>
         <guid>archive/2026-02-01.md</guid>
         <category>综合新闻</category>
-        <content:encoded><![CDATA[<p># 📰 新闻精选</p>
-<p>> 🕐 更新时间: 2026年02月01日 18:58 (北京时间) > 📊 本期精选 <strong>16</strong> 条高质量新闻 > 📰 分为三大板块：财经(40%)、科技(30%)、社会政治(30%) > 🤖 由 AI 自动分类、筛选、翻译和总结</p>
+        <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
+<blockquote>🕐 更新时间: 2026年02月01日 18:58 (北京时间)  </blockquote>
+<blockquote>📊 本期精选 <strong>16</strong> 条高质量新闻  </blockquote>
+<blockquote>📰 分为三大板块：财经(40%)、科技(30%)、社会政治(30%)  </blockquote>
+<blockquote>🤖 由 AI 自动分类、筛选、翻译和总结</blockquote>
 <hr/>
-<p>## 💰 财经新闻 (12条)</p>
+<h2>💰 财经新闻 (12条)</h2>
 <p>精选 <strong>12</strong> 条财经新闻</p>
 <h3>1. 高盛交易员：大逻辑没有变化，不要'过度解读'过去两天的暴跌</h3>
 <p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏷️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.1/10</p>
@@ -753,7 +806,7 @@
 </ul>
 <strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/80cd2d5a-9aa4-40a4-b0fc-a2d1080622f7">Russia struggles to shake reliance on foreign technology imports</a>
 <hr/>
-<p>## 🔬 科技新闻 (3条)</p>
+<h2>🔬 科技新闻 (3条)</h2>
 <p>精选 <strong>3</strong> 条科技新闻</p>
 <h3>13. 华为推出首个服务基层医院端云协同智慧病理解决方案</h3>
 <p><strong>📌 来源</strong>: 36氪 | <strong>🏷️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.3/10</p>
@@ -789,7 +842,7 @@
 </ul>
 <strong>🔗 原文链接</strong>: <a href="https://www.rrauction.com/auctions/lot-detail/350902407346003-apple-1-computer-prototype-board-0-the-celebration-board-representing-the-earliest-known-fiberglass-apple-1-prototype/">Apple-1 Computer Prototype Board #0 sold for $2.75M</a>
 <hr/>
-<p>## 🏛️ 社会政治 (1条)</p>
+<h2>🏛️ 社会政治 (1条)</h2>
 <p>精选 <strong>1</strong> 条社会政治新闻</p>
 <h3>16. 车臣战争头目的健康危机威胁普京对该地区的计划</h3>
 <p><strong>📌 来源</strong>: Financial Times | <strong>🏷️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.6/10</p>
@@ -807,11 +860,13 @@
         <title>2026年01月31日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-01-31.md</link>
         <description>本期精选 5 条高质量科技新闻</description>
-        <pubDate>Thu, 05 Feb 2026 12:43:20 GMT</pubDate>
+        <pubDate>Fri, 06 Feb 2026 14:39:12 GMT</pubDate>
         <guid>archive/2026-01-31.md</guid>
         <category>综合新闻</category>
-        <content:encoded><![CDATA[<p># 📰 科技新闻精选</p>
-<p>> 🕐 更新时间: 2026年01月31日 20:47 (北京时间) > 📊 本期精选 <strong>5</strong> 条高质量科技新闻 > 🤖 由 AI 自动筛选、翻译和总结</p>
+        <content:encoded><![CDATA[<h1>📰 科技新闻精选</h1>
+<blockquote>🕐 更新时间: 2026年01月31日 20:47 (北京时间)  </blockquote>
+<blockquote>📊 本期精选 <strong>5</strong> 条高质量科技新闻  </blockquote>
+<blockquote>🤖 由 AI 自动筛选、翻译和总结</blockquote>
 <hr/>
 <h3>1. 星链更新隐私政策，允许消费者数据用于训练</h3>
 <p><strong>📌 来源</strong>: Hacker News | <strong>🏷️ 分类</strong>: 技术 | <strong>⭐ 评分</strong>: 7.7/10</p>
