@@ -213,16 +213,14 @@ class RSSGenerator:
                             archive_file = self.archive_dir / archive_filename
                             
                             if archive_file.exists():
-                                # 如果archive文件存在，使用archive文件
-                                logger.info(f"智能切换：检测到archive文件 {archive_filename} 存在，使用archive文件")
-                                # 不添加latest.md，稍后会添加对应的archive文件
-                                # 确保archive文件已经在列表中（可能已经添加）
+                                # 如果archive文件存在，使用latest.md（增量更新模式）
+                                logger.info(f"智能切换：检测到archive文件 {archive_filename} 已存在，使用latest.md（增量更新模式）")
+                                markdown_files.append(latest_file)
+                            else:
+                                # 如果archive文件不存在，使用archive文件（首次运行）
+                                logger.info(f"智能切换：未找到对应archive文件，首次运行，使用archive文件")
                                 if archive_file not in markdown_files:
                                     markdown_files.append(archive_file)
-                            else:
-                                # 如果archive文件不存在，使用latest.md
-                                logger.info(f"智能切换：未找到对应archive文件，使用latest.md")
-                                markdown_files.append(latest_file)
                         else:
                             # 无法从latest.md提取日期，使用latest.md
                             logger.warning(f"无法从latest.md提取日期，使用latest.md")
@@ -273,6 +271,35 @@ class RSSGenerator:
             logger.error(f"从latest.md提取日期失败: {e}")
             return None
     
+    def _extract_datetime_from_latest(self, content: str) -> datetime:
+        """从latest.md内容中提取完整的日期时间（含时分）
+        
+        Args:
+            content: latest.md的文件内容
+            
+        Returns:
+            包含年月日时分信息的datetime对象，如果无法提取则返回None
+        """
+        try:
+            # 模式：从"更新时间:"中提取完整日期时间
+            # 匹配格式：2026年02月05日 20:46
+            match = re.search(r'更新时间:\s*(\d{4})年(\d{2})月(\d{2})日\s*(\d{2}):(\d{2})', content)
+            if match:
+                year, month, day, hour, minute = map(int, match.groups())
+                return datetime(year, month, day, hour, minute)
+            
+            # 备选：仅提取日期（不含时分）
+            match = re.search(r'更新时间:\s*(\d{4})年(\d{2})月(\d{2})日', content)
+            if match:
+                year, month, day = map(int, match.groups())
+                return datetime(year, month, day)
+                
+            return None
+            
+        except Exception as e:
+            logger.error(f"从latest.md提取完整日期时间失败: {e}")
+            return None
+    
     def _parse_markdown_file(self, file_path: Path) -> Dict:
         """解析Markdown文件，提取信息"""
         if not file_path.exists():
@@ -290,7 +317,17 @@ class RSSGenerator:
             news_count = int(count_match.group(1))
         
         # 构建标题
-        if file_date:
+        if file_path.name == "latest.md":
+            # latest.md：标题包含时分信息（增量更新模式）
+            pub_time = self._extract_datetime_from_latest(content)
+            if pub_time:
+                title = f"{pub_time.strftime('%Y年%m月%d日 %H:%M')} 新闻汇总"
+            elif file_date:
+                title = f"{file_date.strftime('%Y年%m月%d日')} 新闻汇总"
+            else:
+                title = f"{file_path.stem} 新闻汇总"
+        elif file_date:
+            # archive文件：标题只显示日期
             title = f"{file_date.strftime('%Y年%m月%d日')} 新闻汇总"
         else:
             title = f"{file_path.stem} 新闻汇总"
