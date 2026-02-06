@@ -591,3 +591,19 @@ class ResponseParser:
                 except Exception as e:
                     if logger:
                         logger.warning(f"流式解析单条结果失败: {e}")
+                    continue
+            
+            # 处理未返回结果的条目
+            for i, item in enumerate(items):
+                if i not in processed_indices:
+                    ErrorHandler.apply_default_values(item, 'no_response')
+                    results.append(item)
+                    if logger:
+                        logger.warning(f"流式批处理未返回结果: 索引 {i}")
+            
+            return results
+            
+        except Exception as e:
+            if logger:
+                logger.error(f"流式批量解析失败: {e}")
+            return ErrorHandler.apply_batch_defaults(items, 'streaming_parse_failed')
