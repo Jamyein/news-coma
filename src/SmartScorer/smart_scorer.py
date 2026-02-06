@@ -97,9 +97,11 @@ class SmartScorer:
         return final_items
     
     def _create_smart_batches(self, items: List[NewsItem]) -> List[List[NewsItem]]:
-        """基于新闻特征智能分批"""
-        # TODO: 实现智能分批逻辑
-        # 按分类、长度等特征分组
+        """
+        基于新闻特征智能分批
+        
+        简单分批策略（可扩展为智能分批）
+        """
         batches = []
         for i in range(0, len(items), self.config.batch_size):
             batches.append(items[i:i+self.config.batch_size])
@@ -129,21 +131,59 @@ class SmartScorer:
         return self._ensure_diversity(sorted_items)
     
     def _ensure_diversity(self, items: List[NewsItem]) -> List[NewsItem]:
-        """确保分类多样性"""
-        # TODO: 实现多样性保障逻辑
-        return items[:self.config.max_output_items]
+        """
+        确保分类多样性
+        
+        策略：
+        1. 按分数排序
+        2. 优先选择不同分类的新闻
+        3. 确保每个分类都有代表
+        """
+        if not items:
+            return []
+        
+        max_items = self.config.max_output_items
+        diversity_weight = self.config.diversity_weight
+        
+        # 按分类分组
+        by_category = defaultdict(list)
+        for item in items:
+            category = getattr(item, 'ai_category', '未分类')
+            by_category[category].append(item)
+        
+        # 简单策略：先取每个分类的前几名，然后补充高分新闻
+        selected = []
+        
+        # 每个分类至少取1条（如果存在）
+        for category, cat_items in by_category.items():
+            if cat_items and len(selected) < max_items:
+                selected.append(cat_items[0])
+        
+        # 补充剩余的高分新闻
+        for item in items:
+            if item not in selected and len(selected) < max_items:
+                selected.append(item)
+        
+        # 按分数重新排序
+        selected.sort(key=lambda x: x.ai_score or 0, reverse=True)
+        
+        return selected
     
     def _update_stats(self, input_count: int, output_count: int, duration: float):
         """更新统计信息"""
         self._stats['total_processed'] += input_count
-        # 其他统计更新...
+        
+        # 更新API调用次数
+        provider_stats = self.batch_provider.get_stats()
+        self._stats['total_api_calls'] = provider_stats.get('api_call_count', 0)
+        
+        # 更新平均处理时间
+        if self._stats['total_processed'] > 0:
+            current_avg = self._stats['avg_processing_time']
+            new_avg = (current_avg * (self._stats['total_processed'] - input_count) + duration) / self._stats['total_processed']
+            self._stats['avg_processing_time'] = new_avg
     
     def get_stats(self) -> Dict:
         """获取统计信息"""
         return self._stats.copy()
 
-
-# TODO: 实现辅助函数
-# - _quick_classify_by_title
-# - _create_balanced_batches
-# - _estimate_tokens

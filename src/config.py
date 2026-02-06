@@ -8,6 +8,7 @@ from typing import List, Dict, Any
 from pathlib import Path
 
 from src.models import RSSSource, AIConfig, OutputConfig, FilterConfig, ProviderConfig, FallbackConfig
+from src.models import OnePassAIConfig, OnePassProviderConfig, OnePassScoringCriteria
 
 
 class Config:
@@ -155,4 +156,53 @@ class Config:
             use_semantic_dedup=filter_data.get('use_semantic_dedup', False),
             # 语义相似度阈值提高到0.90（更严格，减少误判）
             semantic_similarity=filter_data.get('semantic_similarity', 0.90)
+        )
+
+    @property
+    def use_smart_scorer(self) -> bool:
+        """是否使用1-pass SmartScorer"""
+        return self._config.get('use_smart_scorer', False)
+
+    @property
+    def one_pass_config(self) -> OnePassAIConfig:
+        """获取1-pass AI配置（简化版）"""
+        smart_ai_data = self._config.get('smart_ai', {})
+        
+        # 解析提供商配置
+        providers_config = {}
+        providers_raw = smart_ai_data.get('providers_config', {})
+        
+        for name, config in providers_raw.items():
+            api_key = self._resolve_api_key(config.get('api_key', ''))
+            providers_config[name] = OnePassProviderConfig(
+                api_key=api_key,
+                base_url=config.get('base_url', ''),
+                model=config.get('model', 'glm-4-flash'),
+                max_tokens=config.get('max_tokens', 4000),
+                temperature=config.get('temperature', 0.3),
+                batch_size=config.get('batch_size', 10),
+                max_concurrent=config.get('max_concurrent', 3)
+            )
+        
+        # 评分标准
+        criteria_data = smart_ai_data.get('scoring_criteria', {})
+        scoring_criteria = OnePassScoringCriteria(
+            importance=criteria_data.get('importance', 0.30),
+            timeliness=criteria_data.get('timeliness', 0.20),
+            technical_depth=criteria_data.get('technical_depth', 0.20),
+            audience_breadth=criteria_data.get('audience_breadth', 0.15),
+            practicality=criteria_data.get('practicality', 0.15)
+        )
+        
+        return OnePassAIConfig(
+            provider=smart_ai_data.get('provider', 'zhipu'),
+            providers_config=providers_config,
+            batch_size=smart_ai_data.get('batch_size', 10),
+            max_concurrent=smart_ai_data.get('max_concurrent', 3),
+            timeout_seconds=smart_ai_data.get('timeout_seconds', 90),
+            max_output_items=smart_ai_data.get('max_output_items', 30),
+            diversity_weight=smart_ai_data.get('diversity_weight', 0.3),
+            scoring_criteria=scoring_criteria,
+            fallback_enabled=smart_ai_data.get('fallback_enabled', True),
+            fallback_chain=smart_ai_data.get('fallback_chain', ['deepseek', 'gemini'])
         )
