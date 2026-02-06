@@ -17,6 +17,7 @@ from src.config import Config
 from src.models import NewsItem
 from src.rss_fetcher import RSSFetcher
 from src.AIScorer import AIScorer
+from src.SmartScorer import SmartScorer
 from src.markdown_generator import MarkdownGenerator
 from src.rss_generator import RSSGenerator
 from src.history_manager import HistoryManager
@@ -115,7 +116,13 @@ class RSSAggregator:
             filter_config=self.config.filter_config
         )
         
-        self.scorer = AIScorer(config=self.config.ai_config)
+        # 根据配置选择评分器
+        if self.config.use_smart_scorer:
+            logger.info("使用1-Pass SmartScorer")
+            self.scorer = SmartScorer(config=self.config.one_pass_config)
+        else:
+            logger.info("使用2-Pass AIScorer")
+            self.scorer = AIScorer(config=self.config.ai_config)
         
         self.markdown_gen = MarkdownGenerator(
             output_dir="docs",
@@ -131,10 +138,18 @@ class RSSAggregator:
         )
         
         logger.info(f"✓ 已加载 {len(self.config.rss_sources)} 个RSS源")
-        ai_config = self.config.ai_config
-        current_provider = ai_config.provider
-        provider_config = ai_config.providers_config[current_provider]
-        logger.info(f"✓ AI模型: {current_provider} ({provider_config.model})")
+        
+        # 根据使用的评分器显示不同的配置信息
+        if self.config.use_smart_scorer:
+            one_pass_config = self.config.one_pass_config
+            provider_config = one_pass_config.providers_config.get(one_pass_config.provider)
+            if provider_config:
+                logger.info(f"✓ AI模型: {one_pass_config.provider} ({provider_config.model}) [1-Pass]")
+        else:
+            ai_config = self.config.ai_config
+            current_provider = ai_config.provider
+            provider_config = ai_config.providers_config[current_provider]
+            logger.info(f"✓ AI模型: {current_provider} ({provider_config.model}) [2-Pass]")
     
     def _fetch_news(self) -> List[NewsItem]:
         """
