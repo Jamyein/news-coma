@@ -411,3 +411,183 @@ class ResponseParser:
             else:
                 # 使用默认值
                 return ErrorHandler.apply_batch_defaults(items, 'parse_failed')
+
+    # ==================== 流式 JSON 解析支持（新增） ====================
+
+    @classmethod
+    def extract_complete_objects(cls, content: str) -> Tuple[List[Dict], str]:
+        """
+        从可能不完整的 JSON 中提取完整的对象
+
+        核心方法：扫描 JSON 文本，找到所有完整的 {...} 对象
+        即使 JSON 被截断，也能提取前面完整的对象
+
+        Args:
+            content: JSON 文本（可能不完整）
+
+        Returns:
+            Tuple[List[Dict], str]: (提取的完整对象列表, 剩余未解析文本)
+        """
+        if not content or not content.strip():
+            return [], ""
+
+        objects = []
+        text = content.strip()
+
+        # 快速检查：如果不是以 [ 或 { 开头，可能不是 JSON
+        if not (text.startswith('[') or text.startswith('{')):
+            return [], text
+
+        # 扫描查找完整的 JSON 对象
+        i = 0
+        while i < len(text):
+            # 跳过空白字符
+            while i < len(text) and text[i] in ' \t\n\r':
+                i += 1
+
+            if i >= len(text):
+                break
+
+            # 找到对象开始
+            if text[i] == '{':
+                # 尝试找到匹配的 }
+                obj_end = cls._find_matching_brace(text, i)
+
+                if obj_end > i:
+                    # 提取完整对象
+                    obj_str = text[i:obj_end+1]
+                    try:
+                        obj = json.loads(obj_str)
+                        objects.append(obj)
+                        # 跳过已解析的部分
+                        i = obj_end + 1
+                        continue
+                    except json.JSONDecodeError:
+                        # 解析失败，继续扫描
+                        pass
+
+            i += 1
+
+        # 剩余未解析的文本
+        remaining = text[i:]
+
+        return objects, remaining
+
+    @staticmethod
+    def _find_matching_brace(text: str, start: int) -> int:
+        """
+        查找匹配的右大括号
+
+        Args:
+            text: 文本
+            start: 起始位置（{ 的位置）
+
+        Returns:
+            int: 匹配的 } 位置，如果找不到返回 -1
+        """
+        if start >= len(text) or text[start] != '{':
+            return -1
+
+        brace_count = 1
+        in_string = False
+        escape_next = False
+
+        i = start + 1
+        while i < len(text):
+            char = text[i]
+
+            # 处理转义
+            if escape_next:
+                escape_next = False
+                i += 1
+                continue
+
+            if char == '\\':
+                escape_next = True
+                i += 1
+                continue
+
+            # 处理字符串
+            if char == '"':
+                in_string = not in_string
+                i += 1
+                continue
+
+            # 在字符串中时，跳过
+            if in_string:
+                i += 1
+                continue
+
+            # 处理大括号
+            if char == '{':
+                brace_count += 1
+            elif char == '}':
+                brace_count -= 1
+                if brace_count == 0:
+                    return i
+
+            i += 1
+
+        return -1  # 未找到匹配的 }
+
+    @classmethod
+    def parse_streaming_batch_response(
+        cls,
+        items: List[NewsItem],
+        content: str,
+        scoring_strategy=None,
+        logger=None
+    ) -> List[NewsItem]:
+        """
+        解析流式批量响应（支持截断）
+
+        核心改进：使用 extract_complete_objects 提取完整的对象
+        即使 JSON 被截断，也能保留已解析的数据
+
+        Args:
+            items: 新闻项列表
+            content: 响应内容（可能截断）
+            scoring_strategy: 评分策略
+            logger: 日志记录器
+
+        Returns:
+            List[NewsItem]: 解析后的新闻项
+        """
+        if not content or not content.strip():
+            logger.warning("流式响应为空，使用默认分数")
+            return ErrorHandler.apply_batch_defaults(items, 'empty_response')
+
+        try:
+            # 提取完整的对象（关键改进）
+            objects, remaining = cls.extract_complete_objects(content)
+
+            if not objects:
+                # 没有提取到任何完整对象，尝试传统修复
+                logger.warning(f"流式解析未提取到对象，尝试修复。剩余文本: {remaining[:100]}...")
+                fixed = cls.fix_truncated_json(content)
+                data = json.loads(fixed)
+                if isinstance(data, list):
+                    objects = data
+                elif isinstance(data, dict):
+                    objects = [data]
+
+            if not objects:
+                raise ValueError("未能从响应中提取任何有效对象")
+
+            logger.info(f"流式解析成功: {len(objects)}/{len(items)} 条")
+
+            # 应用评分到新闻项（复用现有方法）
+            results = []
+            processed_indices = set()
+
+            for item_data in objects:
+                try:
+                    index = item_data.get('news_index', 0) - 1
+                    if 0 <= index < len(items) and index not in processed_indices:
+                        item = items[index]
+                        cls._apply_batch_scores(item, item_data, scoring_strategy, logger)
+                        results.append(item)
+                        processed_indices.add(index)
+                except Exception as e:
+                    if logger:
+                        logger.warning(f
