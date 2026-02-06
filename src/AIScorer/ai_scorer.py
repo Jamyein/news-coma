@@ -1121,7 +1121,10 @@ category_confidence表示你的确定程度（0-1，数字越大越确定）。"
             all_parsed_results = []
             total_items_parsed = 0
 
-            for batch_idx, content in enumerate(results, 1):
+            # 重要：results是按批次索引存储的字典，不是数组
+            # 在并行模式下，必须使用批次索引而非enumerate顺序
+            for batch_idx in sorted(results.keys()):
+                content = results[batch_idx]
                 if content:
                     try:
                         # 计算当前批次对应的新闻项范围
