@@ -17,7 +17,7 @@ from typing import List, Dict, Optional, Tuple
 from datetime import datetime
 from collections import defaultdict
 
-from src.models import NewsItem
+from src.models import NewsItem, AIConfig
 from .batch_provider import BatchProvider
 from .prompt_engine import PromptEngine
 from .result_processor import ResultProcessor
@@ -35,7 +35,7 @@ class SmartScorer:
     - 配置项: 8项核心配置
     """
     
-    def __init__(self, config: 'OnePassAIConfig'):
+    def __init__(self, config: AIConfig):
         """
         初始化智能评分器
         

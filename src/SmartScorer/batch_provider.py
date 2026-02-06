@@ -14,7 +14,7 @@ from tenacity import (
     retry_if_exception_type, before_sleep_log
 )
 
-from src.models import NewsItem, OnePassAIConfig, OnePassProviderConfig
+from src.models import NewsItem, AIConfig, ProviderConfig
 
 logger = logging.getLogger(__name__)
 
@@ -29,7 +29,7 @@ class BatchProvider:
     3. 错误处理和回退
     """
     
-    def __init__(self, config: OnePassAIConfig):
+    def __init__(self, config: AIConfig):
         """初始化批量提供商"""
         self.config = config
         self.provider_name = config.provider

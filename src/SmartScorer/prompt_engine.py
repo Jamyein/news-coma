@@ -7,7 +7,7 @@ PromptEngine - 1-Pass Prompt生成引擎
 
 import logging
 from typing import List, Dict
-from src.models import NewsItem, OnePassAIConfig
+from src.models import NewsItem, AIConfig
 
 logger = logging.getLogger(__name__)
 
@@ -22,7 +22,7 @@ class PromptEngine:
     3. 优化Prompt以提升输出质量
     """
     
-    def __init__(self, config: OnePassAIConfig):
+    def __init__(self, config: AIConfig):
         """初始化Prompt引擎"""
         self.config = config
         self.scoring_criteria = config.scoring_criteria
