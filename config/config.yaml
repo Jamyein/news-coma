@@ -155,8 +155,8 @@ ai:
       model: "glm-4-flash"
       max_tokens: 65536      # 大模型支持长上下文，适合真批处理
       temperature: 0.3
-      rate_limit_rpm: 50    # 降低每分钟请求数限制
-      batch_size: 5         # 减小批次大小避免触发限制
+      rate_limit_rpm: 40    # 降低每分钟请求数限制
+      batch_size: 4         # 减小批次大小避免触发限制
       max_concurrent: 6     # 降低并发数以符合速率限制
     
     kimi:
@@ -222,7 +222,7 @@ ai:
 # 并行批处理配置(性能优化：将串行改为并行)
 # ==========================================
   use_parallel_batches: true         # 禁用并行批处理，避免触发速率限制
-  max_parallel_batches: 4             # 降低并发批次
+  max_parallel_batches: 3             # 降低并发批次
   use_streaming: true                 # 启用流式响应，边生成边解析(减少等待)
 
 # ==========================================
