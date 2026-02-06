@@ -6,7 +6,7 @@
 import asyncio
 import logging
 import time
-from typing import List, Callable, Any, Optional, Dict
+from typing import List, Callable, Any, Optional, Dict, AsyncGenerator
 from openai import AsyncOpenAI, RateLimitError
 from tenacity import (
     retry, stop_after_attempt, wait_random_exponential,
