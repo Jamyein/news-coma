@@ -90,6 +90,12 @@ class Config:
             category_quota_finance=ai_data.get('category_quota_finance', 0.40),
             category_quota_tech=ai_data.get('category_quota_tech', 0.30),
             category_quota_politics=ai_data.get('category_quota_politics', 0.30),
+            # 板块最低保障配置
+            category_min_guarantee=ai_data.get('category_min_guarantee', {
+                'finance': 3,
+                'tech': 2,
+                'politics': 2
+            }),
             # 并行批处理配置（新增）
             use_parallel_batches=ai_data.get('use_parallel_batches', False),
             max_parallel_batches=ai_data.get('max_parallel_batches', 3),
