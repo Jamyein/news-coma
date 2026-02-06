@@ -276,11 +276,13 @@ output:
 # ==========================================
 filters:
   min_score_threshold: 0.0      # 最低评分阈值（设置为0，禁用最终过滤，改为排序竞争模式）
-  dedup_similarity: 0.85        # 标题Levenshtein相似度阈值(0-1)
-  # 语义去重默认关闭（避免误判"相似但较新"的内容）
-  use_semantic_dedup: false     # 启用TF-IDF语义去重(轻量级) - 默认关闭
-  # 语义相似度阈值提高到0.90（更严格，减少误判）
-  semantic_similarity: 0.90     # 语义相似度阈值(0-1)，高于此值视为重复 - 更严格
+  # ⚠️ dedup_similarity 已弃用 - 我们已移除Levenshtein字符级去重
+  # 改用纯语义去重（TF-IDF + 余弦相似度）
+  # dedup_similarity: 0.85     # [已弃用] 标题Levenshtein相似度阈值
+  
+  # ✅ 语义去重（核心去重机制）
+  use_semantic_dedup: true      # ✅ 启用TF-IDF语义去重(轻量级，~10MB内存)
+  semantic_similarity: 0.85     # ✅ 语义相似度阈值(0-1)，0.85平衡准确率和召回率
   blocked_keywords:             # 屏蔽关键词列表
     - "广告"
     - "推广"
