@@ -426,14 +426,14 @@ class AIScorer:
             return []
 
         # 如果数量较少，直接处理（保持原有逻辑）
-        if len(items) <= 100:
+        if len(items) <= self.true_batch_size:
             return await self._execute_pass1_single_batch(items)
         
         # 数量较多，使用分批处理器
-        logger.info(f"🔄 Pass1新闻数量({len(items)})超过单批阈值(100)，启动分批处理...")
+        logger.info(f"🔄 Pass1新闻数量({len(items)})超过单批阈值({self.true_batch_size})，启动分批处理...")
         
         processor = BatchProcessor(
-            batch_size=100,  # 每批100条
+            batch_size=self.true_batch_size,  # 使用配置的批次大小
             max_retries=2,
             retry_delay=1.0,
             index_key='news_index'
