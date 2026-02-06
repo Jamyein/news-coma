@@ -590,4 +590,4 @@ class ResponseParser:
                         processed_indices.add(index)
                 except Exception as e:
                     if logger:
-                        logger.warning(f
+                        logger.warning(f"流式解析单条结果失败: {e}")
