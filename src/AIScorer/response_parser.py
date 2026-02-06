@@ -5,7 +5,7 @@
 """
 import json
 import re
-from typing import Any, List, Dict, Set
+from typing import Any, List, Dict, Set, Tuple
 from datetime import datetime
 from src.models import NewsItem
 from .error_handler import ErrorHandler
