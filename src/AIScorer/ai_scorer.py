@@ -16,6 +16,7 @@ from .response_parser import ResponseParser
 from .error_handler import ErrorHandler
 from .scoring_strategy import ScoringStrategyFactory
 from .category_classifier import CategoryClassifier
+from .batch_processor import BatchProcessor
 
 logger = logging.getLogger(__name__)
 
@@ -407,9 +408,10 @@ class AIScorer:
         items: List[NewsItem]
     ) -> List[Dict]:
         """
-        Pass 1: AI批量分类+打分
+        Pass 1: AI批量分类+打分（支持分批处理）
 
         使用AI在一次API调用中完成分类和打分。
+        当新闻数量超过单批阈值时，自动分批处理。
 
         Args:
             items: 新闻项列表
@@ -423,26 +425,72 @@ class AIScorer:
         if not items:
             return []
 
+        # 如果数量较少，直接处理（保持原有逻辑）
+        if len(items) <= self.true_batch_size:
+            return await self._execute_pass1_single_batch(items)
+        
+        # 数量较多，使用分批处理器
+        logger.info(f"🔄 Pass1新闻数量({len(items)})超过单批阈值({self.true_batch_size})，启动分批处理...")
+        
+        processor = BatchProcessor(
+            batch_size=self.true_batch_size,  # 使用配置的批次大小
+            max_retries=2,
+            retry_delay=1.0,
+            index_key='news_index'
+        )
+        
+        # 使用分批处理器处理所有新闻
+        results = await processor.process(
+            items=items,
+            process_func=self._execute_pass1_single_batch,
+            description="Pass1 AI分类"
+        )
+        
+        # 记录统计信息
+        stats = processor.get_stats()
+        logger.info(f"✅ Pass1分批处理完成: {stats['total_results']}/{stats['total_items']}条成功")
+        
+        return results
+
+    async def _execute_pass1_single_batch(
+        self,
+        items: List[NewsItem]
+    ) -> List[Dict]:
+        """
+        执行单批Pass1分类（核心处理逻辑）
+        
+        将原_pass1_ai_classification_batch的核心逻辑提取到此方法
+        
+        Args:
+            items: 单批新闻项列表（最多100条）
+            
+        Returns:
+            List[Dict]: 分类结果列表
+        """
+        if not items:
+            return []
+        
         # 构建Prompt
         prompt = self.prompt_builder.build_pass1_ai_classification_prompt(items)
-
+        
         try:
-            # 调用API
+            # 调用API - 使用动态max_tokens（关键修复）
             content = await self.provider_manager.call_batch_api(
                 prompt=prompt,
-                max_tokens=2000,
+                max_tokens=self.provider_manager.current_config.max_tokens,  # 动态读取配置，不再是硬编码2000
                 temperature=self.provider_manager.current_config.temperature
             )
-
+            
             # 解析响应
             results = self._parse_pass1_ai_classification_response(items, content)
-
-            logger.debug(f"AI分类完成: {len(results)}条新闻")
+            
+            logger.debug(f"Pass1单批处理完成: {len(results)}/{len(items)}条")
             return results
-
+            
         except Exception as e:
-            logger.error(f"Pass 1 AI分类API调用失败: {e}")
-            raise  # 向上抛出异常，中断评分流程
+            logger.error(f"Pass1单批处理失败: {e}")
+            # 单批失败时抛出异常，让上层分批处理器决定是否重试
+            raise
 
     async def _retry_classification(
         self,
@@ -1388,3 +1436,98 @@ category_confidence表示你的确定程度（0-1，数字越大越确定）。"
         """
         self.enable_dynamic_threshold = enabled
         logger.info(f"动态阈值调整: {'启用' if enabled else '禁用'}")
+
+    # ==================== 流式批处理支持（新增） ====================
+
+    async def _pass2_scoring_streaming_batch(
+        self,
+        items: List[NewsItem]
+    ) -> List[NewsItem]:
+        """
+        Pass 2: 流式批处理评分
+        
+        使用流式 JSON 解析，边接收边解析，即使被截断也能恢复部分数据
+        
+        Args:
+            items: 新闻项列表
+        
+        Returns:
+            List[NewsItem]: 评分后的新闻项
+        """
+        logger.info(f"🌊 Pass2 流式批处理: {len(items)} 条新闻")
+        
+        # 构建分类映射
+        category_map = {}
+        for i, item in enumerate(items, 1):
+            category = item.ai_category or item.pre_category or item.category
+            standardized_category = self._standardize_category(category)
+            category_map[i] = standardized_category
+        
+        # 分批处理
+        batch_size = self.true_batch_size
+        batches = [items[i:i + batch_size] for i in range(0, len(items), batch_size)]
+        
+        all_parsed_results = []
+        
+        for batch_idx, batch in enumerate(batches, 1):
+            logger.info(f"📦 流式处理批次 {batch_idx}/{len(batches)} ({len(batch)} 条)")
+            
+            try:
+                # 构建 Prompt
+                prompt = self.prompt_builder.build_pass2_scoring_prompt(batch, category_map)
+                
+                # 流式接收和解析
+                buffer = ""
+                parsed_objects = []
+                
+                async for chunk in self.provider_manager.call_streaming_api(
+                    prompt=prompt,
+                    max_tokens=min(1000 + len(batch) * 600, 12000),
+                    temperature=self.provider_manager.current_config.temperature
+                ):
+                    buffer += chunk
+                    
+                    # 尝试解析已接收的数据（关键：使用 try_parse_partial_json）
+                    objects, remaining = self.response_parser.try_parse_partial_json(buffer, logger)
+                    if objects:
+                        parsed_objects.extend(objects)
+                        buffer = remaining  # 保留未解析的部分
+                        logger.debug(f"批次 {batch_idx} 实时解析 {len(objects)} 个，累计 {len(parsed_objects)} 个")
+                
+                # 完成解析（处理剩余数据）
+                if buffer:
+                    try:
+                        # 尝试使用传统的 fix_truncated_json 修复
+                        fixed = self.response_parser.fix_truncated_json(buffer)
+                        data = json.loads(fixed)
+                        if isinstance(data, list):
+                            parsed_objects.extend(data)
+                        elif isinstance(data, dict):
+                            parsed_objects.append(data)
+                    except Exception as e:
+                        logger.warning(f"批次 {batch_idx} 剩余数据解析失败: {e}")
+                
+                logger.info(f"✅ 批次 {batch_idx} 流式解析完成: {len(parsed_objects)}/{len(batch)} 条")
+                
+                # 应用评分到新闻项
+                for obj in parsed_objects:
+                    try:
+                        index = obj.get('news_index', 0) - 1
+                        if 0 <= index < len(batch):
+                            item = batch[index]
+                            self.response_parser._apply_batch_scores(
+                                item, obj, None, logger
+                            )
+                            all_parsed_results.append(item)
+                    except Exception as e:
+                        logger.error(f"应用评分失败: {e}")
+                
+            except Exception as e:
+                logger.error(f"❌ 批次 {batch_idx} 流式处理失败: {e}")
+                # 降级：使用默认分数
+                for item in batch:
+                    item.ai_score = 5.0
+                    all_parsed_results.append(item)
+        
+        logger.info(f"✅ Pass2 流式批处理完成: {len(all_parsed_results)}/{len(items)} 条")
+        return all_parsed_results

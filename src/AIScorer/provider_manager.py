@@ -6,7 +6,7 @@
 import asyncio
 import logging
 import time
-from typing import List, Callable, Any, Optional, Dict
+from typing import List, Callable, Any, Optional, Dict, AsyncGenerator
 from openai import AsyncOpenAI, RateLimitError
 from tenacity import (
     retry, stop_after_attempt, wait_random_exponential,
@@ -758,3 +758,62 @@ class ProviderManager:
                 item.ai_score = kwargs.get('default_score', 5.0)
         
         return batch_index, "\\n".join(results) if results else None, None
+
+    # ==================== 流式 API 支持（新增） ====================
+
+    async def call_streaming_api(
+        self,
+        prompt: str,
+        max_tokens: int = 8000,
+        temperature: float = 0.3
+    ) -> AsyncGenerator[str, None]:
+        """
+        调用流式 API，返回异步生成器
+        
+        边接收边返回数据块，实现真正的流式处理
+        
+        Args:
+            prompt: Prompt
+            max_tokens: 最大 tokens
+            temperature: 温度
+        
+        Yields:
+            str: 数据块
+        """
+        messages = [
+            {
+                "role": "system",
+                "content": "你是一位资深新闻编辑和筛选员，擅长评估新闻价值和撰写中文摘要。你必须严格返回JSON数组格式。"
+            },
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ]
+        
+        try:
+            # 应用速率限制
+            if self.rate_limiter:
+                await self.rate_limiter.acquire()
+            
+            # 发起流式请求
+            stream = await self.client.chat.completions.create(
+                model=self.model,
+                messages=messages,
+                max_tokens=max_tokens,
+                temperature=temperature,
+                stream=True,
+                response_format={"type": "json_object"}
+            )
+            
+            self.api_call_count += 1
+            
+            # 流式返回数据
+            async for chunk in stream:
+                if chunk.choices and chunk.choices[0].delta.content:
+                    content = chunk.choices[0].delta.content
+                    yield content
+        
+        except Exception as e:
+            logger.error(f"流式 API 调用失败: {e}")
+            raise

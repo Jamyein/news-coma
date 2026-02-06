@@ -201,85 +201,123 @@ class RSSAggregator:
         return filtered
     
     def _select_top_news(self, items: List[NewsItem]) -> List[NewsItem]:
-        """选择Top N新闻（按三板块4:3:3固定比例分配）"""
+        """
+        选择Top N新闻（最低保障线 + 弹性再分配）
+        
+        策略：
+        1. 阶段1：分配最低保障（财经3条、科技2条、社会政治2条）
+        2. 阶段2：弹性再分配（按优先级：财经→科技→社会政治）
+        3. 阶段3：填充剩余配额（从剩余新闻中选取）
+        """
         if not items:
             return []
-
+        
+        # ========== 准备阶段：分组和排序 ==========
+        
         # 按 ai_category 分组
         finance_items = [item for item in items if item.ai_category == "财经"]
         tech_items = [item for item in items if item.ai_category == "科技"]
         politics_items = [item for item in items if item.ai_category == "社会政治"]
-        
-        # 未分类新闻单独处理
         uncategorized_items = [item for item in items if item.ai_category not in ["财经", "科技", "社会政治"]]
-
-        # 固定总数：30条（根据配置）
-        max_count = self.config.output_config.max_news_count  # 从配置读取，默认为30
         
-        # 固定比例分配：财经40%，科技30%，社会政治30%
-        target_finance_count = int(max_count * self.config.ai_config.category_quota_finance)  # 12条
-        target_tech_count = int(max_count * self.config.ai_config.category_quota_tech)        # 9条
-        target_politics_count = int(max_count * self.config.ai_config.category_quota_politics)  # 9条
-        
-        # 实际可选取数量（不能超过实际可用数量）
-        actual_finance_count = min(target_finance_count, len(finance_items))
-        actual_tech_count = min(target_tech_count, len(tech_items))
-        actual_politics_count = min(target_politics_count, len(politics_items))
-        
-        # 计算剩余配额
-        remaining_quota = max_count - (actual_finance_count + actual_tech_count + actual_politics_count)
-        
-        # 如果某板块新闻不足，按优先级重新分配配额
-        # 优先级：财经 > 科技 > 社会政治 > 未分类
-        if remaining_quota > 0:
-            # 首先尝试补充财经
-            if actual_finance_count < target_finance_count:
-                can_add = min(remaining_quota, target_finance_count - actual_finance_count)
-                actual_finance_count += can_add
-                remaining_quota -= can_add
-            
-            # 然后尝试补充科技
-            if remaining_quota > 0 and actual_tech_count < target_tech_count:
-                can_add = min(remaining_quota, target_tech_count - actual_tech_count)
-                actual_tech_count += can_add
-                remaining_quota -= can_add
-            
-            # 然后尝试补充社会政治
-            if remaining_quota > 0 and actual_politics_count < target_politics_count:
-                can_add = min(remaining_quota, target_politics_count - actual_politics_count)
-                actual_politics_count += can_add
-                remaining_quota -= can_add
-            
-            # 最后用未分类新闻填充剩余配额
-            if remaining_quota > 0 and uncategorized_items:
-                # 从未分类新闻中选取评分最高的
-                uncategorized_sorted = sorted(uncategorized_items, key=lambda x: (x.ai_score or 0, x.published_at), reverse=True)
-                extra_from_uncategorized = min(remaining_quota, len(uncategorized_sorted))
-                # 将这些未分类新闻标记为"未分类"板块
-                for item in uncategorized_sorted[:extra_from_uncategorized]:
-                    item.ai_category = "未分类"
-                uncategorized_selected = uncategorized_sorted[:extra_from_uncategorized]
-                remaining_quota -= extra_from_uncategorized
-            else:
-                uncategorized_selected = []
-
-        # 各自板块内按AI评分排序并选取
+        # 按评分排序的辅助函数
         def sort_by_score(item_list):
             return sorted(item_list, key=lambda x: (x.ai_score or 0, x.published_at), reverse=True)
-
-        selected_finance = sort_by_score(finance_items)[:actual_finance_count]
-        selected_tech = sort_by_score(tech_items)[:actual_tech_count]
-        selected_politics = sort_by_score(politics_items)[:actual_politics_count]
         
-        # 合并所有选中新闻
-        if 'uncategorized_selected' in locals():
-            top_items = selected_finance + selected_tech + selected_politics + uncategorized_selected
-        else:
-            top_items = selected_finance + selected_tech + selected_politics
-
+        # ========== 阶段1：最低保障分配 ==========
+        
+        # 获取最低保障配置
+        min_guarantee = self.config.ai_config.category_min_guarantee
+        min_finance = min_guarantee.get('finance', 3)
+        min_tech = min_guarantee.get('tech', 2)
+        min_politics = min_guarantee.get('politics', 2)
+        
+        # 分配最低保障（不能超过实际可用数量）
+        guaranteed_finance = sort_by_score(finance_items)[:min(min_finance, len(finance_items))]
+        guaranteed_tech = sort_by_score(tech_items)[:min(min_tech, len(tech_items))]
+        guaranteed_politics = sort_by_score(politics_items)[:min(min_politics, len(politics_items))]
+        
+        # 记录已使用的新闻
+        used_links = {item.link for item in guaranteed_finance + guaranteed_tech + guaranteed_politics}
+        
+        # 获取各板块剩余新闻
+        remaining_finance = [item for item in finance_items if item.link not in used_links]
+        remaining_tech = [item for item in tech_items if item.link not in used_links]
+        remaining_politics = [item for item in politics_items if item.link not in used_links]
+        
+        # ========== 阶段2：弹性再分配 ==========
+        
+        max_count = self.config.output_config.max_news_count
+        target_finance = int(max_count * self.config.ai_config.category_quota_finance)
+        target_tech = int(max_count * self.config.ai_config.category_quota_tech)
+        target_politics = int(max_count * self.config.ai_config.category_quota_politics)
+        
+        # 计算各板块还可接收多少条（目标配额 - 已分配的最低保障）
+        can_add_finance = max(0, target_finance - len(guaranteed_finance))
+        can_add_tech = max(0, target_tech - len(guaranteed_tech))
+        can_add_politics = max(0, target_politics - len(guaranteed_politics))
+        
+        # 按优先级填充：财经 → 科技 → 社会政治
+        extra_finance = sort_by_score(remaining_finance)[:min(can_add_finance, len(remaining_finance))]
+        used_links.update({item.link for item in extra_finance})
+        remaining_finance = [item for item in remaining_finance if item.link not in used_links]
+        
+        extra_tech = sort_by_score(remaining_tech)[:min(can_add_tech, len(remaining_tech))]
+        used_links.update({item.link for item in extra_tech})
+        remaining_tech = [item for item in remaining_tech if item.link not in used_links]
+        
+        extra_politics = sort_by_score(remaining_politics)[:min(can_add_politics, len(remaining_politics))]
+        used_links.update({item.link for item in extra_politics})
+        remaining_politics = [item for item in remaining_politics if item.link not in used_links]
+        
+        # ========== 阶段3：填充剩余配额 ==========
+        
+        selected_finance = guaranteed_finance + extra_finance
+        selected_tech = guaranteed_tech + extra_tech
+        selected_politics = guaranteed_politics + extra_politics
+        
+        current_total = len(selected_finance) + len(selected_tech) + len(selected_politics)
+        remaining_quota = max_count - current_total
+        
+        uncategorized_selected = []
+        
+        if remaining_quota > 0:
+            # 按优先级顺序填充
+            # 1. 先填充财经
+            if remaining_quota > 0 and remaining_finance:
+                can_add = min(remaining_quota, len(remaining_finance))
+                additional_finance = sort_by_score(remaining_finance)[:can_add]
+                selected_finance.extend(additional_finance)
+                remaining_quota -= len(additional_finance)
+            
+            # 2. 然后填充科技
+            if remaining_quota > 0 and remaining_tech:
+                can_add = min(remaining_quota, len(remaining_tech))
+                additional_tech = sort_by_score(remaining_tech)[:can_add]
+                selected_tech.extend(additional_tech)
+                remaining_quota -= len(additional_tech)
+            
+            # 3. 然后填充社会政治
+            if remaining_quota > 0 and remaining_politics:
+                can_add = min(remaining_quota, len(remaining_politics))
+                additional_politics = sort_by_score(remaining_politics)[:can_add]
+                selected_politics.extend(additional_politics)
+                remaining_quota -= len(additional_politics)
+            
+            # 4. 最后用未分类填充
+            if remaining_quota > 0 and uncategorized_items:
+                can_add = min(remaining_quota, len(uncategorized_items))
+                uncategorized_sorted = sort_by_score(uncategorized_items)
+                uncategorized_selected = uncategorized_sorted[:can_add]
+                for item in uncategorized_selected:
+                    item.ai_category = "未分类"
+        
+        # 合并最终结果
+        top_items = selected_finance + selected_tech + selected_politics + uncategorized_selected
+        
         # 记录各板块选取情况
-        logger.info(f"📊 三板块选取: 财经 {len(selected_finance)}/{target_finance_count}条 | 科技 {len(selected_tech)}/{target_tech_count}条 | 社会政治 {len(selected_politics)}/{target_politics_count}条")
-        if 'uncategorized_selected' in locals() and uncategorized_selected:
+        logger.info(f"📊 三板块选取: 财经 {len(selected_finance)}条 | 科技 {len(selected_tech)}条 | 社会政治 {len(selected_politics)}条")
+        if uncategorized_selected:
             logger.info(f"📊 补充未分类新闻: {len(uncategorized_selected)}条")
         logger.info(f"📋 从 {len(items)} 条中精选 Top {len(top_items)} 条新闻 (目标: {max_count}条)")
 

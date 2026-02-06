@@ -155,9 +155,9 @@ ai:
       model: "glm-4-flash"
       max_tokens: 65536      # 大模型支持长上下文，适合真批处理
       temperature: 0.3
-      rate_limit_rpm: 60
-      batch_size: 5          # 基础批处理大小(向后兼容)
-      max_concurrent: 6     # 真批处理启用后，此值可适当降低
+      rate_limit_rpm: 50    # 降低每分钟请求数限制
+      batch_size: 5         # 减小批次大小避免触发限制
+      max_concurrent: 6     # 降低并发数以符合速率限制
     
     kimi:
       api_key: "${KIMI_API_KEY}"
@@ -216,14 +216,22 @@ ai:
 # 真批处理配置(大幅降低API成本)
 # ==========================================
   use_true_batch: true    # 是否启用真批处理(一次API调用处理多条)
-  true_batch_size: 5      # 真批处理每批数量(减小以缩短等待时间)
+  true_batch_size: 20     # 真批处理每批数量(保持10条避免过短)
 
 # ==========================================
 # 并行批处理配置(性能优化：将串行改为并行)
 # ==========================================
-  use_parallel_batches: true          # 启用并行批处理(15分钟→3-5分钟)
-  max_parallel_batches: 5             # 最大并发批次(5→减小批次大小+提高并发)
+  use_parallel_batches: true         # 禁用并行批处理，避免触发速率限制
+  max_parallel_batches: 4             # 降低并发批次
   use_streaming: true                 # 启用流式响应，边生成边解析(减少等待)
+
+# ==========================================
+# 流式JSON解析配置(解决JSON截断问题)
+# ==========================================
+  use_streaming_json_parser: true       # 【新增】启用流式JSON解析，边接收边解析，解决截断问题
+  streaming_json_priority: true        # 【新增】优先使用流式JSON解析（失败时自动降级到传统方式）
+  streaming_json_buffer_size: 4096      # 【新增】流式解析缓冲区大小（字节）
+  streaming_json_max_depth: 10          # 【新增】最大JSON嵌套深度
 
 # ==========================================
 # 超时控制配置(防止慢批次拖累整体)
@@ -276,11 +284,13 @@ output:
 # ==========================================
 filters:
   min_score_threshold: 0.0      # 最低评分阈值（设置为0，禁用最终过滤，改为排序竞争模式）
-  dedup_similarity: 0.85        # 标题Levenshtein相似度阈值(0-1)
-  # 语义去重默认关闭（避免误判"相似但较新"的内容）
-  use_semantic_dedup: false     # 启用TF-IDF语义去重(轻量级) - 默认关闭
-  # 语义相似度阈值提高到0.90（更严格，减少误判）
-  semantic_similarity: 0.90     # 语义相似度阈值(0-1)，高于此值视为重复 - 更严格
+  # ⚠️ dedup_similarity 已弃用 - 我们已移除Levenshtein字符级去重
+  # 改用纯语义去重（TF-IDF + 余弦相似度）
+  # dedup_similarity: 0.85     # [已弃用] 标题Levenshtein相似度阈值
+  
+  # ✅ 语义去重（核心去重机制）
+  use_semantic_dedup: true      # ✅ 启用TF-IDF语义去重(轻量级，~10MB内存)
+  semantic_similarity: 0.85     # ✅ 语义相似度阈值(0-1)，0.85平衡准确率和召回率
   blocked_keywords:             # 屏蔽关键词列表
     - "广告"
     - "推广"

@@ -209,47 +209,53 @@ class RSSFetcher:
     
     def _deduplicate(self, items: List[NewsItem]) -> List[NewsItem]:
         """
-        去重 - 两阶段去重策略
-        阶段1: URL + Levenshtein (快速去重)
-        阶段2: 语义相似度 (精准去重，可选)
+        纯语义去重 - 简化架构
+        去掉低效的Levenshtein字符级去重，保留URL精确去重 + TF-IDF语义去重
+        优势：更好的中文支持、更高的去重准确率、更简洁的代码
         """
-        # 阶段1: 快速去重
-        unique_items = self._fast_dedup(items)
+        import time
+        start_time = time.time()
         
-        # 阶段2: 语义去重 (如果启用)
-        if self._semantic_dedup_enabled and len(unique_items) > 1:
-            logger.info(f"🔍 启动语义去重检查: {len(unique_items)} 条")
-            unique_items = self._semantic_deduplicate(unique_items)
+        if len(items) <= 1:
+            return items
         
-        return unique_items
-    
-    def _fast_dedup(self, items: List[NewsItem]) -> List[NewsItem]:
-        """快速去重 - 基于URL和Levenshtein距离"""
+        # 步骤1：URL精确去重（快速、轻量、必要）
         seen_urls = set()
-        seen_titles = []
-        unique_items = []
-        
-        threshold = self.filter_config.dedup_similarity
+        unique_by_url = []
+        url_duplicates = 0
         
         for item in items:
-            # URL去重
             if item.link in seen_urls:
+                url_duplicates += 1
                 continue
-            
-            # 标题相似度去重
-            is_duplicate = False
-            for seen_title in seen_titles:
-                similarity = self._title_similarity(item.title, seen_title)
-                if similarity >= threshold:
-                    is_duplicate = True
-                    break
-            
-            if not is_duplicate:
-                seen_urls.add(item.link)
-                seen_titles.append(item.title)
-                unique_items.append(item)
+            seen_urls.add(item.link)
+            unique_by_url.append(item)
         
-        return unique_items
+        if url_duplicates > 0:
+            logger.debug(f"🔗 URL去重移除 {url_duplicates} 条")
+        
+        # 步骤2：语义去重（核心逻辑 - 使用TF-IDF向量化 + 余弦相似度）
+        if len(unique_by_url) > 1:
+            logger.info(f"🔍 语义去重: {len(unique_by_url)} 条")
+            
+            # 确保启用语义去重
+            if not self._semantic_dedup_enabled:
+                logger.warning("语义去重被禁用，启用临时向量化器")
+                self._semantic_dedup_enabled = True
+            
+            final_items = self._semantic_deduplicate(unique_by_url)
+        else:
+            final_items = unique_by_url
+        
+        # 性能监控
+        elapsed = time.time() - start_time
+        total_removed = len(items) - len(final_items)
+        logger.info(
+            f"✅ 去重完成: {len(items)}条 → {len(final_items)}条 "
+            f"(移除{total_removed}条, 耗时{elapsed:.2f}秒)"
+        )
+        
+        return final_items
     
     def _semantic_deduplicate(self, items: List[NewsItem]) -> List[NewsItem]:
         """
