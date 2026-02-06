@@ -155,9 +155,9 @@ ai:
       model: "glm-4-flash"
       max_tokens: 65536      # 大模型支持长上下文，适合真批处理
       temperature: 0.3
-      rate_limit_rpm: 60
-      batch_size: 5          # 基础批处理大小(向后兼容)
-      max_concurrent: 6     # 真批处理启用后，此值可适当降低
+      rate_limit_rpm: 30    # 降低每分钟请求数限制
+      batch_size: 3         # 减小批次大小避免触发限制
+      max_concurrent: 2     # 降低并发数以符合速率限制
     
     kimi:
       api_key: "${KIMI_API_KEY}"
@@ -216,13 +216,13 @@ ai:
 # 真批处理配置(大幅降低API成本)
 # ==========================================
   use_true_batch: true    # 是否启用真批处理(一次API调用处理多条)
-  true_batch_size: 5      # 真批处理每批数量(减小以缩短等待时间)
+  true_batch_size: 10     # 真批处理每批数量(保持10条避免过短)
 
 # ==========================================
 # 并行批处理配置(性能优化：将串行改为并行)
 # ==========================================
-  use_parallel_batches: true          # 启用并行批处理(15分钟→3-5分钟)
-  max_parallel_batches: 5             # 最大并发批次(5→减小批次大小+提高并发)
+  use_parallel_batches: false         # 禁用并行批处理，避免触发速率限制
+  max_parallel_batches: 2             # 降低并发批次
   use_streaming: true                 # 启用流式响应，边生成边解析(减少等待)
 
 # ==========================================
