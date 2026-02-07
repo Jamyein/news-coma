@@ -109,7 +109,9 @@ class Config:
             'diversity_weight': smart_ai_data.get('diversity_weight', 0.3),
             'fallback_enabled': smart_ai_data.get('fallback_enabled', True),
             'fallback_chain': smart_ai_data.get('fallback_chain', ['deepseek', 'gemini']),
-            'category_min_guarantee': smart_ai_data.get('category_min_guarantee', {})
+            'category_min_guarantee': smart_ai_data.get('category_min_guarantee', {}),
+            'category_fixed_targets': smart_ai_data.get('category_fixed_targets', {}),
+            'use_fixed_proportion': smart_ai_data.get('use_fixed_proportion', False)
         }
 
     @property

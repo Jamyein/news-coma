@@ -200,6 +200,16 @@ smart_ai:
     科技: 3
     社会政治: 2
 
+  # 混合方案：固定数量（第一阶段）+ 比例分配（第二阶段）
+  # 固定保障数量（每个分类至少保障N条）
+  category_fixed_targets:
+    财经: 4
+    科技: 3
+    社会政治: 3
+
+  # 是否启用混合方案（true=使用新算法，false=使用原有算法）
+  use_fixed_proportion: true
+
   # 回退配置（简化）
   fallback_enabled: true
   fallback_chain:

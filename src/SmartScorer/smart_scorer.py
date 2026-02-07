@@ -179,9 +179,14 @@ class SmartScorer:
     
     def _ensure_diversity(self, items: List[NewsItem]) -> List[NewsItem]:
         """
-        确保分类多样性（带最低保障）
+        确保分类多样性（混合方案）
         
-        策略：
+        策略（use_fixed_proportion=true时启用）：
+        1. 固定保障阶段：按category_fixed_targets保障每类最低数量（4:3:3）
+        2. 比例分配阶段：按各分类剩余新闻比例分配剩余名额
+        3. 轮询补充阶段：如仍有剩余名额，按分类轮询选择
+        
+        原有策略（use_fixed_proportion=false时使用）：
         1. 按分类分组并按评分排序
         2. 按比例缩减保障数（如需要）
         3. 优先满足各分类最低保障
@@ -189,47 +194,156 @@ class SmartScorer:
         """
         if not items:
             return []
-        
+
         max_items = self.config.max_output_items
-        guarantees = self.config.category_min_guarantee
-        
+
         # 1. 按分类分组并排序
         by_category = defaultdict(list)
         for item in items:
             category = getattr(item, 'ai_category', '未分类')
             by_category[category].append(item)
-        
+
+        # 根据配置选择算法
+        if self.config.use_fixed_proportion and self.config.category_fixed_targets:
+            return self._ensure_diversity_mixed(items, by_category, max_items)
+        else:
+            return self._ensure_diversity_original(items, by_category, max_items)
+
+    def _ensure_diversity_mixed(
+        self,
+        items: List[NewsItem],
+        by_category: Dict[str, List[NewsItem]],
+        max_items: int
+    ) -> List[NewsItem]:
+        """
+        混合方案：固定保障 + 比例分配 + 轮询补充
+        """
+        fixed_targets = self.config.category_fixed_targets
+        guarantees = self.config.category_min_guarantee or {}
+
+        selected = []
+        selected_by_category = defaultdict(int)
+
+        # 第一阶段：固定保障（4:3:3）
+        fixed_counts = {}
+        for category, target in fixed_targets.items():
+            cat_items = by_category.get(category, [])
+            actual_count = min(target, len(cat_items))
+            fixed_counts[category] = actual_count
+            for item in cat_items[:actual_count]:
+                selected.append(item)
+                selected_by_category[category] += 1
+
+        stage1_count = len(selected)
+        logger.info(f"📊 混合方案-第一阶段(固定保障): {dict(fixed_counts)}, 共{stage1_count}条")
+
+        # 第二阶段：按比例分配剩余名额
+        remaining_slots = max_items - stage1_count
+
+        if remaining_slots > 0:
+            # 计算各分类剩余可用新闻数和比例
+            remaining_by_category = {}
+            total_remaining = 0
+
+            for category in fixed_targets.keys():
+                cat_items = by_category.get(category, [])
+                already_selected = selected_by_category[category]
+                remaining = len(cat_items) - already_selected
+                if remaining > 0:
+                    remaining_by_category[category] = remaining
+                    total_remaining += remaining
+
+            if total_remaining > 0:
+                proportion_counts = {}
+                for category, remaining_count in remaining_by_category.items():
+                    proportion = remaining_count / total_remaining
+                    allocated = min(int(proportion * remaining_slots), remaining_count)
+                    proportion_counts[category] = allocated
+
+                stage2_selected = 0
+                for category, allocated in proportion_counts.items():
+                    cat_items = by_category.get(category, [])
+                    already_selected = selected_by_category[category]
+                    for item in cat_items[already_selected:already_selected + allocated]:
+                        selected.append(item)
+                        selected_by_category[category] += 1
+                    stage2_selected += allocated
+
+                logger.info(f"📊 混合方案-第二阶段(比例分配): {proportion_counts}, 实际分配{stage2_selected}条")
+
+        # 第三阶段：轮询补充（如仍有剩余）
+        stage3_count = 0
+        while len(selected) < max_items:
+            added = False
+            for category in fixed_targets.keys():
+                if len(selected) >= max_items:
+                    break
+                cat_items = by_category.get(category, [])
+                already_selected = selected_by_category[category]
+                if already_selected < len(cat_items):
+                    item = cat_items[already_selected]
+                    selected.append(item)
+                    selected_by_category[category] += 1
+                    added = True
+                    stage3_count += 1
+            if not added:
+                break
+
+        if stage3_count > 0:
+            logger.info(f"📊 混合方案-第三阶段(轮询补充): {stage3_count}条")
+
+        # 记录最终分类分布
+        final_distribution = {}
+        for item in selected:
+            category = getattr(item, 'ai_category', '未分类')
+            final_distribution[category] = final_distribution.get(category, 0) + 1
+        logger.info(f"📊 最终分类分布(混合方案): {final_distribution}")
+
+        # 最终按评分排序
+        selected.sort(key=lambda x: x.ai_score or 0, reverse=True)
+        return selected
+
+    def _ensure_diversity_original(
+        self,
+        items: List[NewsItem],
+        by_category: Dict[str, List[NewsItem]],
+        max_items: int
+    ) -> List[NewsItem]:
+        """
+        原有算法（向后兼容）
+        """
+        guarantees = self.config.category_min_guarantee
+
         # 如果未配置保障，使用默认策略：每分类至少1条
         if not guarantees:
             guarantees = {cat: 1 for cat in by_category.keys() if cat != '未分类'}
-        
-        # 2. 按比例缩减保障数（当总数超过max_items时）
+
+        # 按比例缩减保障数（当总数超过max_items时）
         total_guarantee = sum(guarantees.values())
         if total_guarantee > max_items:
             scale = max_items / total_guarantee
             adjusted_guarantees = {
-                cat: max(1, int(count * scale))  # 至少保障1条
+                cat: max(1, int(count * scale))
                 for cat, count in guarantees.items()
             }
             logger.warning(f"保障总数({total_guarantee})超过上限({max_items})，已按比例缩减至: {adjusted_guarantees}")
         else:
             adjusted_guarantees = guarantees
-        
-        # 3. 从各分类取保障数量
+
+        # 从各分类取保障数量
         selected = []
         for category, min_count in adjusted_guarantees.items():
             cat_items = by_category.get(category, [])
-            # 取该分类前N条高分新闻
             for item in cat_items[:min_count]:
                 if len(selected) < max_items:
                     selected.append(item)
-        
-        # 4. 补充剩余名额（按评分从高到低）
+
+        # 补充剩余名额（按评分从高到低）
         for item in items:
             if item not in selected and len(selected) < max_items:
                 selected.append(item)
-        
-        # 5. 最终按评分排序
+
+        # 最终按评分排序
         selected.sort(key=lambda x: x.ai_score or 0, reverse=True)
         return selected
     

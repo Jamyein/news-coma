@@ -105,6 +105,12 @@ class AIConfig:
     # 分类最低保障配置（从config.yaml加载，无配置则使用空字典）
     category_min_guarantee: Dict[str, int] = field(default_factory=dict)
 
+    # 固定数量目标配置（混合方案第一阶段）
+    category_fixed_targets: Dict[str, int] = field(default_factory=dict)
+
+    # 是否启用固定比例混合方案
+    use_fixed_proportion: bool = False
+
     # 错误处理默认分数（新增）
     default_score_on_error: float = 3.0             # 错误时的默认分数
     default_score_on_parse_error: float = 5.0       # 解析错误时的默认分数
