@@ -4,6 +4,7 @@ import json
 import logging
 from src.models import NewsItem, AIConfig
 
+
 logger = logging.getLogger(__name__)
 
 

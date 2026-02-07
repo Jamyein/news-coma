@@ -1,106 +1,89 @@
-# News Coma - 智能新闻聚合系统
+# News Coma - 智能 RSS 新闻聚合器
 
-## 概述
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11+-blue.svg" alt="Python 3.11+">
+  <img src="https://img.shields.io/badge/LLM-14%20Providers-green.svg" alt="14 LLM Providers">
+  <img src="https://img.shields.io/badge/Schedule-GitHub%20Actions-orange.svg" alt="GitHub Actions">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License">
+</p>
 
-News Coma 是一个智能新闻聚合系统，支持14家国内外LLM提供商，具备**1-Pass**和**2-Pass**两种评分系统，能够智能筛选和总结新闻。
+News Coma 是一个基于 Python 的智能 RSS 新闻聚合器，运行在 **GitHub Actions** 中每日自动运行。支持多家 LLM 提供商**，具备 AI 驱动的 **1-Pass** 评分系统，能够智能筛选、翻译、总结新闻并提取关键要点。
 
-> **🎉 新功能**: 1-Pass评分系统现已可用！相比2-Pass减少50% API调用，处理时间缩短70%。
+---
 
 ## 核心特性
 
-### 🚀 1-Pass 评分系统（新！）
-- **极致简化**：从2-pass的3500行代码减少到750行，降低80%代码复杂度
-- **性能提升**：API调用减少50%，处理时间缩短70%
-- **配置简化**：从20+配置项减少到8项核心配置
-- **单次调用**：分类+评分+总结一次API调用完成
-- **易于维护**：模块化设计，核心组件仅4个文件
+### 🚀 1-Pass AI 评分系统
+- **单次调用**：分类 + 评分 + 总结 一次 API 完成
+- **并行批处理**：3 批次并行，120 秒超时保护
+- **智能降级**：超时后自动单条处理
 
-### 🚀 2-Pass 评分系统
-- **差异化处理**：财经、科技、社会政治三大板块使用不同评分标准
-- **宽松预筛 + 严格精选**：Pass 1 快速过滤，Pass 2 深度评分
-- **固定比例输出**：40%财经 + 30%科技 + 30%社会政治
+### LLM 提供商支持
+- **自动回退**：主提供商失败自动切换备用
+- **真批处理**：一次 API 处理多条新闻
 
-### 🔌 多提供商支持
-- 支持14家LLM提供商：Gemini, OpenAI, Claude, DeepSeek, 智谱, Kimi, 通义千问等
-- 自动回退机制：主提供商失败时自动切换到备用提供商
-- 真批处理：一次API调用处理多条新闻，大幅降低API成本
+### 📊 AI 智能功能
+- **5 维度评分**：重要性(30%) + 时效性(20%) + 技术深度(20%) + 受众广度(15%) + 实用性(15%)
+- **自动翻译**：英文新闻自动翻译中文
+- **智能总结**：200 字中文摘要
+- **关键要点**：提取 3-5 个核心要点
+- **语义去重**：TF-IDF 轻量级去重
 
-### 📊 智能功能
-- AI评分：基于5维度标准对新闻进行评分
-- 自动翻译：英文新闻自动翻译为中文
-- 智能总结：生成200字左右的中文总结
-- 关键要点：提取3-5个关键要点
-- 语义去重：TF-IDF轻量级语义去重
+### ⚡ GitHub Actions 自动化
+- **每日运行**：UTC 00:00 自动执行
+- **零运维成本**：完全免费
+- **手动触发**：支持 workflow_dispatch
 
-### ⚡ 性能优化
-- **1-Pass架构**：相比2-Pass减少50% API调用，处理时间从15分钟缩短至3-5分钟
-- **并行批处理**：支持多批次并行处理，充分利用API并发能力
-- **超时保护**：批次级别超时控制，防止慢批次拖累整体流程
-- **智能降级**：超时后自动降级为单条处理或使用默认分数
-
-## 1-Pass vs 2-Pass 对比
-
-| 特性 | 1-Pass (新) | 2-Pass |
-|------|------------|--------|
-| **代码量** | ~750行 | ~3500行 |
-| **配置项** | 8项 | 20+项 |
-| **API调用** | 1次/批 | 2次/批 |
-| **处理时间** | ~4分钟 | ~12分钟 |
-| **维护难度** | 简单 | 复杂 |
-| **功能完整性** | ✅ 完整 | ✅ 完整 |
-
-### 推荐使用场景
-- **1-Pass**: 追求效率和成本，适合日常运行
-- **2-Pass**: 需要更精细的差异化评分，适合特殊场景
+---
 
 ## 快速开始
 
-### 1. 安装依赖
+### 方案 1: GitHub Actions 自动化（推荐）
+
+1. **Fork 仓库** 到你的 GitHub 账号
+
+2. **配置 Secrets**
+   ```
+   Settings → Secrets → Actions → New repository secret
+   
+   Name: ZHIPU_API_KEY
+   Value: your-api-key-here
+   ```
+
+3. **启用 Actions**
+   ```
+   Actions 页面 → "I understand my workflows, go ahead and enable them"
+   ```
+
+4. **完成！** 每天 UTC 00:00 自动运行
+
+### 方案 2: 本地开发
+
 ```bash
+# 1. 克隆仓库
+git clone https://github.com/yourusername/news-coma.git
+cd news-coma
+
+# 2. 安装依赖
 pip install -r requirements.txt
-```
 
-### 2. 选择评分系统
+# 3. 配置
+export ZHIPU_API_KEY="your-api-key"
 
-#### 方式1: 使用1-Pass（推荐）
-复制配置文件：
-```bash
-cp config/config-1pass.yaml config/config.yaml
-```
-
-编辑配置：
-```yaml
-smart_ai:
-  provider: "zhipu"  # 可选: gemini, openai, claude, deepseek, zhipu等
-```
-
-#### 方式2: 使用2-Pass
-编辑 `config/config.yaml`：
-```yaml
-ai:
-  ai_provider: "zhipu"  # 可选: gemini, openai, claude, deepseek, zhipu等
-  use_2pass: true
-```
-
-### 3. 配置API密钥
-设置环境变量：
-```bash
-export ZHIPU_API_KEY="your-api-key"  # 根据选择的提供商设置
-```
-
-### 4. 运行系统
-```bash
+# 4. 运行
 python src/main.py
 ```
 
-## 1-Pass 系统配置
+---
 
-### 基本配置
+## 配置说明
+
+### 基础配置 (`config/config.yaml`)
+
 ```yaml
-# config/config-1pass.yaml
 smart_ai:
-  # 核心配置（2项）
-  provider: "zhipu"
+  # AI 提供商
+  provider: "zhipu"  # gemini, openai, claude, deepseek, zhipu, kimi...
   
   # 提供商配置
   providers_config:
@@ -112,16 +95,16 @@ smart_ai:
       batch_size: 10
       max_concurrent: 3
   
-  # 性能配置（4项）
+  # 性能配置
   batch_size: 10              # 批次大小
   max_concurrent: 3           # 最大并发批次
   timeout_seconds: 90         # 超时时间
   max_output_items: 30        # 最大输出新闻数
   
-  # 筛选配置（1项）
-  diversity_weight: 0.3       # 多样性权重
+  # 多样性权重
+  diversity_weight: 0.3
   
-  # 评分标准
+  # 5维度评分权重
   scoring_criteria:
     importance: 0.30
     timeliness: 0.20
@@ -129,78 +112,71 @@ smart_ai:
     audience_breadth: 0.15
     practicality: 0.15
 
-# 功能开关
-use_smart_scorer: true        # 启用1-Pass
+# 启用 1-Pass
+use_smart_scorer: true
 ```
 
-### 工作流程
-1. **智能分批**: 按批次大小自动分组
-2. **1-Pass评分**: 单次API调用完成分类+评分+总结
-3. **智能筛选**: 分数+多样性双重筛选
-
-## 2-Pass 系统配置
-
-### 基本配置
-```yaml
-# config/config.yaml
-ai:
-  use_2pass: true  # 启用2-Pass评分系统
-  
-  # Pass 1 差异化阈值
-  pass1_threshold_finance: 5.5  # 财经新闻阈值
-  pass1_threshold_tech: 6.0     # 科技新闻阈值  
-  pass1_threshold_politics: 5.5 # 社会政治新闻阈值
-  
-  # 板块配额
-  category_quota_finance: 0.40  # 财经40%
-  category_quota_tech: 0.30     # 科技30%
-  category_quota_politics: 0.30 # 社会政治30%
-
-output:
-  max_news_count: 30  # 每期输出30条新闻
-```
-
-### 工作流程
-1. **Pass 1**: 快速预筛，按板块差异化阈值过滤
-2. **Pass 2**: 深度评分，AI进行完整5维度评估
-3. **最终选取**: 按固定比例从各板块选取Top N新闻
+---
 
 ## 项目结构
 
 ```
 news-coma/
-├── config/
-│   ├── config.yaml              # 主配置文件（2-Pass）
-│   └── config-1pass.yaml        # 1-Pass配置文件
+├── .github/workflows/           # GitHub Actions 工作流
+│   └── rss-aggregator.yml
 ├── src/
-│   ├── main.py                  # 主程序入口
-│   ├── config.py                # 配置解析
-│   ├── models.py                # 数据模型
-│   ├── SmartScorer/             # 1-Pass评分系统（新）
-│   │   ├── __init__.py
-│   │   ├── smart_scorer.py      # 核心协调器
-│   │   ├── batch_provider.py    # 批量API管理
-│   │   ├── prompt_engine.py     # Prompt生成
-│   │   └── result_processor.py  # 结果解析
-│   ├── AIScorer/                # 2-Pass评分系统
-│   │   ├── ai_scorer.py
-│   │   ├── provider_manager.py
-│   │   └── ...
-│   ├── ab_test_bridge.py        # A/B测试桥接
-│   ├── history_manager.py       # 历史记录和缓存
-│   └── rss_parser.py            # RSS解析器
-├── tests/
-│   ├── test_smart_scorer.py     # 1-Pass单元测试
-│   └── performance_test.py      # 性能测试
-├── tools/
-│   └── config_migrator.py       # 配置迁移工具
-├── data/                        # 数据目录
-├── docs/                        # 文档目录
-│   └── 2pass-system.md          # 2-Pass系统详细文档
-└── outputs/                     # 输出文件
+│   ├── main.py                # 程序入口
+│   ├── config.py              # 配置解析
+│   ├── models.py              # 数据模型
+│   ├── rss_fetcher.py         # RSS 获取
+│   ├── SmartScorer/           # 1-Pass 评分系统
+│   │   ├── smart_scorer.py    # 核心协调器
+│   │   ├── batch_provider.py  # 批量 API 管理
+│   │   ├── prompt_engine.py   # Prompt 生成
+│   │   └── result_processor.py # 结果解析
+│   ├── markdown_generator.py  # Markdown 输出
+│   ├── rss_generator.py       # RSS 输出
+│   └── history_manager.py     # 历史记录
+├── requirements.txt           # 依赖
+├── config.yaml            # 主配置文件
+└── README.md                 # 本文件
 ```
+
+---
+
+## API Keys 配置
+
+在 GitHub Secrets 中配置以下环境变量（根据你使用的提供商）：
+
+```
+# 国际提供商
+GEMINI_API_KEY              # Google Gemini
+OPENAI_API_KEY              # OpenAI
+ANTHROPIC_API_KEY           # Claude
+AZURE_OPENAI_API_KEY        # Azure OpenAI
+
+# 国内提供商
+ZHIPU_API_KEY               # 智谱 AI
+DEEPSEEK_API_KEY            # DeepSeek
+KIMI_API_KEY                # Moonshot Kimi
+```
+
+---
+
+## 性能指标
+
+基于典型运行（30-50 条新闻输入）：
+
+| 指标 | 数值 |
+|------|------|
+| **总运行时间** | ~4 分钟 |
+| **API 调用次数** | 3-6 次（批处理）|
+| **代码行数** | ~750 行 |
+| **内存占用** | <100 MB |
+| **输出新闻数** | 30 条 |
+
+---
 
 ## 许可证
 
-MIT License
-
+MIT License - 详见 [LICENSE](LICENSE) 文件

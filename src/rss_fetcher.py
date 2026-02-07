@@ -178,9 +178,9 @@ class RSSFetcher:
         elif 'published' in entry:
             try:
                 published = date_parser.parse(entry.published)
-            except:
-                logger.debug(f"⚠️ {source.name} 条目发布时间解析失败，使用当前时间")
-                pass
+            except (ValueError, TypeError) as e:
+                logger.debug(f"⚠️ {source.name} 条目发布时间解析失败: {e}")
+                published = datetime.now()
         
         # 边界情况处理：检查时间戳是否在未来
         if published > datetime.now():

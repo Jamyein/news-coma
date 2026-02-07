@@ -1,7 +1,6 @@
 """PromptEngine - 1-Pass Prompt生成引擎"""
 
 import logging
-from typing import List
 from src.models import NewsItem, AIConfig
 
 logger = logging.getLogger(__name__)
@@ -15,7 +14,7 @@ class PromptEngine:
         self.scoring_criteria = config.scoring_criteria
         logger.info("PromptEngine初始化完成")
     
-    def build_1pass_prompt(self, items: List[NewsItem]) -> str:
+    def build_1pass_prompt(self, items: list[NewsItem]) -> str:
         """构建1-pass评分Prompt"""
         news_blocks = [self._format_news_item(item, i) for i, item in enumerate(items, 1)]
         sc = self.scoring_criteria

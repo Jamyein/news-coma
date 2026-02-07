@@ -130,6 +130,7 @@ class AIConfig:
     default_dimension_score: int = 5                # 各评分维度默认值
 
 
+
 @dataclass
 class OutputConfig:
     """输出配置"""
