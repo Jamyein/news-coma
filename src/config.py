@@ -4,7 +4,6 @@
 """
 import os
 import yaml
-from typing import List, Dict, Any
 from pathlib import Path
 
 from src.models import RSSSource, AIConfig, OutputConfig, FilterConfig, ProviderConfig, ScoringCriteria
@@ -18,7 +17,7 @@ class Config:
         self.config_path = Path(config_path)
         self._config = self._load_config()
     
-    def _load_config(self) -> Dict[str, Any]:
+    def _load_config(self) -> dict[str, any]:
         """加载YAML配置文件"""
         if not self.config_path.exists():
             raise FileNotFoundError(f"配置文件不存在: {self.config_path}")
@@ -27,7 +26,7 @@ class Config:
             return yaml.safe_load(f)
     
     @property
-    def rss_sources(self) -> List[RSSSource]:
+    def rss_sources(self) -> list[RSSSource]:
         """获取所有启用的RSS源配置"""
         sources = []
         for source_data in self._config.get('rss_sources', []):

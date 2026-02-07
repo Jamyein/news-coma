@@ -9,7 +9,7 @@ import re
 import socket
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta
-from typing import List, Optional
+from typing import Optional
 
 import feedparser
 from dateutil import parser as date_parser
@@ -27,7 +27,7 @@ class RSSFetcher:
     
     def __init__(
         self, 
-        sources: List[RSSSource], 
+        sources: list[RSSSource], 
         output_config: OutputConfig, 
         filter_config: FilterConfig
     ):
@@ -70,7 +70,7 @@ class RSSFetcher:
         
         return self._vectorizer
     
-    def fetch_all(self) -> List[NewsItem]:
+    def fetch_all(self) -> list[NewsItem]:
         """
         从所有源获取新闻
         
