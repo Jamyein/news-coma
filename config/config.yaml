@@ -197,8 +197,8 @@ smart_ai:
   # 回退配置（简化）
   fallback_enabled: true
   fallback_chain:
-    - "deepseek"
     - "gemini"
+    - "deepseek"
 
 # ==========================================
 # 输出配置
