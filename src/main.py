@@ -202,53 +202,12 @@ class RSSAggregator:
         return filtered
     
     def _select_top_news(self, items: list[NewsItem]) -> list[NewsItem]:
-        """
-        选择Top N新闻
-        
-        策略：
-        1. 按分数排序
-        2. 确保分类多样性
-        3. 返回前N条
-        """
+        """选择Top N新闻（委托给SmartScorer的统一接口）"""
         if not items:
             return []
         
-        # 按评分排序
-        sorted_items = sorted(items, key=lambda x: (x.ai_score or 0, x.published_at), reverse=True)
-        
-        # 按分类分组
-        by_category = {}
-        for item in sorted_items:
-            category = getattr(item, 'ai_category', '未分类')
-            by_category.setdefault(category, []).append(item)
-        
-        # 简单多样性策略：每个分类至少选1条
-        selected = []
-        max_items = self.config.output_config.max_news_count
-        
-        # 先选每个分类的第一条
-        for category, cat_items in by_category.items():
-            if cat_items and len(selected) < max_items:
-                selected.append(cat_items[0])
-        
-        # 补充剩余的高分新闻
-        for item in sorted_items:
-            if item not in selected and len(selected) < max_items:
-                selected.append(item)
-        
-        # 按分数重新排序
-        selected.sort(key=lambda x: x.ai_score or 0, reverse=True)
-        
-        # 记录统计
-        category_counts = {}
-        for item in selected:
-            cat = getattr(item, 'ai_category', '未分类')
-            category_counts[cat] = category_counts.get(cat, 0) + 1
-        
-        logger.info(f"📊 分类分布: {category_counts}")
-        logger.info(f"📋 从 {len(items)} 条中精选 Top {len(selected)} 条新闻")
-
-        return selected
+        threshold = self.config.filter_config.min_score_threshold
+        return self.scorer.select_top_items(items, min_threshold=threshold)
     
     def _generate_outputs(self, items: List[NewsItem]):
         """生成输出文件"""

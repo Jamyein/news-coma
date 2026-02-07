@@ -2,7 +2,7 @@
 
 import asyncio
 import logging
-from typing import List, Dict
+from typing import List, Dict, Optional
 from datetime import datetime
 from collections import defaultdict
 
@@ -172,8 +172,9 @@ class SmartScorer:
         return all_scored
 
     def _select_top_items(self, items: List[NewsItem]) -> List[NewsItem]:
-        """筛选Top新闻（按分数+多样性）"""
-        sorted_items = sorted(items, key=lambda x: x.ai_score or 0, reverse=True)
+        """筛选Top新闻（按分数+时间+多样性）"""
+        # 按AI评分降序，评分相同时按发布时间降序（新的在前）
+        sorted_items = sorted(items, key=lambda x: (x.ai_score or 0, x.published_at), reverse=True)
         return self._ensure_diversity(sorted_items)
     
     def _ensure_diversity(self, items: List[NewsItem]) -> List[NewsItem]:
@@ -216,4 +217,49 @@ class SmartScorer:
 
     def get_stats(self) -> Dict:
         return self._stats.copy()
+
+    def select_top_items(
+        self,
+        items: List[NewsItem],
+        min_threshold: float = 0.0,
+        max_items: Optional[int] = None
+    ) -> List[NewsItem]:
+        """
+        统一的选择Top新闻接口（对外暴露）
+        
+        Args:
+            items: 新闻列表
+            min_threshold: 最低评分阈值
+            max_items: 最大返回数量（默认使用配置值）
+            
+        Returns:
+            筛选后的Top新闻列表
+        """
+        if not items:
+            return []
+        
+        max_items = max_items or self.config.max_output_items
+        
+        # 过滤低于阈值的
+        filtered = [item for item in items if (item.ai_score or 0) >= min_threshold]
+        
+        if not filtered:
+            return []
+        
+        # 按AI评分降序，评分相同时按发布时间降序
+        sorted_items = sorted(filtered, key=lambda x: (x.ai_score or 0, x.published_at), reverse=True)
+        
+        # 应用多样性选择
+        selected = self._ensure_diversity(sorted_items)
+        
+        # 记录统计
+        category_counts = {}
+        for item in selected:
+            cat = getattr(item, 'ai_category', '未分类')
+            category_counts[cat] = category_counts.get(cat, 0) + 1
+        
+        logger.info(f"📊 分类分布: {category_counts}")
+        logger.info(f"📋 从 {len(filtered)} 条中精选 Top {len(selected)} 条新闻")
+        
+        return selected
 
