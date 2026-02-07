@@ -56,15 +56,27 @@ class MarkdownGenerator:
         
         return str(latest_path), str(archive_path)
     
+    def _group_by_category(self, items: List[NewsItem]) -> Dict[str, List[NewsItem]]:
+        """按AI分类分组新闻"""
+        groups = {"财经": [], "科技": [], "社会政治": [], "其他": []}
+        for item in items:
+            category = getattr(item, 'ai_category', '其他')
+            if category in groups:
+                groups[category].append(item)
+            else:
+                groups["其他"].append(item)
+        return groups
+
     def _build_content(self, items: List[NewsItem], timestamp: datetime) -> str:
         """构建Markdown内容（三板块分区布局）"""
         from datetime import timedelta
         beijing_time = timestamp + timedelta(hours=8)
 
         # 按 ai_category 分组
-        finance_items = [item for item in items if item.ai_category == "财经"]
-        tech_items = [item for item in items if item.ai_category == "科技"]
-        politics_items = [item for item in items if item.ai_category == "社会政治"]
+        groups = self._group_by_category(items)
+        finance_items = groups["财经"]
+        tech_items = groups["科技"]
+        politics_items = groups["社会政治"]
 
         # 计算各板块精选数量
         total_count = len(items)
