@@ -1,11 +1,13 @@
 """BatchProvider - 1-Pass 批量API管理"""
 
 import asyncio
+import json
 import logging
-from typing import Dict, Optional, Any
+from typing import Dict, List, Optional, Any
 from openai import AsyncOpenAI, RateLimitError
 
-from src.models import AIConfig
+from src.models import AIConfig, NewsItem
+from src.exceptions import ContentFilterError
 
 logger = logging.getLogger(__name__)
 
@@ -35,6 +37,34 @@ class BatchProvider:
 
         logger.info(f"BatchProvider初始化: {self.provider_name} ({self.model})")
     
+    def _is_content_filter_error(self, error: Exception) -> bool:
+        """检测是否为内容过滤错误（智谱AI错误码1301）"""
+        error_str = str(error)
+        # 智谱AI错误码1301 + contentFilter
+        if "1301" in error_str and "contentFilter" in error_str:
+            logger.warning(f"检测到智谱AI内容过滤: {error_str[:100]}")
+            return True
+        # OpenAI内容过滤
+        if "content_filter" in error_str.lower():
+            logger.warning(f"检测到内容过滤: {error_str[:100]}")
+            return True
+        return False
+
+    def _extract_error_details(self, error: Exception) -> dict:
+        """从错误中提取详细信息"""
+        error_str = str(error)
+        details = {
+            "error_code": None,
+            "provider": self.provider_name,
+            "error_data": {}
+        }
+        
+        # 尝试提取智谱AI错误码
+        if "1301" in error_str:
+            details["error_code"] = "1301"
+        
+        return details
+
     async def call_batch_api(
         self,
         prompt: str,
@@ -76,6 +106,15 @@ class BatchProvider:
             logger.warning(f"速率限制: {e}")
             raise
         except Exception as e:
+            # 检查是否为内容过滤错误
+            if self._is_content_filter_error(e):
+                error_details = self._extract_error_details(e)
+                raise ContentFilterError(
+                    message=str(e),
+                    error_code=error_details["error_code"],
+                    provider=error_details["provider"],
+                    error_data=error_details["error_data"]
+                )
             logger.error(f"API调用失败: {e}")
             raise
     
@@ -107,6 +146,249 @@ class BatchProvider:
                 logger.warning(f"回退提供商 {fallback_name} 失败: {e}")
 
         raise Exception("所有提供商均失败")
+
+    async def _call_single_with_gemini(
+        self,
+        item: NewsItem,
+        prompt_template: str
+    ) -> dict:
+        """
+        使用Gemini单条处理新闻
+        
+        当批次触发内容过滤时，使用gemini逐条处理
+        
+        Args:
+            item: 新闻项
+            prompt_template: 原始prompt模板
+            
+        Returns:
+            dict: 评分结果
+        """
+        if "gemini" not in self.config.providers_config:
+            logger.error("Gemini未配置，无法进行单条fallback")
+            raise ContentFilterError("Gemini未配置", provider="gemini")
+        
+        gemini_config = self.config.providers_config["gemini"]
+        gemini_client = AsyncOpenAI(
+            api_key=gemini_config.api_key,
+            base_url=gemini_config.base_url
+        )
+        
+        # 构建单条新闻的prompt
+        summary = item.summary[:300] if item.summary else "无摘要"
+        single_prompt = f"""请对以下新闻进行专业评估。
+
+【新闻】
+标题: {item.title}
+来源: {item.source}
+摘要: {summary}
+
+{prompt_template}
+
+【输出格式】JSON对象：
+{{
+  "category": "财经|科技|社会政治",
+  "category_confidence": 0.95,
+  "importance": 8,
+  "timeliness": 9,
+  "technical_depth": 7,
+  "audience_breadth": 6,
+  "practicality": 7,
+  "total_score": 7.5,
+  "summary": "中文总结..."
+}}"""
+        
+        messages = [
+            {"role": "system", "content": self.SYSTEM_PROMPT},
+            {"role": "user", "content": single_prompt}
+        ]
+        
+        try:
+            response = await asyncio.wait_for(
+                gemini_client.chat.completions.create(
+                    model=gemini_config.model,
+                    messages=messages,
+                    max_tokens=gemini_config.max_tokens,
+                    temperature=gemini_config.temperature,
+                    response_format={"type": "json_object"}
+                ),
+                timeout=self.config.timeout_seconds
+            )
+            
+            content = response.choices[0].message.content
+            result = json.loads(content)
+            
+            logger.debug(f"Gemini单条处理成功: {item.id}")
+            
+            # 标准化返回格式，添加news_index
+            result["news_index"] = 1
+            return result
+            
+        except (json.JSONDecodeError, Exception) as e:
+            logger.warning(f"Gemini单条处理失败 {item.id}: {e}")
+            # 返回默认低分结果
+            return {
+                "news_index": 1,
+                "category": "社会政治",
+                "category_confidence": 0.5,
+                "importance": 3,
+                "timeliness": 3,
+                "technical_depth": 3,
+                "audience_breadth": 3,
+                "practicality": 3,
+                "total_score": 3.0,
+                "summary": f"Gemini处理失败: {str(e)[:50]}"
+            }
+
+    async def _fallback_batch_with_gemini(
+        self,
+        items: List[NewsItem],
+        prompt_template: str
+    ) -> str:
+        """
+        使用Gemini逐条处理整个批次
+        
+        Args:
+            items: 新闻批次
+            prompt_template: 评分标准说明
+            
+        Returns:
+            str: JSON数组字符串
+        """
+        logger.info(f"开始使用Gemini逐条处理 {len(items)} 条新闻")
+        
+        results = []
+        for idx, item in enumerate(items, 1):
+            try:
+                result = await self._call_single_with_gemini(
+                    item, prompt_template
+                )
+                # 更新news_index为实际索引
+                result["news_index"] = idx
+                results.append(result)
+                logger.debug(f"Gemini处理进度: {idx}/{len(items)}")
+            except Exception as e:
+                logger.error(f"Gemini处理单条失败 {item.id}: {e}")
+                # 添加默认结果
+                results.append({
+                    "news_index": idx,
+                    "category": "社会政治",
+                    "category_confidence": 0.5,
+                    "importance": 3,
+                    "timeliness": 3,
+                    "technical_depth": 3,
+                    "audience_breadth": 3,
+                    "practicality": 3,
+                    "total_score": 3.0,
+                    "summary": "处理失败给予默认分"
+                })
+        
+        logger.info(f"Gemini逐条处理完成: {len(results)} 条")
+        
+        # 返回JSON数组字符串
+        return json.dumps({"results": results})
+
+    async def call_batch_api_with_fallback(
+        self,
+        prompt: str,
+        items: List[NewsItem],
+        prompt_template: str = None,
+        max_tokens: Optional[int] = None,
+        temperature: Optional[float] = None
+    ) -> str:
+        """
+        调用批量API，支持内容过滤fallback到Gemini单条处理
+        
+        Args:
+            prompt: 完整prompt（包含所有新闻）
+            items: 新闻项列表
+            prompt_template: 评分标准说明（用于单条fallback）
+            max_tokens: 最大token数
+            temperature: 温度参数
+            
+        Returns:
+            str: API响应或fallback结果的JSON字符串
+        """
+        try:
+            # 首先尝试正常批次调用
+            logger.debug(f"尝试主提供商批次调用: {self.provider_name}")
+            return await self.call_batch_api(prompt, max_tokens, temperature)
+            
+        except ContentFilterError as e:
+            # 明确的内容过滤错误
+            logger.warning(
+                f"主提供商 {self.provider_name} 触发内容过滤 "
+                f"(错误码: {e.error_code})，切换到Gemini单条处理"
+            )
+            
+            # 提取prompt中的评分标准说明
+            if prompt_template is None:
+                # 从原始prompt中提取评分标准部分
+                prompt_template = self._extract_scoring_criteria(prompt)
+            
+            # 使用Gemini逐条处理
+            return await self._fallback_batch_with_gemini(items, prompt_template)
+            
+        except Exception as e:
+            # 检查是否为内容过滤错误
+            if self._is_content_filter_error(e):
+                logger.warning(
+                    f"主提供商 {self.provider_name} 触发内容过滤，"
+                    f"切换到Gemini单条处理: {str(e)[:100]}"
+                )
+                
+                if prompt_template is None:
+                    prompt_template = self._extract_scoring_criteria(prompt)
+                
+                return await self._fallback_batch_with_gemini(items, prompt_template)
+            else:
+                # 非内容过滤错误，重新抛出
+                raise
+
+    def _extract_scoring_criteria(self, prompt: str) -> str:
+        """
+        从完整prompt中提取评分标准说明
+        
+        Args:
+            prompt: 完整prompt字符串
+            
+        Returns:
+            str: 评分标准说明部分
+        """
+        # 提取任务要求和评分维度说明
+        import re
+        
+        # 查找评分相关的段落
+        scoring_sections = []
+        
+        # 匹配5维度评分说明
+        dimensions_pattern = r"([\d一二三四五]\s*\*\*[^*]+\*\*[^\n]+)"
+        dimensions = re.findall(dimensions_pattern, prompt)
+        if dimensions:
+            scoring_sections.extend(dimensions)
+        
+        # 匹配权重说明
+        weight_pattern = r"（权重[^）]+）"
+        weights = re.findall(weight_pattern, prompt)
+        
+        # 构建评分标准说明
+        if scoring_sections:
+            return (
+                "请按以下5维度评分（1-10分）：\n" +
+                "\n".join(f"  {s}" for s in scoring_sections[:5]) +
+                "\n\n计算加权总分并给出中文总结。"
+            )
+        
+        # 默认评分说明
+        return (
+            "请按以下5维度评分（1-10分）：\n"
+            "  1. 重要性（权重30%）\n"
+            "  2. 时效性（权重20%）\n"
+            "  3. 技术深度（权重20%）\n"
+            "  4. 受众广度（权重15%）\n"
+            "  5. 实用性（权重15%）\n"
+            "\n计算加权总分并给出中文总结。"
+        )
 
     async def _call_provider(
         self,

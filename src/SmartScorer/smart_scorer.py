@@ -6,6 +6,7 @@ from datetime import datetime
 from collections import defaultdict
 
 from src.models import NewsItem, AIConfig
+from src.exceptions import ContentFilterError
 from .batch_provider import BatchProvider
 from .prompt_engine import PromptEngine
 from .result_processor import ResultProcessor
@@ -55,13 +56,49 @@ class SmartScorer:
         ]
 
     async def _process_batches(self, batches: List[List[NewsItem]]) -> List[NewsItem]:
-        """批量处理"""
+        """批量处理，支持内容过滤fallback到Gemini"""
         all_scored = []
-        for batch in batches:
-            prompt = self.prompt_engine.build_1pass_prompt(batch)
-            response = await self.batch_provider.call_batch_api(prompt)
-            scored_batch = self.result_processor.parse_1pass_response(batch, response)
-            all_scored.extend(scored_batch)
+        total_batches = len(batches)
+
+        for batch_idx, batch in enumerate(batches, 1):
+            batch_id = f"{batch_idx}/{total_batches}"
+            logger.info(f"处理批次 {batch_id}: {len(batch)} 条新闻")
+
+            try:
+                prompt = self.prompt_engine.build_1pass_prompt(batch)
+
+                # 使用支持fallback的新API
+                response = await self.batch_provider.call_batch_api_with_fallback(
+                    prompt=prompt,
+                    items=batch,
+                    prompt_template=None,  # 会从prompt自动提取
+                    max_tokens=None,  # 使用配置默认值
+                    temperature=None
+                )
+
+                scored_batch = self.result_processor.parse_1pass_response(batch, response)
+                all_scored.extend(scored_batch)
+                logger.info(f"批次 {batch_id} 处理完成: {len(scored_batch)} 条")
+
+            except ContentFilterError as e:
+                logger.error(f"批次 {batch_id} 内容过滤且Gemini fallback失败: {e}")
+                # 为整个批次赋予默认低分
+                for item in batch:
+                    item.ai_score = 3.0
+                    item.ai_category = "社会政治"
+                    item.ai_summary = f"内容过滤fallback失败: {str(e)[:50]}"
+                    all_scored.append(item)
+
+            except Exception as e:
+                logger.error(f"批次 {batch_id} 处理失败: {e}")
+                # 为整个批次赋予默认低分
+                for item in batch:
+                    item.ai_score = 3.0
+                    item.ai_category = "社会政治"
+                    item.ai_summary = f"处理失败: {str(e)[:50]}"
+                    all_scored.append(item)
+
+        logger.info(f"所有批次处理完成: 共 {len(all_scored)} 条")
         return all_scored
 
     def _select_top_items(self, items: List[NewsItem]) -> List[NewsItem]:
