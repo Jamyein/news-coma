@@ -17,3 +17,6 @@ from .result_processor import ResultProcessor
 
 __version__ = "1.0.0"
 __all__ = ["SmartScorer", "BatchProvider", "PromptEngine", "ResultProcessor"]
+
+# 注意: BatchProcessor 类已被移除 (dead code cleanup)
+# 如需批量处理功能，请使用 SmartScorer._process_batches()

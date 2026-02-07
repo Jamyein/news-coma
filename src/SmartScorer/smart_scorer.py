@@ -91,18 +91,18 @@ class SmartScorer:
             logger.error(f"批次 {batch_id} 内容过滤且Gemini fallback失败: {e}")
             # 为整个批次赋予默认低分
             for item in batch:
-                item.ai_score = 3.0
+                item.ai_score = self.config.default_score_on_error
                 item.ai_category = "社会政治"
-                item.ai_summary = f"内容过滤fallback失败: {str(e)[:50]}"
+                item.ai_summary = f"内容过滤fallback失败: {str(e)[:self.config.max_error_message_length]}"
             return batch
 
         except Exception as e:
             logger.error(f"批次 {batch_id} 处理失败: {e}")
             # 为整个批次赋予默认低分
             for item in batch:
-                item.ai_score = 3.0
+                item.ai_score = self.config.default_score_on_error
                 item.ai_category = "社会政治"
-                item.ai_summary = f"处理失败: {str(e)[:50]}"
+                item.ai_summary = f"处理失败: {str(e)[:self.config.max_error_message_length]}"
             return batch
 
     async def _process_batches(self, batches: List[List[NewsItem]]) -> List[NewsItem]:
