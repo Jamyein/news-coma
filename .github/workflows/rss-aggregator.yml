@@ -31,7 +31,7 @@ env:
   
   # ==========================================
   # AI提供商API Keys（支持14家LLM）
-  # 根据config.yaml中的ai_provider自动选择
+  # 根据项目根目录 config.yaml 中的 ai_provider 自动选择
   # 只需在GitHub Secrets中设置你使用的提供商
   # ==========================================
   

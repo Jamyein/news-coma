@@ -3,7 +3,7 @@
 配置迁移工具 - 将旧的2-pass配置转换为1-pass简化配置
 
 使用方法:
-    python tools/config_migrator.py --input config/config.yaml --output config/config-1pass.yaml
+    python tools/config_migrator.py --input config.yaml --output config-1pass.yaml
     
 或者直接在Python中使用:
     from tools.config_migrator import migrate_config
@@ -157,10 +157,10 @@ def main():
         epilog="""
 示例:
     # 迁移单个配置文件
-    python tools/config_migrator.py -i config/config.yaml -o config/config-1pass.yaml
+    python tools/config_migrator.py -i config.yaml -o config-1pass.yaml
     
     # 迁移并验证
-    python tools/config_migrator.py -i config/config.yaml -o config/config-1pass.yaml --validate
+    python tools/config_migrator.py -i config.yaml -o config-1pass.yaml --validate
     
     # 仅验证现有配置
     python tools/config_migrator.py -i config/config-1pass.yaml --validate-only
@@ -273,8 +273,8 @@ def main():
             # 输出下一步建议
             print(f"\n📖 下一步:")
             print(f"   1. 验证新配置: python tools/config_migrator.py -i {args.output} --validate-only")
-            print(f"   2. 复制到配置目录: cp {args.output} config/config-1pass.yaml")
-            print(f"   3. 测试运行: python src/main.py --config config/config-1pass.yaml")
+            print(f"   2. 复制到配置目录: cp {args.output} config-1pass.yaml")
+            print(f"   3. 测试运行: python src/main.py --config config-1pass.yaml")
         else:
             print("\n✅ 配置迁移验证完成!")
             print("   (使用 -o 参数指定输出文件以保存新配置)")

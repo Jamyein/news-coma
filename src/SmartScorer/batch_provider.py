@@ -271,16 +271,25 @@ class BatchProvider:
                 ),
                 timeout=self.config.timeout_seconds
             )
-            
+
             content = response.choices[0].message.content
             result = json.loads(content)
-            
+
+            # 处理Gemini返回数组的情况（当response_format为json_object时，有时返回[{...}])
+            if isinstance(result, list):
+                if len(result) > 0 and isinstance(result[0], dict):
+                    result = result[0]
+                else:
+                    raise ValueError(f"Unexpected list format in response: {result}")
+            elif not isinstance(result, dict):
+                raise ValueError(f"Unexpected response type: {type(result)}, content: {content[:200]}")
+
             logger.debug(f"Gemini单条处理成功: {item.id}")
-            
+
             # 标准化返回格式，添加news_index
             result["news_index"] = 1
             return result
-            
+
         except (json.JSONDecodeError, Exception) as e:
             logger.warning(f"Gemini单条处理失败 {item.id}: {e}")
             # 返回默认低分结果
