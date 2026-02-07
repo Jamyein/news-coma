@@ -82,6 +82,14 @@ class ResultProcessor:
     
     def _apply_result(self, item: NewsItem, result: dict) -> NewsItem:
         """将解析结果应用到新闻项"""
+        # 中文标题生成（新增）
+        chinese_title = result.get('chinese_title')
+        if chinese_title and isinstance(chinese_title, str) and chinese_title.strip():
+            item.translated_title = chinese_title.strip()
+        else:
+            # 如果未提供中文标题，保留原标题
+            item.translated_title = item.title
+
         # 分类
         category = result.get('category', '社会政治')
         item.ai_category = category if category in self.VALID_CATEGORIES else '社会政治'
