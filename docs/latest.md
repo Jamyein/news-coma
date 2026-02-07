@@ -1,440 +1,342 @@
 # 📰 新闻精选
 
-> 🕐 更新时间: 2026年02月07日 09:01
-> 📊 本期精选 **30** 条高质量新闻
+> 🕐 更新时间: 2026年02月07日 10:55
+> 📊 本期精选 **23** 条高质量新闻
 > 🤖 由 AI 自动分类、筛选、翻译和总结
 
 ---
 
-## 💰 财经新闻 (13条)
+## 💰 财经新闻 (16条)
 
-精选 **13** 条财经新闻
+精选 **16** 条财经新闻
 
-### 1. Bitcoin gets slashed in half. What's behind the crypto's existential crisis
-
-**📌 来源**: CNBC | **🏏️ AI分类**: 财经 | **⭐ 评分**: 8.0/10
-
-**📝 摘要**:
-新闻8报道了比特币价格的大幅下跌，对财经领域有重要影响，具有很高的时效性和重要性。
-
-**💡 关键要点**:
-- 暂无要点
-
-**🔗 原文链接**: [Bitcoin gets slashed in half. What's behind the crypto's existential crisis](https://www.cnbc.com/2026/02/06/bitcoin-gets-slashed-in-half-whats-behind-the-cryptos-existential-crisis.html)
-
----
-
-### 2. 告别“科技股独秀”！超75%标普500企业实现利润增长，为2021年来最高
+### 1. 选个“愿意降息”的美联储主席，历史上的美国总统总是“难以如愿”!
 
 **📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 8.0/10
 
 **📝 摘要**:
-标普500企业利润增长，显示美国企业盈利趋势，对股市分析有重要参考价值，时效性强。
+新闻涉及美联储主席提名和货币政策，对财经领域影响大，时效性强，技术深度和受众广度较高。
 
 **💡 关键要点**:
 - 暂无要点
 
-**🔗 原文链接**: [告别“科技股独秀”！超75%标普500企业实现利润增长，为2021年来最高](https://wallstreetcn.com/articles/3765185)
+**🔗 原文链接**: [选个“愿意降息”的美联储主席，历史上的美国总统总是“难以如愿”!](https://wallstreetcn.com/articles/3765216)
 
 ---
 
-### 3. 丹诺医药港股IPO及境内未上市股份“全流通”获中国证监会备案
+### 2. Dow 50,000 came as the market looked set to crack. What the milestone says about what’s ahead for risk and volatility.
+
+**📌 来源**: MarketWatch | **🏏️ AI分类**: 财经 | **⭐ 评分**: 8.0/10
+
+**📝 摘要**:
+新闻涉及股市重大事件，对财经领域影响大，时效性强，技术深度和受众广度较高。
+
+**💡 关键要点**:
+- 暂无要点
+
+**🔗 原文链接**: [Dow 50,000 came as the market looked set to crack. What the milestone says about what’s ahead for risk and volatility.](https://www.marketwatch.com/story/dow-closes-above-50-000-for-first-time-after-rough-week-for-u-s-stock-market-c47282f7?mod=mw_rss_topstories)
+
+---
+
+### 3. 2025年微短剧市场规模破千亿元
 
 **📌 来源**: 36氪 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 8.0/10
 
 **📝 摘要**:
-丹诺医药港股IPO及境内未上市股份“全流通”获中国证监会备案，对资本市场有重要影响。
+该新闻报道了微短剧市场规模的增长，对文化产业和消费市场有重要影响，具有较高的重要性、时效性和受众广度。
 
 **💡 关键要点**:
 - 暂无要点
 
-**🔗 原文链接**: [丹诺医药港股IPO及境内未上市股份“全流通”获中国证监会备案](https://36kr.com/newsflashes/3671808921412488?f=rss)
+**🔗 原文链接**: [2025年微短剧市场规模破千亿元](https://36kr.com/newsflashes/3672554224542595?f=rss)
 
 ---
 
-### 4. 芯碁微装港股IPO获中国证监会备案
-
-**📌 来源**: 36氪 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 8.0/10
-
-**📝 摘要**:
-芯碁微装港股IPO获中国证监会备案，体现了资本市场对科技企业的关注。
-
-**💡 关键要点**:
-- 暂无要点
-
-**🔗 原文链接**: [芯碁微装港股IPO获中国证监会备案](https://36kr.com/newsflashes/3671800654930821?f=rss)
-
----
-
-### 5. 证监会：2025年全年完成16家随机抽取及4家问题导向企业检查处理工作
-
-**📌 来源**: 36氪 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 8.0/10
-
-**📝 摘要**:
-证监会发布首发企业现场检查情况，体现了监管层对资本市场的监管态度。
-
-**💡 关键要点**:
-- 暂无要点
-
-**🔗 原文链接**: [证监会：2025年全年完成16家随机抽取及4家问题导向企业检查处理工作](https://36kr.com/newsflashes/3671790211457672?f=rss)
-
----
-
-### 6. 直销奇迹？比亚迪财险综合费用率低至5.21%，实现首年盈利
-
-**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.9/10
-
-**📝 摘要**:
-比亚迪财险实现首年盈利，对保险业有重要意义，同时具有较高时效性和实用性。
-
-**💡 关键要点**:
-- 暂无要点
-
-**🔗 原文链接**: [直销奇迹？比亚迪财险综合费用率低至5.21%，实现首年盈利](https://wallstreetcn.com/articles/3765187)
-
----
-
-### 7. US tech stocks rally strongly after three days of heavy selling
-
-**📌 来源**: Financial Times | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.8/10
-
-**📝 摘要**:
-该新闻关注美国科技股的强劲反弹，对投资者和市场分析师具有重要参考价值。
-
-**💡 关键要点**:
-- 暂无要点
-
-**🔗 原文链接**: [US tech stocks rally strongly after three days of heavy selling](https://www.ft.com/content/d1d851cf-05d3-4639-a7a1-1d9d8970d012)
-
----
-
-### 8. Week Ahead for FX, Bonds: U.S. Jobs, Inflation Data in Focus
-
-**📌 来源**: WSJ 全球经济 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.8/10
-
-**📝 摘要**:
-美国就业和通胀数据将受到关注，投资者将根据这些数据判断美联储是否可能再次降息。
-
-**💡 关键要点**:
-- 暂无要点
-
-**🔗 原文链接**: [Week Ahead for FX, Bonds: U.S. Jobs, Inflation Data in Focus](https://www.wsj.com/economy/week-ahead-for-fx-bonds-u-s-jobs-inflation-data-in-focus-e81efd80)
-
----
-
-### 9. Big Tech’s ‘breathtaking’ $660bn spending spree reignites AI bubble fears
-
-**📌 来源**: Financial Times | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.8/10
-
-**📝 摘要**:
-新闻揭示了科技股投资中的风险，对投资者和市场分析师具有重要警示作用。
-
-**💡 关键要点**:
-- 暂无要点
-
-**🔗 原文链接**: [Big Tech’s ‘breathtaking’ $660bn spending spree reignites AI bubble fears](https://www.ft.com/content/0e7f6374-3fd5-46ce-a538-e4b0b8b6e6cd)
-
----
-
-### 10. Exchange Giant CME Raises Gold, Silver Margins as Volatility Persists
-
-**📌 来源**: WSJ 市场 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.8/10
-
-**📝 摘要**:
-CME提高黄金和银期货合约的保证金要求，以降低市场风险，对金融市场具有重要影响。
-
-**💡 关键要点**:
-- 暂无要点
-
-**🔗 原文链接**: [Exchange Giant CME Raises Gold, Silver Margins as Volatility Persists](https://www.wsj.com/finance/commodities-futures/exchange-giant-cme-raises-gold-silver-margins-as-volatility-persists-c9281fb7?mod=rss_markets_main)
-
----
-
-### 11. 高盛：诺和诺德定价压力被市场过度定价，口服Wegovy将是扭转信心的关键
+### 4. 中国央行黄金储备"十五连增"，1月环比增持4万盎司，增持节奏略有加快
 
 **📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.8/10
 
 **📝 摘要**:
-高盛对诺和诺德股价的评估，涉及市场定价和公司业绩，对财经领域有重要影响。
+新闻涉及中国央行黄金储备变化，对财经领域有一定影响，时效性强，技术深度和受众广度较高。
 
 **💡 关键要点**:
 - 暂无要点
 
-**🔗 原文链接**: [高盛：诺和诺德定价压力被市场过度定价，口服Wegovy将是扭转信心的关键](https://wallstreetcn.com/articles/3765141)
+**🔗 原文链接**: [中国央行黄金储备"十五连增"，1月环比增持4万盎司，增持节奏略有加快](https://wallstreetcn.com/articles/3765215)
 
 ---
 
-### 12. 贝森特和特朗普“表忠心”：澄清强美元政策，重申起诉沃什是玩笑，暗示鲍威尔失职
+### 5. “油进金退”--对冲基金的新“选择”
 
-**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.7/10
+**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.8/10
 
 **📝 摘要**:
-美国财政部长贝森特与特朗普的言论涉及美元政策和美联储主席提名，对金融市场有重要影响。
+新闻涉及对冲基金投资策略调整，对财经领域有一定影响，时效性强，技术深度和受众广度较高。
 
 **💡 关键要点**:
 - 暂无要点
 
-**🔗 原文链接**: [贝森特和特朗普“表忠心”：澄清强美元政策，重申起诉沃什是玩笑，暗示鲍威尔失职](https://wallstreetcn.com/articles/3765201)
+**🔗 原文链接**: [“油进金退”--对冲基金的新“选择”](https://wallstreetcn.com/articles/3765207)
 
 ---
 
-### 13. Dow reaches 50,000 milestone in record time, showing power of bull market
+### 6. 头部车企高管创业智能房车、获8000万融资，已拿下数亿元订单｜硬氪首发
 
-**📌 来源**: MarketWatch | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.6/10
+**📌 来源**: 36氪 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.5/10
 
 **📝 摘要**:
-报道道琼斯工业平均指数创历史新高，反映了牛市的力量，对财经领域的重要性高。
+星空梦屋获得融资，关注新能源智能房车行业动态，对资本市场有一定影响。
 
 **💡 关键要点**:
 - 暂无要点
 
-**🔗 原文链接**: [Dow reaches 50,000 milestone in record time, showing power of bull market](https://www.marketwatch.com/story/dow-closes-above-50-000-for-first-time-after-rough-week-for-u-s-stock-market-c47282f7?mod=mw_rss_topstories)
+**🔗 原文链接**: [头部车企高管创业智能房车、获8000万融资，已拿下数亿元订单｜硬氪首发](https://36kr.com/p/3667627986133638?f=rss)
 
 ---
 
-## 🔬 科技新闻 (10条)
+### 7. 美股三大指数集体收涨，英伟达大涨近8%
 
-精选 **10** 条科技新闻
-
-### 1. 堪比“ChatGPT”时刻！SemiAnalysis深度解读：Claude Code将是AI “智能体”的转折点
-
-**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 8.1/10
+**📌 来源**: 36氪 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.5/10
 
 **📝 摘要**:
-Claude Code对AI的影响分析，对科技行业有重要影响，技术深度高，时效性强。
+新闻报道了美股三大指数的涨跌情况，对投资者有重要参考价值，具有较高的重要性、时效性和受众广度。
 
 **💡 关键要点**:
 - 暂无要点
 
-**🔗 原文链接**: [堪比“ChatGPT”时刻！SemiAnalysis深度解读：Claude Code将是AI “智能体”的转折点](https://wallstreetcn.com/articles/3765171)
+**🔗 原文链接**: [美股三大指数集体收涨，英伟达大涨近8%](https://36kr.com/newsflashes/3672551952294785?f=rss)
 
 ---
 
-### 2. Inside Elon Musk’s $1.25 Trillion AI and Space Megamerger
+### 8. An AI startup founder says he’s planning a ‘March for Billionaires’ in protest of California’s wealth tax
 
-**📌 来源**: WSJ 经济 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 8.1/10
+**📌 来源**: TechCrunch | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.0/10
 
 **📝 摘要**:
-Elon Musk的SpaceX与xAI的快速合并，展示了其在太空和人工智能领域的雄心。
+新闻涉及财富税政策，对财经领域有一定影响，但技术深度和实用性一般。
 
 **💡 关键要点**:
 - 暂无要点
 
-**🔗 原文链接**: [Inside Elon Musk’s $1.25 Trillion AI and Space Megamerger](https://www.wsj.com/tech/elon-musk-xai-spacex-merger-2896ae1e?mod=pls_whats_news_us_business_f)
+**🔗 原文链接**: [An AI startup founder says he’s planning a ‘March for Billionaires’ in protest of California’s wealth tax](https://techcrunch.com/2026/02/06/an-ai-startup-founder-says-hes-planning-a-march-for-billionaires-in-protest-of-californias-wealth-tax/)
 
 ---
 
-### 3. 崔东树：2025年中国占世界新能源车份额68.4%
+### 9. China Forex Reserves Rise in January
 
-**📌 来源**: 36氪 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 8.0/10
+**📌 来源**: WSJ 市场 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 6.8/10
 
 **📝 摘要**:
-崔东树发文称中国新能源车占世界份额高，反映了新能源行业的发展趋势。
+新闻报道了中国外汇储备的增长，对国际金融市场有重要影响，具有较高的重要性和技术深度。
 
 **💡 关键要点**:
 - 暂无要点
 
-**🔗 原文链接**: [崔东树：2025年中国占世界新能源车份额68.4%](https://36kr.com/newsflashes/3671772583715464?f=rss)
+**🔗 原文链接**: [China Forex Reserves Rise in January](https://www.wsj.com/world/china/china-forex-reserves-rise-in-january-9d7b9317?mod=rss_markets_main)
 
 ---
 
-### 4. 报道：SpaceX推迟火星计划，转而侧重于登月任务
+### 10. A New Crypto Winter Is Here and Even the Biggest Bulls Are Worried
 
-**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 7.9/10
+**📌 来源**: WSJ 市场 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 6.8/10
 
 **📝 摘要**:
-新闻报道了SpaceX的战略调整，对科技行业和投资者有重要影响。
+新闻探讨了加密货币市场的寒冬，对加密货币投资者有重要影响，具有较高的重要性和技术深度。
 
 **💡 关键要点**:
 - 暂无要点
 
-**🔗 原文链接**: [报道：SpaceX推迟火星计划，转而侧重于登月任务](https://wallstreetcn.com/articles/3765206)
+**🔗 原文链接**: [A New Crypto Winter Is Here and Even the Biggest Bulls Are Worried](https://www.wsj.com/finance/currencies/a-new-crypto-winter-is-here-and-even-the-biggest-bulls-are-worried-82019de4?mod=rss_markets_main)
 
 ---
 
-### 5. AI恐惧重挫软件股：是“毫无逻辑”的恐慌，还是SaaS的终结？
+### 11. 贝莱德固定收益首席投资官减持美国投资级和高收益债
 
-**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 7.9/10
+**📌 来源**: 36氪 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 6.5/10
 
 **📝 摘要**:
-AI工具对软件股的影响，揭示了AI技术对传统行业的影响和投资者的担忧。
+贝莱德固定收益首席投资官减持美国债券，关注金融市场动态。
 
 **💡 关键要点**:
 - 暂无要点
 
-**🔗 原文链接**: [AI恐惧重挫软件股：是“毫无逻辑”的恐慌，还是SaaS的终结？](https://wallstreetcn.com/articles/3765142)
+**🔗 原文链接**: [贝莱德固定收益首席投资官减持美国投资级和高收益债](https://36kr.com/newsflashes/3672560699270023?f=rss)
 
 ---
 
-### 6. 巨头砸钱6500亿加剧担忧，黄仁勋“灭火”：AI需求火爆，庞大支出合理、可持续
+### 12. 美国食品药品监督管理局采取行动打击仿冒减肥药
 
-**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 7.8/10
+**📌 来源**: 36氪 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 6.5/10
 
 **📝 摘要**:
-英伟达CEO黄仁勋对AI领域巨额投资的合理性进行辩护，对科技行业有重要影响。
+FDA打击仿冒减肥药，关注药品安全监管。
 
 **💡 关键要点**:
 - 暂无要点
 
-**🔗 原文链接**: [巨头砸钱6500亿加剧担忧，黄仁勋“灭火”：AI需求火爆，庞大支出合理、可持续](https://wallstreetcn.com/articles/3765198)
+**🔗 原文链接**: [美国食品药品监督管理局采取行动打击仿冒减肥药](https://36kr.com/newsflashes/3672559983141513?f=rss)
 
 ---
 
-### 7. Masked namespace vulnerability in Temporal
+### 13. 蔚来1亿次换电正式达成
 
-**📌 来源**: Hacker News | **🏏️ AI分类**: 科技 | **⭐ 评分**: 7.7/10
+**📌 来源**: 36氪 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 6.5/10
 
 **📝 摘要**:
-Temporal中的命名空间漏洞，对安全领域有重要影响。
+蔚来1亿次换电达成，关注新能源汽车行业动态。
 
 **💡 关键要点**:
 - 暂无要点
 
-**🔗 原文链接**: [Masked namespace vulnerability in Temporal](https://depthfirst.com/post/the-masked-namespace-vulnerability-in-temporal-cve-2025-14986)
+**🔗 原文链接**: [蔚来1亿次换电正式达成](https://36kr.com/newsflashes/3672558095032961?f=rss)
 
 ---
 
-### 8. Apple is working to make CarPlay compatible with AI chatbots like ChatGPT
+### 14. 国际金价与银价6日大幅震荡
 
-**📌 来源**: TechCrunch | **🏏️ AI分类**: 科技 | **⭐ 评分**: 7.6/10
+**📌 来源**: 36氪 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 6.5/10
 
 **📝 摘要**:
-新闻涉及苹果公司对AI技术的应用，对科技行业有重要影响，且时效性强。
+国际金银价格大幅震荡，关注贵金属市场动态。
 
 **💡 关键要点**:
 - 暂无要点
 
-**🔗 原文链接**: [Apple is working to make CarPlay compatible with AI chatbots like ChatGPT](https://techcrunch.com/2026/02/06/apple-is-working-to-make-carplay-compatible-with-ai-chatbots-like-chatgpt/)
+**🔗 原文链接**: [国际金价与银价6日大幅震荡](https://36kr.com/newsflashes/3672556176614023?f=rss)
 
 ---
 
-### 9. Maybe AI agents can be lawyers after all
+### 15. 9点1氪丨千问回应“春节30亿免单”页面崩了；英伟达据悉今年或将不推出任何新游戏显卡；董事长被指疑为“骗保”精神病院实控人，爱尔眼科声明
 
-**📌 来源**: TechCrunch | **🏏️ AI分类**: 科技 | **⭐ 评分**: 7.6/10
+**📌 来源**: 36氪 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 6.5/10
 
 **📝 摘要**:
-新闻探讨了AI在法律领域的应用，对科技发展和行业趋势有重要影响，技术深度高。
+新闻涉及多个公司动态，对财经领域有一定关注价值。
 
 **💡 关键要点**:
 - 暂无要点
 
-**🔗 原文链接**: [Maybe AI agents can be lawyers after all](https://techcrunch.com/2026/02/06/maybe-ai-agents-can-be-lawyers-after-all/)
+**🔗 原文链接**: [9点1氪丨千问回应“春节30亿免单”页面崩了；英伟达据悉今年或将不推出任何新游戏显卡；董事长被指疑为“骗保”精神病院实控人，爱尔眼科声明](https://36kr.com/p/3672535692059273?f=rss)
 
 ---
 
-### 10. 软件股大跌，是耐心持有还是逢低买入？
+### 16. President Trump chose a Federal Reserve chair he thinks he can count on to lower interest rates. History suggests three different ways presidents have come to regret that bet.
 
-**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 7.6/10
+**📌 来源**: WSJ 全球经济 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 6.5/10
 
 **📝 摘要**:
-软件股大跌分析，对科技行业有重要影响，技术深度较高，受众广度适中。
+新闻回顾了美国总统特朗普任命美联储主席的历史，对金融政策有潜在影响，具有一定的历史价值和参考意义。
 
 **💡 关键要点**:
 - 暂无要点
 
-**🔗 原文链接**: [软件股大跌，是耐心持有还是逢低买入？](https://wallstreetcn.com/articles/3765176)
+**🔗 原文链接**: [President Trump chose a Federal Reserve chair he thinks he can count on to lower interest rates. History suggests three different ways presidents have come to regret that bet.](https://www.wsj.com/economy/central-banking/these-presidents-found-out-how-trying-to-control-the-fed-chair-can-backfire-2142c6e6)
 
 ---
 
-## 🏛️ 社会政治 (7条)
+## 🔬 科技新闻 (6条)
 
-精选 **7** 条社会政治新闻
+精选 **6** 条科技新闻
 
-### 1. 氪星晚报｜华润三九：2025年净利润34.22亿元，同比增长1.60%；千问App免单上线9小时突破1000万订单
+### 1. 投资人抢着加码！Anthropic新一轮融资额有望翻番，估值达到3500亿美元！
 
-**📌 来源**: 36氪 | **🏏️ AI分类**: 社会政治 | **⭐ 评分**: 8.0/10
+**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 8.0/10
 
 **📝 摘要**:
-报道了华润三九的净利润增长和新能源车市场份额，重要性高，时效性强，技术深度适中，受众广度较广，实用性一般。
+新闻涉及人工智能初创公司融资，对科技领域影响大，时效性强，技术深度和受众广度较高。
 
 **💡 关键要点**:
 - 暂无要点
 
-**🔗 原文链接**: [氪星晚报｜华润三九：2025年净利润34.22亿元，同比增长1.60%；千问App免单上线9小时突破1000万订单](https://36kr.com/p/3671836244190083?f=rss)
+**🔗 原文链接**: [投资人抢着加码！Anthropic新一轮融资额有望翻番，估值达到3500亿美元！](https://wallstreetcn.com/articles/3765212)
 
 ---
 
-### 2. 央行等八部门：金融机构不得为虚拟货币相关业务活动提供账户开立、资金划转和清算结算等服务
+### 2. “DeepSeek时刻”1年后，市场见证了“Claude冲击”
 
-**📌 来源**: 36氪 | **🏏️ AI分类**: 社会政治 | **⭐ 评分**: 7.8/10
+**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 8.0/10
 
 **📝 摘要**:
-央行等八部门发布通知，加强对虚拟货币相关业务活动的监管，对金融机构和中介机构提出严格要求，以防范和处置相关风险。
+新闻涉及AI初创公司市场表现，对科技领域影响大，时效性强，技术深度和受众广度较高。
 
 **💡 关键要点**:
 - 暂无要点
 
-**🔗 原文链接**: [央行等八部门：金融机构不得为虚拟货币相关业务活动提供账户开立、资金划转和清算结算等服务](https://36kr.com/newsflashes/3671832828453513?f=rss)
+**🔗 原文链接**: [“DeepSeek时刻”1年后，市场见证了“Claude冲击”](https://wallstreetcn.com/articles/3765209)
 
 ---
 
-### 3. 央行等八部门：在境内开展现实世界资产代币化活动，应予以禁止
+### 3. OpenAI与G42洽谈，拟为阿联酋打造专属ChatGPT
 
-**📌 来源**: 36氪 | **🏏️ AI分类**: 社会政治 | **⭐ 评分**: 7.8/10
+**📌 来源**: 36氪 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 7.0/10
 
 **📝 摘要**:
-央行等八部门明确禁止在境内开展现实世界资产代币化活动，强调对非法金融活动的打击，以维护金融秩序。
+OpenAI与G42合作，关注人工智能技术发展，对科技领域有一定影响。
 
 **💡 关键要点**:
 - 暂无要点
 
-**🔗 原文链接**: [央行等八部门：在境内开展现实世界资产代币化活动，应予以禁止](https://36kr.com/newsflashes/3671831323730819?f=rss)
+**🔗 原文链接**: [OpenAI与G42洽谈，拟为阿联酋打造专属ChatGPT](https://36kr.com/newsflashes/3672565075305095?f=rss)
 
 ---
 
-### 4. 央行等八部门：对境内主体赴境外开展相关业务实行严格监管
+### 4. 知情人士：SpaceX推迟今年的火星探测任务 计划优先于2027年3月实现无人登月
 
-**📌 来源**: 36氪 | **🏏️ AI分类**: 社会政治 | **⭐ 评分**: 7.8/10
+**📌 来源**: 36氪 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 7.0/10
 
 **📝 摘要**:
-央行等八部门对境内主体赴境外开展相关业务实行严格监管，防止虚拟货币相关风险跨境传播。
+SpaceX推迟火星探测任务，关注太空探索领域动态。
 
 **💡 关键要点**:
 - 暂无要点
 
-**🔗 原文链接**: [央行等八部门：对境内主体赴境外开展相关业务实行严格监管](https://36kr.com/newsflashes/3671830950191753?f=rss)
+**🔗 原文链接**: [知情人士：SpaceX推迟今年的火星探测任务 计划优先于2027年3月实现无人登月](https://36kr.com/newsflashes/3672561956266633?f=rss)
 
 ---
 
-### 5. 央行等八部门：持续整治虚拟货币“挖矿”活动
+### 5. 我国首次明确培育三类数据流通服务机构 助力“人工智能+”行动
 
-**📌 来源**: 36氪 | **🏏️ AI分类**: 社会政治 | **⭐ 评分**: 7.8/10
+**📌 来源**: 36氪 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 7.0/10
 
 **📝 摘要**:
-央行等八部门持续整治虚拟货币“挖矿”活动，关停存量项目，严禁新增项目，以减少能源消耗和环境污染。
+我国明确培育数据流通服务机构，关注数据要素市场化。
 
 **💡 关键要点**:
 - 暂无要点
 
-**🔗 原文链接**: [央行等八部门：持续整治虚拟货币“挖矿”活动](https://36kr.com/newsflashes/3671830478840706?f=rss)
+**🔗 原文链接**: [我国首次明确培育三类数据流通服务机构 助力“人工智能+”行动](https://36kr.com/newsflashes/3672559086068356?f=rss)
 
 ---
 
-### 6. 央行等八部门：虚拟货币不具有与法定货币等同的法律地位
+### 6. 苹果拟允许第三方语音控制AI应用接入CarPlay
 
-**📌 来源**: 36氪 | **🏏️ AI分类**: 社会政治 | **⭐ 评分**: 7.8/10
+**📌 来源**: 36氪 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 6.5/10
 
 **📝 摘要**:
-央行等八部门明确虚拟货币不具有与法定货币等同的法律地位，强调虚拟货币的非法性。
+苹果允许第三方语音控制AI应用接入CarPlay，关注科技行业动态。
 
 **💡 关键要点**:
 - 暂无要点
 
-**🔗 原文链接**: [央行等八部门：虚拟货币不具有与法定货币等同的法律地位](https://36kr.com/newsflashes/3671830181143430?f=rss)
+**🔗 原文链接**: [苹果拟允许第三方语音控制AI应用接入CarPlay](https://36kr.com/newsflashes/3672563387458440?f=rss)
 
 ---
 
-### 7. 中国人民银行、中国证监会有关负责人就《关于进一步防范和处置虚拟货币等相关风险的通知》答记者问
+## 🏛️ 社会政治 (1条)
 
-**📌 来源**: 36氪 | **🏏️ AI分类**: 社会政治 | **⭐ 评分**: 7.6/10
+精选 **1** 条社会政治新闻
+
+### 1. Trump removes racist post about Obamas after fierce backlash
+
+**📌 来源**: Financial Times | **🏏️ AI分类**: 社会政治 | **⭐ 评分**: 6.8/10
 
 **📝 摘要**:
-报道了中国人民银行和中国证监会就虚拟货币风险的通知，重要性高，时效性强，技术深度低，受众广度较广，实用性一般。
+新闻涉及政治事件，社会政治性质明显，对公众有一定影响，但技术深度和实用性一般。
 
 **💡 关键要点**:
 - 暂无要点
 
-**🔗 原文链接**: [中国人民银行、中国证监会有关负责人就《关于进一步防范和处置虚拟货币等相关风险的通知》答记者问](https://36kr.com/newsflashes/3671833854452617?f=rss)
+**🔗 原文链接**: [Trump removes racist post about Obamas after fierce backlash](https://www.ft.com/content/4c5e7b46-7d6d-4edc-af45-981ee74ccf33)
 
 ---
 
