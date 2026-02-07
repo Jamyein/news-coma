@@ -61,3 +61,4 @@ test_simplify.py
 pytest.ini
 requirements-dev.txt
 .coverage
+.github/workflows/test-suite.yml
