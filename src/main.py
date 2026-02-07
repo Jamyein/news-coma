@@ -215,11 +215,21 @@ class RSSAggregator:
         
         now = datetime.now()
         
-        # 生成Markdown
+        # 1. 询问RSS Generator需要什么数据源（方案C）
+        required_source = self.rss_gen.get_required_source(now)
+        logger.info(f"📋 RSS数据源需求: {required_source} "
+                    f"({'当天首次运行' if required_source == 'archive' else '当天后续运行'})")
+        
+        # 2. 生成Markdown（完全不受影响，始终生成latest.md和archive）
         latest_path, archive_path = self.markdown_gen.generate(items, now)
         logger.info(f"✓ Markdown: {latest_path}")
         
-        # 生成RSS
+        # 3. 验证：如果RSS需要archive但生成失败，报错
+        if required_source == 'archive' and not archive_path:
+            logger.error("❌ RSS需要archive文件但生成失败")
+            raise RuntimeError("RSS需要archive文件但生成失败")
+        
+        # 4. 生成RSS（根据现有文件自动选择数据源）
         self.rss_gen.generate()
         logger.info(f"✓ RSS feed: feed.xml")
     

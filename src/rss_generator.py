@@ -166,6 +166,32 @@ class RSSGenerator:
         
         return rss_xml
     
+    def get_required_source(self, now: datetime = None) -> str:
+        """
+        获取RSS生成所需的数据源类型（供main.py在生成前协调）
+        
+        逻辑：
+        - 当天首次运行（archive不存在）：返回 'archive'
+        - 当天后续运行（archive已存在）：返回 'latest'
+        
+        Args:
+            now: 可选，指定检测时间，默认为当前时间
+            
+        Returns:
+            'archive' 或 'latest'
+        """
+        if now is None:
+            now = datetime.now()
+        
+        date = now.date()
+        archive_filename = date.strftime("%Y-%m-%d") + ".md"
+        archive_path = self.archive_dir / archive_filename
+        
+        if archive_path.exists():
+            return 'latest'
+        else:
+            return 'archive'
+    
     def _log_smart_switch_stats(self, file_infos: list[dict]):
         """记录智能切换的统计信息"""
         try:
