@@ -1,342 +1,496 @@
 # 📰 新闻精选
 
-> 🕐 更新时间: 2026年02月07日 10:55
-> 📊 本期精选 **23** 条高质量新闻
+> 🕐 更新时间: 2026年02月07日 21:52
+> 📊 本期精选 **30** 条高质量新闻
 > 🤖 由 AI 自动分类、筛选、翻译和总结
 
 ---
 
-## 💰 财经新闻 (16条)
+## 💰 财经新闻 (22条)
 
-精选 **16** 条财经新闻
+精选 **22** 条财经新闻
 
-### 1. 选个“愿意降息”的美联储主席，历史上的美国总统总是“难以如愿”!
+### 1. “美国最大电网”PJM：未来十年美国面临重大电力短缺，缺口高达60GW
 
-**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 8.0/10
+**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 8.4/10
 
 **📝 摘要**:
-新闻涉及美联储主席提名和货币政策，对财经领域影响大，时效性强，技术深度和受众广度较高。
+美国最大电网运营商预测未来十年电力供应缺口高达60GW，数据中心扩张推高电力需求，电网备用容量不足。
 
 **💡 关键要点**:
-- 暂无要点
+- 电力供应缺口60GW
+- 数据中心扩张推高电力需求
+- 电网备用容量不足
 
-**🔗 原文链接**: [选个“愿意降息”的美联储主席，历史上的美国总统总是“难以如愿”!](https://wallstreetcn.com/articles/3765216)
+**🔗 原文链接**: [“美国最大电网”PJM：未来十年美国面临重大电力短缺，缺口高达60GW](https://wallstreetcn.com/articles/3765217)
 
 ---
 
-### 2. Dow 50,000 came as the market looked set to crack. What the milestone says about what’s ahead for risk and volatility.
-
-**📌 来源**: MarketWatch | **🏏️ AI分类**: 财经 | **⭐ 评分**: 8.0/10
-
-**📝 摘要**:
-新闻涉及股市重大事件，对财经领域影响大，时效性强，技术深度和受众广度较高。
-
-**💡 关键要点**:
-- 暂无要点
-
-**🔗 原文链接**: [Dow 50,000 came as the market looked set to crack. What the milestone says about what’s ahead for risk and volatility.](https://www.marketwatch.com/story/dow-closes-above-50-000-for-first-time-after-rough-week-for-u-s-stock-market-c47282f7?mod=mw_rss_topstories)
-
----
-
-### 3. 2025年微短剧市场规模破千亿元
+### 2. 美国对Netflix以830亿美元收购华纳兄弟的交易启动反垄断审查
 
 **📌 来源**: 36氪 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 8.0/10
 
 **📝 摘要**:
-该新闻报道了微短剧市场规模的增长，对文化产业和消费市场有重要影响，具有较高的重要性、时效性和受众广度。
+Netflix拟以830亿美元收购华纳兄弟，美国启动反垄断审查，调查垄断性市场力量。
 
 **💡 关键要点**:
-- 暂无要点
+- Netflix拟收购华纳兄弟830亿美元
+- 美国启动反垄断审查
+- 调查垄断性市场力量
 
-**🔗 原文链接**: [2025年微短剧市场规模破千亿元](https://36kr.com/newsflashes/3672554224542595?f=rss)
+**🔗 原文链接**: [美国对Netflix以830亿美元收购华纳兄弟的交易启动反垄断审查](https://36kr.com/newsflashes/3672975032541827?f=rss)
 
 ---
 
-### 4. 中国央行黄金储备"十五连增"，1月环比增持4万盎司，增持节奏略有加快
+### 3. 比特币跌破68000美元
 
-**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.8/10
+**📌 来源**: 36氪 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 8.0/10
 
 **📝 摘要**:
-新闻涉及中国央行黄金储备变化，对财经领域有一定影响，时效性强，技术深度和受众广度较高。
+比特币跌破68000美元，日内跌3.73%，受美联储加息预期影响。
 
 **💡 关键要点**:
-- 暂无要点
+- 比特币跌破68000美元
+- 日内跌3.73%
+- 受美联储加息预期影响
 
-**🔗 原文链接**: [中国央行黄金储备"十五连增"，1月环比增持4万盎司，增持节奏略有加快](https://wallstreetcn.com/articles/3765215)
+**🔗 原文链接**: [比特币跌破68000美元](https://36kr.com/newsflashes/3672951921533827?f=rss)
 
 ---
 
-### 5. “油进金退”--对冲基金的新“选择”
+### 4. 国际能源署：可再生能源与核电2030年将提供全球一半电力
 
-**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.8/10
+**📌 来源**: 36氪 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 8.0/10
 
 **📝 摘要**:
-新闻涉及对冲基金投资策略调整，对财经领域有一定影响，时效性强，技术深度和受众广度较高。
+国际能源署预测2030年可再生能源与核电将提供全球一半电力，电力需求年均增速将超过3.5%。
 
 **💡 关键要点**:
-- 暂无要点
+- 2030年可再生能源与核电提供全球一半电力
+- 电力需求年均增速超3.5%
+- 工业用电上升、电动汽车普及等因素驱动
 
-**🔗 原文链接**: [“油进金退”--对冲基金的新“选择”](https://wallstreetcn.com/articles/3765207)
+**🔗 原文链接**: [国际能源署：可再生能源与核电2030年将提供全球一半电力](https://36kr.com/newsflashes/3672852696621699?f=rss)
 
 ---
 
-### 6. 头部车企高管创业智能房车、获8000万融资，已拿下数亿元订单｜硬氪首发
+### 5. “结算后定价”、“超短期合同”！“存储三巨头”正签“前所未见”的供货合同
 
-**📌 来源**: 36氪 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.5/10
+**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 8.0/10
 
 **📝 摘要**:
-星空梦屋获得融资，关注新能源智能房车行业动态，对资本市场有一定影响。
+存储芯片巨头转向短期供货合同，价格追溯结算机制引入，市场主导权向供应商倾斜，保障供应成客户首要考量。
 
 **💡 关键要点**:
-- 暂无要点
+- 存储芯片巨头转向短期供货合同
+- 价格追溯结算机制引入
+- 市场主导权向供应商倾斜
 
-**🔗 原文链接**: [头部车企高管创业智能房车、获8000万融资，已拿下数亿元订单｜硬氪首发](https://36kr.com/p/3667627986133638?f=rss)
+**🔗 原文链接**: [“结算后定价”、“超短期合同”！“存储三巨头”正签“前所未见”的供货合同](https://wallstreetcn.com/articles/3765219)
 
 ---
 
-### 7. 美股三大指数集体收涨，英伟达大涨近8%
+### 6. ‘It’s existential’: How Big Tech found itself in a $650 billion spending spiral
 
-**📌 来源**: 36氪 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.5/10
+**📌 来源**: MarketWatch | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.5/10
 
 **📝 摘要**:
-新闻报道了美股三大指数的涨跌情况，对投资者有重要参考价值，具有较高的重要性、时效性和受众广度。
+大科技公司花费6500亿美元，市场对此表示不满。
 
 **💡 关键要点**:
-- 暂无要点
+- 大科技公司6500亿美元支出
+- 市场不满
 
-**🔗 原文链接**: [美股三大指数集体收涨，英伟达大涨近8%](https://36kr.com/newsflashes/3672551952294785?f=rss)
+**🔗 原文链接**: [‘It’s existential’: How Big Tech found itself in a $650 billion spending spiral](https://www.marketwatch.com/story/its-existential-how-big-tech-found-itself-in-a-650-billion-spending-spiral-346caa4d?mod=mw_rss_topstories)
 
 ---
 
-### 8. An AI startup founder says he’s planning a ‘March for Billionaires’ in protest of California’s wealth tax
+### 7. Benchmark raises $225M in special funds to double down on Cerebras
 
-**📌 来源**: TechCrunch | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.0/10
+**📌 来源**: TechCrunch | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.5/10
 
 **📝 摘要**:
-新闻涉及财富税政策，对财经领域有一定影响，但技术深度和实用性一般。
+Benchmark Capital投资Nvidia竞争对手Cerebras，筹集225M美元资金以扩大投资。
 
 **💡 关键要点**:
-- 暂无要点
+- Benchmark Capital投资Cerebras
+- 筹集225M美元资金
+- 投资Nvidia竞争对手
 
-**🔗 原文链接**: [An AI startup founder says he’s planning a ‘March for Billionaires’ in protest of California’s wealth tax](https://techcrunch.com/2026/02/06/an-ai-startup-founder-says-hes-planning-a-march-for-billionaires-in-protest-of-californias-wealth-tax/)
+**🔗 原文链接**: [Benchmark raises $225M in special funds to double down on Cerebras](https://techcrunch.com/2026/02/06/benchmark-raises-225m-in-special-funds-to-double-down-on-cerebras/)
 
 ---
 
-### 9. China Forex Reserves Rise in January
+### 8. Bitcoin’s 50% plunge from highs ‘hurts a little’ — but it isn’t shaking these investors’ conviction
 
-**📌 来源**: WSJ 市场 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 6.8/10
+**📌 来源**: MarketWatch | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.4/10
 
 **📝 摘要**:
-新闻报道了中国外汇储备的增长，对国际金融市场有重要影响，具有较高的重要性和技术深度。
+比特币价格下跌50%，投资者信心未受影响，认为波动是入场代价。
 
 **💡 关键要点**:
-- 暂无要点
+- 比特币价格下跌50%
+- 投资者信心未受影响
+- 波动视为入场代价
 
-**🔗 原文链接**: [China Forex Reserves Rise in January](https://www.wsj.com/world/china/china-forex-reserves-rise-in-january-9d7b9317?mod=rss_markets_main)
+**🔗 原文链接**: [Bitcoin’s 50% plunge from highs ‘hurts a little’ — but it isn’t shaking these investors’ conviction](https://www.marketwatch.com/story/bitcoins-50-plunge-from-highs-hurts-a-little-but-it-isnt-shaking-these-investors-conviction-304b2ba6?mod=mw_rss_topstories)
 
 ---
 
-### 10. A New Crypto Winter Is Here and Even the Biggest Bulls Are Worried
+### 9. Tech wreck signals a market reset
 
-**📌 来源**: WSJ 市场 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 6.8/10
+**📌 来源**: Financial Times | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.4/10
 
 **📝 摘要**:
-新闻探讨了加密货币市场的寒冬，对加密货币投资者有重要影响，具有较高的重要性和技术深度。
+科技股崩盘预示市场重置，加密货币等投机性股票不再被支持。
 
 **💡 关键要点**:
-- 暂无要点
+- 科技股崩盘
+- 市场重置
+- 加密货币不再被支持
 
-**🔗 原文链接**: [A New Crypto Winter Is Here and Even the Biggest Bulls Are Worried](https://www.wsj.com/finance/currencies/a-new-crypto-winter-is-here-and-even-the-biggest-bulls-are-worried-82019de4?mod=rss_markets_main)
+**🔗 原文链接**: [Tech wreck signals a market reset](https://www.ft.com/content/df69f37b-0929-45d0-b357-5db7ed5c2678)
 
 ---
 
-### 11. 贝莱德固定收益首席投资官减持美国投资级和高收益债
+### 10. 美印达成临时贸易框架：对印关税降至18%，印度承诺5年采购5000亿美元美国产品
 
-**📌 来源**: 36氪 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 6.5/10
+**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.3/10
 
 **📝 摘要**:
-贝莱德固定收益首席投资官减持美国债券，关注金融市场动态。
+美印达成临时贸易框架，印度承诺5年采购5000亿美元美国产品。
 
 **💡 关键要点**:
-- 暂无要点
+- 美印达成临时贸易协议框架，结束贸易僵局
+- 印度承诺5年采购5000亿美元美国产品
+- 协议涉及能源、航空、金属及科技产品等领域
 
-**🔗 原文链接**: [贝莱德固定收益首席投资官减持美国投资级和高收益债](https://36kr.com/newsflashes/3672560699270023?f=rss)
+**🔗 原文链接**: [美印达成临时贸易框架：对印关税降至18%，印度承诺5年采购5000亿美元美国产品](https://wallstreetcn.com/articles/3765233)
 
 ---
 
-### 12. 美国食品药品监督管理局采取行动打击仿冒减肥药
+### 11. 苹果逆袭中国市场，背后竟是爱马仕橙救场？
 
-**📌 来源**: 36氪 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 6.5/10
+**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.3/10
 
 **📝 摘要**:
-FDA打击仿冒减肥药，关注药品安全监管。
+苹果公司在中国市场销售下滑周期宣告终结，第四季度在华收入同比大幅增长38%。
 
 **💡 关键要点**:
-- 暂无要点
+- 苹果中国市场份额增长38%
+- iPhone 17系列设计革新，引发显著消费关注
+- 苹果中国收入贡献全球总销售额近五分之一
 
-**🔗 原文链接**: [美国食品药品监督管理局采取行动打击仿冒减肥药](https://36kr.com/newsflashes/3672559983141513?f=rss)
+**🔗 原文链接**: [苹果逆袭中国市场，背后竟是爱马仕橙救场？](https://wallstreetcn.com/articles/3765230)
 
 ---
 
-### 13. 蔚来1亿次换电正式达成
+### 12. 美科技股“崩盘式”回调的信号：风险资产普涨时代终结，AI输家将被无情抛弃！
 
-**📌 来源**: 36氪 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 6.5/10
+**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.3/10
 
 **📝 摘要**:
-蔚来1亿次换电达成，关注新能源汽车行业动态。
+全球风险资产经历剧烈调整，高盛分析师将当前市场状况定性为“科技股灾难”。
 
 **💡 关键要点**:
-- 暂无要点
+- 全球风险资产经历剧烈调整
+- 高盛分析师将市场状况定性为“科技股灾难”
+- 比特币价格一度自历史高点腰斩
 
-**🔗 原文链接**: [蔚来1亿次换电正式达成](https://36kr.com/newsflashes/3672558095032961?f=rss)
+**🔗 原文链接**: [美科技股“崩盘式”回调的信号：风险资产普涨时代终结，AI输家将被无情抛弃！](https://wallstreetcn.com/articles/3765226)
 
 ---
 
-### 14. 国际金价与银价6日大幅震荡
+### 13. ‘Hermès orange’ iPhone sparks Apple comeback in China
 
-**📌 来源**: 36氪 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 6.5/10
+**📌 来源**: Financial Times | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.3/10
 
 **📝 摘要**:
-国际金银价格大幅震荡，关注贵金属市场动态。
+苹果公司推出新配色iPhone，在中国市场销量大幅增长，结束销售下滑周期。
 
 **💡 关键要点**:
-- 暂无要点
+- iPhone 17系列设计革新，中国市场份额增长38%
+- 新配色与奢侈品牌爱马仕相似，引发社交媒体关注
+- 苹果中国收入贡献全球总销售额近五分之一
 
-**🔗 原文链接**: [国际金价与银价6日大幅震荡](https://36kr.com/newsflashes/3672556176614023?f=rss)
+**🔗 原文链接**: [‘Hermès orange’ iPhone sparks Apple comeback in China](https://www.ft.com/content/e2d78d04-7368-4b0c-abd5-591c03774c46)
 
 ---
 
-### 15. 9点1氪丨千问回应“春节30亿免单”页面崩了；英伟达据悉今年或将不推出任何新游戏显卡；董事长被指疑为“骗保”精神病院实控人，爱尔眼科声明
+### 14. When considered as a percentage of GDP, the 2026 projected AI-driven spending by Amazon, Alphabet, Microsoft and Meta rivals momentous capital efforts in U.S. history, as shown in these charts
 
-**📌 来源**: 36氪 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 6.5/10
+**📌 来源**: WSJ 全球经济 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.2/10
 
 **📝 摘要**:
-新闻涉及多个公司动态，对财经领域有一定关注价值。
+四大科技巨头2026年AI驱动的支出与美历史重大资本努力相当。
 
 **💡 关键要点**:
-- 暂无要点
+- 四大科技巨头2026年AI支出巨大
+- 支出占GDP比例与美历史重大资本努力相当
+- 图表展示支出情况
 
-**🔗 原文链接**: [9点1氪丨千问回应“春节30亿免单”页面崩了；英伟达据悉今年或将不推出任何新游戏显卡；董事长被指疑为“骗保”精神病院实控人，爱尔眼科声明](https://36kr.com/p/3672535692059273?f=rss)
+**🔗 原文链接**: [When considered as a percentage of GDP, the 2026 projected AI-driven spending by Amazon, Alphabet, Microsoft and Meta rivals momentous capital efforts in U.S. history, as shown in these charts](https://www.wsj.com/tech/ai/ai-spending-tech-companies-compared-02b90046)
 
 ---
 
-### 16. President Trump chose a Federal Reserve chair he thinks he can count on to lower interest rates. History suggests three different ways presidents have come to regret that bet.
+### 15. Gen Z is obsessed with 2016, and beauty stocks like e.l.f. and Ulta are riding the nostalgia wave
 
-**📌 来源**: WSJ 全球经济 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 6.5/10
+**📌 来源**: MarketWatch | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.0/10
 
 **📝 摘要**:
-新闻回顾了美国总统特朗普任命美联储主席的历史，对金融政策有潜在影响，具有一定的历史价值和参考意义。
+Z世代对2016年怀旧，美妆股票受益。
 
 **💡 关键要点**:
-- 暂无要点
+- Z世代怀旧2016
+- 美妆股票受益
 
-**🔗 原文链接**: [President Trump chose a Federal Reserve chair he thinks he can count on to lower interest rates. History suggests three different ways presidents have come to regret that bet.](https://www.wsj.com/economy/central-banking/these-presidents-found-out-how-trying-to-control-the-fed-chair-can-backfire-2142c6e6)
+**🔗 原文链接**: [Gen Z is obsessed with 2016, and beauty stocks like e.l.f. and Ulta are riding the nostalgia wave](https://www.marketwatch.com/story/gen-z-is-obsessed-with-2016-and-beauty-stocks-like-e-l-f-and-ulta-are-riding-the-nostalgia-wave-581dd031?mod=mw_rss_topstories)
 
 ---
 
-## 🔬 科技新闻 (6条)
+### 16. After bitcoin’s fall, pity those wildly enthusiastic investors who borrowed billions against crypto
 
-精选 **6** 条科技新闻
-
-### 1. 投资人抢着加码！Anthropic新一轮融资额有望翻番，估值达到3500亿美元！
-
-**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 8.0/10
+**📌 来源**: MarketWatch | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.0/10
 
 **📝 摘要**:
-新闻涉及人工智能初创公司融资，对科技领域影响大，时效性强，技术深度和受众广度较高。
+比特币下跌后，借加密货币投资的人面临困境，预期目标破灭。
 
 **💡 关键要点**:
-- 暂无要点
+- 比特币下跌
+- 借加密货币投资
+- 预期目标破灭
 
-**🔗 原文链接**: [投资人抢着加码！Anthropic新一轮融资额有望翻番，估值达到3500亿美元！](https://wallstreetcn.com/articles/3765212)
+**🔗 原文链接**: [After bitcoin’s fall, pity those wildly enthusiastic investors who borrowed billions against crypto](https://www.marketwatch.com/story/as-bitcoin-crashes-pity-those-wildly-enthusiastic-investors-who-borrowed-billions-against-crypto-794164bb?mod=mw_rss_topstories)
 
 ---
 
-### 2. “DeepSeek时刻”1年后，市场见证了“Claude冲击”
+### 17. Software stocks have been crushed. Here’s how to play the sector as the dust settles.
 
-**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 8.0/10
+**📌 来源**: MarketWatch | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.0/10
 
 **📝 摘要**:
-新闻涉及AI初创公司市场表现，对科技领域影响大，时效性强，技术深度和受众广度较高。
+软件股票下跌后，投资者可评估购买被压低股价的软件股票的机会。
 
 **💡 关键要点**:
-- 暂无要点
+- 软件股票下跌
+- 评估购买机会
+- 被压低股价的股票
 
-**🔗 原文链接**: [“DeepSeek时刻”1年后，市场见证了“Claude冲击”](https://wallstreetcn.com/articles/3765209)
+**🔗 原文链接**: [Software stocks have been crushed. Here’s how to play the sector as the dust settles.](https://www.marketwatch.com/story/software-stocks-have-been-crushed-heres-how-to-play-the-sector-as-the-dust-settles-c0175f8a?mod=mw_rss_topstories)
 
 ---
 
-### 3. OpenAI与G42洽谈，拟为阿联酋打造专属ChatGPT
+### 18. How the house of Rothschild became entangled with Epstein
 
-**📌 来源**: 36氪 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 7.0/10
+**📌 来源**: Financial Times | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.0/10
 
 **📝 摘要**:
-OpenAI与G42合作，关注人工智能技术发展，对科技领域有一定影响。
+罗斯柴尔德家族与爱泼斯坦事件有关联，瑞士私人银行陷入困境。
 
 **💡 关键要点**:
-- 暂无要点
+- 罗斯柴尔德家族与爱泼斯坦事件
+- 瑞士私人银行陷入困境
+- 家族与事件关联
 
-**🔗 原文链接**: [OpenAI与G42洽谈，拟为阿联酋打造专属ChatGPT](https://36kr.com/newsflashes/3672565075305095?f=rss)
+**🔗 原文链接**: [How the house of Rothschild became entangled with Epstein](https://www.ft.com/content/0d70b7d3-063d-43a0-812b-8b8b3e7c4c47)
 
 ---
 
-### 4. 知情人士：SpaceX推迟今年的火星探测任务 计划优先于2027年3月实现无人登月
+### 19. Tech stocks have been shaky, but these 20 companies could still see rocketing sales growth
 
-**📌 来源**: 36氪 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 7.0/10
+**📌 来源**: MarketWatch | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.0/10
 
 **📝 摘要**:
-SpaceX推迟火星探测任务，关注太空探索领域动态。
+科技股波动，但部分公司未来几年可能实现销售增长。
 
 **💡 关键要点**:
-- 暂无要点
+- 科技股波动
+- 部分公司销售增长
+- 未来几年增长
 
-**🔗 原文链接**: [知情人士：SpaceX推迟今年的火星探测任务 计划优先于2027年3月实现无人登月](https://36kr.com/newsflashes/3672561956266633?f=rss)
+**🔗 原文链接**: [Tech stocks have been shaky, but these 20 companies could still see rocketing sales growth](https://www.marketwatch.com/story/tech-stocks-have-been-shaky-but-these-20-companies-could-still-see-rocketing-sales-growth-148195c9?mod=mw_rss_topstories)
 
 ---
 
-### 5. 我国首次明确培育三类数据流通服务机构 助力“人工智能+”行动
+### 20. The AI boom is causing shortages everywhere else
 
-**📌 来源**: 36氪 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 7.0/10
+**📌 来源**: Hacker News | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.0/10
 
 **📝 摘要**:
-我国明确培育数据流通服务机构，关注数据要素市场化。
+AI繁荣导致各行业人才短缺。
 
 **💡 关键要点**:
-- 暂无要点
+- AI行业人才短缺
+- 行业繁荣影响
 
-**🔗 原文链接**: [我国首次明确培育三类数据流通服务机构 助力“人工智能+”行动](https://36kr.com/newsflashes/3672559086068356?f=rss)
+**🔗 原文链接**: [The AI boom is causing shortages everywhere else](https://www.washingtonpost.com/technology/2026/02/07/ai-spending-economy-shortages/)
 
 ---
 
-### 6. 苹果拟允许第三方语音控制AI应用接入CarPlay
+### 21. The Weight-Loss Price Wars Are Breaking Big Pharma’s Business Model
 
-**📌 来源**: 36氪 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 6.5/10
+**📌 来源**: WSJ 市场 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.0/10
 
 **📝 摘要**:
-苹果允许第三方语音控制AI应用接入CarPlay，关注科技行业动态。
+GLP-1s价格下跌，迫使公司适应。
 
 **💡 关键要点**:
-- 暂无要点
+- GLP-1s价格快速下跌
+- 公司被迫适应价格变化
+- 影响制药行业商业模式
 
-**🔗 原文链接**: [苹果拟允许第三方语音控制AI应用接入CarPlay](https://36kr.com/newsflashes/3672563387458440?f=rss)
+**🔗 原文链接**: [The Weight-Loss Price Wars Are Breaking Big Pharma’s Business Model](https://www.wsj.com/health/pharma/the-weight-loss-price-wars-are-breaking-big-pharmas-business-model-53446a58?mod=rss_markets_main)
 
 ---
 
-## 🏛️ 社会政治 (1条)
+### 22. 乘联分会崔东树：2025年全国二手车累计交易量2011万台，同比增2.5%
 
-精选 **1** 条社会政治新闻
-
-### 1. Trump removes racist post about Obamas after fierce backlash
-
-**📌 来源**: Financial Times | **🏏️ AI分类**: 社会政治 | **⭐ 评分**: 6.8/10
+**📌 来源**: 36氪 | **🏏️ AI分类**: 财经 | **⭐ 评分**: 7.0/10
 
 **📝 摘要**:
-新闻涉及政治事件，社会政治性质明显，对公众有一定影响，但技术深度和实用性一般。
+2025年全国二手车累计交易量2011万台，同比增2.5%，交易额12898亿元，增0.4%。
 
 **💡 关键要点**:
-- 暂无要点
+- 2025年二手车交易量2011万台
+- 同比增2.5%
+- 交易额12898亿元，增0.4%
 
-**🔗 原文链接**: [Trump removes racist post about Obamas after fierce backlash](https://www.ft.com/content/4c5e7b46-7d6d-4edc-af45-981ee74ccf33)
+**🔗 原文链接**: [乘联分会崔东树：2025年全国二手车累计交易量2011万台，同比增2.5%](https://36kr.com/newsflashes/3672946537833097?f=rss)
+
+---
+
+## 🔬 科技新闻 (4条)
+
+精选 **4** 条科技新闻
+
+### 1. 钙钛矿GW级产能爆发，产业链上有哪些机会？
+
+**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 7.6/10
+
+**📝 摘要**:
+钙钛矿光伏产能爆发，预计2027年全球产能超5GW，2030年突破30GW。
+
+**💡 关键要点**:
+- 钙钛矿成为光伏市场新破局者
+- 2025年钙钛矿GW级量产元年，产能爆发期到来
+- 国内单结钙钛矿实验室效率达27.3%，叠层电池突破35.0%
+
+**🔗 原文链接**: [钙钛矿GW级产能爆发，产业链上有哪些机会？](https://wallstreetcn.com/articles/3765229)
+
+---
+
+### 2. 百年康宁华丽转身：光纤终结二十年亏损，抱上Meta大腿成AI新贵！
+
+**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 7.6/10
+
+**📝 摘要**:
+康宁光纤业务成为AI数据中心建设关键受益者，与Meta签订60亿美元光纤供应协议。
+
+**💡 关键要点**:
+- 康宁光纤业务成为AI数据中心建设关键受益者
+- 与Meta签订60亿美元光纤供应协议
+- 光子传输数据效率高，成为首选
+
+**🔗 原文链接**: [百年康宁华丽转身：光纤终结二十年亏损，抱上Meta大腿成AI新贵！](https://wallstreetcn.com/articles/3765225)
+
+---
+
+### 3. China Is Going All-In to Beat the U.S. on Humanoid Robots
+
+**📌 来源**: WSJ 经济 | **🏏️ AI分类**: 科技 | **⭐ 评分**: 7.2/10
+
+**📝 摘要**:
+Elon Musk警告特斯拉人形机器人可能主要属于中国。
+
+**💡 关键要点**:
+- Elon Musk警告特斯拉人形机器人可能属于中国
+- 特斯拉人形机器人可能革命世界
+- Elon Musk对投资者发表言论
+
+**🔗 原文链接**: [China Is Going All-In to Beat the U.S. on Humanoid Robots](https://www.wsj.com/tech/china-is-going-all-in-to-beat-the-u-s-on-humanoid-robots-b9c434d2?mod=pls_whats_news_us_business_f)
+
+---
+
+### 4. Reinforcement Learning from Human Feedback
+
+**📌 来源**: Hacker News | **🏏️ AI分类**: 科技 | **⭐ 评分**: 7.0/10
+
+**📝 摘要**:
+研究从人类反馈中进行强化学习。
+
+**💡 关键要点**:
+- 强化学习研究
+- 人类反馈应用
+
+**🔗 原文链接**: [Reinforcement Learning from Human Feedback](https://arxiv.org/abs/2504.12501)
+
+---
+
+## 🏛️ 社会政治 (4条)
+
+精选 **4** 条社会政治新闻
+
+### 1. 特斯拉计划在中国市场加大AI软硬件和能源领域投入
+
+**📌 来源**: 36氪 | **🏏️ AI分类**: 社会政治 | **⭐ 评分**: 8.0/10
+
+**📝 摘要**:
+特斯拉计划2026年在中国加大AI软硬件和能源领域投入，预计资本支出超过200亿美元，重点投向AI算力、机器人工厂等领域。
+
+**💡 关键要点**:
+- 特斯拉2026年资本支出超200亿美元
+- 重点投向AI算力、机器人工厂
+- 上海储能超级工厂提供储能电池Megapack产品
+
+**🔗 原文链接**: [特斯拉计划在中国市场加大AI软硬件和能源领域投入](https://36kr.com/newsflashes/3672947337110152?f=rss)
+
+---
+
+### 2. 泽连斯基：美方希望俄乌在6月前达成和平协议
+
+**📌 来源**: 华尔街见闻 | **🏏️ AI分类**: 社会政治 | **⭐ 评分**: 7.8/10
+
+**📝 摘要**:
+乌克兰总统表示，美国推动俄乌双方在6月前达成和平协议，预计将在约一周后举行下一轮和平谈判。
+
+**💡 关键要点**:
+- 泽连斯基表示美国希望俄乌6月前达成和平协议
+- 预计在约一周后举行下一轮和平谈判
+- 俄乌冲突持续，对地区安全造成严重影响
+
+**🔗 原文链接**: [泽连斯基：美方希望俄乌在6月前达成和平协议](https://wallstreetcn.com/articles/3765234)
+
+---
+
+### 3. Trump is pushing to end war in Ukraine by June, Zelenskyy says
+
+**📌 来源**: Financial Times | **🏏️ AI分类**: 社会政治 | **⭐ 评分**: 7.8/10
+
+**📝 摘要**:
+乌克兰总统表示，美国推动俄乌双方在6月前达成和平协议，预计将在迈阿密举行三方和平谈判。
+
+**💡 关键要点**:
+- 泽连斯基表示美国希望俄乌6月前达成和平协议
+- 预计在迈阿密举行三方和平谈判
+- 俄乌冲突持续，对地区安全造成严重影响
+
+**🔗 原文链接**: [Trump is pushing to end war in Ukraine by June, Zelenskyy says](https://www.ft.com/content/ccc11b61-500c-4514-ba5b-fe67b592137f)
+
+---
+
+### 4. Putin isn’t really winning. Europe needs to make that clear
+
+**📌 来源**: Financial Times | **🏏️ AI分类**: 社会政治 | **⭐ 评分**: 7.6/10
+
+**📝 摘要**:
+普京在乌克兰战争中并非真正获胜，欧洲需要明确这一点。
+
+**💡 关键要点**:
+- 普京在乌克兰战争中
+- 并非真正获胜
+- 欧洲需要明确
+
+**🔗 原文链接**: [Putin isn’t really winning. Europe needs to make that clear](https://www.ft.com/content/36b57cc3-9488-41fd-aba8-a1cf50e0336e)
 
 ---
 
