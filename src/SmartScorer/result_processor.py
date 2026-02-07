@@ -2,7 +2,6 @@
 
 import json
 import logging
-from typing import List, Dict
 from src.models import NewsItem
 
 logger = logging.getLogger(__name__)
@@ -30,14 +29,14 @@ class ResultProcessor:
         item.ai_summary = f"[系统默认值 - {reason}]"
         logger.debug(f"为新闻 '{item.title[:30]}...' 应用默认分数 (原因: {reason})")
 
-    def _apply_default_to_batch(self, items: List[NewsItem], reason: str = "parse_error") -> None:
+    def _apply_default_to_batch(self, items: list[NewsItem], reason: str = "parse_error") -> None:
         """为一批新闻应用默认值"""
         for item in items:
             self._apply_default_score(item, reason)
         self._stats['missing_fields'] += len(items)
         logger.warning(f"已为 {len(items)} 条新闻应用默认分数 (原因: {reason})")
 
-    def parse_1pass_response(self, items: List[NewsItem], response: str) -> List[NewsItem]:
+    def parse_1pass_response(self, items: list[NewsItem], response: str) -> list[NewsItem]:
         """解析1-pass API响应"""
         try:
             results = json.loads(response)
@@ -67,7 +66,7 @@ class ResultProcessor:
             self._apply_default_to_batch(items, "json_decode_error")
             return items
     
-    def _apply_result(self, item: NewsItem, result: Dict) -> NewsItem:
+    def _apply_result(self, item: NewsItem, result: dict) -> NewsItem:
         """将解析结果应用到新闻项"""
         # 分类
         category = result.get('category', '社会政治')
@@ -93,12 +92,12 @@ class ResultProcessor:
 
         return item
     
-    def _apply_defaults(self, items: List[NewsItem]) -> List[NewsItem]:
+    def _apply_defaults(self, items: list[NewsItem]) -> list[NewsItem]:
         """应用默认分数"""
         self._apply_default_to_batch(items, "apply_defaults")
         return items
 
-    def get_stats(self) -> Dict:
+    def get_stats(self) -> dict:
         return self._stats.copy()
 
     def reset_stats(self):

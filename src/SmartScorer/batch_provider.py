@@ -241,7 +241,8 @@ class BatchProvider:
         )
         
         # 构建单条新闻的prompt
-        summary = item.summary[:300] if item.summary else "无摘要"
+        max_summary_len = getattr(self.config, 'max_summary_length', 300)
+        summary = item.summary[:max_summary_len] if item.summary else "无摘要"
         single_prompt = f"""请对以下新闻进行专业评估。
 
 【新闻】
