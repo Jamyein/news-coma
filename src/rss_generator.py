@@ -6,7 +6,7 @@ import logging
 import os
 import re
 from datetime import datetime
-from typing import List, Dict
+
 from xml.sax.saxutils import escape
 from pathlib import Path
 
@@ -166,7 +166,7 @@ class RSSGenerator:
         
         return rss_xml
     
-    def _log_smart_switch_stats(self, file_infos: List[Dict]):
+    def _log_smart_switch_stats(self, file_infos: list[dict]):
         """记录智能切换的统计信息"""
         try:
             latest_count = 0
@@ -188,7 +188,7 @@ class RSSGenerator:
         except Exception as e:
             logger.error(f"记录智能切换统计失败: {e}")
     
-    def _collect_markdown_files(self) -> List[Path]:
+    def _collect_markdown_files(self) -> list[Path]:
         """收集archive和docs目录中的所有Markdown文件，支持智能切换逻辑"""
         markdown_files = []
         
@@ -300,7 +300,7 @@ class RSSGenerator:
             logger.error(f"从latest.md提取完整日期时间失败: {e}")
             return None
     
-    def _parse_markdown_file(self, file_path: Path) -> Dict:
+    def _parse_markdown_file(self, file_path: Path) -> dict:
         """解析Markdown文件，提取信息"""
         if not file_path.exists():
             return None
@@ -402,7 +402,7 @@ class RSSGenerator:
             logger.error(f"从文件提取日期失败 {file_path}: {e}")
             return None
     
-    def _build_rss_xml(self, file_infos: List[Dict]) -> str:
+    def _build_rss_xml(self, file_infos: list[dict]) -> str:
         """构建RSS 2.0 XML"""
         now = datetime.utcnow()
         build_date = self._format_rfc822(now)
@@ -440,7 +440,7 @@ class RSSGenerator:
         
         return rss
     
-    def _build_item_xml(self, file_info: Dict) -> str:
+    def _build_item_xml(self, file_info: dict) -> str:
         """构建单个item XML（支持三板块分类）"""
         title = escape(file_info.get('title', ''))
         link = file_info.get('link', '')

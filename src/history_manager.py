@@ -5,7 +5,7 @@
 import json
 import logging
 from datetime import datetime, timedelta
-from typing import List, Set, Dict, Any, Optional
+from typing import Optional
 from pathlib import Path
 
 logger = logging.getLogger(__name__)
@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 class HistoryManager:
     """历史数据管理器 - 扩展AI评分缓存功能"""
     
-    def _get_default_structure(self) -> Dict[str, Any]:
+    def _get_default_structure(self) -> dict[str, any]:
         """获取默认数据结构"""
         return {
             "last_run": None,
@@ -50,7 +50,7 @@ class HistoryManager:
         self._data = self._load()
         self._init_data_structure()
     
-    def _load(self) -> Dict[str, Any]:
+    def _load(self) -> dict[str, any]:
         """加载历史数据"""
         if self.history_path.exists():
             try:
@@ -87,7 +87,7 @@ class HistoryManager:
         self, 
         run_time: datetime, 
         news_count: int, 
-        source_stats: Dict[str, int],
+        source_stats: dict[str, int],
         **kwargs
     ):
         """

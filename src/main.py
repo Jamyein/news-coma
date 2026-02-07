@@ -11,7 +11,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import logging
 import asyncio
 from datetime import datetime
-from typing import List
+
 
 from src.config import Config
 from src.models import NewsItem
@@ -137,7 +137,7 @@ class RSSAggregator:
         if provider_config:
             logger.info(f"✓ AI模型: {ai_config.provider} ({provider_config.model})")
     
-    def _fetch_news(self) -> List[NewsItem]:
+    def _fetch_news(self) -> list[NewsItem]:
         """
         获取新闻（支持基于时间节点的增量获取）
         """
@@ -186,7 +186,7 @@ class RSSAggregator:
         
         return all_items
     
-    async def _score_news(self, items: List[NewsItem]) -> List[NewsItem]:
+    async def _score_news(self, items: list[NewsItem]) -> list[NewsItem]:
         """AI评分"""
         logger.info(f"🤖 开始AI评分(共 {len(items)} 条)...")
 
@@ -201,7 +201,7 @@ class RSSAggregator:
 
         return filtered
     
-    def _select_top_news(self, items: List[NewsItem]) -> List[NewsItem]:
+    def _select_top_news(self, items: list[NewsItem]) -> list[NewsItem]:
         """
         选择Top N新闻
         

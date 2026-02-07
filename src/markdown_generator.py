@@ -4,7 +4,7 @@ Markdown生成模块
 """
 import logging
 from datetime import datetime
-from typing import List, Tuple, Dict
+
 from pathlib import Path
 
 from src.models import NewsItem
@@ -23,7 +23,7 @@ class MarkdownGenerator:
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.archive_dir.mkdir(parents=True, exist_ok=True)
     
-    def generate(self, items: List[NewsItem], timestamp: datetime) -> Tuple[str, str]:
+    def generate(self, items: list[NewsItem], timestamp: datetime) -> tuple[str, str]:
         """
         生成Markdown文件
         
@@ -56,7 +56,7 @@ class MarkdownGenerator:
         
         return str(latest_path), str(archive_path)
     
-    def _group_by_category(self, items: List[NewsItem]) -> Dict[str, List[NewsItem]]:
+    def _group_by_category(self, items: list[NewsItem]) -> dict[str, list[NewsItem]]:
         """按AI分类分组新闻"""
         groups = {"财经": [], "科技": [], "社会政治": [], "其他": []}
         for item in items:
@@ -67,7 +67,7 @@ class MarkdownGenerator:
                 groups["其他"].append(item)
         return groups
 
-    def _build_content(self, items: List[NewsItem], timestamp: datetime) -> str:
+    def _build_content(self, items: list[NewsItem], timestamp: datetime) -> str:
         """构建Markdown内容（三板块分区布局）"""
         from datetime import timedelta
         beijing_time = timestamp + timedelta(hours=8)

@@ -22,7 +22,7 @@ class SmartScorer:
         self.config = config
         self.batch_provider = BatchProvider(config)
         self.prompt_engine = PromptEngine(config)
-        self.result_processor = ResultProcessor()
+        self.result_processor = ResultProcessor(config)
         self._stats = {
             'total_processed': 0,
             'total_api_calls': 0,

@@ -115,6 +115,20 @@ class AIConfig:
     streaming_json_buffer_size: int = 4096          # 流式解析缓冲区大小（字节）
     streaming_json_max_depth: int = 10              # 最大JSON嵌套深度
 
+    # 错误处理默认分数（新增）
+    default_score_on_error: float = 3.0             # 错误时的默认分数
+    default_score_on_parse_error: float = 5.0       # 解析错误时的默认分数
+    
+    # 批处理配置（新增）
+    min_batch_size_for_subdivision: int = 3         # 触发批次细分的最小批次大小
+    
+    # 摘要长度限制（新增）
+    max_summary_length: int = 300                   # 摘要最大字符数
+    max_error_message_length: int = 50              # 错误消息最大字符数
+    
+    # 评分维度默认值（新增）
+    default_dimension_score: int = 5                # 各评分维度默认值
+
 
 @dataclass
 class OutputConfig:
