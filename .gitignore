@@ -60,3 +60,4 @@ test_simplify.py
 /.opencode
 pytest.ini
 requirements-dev.txt
+.coverage
