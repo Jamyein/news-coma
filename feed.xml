@@ -5,8 +5,8 @@
     <link>https://github.com/Jamyein/news-coma</link>
     <description>由 AI 筛选的高质量科技新闻聚合，每6小时自动更新</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 06 Feb 2026 15:19:49 GMT</lastBuildDate>
-    <pubDate>Fri, 06 Feb 2026 15:19:49 GMT</pubDate>
+    <lastBuildDate>Sat, 07 Feb 2026 01:01:28 GMT</lastBuildDate>
+    <pubDate>Sat, 07 Feb 2026 01:01:28 GMT</pubDate>
     <atom:link href="https://Jamyein.github.io/news-coma/feed.xml" rel="self" type="application/rss+xml" />
     <image>
         <url>https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</url>
@@ -15,14 +15,592 @@
     </image>
 
     <item>
-        <title>2026年02月06日 23:19 新闻汇总</title>
+        <title>2026年02月07日 09:01 新闻汇总</title>
         <link>https://Jamyein.github.io/news-coma/</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Fri, 06 Feb 2026 15:19:49 GMT</pubDate>
+        <pubDate>Sat, 07 Feb 2026 01:01:28 GMT</pubDate>
         <guid>docs/latest.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
-<blockquote>🕐 更新时间: 2026年02月06日 23:19</blockquote>
+<blockquote>🕐 更新时间: 2026年02月07日 09:01</blockquote>
+<blockquote>📊 本期精选 <strong>30</strong> 条高质量新闻</blockquote>
+<blockquote>🤖 由 AI 自动分类、筛选、翻译和总结</blockquote>
+<hr/>
+<h2>💰 财经新闻 (13条)</h2>
+<p>精选 <strong>13</strong> 条财经新闻</p>
+<h3>1. Bitcoin gets slashed in half. What's behind the crypto's existential crisis</h3>
+<p><strong>📌 来源</strong>: CNBC | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: 新闻8报道了比特币价格的大幅下跌，对财经领域有重要影响，具有很高的时效性和重要性。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.cnbc.com/2026/02/06/bitcoin-gets-slashed-in-half-whats-behind-the-cryptos-existential-crisis.html">Bitcoin gets slashed in half. What's behind the crypto's existential crisis</a>
+<hr/>
+<h3>2. 告别“科技股独秀”！超75%标普500企业实现利润增长，为2021年来最高</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: 标普500企业利润增长，显示美国企业盈利趋势，对股市分析有重要参考价值，时效性强。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765185">告别“科技股独秀”！超75%标普500企业实现利润增长，为2021年来最高</a>
+<hr/>
+<h3>3. 丹诺医药港股IPO及境内未上市股份“全流通”获中国证监会备案</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: 丹诺医药港股IPO及境内未上市股份“全流通”获中国证监会备案，对资本市场有重要影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3671808921412488?f=rss">丹诺医药港股IPO及境内未上市股份“全流通”获中国证监会备案</a>
+<hr/>
+<h3>4. 芯碁微装港股IPO获中国证监会备案</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: 芯碁微装港股IPO获中国证监会备案，体现了资本市场对科技企业的关注。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3671800654930821?f=rss">芯碁微装港股IPO获中国证监会备案</a>
+<hr/>
+<h3>5. 证监会：2025年全年完成16家随机抽取及4家问题导向企业检查处理工作</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: 证监会发布首发企业现场检查情况，体现了监管层对资本市场的监管态度。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3671790211457672?f=rss">证监会：2025年全年完成16家随机抽取及4家问题导向企业检查处理工作</a>
+<hr/>
+<h3>6. 直销奇迹？比亚迪财险综合费用率低至5.21%，实现首年盈利</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.9/10</p>
+<p><strong>📝 摘要</strong>: 比亚迪财险实现首年盈利，对保险业有重要意义，同时具有较高时效性和实用性。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765187">直销奇迹？比亚迪财险综合费用率低至5.21%，实现首年盈利</a>
+<hr/>
+<h3>7. US tech stocks rally strongly after three days of heavy selling</h3>
+<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 该新闻关注美国科技股的强劲反弹，对投资者和市场分析师具有重要参考价值。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/d1d851cf-05d3-4639-a7a1-1d9d8970d012">US tech stocks rally strongly after three days of heavy selling</a>
+<hr/>
+<h3>8. Week Ahead for FX, Bonds: U.S. Jobs, Inflation Data in Focus</h3>
+<p><strong>📌 来源</strong>: WSJ 全球经济 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 美国就业和通胀数据将受到关注，投资者将根据这些数据判断美联储是否可能再次降息。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/economy/week-ahead-for-fx-bonds-u-s-jobs-inflation-data-in-focus-e81efd80">Week Ahead for FX, Bonds: U.S. Jobs, Inflation Data in Focus</a>
+<hr/>
+<h3>9. Big Tech’s ‘breathtaking’ $660bn spending spree reignites AI bubble fears</h3>
+<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 新闻揭示了科技股投资中的风险，对投资者和市场分析师具有重要警示作用。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/0e7f6374-3fd5-46ce-a538-e4b0b8b6e6cd">Big Tech’s ‘breathtaking’ $660bn spending spree reignites AI bubble fears</a>
+<hr/>
+<h3>10. Exchange Giant CME Raises Gold, Silver Margins as Volatility Persists</h3>
+<p><strong>📌 来源</strong>: WSJ 市场 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: CME提高黄金和银期货合约的保证金要求，以降低市场风险，对金融市场具有重要影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/finance/commodities-futures/exchange-giant-cme-raises-gold-silver-margins-as-volatility-persists-c9281fb7?mod=rss_markets_main">Exchange Giant CME Raises Gold, Silver Margins as Volatility Persists</a>
+<hr/>
+<h3>11. 高盛：诺和诺德定价压力被市场过度定价，口服Wegovy将是扭转信心的关键</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 高盛对诺和诺德股价的评估，涉及市场定价和公司业绩，对财经领域有重要影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765141">高盛：诺和诺德定价压力被市场过度定价，口服Wegovy将是扭转信心的关键</a>
+<hr/>
+<h3>12. 贝森特和特朗普“表忠心”：澄清强美元政策，重申起诉沃什是玩笑，暗示鲍威尔失职</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.7/10</p>
+<p><strong>📝 摘要</strong>: 美国财政部长贝森特与特朗普的言论涉及美元政策和美联储主席提名，对金融市场有重要影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765201">贝森特和特朗普“表忠心”：澄清强美元政策，重申起诉沃什是玩笑，暗示鲍威尔失职</a>
+<hr/>
+<h3>13. Dow reaches 50,000 milestone in record time, showing power of bull market</h3>
+<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 报道道琼斯工业平均指数创历史新高，反映了牛市的力量，对财经领域的重要性高。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/dow-closes-above-50-000-for-first-time-after-rough-week-for-u-s-stock-market-c47282f7?mod=mw_rss_topstories">Dow reaches 50,000 milestone in record time, showing power of bull market</a>
+<hr/>
+<h2>🔬 科技新闻 (10条)</h2>
+<p>精选 <strong>10</strong> 条科技新闻</p>
+<h3>1. 堪比“ChatGPT”时刻！SemiAnalysis深度解读：Claude Code将是AI “智能体”的转折点</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.1/10</p>
+<p><strong>📝 摘要</strong>: Claude Code对AI的影响分析，对科技行业有重要影响，技术深度高，时效性强。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765171">堪比“ChatGPT”时刻！SemiAnalysis深度解读：Claude Code将是AI “智能体”的转折点</a>
+<hr/>
+<h3>2. Inside Elon Musk’s $1.25 Trillion AI and Space Megamerger</h3>
+<p><strong>📌 来源</strong>: WSJ 经济 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.1/10</p>
+<p><strong>📝 摘要</strong>: Elon Musk的SpaceX与xAI的快速合并，展示了其在太空和人工智能领域的雄心。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/tech/elon-musk-xai-spacex-merger-2896ae1e?mod=pls_whats_news_us_business_f">Inside Elon Musk’s $1.25 Trillion AI and Space Megamerger</a>
+<hr/>
+<h3>3. 崔东树：2025年中国占世界新能源车份额68.4%</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: 崔东树发文称中国新能源车占世界份额高，反映了新能源行业的发展趋势。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3671772583715464?f=rss">崔东树：2025年中国占世界新能源车份额68.4%</a>
+<hr/>
+<h3>4. 报道：SpaceX推迟火星计划，转而侧重于登月任务</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.9/10</p>
+<p><strong>📝 摘要</strong>: 新闻报道了SpaceX的战略调整，对科技行业和投资者有重要影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765206">报道：SpaceX推迟火星计划，转而侧重于登月任务</a>
+<hr/>
+<h3>5. AI恐惧重挫软件股：是“毫无逻辑”的恐慌，还是SaaS的终结？</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.9/10</p>
+<p><strong>📝 摘要</strong>: AI工具对软件股的影响，揭示了AI技术对传统行业的影响和投资者的担忧。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765142">AI恐惧重挫软件股：是“毫无逻辑”的恐慌，还是SaaS的终结？</a>
+<hr/>
+<h3>6. 巨头砸钱6500亿加剧担忧，黄仁勋“灭火”：AI需求火爆，庞大支出合理、可持续</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 英伟达CEO黄仁勋对AI领域巨额投资的合理性进行辩护，对科技行业有重要影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765198">巨头砸钱6500亿加剧担忧，黄仁勋“灭火”：AI需求火爆，庞大支出合理、可持续</a>
+<hr/>
+<h3>7. Masked namespace vulnerability in Temporal</h3>
+<p><strong>📌 来源</strong>: Hacker News | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.7/10</p>
+<p><strong>📝 摘要</strong>: Temporal中的命名空间漏洞，对安全领域有重要影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://depthfirst.com/post/the-masked-namespace-vulnerability-in-temporal-cve-2025-14986">Masked namespace vulnerability in Temporal</a>
+<hr/>
+<h3>8. Apple is working to make CarPlay compatible with AI chatbots like ChatGPT</h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 新闻涉及苹果公司对AI技术的应用，对科技行业有重要影响，且时效性强。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/06/apple-is-working-to-make-carplay-compatible-with-ai-chatbots-like-chatgpt/">Apple is working to make CarPlay compatible with AI chatbots like ChatGPT</a>
+<hr/>
+<h3>9. Maybe AI agents can be lawyers after all</h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 新闻探讨了AI在法律领域的应用，对科技发展和行业趋势有重要影响，技术深度高。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/06/maybe-ai-agents-can-be-lawyers-after-all/">Maybe AI agents can be lawyers after all</a>
+<hr/>
+<h3>10. 软件股大跌，是耐心持有还是逢低买入？</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 软件股大跌分析，对科技行业有重要影响，技术深度较高，受众广度适中。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765176">软件股大跌，是耐心持有还是逢低买入？</a>
+<hr/>
+<h2>🏛️ 社会政治 (7条)</h2>
+<p>精选 <strong>7</strong> 条社会政治新闻</p>
+<h3>1. 氪星晚报｜华润三九：2025年净利润34.22亿元，同比增长1.60%；千问App免单上线9小时突破1000万订单</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: 报道了华润三九的净利润增长和新能源车市场份额，重要性高，时效性强，技术深度适中，受众广度较广，实用性一般。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/p/3671836244190083?f=rss">氪星晚报｜华润三九：2025年净利润34.22亿元，同比增长1.60%；千问App免单上线9小时突破1000万订单</a>
+<hr/>
+<h3>2. 央行等八部门：金融机构不得为虚拟货币相关业务活动提供账户开立、资金划转和清算结算等服务</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 央行等八部门发布通知，加强对虚拟货币相关业务活动的监管，对金融机构和中介机构提出严格要求，以防范和处置相关风险。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3671832828453513?f=rss">央行等八部门：金融机构不得为虚拟货币相关业务活动提供账户开立、资金划转和清算结算等服务</a>
+<hr/>
+<h3>3. 央行等八部门：在境内开展现实世界资产代币化活动，应予以禁止</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 央行等八部门明确禁止在境内开展现实世界资产代币化活动，强调对非法金融活动的打击，以维护金融秩序。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3671831323730819?f=rss">央行等八部门：在境内开展现实世界资产代币化活动，应予以禁止</a>
+<hr/>
+<h3>4. 央行等八部门：对境内主体赴境外开展相关业务实行严格监管</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 央行等八部门对境内主体赴境外开展相关业务实行严格监管，防止虚拟货币相关风险跨境传播。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3671830950191753?f=rss">央行等八部门：对境内主体赴境外开展相关业务实行严格监管</a>
+<hr/>
+<h3>5. 央行等八部门：持续整治虚拟货币“挖矿”活动</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 央行等八部门持续整治虚拟货币“挖矿”活动，关停存量项目，严禁新增项目，以减少能源消耗和环境污染。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3671830478840706?f=rss">央行等八部门：持续整治虚拟货币“挖矿”活动</a>
+<hr/>
+<h3>6. 央行等八部门：虚拟货币不具有与法定货币等同的法律地位</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 央行等八部门明确虚拟货币不具有与法定货币等同的法律地位，强调虚拟货币的非法性。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3671830181143430?f=rss">央行等八部门：虚拟货币不具有与法定货币等同的法律地位</a>
+<hr/>
+<h3>7. 中国人民银行、中国证监会有关负责人就《关于进一步防范和处置虚拟货币等相关风险的通知》答记者问</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 报道了中国人民银行和中国证监会就虚拟货币风险的通知，重要性高，时效性强，技术深度低，受众广度较广，实用性一般。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3671833854452617?f=rss">中国人民银行、中国证监会有关负责人就《关于进一步防范和处置虚拟货币等相关风险的通知》答记者问</a>
+<hr/>]]></content:encoded>
+    </item>
+    <item>
+        <title>2026年02月07日 新闻汇总</title>
+        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-07.md</link>
+        <description>本期精选 30 条高质量科技新闻</description>
+        <pubDate>Sat, 07 Feb 2026 01:01:28 GMT</pubDate>
+        <guid>archive/2026-02-07.md</guid>
+        <category>综合新闻</category>
+        <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
+<blockquote>🕐 更新时间: 2026年02月07日 09:01</blockquote>
+<blockquote>📊 本期精选 <strong>30</strong> 条高质量新闻</blockquote>
+<blockquote>🤖 由 AI 自动分类、筛选、翻译和总结</blockquote>
+<hr/>
+<h2>💰 财经新闻 (13条)</h2>
+<p>精选 <strong>13</strong> 条财经新闻</p>
+<h3>1. Bitcoin gets slashed in half. What's behind the crypto's existential crisis</h3>
+<p><strong>📌 来源</strong>: CNBC | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: 新闻8报道了比特币价格的大幅下跌，对财经领域有重要影响，具有很高的时效性和重要性。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.cnbc.com/2026/02/06/bitcoin-gets-slashed-in-half-whats-behind-the-cryptos-existential-crisis.html">Bitcoin gets slashed in half. What's behind the crypto's existential crisis</a>
+<hr/>
+<h3>2. 告别“科技股独秀”！超75%标普500企业实现利润增长，为2021年来最高</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: 标普500企业利润增长，显示美国企业盈利趋势，对股市分析有重要参考价值，时效性强。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765185">告别“科技股独秀”！超75%标普500企业实现利润增长，为2021年来最高</a>
+<hr/>
+<h3>3. 丹诺医药港股IPO及境内未上市股份“全流通”获中国证监会备案</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: 丹诺医药港股IPO及境内未上市股份“全流通”获中国证监会备案，对资本市场有重要影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3671808921412488?f=rss">丹诺医药港股IPO及境内未上市股份“全流通”获中国证监会备案</a>
+<hr/>
+<h3>4. 芯碁微装港股IPO获中国证监会备案</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: 芯碁微装港股IPO获中国证监会备案，体现了资本市场对科技企业的关注。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3671800654930821?f=rss">芯碁微装港股IPO获中国证监会备案</a>
+<hr/>
+<h3>5. 证监会：2025年全年完成16家随机抽取及4家问题导向企业检查处理工作</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: 证监会发布首发企业现场检查情况，体现了监管层对资本市场的监管态度。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3671790211457672?f=rss">证监会：2025年全年完成16家随机抽取及4家问题导向企业检查处理工作</a>
+<hr/>
+<h3>6. 直销奇迹？比亚迪财险综合费用率低至5.21%，实现首年盈利</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.9/10</p>
+<p><strong>📝 摘要</strong>: 比亚迪财险实现首年盈利，对保险业有重要意义，同时具有较高时效性和实用性。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765187">直销奇迹？比亚迪财险综合费用率低至5.21%，实现首年盈利</a>
+<hr/>
+<h3>7. US tech stocks rally strongly after three days of heavy selling</h3>
+<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 该新闻关注美国科技股的强劲反弹，对投资者和市场分析师具有重要参考价值。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/d1d851cf-05d3-4639-a7a1-1d9d8970d012">US tech stocks rally strongly after three days of heavy selling</a>
+<hr/>
+<h3>8. Week Ahead for FX, Bonds: U.S. Jobs, Inflation Data in Focus</h3>
+<p><strong>📌 来源</strong>: WSJ 全球经济 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 美国就业和通胀数据将受到关注，投资者将根据这些数据判断美联储是否可能再次降息。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/economy/week-ahead-for-fx-bonds-u-s-jobs-inflation-data-in-focus-e81efd80">Week Ahead for FX, Bonds: U.S. Jobs, Inflation Data in Focus</a>
+<hr/>
+<h3>9. Big Tech’s ‘breathtaking’ $660bn spending spree reignites AI bubble fears</h3>
+<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 新闻揭示了科技股投资中的风险，对投资者和市场分析师具有重要警示作用。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/0e7f6374-3fd5-46ce-a538-e4b0b8b6e6cd">Big Tech’s ‘breathtaking’ $660bn spending spree reignites AI bubble fears</a>
+<hr/>
+<h3>10. Exchange Giant CME Raises Gold, Silver Margins as Volatility Persists</h3>
+<p><strong>📌 来源</strong>: WSJ 市场 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: CME提高黄金和银期货合约的保证金要求，以降低市场风险，对金融市场具有重要影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/finance/commodities-futures/exchange-giant-cme-raises-gold-silver-margins-as-volatility-persists-c9281fb7?mod=rss_markets_main">Exchange Giant CME Raises Gold, Silver Margins as Volatility Persists</a>
+<hr/>
+<h3>11. 高盛：诺和诺德定价压力被市场过度定价，口服Wegovy将是扭转信心的关键</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 高盛对诺和诺德股价的评估，涉及市场定价和公司业绩，对财经领域有重要影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765141">高盛：诺和诺德定价压力被市场过度定价，口服Wegovy将是扭转信心的关键</a>
+<hr/>
+<h3>12. 贝森特和特朗普“表忠心”：澄清强美元政策，重申起诉沃什是玩笑，暗示鲍威尔失职</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.7/10</p>
+<p><strong>📝 摘要</strong>: 美国财政部长贝森特与特朗普的言论涉及美元政策和美联储主席提名，对金融市场有重要影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765201">贝森特和特朗普“表忠心”：澄清强美元政策，重申起诉沃什是玩笑，暗示鲍威尔失职</a>
+<hr/>
+<h3>13. Dow reaches 50,000 milestone in record time, showing power of bull market</h3>
+<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 报道道琼斯工业平均指数创历史新高，反映了牛市的力量，对财经领域的重要性高。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/dow-closes-above-50-000-for-first-time-after-rough-week-for-u-s-stock-market-c47282f7?mod=mw_rss_topstories">Dow reaches 50,000 milestone in record time, showing power of bull market</a>
+<hr/>
+<h2>🔬 科技新闻 (10条)</h2>
+<p>精选 <strong>10</strong> 条科技新闻</p>
+<h3>1. 堪比“ChatGPT”时刻！SemiAnalysis深度解读：Claude Code将是AI “智能体”的转折点</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.1/10</p>
+<p><strong>📝 摘要</strong>: Claude Code对AI的影响分析，对科技行业有重要影响，技术深度高，时效性强。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765171">堪比“ChatGPT”时刻！SemiAnalysis深度解读：Claude Code将是AI “智能体”的转折点</a>
+<hr/>
+<h3>2. Inside Elon Musk’s $1.25 Trillion AI and Space Megamerger</h3>
+<p><strong>📌 来源</strong>: WSJ 经济 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.1/10</p>
+<p><strong>📝 摘要</strong>: Elon Musk的SpaceX与xAI的快速合并，展示了其在太空和人工智能领域的雄心。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/tech/elon-musk-xai-spacex-merger-2896ae1e?mod=pls_whats_news_us_business_f">Inside Elon Musk’s $1.25 Trillion AI and Space Megamerger</a>
+<hr/>
+<h3>3. 崔东树：2025年中国占世界新能源车份额68.4%</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: 崔东树发文称中国新能源车占世界份额高，反映了新能源行业的发展趋势。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3671772583715464?f=rss">崔东树：2025年中国占世界新能源车份额68.4%</a>
+<hr/>
+<h3>4. 报道：SpaceX推迟火星计划，转而侧重于登月任务</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.9/10</p>
+<p><strong>📝 摘要</strong>: 新闻报道了SpaceX的战略调整，对科技行业和投资者有重要影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765206">报道：SpaceX推迟火星计划，转而侧重于登月任务</a>
+<hr/>
+<h3>5. AI恐惧重挫软件股：是“毫无逻辑”的恐慌，还是SaaS的终结？</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.9/10</p>
+<p><strong>📝 摘要</strong>: AI工具对软件股的影响，揭示了AI技术对传统行业的影响和投资者的担忧。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765142">AI恐惧重挫软件股：是“毫无逻辑”的恐慌，还是SaaS的终结？</a>
+<hr/>
+<h3>6. 巨头砸钱6500亿加剧担忧，黄仁勋“灭火”：AI需求火爆，庞大支出合理、可持续</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 英伟达CEO黄仁勋对AI领域巨额投资的合理性进行辩护，对科技行业有重要影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765198">巨头砸钱6500亿加剧担忧，黄仁勋“灭火”：AI需求火爆，庞大支出合理、可持续</a>
+<hr/>
+<h3>7. Masked namespace vulnerability in Temporal</h3>
+<p><strong>📌 来源</strong>: Hacker News | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.7/10</p>
+<p><strong>📝 摘要</strong>: Temporal中的命名空间漏洞，对安全领域有重要影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://depthfirst.com/post/the-masked-namespace-vulnerability-in-temporal-cve-2025-14986">Masked namespace vulnerability in Temporal</a>
+<hr/>
+<h3>8. Apple is working to make CarPlay compatible with AI chatbots like ChatGPT</h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 新闻涉及苹果公司对AI技术的应用，对科技行业有重要影响，且时效性强。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/06/apple-is-working-to-make-carplay-compatible-with-ai-chatbots-like-chatgpt/">Apple is working to make CarPlay compatible with AI chatbots like ChatGPT</a>
+<hr/>
+<h3>9. Maybe AI agents can be lawyers after all</h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 新闻探讨了AI在法律领域的应用，对科技发展和行业趋势有重要影响，技术深度高。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/06/maybe-ai-agents-can-be-lawyers-after-all/">Maybe AI agents can be lawyers after all</a>
+<hr/>
+<h3>10. 软件股大跌，是耐心持有还是逢低买入？</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 软件股大跌分析，对科技行业有重要影响，技术深度较高，受众广度适中。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765176">软件股大跌，是耐心持有还是逢低买入？</a>
+<hr/>
+<h2>🏛️ 社会政治 (7条)</h2>
+<p>精选 <strong>7</strong> 条社会政治新闻</p>
+<h3>1. 氪星晚报｜华润三九：2025年净利润34.22亿元，同比增长1.60%；千问App免单上线9小时突破1000万订单</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: 报道了华润三九的净利润增长和新能源车市场份额，重要性高，时效性强，技术深度适中，受众广度较广，实用性一般。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/p/3671836244190083?f=rss">氪星晚报｜华润三九：2025年净利润34.22亿元，同比增长1.60%；千问App免单上线9小时突破1000万订单</a>
+<hr/>
+<h3>2. 央行等八部门：金融机构不得为虚拟货币相关业务活动提供账户开立、资金划转和清算结算等服务</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 央行等八部门发布通知，加强对虚拟货币相关业务活动的监管，对金融机构和中介机构提出严格要求，以防范和处置相关风险。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3671832828453513?f=rss">央行等八部门：金融机构不得为虚拟货币相关业务活动提供账户开立、资金划转和清算结算等服务</a>
+<hr/>
+<h3>3. 央行等八部门：在境内开展现实世界资产代币化活动，应予以禁止</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 央行等八部门明确禁止在境内开展现实世界资产代币化活动，强调对非法金融活动的打击，以维护金融秩序。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3671831323730819?f=rss">央行等八部门：在境内开展现实世界资产代币化活动，应予以禁止</a>
+<hr/>
+<h3>4. 央行等八部门：对境内主体赴境外开展相关业务实行严格监管</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 央行等八部门对境内主体赴境外开展相关业务实行严格监管，防止虚拟货币相关风险跨境传播。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3671830950191753?f=rss">央行等八部门：对境内主体赴境外开展相关业务实行严格监管</a>
+<hr/>
+<h3>5. 央行等八部门：持续整治虚拟货币“挖矿”活动</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 央行等八部门持续整治虚拟货币“挖矿”活动，关停存量项目，严禁新增项目，以减少能源消耗和环境污染。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3671830478840706?f=rss">央行等八部门：持续整治虚拟货币“挖矿”活动</a>
+<hr/>
+<h3>6. 央行等八部门：虚拟货币不具有与法定货币等同的法律地位</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 央行等八部门明确虚拟货币不具有与法定货币等同的法律地位，强调虚拟货币的非法性。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3671830181143430?f=rss">央行等八部门：虚拟货币不具有与法定货币等同的法律地位</a>
+<hr/>
+<h3>7. 中国人民银行、中国证监会有关负责人就《关于进一步防范和处置虚拟货币等相关风险的通知》答记者问</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 报道了中国人民银行和中国证监会就虚拟货币风险的通知，重要性高，时效性强，技术深度低，受众广度较广，实用性一般。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>暂无要点</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3671833854452617?f=rss">中国人民银行、中国证监会有关负责人就《关于进一步防范和处置虚拟货币等相关风险的通知》答记者问</a>
+<hr/>]]></content:encoded>
+    </item>
+    <item>
+        <title>2026年02月06日 新闻汇总</title>
+        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-06.md</link>
+        <description>本期精选 30 条高质量科技新闻</description>
+        <pubDate>Sat, 07 Feb 2026 00:55:50 GMT</pubDate>
+        <guid>archive/2026-02-06.md</guid>
+        <category>综合新闻</category>
+        <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
+<blockquote>🕐 更新时间: 2026年02月06日 22:47</blockquote>
 <blockquote>📊 本期精选 <strong>30</strong> 条高质量新闻</blockquote>
 <blockquote>🤖 由 AI 自动分类、筛选、翻译和总结</blockquote>
 <hr/>
@@ -240,7 +818,7 @@
         <title>2026年02月05日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-05.md</link>
         <description>本期精选 11 条高质量科技新闻</description>
-        <pubDate>Fri, 06 Feb 2026 15:15:16 GMT</pubDate>
+        <pubDate>Sat, 07 Feb 2026 00:55:50 GMT</pubDate>
         <guid>archive/2026-02-05.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -384,7 +962,7 @@
         <title>2026年02月04日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-04.md</link>
         <description>本期精选 0 条高质量科技新闻</description>
-        <pubDate>Fri, 06 Feb 2026 15:15:16 GMT</pubDate>
+        <pubDate>Sat, 07 Feb 2026 00:55:50 GMT</pubDate>
         <guid>archive/2026-02-04.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -406,7 +984,7 @@
         <title>2026年02月03日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-03.md</link>
         <description>本期精选 10 条高质量科技新闻</description>
-        <pubDate>Fri, 06 Feb 2026 15:15:16 GMT</pubDate>
+        <pubDate>Sat, 07 Feb 2026 00:55:50 GMT</pubDate>
         <guid>archive/2026-02-03.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -537,7 +1115,7 @@
         <title>2026年02月02日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-02.md</link>
         <description>本期精选 0 条高质量科技新闻</description>
-        <pubDate>Fri, 06 Feb 2026 15:15:16 GMT</pubDate>
+        <pubDate>Sat, 07 Feb 2026 00:55:50 GMT</pubDate>
         <guid>archive/2026-02-02.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h3>1. KKR 领导集团即将以超过 100 亿美元的价格收购新加坡数据中心公司</h3>
@@ -836,7 +1414,7 @@
         <title>2026年02月01日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-01.md</link>
         <description>本期精选 16 条高质量科技新闻</description>
-        <pubDate>Fri, 06 Feb 2026 15:15:16 GMT</pubDate>
+        <pubDate>Sat, 07 Feb 2026 00:55:50 GMT</pubDate>
         <guid>archive/2026-02-01.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1038,7 +1616,7 @@
         <title>2026年01月31日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-01-31.md</link>
         <description>本期精选 5 条高质量科技新闻</description>
-        <pubDate>Fri, 06 Feb 2026 15:15:16 GMT</pubDate>
+        <pubDate>Sat, 07 Feb 2026 00:55:50 GMT</pubDate>
         <guid>archive/2026-01-31.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 科技新闻精选</h1>

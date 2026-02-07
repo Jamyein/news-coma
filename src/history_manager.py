@@ -14,16 +14,41 @@ logger = logging.getLogger(__name__)
 class HistoryManager:
     """历史数据管理器 - 扩展AI评分缓存功能"""
     
+    def _get_default_structure(self) -> Dict[str, Any]:
+        """获取默认数据结构"""
+        return {
+            "last_run": None,
+            "stats": {
+                "total_runs": 0,
+                "total_news_processed": 0,
+                "avg_news_per_run": 0
+            },
+            "source_stats": {},
+            "run_metrics": [],
+            "source_last_fetch": {}
+        }
+
+    def _init_data_structure(self) -> None:
+        """初始化数据结构，确保所有必需字段存在"""
+        defaults = {
+            "run_metrics": list,
+            "source_last_fetch": dict,
+            "source_stats": dict,
+            "stats": lambda: {
+                "total_runs": 0,
+                "total_news_processed": 0,
+                "avg_news_per_run": 0
+            }
+        }
+
+        for key, factory in defaults.items():
+            if key not in self._data:
+                self._data[key] = factory()
+
     def __init__(self, history_path: str = "data/history.json"):
         self.history_path = Path(history_path)
         self._data = self._load()
-
-        # 确保run_metrics字段存在
-        if "run_metrics" not in self._data:
-            self._data["run_metrics"] = []
-        # 确保RSS源最后获取时间字段存在（增量获取支持）
-        if "source_last_fetch" not in self._data:
-            self._data["source_last_fetch"] = {}
+        self._init_data_structure()
     
     def _load(self) -> Dict[str, Any]:
         """加载历史数据"""
