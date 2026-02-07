@@ -1,10 +1,11 @@
 # ==========================================
-# RSS 新闻聚合配置
-# 支持14家国内外LLM提供商
+# 1-Pass 简化版配置
+# 将2-pass AI评分系统重构为1-pass
+# 配置项从20+减少到8项核心配置
 # ==========================================
 
 # ==========================================
-# 数据源配置
+# 数据源配置（与原版相同）
 # ==========================================
 rss_sources:
   - name: "TechCrunch"
@@ -97,19 +98,15 @@ rss_sources:
     category: "国际财经"
     enabled: true
 
+
 # ==========================================
-# AI 提供商配置（简化版）
-# 只需修改 ai_provider 字段即可切换
+# 1-Pass AI配置（简化版 - 8项核心配置）
 # ==========================================
-
-
-ai:
-# 当前使用的提供商
-# 可选值: gemini, openai, azure, claude, deepseek, zhipu, kimi, qwen, wenxin, spark, yi, minimax, ollama
-  ai_provider: "zhipu"
-
-  ai_providers:
+smart_ai:
+  # 核心配置（2项）
+  provider: "zhipu"
   
+  providers_config:
     gemini:
       api_key: "${GEMINI_API_KEY}"
       base_url: "https://generativelanguage.googleapis.com/v1beta/openai/"
@@ -155,8 +152,8 @@ ai:
       model: "glm-4-flash"
       max_tokens: 65536      # 大模型支持长上下文，适合真批处理
       temperature: 0.3
-      rate_limit_rpm: 50    # 降低每分钟请求数限制
-      batch_size: 5         # 减小批次大小避免触发限制
+      rate_limit_rpm: 40    # 降低每分钟请求数限制
+      batch_size: 4         # 减小批次大小避免触发限制
       max_concurrent: 6     # 降低并发数以符合速率限制
     
     kimi:
@@ -179,89 +176,51 @@ ai:
       batch_size: 5
       max_concurrent: 3
     
-    minimax:
-      api_key: "${MINIMAX_API_KEY}"
-      base_url: "https://api.minimax.chat/v1"
-      model: "abab6.5-chat"
-      max_tokens: 2000
-      temperature: 0.3
-      rate_limit_rpm: 60
-      batch_size: 5
-      max_concurrent: 3
-
-
-  fallback:
-    enabled: true
-    max_retries_per_provider: 2
-    fallback_chain:
-      - "gemini"
-      - "deepseek"
-    
-# ==========================================
-# 全局评分标准（所有提供商共享）
-# ==========================================
+  
+  # 性能配置（4项）
+  batch_size: 10              # 批次大小
+  max_concurrent: 3           # 最大并发批次
+  timeout_seconds: 90         # 超时时间（秒）
+  max_output_items: 30        # 最大输出新闻数
+  
+  # 筛选配置（1项）
+  diversity_weight: 0.3       # 多样性权重（0-1）
+  
+  # 评分标准
   scoring_criteria:
-    importance: 0.30      # 重要性
-    timeliness: 0.20      # 时效性
-    technical_depth: 0.20 # 技术深度
-    audience_breadth: 0.15 # 受众广度
-    practicality: 0.15    # 实用性
-
-# ==========================================
-# AI评分缓存配置
-# ==========================================
-  cache_ttl_hours: 24     # AI评分缓存有效期(小时)
-
-# ==========================================
-# 真批处理配置(大幅降低API成本)
-# ==========================================
-  use_true_batch: true    # 是否启用真批处理(一次API调用处理多条)
-  true_batch_size: 20     # 真批处理每批数量(保持10条避免过短)
-
-# ==========================================
-# 并行批处理配置(性能优化：将串行改为并行)
-# ==========================================
-  use_parallel_batches: true         # 禁用并行批处理，避免触发速率限制
-  max_parallel_batches: 4             # 降低并发批次
-  use_streaming: true                 # 启用流式响应，边生成边解析(减少等待)
-
-# ==========================================
-# 流式JSON解析配置(解决JSON截断问题)
-# ==========================================
-  use_streaming_json_parser: true       # 【新增】启用流式JSON解析，边接收边解析，解决截断问题
-  streaming_json_priority: true        # 【新增】优先使用流式JSON解析（失败时自动降级到传统方式）
-  streaming_json_buffer_size: 4096      # 【新增】流式解析缓冲区大小（字节）
-  streaming_json_max_depth: 10          # 【新增】最大JSON嵌套深度
-
-# ==========================================
-# 超时控制配置(防止慢批次拖累整体)
-# ==========================================
-  batch_timeout_seconds: 120          # 批次超时时间(秒)
-  timeout_fallback_strategy: "single" # 超时降级策略: single(单条处理)|default_score(默认分)
-
-# ==========================================
-# 2-Pass评分配置(提升重磅新闻识别率)
-# ==========================================
-  use_2pass: true         # 启用2-Pass评分(快速预筛+深度分析)
+    importance: 0.30          # 重要性权重
+    timeliness: 0.20          # 时效性权重
+    technical_depth: 0.20     # 技术深度权重
+    audience_breadth: 0.15    # 受众广度权重
+    practicality: 0.15        # 实用性权重
   
-  # Pass 1 差异化阈值配置（你的选择：差异化门槛 B）
-  pass1_threshold: 5.5    # 默认阈值（用于未分类新闻）
-  pass1_threshold_finance: 5.5  # 财经新闻阈值（较宽松）
-  pass1_threshold_tech: 6.0     # 科技新闻阈值（较严格）
-  pass1_threshold_politics: 5.5 # 社会政治新闻阈值（较宽松）
-  pass1_max_items: 80     # 预筛最大保留数量（增加，宽松Pass1）
-  
-  # 启用按板块差异化评分
-  pass1_use_category_specific: true  # 启用三大板块差异化评分
-  
-  # 板块配额配置（固定比例 40%:30%:30%）
-  category_quota_finance: 0.40  # 财经配额 40%
-  category_quota_tech: 0.30     # 科技配额 30%
-  category_quota_politics: 0.30 # 社会政治配额 30%
+  # 回退配置（简化）
+  fallback_enabled: true
+  fallback_chain:
+    - "gemini"
+    - "deepseek"
 
 # ==========================================
-# 语义去重配置(TF-IDF轻量级，GitHub Actions友好)
+# 输出配置
 # ==========================================
+output:
+  max_news_count: 30          # 每期精选新闻数量
+  max_feed_items: 50          # RSS feed保留条数
+  archive_days: 30            # 归档保留天数
+  time_window_days: 1         # 只处理最近N天的新闻
+  use_smart_switch: true      # 是否启用智能切换
+
+# ==========================================
+# 过滤配置
+# ==========================================
+filters:
+  min_score_threshold: 6.0    # 最低评分阈值
+  blocked_keywords:           # 屏蔽关键词列表
+    - "广告"
+    - "推广"
+    - "促销"
+  use_semantic_dedup: true    # 启用TF-IDF语义去重
+  semantic_similarity: 0.85   # 语义相似度阈值
 
 # ==========================================
 # 系统配置
@@ -270,28 +229,6 @@ retry_attempts: 3
 timeout: 120
 
 # ==========================================
-# 输出配置
+# 功能开关
 # ==========================================
-output:
-  max_news_count: 30      # 每期精选新闻数量（增加到30条，12财经+9科技+9政治）
-  max_feed_items: 50      # RSS feed 保留条数
-  archive_days: 30        # 归档保留天数
-  time_window_days: 1     # 只处理最近 N 天的新闻
-  use_smart_switch: true # 是否启用智能切换（首次用archive，后续用latest）
-
-# ==========================================
-# 过滤配置
-# ==========================================
-filters:
-  min_score_threshold: 0.0      # 最低评分阈值（设置为0，禁用最终过滤，改为排序竞争模式）
-  # ⚠️ dedup_similarity 已弃用 - 我们已移除Levenshtein字符级去重
-  # 改用纯语义去重（TF-IDF + 余弦相似度）
-  # dedup_similarity: 0.85     # [已弃用] 标题Levenshtein相似度阈值
-  
-  # ✅ 语义去重（核心去重机制）
-  use_semantic_dedup: true      # ✅ 启用TF-IDF语义去重(轻量级，~10MB内存)
-  semantic_similarity: 0.85     # ✅ 语义相似度阈值(0-1)，0.85平衡准确率和召回率
-  blocked_keywords:             # 屏蔽关键词列表
-    - "广告"
-    - "推广"
-    - "促销"
+use_smart_scorer: true        # 启用1-Pass SmartScorer（设为false使用2-Pass）
