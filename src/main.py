@@ -11,6 +11,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import logging
 import asyncio
 from datetime import datetime
+from typing import List
 
 
 from src.config import Config
