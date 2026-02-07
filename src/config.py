@@ -68,26 +68,16 @@ class Config:
             self._raise_api_key_error(current_provider, smart_ai_data)
         
         # 评分标准
-        criteria_data = smart_ai_data.get('scoring_criteria', {})
-        scoring_criteria = ScoringCriteria(
-            importance=criteria_data.get('importance', 0.30),
-            timeliness=criteria_data.get('timeliness', 0.20),
-            technical_depth=criteria_data.get('technical_depth', 0.20),
-            audience_breadth=criteria_data.get('audience_breadth', 0.15),
-            practicality=criteria_data.get('practicality', 0.15)
-        )
+        scoring_criteria = ScoringCriteria.from_dict(smart_ai_data.get('scoring_criteria', {}))
+        
+        # 提取常用配置项
+        common_config = self._get_common_config(smart_ai_data)
         
         return AIConfig(
             provider=current_provider,
             providers_config=providers_config,
-            batch_size=smart_ai_data.get('batch_size', 10),
-            max_concurrent=smart_ai_data.get('max_concurrent', 3),
-            timeout_seconds=smart_ai_data.get('timeout_seconds', 90),
-            max_output_items=smart_ai_data.get('max_output_items', 30),
-            diversity_weight=smart_ai_data.get('diversity_weight', 0.3),
             scoring_criteria=scoring_criteria,
-            fallback_enabled=smart_ai_data.get('fallback_enabled', True),
-            fallback_chain=smart_ai_data.get('fallback_chain', ['deepseek', 'gemini'])
+            **common_config
         )
     
     def _resolve_api_key(self, api_key_template: str) -> str:
@@ -109,6 +99,18 @@ class Config:
             f"❌ 当前选择的AI提供商 '{provider}' 未配置API Key\n"
             f"请在环境变量中设置: {env_var}"
         )
+    
+    def _get_common_config(self, smart_ai_data: dict) -> dict:
+        """提取常用AI配置项"""
+        return {
+            'batch_size': smart_ai_data.get('batch_size', 10),
+            'max_concurrent': smart_ai_data.get('max_concurrent', 3),
+            'timeout_seconds': smart_ai_data.get('timeout_seconds', 90),
+            'max_output_items': smart_ai_data.get('max_output_items', 30),
+            'diversity_weight': smart_ai_data.get('diversity_weight', 0.3),
+            'fallback_enabled': smart_ai_data.get('fallback_enabled', True),
+            'fallback_chain': smart_ai_data.get('fallback_chain', ['deepseek', 'gemini'])
+        }
 
     @property
     def output_config(self) -> OutputConfig:

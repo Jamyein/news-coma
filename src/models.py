@@ -66,6 +66,17 @@ class ScoringCriteria:
     technical_depth: float = 0.20  # 技术深度
     audience_breadth: float = 0.15  # 受众广度
     practicality: float = 0.15    # 实用性
+    
+    @classmethod
+    def from_dict(cls, data: dict) -> 'ScoringCriteria':
+        """从字典创建实例，使用默认值填充值缺失字段"""
+        return cls(
+            importance=data.get('importance', 0.30),
+            timeliness=data.get('timeliness', 0.20),
+            technical_depth=data.get('technical_depth', 0.20),
+            audience_breadth=data.get('audience_breadth', 0.15),
+            practicality=data.get('practicality', 0.15)
+        )
 
 
 @dataclass

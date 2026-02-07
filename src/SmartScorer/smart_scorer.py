@@ -1,5 +1,6 @@
 """SmartScorer - 1-Pass AI 新闻评分核心协调器"""
 
+import asyncio
 import logging
 from typing import List, Dict
 from datetime import datetime
@@ -55,50 +56,119 @@ class SmartScorer:
             for i in range(0, len(items), self.config.batch_size)
         ]
 
+    async def _process_single_batch(
+        self,
+        batch: List[NewsItem],
+        batch_id: str
+    ) -> List[NewsItem]:
+        """处理单个批次（用于并行）
+
+        Args:
+            batch: 新闻批次
+            batch_id: 批次标识（用于日志）
+
+        Returns:
+            评分后的新闻批次，失败时返回带默认分数的批次
+        """
+        try:
+            logger.info(f"处理批次 {batch_id}: {len(batch)} 条新闻")
+            prompt = self.prompt_engine.build_1pass_prompt(batch)
+
+            # 使用支持fallback的新API
+            response = await self.batch_provider.call_batch_api_with_fallback(
+                prompt=prompt,
+                items=batch,
+                prompt_template=None,  # 会从prompt自动提取
+                max_tokens=None,  # 使用配置默认值
+                temperature=None
+            )
+
+            scored_batch = self.result_processor.parse_1pass_response(batch, response)
+            logger.info(f"批次 {batch_id} 处理完成: {len(scored_batch)} 条")
+            return scored_batch
+
+        except ContentFilterError as e:
+            logger.error(f"批次 {batch_id} 内容过滤且Gemini fallback失败: {e}")
+            # 为整个批次赋予默认低分
+            for item in batch:
+                item.ai_score = 3.0
+                item.ai_category = "社会政治"
+                item.ai_summary = f"内容过滤fallback失败: {str(e)[:50]}"
+            return batch
+
+        except Exception as e:
+            logger.error(f"批次 {batch_id} 处理失败: {e}")
+            # 为整个批次赋予默认低分
+            for item in batch:
+                item.ai_score = 3.0
+                item.ai_category = "社会政治"
+                item.ai_summary = f"处理失败: {str(e)[:50]}"
+            return batch
+
     async def _process_batches(self, batches: List[List[NewsItem]]) -> List[NewsItem]:
-        """批量处理，支持内容过滤fallback到Gemini"""
-        all_scored = []
+        """并行批量处理
+
+        使用 asyncio.gather() 实现真正的并行处理，
+        使用信号量控制并发数避免API过载。
+
+        Args:
+            batches: 新闻批次列表
+
+        Returns:
+            所有批次的评分结果
+        """
+        if not batches:
+            return []
+
         total_batches = len(batches)
 
-        for batch_idx, batch in enumerate(batches, 1):
-            batch_id = f"{batch_idx}/{total_batches}"
-            logger.info(f"处理批次 {batch_id}: {len(batch)} 条新闻")
+        # 限制并发数，避免API过载（使用配置的 max_concurrent，最大5）
+        max_concurrent = min(getattr(self.config, 'max_concurrent', 3), 5)
 
-            try:
-                prompt = self.prompt_engine.build_1pass_prompt(batch)
+        # 如果只有1个批次或禁用并行，使用串行处理
+        if total_batches == 1 or max_concurrent == 1:
+            logger.info(f"串行处理 {total_batches} 个批次")
+            all_scored = []
+            for batch_idx, batch in enumerate(batches, 1):
+                batch_id = f"{batch_idx}/{total_batches}"
+                scored = await self._process_single_batch(batch, batch_id)
+                all_scored.extend(scored)
+            logger.info(f"串行处理完成: 共 {len(all_scored)} 条")
+            return all_scored
 
-                # 使用支持fallback的新API
-                response = await self.batch_provider.call_batch_api_with_fallback(
-                    prompt=prompt,
-                    items=batch,
-                    prompt_template=None,  # 会从prompt自动提取
-                    max_tokens=None,  # 使用配置默认值
-                    temperature=None
-                )
+        # 使用信号量控制并发
+        semaphore = asyncio.Semaphore(max_concurrent)
 
-                scored_batch = self.result_processor.parse_1pass_response(batch, response)
-                all_scored.extend(scored_batch)
-                logger.info(f"批次 {batch_id} 处理完成: {len(scored_batch)} 条")
+        async def process_with_semaphore(batch_idx: int, batch: List[NewsItem]) -> List[NewsItem]:
+            """带信号量控制的批次处理"""
+            async with semaphore:
+                batch_id = f"{batch_idx}/{total_batches}"
+                return await self._process_single_batch(batch, batch_id)
 
-            except ContentFilterError as e:
-                logger.error(f"批次 {batch_id} 内容过滤且Gemini fallback失败: {e}")
-                # 为整个批次赋予默认低分
-                for item in batch:
-                    item.ai_score = 3.0
-                    item.ai_category = "社会政治"
-                    item.ai_summary = f"内容过滤fallback失败: {str(e)[:50]}"
-                    all_scored.append(item)
+        logger.info(f"🚀 并行处理 {total_batches} 个批次 (并发: {max_concurrent})")
 
-            except Exception as e:
-                logger.error(f"批次 {batch_id} 处理失败: {e}")
-                # 为整个批次赋予默认低分
-                for item in batch:
-                    item.ai_score = 3.0
-                    item.ai_category = "社会政治"
-                    item.ai_summary = f"处理失败: {str(e)[:50]}"
-                    all_scored.append(item)
+        # 并行执行所有批次
+        tasks = [
+            process_with_semaphore(batch_idx, batch)
+            for batch_idx, batch in enumerate(batches, 1)
+        ]
+        results = await asyncio.gather(*tasks, return_exceptions=True)
 
-        logger.info(f"所有批次处理完成: 共 {len(all_scored)} 条")
+        # 合并结果，处理异常
+        all_scored = []
+        exception_count = 0
+        for i, result in enumerate(results):
+            if isinstance(result, Exception):
+                exception_count += 1
+                logger.error(f"❌ 批次 {i+1}/{total_batches} 处理异常: {result}")
+                # 使用默认分数（_process_single_batch内部已经处理）
+                all_scored.extend(batches[i])
+            else:
+                all_scored.extend(result)
+
+        success_count = total_batches - exception_count
+        logger.info(f"✅ 并行处理完成: 成功 {success_count}/{total_batches} 批次, 失败 {exception_count} 批次, 共 {len(all_scored)} 条")
+
         return all_scored
 
     def _select_top_items(self, items: List[NewsItem]) -> List[NewsItem]:

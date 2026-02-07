@@ -22,6 +22,21 @@ class ResultProcessor:
         }
         logger.info("ResultProcessor初始化完成")
     
+    def _apply_default_score(self, item: NewsItem, reason: str = "unknown") -> None:
+        """统一应用默认分数和分类"""
+        item.ai_score = self.DEFAULT_SCORE
+        item.ai_category = '社会政治'
+        item.ai_category_confidence = 0.5
+        item.ai_summary = f"[系统默认值 - {reason}]"
+        logger.debug(f"为新闻 '{item.title[:30]}...' 应用默认分数 (原因: {reason})")
+
+    def _apply_default_to_batch(self, items: List[NewsItem], reason: str = "parse_error") -> None:
+        """为一批新闻应用默认值"""
+        for item in items:
+            self._apply_default_score(item, reason)
+        self._stats['missing_fields'] += len(items)
+        logger.warning(f"已为 {len(items)} 条新闻应用默认分数 (原因: {reason})")
+
     def parse_1pass_response(self, items: List[NewsItem], response: str) -> List[NewsItem]:
         """解析1-pass API响应"""
         try:
@@ -29,7 +44,8 @@ class ResultProcessor:
 
             if not isinstance(results, list):
                 logger.error(f"响应格式错误: 期望数组，得到{type(results)}")
-                return self._apply_defaults(items)
+                self._apply_default_to_batch(items, "invalid_response_format")
+                return items
 
             result_map = {r['news_index']: r for r in results if 'news_index' in r}
 
@@ -39,7 +55,7 @@ class ResultProcessor:
                     scored_items.append(self._apply_result(item, result_map[i]))
                 else:
                     logger.warning(f"新闻{i}未找到评分结果，使用默认值")
-                    item.ai_score = self.DEFAULT_SCORE
+                    self._apply_default_score(item, "missing_index")
                     scored_items.append(item)
 
             self._stats['total_parsed'] += len(items)
@@ -48,7 +64,8 @@ class ResultProcessor:
         except (json.JSONDecodeError, Exception) as e:
             logger.error(f"解析失败: {e}")
             self._stats['parse_errors'] += 1
-            return self._apply_defaults(items)
+            self._apply_default_to_batch(items, "json_decode_error")
+            return items
     
     def _apply_result(self, item: NewsItem, result: Dict) -> NewsItem:
         """将解析结果应用到新闻项"""
@@ -78,13 +95,7 @@ class ResultProcessor:
     
     def _apply_defaults(self, items: List[NewsItem]) -> List[NewsItem]:
         """应用默认分数"""
-        for item in items:
-            item.ai_score = self.DEFAULT_SCORE
-            item.ai_category = '社会政治'
-            item.ai_category_confidence = 0.5
-
-        self._stats['missing_fields'] += len(items)
-        logger.warning(f"已应用默认分数到 {len(items)} 条新闻")
+        self._apply_default_to_batch(items, "apply_defaults")
         return items
 
     def get_stats(self) -> Dict:

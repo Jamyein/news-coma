@@ -39,11 +39,22 @@ class ContentFetcher:
             "total_fetches": 0
         }
     
+    def _handle_fetch_error(self, error: Exception, url: str, context: str = "") -> None:
+        """统一处理获取错误并更新统计"""
+        error_type = type(error).__name__
+
+        if isinstance(error, asyncio.TimeoutError):
+            self.stats["timeout_fetches"] += 1
+            logger.warning(f"⏰ 获取超时 [{context}]: {url}")
+        else:
+            self.stats["failed_fetches"] += 1
+            logger.error(f"❌ 获取失败 [{context}] {url}: {error}")
+
     async def fetch(self, url: str, timeout: Optional[int] = None) -> Optional[str]:
         """获取单个URL的文章全文"""
         self.stats["total_fetches"] += 1
         timeout = timeout or (self.timeout_range[0] + self.timeout_range[1]) // 2
-        
+
         try:
             content = await asyncio.wait_for(self._fetch_inner(url), timeout=timeout)
             if content:
@@ -53,13 +64,8 @@ class ContentFetcher:
             else:
                 self.stats["failed_fetches"] += 1
                 return None
-        except asyncio.TimeoutError:
-            self.stats["timeout_fetches"] += 1
-            logger.warning(f"⏰ 获取超时: {url}")
-            return None
         except Exception as e:
-            self.stats["failed_fetches"] += 1
-            logger.error(f"❌ 获取失败 {url}: {e}")
+            self._handle_fetch_error(e, url)
             return None
     
     async def fetch_multiple(

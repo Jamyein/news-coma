@@ -36,7 +36,61 @@ class BatchProvider:
         self.api_call_count = 0
 
         logger.info(f"BatchProvider初始化: {self.provider_name} ({self.model})")
-    
+
+    async def _make_request(
+        self,
+        client: AsyncOpenAI,
+        model: str,
+        prompt: str,
+        max_tokens: int,
+        temperature: float,
+        timeout: int
+    ) -> str:
+        """统一的核心API请求方法
+
+        所有API请求都通过此方法发送，确保一致性。
+
+        Args:
+            client: OpenAI客户端实例
+            model: 模型名称
+            prompt: 用户提示词
+            max_tokens: 最大token数
+            temperature: 温度参数
+            timeout: 超时时间(秒)
+
+        Returns:
+            API响应内容字符串
+
+        Raises:
+            asyncio.TimeoutError: 请求超时
+            Exception: API调用失败
+        """
+        messages = [
+            {"role": "system", "content": self.SYSTEM_PROMPT},
+            {"role": "user", "content": prompt}
+        ]
+
+        try:
+            response = await asyncio.wait_for(
+                client.chat.completions.create(
+                    model=model,
+                    messages=messages,
+                    max_tokens=max_tokens,
+                    temperature=temperature,
+                    response_format={"type": "json_object"}
+                ),
+                timeout=timeout
+            )
+
+            return response.choices[0].message.content
+
+        except asyncio.TimeoutError:
+            logger.error(f"API调用超时 ({timeout}s)")
+            raise
+        except Exception as e:
+            logger.error(f"API调用失败: {e}")
+            raise
+
     def _is_content_filter_error(self, error: Exception) -> bool:
         """检测是否为内容过滤错误（智谱AI错误码1301）"""
         error_str = str(error)
@@ -72,36 +126,40 @@ class BatchProvider:
         temperature: Optional[float] = None,
         timeout: Optional[int] = None
     ) -> str:
-        """调用批量评分API"""
+        """调用批量评分API（简化版）
+
+        使用统一的 _make_request 方法发送请求。
+
+        Args:
+            prompt: 构建好的提示词
+            max_tokens: 最大token数（默认使用配置值）
+            temperature: 温度参数（默认使用配置值）
+            timeout: 超时时间（默认使用配置值）
+
+        Returns:
+            API响应JSON字符串
+
+        Raises:
+            asyncio.TimeoutError: 请求超时
+            Exception: API调用失败
+        """
         max_tokens = max_tokens or self.provider_config.max_tokens
         temperature = temperature or self.provider_config.temperature
         timeout = timeout or self.config.timeout_seconds
 
-        messages = [
-            {"role": "system", "content": self.SYSTEM_PROMPT},
-            {"role": "user", "content": prompt}
-        ]
-
         try:
             logger.debug(f"调用API: {self.provider_name}, timeout={timeout}s")
+            self.api_call_count += 1
 
-            response = await asyncio.wait_for(
-                self.client.chat.completions.create(
-                    model=self.model,
-                    messages=messages,
-                    max_tokens=max_tokens,
-                    temperature=temperature,
-                    response_format={"type": "json_object"}
-                ),
+            return await self._make_request(
+                client=self.client,
+                model=self.model,
+                prompt=prompt,
+                max_tokens=max_tokens,
+                temperature=temperature,
                 timeout=timeout
             )
 
-            self.api_call_count += 1
-            return response.choices[0].message.content
-
-        except asyncio.TimeoutError:
-            logger.error(f"API调用超时 ({timeout}s)")
-            raise
         except RateLimitError as e:
             logger.warning(f"速率限制: {e}")
             raise
@@ -115,7 +173,6 @@ class BatchProvider:
                     provider=error_details["provider"],
                     error_data=error_details["error_data"]
                 )
-            logger.error(f"API调用失败: {e}")
             raise
     
     async def call_with_fallback(
@@ -397,28 +454,42 @@ class BatchProvider:
         max_tokens: Optional[int] = None,
         temperature: Optional[float] = None
     ) -> str:
-        """调用指定提供商"""
+        """调用指定提供商（简化版）
+
+        使用统一的 _make_request 方法发送请求。
+        动态创建客户端并发送请求到指定的回退提供商。
+
+        Args:
+            provider_name: 提供商名称（如 'deepseek', 'gemini'）
+            prompt: 用户提示词
+            max_tokens: 最大token数
+            temperature: 温度参数
+
+        Returns:
+            API响应JSON字符串
+
+        Raises:
+            KeyError: 提供商配置不存在
+            Exception: API调用失败
+        """
         config = self.config.providers_config[provider_name]
-        client = AsyncOpenAI(api_key=config.api_key, base_url=config.base_url)
 
-        messages = [
-            {"role": "system", "content": self.SYSTEM_PROMPT},
-            {"role": "user", "content": prompt}
-        ]
-
-        response = await asyncio.wait_for(
-            client.chat.completions.create(
-                model=config.model,
-                messages=messages,
-                max_tokens=max_tokens or config.max_tokens,
-                temperature=temperature or config.temperature,
-                response_format={"type": "json_object"}
-            ),
-            timeout=self.config.timeout_seconds
+        # 动态创建客户端
+        client = AsyncOpenAI(
+            api_key=config.api_key,
+            base_url=config.base_url
         )
 
-        logger.info(f"提供商 {provider_name} 调用成功")
-        return response.choices[0].message.content
+        logger.info(f"使用提供商 {provider_name} (模型: {config.model})")
+
+        return await self._make_request(
+            client=client,
+            model=config.model,
+            prompt=prompt,
+            max_tokens=max_tokens or config.max_tokens,
+            temperature=temperature or config.temperature,
+            timeout=self.config.timeout_seconds
+        )
     
     def get_stats(self) -> Dict[str, Any]:
         return {
