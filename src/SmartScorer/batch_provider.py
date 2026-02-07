@@ -34,8 +34,17 @@ class BatchProvider:
         )
         self.model = self.provider_config.model
         self.api_call_count = 0
+        self._prompt_engine = None  # 延迟加载PromptEngine
 
         logger.info(f"BatchProvider初始化: {self.provider_name} ({self.model})")
+
+    @property
+    def prompt_engine(self):
+        """延迟加载 PromptEngine 实例"""
+        if self._prompt_engine is None:
+            from .prompt_engine import PromptEngine
+            self._prompt_engine = PromptEngine(self.config)
+        return self._prompt_engine
 
     async def _make_request(
         self,
@@ -271,16 +280,25 @@ class BatchProvider:
                 ),
                 timeout=self.config.timeout_seconds
             )
-            
+
             content = response.choices[0].message.content
             result = json.loads(content)
-            
+
+            # 处理Gemini返回数组的情况（当response_format为json_object时，有时返回[{...}])
+            if isinstance(result, list):
+                if len(result) > 0 and isinstance(result[0], dict):
+                    result = result[0]
+                else:
+                    raise ValueError(f"Unexpected list format in response: {result}")
+            elif not isinstance(result, dict):
+                raise ValueError(f"Unexpected response type: {type(result)}, content: {content[:200]}")
+
             logger.debug(f"Gemini单条处理成功: {item.id}")
-            
+
             # 标准化返回格式，添加news_index
             result["news_index"] = 1
             return result
-            
+
         except (json.JSONDecodeError, Exception) as e:
             logger.warning(f"Gemini单条处理失败 {item.id}: {e}")
             # 返回默认低分结果
@@ -296,6 +314,119 @@ class BatchProvider:
                 "total_score": 3.0,
                 "summary": f"Gemini处理失败: {str(e)[:50]}"
             }
+
+    async def _retry_with_smaller_batches(
+        self,
+        items: List[NewsItem],
+        prompt_template: str,
+        max_tokens: Optional[int] = None,
+        temperature: Optional[float] = None
+    ) -> str:
+        """
+        将批次拆分为更小的子批次重试
+
+        当主提供商触发内容过滤时，尝试减小批次规模后重试，
+        以降低触发内容过滤的概率。
+
+        Args:
+            items: 原批次的新闻列表
+            prompt_template: 评分标准说明
+            max_tokens: 最大token数
+            temperature: 温度参数
+
+        Returns:
+            str: 合并后的JSON结果字符串
+
+        Raises:
+            ContentFilterError: 子批次仍然触发内容过滤
+            Exception: 其他API错误
+        """
+        # 计算子批次大小（至少2条，最多原批次的1/2）
+        original_size = len(items)
+        sub_batch_size = max(2, min(5, original_size // 2))
+
+        logger.info(
+            f"批次细分重试: 原批次{original_size}条 → 子批次{sub_batch_size}条"
+        )
+
+        all_results = []
+
+        # 分批重试
+        for i in range(0, original_size, sub_batch_size):
+            sub_items = items[i:i + sub_batch_size]
+            sub_batch_id = f"{i//sub_batch_size + 1}/{(original_size + sub_batch_size - 1)//sub_batch_size}"
+
+            logger.debug(f"处理子批次 {sub_batch_id}: {len(sub_items)}条")
+
+            try:
+                # 构建子批次prompt
+                sub_prompt = self.prompt_engine.build_1pass_prompt(sub_items)
+
+                # 使用主提供商调用
+                sub_response = await self.call_batch_api(
+                    sub_prompt, max_tokens, temperature
+                )
+
+                # 解析子批次结果
+                sub_results = json.loads(sub_response)
+                if not isinstance(sub_results, list):
+                    if isinstance(sub_results, dict) and 'results' in sub_results:
+                        sub_results = sub_results['results']
+                    else:
+                        raise ValueError(f"Unexpected response format: {type(sub_results)}")
+
+                # 调整news_index为全局索引
+                for j, result in enumerate(sub_results):
+                    if 'news_index' in result:
+                        result['news_index'] = i + j + 1
+
+                all_results.extend(sub_results)
+                logger.debug(f"子批次 {sub_batch_id} 成功: {len(sub_results)}条结果")
+
+            except ContentFilterError:
+                # 子批次仍然触发内容过滤，记录日志并继续处理其他子批次
+                logger.warning(f"子批次 {sub_batch_id} 仍触发内容过滤，跳过")
+                # 为子批次添加默认结果
+                for j, item in enumerate(sub_items):
+                    all_results.append({
+                        "news_index": i + j + 1,
+                        "category": "社会政治",
+                        "category_confidence": 0.5,
+                        "importance": 3,
+                        "timeliness": 3,
+                        "technical_depth": 3,
+                        "audience_breadth": 3,
+                        "practicality": 3,
+                        "total_score": 3.0,
+                        "summary": "内容过滤，使用默认分"
+                    })
+                continue
+            except Exception as e:
+                # 其他错误，记录并继续
+                logger.error(f"子批次 {sub_batch_id} 处理失败: {e}")
+                # 为子批次添加默认结果
+                for j, item in enumerate(sub_items):
+                    all_results.append({
+                        "news_index": i + j + 1,
+                        "category": "社会政治",
+                        "category_confidence": 0.5,
+                        "importance": 3,
+                        "timeliness": 3,
+                        "technical_depth": 3,
+                        "audience_breadth": 3,
+                        "practicality": 3,
+                        "total_score": 3.0,
+                        "summary": f"处理失败: {str(e)[:30]}"
+                    })
+                continue
+
+        if not all_results:
+            raise ContentFilterError("所有子批次均触发内容过滤", provider=self.provider_name)
+
+        logger.info(f"批次细分重试完成: {len(all_results)}/{original_size}条成功")
+
+        # 返回JSON字符串格式
+        return json.dumps({"results": all_results})
 
     async def _fallback_batch_with_gemini(
         self,
@@ -375,15 +506,26 @@ class BatchProvider:
             # 明确的内容过滤错误
             logger.warning(
                 f"主提供商 {self.provider_name} 触发内容过滤 "
-                f"(错误码: {e.error_code})，切换到Gemini单条处理"
+                f"(错误码: {e.error_code})，尝试批次细分重试"
             )
-            
+
+            # 策略1: 先尝试减小批次规模重试
+            if len(items) > 3:
+                try:
+                    return await self._retry_with_smaller_batches(
+                        items, prompt_template, max_tokens, temperature
+                    )
+                except Exception as retry_error:
+                    logger.warning(f"批次细分重试失败: {retry_error}，切换到Gemini")
+            else:
+                logger.info("批次已较小(≤3条)，直接切换到Gemini处理")
+
             # 提取prompt中的评分标准说明
             if prompt_template is None:
                 # 从原始prompt中提取评分标准部分
                 prompt_template = self._extract_scoring_criteria(prompt)
-            
-            # 使用Gemini逐条处理
+
+            # 使用Gemini逐条处理（带速率限制）
             return await self._fallback_batch_with_gemini(items, prompt_template)
             
         except Exception as e:

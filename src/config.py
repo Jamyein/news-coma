@@ -13,7 +13,7 @@ from src.models import RSSSource, AIConfig, OutputConfig, FilterConfig, Provider
 class Config:
     """配置管理类"""
     
-    def __init__(self, config_path: str = "config/config.yaml"):
+    def __init__(self, config_path: str = "config.yaml"):
         """初始化配置"""
         self.config_path = Path(config_path)
         self._config = self._load_config()
