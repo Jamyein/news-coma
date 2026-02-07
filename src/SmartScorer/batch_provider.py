@@ -241,7 +241,8 @@ class BatchProvider:
         )
         
         # 构建单条新闻的prompt
-        summary = item.summary[:300] if item.summary else "无摘要"
+        max_summary_len = getattr(self.config, 'max_summary_length', 300)
+        summary = item.summary[:max_summary_len] if item.summary else "无摘要"
         single_prompt = f"""请对以下新闻进行专业评估。
 
 【新闻】
@@ -510,7 +511,7 @@ class BatchProvider:
             )
 
             # 策略1: 先尝试减小批次规模重试
-            if len(items) > 3:
+            if len(items) > self.config.min_batch_size_for_subdivision:
                 try:
                     return await self._retry_with_smaller_batches(
                         items, prompt_template, max_tokens, temperature
@@ -518,7 +519,7 @@ class BatchProvider:
                 except Exception as retry_error:
                     logger.warning(f"批次细分重试失败: {retry_error}，切换到Gemini")
             else:
-                logger.info("批次已较小(≤3条)，直接切换到Gemini处理")
+                logger.info(f"批次已较小(≤{self.config.min_batch_size_for_subdivision}条)，直接切换到Gemini处理")
 
             # 提取prompt中的评分标准说明
             if prompt_template is None:
