@@ -102,6 +102,19 @@ class AIConfig:
     fallback_enabled: bool = True
     fallback_chain: List[str] = field(default_factory=lambda: ["deepseek", "gemini"])
 
+    # 板块最低保障配置（新增）
+    category_min_guarantee: Dict[str, int] = field(default_factory=lambda: {
+        'finance': 3,
+        'tech': 2,
+        'politics': 2
+    })
+
+    # 流式JSON解析配置（新增）
+    use_streaming_json_parser: bool = True          # 启用流式JSON解析，边接收边解析，解决截断问题
+    streaming_json_priority: bool = True            # 优先使用流式JSON解析（失败时自动降级到传统方式）
+    streaming_json_buffer_size: int = 4096          # 流式解析缓冲区大小（字节）
+    streaming_json_max_depth: int = 10              # 最大JSON嵌套深度
+
 
 @dataclass
 class OutputConfig:

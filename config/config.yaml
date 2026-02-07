@@ -193,7 +193,7 @@ smart_ai:
     technical_depth: 0.20     # 技术深度权重
     audience_breadth: 0.15    # 受众广度权重
     practicality: 0.15        # 实用性权重
-  
+
   # 回退配置（简化）
   fallback_enabled: true
   fallback_chain:
@@ -232,3 +232,4 @@ timeout: 120
 # 功能开关
 # ==========================================
 use_smart_scorer: true        # 启用1-Pass SmartScorer（设为false使用2-Pass）
+
