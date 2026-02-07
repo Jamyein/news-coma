@@ -324,44 +324,6 @@ class RSSFetcher:
             logger.error(f"❌ TF-IDF语义去重失败: {e}")
             return items  # 失败时返回原始列表
     
-    def _title_similarity(self, title1: str, title2: str) -> float:
-        """计算两个标题的相似度(基于Levenshtein距离)"""
-        title1 = title1.lower().strip()
-        title2 = title2.lower().strip()
-        
-        if title1 == title2:
-            return 1.0
-        
-        len1, len2 = len(title1), len(title2)
-        if len1 == 0 or len2 == 0:
-            return 0.0
-        
-        max_len = max(len1, len2)
-        distance = self._levenshtein_distance(title1, title2)
-        similarity = 1 - (distance / max_len)
-        
-        return similarity
-    
-    def _levenshtein_distance(self, s1: str, s2: str) -> int:
-        """计算Levenshtein编辑距离"""
-        if len(s1) < len(s2):
-            return self._levenshtein_distance(s2, s1)
-        
-        if len(s2) == 0:
-            return len(s1)
-        
-        previous_row = range(len(s2) + 1)
-        for i, c1 in enumerate(s1):
-            current_row = [i + 1]
-            for j, c2 in enumerate(s2):
-                insertions = previous_row[j + 1] + 1
-                deletions = current_row[j] + 1
-                substitutions = previous_row[j] + (c1 != c2)
-                current_row.append(min(insertions, deletions, substitutions))
-            previous_row = current_row
-        
-        return previous_row[-1]
-    
     def _clean_html(self, html: str) -> str:
         """简单清理HTML标签"""
         if not html:

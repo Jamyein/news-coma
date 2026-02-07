@@ -222,14 +222,5 @@ filters:
   use_semantic_dedup: true    # 启用TF-IDF语义去重
   semantic_similarity: 0.85   # 语义相似度阈值
 
-# ==========================================
-# 系统配置
-# ==========================================
-retry_attempts: 3
-timeout: 120
 
-# ==========================================
-# 功能开关
-# ==========================================
-use_smart_scorer: true        # 启用1-Pass SmartScorer（设为false使用2-Pass）
 
