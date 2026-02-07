@@ -166,6 +166,37 @@ class RSSGenerator:
         
         return rss_xml
     
+    def _determine_smart_switch_mode(self) -> tuple[str, Path]:
+        """
+        智能切换决策核心逻辑（共享）
+        
+        决策逻辑：
+        1. 如果不使用智能切换 → 返回 'archive'
+        2. 获取当天日期，构建对应的archive文件路径
+        3. 检查对应日期的archive是否存在：
+           - 存在 → 返回 'latest'（增量模式）
+           - 不存在 → 返回 'archive'（首次运行）
+        
+        Returns:
+            (mode, archive_path): ('latest'|'archive', 对应的archive文件路径)
+        """
+        # 不使用智能切换
+        if not self.use_smart_switch:
+            return 'archive', None
+        
+        # 获取当天日期
+        today = datetime.now().date()
+        
+        # 构建对应的archive文件路径
+        archive_filename = today.strftime("%Y-%m-%d") + ".md"
+        archive_path = self.archive_dir / archive_filename
+        
+        # 检查archive是否存在
+        if archive_path.exists():
+            return 'latest', archive_path
+        else:
+            return 'archive', archive_path
+    
     def get_required_source(self, now: datetime = None) -> str:
         """
         获取RSS生成所需的数据源类型（供main.py在生成前协调）
@@ -175,22 +206,13 @@ class RSSGenerator:
         - 当天后续运行（archive已存在）：返回 'latest'
         
         Args:
-            now: 可选，指定检测时间，默认为当前时间
+            now: 可选，指定检测时间，保留参数用于兼容性，实际不使用
             
         Returns:
             'archive' 或 'latest'
         """
-        if now is None:
-            now = datetime.now()
-        
-        date = now.date()
-        archive_filename = date.strftime("%Y-%m-%d") + ".md"
-        archive_path = self.archive_dir / archive_filename
-        
-        if archive_path.exists():
-            return 'latest'
-        else:
-            return 'archive'
+        mode, _ = self._determine_smart_switch_mode()
+        return mode
     
     def _log_smart_switch_stats(self, file_infos: list[dict]):
         """记录智能切换的统计信息"""
@@ -218,45 +240,30 @@ class RSSGenerator:
         """收集archive和docs目录中的所有Markdown文件，支持智能切换逻辑"""
         markdown_files = []
         
-        # 收集archive目录中的文件
+        # 收集archive目录中的所有文件
         if self.archive_dir.exists():
             for file_path in self.archive_dir.glob("*.md"):
                 markdown_files.append(file_path)
         
-        # 处理latest.md文件（智能切换逻辑）
-        if self.docs_dir.exists():
-            latest_file = self.docs_dir / "latest.md"
+        # 处理latest.md文件（使用共享的智能切换决策逻辑）
+        latest_file = self.docs_dir / "latest.md"
+        
+        if latest_file.exists():
+            # 使用共享决策逻辑
+            mode, archive_path = self._determine_smart_switch_mode()
             
-            if latest_file.exists():
-                if self.use_smart_switch:
-                    # 智能切换逻辑：检查是否有对应日期的archive文件
-                    try:
-                        # 从latest.md中提取日期
-                        latest_date = self._extract_date_from_latest(latest_file)
-                        if latest_date:
-                            # 构建对应的archive文件名
-                            archive_filename = latest_date.strftime("%Y-%m-%d") + ".md"
-                            archive_file = self.archive_dir / archive_filename
-                            
-                            if archive_file.exists():
-                                # 如果archive文件存在，使用latest.md（增量更新模式）
-                                logger.info(f"智能切换：检测到archive文件 {archive_filename} 已存在，使用latest.md（增量更新模式）")
-                                markdown_files.append(latest_file)
-                            else:
-                                # 如果archive文件不存在，使用archive文件（首次运行）
-                                logger.info(f"智能切换：未找到对应archive文件，首次运行，使用archive文件")
-                                if archive_file not in markdown_files:
-                                    markdown_files.append(archive_file)
-                        else:
-                            # 无法从latest.md提取日期，使用latest.md
-                            logger.warning(f"无法从latest.md提取日期，使用latest.md")
-                            markdown_files.append(latest_file)
-                    except Exception as e:
-                        # 智能切换失败，使用latest.md
-                        logger.error(f"智能切换失败: {e}，使用latest.md")
-                        markdown_files.append(latest_file)
-                else:
-                    # 不使用智能切换，直接添加latest.md
+            if mode == 'latest':
+                # 增量模式：使用latest.md
+                logger.info(f"智能切换：检测到对应archive文件已存在，使用latest.md（增量更新模式）")
+                markdown_files.append(latest_file)
+            elif mode == 'archive':
+                # 首次运行：使用archive文件
+                if archive_path and archive_path not in markdown_files:
+                    logger.info(f"智能切换：未找到对应archive文件，首次运行，使用archive文件")
+                    markdown_files.append(archive_path)
+                elif not archive_path:
+                    # 无法确定archive路径，fallback使用latest.md
+                    logger.warning(f"智能切换：无法确定archive路径，使用latest.md")
                     markdown_files.append(latest_file)
         
         # 日志记录
