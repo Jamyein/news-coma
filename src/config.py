@@ -108,7 +108,8 @@ class Config:
             'max_output_items': smart_ai_data.get('max_output_items', 30),
             'diversity_weight': smart_ai_data.get('diversity_weight', 0.3),
             'fallback_enabled': smart_ai_data.get('fallback_enabled', True),
-            'fallback_chain': smart_ai_data.get('fallback_chain', ['deepseek', 'gemini'])
+            'fallback_chain': smart_ai_data.get('fallback_chain', ['deepseek', 'gemini']),
+            'category_min_guarantee': smart_ai_data.get('category_min_guarantee', {})
         }
 
     @property

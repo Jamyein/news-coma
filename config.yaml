@@ -194,6 +194,12 @@ smart_ai:
     audience_breadth: 0.15    # 受众广度权重
     practicality: 0.15        # 实用性权重
 
+  # 分类最低保障配置（每个分类至少保障N条）
+  category_min_guarantee:
+    财经: 5
+    科技: 3
+    社会政治: 2
+
   # 回退配置（简化）
   fallback_enabled: true
   fallback_chain:

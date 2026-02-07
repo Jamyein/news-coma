@@ -102,6 +102,9 @@ class AIConfig:
     fallback_enabled: bool = True
     fallback_chain: List[str] = field(default_factory=lambda: ["deepseek", "gemini"])
 
+    # 分类最低保障配置（从config.yaml加载，无配置则使用空字典）
+    category_min_guarantee: Dict[str, int] = field(default_factory=dict)
+
     # 错误处理默认分数（新增）
     default_score_on_error: float = 3.0             # 错误时的默认分数
     default_score_on_parse_error: float = 5.0       # 解析错误时的默认分数

@@ -178,28 +178,58 @@ class SmartScorer:
         return self._ensure_diversity(sorted_items)
     
     def _ensure_diversity(self, items: List[NewsItem]) -> List[NewsItem]:
-        """确保分类多样性"""
+        """
+        确保分类多样性（带最低保障）
+        
+        策略：
+        1. 按分类分组并按评分排序
+        2. 按比例缩减保障数（如需要）
+        3. 优先满足各分类最低保障
+        4. 剩余名额补充高分新闻
+        """
         if not items:
             return []
-
+        
         max_items = self.config.max_output_items
-
-        # 按分类分组
+        guarantees = self.config.category_min_guarantee
+        
+        # 1. 按分类分组并排序
         by_category = defaultdict(list)
         for item in items:
             category = getattr(item, 'ai_category', '未分类')
             by_category[category].append(item)
-
-        # 策略：每个分类先取1条，然后补充高分新闻
+        
+        # 如果未配置保障，使用默认策略：每分类至少1条
+        if not guarantees:
+            guarantees = {cat: 1 for cat in by_category.keys() if cat != '未分类'}
+        
+        # 2. 按比例缩减保障数（当总数超过max_items时）
+        total_guarantee = sum(guarantees.values())
+        if total_guarantee > max_items:
+            scale = max_items / total_guarantee
+            adjusted_guarantees = {
+                cat: max(1, int(count * scale))  # 至少保障1条
+                for cat, count in guarantees.items()
+            }
+            logger.warning(f"保障总数({total_guarantee})超过上限({max_items})，已按比例缩减至: {adjusted_guarantees}")
+        else:
+            adjusted_guarantees = guarantees
+        
+        # 3. 从各分类取保障数量
         selected = []
-        for cat_items in by_category.values():
-            if cat_items and len(selected) < max_items:
-                selected.append(cat_items[0])
-
+        for category, min_count in adjusted_guarantees.items():
+            cat_items = by_category.get(category, [])
+            # 取该分类前N条高分新闻
+            for item in cat_items[:min_count]:
+                if len(selected) < max_items:
+                    selected.append(item)
+        
+        # 4. 补充剩余名额（按评分从高到低）
         for item in items:
             if item not in selected and len(selected) < max_items:
                 selected.append(item)
-
+        
+        # 5. 最终按评分排序
         selected.sort(key=lambda x: x.ai_score or 0, reverse=True)
         return selected
     
