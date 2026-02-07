@@ -9,7 +9,7 @@ import re
 import socket
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta
-from typing import Optional
+from typing import List, Optional
 
 import feedparser
 from dateutil import parser as date_parser
