@@ -5,8 +5,8 @@
     <link>https://github.com/Jamyein/news-coma</link>
     <description>由 AI 筛选的高质量科技新闻聚合，每6小时自动更新</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 07 Feb 2026 13:52:33 GMT</lastBuildDate>
-    <pubDate>Sat, 07 Feb 2026 13:52:33 GMT</pubDate>
+    <lastBuildDate>Sun, 08 Feb 2026 02:04:49 GMT</lastBuildDate>
+    <pubDate>Sun, 08 Feb 2026 02:04:49 GMT</pubDate>
     <atom:link href="https://Jamyein.github.io/news-coma/feed.xml" rel="self" type="application/rss+xml" />
     <image>
         <url>https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</url>
@@ -15,355 +15,620 @@
     </image>
 
     <item>
-        <title>2026年02月07日 21:52 新闻汇总</title>
+        <title>2026年02月08日 10:04 新闻汇总</title>
         <link>https://Jamyein.github.io/news-coma/</link>
-        <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Sat, 07 Feb 2026 13:52:33 GMT</pubDate>
+        <description>本期精选 26 条高质量科技新闻</description>
+        <pubDate>Sun, 08 Feb 2026 02:04:49 GMT</pubDate>
         <guid>docs/latest.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
-<blockquote>🕐 更新时间: 2026年02月07日 21:52</blockquote>
-<blockquote>📊 本期精选 <strong>30</strong> 条高质量新闻</blockquote>
+<blockquote>🕐 更新时间: 2026年02月08日 10:04</blockquote>
+<blockquote>📊 本期精选 <strong>26</strong> 条高质量新闻</blockquote>
 <blockquote>🤖 由 AI 自动分类、筛选、翻译和总结</blockquote>
 <hr/>
-<h2>💰 财经新闻 (22条)</h2>
-<p>精选 <strong>22</strong> 条财经新闻</p>
-<h3>1. “美国最大电网”PJM：未来十年美国面临重大电力短缺，缺口高达60GW</h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.4/10</p>
-<p><strong>📝 摘要</strong>: 美国最大电网运营商预测未来十年电力供应缺口高达60GW，数据中心扩张推高电力需求，电网备用容量不足。</p>
+<h2>💰 财经新闻 (8条)</h2>
+<p>精选 <strong>8</strong> 条财经新闻</p>
+<h3>1. 比特币下跌，借加密货币贷款的投资者面临困境</h3>
+<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.3/10</p>
+<p><strong>📝 摘要</strong>: 比特币价格下跌，那些借加密货币贷款的投资者面临巨大压力。专家指出，这一事件可能对加密货币市场产生长期影响，并提醒投资者谨慎对待高风险投资。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>电力供应缺口60GW</li>
-<li>数据中心扩张推高电力需求</li>
-<li>电网备用容量不足</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765217">“美国最大电网”PJM：未来十年美国面临重大电力短缺，缺口高达60GW</a>
-<hr/>
-<h3>2. 美国对Netflix以830亿美元收购华纳兄弟的交易启动反垄断审查</h3>
-<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.0/10</p>
-<p><strong>📝 摘要</strong>: Netflix拟以830亿美元收购华纳兄弟，美国启动反垄断审查，调查垄断性市场力量。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>Netflix拟收购华纳兄弟830亿美元</li>
-<li>美国启动反垄断审查</li>
-<li>调查垄断性市场力量</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3672975032541827?f=rss">美国对Netflix以830亿美元收购华纳兄弟的交易启动反垄断审查</a>
-<hr/>
-<h3>3. 比特币跌破68000美元</h3>
-<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.0/10</p>
-<p><strong>📝 摘要</strong>: 比特币跌破68000美元，日内跌3.73%，受美联储加息预期影响。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>比特币跌破68000美元</li>
-<li>日内跌3.73%</li>
-<li>受美联储加息预期影响</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3672951921533827?f=rss">比特币跌破68000美元</a>
-<hr/>
-<h3>4. 国际能源署：可再生能源与核电2030年将提供全球一半电力</h3>
-<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.0/10</p>
-<p><strong>📝 摘要</strong>: 国际能源署预测2030年可再生能源与核电将提供全球一半电力，电力需求年均增速将超过3.5%。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>2030年可再生能源与核电提供全球一半电力</li>
-<li>电力需求年均增速超3.5%</li>
-<li>工业用电上升、电动汽车普及等因素驱动</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3672852696621699?f=rss">国际能源署：可再生能源与核电2030年将提供全球一半电力</a>
-<hr/>
-<h3>5. “结算后定价”、“超短期合同”！“存储三巨头”正签“前所未见”的供货合同</h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.0/10</p>
-<p><strong>📝 摘要</strong>: 存储芯片巨头转向短期供货合同，价格追溯结算机制引入，市场主导权向供应商倾斜，保障供应成客户首要考量。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>存储芯片巨头转向短期供货合同</li>
-<li>价格追溯结算机制引入</li>
-<li>市场主导权向供应商倾斜</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765219">“结算后定价”、“超短期合同”！“存储三巨头”正签“前所未见”的供货合同</a>
-<hr/>
-<h3>6. ‘It’s existential’: How Big Tech found itself in a $650 billion spending spiral</h3>
-<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
-<p><strong>📝 摘要</strong>: 大科技公司花费6500亿美元，市场对此表示不满。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>大科技公司6500亿美元支出</li>
-<li>市场不满</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/its-existential-how-big-tech-found-itself-in-a-650-billion-spending-spiral-346caa4d?mod=mw_rss_topstories">‘It’s existential’: How Big Tech found itself in a $650 billion spending spiral</a>
-<hr/>
-<h3>7. Benchmark raises $225M in special funds to double down on Cerebras</h3>
-<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
-<p><strong>📝 摘要</strong>: Benchmark Capital投资Nvidia竞争对手Cerebras，筹集225M美元资金以扩大投资。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>Benchmark Capital投资Cerebras</li>
-<li>筹集225M美元资金</li>
-<li>投资Nvidia竞争对手</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/06/benchmark-raises-225m-in-special-funds-to-double-down-on-cerebras/">Benchmark raises $225M in special funds to double down on Cerebras</a>
-<hr/>
-<h3>8. Bitcoin’s 50% plunge from highs ‘hurts a little’ — but it isn’t shaking these investors’ conviction</h3>
-<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.4/10</p>
-<p><strong>📝 摘要</strong>: 比特币价格下跌50%，投资者信心未受影响，认为波动是入场代价。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>比特币价格下跌50%</li>
-<li>投资者信心未受影响</li>
-<li>波动视为入场代价</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/bitcoins-50-plunge-from-highs-hurts-a-little-but-it-isnt-shaking-these-investors-conviction-304b2ba6?mod=mw_rss_topstories">Bitcoin’s 50% plunge from highs ‘hurts a little’ — but it isn’t shaking these investors’ conviction</a>
-<hr/>
-<h3>9. Tech wreck signals a market reset</h3>
-<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.4/10</p>
-<p><strong>📝 摘要</strong>: 科技股崩盘预示市场重置，加密货币等投机性股票不再被支持。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>科技股崩盘</li>
-<li>市场重置</li>
-<li>加密货币不再被支持</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/df69f37b-0929-45d0-b357-5db7ed5c2678">Tech wreck signals a market reset</a>
-<hr/>
-<h3>10. 美印达成临时贸易框架：对印关税降至18%，印度承诺5年采购5000亿美元美国产品</h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.3/10</p>
-<p><strong>📝 摘要</strong>: 美印达成临时贸易框架，印度承诺5年采购5000亿美元美国产品。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>美印达成临时贸易协议框架，结束贸易僵局</li>
-<li>印度承诺5年采购5000亿美元美国产品</li>
-<li>协议涉及能源、航空、金属及科技产品等领域</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765233">美印达成临时贸易框架：对印关税降至18%，印度承诺5年采购5000亿美元美国产品</a>
-<hr/>
-<h3>11. 苹果逆袭中国市场，背后竟是爱马仕橙救场？</h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.3/10</p>
-<p><strong>📝 摘要</strong>: 苹果公司在中国市场销售下滑周期宣告终结，第四季度在华收入同比大幅增长38%。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>苹果中国市场份额增长38%</li>
-<li>iPhone 17系列设计革新，引发显著消费关注</li>
-<li>苹果中国收入贡献全球总销售额近五分之一</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765230">苹果逆袭中国市场，背后竟是爱马仕橙救场？</a>
-<hr/>
-<h3>12. 美科技股“崩盘式”回调的信号：风险资产普涨时代终结，AI输家将被无情抛弃！</h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.3/10</p>
-<p><strong>📝 摘要</strong>: 全球风险资产经历剧烈调整，高盛分析师将当前市场状况定性为“科技股灾难”。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>全球风险资产经历剧烈调整</li>
-<li>高盛分析师将市场状况定性为“科技股灾难”</li>
-<li>比特币价格一度自历史高点腰斩</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765226">美科技股“崩盘式”回调的信号：风险资产普涨时代终结，AI输家将被无情抛弃！</a>
-<hr/>
-<h3>13. ‘Hermès orange’ iPhone sparks Apple comeback in China</h3>
-<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.3/10</p>
-<p><strong>📝 摘要</strong>: 苹果公司推出新配色iPhone，在中国市场销量大幅增长，结束销售下滑周期。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>iPhone 17系列设计革新，中国市场份额增长38%</li>
-<li>新配色与奢侈品牌爱马仕相似，引发社交媒体关注</li>
-<li>苹果中国收入贡献全球总销售额近五分之一</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/e2d78d04-7368-4b0c-abd5-591c03774c46">‘Hermès orange’ iPhone sparks Apple comeback in China</a>
-<hr/>
-<h3>14. When considered as a percentage of GDP, the 2026 projected AI-driven spending by Amazon, Alphabet, Microsoft and Meta rivals momentous capital efforts in U.S. history, as shown in these charts</h3>
-<p><strong>📌 来源</strong>: WSJ 全球经济 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.2/10</p>
-<p><strong>📝 摘要</strong>: 四大科技巨头2026年AI驱动的支出与美历史重大资本努力相当。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>四大科技巨头2026年AI支出巨大</li>
-<li>支出占GDP比例与美历史重大资本努力相当</li>
-<li>图表展示支出情况</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/tech/ai/ai-spending-tech-companies-compared-02b90046">When considered as a percentage of GDP, the 2026 projected AI-driven spending by Amazon, Alphabet, Microsoft and Meta rivals momentous capital efforts in U.S. history, as shown in these charts</a>
-<hr/>
-<h3>15. Gen Z is obsessed with 2016, and beauty stocks like e.l.f. and Ulta are riding the nostalgia wave</h3>
-<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: Z世代对2016年怀旧，美妆股票受益。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>Z世代怀旧2016</li>
-<li>美妆股票受益</li>
-</ul>
-<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/gen-z-is-obsessed-with-2016-and-beauty-stocks-like-e-l-f-and-ulta-are-riding-the-nostalgia-wave-581dd031?mod=mw_rss_topstories">Gen Z is obsessed with 2016, and beauty stocks like e.l.f. and Ulta are riding the nostalgia wave</a>
-<hr/>
-<h3>16. After bitcoin’s fall, pity those wildly enthusiastic investors who borrowed billions against crypto</h3>
-<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: 比特币下跌后，借加密货币投资的人面临困境，预期目标破灭。</p>
-<p><strong>💡 关键要点</strong>:</p>
-<ul>
-<li>比特币下跌</li>
-<li>借加密货币投资</li>
-<li>预期目标破灭</li>
+<li>要点1：比特币价格下跌，借加密货币贷款的投资者面临困境</li>
+<li>要点2：可能对加密货币市场产生长期影响</li>
+<li>要点3：提醒投资者谨慎对待高风险投资</li>
 </ul>
 <strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/as-bitcoin-crashes-pity-those-wildly-enthusiastic-investors-who-borrowed-billions-against-crypto-794164bb?mod=mw_rss_topstories">After bitcoin’s fall, pity those wildly enthusiastic investors who borrowed billions against crypto</a>
 <hr/>
-<h3>17. Software stocks have been crushed. Here’s how to play the sector as the dust settles.</h3>
+<h3>2. 美国投资者分散投资，海外债券受关注</h3>
+<p><strong>📌 来源</strong>: CNBC | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.3/10</p>
+<p><strong>📝 摘要</strong>: 随着美国投资者分散投资，国际股票和海外债券受到关注。专家指出，这种趋势可能对全球债券市场产生重大影响，尤其是对于那些高度集中于国内资产的投资者。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：美国投资者分散投资至国际股票和海外债券</li>
+<li>要点2：可能对全球债券市场产生重大影响</li>
+<li>要点3：高度集中于国内资产的投资者需关注</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.cnbc.com/2026/02/07/sell-america-market-trade-fixed-income-international-bonds.html">As 'Sell America' trade volatility rages on, some of the biggest changes may be in your bonds</a>
+<hr/>
+<h3>3. 韩国交易所Bithumb误发440亿美元比特币</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 韩国加密货币交易所Bithumb误发440亿美元比特币，引发市场波动。交易所已追回99.7%的错发比特币，但事故暴露了虚拟资产的风险。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：Bithumb误发440亿美元比特币</li>
+<li>要点2：引发市场波动，比特币价格一度暴跌</li>
+<li>要点3：已追回99.7%的错发比特币，但事故暴露了虚拟资产风险</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765240">史诗级失误：韩国交易所“手滑”发出440亿美元比特币</a>
+<hr/>
+<h3>4. 中五五十岁购房，选择40万美元抵押贷款还是使用Roth IRA？</h3>
+<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.2/10</p>
+<p><strong>📝 摘要</strong>: 一位中五五十岁的消费者在购买房屋时面临选择，是使用40万美元的抵押贷款还是利用Roth IRA。专家建议，消费者应根据个人财务状况和未来规划做出决策。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：消费者面临40万美元抵押贷款或Roth IRA选择</li>
+<li>要点2：专家建议根据个人财务状况和未来规划决策</li>
+<li>要点3：涉及个人财务规划决策</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/i-love-being-debt-free-im-in-my-mid-50s-and-buying-a-house-do-i-take-out-a-400k-mortgage-or-use-my-roth-ira-c1aa3ef7?mod=mw_rss_topstories">‘I love being debt-free’: I’m in my mid-50s and buying a house. Do I take out a $400K mortgage or use my Roth IRA?</a>
+<hr/>
+<h3>5. NFL超级碗收视率创新高，未来比赛可能更贵</h3>
 <p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: 软件股票下跌后，投资者可评估购买被压低股价的软件股票的机会。</p>
+<p><strong>📝 摘要</strong>: NFL超级碗收视率创新高，预计将推动比赛票价上涨。NFL赛季收视率连续36年保持增长，对广告商和电视网络具有吸引力。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>软件股票下跌</li>
-<li>评估购买机会</li>
-<li>被压低股价的股票</li>
+<li>要点1：NFL超级碗收视率创新高，达到36年来的最高水平</li>
+<li>要点2：高收视率预计将推动比赛票价上涨</li>
+<li>要点3：NFL赛季对广告商和电视网络具有吸引力</li>
 </ul>
-<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/software-stocks-have-been-crushed-heres-how-to-play-the-sector-as-the-dust-settles-c0175f8a?mod=mw_rss_topstories">Software stocks have been crushed. Here’s how to play the sector as the dust settles.</a>
+<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/nfl-heads-into-super-bowl-after-season-of-record-ratings-paving-way-for-tv-rights-bonanza-bb8f897c?mod=mw_rss_topstories">The NFL heads into the Super Bowl after a season of record ratings. That could make games cost more to watch in the future.</a>
 <hr/>
-<h3>18. How the house of Rothschild became entangled with Epstein</h3>
-<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: 罗斯柴尔德家族与爱泼斯坦事件有关联，瑞士私人银行陷入困境。</p>
+<h3>6. 美国退休最佳地盘点：全球最佳退休地榜单</h3>
+<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 6.5/10</p>
+<p><strong>📝 摘要</strong>: MarketWatch发布美国及全球最佳退休地榜单，分析不同地区的退休生活条件，为退休者提供参考。榜单基于气候、医疗、生活成本等因素评选，对退休规划有实际指导意义。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>罗斯柴尔德家族与爱泼斯坦事件</li>
-<li>瑞士私人银行陷入困境</li>
-<li>家族与事件关联</li>
+<li>要点1：MarketWatch发布全球最佳退休地榜单，包含美国及全球地区</li>
+<li>要点2：榜单考虑气候、医疗、生活成本等因素，对退休者有指导意义</li>
+<li>要点3：榜单为退休者提供参考，有助于选择合适的退休地点</li>
 </ul>
-<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/0d70b7d3-063d-43a0-812b-8b8b3e7c4c47">How the house of Rothschild became entangled with Epstein</a>
+<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/where-should-i-retire-how-to-use-all-those-best-places-lists-to-find-your-perfect-spot-ca4e8ea0?mod=mw_rss_topstories">Where’s the real ‘best place’ to retire? Tips to making those lists work for you.</a>
 <hr/>
-<h3>19. Tech stocks have been shaky, but these 20 companies could still see rocketing sales growth</h3>
+<h3>7. 投资者质疑是否还需持有金银</h3>
+<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 6.5/10</p>
+<p><strong>📝 摘要</strong>: 贵金属价格可能已触底，但市场仍面临考验。投资者对持有金银的需求产生疑问，需关注市场动态和全球经济形势。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：贵金属价格可能已触底，但市场仍面临考验</li>
+<li>要点2：投资者对持有金银的需求产生疑问</li>
+<li>要点3：需关注市场动态和全球经济形势</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/investors-are-asking-if-they-need-to-own-gold-and-silver-at-all-d46ac11e?mod=mw_rss_topstories">Investors are asking if they need to own gold and silver at all</a>
+<hr/>
+<h3>8. 债权人指控Optimum滥用反垄断法避免破产</h3>
+<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 6.5/10</p>
+<p><strong>📝 摘要</strong>: 债权人指控电信公司Optimum滥用反垄断法避免破产。Apollo、Ares和BlackRock寻求驳回电信公司的诉讼。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：债权人指控电信公司Optimum滥用反垄断法</li>
+<li>要点2：寻求驳回电信公司的诉讼</li>
+<li>要点3：涉及Apollo、Ares和BlackRock等投资机构</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/9dbb4e00-6d2b-4892-a944-db6d2447edae">Creditors accuse Optimum of ‘weaponising’ antitrust laws to avoid bankruptcy</a>
+<hr/>
+<h2>🔬 科技新闻 (8条)</h2>
+<p>精选 <strong>8</strong> 条科技新闻</p>
+<h3>1. 第二代AirTag：遗失物品追踪神器</h3>
+<p><strong>📌 来源</strong>: The Verge | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.4/10</p>
+<p><strong>📝 摘要</strong>: 苹果公司推出的第二代AirTag追踪器在争议中受到关注，尽管价格仅为29美元，但其作为物品追踪器的功能得到了进一步强化，引发消费者对iPad的讨论。专家认为，这一产品可能对追踪器市场产生重大影响，同时可能加剧苹果与iPad用户之间的分歧。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：苹果第二代AirTag追踪器价格为29美元</li>
+<li>要点2：产品功能强化引发消费者对iPad的讨论</li>
+<li>要点3：可能对追踪器市场产生重大影响</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.theverge.com/tech/875314/airtags-second-gen-review-item-tracker">The second-gen AirTags are a scatterbrain’s best friend</a>
+<hr/>
+<h3>2. 王慧文投资Clawdbot，AI应用赛道再起波澜</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 6.8/10</p>
+<p><strong>📝 摘要</strong>: 美团联合创始人王慧文投资Clawdbot，推动AI应用赛道发展。Clawdbot（现改名为“OpenClaw”）是一个能直接在本地设备运行的Agent框架，具有潜在的市场前景。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：王慧文投资Clawdbot，推动AI应用赛道发展</li>
+<li>要点2：Clawdbot是一个能直接在本地设备运行的Agent框架</li>
+<li>要点3：具有潜在的市场前景</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/p/3673532021105283?f=rss">王慧文“点将”Clawdbot，我们和一位「中国Clawdbot」创业者聊了聊</a>
+<hr/>
+<h3>3. 超级碗广告暗示AI泡沫即将破裂</h3>
+<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 6.8/10</p>
+<p><strong>📝 摘要</strong>: 超级碗广告暗示人工智能泡沫可能破裂，与2000年互联网泡沫类似。投资者需警惕AI领域的风险。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：超级碗广告暗示AI泡沫可能破裂</li>
+<li>要点2：与2000年互联网泡沫类似，投资者需警惕AI领域风险</li>
+<li>要点3：需关注AI领域的市场动态和投资风险</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/this-years-super-bowl-ads-tell-you-the-ai-bubble-is-about-to-burst-1357e5ae?mod=mw_rss_topstories">This year’s Super Bowl ads are telling you the AI bubble is about to burst</a>
+<hr/>
+<h3>4. Anker新型充电器屏幕实用但略显多余</h3>
+<p><strong>📌 来源</strong>: The Verge | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 6.5/10</p>
+<p><strong>📝 摘要</strong>: Anker推出的45瓦Nano充电器新增全彩屏幕，显示动画角色和充电设备详情。虽然屏幕偶尔有用，但专家认为这一功能略显多余，可能影响充电器的整体设计。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：Anker 45瓦Nano充电器新增全彩屏幕</li>
+<li>要点2：屏幕显示动画角色和充电设备详情</li>
+<li>要点3：专家认为屏幕功能略显多余</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.theverge.com/tech/873655/anker-nano-charger-smart-display-45w-folding-prongs">Anker’s new charger with a screen would feel less gimmicky if it did more</a>
+<hr/>
+<h3>5. GOG正在开发Linux原生支持</h3>
+<p><strong>📌 来源</strong>: The Verge | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 6.0/10</p>
+<p><strong>📝 摘要</strong>: GOG正在开发其桌面客户端的Linux原生支持。这一举措有助于扩大GOG在Linux用户中的影响力，对Linux游戏生态有一定推动作用。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：GOG正在开发Linux原生支持</li>
+<li>要点2：举措有助于扩大GOG在Linux用户中的影响力</li>
+<li>要点3：事件对Linux游戏生态有一定推动作用</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.theverge.com/tech/875425/gog-native-linux-support">GOG is already working on native Linux support</a>
+<hr/>
+<h3>6. 我回到Linux，这是一次错误</h3>
+<p><strong>📌 来源</strong>: The Verge | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 6.0/10</p>
+<p><strong>📝 摘要</strong>: 一位用户分享了他在使用Linux后感到失望的经历。这一分享可能对Linux用户和潜在用户产生一定影响，提醒他们使用Linux可能遇到的挑战。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：用户分享使用Linux后感到失望的经历</li>
+<li>要点2：分享内容可能对Linux用户和潜在用户产生一定影响</li>
+<li>要点3：事件提醒Linux用户可能遇到的挑战</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.theverge.com/report/875077/linux-was-a-mistake">I went back to Linux and it was a mistake</a>
+<hr/>
+<h3>7. Hacker News展示：简单HTML+CSS导航效果</h3>
+<p><strong>📌 来源</strong>: Hacker News | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 6.0/10</p>
+<p><strong>📝 摘要</strong>: Hacker News用户分享了一个简单的HTML+CSS导航效果，展示了前端开发的创意和技巧。这一分享对前端开发者具有一定的参考价值，有助于提高开发技能。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：Hacker News用户分享HTML+CSS导航效果，展示前端开发技巧</li>
+<li>要点2：分享对前端开发者具有参考价值，有助于技能提升</li>
+<li>要点3：分享内容对前端开发领域有一定影响</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://github.com/Momciloo/fun-with-clip-path">Show HN: I saw this cool navigation reveal, so I made a simple HTML+CSS version</a>
+<hr/>
+<h3>8. 我使用C语言编写游戏（是的，C语言）</h3>
+<p><strong>📌 来源</strong>: Hacker News | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 6.0/10</p>
+<p><strong>📝 摘要</strong>: 一位开发者分享了他在C语言中编写游戏的经验。这一分享对游戏开发者和编程爱好者具有一定的参考价值，有助于了解使用C语言进行游戏开发的可能性。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：开发者分享使用C语言编写游戏的经验</li>
+<li>要点2：分享内容对游戏开发者和编程爱好者有参考价值</li>
+<li>要点3：分享内容对游戏开发领域有一定影响</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://jonathanwhiting.com/writing/blog/games_in_c/">I write games in C (yes, C) (2016)</a>
+<hr/>
+<h2>🏛️ 社会政治 (10条)</h2>
+<p>精选 <strong>10</strong> 条社会政治新闻</p>
+<h3>1. 日本战后最短竞选期结束，首位女领导人当选</h3>
+<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.0/10</p>
+<p><strong>📝 摘要</strong>: 日本战后最短竞选期结束，首位女领导人当选。她的当选承诺变革，赢得广泛支持，对日本政治格局产生重要影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：日本战后最短竞选期结束，首位女领导人当选</li>
+<li>要点2：当选者承诺变革，赢得广泛支持</li>
+<li>要点3：对日本政治格局产生重要影响</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/1d6762c2-7bbf-4457-8799-2bcb694478e1">Japan goes to the polls after shortest campaign in postwar era</a>
+<hr/>
+<h3>2. 美国医疗体系面临完美风暴，预约医生将更加困难</h3>
+<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.0/10</p>
+<p><strong>📝 摘要</strong>: 美国医疗体系面临成本上升和保险覆盖率下降的双重压力，预约医生将变得更加困难。专家警告，这一趋势可能对公众健康产生严重影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：美国医疗体系面临成本上升和保险覆盖率下降</li>
+<li>要点2：预约医生将变得更加困难</li>
+<li>要点3：可能对公众健康产生严重影响</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/getting-a-doctors-appointment-will-become-even-harder-as-a-perfect-storm-hits-the-u-s-healthcare-system-58385587?mod=mw_rss_topstories">Getting a doctor’s appointment will become even harder as a perfect storm hits the U.S. healthcare system</a>
+<hr/>
+<h3>3. FDA计划打击非FDA批准的GLP-1药物</h3>
+<p><strong>📌 来源</strong>: Hacker News | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 6.9/10</p>
+<p><strong>📝 摘要</strong>: 美国食品药品监督管理局（FDA）计划打击非FDA批准的GLP-1药物，这一举措可能对医药行业产生重大影响。此举旨在保护患者安全，确保药物质量，对医药行业监管有重要意义。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：FDA计划打击非FDA批准的GLP-1药物</li>
+<li>要点2：可能对医药行业产生重大影响</li>
+<li>要点3：旨在保护患者安全，确保药物质量，对医药行业监管有重要意义</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.fda.gov/news-events/press-announcements/fda-intends-take-action-against-non-fda-approved-glp-1-drugs">FDA intends to take action against non-FDA-approved GLP-1 drugs</a>
+<hr/>
+<h3>4. NBA球星Giannis Antetokounmpo投资Kalshi</h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 6.9/10</p>
+<p><strong>📝 摘要</strong>: NBA球星Giannis Antetokounmpo成为Kalshi的首位NBA投资者，此举可能提升Kalshi在体育投资领域的知名度和影响力。专家认为，这标志着体育明星在投资领域的活跃度增加，对相关行业有积极推动作用。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：Giannis Antetokounmpo成为Kalshi首位NBA投资者</li>
+<li>要点2：可能提升Kalshi在体育投资领域的知名度和影响力</li>
+<li>要点3：体育明星投资活跃，推动相关行业发展</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/07/nba-star-giannis-antetokounmpo-joins-kalshi-as-an-investor/">NBA star Giannis Antetokounmpo joins Kalshi as an investor</a>
+<hr/>
+<h3>5. 纽约提议暂停新建数据中心</h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 6.9/10</p>
+<p><strong>📝 摘要</strong>: 纽约州提议暂停新建数据中心，这是继其他州之后又一地区对数据中心建设的限制。此举可能对数据中心行业产生一定影响，导致行业增速放缓。专家分析，这可能引发数据中心行业在选址、建设等方面的调整。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：纽约提议暂停新建数据中心，继其他州之后又一限制措施</li>
+<li>要点2：可能对数据中心行业产生一定影响，导致行业增速放缓</li>
+<li>要点3：引发数据中心行业在选址、建设等方面的调整</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/07/new-york-lawmakers-propose-a-three-year-pause-on-new-data-centers/">New York lawmakers propose a three-year pause on new data centers</a>
+<hr/>
+<h3>6. YouTube CEO将亮相超级碗</h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 6.8/10</p>
+<p><strong>📝 摘要</strong>: YouTube CEO Neal Mohan和苹果CEO Tim Cook预计将出席超级碗活动，这一事件可能对科技行业产生一定影响。活动预计将吸引大量观众，对相关公司品牌形象有正面作用。专家分析，这可能预示着科技行业在体育营销领域的进一步布局。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：YouTube CEO和苹果CEO将出席超级碗，预计吸引大量观众</li>
+<li>要点2：活动可能对科技行业产生正面影响，提升品牌形象</li>
+<li>要点3：预示科技行业在体育营销领域的进一步布局</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/07/the-kids-picked-last-in-gym-class-gear-up-for-super-bowl/">The kids ‘picked last in gym class’ gear up for Super Bowl</a>
+<hr/>
+<h3>7. 农历新年假期预计143万内地旅客访港</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 6.5/10</p>
+<p><strong>📝 摘要</strong>: 香港特区政府预计农历新年假期将有143万内地旅客访港，旅游市场迎来复苏。预计将有2200个旅行团入境香港，日均入境团数较去年明显增长。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：预计农历新年假期将有143万内地旅客访港</li>
+<li>要点2：预计将有2200个旅行团入境香港</li>
+<li>要点3：旅游市场迎来复苏</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3674003182592896?f=rss">农历新年假期预计143万内地旅客访港</a>
+<hr/>
+<h3>8. 华盛顿邮报总裁兼CEO Will Lewis辞职</h3>
+<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 6.5/10</p>
+<p><strong>📝 摘要</strong>: 华盛顿邮报总裁兼CEO Will Lewis因裁员争议辞职。他的任期充满争议，被指在亚马逊老板Jeff Bezos任命后未能成功转型。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：华盛顿邮报总裁兼CEO Will Lewis辞职</li>
+<li>要点2：因裁员争议，任期充满争议</li>
+<li>要点3：未能成功转型，被指在亚马逊老板Jeff Bezos任命后</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/5fa62c89-ebf2-4e2e-beb0-d09cfce22d81">Will Lewis steps down as Washington Post publisher and CEO after job cuts</a>
+<hr/>
+<h3>9. 医生短缺，如何找到好的医生？</h3>
+<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 6.0/10</p>
+<p><strong>📝 摘要</strong>: 医生短缺问题日益严重，消费者在寻找好的医生时面临挑战。专家建议，消费者可以通过多种渠道寻找合适的医生，包括医院推荐、同行评价等。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：医生短缺问题日益严重</li>
+<li>要点2：消费者在寻找好的医生时面临挑战</li>
+<li>要点3：专家建议通过多种渠道寻找合适的医生</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/what-can-you-do-if-your-doctor-retires-or-quits-d633bc9d?mod=mw_rss_topstories">There is a severe doctor shortage. How to find a good one.</a>
+<hr/>
+<h3>10. Cairn：攀登之旅，关于坚持与痴迷</h3>
+<p><strong>📌 来源</strong>: The Verge | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 6.0/10</p>
+<p><strong>📝 摘要</strong>: Cairn是一款关于攀登的软件，强调坚持和痴迷的重要性。尽管作者自认为不是优秀的攀岩者，但这款软件通过模拟攀登过程，帮助用户实现看似不可能的目标，引发对运动和人生目标的思考。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：Cairn是一款关于攀登的软件</li>
+<li>要点2：强调坚持和痴迷的重要性</li>
+<li>要点3：帮助用户实现看似不可能的目标</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.theverge.com/games/874914/cairn-review-pc-playstation-5">Cairn is a climbing journey about perseverance and obsession</a>
+<hr/>]]></content:encoded>
+    </item>
+    <item>
+        <title>2026年02月08日 新闻汇总</title>
+        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-08.md</link>
+        <description>本期精选 26 条高质量科技新闻</description>
+        <pubDate>Sun, 08 Feb 2026 02:04:49 GMT</pubDate>
+        <guid>archive/2026-02-08.md</guid>
+        <category>综合新闻</category>
+        <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
+<blockquote>🕐 更新时间: 2026年02月08日 10:04</blockquote>
+<blockquote>📊 本期精选 <strong>26</strong> 条高质量新闻</blockquote>
+<blockquote>🤖 由 AI 自动分类、筛选、翻译和总结</blockquote>
+<hr/>
+<h2>💰 财经新闻 (8条)</h2>
+<p>精选 <strong>8</strong> 条财经新闻</p>
+<h3>1. 比特币下跌，借加密货币贷款的投资者面临困境</h3>
+<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.3/10</p>
+<p><strong>📝 摘要</strong>: 比特币价格下跌，那些借加密货币贷款的投资者面临巨大压力。专家指出，这一事件可能对加密货币市场产生长期影响，并提醒投资者谨慎对待高风险投资。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：比特币价格下跌，借加密货币贷款的投资者面临困境</li>
+<li>要点2：可能对加密货币市场产生长期影响</li>
+<li>要点3：提醒投资者谨慎对待高风险投资</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/as-bitcoin-crashes-pity-those-wildly-enthusiastic-investors-who-borrowed-billions-against-crypto-794164bb?mod=mw_rss_topstories">After bitcoin’s fall, pity those wildly enthusiastic investors who borrowed billions against crypto</a>
+<hr/>
+<h3>2. 美国投资者分散投资，海外债券受关注</h3>
+<p><strong>📌 来源</strong>: CNBC | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.3/10</p>
+<p><strong>📝 摘要</strong>: 随着美国投资者分散投资，国际股票和海外债券受到关注。专家指出，这种趋势可能对全球债券市场产生重大影响，尤其是对于那些高度集中于国内资产的投资者。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：美国投资者分散投资至国际股票和海外债券</li>
+<li>要点2：可能对全球债券市场产生重大影响</li>
+<li>要点3：高度集中于国内资产的投资者需关注</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.cnbc.com/2026/02/07/sell-america-market-trade-fixed-income-international-bonds.html">As 'Sell America' trade volatility rages on, some of the biggest changes may be in your bonds</a>
+<hr/>
+<h3>3. 韩国交易所Bithumb误发440亿美元比特币</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 韩国加密货币交易所Bithumb误发440亿美元比特币，引发市场波动。交易所已追回99.7%的错发比特币，但事故暴露了虚拟资产的风险。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：Bithumb误发440亿美元比特币</li>
+<li>要点2：引发市场波动，比特币价格一度暴跌</li>
+<li>要点3：已追回99.7%的错发比特币，但事故暴露了虚拟资产风险</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765240">史诗级失误：韩国交易所“手滑”发出440亿美元比特币</a>
+<hr/>
+<h3>4. 中五五十岁购房，选择40万美元抵押贷款还是使用Roth IRA？</h3>
+<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.2/10</p>
+<p><strong>📝 摘要</strong>: 一位中五五十岁的消费者在购买房屋时面临选择，是使用40万美元的抵押贷款还是利用Roth IRA。专家建议，消费者应根据个人财务状况和未来规划做出决策。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：消费者面临40万美元抵押贷款或Roth IRA选择</li>
+<li>要点2：专家建议根据个人财务状况和未来规划决策</li>
+<li>要点3：涉及个人财务规划决策</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/i-love-being-debt-free-im-in-my-mid-50s-and-buying-a-house-do-i-take-out-a-400k-mortgage-or-use-my-roth-ira-c1aa3ef7?mod=mw_rss_topstories">‘I love being debt-free’: I’m in my mid-50s and buying a house. Do I take out a $400K mortgage or use my Roth IRA?</a>
+<hr/>
+<h3>5. NFL超级碗收视率创新高，未来比赛可能更贵</h3>
 <p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: 科技股波动，但部分公司未来几年可能实现销售增长。</p>
+<p><strong>📝 摘要</strong>: NFL超级碗收视率创新高，预计将推动比赛票价上涨。NFL赛季收视率连续36年保持增长，对广告商和电视网络具有吸引力。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>科技股波动</li>
-<li>部分公司销售增长</li>
-<li>未来几年增长</li>
+<li>要点1：NFL超级碗收视率创新高，达到36年来的最高水平</li>
+<li>要点2：高收视率预计将推动比赛票价上涨</li>
+<li>要点3：NFL赛季对广告商和电视网络具有吸引力</li>
 </ul>
-<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/tech-stocks-have-been-shaky-but-these-20-companies-could-still-see-rocketing-sales-growth-148195c9?mod=mw_rss_topstories">Tech stocks have been shaky, but these 20 companies could still see rocketing sales growth</a>
+<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/nfl-heads-into-super-bowl-after-season-of-record-ratings-paving-way-for-tv-rights-bonanza-bb8f897c?mod=mw_rss_topstories">The NFL heads into the Super Bowl after a season of record ratings. That could make games cost more to watch in the future.</a>
 <hr/>
-<h3>20. The AI boom is causing shortages everywhere else</h3>
-<p><strong>📌 来源</strong>: Hacker News | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: AI繁荣导致各行业人才短缺。</p>
+<h3>6. 美国退休最佳地盘点：全球最佳退休地榜单</h3>
+<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 6.5/10</p>
+<p><strong>📝 摘要</strong>: MarketWatch发布美国及全球最佳退休地榜单，分析不同地区的退休生活条件，为退休者提供参考。榜单基于气候、医疗、生活成本等因素评选，对退休规划有实际指导意义。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>AI行业人才短缺</li>
-<li>行业繁荣影响</li>
+<li>要点1：MarketWatch发布全球最佳退休地榜单，包含美国及全球地区</li>
+<li>要点2：榜单考虑气候、医疗、生活成本等因素，对退休者有指导意义</li>
+<li>要点3：榜单为退休者提供参考，有助于选择合适的退休地点</li>
 </ul>
-<strong>🔗 原文链接</strong>: <a href="https://www.washingtonpost.com/technology/2026/02/07/ai-spending-economy-shortages/">The AI boom is causing shortages everywhere else</a>
+<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/where-should-i-retire-how-to-use-all-those-best-places-lists-to-find-your-perfect-spot-ca4e8ea0?mod=mw_rss_topstories">Where’s the real ‘best place’ to retire? Tips to making those lists work for you.</a>
 <hr/>
-<h3>21. The Weight-Loss Price Wars Are Breaking Big Pharma’s Business Model</h3>
-<p><strong>📌 来源</strong>: WSJ 市场 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: GLP-1s价格下跌，迫使公司适应。</p>
+<h3>7. 投资者质疑是否还需持有金银</h3>
+<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 6.5/10</p>
+<p><strong>📝 摘要</strong>: 贵金属价格可能已触底，但市场仍面临考验。投资者对持有金银的需求产生疑问，需关注市场动态和全球经济形势。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>GLP-1s价格快速下跌</li>
-<li>公司被迫适应价格变化</li>
-<li>影响制药行业商业模式</li>
+<li>要点1：贵金属价格可能已触底，但市场仍面临考验</li>
+<li>要点2：投资者对持有金银的需求产生疑问</li>
+<li>要点3：需关注市场动态和全球经济形势</li>
 </ul>
-<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/health/pharma/the-weight-loss-price-wars-are-breaking-big-pharmas-business-model-53446a58?mod=rss_markets_main">The Weight-Loss Price Wars Are Breaking Big Pharma’s Business Model</a>
+<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/investors-are-asking-if-they-need-to-own-gold-and-silver-at-all-d46ac11e?mod=mw_rss_topstories">Investors are asking if they need to own gold and silver at all</a>
 <hr/>
-<h3>22. 乘联分会崔东树：2025年全国二手车累计交易量2011万台，同比增2.5%</h3>
-<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: 2025年全国二手车累计交易量2011万台，同比增2.5%，交易额12898亿元，增0.4%。</p>
+<h3>8. 债权人指控Optimum滥用反垄断法避免破产</h3>
+<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 6.5/10</p>
+<p><strong>📝 摘要</strong>: 债权人指控电信公司Optimum滥用反垄断法避免破产。Apollo、Ares和BlackRock寻求驳回电信公司的诉讼。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>2025年二手车交易量2011万台</li>
-<li>同比增2.5%</li>
-<li>交易额12898亿元，增0.4%</li>
+<li>要点1：债权人指控电信公司Optimum滥用反垄断法</li>
+<li>要点2：寻求驳回电信公司的诉讼</li>
+<li>要点3：涉及Apollo、Ares和BlackRock等投资机构</li>
 </ul>
-<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3672946537833097?f=rss">乘联分会崔东树：2025年全国二手车累计交易量2011万台，同比增2.5%</a>
+<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/9dbb4e00-6d2b-4892-a944-db6d2447edae">Creditors accuse Optimum of ‘weaponising’ antitrust laws to avoid bankruptcy</a>
 <hr/>
-<h2>🔬 科技新闻 (4条)</h2>
-<p>精选 <strong>4</strong> 条科技新闻</p>
-<h3>1. 钙钛矿GW级产能爆发，产业链上有哪些机会？</h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.6/10</p>
-<p><strong>📝 摘要</strong>: 钙钛矿光伏产能爆发，预计2027年全球产能超5GW，2030年突破30GW。</p>
+<h2>🔬 科技新闻 (8条)</h2>
+<p>精选 <strong>8</strong> 条科技新闻</p>
+<h3>1. 第二代AirTag：遗失物品追踪神器</h3>
+<p><strong>📌 来源</strong>: The Verge | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.4/10</p>
+<p><strong>📝 摘要</strong>: 苹果公司推出的第二代AirTag追踪器在争议中受到关注，尽管价格仅为29美元，但其作为物品追踪器的功能得到了进一步强化，引发消费者对iPad的讨论。专家认为，这一产品可能对追踪器市场产生重大影响，同时可能加剧苹果与iPad用户之间的分歧。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>钙钛矿成为光伏市场新破局者</li>
-<li>2025年钙钛矿GW级量产元年，产能爆发期到来</li>
-<li>国内单结钙钛矿实验室效率达27.3%，叠层电池突破35.0%</li>
+<li>要点1：苹果第二代AirTag追踪器价格为29美元</li>
+<li>要点2：产品功能强化引发消费者对iPad的讨论</li>
+<li>要点3：可能对追踪器市场产生重大影响</li>
 </ul>
-<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765229">钙钛矿GW级产能爆发，产业链上有哪些机会？</a>
+<strong>🔗 原文链接</strong>: <a href="https://www.theverge.com/tech/875314/airtags-second-gen-review-item-tracker">The second-gen AirTags are a scatterbrain’s best friend</a>
 <hr/>
-<h3>2. 百年康宁华丽转身：光纤终结二十年亏损，抱上Meta大腿成AI新贵！</h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.6/10</p>
-<p><strong>📝 摘要</strong>: 康宁光纤业务成为AI数据中心建设关键受益者，与Meta签订60亿美元光纤供应协议。</p>
+<h3>2. 王慧文投资Clawdbot，AI应用赛道再起波澜</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 6.8/10</p>
+<p><strong>📝 摘要</strong>: 美团联合创始人王慧文投资Clawdbot，推动AI应用赛道发展。Clawdbot（现改名为“OpenClaw”）是一个能直接在本地设备运行的Agent框架，具有潜在的市场前景。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>康宁光纤业务成为AI数据中心建设关键受益者</li>
-<li>与Meta签订60亿美元光纤供应协议</li>
-<li>光子传输数据效率高，成为首选</li>
+<li>要点1：王慧文投资Clawdbot，推动AI应用赛道发展</li>
+<li>要点2：Clawdbot是一个能直接在本地设备运行的Agent框架</li>
+<li>要点3：具有潜在的市场前景</li>
 </ul>
-<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765225">百年康宁华丽转身：光纤终结二十年亏损，抱上Meta大腿成AI新贵！</a>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/p/3673532021105283?f=rss">王慧文“点将”Clawdbot，我们和一位「中国Clawdbot」创业者聊了聊</a>
 <hr/>
-<h3>3. China Is Going All-In to Beat the U.S. on Humanoid Robots</h3>
-<p><strong>📌 来源</strong>: WSJ 经济 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.2/10</p>
-<p><strong>📝 摘要</strong>: Elon Musk警告特斯拉人形机器人可能主要属于中国。</p>
+<h3>3. 超级碗广告暗示AI泡沫即将破裂</h3>
+<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 6.8/10</p>
+<p><strong>📝 摘要</strong>: 超级碗广告暗示人工智能泡沫可能破裂，与2000年互联网泡沫类似。投资者需警惕AI领域的风险。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>Elon Musk警告特斯拉人形机器人可能属于中国</li>
-<li>特斯拉人形机器人可能革命世界</li>
-<li>Elon Musk对投资者发表言论</li>
+<li>要点1：超级碗广告暗示AI泡沫可能破裂</li>
+<li>要点2：与2000年互联网泡沫类似，投资者需警惕AI领域风险</li>
+<li>要点3：需关注AI领域的市场动态和投资风险</li>
 </ul>
-<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/tech/china-is-going-all-in-to-beat-the-u-s-on-humanoid-robots-b9c434d2?mod=pls_whats_news_us_business_f">China Is Going All-In to Beat the U.S. on Humanoid Robots</a>
+<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/this-years-super-bowl-ads-tell-you-the-ai-bubble-is-about-to-burst-1357e5ae?mod=mw_rss_topstories">This year’s Super Bowl ads are telling you the AI bubble is about to burst</a>
 <hr/>
-<h3>4. Reinforcement Learning from Human Feedback</h3>
-<p><strong>📌 来源</strong>: Hacker News | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: 研究从人类反馈中进行强化学习。</p>
+<h3>4. Anker新型充电器屏幕实用但略显多余</h3>
+<p><strong>📌 来源</strong>: The Verge | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 6.5/10</p>
+<p><strong>📝 摘要</strong>: Anker推出的45瓦Nano充电器新增全彩屏幕，显示动画角色和充电设备详情。虽然屏幕偶尔有用，但专家认为这一功能略显多余，可能影响充电器的整体设计。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>强化学习研究</li>
-<li>人类反馈应用</li>
+<li>要点1：Anker 45瓦Nano充电器新增全彩屏幕</li>
+<li>要点2：屏幕显示动画角色和充电设备详情</li>
+<li>要点3：专家认为屏幕功能略显多余</li>
 </ul>
-<strong>🔗 原文链接</strong>: <a href="https://arxiv.org/abs/2504.12501">Reinforcement Learning from Human Feedback</a>
+<strong>🔗 原文链接</strong>: <a href="https://www.theverge.com/tech/873655/anker-nano-charger-smart-display-45w-folding-prongs">Anker’s new charger with a screen would feel less gimmicky if it did more</a>
 <hr/>
-<h2>🏛️ 社会政治 (4条)</h2>
-<p>精选 <strong>4</strong> 条社会政治新闻</p>
-<h3>1. 特斯拉计划在中国市场加大AI软硬件和能源领域投入</h3>
-<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 8.0/10</p>
-<p><strong>📝 摘要</strong>: 特斯拉计划2026年在中国加大AI软硬件和能源领域投入，预计资本支出超过200亿美元，重点投向AI算力、机器人工厂等领域。</p>
+<h3>5. GOG正在开发Linux原生支持</h3>
+<p><strong>📌 来源</strong>: The Verge | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 6.0/10</p>
+<p><strong>📝 摘要</strong>: GOG正在开发其桌面客户端的Linux原生支持。这一举措有助于扩大GOG在Linux用户中的影响力，对Linux游戏生态有一定推动作用。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>特斯拉2026年资本支出超200亿美元</li>
-<li>重点投向AI算力、机器人工厂</li>
-<li>上海储能超级工厂提供储能电池Megapack产品</li>
+<li>要点1：GOG正在开发Linux原生支持</li>
+<li>要点2：举措有助于扩大GOG在Linux用户中的影响力</li>
+<li>要点3：事件对Linux游戏生态有一定推动作用</li>
 </ul>
-<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3672947337110152?f=rss">特斯拉计划在中国市场加大AI软硬件和能源领域投入</a>
+<strong>🔗 原文链接</strong>: <a href="https://www.theverge.com/tech/875425/gog-native-linux-support">GOG is already working on native Linux support</a>
 <hr/>
-<h3>2. 泽连斯基：美方希望俄乌在6月前达成和平协议</h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.8/10</p>
-<p><strong>📝 摘要</strong>: 乌克兰总统表示，美国推动俄乌双方在6月前达成和平协议，预计将在约一周后举行下一轮和平谈判。</p>
+<h3>6. 我回到Linux，这是一次错误</h3>
+<p><strong>📌 来源</strong>: The Verge | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 6.0/10</p>
+<p><strong>📝 摘要</strong>: 一位用户分享了他在使用Linux后感到失望的经历。这一分享可能对Linux用户和潜在用户产生一定影响，提醒他们使用Linux可能遇到的挑战。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>泽连斯基表示美国希望俄乌6月前达成和平协议</li>
-<li>预计在约一周后举行下一轮和平谈判</li>
-<li>俄乌冲突持续，对地区安全造成严重影响</li>
+<li>要点1：用户分享使用Linux后感到失望的经历</li>
+<li>要点2：分享内容可能对Linux用户和潜在用户产生一定影响</li>
+<li>要点3：事件提醒Linux用户可能遇到的挑战</li>
 </ul>
-<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765234">泽连斯基：美方希望俄乌在6月前达成和平协议</a>
+<strong>🔗 原文链接</strong>: <a href="https://www.theverge.com/report/875077/linux-was-a-mistake">I went back to Linux and it was a mistake</a>
 <hr/>
-<h3>3. Trump is pushing to end war in Ukraine by June, Zelenskyy says</h3>
-<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.8/10</p>
-<p><strong>📝 摘要</strong>: 乌克兰总统表示，美国推动俄乌双方在6月前达成和平协议，预计将在迈阿密举行三方和平谈判。</p>
+<h3>7. Hacker News展示：简单HTML+CSS导航效果</h3>
+<p><strong>📌 来源</strong>: Hacker News | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 6.0/10</p>
+<p><strong>📝 摘要</strong>: Hacker News用户分享了一个简单的HTML+CSS导航效果，展示了前端开发的创意和技巧。这一分享对前端开发者具有一定的参考价值，有助于提高开发技能。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>泽连斯基表示美国希望俄乌6月前达成和平协议</li>
-<li>预计在迈阿密举行三方和平谈判</li>
-<li>俄乌冲突持续，对地区安全造成严重影响</li>
+<li>要点1：Hacker News用户分享HTML+CSS导航效果，展示前端开发技巧</li>
+<li>要点2：分享对前端开发者具有参考价值，有助于技能提升</li>
+<li>要点3：分享内容对前端开发领域有一定影响</li>
 </ul>
-<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/ccc11b61-500c-4514-ba5b-fe67b592137f">Trump is pushing to end war in Ukraine by June, Zelenskyy says</a>
+<strong>🔗 原文链接</strong>: <a href="https://github.com/Momciloo/fun-with-clip-path">Show HN: I saw this cool navigation reveal, so I made a simple HTML+CSS version</a>
 <hr/>
-<h3>4. Putin isn’t really winning. Europe needs to make that clear</h3>
-<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.6/10</p>
-<p><strong>📝 摘要</strong>: 普京在乌克兰战争中并非真正获胜，欧洲需要明确这一点。</p>
+<h3>8. 我使用C语言编写游戏（是的，C语言）</h3>
+<p><strong>📌 来源</strong>: Hacker News | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 6.0/10</p>
+<p><strong>📝 摘要</strong>: 一位开发者分享了他在C语言中编写游戏的经验。这一分享对游戏开发者和编程爱好者具有一定的参考价值，有助于了解使用C语言进行游戏开发的可能性。</p>
 <p><strong>💡 关键要点</strong>:</p>
 <ul>
-<li>普京在乌克兰战争中</li>
-<li>并非真正获胜</li>
-<li>欧洲需要明确</li>
+<li>要点1：开发者分享使用C语言编写游戏的经验</li>
+<li>要点2：分享内容对游戏开发者和编程爱好者有参考价值</li>
+<li>要点3：分享内容对游戏开发领域有一定影响</li>
 </ul>
-<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/36b57cc3-9488-41fd-aba8-a1cf50e0336e">Putin isn’t really winning. Europe needs to make that clear</a>
+<strong>🔗 原文链接</strong>: <a href="https://jonathanwhiting.com/writing/blog/games_in_c/">I write games in C (yes, C) (2016)</a>
+<hr/>
+<h2>🏛️ 社会政治 (10条)</h2>
+<p>精选 <strong>10</strong> 条社会政治新闻</p>
+<h3>1. 日本战后最短竞选期结束，首位女领导人当选</h3>
+<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.0/10</p>
+<p><strong>📝 摘要</strong>: 日本战后最短竞选期结束，首位女领导人当选。她的当选承诺变革，赢得广泛支持，对日本政治格局产生重要影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：日本战后最短竞选期结束，首位女领导人当选</li>
+<li>要点2：当选者承诺变革，赢得广泛支持</li>
+<li>要点3：对日本政治格局产生重要影响</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/1d6762c2-7bbf-4457-8799-2bcb694478e1">Japan goes to the polls after shortest campaign in postwar era</a>
+<hr/>
+<h3>2. 美国医疗体系面临完美风暴，预约医生将更加困难</h3>
+<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.0/10</p>
+<p><strong>📝 摘要</strong>: 美国医疗体系面临成本上升和保险覆盖率下降的双重压力，预约医生将变得更加困难。专家警告，这一趋势可能对公众健康产生严重影响。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：美国医疗体系面临成本上升和保险覆盖率下降</li>
+<li>要点2：预约医生将变得更加困难</li>
+<li>要点3：可能对公众健康产生严重影响</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/getting-a-doctors-appointment-will-become-even-harder-as-a-perfect-storm-hits-the-u-s-healthcare-system-58385587?mod=mw_rss_topstories">Getting a doctor’s appointment will become even harder as a perfect storm hits the U.S. healthcare system</a>
+<hr/>
+<h3>3. FDA计划打击非FDA批准的GLP-1药物</h3>
+<p><strong>📌 来源</strong>: Hacker News | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 6.9/10</p>
+<p><strong>📝 摘要</strong>: 美国食品药品监督管理局（FDA）计划打击非FDA批准的GLP-1药物，这一举措可能对医药行业产生重大影响。此举旨在保护患者安全，确保药物质量，对医药行业监管有重要意义。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：FDA计划打击非FDA批准的GLP-1药物</li>
+<li>要点2：可能对医药行业产生重大影响</li>
+<li>要点3：旨在保护患者安全，确保药物质量，对医药行业监管有重要意义</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.fda.gov/news-events/press-announcements/fda-intends-take-action-against-non-fda-approved-glp-1-drugs">FDA intends to take action against non-FDA-approved GLP-1 drugs</a>
+<hr/>
+<h3>4. NBA球星Giannis Antetokounmpo投资Kalshi</h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 6.9/10</p>
+<p><strong>📝 摘要</strong>: NBA球星Giannis Antetokounmpo成为Kalshi的首位NBA投资者，此举可能提升Kalshi在体育投资领域的知名度和影响力。专家认为，这标志着体育明星在投资领域的活跃度增加，对相关行业有积极推动作用。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：Giannis Antetokounmpo成为Kalshi首位NBA投资者</li>
+<li>要点2：可能提升Kalshi在体育投资领域的知名度和影响力</li>
+<li>要点3：体育明星投资活跃，推动相关行业发展</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/07/nba-star-giannis-antetokounmpo-joins-kalshi-as-an-investor/">NBA star Giannis Antetokounmpo joins Kalshi as an investor</a>
+<hr/>
+<h3>5. 纽约提议暂停新建数据中心</h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 6.9/10</p>
+<p><strong>📝 摘要</strong>: 纽约州提议暂停新建数据中心，这是继其他州之后又一地区对数据中心建设的限制。此举可能对数据中心行业产生一定影响，导致行业增速放缓。专家分析，这可能引发数据中心行业在选址、建设等方面的调整。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：纽约提议暂停新建数据中心，继其他州之后又一限制措施</li>
+<li>要点2：可能对数据中心行业产生一定影响，导致行业增速放缓</li>
+<li>要点3：引发数据中心行业在选址、建设等方面的调整</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/07/new-york-lawmakers-propose-a-three-year-pause-on-new-data-centers/">New York lawmakers propose a three-year pause on new data centers</a>
+<hr/>
+<h3>6. YouTube CEO将亮相超级碗</h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 6.8/10</p>
+<p><strong>📝 摘要</strong>: YouTube CEO Neal Mohan和苹果CEO Tim Cook预计将出席超级碗活动，这一事件可能对科技行业产生一定影响。活动预计将吸引大量观众，对相关公司品牌形象有正面作用。专家分析，这可能预示着科技行业在体育营销领域的进一步布局。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：YouTube CEO和苹果CEO将出席超级碗，预计吸引大量观众</li>
+<li>要点2：活动可能对科技行业产生正面影响，提升品牌形象</li>
+<li>要点3：预示科技行业在体育营销领域的进一步布局</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/07/the-kids-picked-last-in-gym-class-gear-up-for-super-bowl/">The kids ‘picked last in gym class’ gear up for Super Bowl</a>
+<hr/>
+<h3>7. 农历新年假期预计143万内地旅客访港</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 6.5/10</p>
+<p><strong>📝 摘要</strong>: 香港特区政府预计农历新年假期将有143万内地旅客访港，旅游市场迎来复苏。预计将有2200个旅行团入境香港，日均入境团数较去年明显增长。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：预计农历新年假期将有143万内地旅客访港</li>
+<li>要点2：预计将有2200个旅行团入境香港</li>
+<li>要点3：旅游市场迎来复苏</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3674003182592896?f=rss">农历新年假期预计143万内地旅客访港</a>
+<hr/>
+<h3>8. 华盛顿邮报总裁兼CEO Will Lewis辞职</h3>
+<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 6.5/10</p>
+<p><strong>📝 摘要</strong>: 华盛顿邮报总裁兼CEO Will Lewis因裁员争议辞职。他的任期充满争议，被指在亚马逊老板Jeff Bezos任命后未能成功转型。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：华盛顿邮报总裁兼CEO Will Lewis辞职</li>
+<li>要点2：因裁员争议，任期充满争议</li>
+<li>要点3：未能成功转型，被指在亚马逊老板Jeff Bezos任命后</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/5fa62c89-ebf2-4e2e-beb0-d09cfce22d81">Will Lewis steps down as Washington Post publisher and CEO after job cuts</a>
+<hr/>
+<h3>9. 医生短缺，如何找到好的医生？</h3>
+<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 6.0/10</p>
+<p><strong>📝 摘要</strong>: 医生短缺问题日益严重，消费者在寻找好的医生时面临挑战。专家建议，消费者可以通过多种渠道寻找合适的医生，包括医院推荐、同行评价等。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：医生短缺问题日益严重</li>
+<li>要点2：消费者在寻找好的医生时面临挑战</li>
+<li>要点3：专家建议通过多种渠道寻找合适的医生</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/what-can-you-do-if-your-doctor-retires-or-quits-d633bc9d?mod=mw_rss_topstories">There is a severe doctor shortage. How to find a good one.</a>
+<hr/>
+<h3>10. Cairn：攀登之旅，关于坚持与痴迷</h3>
+<p><strong>📌 来源</strong>: The Verge | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 6.0/10</p>
+<p><strong>📝 摘要</strong>: Cairn是一款关于攀登的软件，强调坚持和痴迷的重要性。尽管作者自认为不是优秀的攀岩者，但这款软件通过模拟攀登过程，帮助用户实现看似不可能的目标，引发对运动和人生目标的思考。</p>
+<p><strong>💡 关键要点</strong>:</p>
+<ul>
+<li>要点1：Cairn是一款关于攀登的软件</li>
+<li>要点2：强调坚持和痴迷的重要性</li>
+<li>要点3：帮助用户实现看似不可能的目标</li>
+</ul>
+<strong>🔗 原文链接</strong>: <a href="https://www.theverge.com/games/874914/cairn-review-pc-playstation-5">Cairn is a climbing journey about perseverance and obsession</a>
 <hr/>]]></content:encoded>
     </item>
     <item>
         <title>2026年02月07日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-07.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Sat, 07 Feb 2026 13:52:33 GMT</pubDate>
+        <pubDate>Sun, 08 Feb 2026 02:01:49 GMT</pubDate>
         <guid>archive/2026-02-07.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -650,7 +915,7 @@
         <title>2026年02月06日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-06.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Sat, 07 Feb 2026 13:50:00 GMT</pubDate>
+        <pubDate>Sun, 08 Feb 2026 02:01:49 GMT</pubDate>
         <guid>archive/2026-02-06.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -857,7 +1122,7 @@
         <title>2026年02月05日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-05.md</link>
         <description>本期精选 11 条高质量科技新闻</description>
-        <pubDate>Sat, 07 Feb 2026 13:50:00 GMT</pubDate>
+        <pubDate>Sun, 08 Feb 2026 02:01:49 GMT</pubDate>
         <guid>archive/2026-02-05.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1001,7 +1266,7 @@
         <title>2026年02月04日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-04.md</link>
         <description>本期精选 0 条高质量科技新闻</description>
-        <pubDate>Sat, 07 Feb 2026 13:50:00 GMT</pubDate>
+        <pubDate>Sun, 08 Feb 2026 02:01:49 GMT</pubDate>
         <guid>archive/2026-02-04.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1023,7 +1288,7 @@
         <title>2026年02月03日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-03.md</link>
         <description>本期精选 10 条高质量科技新闻</description>
-        <pubDate>Sat, 07 Feb 2026 13:50:00 GMT</pubDate>
+        <pubDate>Sun, 08 Feb 2026 02:01:49 GMT</pubDate>
         <guid>archive/2026-02-03.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1154,7 +1419,7 @@
         <title>2026年02月02日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-02.md</link>
         <description>本期精选 0 条高质量科技新闻</description>
-        <pubDate>Sat, 07 Feb 2026 13:50:00 GMT</pubDate>
+        <pubDate>Sun, 08 Feb 2026 02:01:49 GMT</pubDate>
         <guid>archive/2026-02-02.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h3>1. KKR 领导集团即将以超过 100 亿美元的价格收购新加坡数据中心公司</h3>
@@ -1453,7 +1718,7 @@
         <title>2026年02月01日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-01.md</link>
         <description>本期精选 16 条高质量科技新闻</description>
-        <pubDate>Sat, 07 Feb 2026 13:50:00 GMT</pubDate>
+        <pubDate>Sun, 08 Feb 2026 02:01:49 GMT</pubDate>
         <guid>archive/2026-02-01.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1655,7 +1920,7 @@
         <title>2026年01月31日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-01-31.md</link>
         <description>本期精选 5 条高质量科技新闻</description>
-        <pubDate>Sat, 07 Feb 2026 13:50:00 GMT</pubDate>
+        <pubDate>Sun, 08 Feb 2026 02:01:49 GMT</pubDate>
         <guid>archive/2026-01-31.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 科技新闻精选</h1>
