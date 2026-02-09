@@ -28,15 +28,50 @@ class BatchProvider:
         if not self.provider_config:
             raise ValueError(f"未找到提供商配置: {config.provider}")
 
-        self.client = AsyncOpenAI(
+        # 主提供商客户端
+        self._client = AsyncOpenAI(
             api_key=self.provider_config.api_key,
             base_url=self.provider_config.base_url
         )
         self.model = self.provider_config.model
         self.api_call_count = 0
         self._prompt_engine = None  # 延迟加载PromptEngine
+        
+        # Fallback 客户端缓存
+        self._fallback_clients: dict[str, AsyncOpenAI] = {}
 
         logger.info(f"BatchProvider初始化: {self.provider_name} ({self.model})")
+
+    @property
+    def client(self) -> AsyncOpenAI:
+        """获取主提供商客户端"""
+        return self._client
+
+    def _get_fallback_client(self, provider_name: str) -> AsyncOpenAI:
+        """
+        获取或创建 fallback 客户端（带缓存）
+        
+        Args:
+            provider_name: 提供商名称
+            
+        Returns:
+            AsyncOpenAI 客户端实例
+            
+        Raises:
+            ValueError: 如果提供商配置不存在
+        """
+        if provider_name not in self._fallback_clients:
+            config = self.config.providers_config.get(provider_name)
+            if not config:
+                raise ValueError(f"未找到 fallback 提供商配置: {provider_name}")
+            
+            self._fallback_clients[provider_name] = AsyncOpenAI(
+                api_key=config.api_key,
+                base_url=config.base_url
+            )
+            logger.debug(f"创建 fallback 客户端: {provider_name}")
+        
+        return self._fallback_clients[provider_name]
 
     @property
     def prompt_engine(self):
@@ -213,109 +248,6 @@ class BatchProvider:
 
         raise Exception("所有提供商均失败")
 
-    async def _call_single_with_gemini(
-        self,
-        item: NewsItem,
-        prompt_template: str
-    ) -> dict:
-        """
-        使用Gemini单条处理新闻
-        
-        当批次触发内容过滤时，使用gemini逐条处理
-        
-        Args:
-            item: 新闻项
-            prompt_template: 原始prompt模板
-            
-        Returns:
-            dict: 评分结果
-        """
-        if "gemini" not in self.config.providers_config:
-            logger.error("Gemini未配置，无法进行单条fallback")
-            raise ContentFilterError("Gemini未配置", provider="gemini")
-        
-        gemini_config = self.config.providers_config["gemini"]
-        gemini_client = AsyncOpenAI(
-            api_key=gemini_config.api_key,
-            base_url=gemini_config.base_url
-        )
-        
-        # 构建单条新闻的prompt
-        max_summary_len = getattr(self.config, 'max_summary_length', 300)
-        summary = item.summary[:max_summary_len] if item.summary else "无摘要"
-        single_prompt = f"""请对以下新闻进行专业评估。
-
-【新闻】
-标题: {item.title}
-来源: {item.source}
-摘要: {summary}
-
-{prompt_template}
-
-【输出格式】JSON对象：
-{{
-  "category": "财经|科技|社会政治",
-  "category_confidence": 0.95,
-  "importance": 8,
-  "timeliness": 9,
-  "technical_depth": 7,
-  "audience_breadth": 6,
-  "practicality": 7,
-  "total_score": 7.5,
-  "summary": "中文总结..."
-}}"""
-        
-        messages = [
-            {"role": "system", "content": self.SYSTEM_PROMPT},
-            {"role": "user", "content": single_prompt}
-        ]
-        
-        try:
-            response = await asyncio.wait_for(
-                gemini_client.chat.completions.create(
-                    model=gemini_config.model,
-                    messages=messages,
-                    max_tokens=gemini_config.max_tokens,
-                    temperature=gemini_config.temperature,
-                    response_format={"type": "json_object"}
-                ),
-                timeout=self.config.timeout_seconds
-            )
-
-            content = response.choices[0].message.content
-            result = json.loads(content)
-
-            # 处理Gemini返回数组的情况（当response_format为json_object时，有时返回[{...}])
-            if isinstance(result, list):
-                if len(result) > 0 and isinstance(result[0], dict):
-                    result = result[0]
-                else:
-                    raise ValueError(f"Unexpected list format in response: {result}")
-            elif not isinstance(result, dict):
-                raise ValueError(f"Unexpected response type: {type(result)}, content: {content[:200]}")
-
-            logger.debug(f"Gemini单条处理成功: {item.id}")
-
-            # 标准化返回格式，添加news_index
-            result["news_index"] = 1
-            return result
-
-        except (json.JSONDecodeError, Exception) as e:
-            logger.warning(f"Gemini单条处理失败 {item.id}: {e}")
-            # 返回默认低分结果
-            return {
-                "news_index": 1,
-                "category": "社会政治",
-                "category_confidence": 0.5,
-                "importance": 3,
-                "timeliness": 3,
-                "technical_depth": 3,
-                "audience_breadth": 3,
-                "practicality": 3,
-                "total_score": 3.0,
-                "summary": f"Gemini处理失败: {str(e)[:50]}"
-            }
-
     def _get_sub_batch_size(self, original_size: int) -> int:
         """根据fallback链动态计算子批次大小
         
@@ -488,52 +420,32 @@ class BatchProvider:
         # 返回JSON字符串格式
         return json.dumps({"results": all_results})
 
-    async def _fallback_batch_with_gemini(
+    def _create_default_results_response(
         self,
         items: List[NewsItem],
-        prompt_template: str
+        reason: str = "处理失败"
     ) -> str:
         """
-        使用Gemini逐条处理整个批次
+        创建默认分数响应
         
-        Args:
-            items: 新闻批次
-            prompt_template: 评分标准说明
-            
-        Returns:
-            str: JSON数组字符串
+        当所有处理方式都失败时，返回默认低分结果
         """
-        logger.info(f"开始使用Gemini逐条处理 {len(items)} 条新闻")
-        
         results = []
         for idx, item in enumerate(items, 1):
-            try:
-                result = await self._call_single_with_gemini(
-                    item, prompt_template
-                )
-                # 更新news_index为实际索引
-                result["news_index"] = idx
-                results.append(result)
-                logger.debug(f"Gemini处理进度: {idx}/{len(items)}")
-            except Exception as e:
-                logger.error(f"Gemini处理单条失败 {item.id}: {e}")
-                # 添加默认结果
-                results.append({
-                    "news_index": idx,
-                    "category": "社会政治",
-                    "category_confidence": 0.5,
-                    "importance": 3,
-                    "timeliness": 3,
-                    "technical_depth": 3,
-                    "audience_breadth": 3,
-                    "practicality": 3,
-                    "total_score": 3.0,
-                    "summary": "处理失败给予默认分"
-                })
+            results.append({
+                "news_index": idx,
+                "chinese_title": item.title,
+                "category": "社会政治",
+                "category_confidence": 0.5,
+                "importance": 3,
+                "timeliness": 3,
+                "technical_depth": 3,
+                "audience_breadth": 3,
+                "practicality": 3,
+                "total_score": 3.0,
+                "summary": f"[{reason}: 使用默认分数]"
+            })
         
-        logger.info(f"Gemini逐条处理完成: {len(results)} 条")
-        
-        # 返回JSON数组字符串
         return json.dumps({"results": results})
 
     async def call_batch_api_with_fallback(
@@ -545,12 +457,18 @@ class BatchProvider:
         temperature: Optional[float] = None
     ) -> str:
         """
-        调用批量API，支持内容过滤fallback到Gemini单条处理
+        调用批量API，支持fallback处理
+        
+        简化流程:
+        1. 尝试主提供商批量调用
+        2. 失败 ContentFilterError → 拆小批次重试
+        3. 子批次失败 → 使用call_with_fallback批量调用fallback链
+        4. 所有fallback失败 → 返回默认分数
         
         Args:
             prompt: 完整prompt（包含所有新闻）
             items: 新闻项列表
-            prompt_template: 评分标准说明（用于单条fallback）
+            prompt_template: 评分标准说明（用于fallback）
             max_tokens: 最大token数
             temperature: 温度参数
             
@@ -558,7 +476,7 @@ class BatchProvider:
             str: API响应或fallback结果的JSON字符串
         """
         try:
-            # 首先尝试正常批次调用
+            # 1. 首先尝试正常批次调用
             logger.debug(f"尝试主提供商批次调用: {self.provider_name}")
             return await self.call_batch_api(prompt, max_tokens, temperature)
             
@@ -569,37 +487,45 @@ class BatchProvider:
                 f"(错误码: {e.error_code})，尝试批次细分重试"
             )
 
-            # 策略1: 先尝试减小批次规模重试
+            # 2. 尝试减小批次规模重试
             if len(items) > self.config.min_batch_size_for_subdivision:
                 try:
                     return await self._retry_with_smaller_batches(
                         items, prompt_template, max_tokens, temperature
                     )
                 except Exception as retry_error:
-                    logger.warning(f"批次细分重试失败: {retry_error}，切换到Gemini")
+                    logger.warning(f"批次细分重试失败: {retry_error}")
             else:
-                logger.info(f"批次已较小(≤{self.config.min_batch_size_for_subdivision}条)，直接切换到Gemini处理")
+                logger.info(f"批次已较小(≤{self.config.min_batch_size_for_subdivision}条)，尝试fallback提供商")
 
-            # 提取prompt中的评分标准说明
-            if prompt_template is None:
-                # 从原始prompt中提取评分标准部分
-                prompt_template = self._extract_scoring_criteria(prompt)
-
-            # 使用Gemini逐条处理（带速率限制）
-            return await self._fallback_batch_with_gemini(items, prompt_template)
+            # 3. 尝试fallback链（批量调用）
+            try:
+                logger.info("尝试fallback提供商批量调用")
+                return await self.call_with_fallback(prompt, max_tokens, temperature)
+            except Exception as fallback_error:
+                logger.error(f"所有fallback提供商均失败: {fallback_error}")
+                # 4. 返回默认分数
+                return self._create_default_results_response(
+                    items, 
+                    "内容过滤且所有fallback失败"
+                )
             
         except Exception as e:
             # 检查是否为内容过滤错误
             if self._is_content_filter_error(e):
                 logger.warning(
                     f"主提供商 {self.provider_name} 触发内容过滤，"
-                    f"切换到Gemini单条处理: {str(e)[:100]}"
+                    f"尝试fallback提供商: {str(e)[:100]}"
                 )
                 
-                if prompt_template is None:
-                    prompt_template = self._extract_scoring_criteria(prompt)
-                
-                return await self._fallback_batch_with_gemini(items, prompt_template)
+                try:
+                    return await self.call_with_fallback(prompt, max_tokens, temperature)
+                except Exception as fallback_error:
+                    logger.error(f"Fallback失败: {fallback_error}")
+                    return self._create_default_results_response(
+                        items,
+                        "内容过滤且fallback失败"
+                    )
             else:
                 # 非内容过滤错误，重新抛出
                 raise
@@ -674,13 +600,9 @@ class BatchProvider:
             KeyError: 提供商配置不存在
             Exception: API调用失败
         """
+        # 使用缓存的客户端
+        client = self._get_fallback_client(provider_name)
         config = self.config.providers_config[provider_name]
-
-        # 动态创建客户端
-        client = AsyncOpenAI(
-            api_key=config.api_key,
-            base_url=config.base_url
-        )
 
         logger.info(f"使用提供商 {provider_name} (模型: {config.model})")
 

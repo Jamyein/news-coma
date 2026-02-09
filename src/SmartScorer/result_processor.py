@@ -50,14 +50,51 @@ class ResultProcessor:
         self._stats['missing_fields'] += len(items)
         logger.warning(f"已为 {len(items)} 条新闻应用默认分数 (原因: {reason})")
 
-    def parse_1pass_response(self, items: list[NewsItem], response: str) -> list[NewsItem]:
-        """解析1-pass API响应"""
-        try:
-            results = json.loads(response)
+    def _normalize_response(self, data: dict | list) -> list[dict]:
+        """
+        统一处理 API 返回的各种格式
+        
+        支持格式:
+        - [{...}, {...}] - 数组格式（标准）
+        - {...} - 单个对象（包装成数组）
+        - {"results": [...]} - 包装格式（提取 results）
+        
+        Args:
+            data: API 返回的解析后数据
+            
+        Returns:
+            标准化的结果列表
+            
+        Raises:
+            ValueError: 如果数据格式无法识别
+        """
+        if isinstance(data, list):
+            # 已经是数组格式
+            return data
+        elif isinstance(data, dict):
+            # 检查是否是包装格式 {"results": [...]}
+            if 'results' in data and isinstance(data['results'], list):
+                return data['results']
+            # 单个对象，包装成数组
+            return [data]
+        else:
+            raise ValueError(f"Unexpected response type: {type(data)}")
 
-            if not isinstance(results, list):
-                logger.error(f"响应格式错误: 期望数组，得到{type(results)}")
-                self._apply_default_to_batch(items, "invalid_response_format")
+    def parse_1pass_response(self, items: list[NewsItem], response: str) -> list[NewsItem]:
+        """
+        解析1-pass API响应
+        
+        使用 _normalize_response 统一处理各种响应格式
+        """
+        try:
+            data = json.loads(response)
+            
+            # 统一处理响应格式
+            try:
+                results = self._normalize_response(data)
+            except ValueError as e:
+                logger.error(f"响应格式错误: {e}")
+                self._apply_default_to_batch(items, f"invalid_response_format: {e}")
                 return items
 
             result_map = {r['news_index']: r for r in results if 'news_index' in r}
@@ -74,10 +111,15 @@ class ResultProcessor:
             self._stats['total_parsed'] += len(items)
             return scored_items
 
-        except (json.JSONDecodeError, Exception) as e:
-            logger.error(f"解析失败: {e}")
+        except json.JSONDecodeError as e:
+            logger.error(f"JSON解析失败: {e}")
             self._stats['parse_errors'] += 1
             self._apply_default_to_batch(items, "json_decode_error")
+            return items
+        except Exception as e:
+            logger.error(f"解析失败: {e}")
+            self._stats['parse_errors'] += 1
+            self._apply_default_to_batch(items, f"parse_error: {e}")
             return items
     
     def _apply_result(self, item: NewsItem, result: dict) -> NewsItem:

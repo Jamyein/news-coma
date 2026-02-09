@@ -23,13 +23,18 @@ class SmartScorer:
         self.batch_provider = BatchProvider(config)
         self.prompt_engine = PromptEngine(config)
         self.result_processor = ResultProcessor(config)
+        
+        # 重试配置
+        self._max_retries = getattr(config, 'max_retries', 2)
+        self._retry_delay = getattr(config, 'retry_delay', 1.0)
+        
         self._stats = {
             'total_processed': 0,
             'total_api_calls': 0,
             'avg_processing_time': 0.0,
             'success_rate': 1.0
         }
-        logger.info(f"SmartScorer初始化完成 (batch_size={config.batch_size})")
+        logger.info(f"SmartScorer初始化完成 (batch_size={config.batch_size}, max_retries={self._max_retries})")
     
     async def score_news(self, items: List[NewsItem]) -> List[NewsItem]:
         """1-pass评分入口"""
@@ -99,17 +104,72 @@ class SmartScorer:
         except Exception as e:
             logger.error(f"批次 {batch_id} 处理失败: {e}")
             # 为整个批次赋予默认低分
-            for item in batch:
-                item.ai_score = self.config.default_score_on_error
-                item.ai_category = "社会政治"
-                item.ai_summary = f"处理失败: {str(e)[:self.config.max_error_message_length]}"
-            return batch
+            return self._apply_default_scores(batch, str(e))
+
+    async def _process_single_batch_with_retry(
+        self,
+        batch: List[NewsItem],
+        batch_id: str,
+        max_retries: int | None = None
+    ) -> List[NewsItem]:
+        """
+        带重试的批次处理
+        
+        Args:
+            batch: 新闻批次
+            batch_id: 批次标识
+            max_retries: 最大重试次数（默认使用配置值）
+        
+        Returns:
+            评分后的新闻列表，失败时应用默认分数
+        """
+        max_retries = max_retries or self._max_retries
+        last_exception = None
+        
+        for attempt in range(max_retries):
+            try:
+                return await self._process_single_batch(batch, batch_id)
+            except Exception as e:
+                last_exception = e
+                if attempt < max_retries - 1:
+                    delay = self._retry_delay * (2 ** attempt)  # 指数退避
+                    logger.warning(
+                        f"批次 {batch_id} 第 {attempt + 1} 次尝试失败，"
+                        f"{delay:.1f}秒后重试: {e}"
+                    )
+                    await asyncio.sleep(delay)
+                else:
+                    logger.error(f"批次 {batch_id} 重试耗尽: {e}")
+        
+        # 所有重试失败，应用默认分数
+        return self._apply_default_scores(batch, str(last_exception))
+
+    def _apply_default_scores(
+        self,
+        batch: List[NewsItem],
+        reason: str = "unknown"
+    ) -> List[NewsItem]:
+        """为批次应用默认分数"""
+        default_score = getattr(self.config, 'default_score_on_error', 3.0)
+        max_error_len = getattr(self.config, 'max_error_message_length', 50)
+        
+        for item in batch:
+            item.ai_score = default_score
+            item.ai_category = "社会政治"
+            item.ai_category_confidence = 0.5
+            item.ai_summary = f"[评分失败: {reason[:max_error_len]}]"
+            item.translated_title = item.title  # 保留原标题
+        
+        logger.warning(f"已为批次应用默认分数 ({len(batch)} 条): {reason[:max_error_len]}")
+        return batch
 
     async def _process_batches(self, batches: List[List[NewsItem]]) -> List[NewsItem]:
-        """并行批量处理
-
+        """
+        并行批量处理（带重试）
+        
         使用 asyncio.gather() 实现真正的并行处理，
         使用信号量控制并发数避免API过载。
+        每个批次都有独立的重试机制。
 
         Args:
             batches: 新闻批次列表
@@ -121,8 +181,6 @@ class SmartScorer:
             return []
 
         total_batches = len(batches)
-
-        # 限制并发数，避免API过载（使用配置的 max_concurrent，最大5）
         max_concurrent = min(getattr(self.config, 'max_concurrent', 3), 5)
 
         # 如果只有1个批次或禁用并行，使用串行处理
@@ -131,7 +189,7 @@ class SmartScorer:
             all_scored = []
             for batch_idx, batch in enumerate(batches, 1):
                 batch_id = f"{batch_idx}/{total_batches}"
-                scored = await self._process_single_batch(batch, batch_id)
+                scored = await self._process_single_batch_with_retry(batch, batch_id)
                 all_scored.extend(scored)
             logger.info(f"串行处理完成: 共 {len(all_scored)} 条")
             return all_scored
@@ -140,34 +198,28 @@ class SmartScorer:
         semaphore = asyncio.Semaphore(max_concurrent)
 
         async def process_with_semaphore(batch_idx: int, batch: List[NewsItem]) -> List[NewsItem]:
-            """带信号量控制的批次处理"""
+            """带信号量控制的批次处理（带重试）"""
             async with semaphore:
                 batch_id = f"{batch_idx}/{total_batches}"
-                return await self._process_single_batch(batch, batch_id)
+                return await self._process_single_batch_with_retry(batch, batch_id)
 
-        logger.info(f"🚀 并行处理 {total_batches} 个批次 (并发: {max_concurrent})")
+        logger.info(f"🚀 并行处理 {total_batches} 个批次 (并发: {max_concurrent}, 每批次最大重试: {self._max_retries})")
 
         # 并行执行所有批次
         tasks = [
             process_with_semaphore(batch_idx, batch)
             for batch_idx, batch in enumerate(batches, 1)
         ]
-        results = await asyncio.gather(*tasks, return_exceptions=True)
+        
+        # 使用 return_exceptions=False，因为重试逻辑已处理异常
+        results = await asyncio.gather(*tasks)
 
-        # 合并结果，处理异常
+        # 合并结果
         all_scored = []
-        exception_count = 0
-        for i, result in enumerate(results):
-            if isinstance(result, Exception):
-                exception_count += 1
-                logger.error(f"❌ 批次 {i+1}/{total_batches} 处理异常: {result}")
-                # 使用默认分数（_process_single_batch内部已经处理）
-                all_scored.extend(batches[i])
-            else:
-                all_scored.extend(result)
+        for result in results:
+            all_scored.extend(result)
 
-        success_count = total_batches - exception_count
-        logger.info(f"✅ 并行处理完成: 成功 {success_count}/{total_batches} 批次, 失败 {exception_count} 批次, 共 {len(all_scored)} 条")
+        logger.info(f"✅ 并行处理完成: 共 {len(all_scored)} 条")
 
         return all_scored
 

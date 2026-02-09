@@ -129,6 +129,10 @@ class AIConfig:
     
     # 评分维度默认值（新增）
     default_dimension_score: int = 5                # 各评分维度默认值
+    
+    # 重试配置（新增）
+    max_retries: int = 2                            # 最大重试次数
+    retry_delay: float = 1.0                        # 重试间隔（秒）
 
 
 

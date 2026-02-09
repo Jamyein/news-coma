@@ -6,7 +6,6 @@ RSS获取模块
 import hashlib
 import logging
 import re
-import socket
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta
 from typing import List, Optional
@@ -17,9 +16,6 @@ from dateutil import parser as date_parser
 from src.models import NewsItem, RSSSource, OutputConfig, FilterConfig
 
 logger = logging.getLogger(__name__)
-
-# 设置全局socket超时，防止RSS获取阻塞（10秒）
-socket.setdefaulttimeout(10)
 
 
 class RSSFetcher:
