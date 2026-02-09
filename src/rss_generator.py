@@ -386,7 +386,15 @@ class RSSGenerator:
         pub_date = datetime.fromtimestamp(file_path.stat().st_mtime)
         
         # 使用文件路径作为唯一guid（POSIX格式）
-        guid = file_path_posix
+        # latest.md 使用包含时间戳的 guid 以区分当天多次运行
+        if file_path.name == "latest.md":
+            pub_time = self._extract_datetime_from_latest(content)
+            if pub_time:
+                guid = f"{file_path_posix}#{pub_time.strftime('%Y-%m-%d-%H-%M')}"
+            else:
+                guid = file_path_posix
+        else:
+            guid = file_path_posix
         
         return {
             'title': title,
