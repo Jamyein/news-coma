@@ -233,8 +233,8 @@ class RSSAggregator:
         self.rss_gen.generate()
         logger.info(f"✓ RSS feed: feed.xml")
     
-    def _update_stats(self, run_time: datetime, all_items: List[NewsItem], 
-                      selected_items: List[NewsItem],
+    def _update_stats(self, run_time: datetime, all_items: list[NewsItem],
+                      selected_items: list[NewsItem],
                       run_metrics: dict = None):
         """更新统计数据"""
         # 源统计

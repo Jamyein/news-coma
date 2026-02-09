@@ -114,7 +114,7 @@ class MarkdownGenerator:
 
         return header + body + footer
 
-    def _build_section(self, title: str, items: List[NewsItem], category: str) -> str:
+    def _build_section(self, title: str, items: list[NewsItem], category: str) -> str:
         """构建单个板块的内容"""
         if not items:
             return f"""## {title} (0条)
