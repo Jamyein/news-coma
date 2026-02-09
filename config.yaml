@@ -237,6 +237,8 @@ filters:
     - "促销"
   use_semantic_dedup: true    # 启用TF-IDF语义去重
   semantic_similarity: 0.85   # 语义相似度阈值
+  use_full_content: true      # 使用完整内容（而非截断摘要）
+  max_content_length: 5000    # 内容最大长度限制（字符数）
 
 
 

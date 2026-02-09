@@ -316,6 +316,43 @@ class BatchProvider:
                 "summary": f"Gemini处理失败: {str(e)[:50]}"
             }
 
+    def _get_sub_batch_size(self, original_size: int) -> int:
+        """根据fallback链动态计算子批次大小
+        
+        策略:
+        1. 尝试使用fallback链中第一个可用提供商的batch_size
+        2. 如果fallback链都不可用，使用主提供商的batch_size
+        3. 确保不超过原批次大小
+        
+        Args:
+            original_size: 原批次大小
+            
+        Returns:
+            int: 计算后的子批次大小
+        """
+        sub_batch_size = None
+        
+        # 策略1: 使用fallback链中第一个可用提供商的batch_size
+        if self.config.fallback_enabled and self.config.fallback_chain:
+            for fallback_name in self.config.fallback_chain:
+                if fallback_name in self.config.providers_config:
+                    fallback_config = self.config.providers_config[fallback_name]
+                    sub_batch_size = getattr(fallback_config, 'batch_size', None)
+                    if sub_batch_size:
+                        logger.debug(f"使用fallback提供商 '{fallback_name}' 的batch_size: {sub_batch_size}")
+                        break
+        
+        # 策略A(保底): 使用主提供商的batch_size
+        if sub_batch_size is None:
+            sub_batch_size = getattr(self.provider_config, 'batch_size', 5)
+            logger.debug(f"fallback链不可用，使用主提供商batch_size: {sub_batch_size}")
+        
+        # 确保不超过原批次大小，且至少为1
+        sub_batch_size = min(sub_batch_size, original_size)
+        sub_batch_size = max(1, sub_batch_size)
+        
+        return sub_batch_size
+
     async def _retry_with_smaller_batches(
         self,
         items: List[NewsItem],
@@ -342,9 +379,9 @@ class BatchProvider:
             ContentFilterError: 子批次仍然触发内容过滤
             Exception: 其他API错误
         """
-        # 计算子批次大小（至少2条，最多原批次的1/2）
+        # 计算子批次大小（基于fallback提供商限制）
         original_size = len(items)
-        sub_batch_size = max(2, min(5, original_size // 2))
+        sub_batch_size = self._get_sub_batch_size(original_size)
 
         logger.info(
             f"批次细分重试: 原批次{original_size}条 → 子批次{sub_batch_size}条"
@@ -385,22 +422,44 @@ class BatchProvider:
                 logger.debug(f"子批次 {sub_batch_id} 成功: {len(sub_results)}条结果")
 
             except ContentFilterError:
-                # 子批次仍然触发内容过滤，记录日志并继续处理其他子批次
-                logger.warning(f"子批次 {sub_batch_id} 仍触发内容过滤，跳过")
-                # 为子批次添加默认结果
-                for j, item in enumerate(sub_items):
-                    all_results.append({
-                        "news_index": i + j + 1,
-                        "category": "社会政治",
-                        "category_confidence": 0.5,
-                        "importance": 3,
-                        "timeliness": 3,
-                        "technical_depth": 3,
-                        "audience_breadth": 3,
-                        "practicality": 3,
-                        "total_score": 3.0,
-                        "summary": "内容过滤，使用默认分"
-                    })
+                # 子批次触发内容过滤，使用fallback提供商处理
+                logger.warning(f"子批次 {sub_batch_id} (大小={len(sub_items)}) 触发内容过滤，尝试fallback提供商")
+                try:
+                    # 使用带fallback的API调用处理该子批次
+                    fallback_response = await self.call_with_fallback(sub_prompt, max_tokens, temperature)
+                    
+                    # 解析fallback结果
+                    fallback_results = json.loads(fallback_response)
+                    if not isinstance(fallback_results, list):
+                        if isinstance(fallback_results, dict) and 'results' in fallback_results:
+                            fallback_results = fallback_results['results']
+                        else:
+                            raise ValueError(f"Unexpected response format: {type(fallback_results)}")
+                    
+                    # 调整news_index为全局索引
+                    for j, result in enumerate(fallback_results):
+                        if 'news_index' in result:
+                            result['news_index'] = i + j + 1
+                    
+                    all_results.extend(fallback_results)
+                    logger.info(f"子批次 {sub_batch_id} fallback处理成功: {len(fallback_results)}条")
+                    
+                except Exception as fallback_error:
+                    logger.error(f"子批次 {sub_batch_id} fallback处理失败: {fallback_error}")
+                    # 所有fallback都失败，添加默认结果
+                    for j, item in enumerate(sub_items):
+                        all_results.append({
+                            "news_index": i + j + 1,
+                            "category": "社会政治",
+                            "category_confidence": 0.5,
+                            "importance": 3,
+                            "timeliness": 3,
+                            "technical_depth": 3,
+                            "audience_breadth": 3,
+                            "practicality": 3,
+                            "total_score": 3.0,
+                            "summary": f"fallback失败: {str(fallback_error)[:30]}"
+                        })
                 continue
             except Exception as e:
                 # 其他错误，记录并继续

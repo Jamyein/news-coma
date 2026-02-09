@@ -9,15 +9,21 @@ from typing import Optional, List, Dict
 
 @dataclass
 class NewsItem:
-    """标准化新闻条目"""
+    """标准化新闻条目
+
+    字段说明:
+    - summary: RSS源提供的原始摘要，轻量级，用于语义去重和快速浏览
+    - content: 最完整的内容正文，智能选择summary或content字段中更详细的那个，
+               用于AI评分提供详细上下文
+    """
     id: str
     title: str
     link: str
     source: str
     category: str
     published_at: datetime
-    summary: str = ""
-    content: str = ""
+    summary: str = ""  # 原始摘要，用于去重
+    content: str = ""  # 完整内容，用于AI评分
     
     # AI评分后填充的字段
     ai_score: Optional[float] = None
@@ -144,3 +150,5 @@ class FilterConfig:
     blocked_keywords: List[str] = field(default_factory=list)
     use_semantic_dedup: bool = True  # 是否启用TF-IDF语义去重
     semantic_similarity: float = 0.85  # 语义相似度阈值
+    use_full_content: bool = True  # 是否使用完整内容（而非截断摘要）
+    max_content_length: int = 5000  # 内容最大长度限制（字符数）

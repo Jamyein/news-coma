@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <channel>
     <title>科技新闻精选</title>
-    <link>https://github.com/Jamyein/news-coma</link>
+    <link>https://github.com/username/news</link>
     <description>由 AI 筛选的高质量科技新闻聚合，每6小时自动更新</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 09 Feb 2026 11:41:46 GMT</lastBuildDate>
-    <pubDate>Mon, 09 Feb 2026 11:41:46 GMT</pubDate>
-    <atom:link href="https://Jamyein.github.io/news-coma/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Feb 2026 12:22:15 GMT</lastBuildDate>
+    <pubDate>Mon, 09 Feb 2026 12:22:15 GMT</pubDate>
+    <atom:link href="https://username.github.io/news/feed.xml" rel="self" type="application/rss+xml" />
     <image>
         <url>https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</url>
         <title>科技新闻精选</title>
-        <link>https://github.com/Jamyein/news-coma</link>
+        <link>https://github.com/username/news</link>
     </image>
 
     <item>
         <title>2026年02月09日 19:41 新闻汇总</title>
-        <link>https://Jamyein.github.io/news-coma/</link>
+        <link>https://username.github.io/news/</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 09 Feb 2026 11:41:46 GMT</pubDate>
-        <guid>docs/latest.md</guid>
+        <pubDate>Mon, 09 Feb 2026 20:18:38 GMT</pubDate>
+        <guid>docs/latest.md#2026-02-09-19-41</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
 <blockquote>🕐 更新时间: 2026年02月09日 19:41</blockquote>
@@ -185,9 +185,9 @@
     </item>
     <item>
         <title>2026年02月09日 新闻汇总</title>
-        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-09.md</link>
+        <link>https://raw.githubusercontent.com/username/news/main/archive/2026-02-09.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 09 Feb 2026 11:41:46 GMT</pubDate>
+        <pubDate>Mon, 09 Feb 2026 20:18:38 GMT</pubDate>
         <guid>archive/2026-02-09.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -522,9 +522,9 @@
     </item>
     <item>
         <title>2026年02月08日 新闻汇总</title>
-        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-08.md</link>
+        <link>https://raw.githubusercontent.com/username/news/main/archive/2026-02-08.md</link>
         <description>本期精选 26 条高质量科技新闻</description>
-        <pubDate>Mon, 09 Feb 2026 11:37:39 GMT</pubDate>
+        <pubDate>Mon, 09 Feb 2026 18:55:53 GMT</pubDate>
         <guid>archive/2026-02-08.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -827,9 +827,9 @@
     </item>
     <item>
         <title>2026年02月07日 新闻汇总</title>
-        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-07.md</link>
+        <link>https://raw.githubusercontent.com/username/news/main/archive/2026-02-07.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 09 Feb 2026 11:37:39 GMT</pubDate>
+        <pubDate>Sat, 07 Feb 2026 22:08:28 GMT</pubDate>
         <guid>archive/2026-02-07.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1114,9 +1114,9 @@
     </item>
     <item>
         <title>2026年02月06日 新闻汇总</title>
-        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-06.md</link>
+        <link>https://raw.githubusercontent.com/username/news/main/archive/2026-02-06.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 09 Feb 2026 11:37:39 GMT</pubDate>
+        <pubDate>Sat, 07 Feb 2026 09:21:44 GMT</pubDate>
         <guid>archive/2026-02-06.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1321,9 +1321,9 @@
     </item>
     <item>
         <title>2026年02月05日 新闻汇总</title>
-        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-05.md</link>
+        <link>https://raw.githubusercontent.com/username/news/main/archive/2026-02-05.md</link>
         <description>本期精选 11 条高质量科技新闻</description>
-        <pubDate>Mon, 09 Feb 2026 11:37:39 GMT</pubDate>
+        <pubDate>Thu, 05 Feb 2026 21:16:14 GMT</pubDate>
         <guid>archive/2026-02-05.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1465,9 +1465,9 @@
     </item>
     <item>
         <title>2026年02月04日 新闻汇总</title>
-        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-04.md</link>
+        <link>https://raw.githubusercontent.com/username/news/main/archive/2026-02-04.md</link>
         <description>本期精选 0 条高质量科技新闻</description>
-        <pubDate>Mon, 09 Feb 2026 11:37:39 GMT</pubDate>
+        <pubDate>Thu, 05 Feb 2026 19:07:57 GMT</pubDate>
         <guid>archive/2026-02-04.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1487,9 +1487,9 @@
     </item>
     <item>
         <title>2026年02月03日 新闻汇总</title>
-        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-03.md</link>
+        <link>https://raw.githubusercontent.com/username/news/main/archive/2026-02-03.md</link>
         <description>本期精选 10 条高质量科技新闻</description>
-        <pubDate>Mon, 09 Feb 2026 11:37:39 GMT</pubDate>
+        <pubDate>Tue, 03 Feb 2026 19:05:13 GMT</pubDate>
         <guid>archive/2026-02-03.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1618,9 +1618,9 @@
     </item>
     <item>
         <title>2026年02月02日 新闻汇总</title>
-        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-02.md</link>
+        <link>https://raw.githubusercontent.com/username/news/main/archive/2026-02-02.md</link>
         <description>本期精选 0 条高质量科技新闻</description>
-        <pubDate>Mon, 09 Feb 2026 11:37:39 GMT</pubDate>
+        <pubDate>Mon, 02 Feb 2026 22:50:18 GMT</pubDate>
         <guid>archive/2026-02-02.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h3>1. KKR 领导集团即将以超过 100 亿美元的价格收购新加坡数据中心公司</h3>
@@ -1917,9 +1917,9 @@
     </item>
     <item>
         <title>2026年02月01日 新闻汇总</title>
-        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-01.md</link>
+        <link>https://raw.githubusercontent.com/username/news/main/archive/2026-02-01.md</link>
         <description>本期精选 16 条高质量科技新闻</description>
-        <pubDate>Mon, 09 Feb 2026 11:37:39 GMT</pubDate>
+        <pubDate>Mon, 02 Feb 2026 19:52:23 GMT</pubDate>
         <guid>archive/2026-02-01.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -2119,9 +2119,9 @@
     </item>
     <item>
         <title>2026年01月31日 新闻汇总</title>
-        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-01-31.md</link>
+        <link>https://raw.githubusercontent.com/username/news/main/archive/2026-01-31.md</link>
         <description>本期精选 5 条高质量科技新闻</description>
-        <pubDate>Mon, 09 Feb 2026 11:37:39 GMT</pubDate>
+        <pubDate>Mon, 02 Feb 2026 19:52:23 GMT</pubDate>
         <guid>archive/2026-01-31.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 科技新闻精选</h1>

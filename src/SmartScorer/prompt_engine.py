@@ -145,5 +145,14 @@ class PromptEngine:
     
     def _format_news_item(self, item: NewsItem, index: int) -> str:
         """格式化单条新闻"""
-        summary = item.summary[:300] if item.summary else "无摘要"
-        return f"【新闻 {index}】\n标题: {item.title}\n来源: {item.source}\n摘要: {summary}"
+        # 优先使用完整内容(content)，用于AI评分提供详细上下文
+        # 不再截断，让AI获得完整上下文信息
+        context = item.content if item.content else item.summary
+        if not context:
+            context = "无摘要"
+
+        # 添加长度提示，方便调试和监控
+        context_length = len(context)
+        length_hint = f" (长度: {context_length}字)" if context_length > 500 else ""
+
+        return f"【新闻 {index}】\n标题: {item.title}\n来源: {item.source}\n内容: {context}{length_hint}"

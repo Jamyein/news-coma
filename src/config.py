@@ -135,5 +135,7 @@ class Config:
             dedup_similarity=filter_data.get('dedup_similarity', 0.85),
             blocked_keywords=filter_data.get('blocked_keywords', []),
             use_semantic_dedup=filter_data.get('use_semantic_dedup', True),
-            semantic_similarity=filter_data.get('semantic_similarity', 0.85)
+            semantic_similarity=filter_data.get('semantic_similarity', 0.85),
+            use_full_content=filter_data.get('use_full_content', True),
+            max_content_length=filter_data.get('max_content_length', 5000)
         )

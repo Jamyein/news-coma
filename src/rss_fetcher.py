@@ -39,10 +39,14 @@ class RSSFetcher:
         # 轻量级语义去重配置 (TF-IDF版，GitHub Actions友好，~10MB内存)
         self._semantic_dedup_enabled = getattr(filter_config, 'use_semantic_dedup', True)
         self._semantic_threshold = getattr(filter_config, 'semantic_similarity', 0.85)
-        
+
+        # 内容提取配置
+        self._use_full_content = getattr(filter_config, 'use_full_content', True)
+        self._max_content_length = getattr(filter_config, 'max_content_length', 5000)
+
         # TF-IDF向量化器 (轻量级替代sentence-transformers)
         self._vectorizer = None
-        
+
         # 统计信息
         self.semantic_duplicates_removed = 0
     
@@ -189,13 +193,32 @@ class RSSFetcher:
             )
             published = datetime.now()
         
-        # 获取摘要/内容
-        summary = entry.get('summary', '') or entry.get('description', '')
-        content = entry.get('content', [{}])[0].get('value', '') if 'content' in entry else ''
-        
+        # 获取原始内容
+        summary_raw = entry.get('summary', '') or entry.get('description', '')
+        content_raw = entry.get('content', [{}])[0].get('value', '') if 'content' in entry else ''
+
+        # 清理HTML
+        summary_clean = self._clean_html(summary_raw)
+        content_clean = self._clean_html(content_raw)
+
+        # 智能选择完整内容
+        if self._use_full_content:
+            # 策略: 如果content存在且比summary长20%以上，使用content
+            if content_clean and len(content_clean) > len(summary_clean) * 1.2:
+                full_content = content_clean
+            else:
+                full_content = summary_clean
+
+            # 应用最大长度限制
+            if len(full_content) > self._max_content_length:
+                full_content = full_content[:self._max_content_length] + "..."
+        else:
+            # 不使用完整内容模式，直接使用summary
+            full_content = summary_clean
+
         # 生成唯一ID
         id_hash = hashlib.md5(f"{link}:{title}".encode()).hexdigest()[:12]
-        
+
         return NewsItem(
             id=id_hash,
             title=title,
@@ -203,8 +226,8 @@ class RSSFetcher:
             source=source.name,
             category=source.category,
             published_at=published,
-            summary=self._clean_html(summary),
-            content=self._clean_html(content)
+            summary=summary_clean,  # 保持原始摘要，用于去重
+            content=full_content    # 完整内容（可能被截断），用于AI评分
         )
     
     def _deduplicate(self, items: List[NewsItem]) -> List[NewsItem]:
