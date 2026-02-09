@@ -110,8 +110,6 @@ class ResultProcessor:
 
         # 总结
         item.ai_summary = result.get('summary', '')
-        if 'key_points' in result:
-            item.key_points = result['key_points']
 
         return item
     

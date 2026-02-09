@@ -23,7 +23,6 @@ class NewsItem:
     ai_score: Optional[float] = None
     ai_summary: Optional[str] = None
     translated_title: Optional[str] = None
-    key_points: List[str] = field(default_factory=list)
     
     # AI分类字段
     ai_category: str = ""  # 分类结果："财经" | "科技" | "社会政治"

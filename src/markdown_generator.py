@@ -137,17 +137,12 @@ class MarkdownGenerator:
 """
 
         for i, item in enumerate(sorted_items, 1):
-            key_points_str = "\n".join([f"- {point}" for point in (item.key_points or ["暂无要点"])])
-
             section += f"""### {i}. {item.translated_title or item.title}
 
 **📌 来源**: {item.source} | **🏏️ AI分类**: {item.ai_category} | **⭐ 评分**: {item.ai_score or 'N/A'}/10
 
 **📝 摘要**:
 {item.ai_summary or '暂无摘要'}
-
-**💡 关键要点**:
-{key_points_str}
 
 **🔗 原文链接**: [{item.title}]({item.link})
 
