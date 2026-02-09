@@ -11,7 +11,6 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import logging
 import asyncio
 from datetime import datetime
-from typing import List
 
 
 from src.config import Config
@@ -210,7 +209,7 @@ class RSSAggregator:
         threshold = self.config.filter_config.min_score_threshold
         return self.scorer.select_top_items(items, min_threshold=threshold)
     
-    def _generate_outputs(self, items: List[NewsItem]):
+    def _generate_outputs(self, items: list[NewsItem]):
         """生成输出文件"""
         logger.info("📝 生成输出文件...")
         

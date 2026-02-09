@@ -5,7 +5,6 @@
 import json
 import logging
 from datetime import datetime, timedelta
-from typing import Any, Dict, Optional
 from pathlib import Path
 
 logger = logging.getLogger(__name__)
@@ -149,13 +148,13 @@ class HistoryManager:
             self._data["source_stats"][source_name] = {"fetched": 0, "selected": 0}
         self._data["source_stats"][source_name]["selected"] += count
     
-    def get_stats(self) -> Dict[str, Any]:
+    def get_stats(self) -> dict[str, Any]:
         """获取统计信息"""
         return self._data["stats"]
     
     # ==================== 性能报告功能 ====================
     
-    def get_performance_report(self) -> Dict[str, Any]:
+    def get_performance_report(self) -> dict[str, Any]:
         """获取性能报告（简化版）"""
         metrics = self._data.get("run_metrics", [])
         if not metrics:
@@ -182,7 +181,7 @@ class HistoryManager:
     
     # ==================== RSS源最后获取时间 (增量获取支持) ====================
     
-    def get_source_last_fetch(self, source_name: str) -> Optional[datetime]:
+    def get_source_last_fetch(self, source_name: str) -> datetime | None:
         """获取指定RSS源的最后获取时间"""
         last_fetch_str = self._data.get("source_last_fetch", {}).get(source_name)
         if last_fetch_str:
@@ -196,7 +195,7 @@ class HistoryManager:
         """更新指定RSS源的最后获取时间"""
         self._data.setdefault("source_last_fetch", {})[source_name] = fetch_time.isoformat()
     
-    def get_fallback_last_fetch(self) -> Optional[datetime]:
+    def get_fallback_last_fetch(self) -> datetime | None:
         """获取fallback最后获取时间（向后兼容）"""
         last_run = self._data.get("last_run")
         if last_run:

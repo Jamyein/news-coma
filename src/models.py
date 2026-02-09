@@ -4,7 +4,6 @@
 """
 from dataclasses import dataclass, field
 from datetime import datetime
-from typing import Optional, List, Dict
 
 
 @dataclass
@@ -26,9 +25,9 @@ class NewsItem:
     content: str = ""  # 完整内容，用于AI评分
     
     # AI评分后填充的字段
-    ai_score: Optional[float] = None
-    ai_summary: Optional[str] = None
-    translated_title: Optional[str] = None
+    ai_score: float | None = None
+    ai_summary: str | None = None
+    translated_title: str | None = None
     
     # AI分类字段
     ai_category: str = ""  # 分类结果："财经" | "科技" | "社会政治"
@@ -89,7 +88,7 @@ class AIConfig:
     """AI配置（1-Pass简化版）"""
     # 核心配置（2项）
     provider: str = "zhipu"
-    providers_config: Dict[str, ProviderConfig] = field(default_factory=dict)
+    providers_config: dict[str, ProviderConfig] = field(default_factory=dict)
     
     # 性能配置（4项）
     batch_size: int = 10           # 批次大小
@@ -105,13 +104,13 @@ class AIConfig:
     
     # 回退配置（简化）
     fallback_enabled: bool = True
-    fallback_chain: List[str] = field(default_factory=lambda: ["deepseek", "gemini"])
+    fallback_chain: list[str] = field(default_factory=lambda: ["deepseek", "gemini"])
 
     # 分类最低保障配置（从config.yaml加载，无配置则使用空字典）
-    category_min_guarantee: Dict[str, int] = field(default_factory=dict)
+    category_min_guarantee: dict[str, int] = field(default_factory=dict)
 
     # 固定数量目标配置（混合方案第一阶段）
-    category_fixed_targets: Dict[str, int] = field(default_factory=dict)
+    category_fixed_targets: dict[str, int] = field(default_factory=dict)
 
     # 是否启用固定比例混合方案
     use_fixed_proportion: bool = False
@@ -151,7 +150,7 @@ class FilterConfig:
     """过滤配置"""
     min_score_threshold: float = 6.0
     dedup_similarity: float = 0.85
-    blocked_keywords: List[str] = field(default_factory=list)
+    blocked_keywords: list[str] = field(default_factory=list)
     use_semantic_dedup: bool = True  # 是否启用TF-IDF语义去重
     semantic_similarity: float = 0.85  # 语义相似度阈值
     use_full_content: bool = True  # 是否使用完整内容（而非截断摘要）

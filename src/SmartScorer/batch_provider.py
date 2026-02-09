@@ -3,7 +3,6 @@
 import asyncio
 import json
 import logging
-from typing import Dict, List, Optional, Any
 from openai import AsyncOpenAI, RateLimitError
 
 from src.models import AIConfig, NewsItem
@@ -166,9 +165,9 @@ class BatchProvider:
     async def call_batch_api(
         self,
         prompt: str,
-        max_tokens: Optional[int] = None,
-        temperature: Optional[float] = None,
-        timeout: Optional[int] = None
+        max_tokens: int | None = None,
+        temperature: float | None = None,
+        timeout: int | None = None
     ) -> str:
         """调用批量评分API（简化版）
 
@@ -222,8 +221,8 @@ class BatchProvider:
     async def call_with_fallback(
         self,
         prompt: str,
-        max_tokens: Optional[int] = None,
-        temperature: Optional[float] = None
+        max_tokens: int | None = None,
+        temperature: float | None = None
     ) -> str:
         """带自动回退的API调用"""
         try:
@@ -287,10 +286,10 @@ class BatchProvider:
 
     async def _retry_with_smaller_batches(
         self,
-        items: List[NewsItem],
+        items: list[NewsItem],
         prompt_template: str,
-        max_tokens: Optional[int] = None,
-        temperature: Optional[float] = None
+        max_tokens: int | None = None,
+        temperature: float | None = None
     ) -> str:
         """
         将批次拆分为更小的子批次重试
@@ -422,7 +421,7 @@ class BatchProvider:
 
     def _create_default_results_response(
         self,
-        items: List[NewsItem],
+        items: list[NewsItem],
         reason: str = "处理失败"
     ) -> str:
         """
@@ -451,10 +450,10 @@ class BatchProvider:
     async def call_batch_api_with_fallback(
         self,
         prompt: str,
-        items: List[NewsItem],
-        prompt_template: str = None,
-        max_tokens: Optional[int] = None,
-        temperature: Optional[float] = None
+        items: list[NewsItem],
+        prompt_template: str | None = None,
+        max_tokens: int | None = None,
+        temperature: float | None = None
     ) -> str:
         """
         调用批量API，支持fallback处理
@@ -579,8 +578,8 @@ class BatchProvider:
         self,
         provider_name: str,
         prompt: str,
-        max_tokens: Optional[int] = None,
-        temperature: Optional[float] = None
+        max_tokens: int | None = None,
+        temperature: float | None = None
     ) -> str:
         """调用指定提供商（简化版）
 
@@ -615,7 +614,7 @@ class BatchProvider:
             timeout=self.config.timeout_seconds
         )
     
-    def get_stats(self) -> Dict[str, Any]:
+    def get_stats(self) -> dict[str, Any]:
         return {
             "provider": self.provider_name,
             "model": self.model,

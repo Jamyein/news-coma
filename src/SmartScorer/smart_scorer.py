@@ -2,7 +2,6 @@
 
 import asyncio
 import logging
-from typing import List, Dict, Optional
 from datetime import datetime
 from collections import defaultdict
 
@@ -36,7 +35,7 @@ class SmartScorer:
         }
         logger.info(f"SmartScorer初始化完成 (batch_size={config.batch_size}, max_retries={self._max_retries})")
     
-    async def score_news(self, items: List[NewsItem]) -> List[NewsItem]:
+    async def score_news(self, items: list[NewsItem]) -> list[NewsItem]:
         """1-pass评分入口"""
         if not items:
             return []
@@ -54,7 +53,7 @@ class SmartScorer:
         logger.info(f"SmartScorer完成: {len(items)} → {len(final_items)} 条 ({duration:.1f}s)")
         return final_items
     
-    def _create_batches(self, items: List[NewsItem]) -> List[List[NewsItem]]:
+    def _create_batches(self, items: list[NewsItem]) -> list[list[NewsItem]]:
         """将新闻分批处理"""
         return [
             items[i:i + self.config.batch_size]
@@ -63,9 +62,9 @@ class SmartScorer:
 
     async def _process_single_batch(
         self,
-        batch: List[NewsItem],
+        batch: list[NewsItem],
         batch_id: str
-    ) -> List[NewsItem]:
+    ) -> list[NewsItem]:
         """处理单个批次（用于并行）
 
         Args:
@@ -108,10 +107,10 @@ class SmartScorer:
 
     async def _process_single_batch_with_retry(
         self,
-        batch: List[NewsItem],
+        batch: list[NewsItem],
         batch_id: str,
         max_retries: int | None = None
-    ) -> List[NewsItem]:
+    ) -> list[NewsItem]:
         """
         带重试的批次处理
         
@@ -146,9 +145,9 @@ class SmartScorer:
 
     def _apply_default_scores(
         self,
-        batch: List[NewsItem],
+        batch: list[NewsItem],
         reason: str = "unknown"
-    ) -> List[NewsItem]:
+    ) -> list[NewsItem]:
         """为批次应用默认分数"""
         default_score = getattr(self.config, 'default_score_on_error', 3.0)
         max_error_len = getattr(self.config, 'max_error_message_length', 50)
@@ -163,7 +162,7 @@ class SmartScorer:
         logger.warning(f"已为批次应用默认分数 ({len(batch)} 条): {reason[:max_error_len]}")
         return batch
 
-    async def _process_batches(self, batches: List[List[NewsItem]]) -> List[NewsItem]:
+    async def _process_batches(self, batches: list[list[NewsItem]]) -> list[NewsItem]:
         """
         并行批量处理（带重试）
         
@@ -197,7 +196,7 @@ class SmartScorer:
         # 使用信号量控制并发
         semaphore = asyncio.Semaphore(max_concurrent)
 
-        async def process_with_semaphore(batch_idx: int, batch: List[NewsItem]) -> List[NewsItem]:
+        async def process_with_semaphore(batch_idx: int, batch: list[NewsItem]) -> list[NewsItem]:
             """带信号量控制的批次处理（带重试）"""
             async with semaphore:
                 batch_id = f"{batch_idx}/{total_batches}"
@@ -223,13 +222,13 @@ class SmartScorer:
 
         return all_scored
 
-    def _select_top_items(self, items: List[NewsItem]) -> List[NewsItem]:
+    def _select_top_items(self, items: list[NewsItem]) -> list[NewsItem]:
         """筛选Top新闻（按分数+时间+多样性）"""
         # 按AI评分降序，评分相同时按发布时间降序（新的在前）
         sorted_items = sorted(items, key=lambda x: (x.ai_score or 0, x.published_at), reverse=True)
         return self._ensure_diversity(sorted_items)
     
-    def _ensure_diversity(self, items: List[NewsItem]) -> List[NewsItem]:
+    def _ensure_diversity(self, items: list[NewsItem]) -> list[NewsItem]:
         """
         确保分类多样性（混合方案）
         
@@ -263,10 +262,10 @@ class SmartScorer:
 
     def _ensure_diversity_mixed(
         self,
-        items: List[NewsItem],
-        by_category: Dict[str, List[NewsItem]],
+        items: list[NewsItem],
+        by_category: dict[str, list[NewsItem]],
         max_items: int
-    ) -> List[NewsItem]:
+    ) -> list[NewsItem]:
         """
         混合方案：固定保障 + 比例分配 + 轮询补充
         """
@@ -357,10 +356,10 @@ class SmartScorer:
 
     def _ensure_diversity_original(
         self,
-        items: List[NewsItem],
-        by_category: Dict[str, List[NewsItem]],
+        items: list[NewsItem],
+        by_category: dict[str, list[NewsItem]],
         max_items: int
-    ) -> List[NewsItem]:
+    ) -> list[NewsItem]:
         """
         原有算法（向后兼容）
         """
@@ -411,15 +410,15 @@ class SmartScorer:
                 current_avg * (self._stats['total_processed'] - input_count) + duration
             ) / self._stats['total_processed']
 
-    def get_stats(self) -> Dict:
+    def get_stats(self) -> dict:
         return self._stats.copy()
 
     def select_top_items(
         self,
-        items: List[NewsItem],
+        items: list[NewsItem],
         min_threshold: float = 0.0,
-        max_items: Optional[int] = None
-    ) -> List[NewsItem]:
+        max_items: int | None = None
+    ) -> list[NewsItem]:
         """
         统一的选择Top新闻接口（对外暴露）
         

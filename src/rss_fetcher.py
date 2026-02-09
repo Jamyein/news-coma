@@ -8,7 +8,6 @@ import logging
 import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta
-from typing import List, Optional
 
 import feedparser
 from dateutil import parser as date_parser
@@ -108,7 +107,7 @@ class RSSFetcher:
         )
         return unique_items
     
-    def _fetch_single(self, source: RSSSource, last_fetch_time: Optional[datetime] = None) -> List[NewsItem]:
+    def _fetch_single(self, source: RSSSource, last_fetch_time: datetime | None = None) -> list[NewsItem]:
         """
         获取单个RSS源的新闻（支持基于时间节点的增量获取）
         
@@ -226,7 +225,7 @@ class RSSFetcher:
             content=full_content    # 完整内容（可能被截断），用于AI评分
         )
     
-    def _deduplicate(self, items: List[NewsItem]) -> List[NewsItem]:
+    def _deduplicate(self, items: list[NewsItem]) -> list[NewsItem]:
         """
         纯语义去重 - 简化架构
         去掉低效的Levenshtein字符级去重，保留URL精确去重 + TF-IDF语义去重
@@ -276,7 +275,7 @@ class RSSFetcher:
         
         return final_items
     
-    def _semantic_deduplicate(self, items: List[NewsItem]) -> List[NewsItem]:
+    def _semantic_deduplicate(self, items: list[NewsItem]) -> list[NewsItem]:
         """
         轻量级语义去重 - 使用TF-IDF (GitHub Actions友好，~10MB内存)
         识别语义相似但表述不同的标题

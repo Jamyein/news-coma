@@ -4,8 +4,6 @@ Markdown生成模块
 """
 import logging
 from datetime import datetime
-from typing import List
-
 from pathlib import Path
 
 from src.models import NewsItem
