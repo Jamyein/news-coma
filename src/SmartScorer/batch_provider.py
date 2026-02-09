@@ -3,6 +3,7 @@
 import asyncio
 import json
 import logging
+from typing import Any
 from openai import AsyncOpenAI, RateLimitError
 
 from src.models import AIConfig, NewsItem

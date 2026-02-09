@@ -6,6 +6,7 @@ import json
 import logging
 from datetime import datetime, timedelta
 from pathlib import Path
+from typing import Any
 
 logger = logging.getLogger(__name__)
 
@@ -13,7 +14,7 @@ logger = logging.getLogger(__name__)
 class HistoryManager:
     """历史数据管理器 - 扩展AI评分缓存功能"""
     
-    def _get_default_structure(self) -> dict[str, any]:
+    def _get_default_structure(self) -> dict[str, Any]:
         """获取默认数据结构"""
         return {
             "last_run": None,
