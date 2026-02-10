@@ -127,15 +127,18 @@ class RSSGenerator:
         
         return html.strip()
     
-    def generate(self) -> str:
+    def generate(self, required_source: str = None) -> str:
         """
         基于Markdown文件生成RSS feed.xml
         
+        Args:
+            required_source: 可选，'archive' 或 'latest'，如果提供则使用此值而不重新检测
+            
         Returns:
             生成的RSS XML字符串
         """
         # 收集所有Markdown文件
-        markdown_files = self._collect_markdown_files()
+        markdown_files = self._collect_markdown_files(required_source)
         
         # 解析文件信息
         file_infos = []
@@ -236,8 +239,12 @@ class RSSGenerator:
         except Exception as e:
             logger.error(f"记录智能切换统计失败: {e}")
     
-    def _collect_markdown_files(self) -> list[Path]:
-        """收集archive和docs目录中的所有Markdown文件，支持智能切换逻辑"""
+    def _collect_markdown_files(self, required_source: str = None) -> list[Path]:
+        """收集archive和docs目录中的所有Markdown文件，支持智能切换逻辑
+        
+        Args:
+            required_source: 可选，'archive' 或 'latest'，如果提供则使用此值而不重新检测
+        """
         markdown_files = []
         
         # 收集archive目录中的所有文件
@@ -249,8 +256,12 @@ class RSSGenerator:
         latest_file = self.docs_dir / "latest.md"
         
         if latest_file.exists():
-            # 使用共享决策逻辑
+            # 使用传入的required_source或重新检测
+            # 注意：无论是否传入required_source，都需要获取archive_path用于'archive'模式
             mode, archive_path = self._determine_smart_switch_mode()
+            if required_source:
+                # 使用传入的模式，但保持检测到的archive_path（确保一致性）
+                mode = required_source
             
             if mode == 'latest':
                 # 增量模式：使用latest.md

@@ -229,8 +229,8 @@ class RSSAggregator:
             logger.error("❌ RSS需要archive文件但生成失败")
             raise RuntimeError("RSS需要archive文件但生成失败")
         
-        # 4. 生成RSS（根据现有文件自动选择数据源）
-        self.rss_gen.generate()
+        # 4. 生成RSS（使用之前检测确定的required_source，确保一致性）
+        self.rss_gen.generate(required_source=required_source)
         logger.info(f"✓ RSS feed: feed.xml")
     
     def _update_stats(self, run_time: datetime, all_items: list[NewsItem],
