@@ -2,192 +2,361 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <channel>
     <title>科技新闻精选</title>
-    <link>https://github.com/username/news</link>
+    <link>https://github.com/Jamyein/news-coma</link>
     <description>由 AI 筛选的高质量科技新闻聚合，每6小时自动更新</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 09 Feb 2026 12:22:15 GMT</lastBuildDate>
-    <pubDate>Mon, 09 Feb 2026 12:22:15 GMT</pubDate>
-    <atom:link href="https://username.github.io/news/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Feb 2026 02:02:00 GMT</lastBuildDate>
+    <pubDate>Tue, 10 Feb 2026 02:02:00 GMT</pubDate>
+    <atom:link href="https://Jamyein.github.io/news-coma/feed.xml" rel="self" type="application/rss+xml" />
     <image>
         <url>https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</url>
         <title>科技新闻精选</title>
-        <link>https://github.com/username/news</link>
+        <link>https://github.com/Jamyein/news-coma</link>
     </image>
 
     <item>
-        <title>2026年02月09日 19:41 新闻汇总</title>
-        <link>https://username.github.io/news/</link>
+        <title>2026年02月10日 10:02 新闻汇总</title>
+        <link>https://Jamyein.github.io/news-coma/</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 09 Feb 2026 20:18:38 GMT</pubDate>
-        <guid>docs/latest.md#2026-02-09-19-41</guid>
+        <pubDate>Tue, 10 Feb 2026 02:02:00 GMT</pubDate>
+        <guid>docs/latest.md#2026-02-10-10-02</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
-<blockquote>🕐 更新时间: 2026年02月09日 19:41</blockquote>
+<blockquote>🕐 更新时间: 2026年02月10日 10:02</blockquote>
 <blockquote>📊 本期精选 <strong>30</strong> 条高质量新闻</blockquote>
 <blockquote>🤖 由 AI 自动分类、筛选、翻译和总结</blockquote>
 <hr/>
-<h2>💰 财经新闻 (19条)</h2>
-<p>精选 <strong>19</strong> 条财经新闻</p>
-<h3>1. 清洁能源发电收入占比提升</h3>
+<h2>💰 财经新闻 (15条)</h2>
+<p>精选 <strong>15</strong> 条财经新闻</p>
+<h3>1. 美联储缩表影响几何？专家：过程缓慢，市场关注流动性</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.9/10</p>
+<p><strong>📝 摘要</strong>: 美联储缩表过程缓慢，主要依赖被动缩减，市场关注流动性变化。缩表可能推高利率，但关键在于美国财政部如何发行新债。</p>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765331">美联储缩减资产负债表：影响有多大？</a>
+<hr/>
+<h3>2. 前美联储副主席：沃什美联储将调整前瞻指引等政策</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.9/10</p>
+<p><strong>📝 摘要</strong>: 前美联储副主席Rich Clarida认为，沃什领导下的美联储将在前瞻指引、资产负债表管理及信贷配置等核心领域进行调整。预计将支持至少两次25个基点的降息，将联邦基金利率降至3%-3.25%区间。</p>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765332">前瞻指引消失？前美联储副主席：“沃什美联储”或有三大领域调整</a>
+<hr/>
+<h3>3. 关税传导与“一月效应”或推高美国1月CPI</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.9/10</p>
+<p><strong>📝 摘要</strong>: 受年初定价重置的“一月效应”及关税成本传导影响，美国1月核心通胀环比增速或将反弹。服务业通胀的潜在放缓可能成为美联储眼中的积极信号。</p>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765319">关税传导与"一月效应"或推高美国1月CPI？</a>
+<hr/>
+<h3>4. A股三大指数开盘涨跌不一</h3>
 <p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
-<p><strong>📝 摘要</strong>: 我国清洁能源发电销售收入占比稳步提高，2025年占比达42.6%，较“十三五”末提高7.2个百分点。清洁能源发展有助于减排节水，但需关注技术进步和成本控制。</p>
-<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3675924337107842?f=rss">税收数据显示：我国清洁能源发电销售收入占比稳步提高</a>
+<p><strong>📝 摘要</strong>: A股三大指数开盘涨跌不一，上海电影涨停。这一现象反映了市场对个别股票的强烈反应，同时也体现了市场整体的不确定性。专家分析，市场情绪和宏观经济因素将继续影响股市走势。投资者需关注市场动态，谨慎操作。</p>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3676812727624582?f=rss">A股三大指数开盘涨跌不一，上海电影涨停</a>
 <hr/>
-<h3>2. 日本选举后市场风险偏好回升，美国未来市场预期向好</h3>
-<p><strong>📌 来源</strong>: WSJ 市场 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.7/10</p>
-<p><strong>📝 摘要</strong>: 日本首相Sanae Takaichi赢得国会选举，获得推行扩张性财政政策和增长政策的授权。这一结果提振了全球市场信心，美国未来市场预期向好。分析师认为，日本政策将有助于推动全球经济复苏。</p>
-<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/finance/stocks/u-s-future-nudge-higher-as-japanese-election-coaxes-investors-back-to-risk-f65690dd?mod=rss_markets_main">U.S. Future Nudge Higher as Japanese Election Coaxes Investors Back to Risk</a>
+<h3>5. 恒指开盘涨0.65%</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 恒指开盘上涨0.65%，恒生科技指数上涨0.82%。这一走势反映了市场对香港股市的信心，同时也受到宏观经济和行业因素的影响。专家指出，投资者需关注宏观经济和行业动态，以把握市场机会。</p>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3676807853892225?f=rss">恒指开盘涨0.65%，恒生科技指数涨0.82%</a>
 <hr/>
-<h3>3. NatWest收购Evelyn Partners资产翻倍</h3>
+<h3>6. 高瓴资本收购QUEST GLOBAL 5%股份</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 高瓴资本计划以45亿美元收购QUEST GLOBAL 5%股份。这一投资表明了高瓴资本对QUEST GLOBAL的信心，同时也反映了市场对科技行业的关注。专家分析，科技行业将继续保持增长势头。</p>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3676795428070279?f=rss">高瓴资本计划以45亿美元的估值收购QUEST GLOBAL的5%股份</a>
+<hr/>
+<h3>7. 凯雷集团：石油和金属市场投资不足</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 凯雷集团首席战略官表示，石油和金属市场投资严重不足，存在巨大上涨空间。这一观点反映了市场对能源行业的关注，同时也对投资者提供了投资方向。专家分析，能源市场将继续受到供需关系和地缘政治等因素的影响。</p>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3676785202029445?f=rss">凯雷集团首席战略官：石油和金属市场“投资严重不足”，有巨大上涨空间</a>
+<hr/>
+<h3>8. 美国计划从下一波芯片关税中豁免大型科技企业</h3>
+<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 美国政府计划根据台积电在美国的投资承诺，从下一波芯片关税中豁免大型科技企业。这一政策将影响芯片行业的发展和国际贸易关系。</p>
+<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/e6f7f69a-2552-45f5-ae4c-6f1135e5cde1">US plans Big Tech carve-out from next wave of chip tariffs</a>
+<hr/>
+<h3>9. Anthropic融资20亿美元，AI竞争加剧</h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: Anthropic公司近日完成20亿美元融资，此前仅五个月前已筹集13亿美元。AI领域的激烈竞争和计算成本上升促使公司加速融资。此举可能进一步加剧AI领域的竞争格局。</p>
+<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/09/anthropic-closes-in-on-20b-round/">Anthropic closes in on $20B round</a>
+<hr/>
+<h3>10. 央行逆回购操作3114亿元</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.7/10</p>
+<p><strong>📝 摘要</strong>: 央行进行3114亿元7天期逆回购操作，操作利率1.40%。这一举措旨在维持流动性稳定，对市场利率和金融市场产生重要影响。分析认为，逆回购操作有助于稳定市场预期，支持实体经济发展。专家预计，未来央行将继续根据市场情况灵活开展货币政策操作。</p>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3676817474052737?f=rss">央行开展3114亿元7天期逆回购操作</a>
+<hr/>
+<h3>11. 人民币兑美元中间价调升65个基点</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.7/10</p>
+<p><strong>📝 摘要</strong>: 人民币兑美元中间价调升65个基点，报6.9458。这一变化反映了市场对人民币汇率的预期，同时也受到国际汇率市场的影响。专家分析，人民币汇率将继续受到多种因素影响，投资者需关注汇率波动风险。</p>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3676804942963332?f=rss">人民币兑美元中间价调升65个基点</a>
+<hr/>
+<h3>12. 今日经济大钱流向资本而非劳动</h3>
 <p><strong>📌 来源</strong>: WSJ 市场 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
-<p><strong>📝 摘要</strong>: NatWest宣布以37亿美元收购财富管理公司Evelyn Partners，使旗下管理资产规模增至1270亿英镑。此次收购将显著扩大NatWest的资产管理规模，对市场产生重要影响。分析师预计，这将进一步推动行业整合，提升NatWest的市场竞争力。</p>
-<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/finance/banking/natwest-agrees-to-buy-wealth-manager-evelyn-partners-for-3-7-billion-f1d5bd1d?mod=rss_markets_main">NatWest Agrees to Buy Wealth Manager Evelyn Partners for $3.7 Billion</a>
+<p><strong>📝 摘要</strong>: 随着利润和股价的飙升，GDP更多地流向公司、高级员工和股东，AI技术将加剧这一趋势。</p>
+<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/economy/jobs/capital-labor-wealth-economy-2fcf6c2f?mod=rss_markets_main">The Big Money in Today’s Economy Is Going to Capital, Not Labor</a>
 <hr/>
-<h3>4. 创业板涨3%，光伏产业链爆发，AI应用强势</h3>
+<h3>13. Mubadala收购Clear Channel Outdoor Holdings</h3>
+<p><strong>📌 来源</strong>: WSJ 市场 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 户外广告公司Clear Channel Outdoor Holdings同意以62亿美元的企业价值被Mubadala Capital收购，合作方为TWG Global。</p>
+<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/business/deals/mubadala-to-buy-clear-channel-outdoor-holdings-ffebed8c?mod=rss_markets_main">Mubadala to Buy Clear Channel Outdoor Holdings</a>
+<hr/>
+<h3>14. 诺和诺德股价反弹，Hims & Hers取消仿制减肥药计划</h3>
 <p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
-<p><strong>📝 摘要</strong>: 2月9日，A股三大股指集体上涨，创业板涨3%，光伏产业链和AI应用领涨。特斯拉计划扩大太阳能电池制造业务，目标在未来三年内实现每年100吉瓦的太阳能制造能力。AI应用强势拉升，算力硬件股大涨。</p>
-<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765271">创业板涨3%，AI应用、CPO暴涨，光伏掀涨停潮，恒科指涨1%，澜起科技IPO首日涨超60%</a>
+<p><strong>📝 摘要</strong>: 诺和诺德股价因Hims & Hers取消仿制减肥药计划而反弹，市场对核心产品Wegovy的担忧缓解。事件显示监管层对未经授权的复合GLP-1药物监管加强，对行业竞争格局产生影响。</p>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765309">诺和诺德欧股大涨9%，竞争对手取消仿制Wegovy减肥药项目</a>
 <hr/>
-<h3>5. 安倍连任日本首相，股市创纪录新高</h3>
-<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
-<p><strong>📝 摘要</strong>: 安倍晋三在选举中获胜，将带领日本政府以数十年来最大的多数执政，推动股市创下新高。这一事件对日本经济和股市具有重要影响，预计将推动相关行业和企业的业绩增长。专家分析，安倍连任将有助于稳定日本政治和经济环境，为市场带来长期利好。</p>
-<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/13556ff7-89be-463f-8dbd-a16540a47dab">Japanese stocks soar to record after Takaichi’s landslide election win</a>
+<h3>15. 美伊风险溢价支撑油价上涨</h3>
+<p><strong>📌 来源</strong>: WSJ 市场 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 美国与伊朗谈判风险溢价推动油价上涨。市场对美伊关系保持警惕，地缘政治风险成为油价支撑因素。</p>
+<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/finance/commodities-futures/oil-falls-on-possible-position-adjustment-amid-middle-east-developments-59ed8ea3?mod=rss_markets_main">Oil Futures Gain As U.S.-Iran Risk Premium Holds</a>
 <hr/>
-<h3>6. 贝莱德看好中国经济，AI投资迎来历史性建设浪潮</h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
-<p><strong>📝 摘要</strong>: 贝莱德大中华区投资策略师陆文杰认为，AI或将迎来新一轮历史性建设浪潮，AI领域的投资金额巨大，对全球经济的结构造成了显著影响。AI投资占美国经济的比重，其影响已经可以堪比国内2008年的“4万亿”阶段。</p>
-<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765312">贝莱德大中华区陆文杰：中国经济2026将保持强劲增长，电力和医疗健康确定性更好</a>
+<h2>🔬 科技新闻 (8条)</h2>
+<p>精选 <strong>8</strong> 条科技新闻</p>
+<h3>1. 追踪软件泄露，数百万用户数据被曝光</h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.2/10</p>
+<p><strong>📝 摘要</strong>: 自2017年以来，至少27家追踪软件公司被黑客攻击或泄露客户和受害者数据。近日，uMobix数据泄露事件再次引发关注，凸显了追踪软件的安全风险和隐私保护的重要性。</p>
+<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/09/hacked-leaked-exposed-why-you-should-stop-using-stalkerware-apps/">Hacked, leaked, exposed: Why you should never use stalkerware apps</a>
 <hr/>
-<h3>7. 摩根士丹利：全球指标乐观，市场波动加剧</h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
-<p><strong>📝 摘要</strong>: 摩根士丹利发布报告称，全球市场指标普遍乐观，但市场波动加剧。铜价暴涨36%，韩国股市飙升68%，金融股跑赢大盘。财政、货币和监管政策放松，AI投资扩大，周期性前景看好，但过热信号尚未出现。</p>
-<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765266">摩根士丹利：全球所有指标都很乐观，是否“好得过头”？</a>
+<h3>2. 黑客窃取50万追踪软件用户支付记录</h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.2/10</p>
+<p><strong>📝 摘要</strong>: 超过50万购买手机监控和社交媒体窥探应用的客户，其电子邮件地址和部分支付卡信息被公开。此事件突显了追踪软件的安全漏洞和用户隐私风险。</p>
+<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/09/hacktivist-scrapes-over-500000-stalkerware-customers-payment-records/">Hacktivist scrapes over 500,000 stalkerware customers’ payment records</a>
 <hr/>
-<h3>8. Takaichi胜选推动日股上涨，伯克希尔哈撒韦收益丰厚</h3>
-<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.4/10</p>
-<p><strong>📝 摘要</strong>: Takaichi在2026年日本大选中获胜，推动日股上涨12%，伯克希尔哈撒韦因此收益丰厚。这一事件对日本股市具有重要影响，预计将持续吸引投资者关注。</p>
-<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/takaichis-victory-in-japanese-election-means-a-billion-dollar-payday-for-berkshire-hathaway-00674bab?mod=mw_rss_topstories">Takaichi’s victory in Japanese election means a billion dollar payday for Berkshire Hathaway</a>
+<h3>3. Ivanti EPMM中的潜伏后门攻击</h3>
+<p><strong>📌 来源</strong>: Hacker News | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: Hacker News报道，攻击者将潜伏后门植入Ivanti EPMM，对网络安全构成严重威胁，影响众多企业，需引起高度重视。</p>
+<strong>🔗 原文链接</strong>: <a href="https://defusedcyber.com/ivanti-epmm-sleeper-shells-403jsp">Sleeper Shells: Attackers Are Planting Dormant Backdoors in Ivanti EPMM</a>
 <hr/>
-<h3>9. A股市场风格转变，成长股优于价值股</h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.4/10</p>
-<p><strong>📝 摘要</strong>: 华创证券策略周报显示，A股市场短期调整后，成长股将优于价值股，成长机会不再局限于科创板块，顺周期和地产链的困境反转值得关注。市场温度回落至去年11月水平，投资者应把握中长线配置机会。</p>
-<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765298">A股风格之辩：成长不只科创！</a>
+<h3>4. 地平线与宁德时代达成战略合作</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 地平线与宁德时代达成战略合作，共同推动汽车智能化发展。这一合作将促进双方在汽车智能化领域的研发和应用，对行业发展产生重要影响。专家认为，汽车智能化将成为未来汽车产业的重要趋势。</p>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3676804512719748?f=rss">地平线与宁德时代子公司时代智能达成战略合作</a>
 <hr/>
-<h3>10. 美股反弹加剧投资者担忧，AI支出回报率疑虑挥之不去</h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.4/10</p>
-<p><strong>📝 摘要</strong>: 上周五美股强劲反弹，但这场反弹非但未能安抚市场情绪，反而加剧了投资者对后市波动的担忧。围绕人工智能颠覆效应和巨额AI支出回报率的疑虑依然挥之不去，市场脆弱性暴露无遗。</p>
-<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765301">美股大幅反弹，只会让投资者更加紧张？</a>
+<h3>5. 花旗警告：AI冲击或致软件股价值蒸发三分之一</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.7/10</p>
+<p><strong>📝 摘要</strong>: 花旗指出AI对软件股的冲击可能导致终端价值蒸发三分之一，市场对行业未来利润率预期下降。AI技术对现有商业模式的颠覆引发估值重估，预计行业将进入个股分化阶段。</p>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765297">美软件股危机未除！花旗：AI冲击或让终端价值蒸发三分之一</a>
 <hr/>
-<h3>11. 美企在华建厂压倒对手引争议</h3>
-<p><strong>📌 来源</strong>: WSJ 经济 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.4/10</p>
-<p><strong>📝 摘要</strong>: 特朗普政府推动美国制造业投资，但当地产业面临竞争压力。美国某工厂开业后击败竞争对手，引发业界关注。此举可能加剧美国与贸易伙伴的紧张关系，影响全球供应链布局。专家认为，长期来看，美国制造业的竞争力取决于技术创新和人才培养。</p>
-<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/business/tariffs-china-trump-trade-4495c2a4?mod=pls_whats_news_us_business_f">The Chinese Factory That Opened in the U.S. and Clobbered Its Rivals</a>
+<h3>6. 爱芯元智登陆港交所，成为边缘计算AI芯片首家上市企业</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 爱芯元智在港交所上市，成为边缘计算AI芯片首家上市企业。公司已开发并商业化多代SoC产品，累计出货SoC 1.65亿颗，市场前景广阔。</p>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3676836287816327?f=rss">爱芯元智登陆港交所</a>
 <hr/>
-<h3>12. 商务部推动汽车消费扩容提质</h3>
-<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.3/10</p>
-<p><strong>📝 摘要</strong>: 商务部于2月6日召开汽车企业座谈会，强调扩大汽车消费潜力，计划开展改革试点，优化汽车以旧换新政策，推动汽车消费扩容提质。会议指出，2026年将与相关部门合作，实施多项措施。</p>
-<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3675970682053255?f=rss">商务部召开汽车企业座谈会</a>
+<h3>7. Waymo在纳什维尔测试无人驾驶出租车</h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: Waymo公司正在纳什维尔进行无人驾驶出租车的测试，这是其推出商业化服务的前奏。测试的进行标志着自动驾驶技术向商业化迈出了重要一步，预计将对未来出行方式产生深远影响。</p>
+<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/09/waymo-is-testing-driverless-robotaxis-in-nashville/">Waymo is testing driverless robotaxis in Nashville</a>
 <hr/>
-<h3>13. 外资涌入美国市场，热钱繁荣面临考验</h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.3/10</p>
-<p><strong>📝 摘要</strong>: 尽管全球对美国的好感度持续下滑，但外国投资者正以创纪录的规模涌入美国金融市场。去年外国投资者向美国金融资产注入约1.6万亿美元，其中近7000亿美元流入股市，但这场由“热钱”推动的繁荣正面临考验。</p>
-<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765293">外资口嫌体正直！“白天吐槽，晚上狂买”美国，这场“热钱”繁荣还能撑多久？</a>
+<h3>8. 科技巨头超级碗AI投资回报不佳</h3>
+<p><strong>📌 来源</strong>: WSJ 经济 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 科技巨头在超级碗期间展示AI产品，但投资回报不佳。这表明AI技术的市场应用仍需时间，对投资者和科技企业有重要启示。</p>
+<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/articles/ai-fumbles-its-big-super-bowl-investment-as-viewers-opt-for-laughter-and-tears-3e3dff5f?mod=pls_whats_news_us_business_f">AI Fumbles Its Big Super Bowl Investment as Viewers Opt for Laughter and Tears</a>
 <hr/>
-<h3>14. 澳洲AI公司获100亿美元融资，拟年内IPO</h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.3/10</p>
-<p><strong>📝 摘要</strong>: 澳大利亚人工智能初创公司Firmus Technologies Pty.获得100亿美元贷款融资，资金将用于推动其数据中心建设计划。该公司预计将于今年晚些时候在悉尼上市。</p>
-<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765300">黑石入局、英伟达加持：澳洲AI公司获100亿美元融资，拟年内IPO</a>
+<h2>🏛️ 社会政治 (7条)</h2>
+<p>精选 <strong>7</strong> 条社会政治新闻</p>
+<h3>1. Meta被控助长儿童色情</h3>
+<p><strong>📌 来源</strong>: The Verge | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 8.5/10</p>
+<p><strong>📝 摘要</strong>: The Verge报道，新墨西哥州起诉Meta，指控其平台助长儿童色情，Meta内部讨论与公开声明存在矛盾，引发社会对社交媒体责任问题的关注。</p>
+<strong>🔗 原文链接</strong>: <a href="https://www.theverge.com/policy/876168/new-mexico-attorney-general-meta-child-predator-social-media-addiction-trial">New Mexico goes to trial to accuse Meta of facilitating child predators</a>
 <hr/>
-<h3>15. 高盛警告：本周股市或面临更多抛售压力</h3>
-<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.2/10</p>
-<p><strong>📝 摘要</strong>: 高盛分析师Gail Hafif警告，本周股市可能面临更多抛售压力，特别是如果S&P 500指数进一步下跌。这一预测对投资者具有指导意义，提醒他们关注市场风险。</p>
-<strong>🔗 原文链接</strong>: <a href="https://www.marketwatch.com/story/heres-why-goldman-sachs-is-warning-of-more-selling-for-stocks-this-week-94731adb?mod=mw_rss_topstories">Here’s why Goldman Sachs is warning of more selling for stocks this week</a>
+<h3>2. Alphabet发债200亿支持AI，百年期债券引关注</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 8.1/10</p>
+<p><strong>📝 摘要</strong>: Alphabet通过美元债券发行筹资200亿美元，支持AI投资，同时发行百年期英镑债。此举标志着科技巨头在AI领域的巨额投资，预计将推动投资级债券发行总额达到创纪录的2.25万亿美元。</p>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765338">Alphabet美元债筹资200亿美元超预期，罕见发行100年期英镑债</a>
 <hr/>
-<h3>16. 1月通胀数据周五公布，华尔街预期可能出现意外</h3>
-<p><strong>📌 来源</strong>: WSJ 全球经济 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.2/10</p>
-<p><strong>📝 摘要</strong>: 1月通胀数据将在周五公布，华尔街预期可能出现意外。分析师认为，如果通胀数据高于预期，可能导致美联储进一步加息，对金融市场产生冲击。</p>
-<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/economy/inflation-january-consumer-prices-e1eaed3d">January’s inflation numbers land on Friday and many on Wall Street are bracing for an unpleasant surprise</a>
+<h3>3. Alphabet计划通过发行美元债筹集150亿，巩固AI建设资本储备</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 8.1/10</p>
+<p><strong>📝 摘要</strong>: Alphabet计划通过发行美元债筹集约150亿美元，巩固AI建设资本储备。此举标志着科技巨头在AI领域的巨额投资，预计将推动投资级债券发行总额达到创纪录的2.25万亿美元。</p>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765325">报道：Alphabet计划通过发行美元债筹集约150亿美元，巩固AI建设资本储备</a>
 <hr/>
-<h3>17. 日本大选后市场信心恢复</h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.2/10</p>
-<p><strong>📝 摘要</strong>: 日本首相高市早苗所在的自民党在众议院选举中获得压倒性胜利，市场对更积极的财政政策预期上升。日经225指数盘中一度大涨5.7%，突破57,000点大关，显示市场信心恢复。</p>
-<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765313">日股日元齐涨，高市早苗让步，市场选择暂时相信！</a>
+<h3>4. 企业不保护自然将面临灭绝</h3>
+<p><strong>📌 来源</strong>: BBC Business | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 8.1/10</p>
+<p><strong>📝 摘要</strong>: 一份重要报告警告，除非企业采取措施保护自然环境，否则它们将面临灭绝。专家呼吁企业采取紧急行动，以恢复支持其运营的自然系统。这一报告强调了企业社会责任和环境保护的重要性。</p>
+<strong>🔗 原文链接</strong>: <a href="https://www.bbc.com/news/articles/cq8g20xgdjwo?at_medium=RSS&at_campaign=rss">Businesses face extinction unless they protect nature, major report warns</a>
 <hr/>
-<h3>18. 全球市场风险偏好修复</h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.2/10</p>
-<p><strong>📝 摘要</strong>: 日本首相高市早苗领导的自民党取得选举胜利，推动亚洲股市创下历史新高。全球市场风险偏好修复，黄金和白银等贵金属同步上涨，显示市场对政治不确定性的消除。</p>
-<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765262">美股期货震荡回落，美债走跌，“高市交易”助推日股大涨6%，黄金涨至5040美元</a>
+<h3>5. 欧盟反垄断起诉Meta，拟强制WhatsApp开放</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.9/10</p>
+<p><strong>📝 摘要</strong>: 欧盟反垄断监管机构对Meta发起指控，拟强制要求Meta在调查期间保持WhatsApp对竞争对手的开放性。此举旨在保护AI领域的有效竞争。</p>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765323">欧盟反垄断起诉Meta：拟强制WhatsApp开放，严禁封杀第三方AI竞争对手</a>
 <hr/>
-<h3>19. 日本股市上涨，Takaichi赢得选举</h3>
-<p><strong>📌 来源</strong>: BBC Business | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.2/10</p>
-<p><strong>📝 摘要</strong>: BBC Business报道日本首相Takaichi赢得选举，日本股市应声上涨。这一事件可能对日本经济和股市产生积极影响，对投资者和分析师有重要参考价值。</p>
-<strong>🔗 原文链接</strong>: <a href="https://www.bbc.com/news/articles/cjd9k852zdjo?at_medium=RSS&at_campaign=rss">Japanese stocks surge as Takaichi secures historic election victory</a>
+<h3>6. 春运铁路发送旅客1395万</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 春运期间，全国铁路预计发送旅客1395万人次，加开列车1363列。这一数据反映了春运期间的客流高峰，对旅客出行和铁路运输能力提出了挑战。预计将促进铁路运输行业的发展，并对春运期间的交通秩序和旅客体验产生重要影响。专家指出，随着春运的推进，铁路部门需加强运输组织，确保旅客安全、便捷出行。</p>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3676823483949953?f=rss">今天全国铁路预计发送旅客1395万人次</a>
 <hr/>
-<h2>🔬 科技新闻 (5条)</h2>
-<p>精选 <strong>5</strong> 条科技新闻</p>
-<h3>1. 盟固利投建锂离子电池项目</h3>
-<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.2/10</p>
-<p><strong>📝 摘要</strong>: 盟固利计划投资9.29亿元建设年产3万吨锂离子电池正极材料项目，项目建成后预计实现年产0.5万吨高电压钴酸锂等材料。</p>
-<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3675934838334080?f=rss">盟固利：拟9.29亿元投建年产3万吨锂离子电池正极材料项目</a>
+<h3>7. T3出行春运打车需求增45%</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.3/10</p>
+<p><strong>📝 摘要</strong>: T3出行预测春运期间打车需求同比增长45%。这一增长反映了春节期间出行高峰，对打车服务行业提出了更高要求。预计将推动打车服务行业的发展，并可能对城市交通产生一定影响。专家建议，打车服务企业应加强运力调配，确保乘客出行需求得到满足。</p>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3676817008468869?f=rss">T3出行：春运期间用户打车出行需求量同比增长将超45%</a>
+<hr/>]]></content:encoded>
+    </item>
+    <item>
+        <title>2026年02月10日 新闻汇总</title>
+        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-10.md</link>
+        <description>本期精选 30 条高质量科技新闻</description>
+        <pubDate>Tue, 10 Feb 2026 02:02:00 GMT</pubDate>
+        <guid>archive/2026-02-10.md</guid>
+        <category>综合新闻</category>
+        <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
+<blockquote>🕐 更新时间: 2026年02月10日 10:02</blockquote>
+<blockquote>📊 本期精选 <strong>30</strong> 条高质量新闻</blockquote>
+<blockquote>🤖 由 AI 自动分类、筛选、翻译和总结</blockquote>
 <hr/>
-<h3>2. 长春高新子公司临床试验申请获批</h3>
-<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.2/10</p>
-<p><strong>📝 摘要</strong>: 长春高新子公司金赛药业注射用GenSci136治疗用生物制品1类药物临床试验申请获得批准，用于治疗免疫球蛋白A肾病。</p>
-<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3675928872460933?f=rss">长春高新：子公司注射用GenSci136临床试验申请获批</a>
+<h2>💰 财经新闻 (15条)</h2>
+<p>精选 <strong>15</strong> 条财经新闻</p>
+<h3>1. 美联储缩表影响几何？专家：过程缓慢，市场关注流动性</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.9/10</p>
+<p><strong>📝 摘要</strong>: 美联储缩表过程缓慢，主要依赖被动缩减，市场关注流动性变化。缩表可能推高利率，但关键在于美国财政部如何发行新债。</p>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765331">美联储缩减资产负债表：影响有多大？</a>
 <hr/>
-<h3>3. 算法寻地球最长视距</h3>
-<p><strong>📌 来源</strong>: Hacker News | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.2/10</p>
-<p><strong>📝 摘要</strong>: Hacker News报道，研究人员利用算法找到了地球上最长视距的位置，这一发现对地理信息科学有重要意义。该算法的复杂度和计算量较大，对相关领域的研究具有指导作用。</p>
-<strong>🔗 原文链接</strong>: <a href="https://alltheviews.world">Show HN: Algorithmically Finding the Longest Line of Sight on Earth</a>
+<h3>2. 前美联储副主席：沃什美联储将调整前瞻指引等政策</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.9/10</p>
+<p><strong>📝 摘要</strong>: 前美联储副主席Rich Clarida认为，沃什领导下的美联储将在前瞻指引、资产负债表管理及信贷配置等核心领域进行调整。预计将支持至少两次25个基点的降息，将联邦基金利率降至3%-3.25%区间。</p>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765332">前瞻指引消失？前美联储副主席：“沃什美联储”或有三大领域调整</a>
 <hr/>
-<h3>4. SpaceX战略转向，全力冲刺2027年登月任务</h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.2/10</p>
-<p><strong>📝 摘要</strong>: SpaceX已正式调整战略重心，暂时搁置火星计划，全力冲刺2027年3月的登月任务。马斯克在社交平台坦承，现实终究战胜了浪漫，从火星梦想到月球务实。</p>
-<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765295">SpaceX大转向！马斯克改口：火星太远月球更快，十年内建“月球城市”</a>
+<h3>3. 关税传导与“一月效应”或推高美国1月CPI</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.9/10</p>
+<p><strong>📝 摘要</strong>: 受年初定价重置的“一月效应”及关税成本传导影响，美国1月核心通胀环比增速或将反弹。服务业通胀的潜在放缓可能成为美联储眼中的积极信号。</p>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765319">关税传导与"一月效应"或推高美国1月CPI？</a>
 <hr/>
-<h3>5. 小红书推出AI视频剪辑产品</h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 6.9/10</p>
-<p><strong>📝 摘要</strong>: 小红书技术团队推出AI视频剪辑产品OpenStoryline，定位为基于AI智能体的对话式剪辑系统。这标志着小红书在AI布局上的一次关键落子，可能影响视频剪辑行业的发展。</p>
-<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765307">小红书进击 AI 剪辑的动力</a>
+<h3>4. A股三大指数开盘涨跌不一</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: A股三大指数开盘涨跌不一，上海电影涨停。这一现象反映了市场对个别股票的强烈反应，同时也体现了市场整体的不确定性。专家分析，市场情绪和宏观经济因素将继续影响股市走势。投资者需关注市场动态，谨慎操作。</p>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3676812727624582?f=rss">A股三大指数开盘涨跌不一，上海电影涨停</a>
 <hr/>
-<h2>🏛️ 社会政治 (6条)</h2>
-<p>精选 <strong>6</strong> 条社会政治新闻</p>
-<h3>1. 台积电日本生产先进AI半导体</h3>
-<p><strong>📌 来源</strong>: Hacker News | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 8.1/10</p>
-<p><strong>📝 摘要</strong>: Hacker News报道台积电将在日本生产先进AI半导体，这一举措标志着台积电在半导体领域的进一步扩张。此举可能对全球半导体市场产生重大影响，尤其是对AI半导体的发展。</p>
-<strong>🔗 原文链接</strong>: <a href="https://apnews.com/article/semiconductors-tsmc-japan-taiwan-ai-11256f2bfde73ca23d08331ad138d6d5">TSMC to make advanced AI semiconductors in Japan</a>
+<h3>5. 恒指开盘涨0.65%</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 恒指开盘上涨0.65%，恒生科技指数上涨0.82%。这一走势反映了市场对香港股市的信心，同时也受到宏观经济和行业因素的影响。专家指出，投资者需关注宏观经济和行业动态，以把握市场机会。</p>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3676807853892225?f=rss">恒指开盘涨0.65%，恒生科技指数涨0.82%</a>
 <hr/>
-<h3>2. 香港媒体大亨李柱铭被判20年监禁</h3>
-<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.5/10</p>
-<p><strong>📝 摘要</strong>: 香港媒体大亨李柱铭因涉嫌外国勾结被判20年监禁。这一事件引发了国际社会对香港言论自由和民主权利的关注。专家认为，这一判决可能加剧香港的政治紧张局势，并对香港的国际形象产生负面影响。</p>
-<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/8baa0537-6a70-4e4d-b67d-38aff7832330">Hong Kong’s Jimmy Lai sentenced to 20 years in prison</a>
+<h3>6. 高瓴资本收购QUEST GLOBAL 5%股份</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 高瓴资本计划以45亿美元收购QUEST GLOBAL 5%股份。这一投资表明了高瓴资本对QUEST GLOBAL的信心，同时也反映了市场对科技行业的关注。专家分析，科技行业将继续保持增长势头。</p>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3676795428070279?f=rss">高瓴资本计划以45亿美元的估值收购QUEST GLOBAL的5%股份</a>
 <hr/>
-<h3>3. 哨声对抗法西斯主义</h3>
-<p><strong>📌 来源</strong>: The Verge | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: The Verge报道Kit Rocha和Courtney Milan通过哨声项目筹集资金支持投票权。该项目通过哨声提醒邻居注意ICE机构的行动，对提高公众对移民权利的关注有积极作用。</p>
-<strong>🔗 原文链接</strong>: <a href="https://www.theverge.com/policy/874959/3d-printed-whistles-for-ice-minneapolis-chicago-renee-good-alex-pretti">This whistle fights fascists</a>
+<h3>7. 凯雷集团：石油和金属市场投资不足</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 凯雷集团首席战略官表示，石油和金属市场投资严重不足，存在巨大上涨空间。这一观点反映了市场对能源行业的关注，同时也对投资者提供了投资方向。专家分析，能源市场将继续受到供需关系和地缘政治等因素的影响。</p>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3676785202029445?f=rss">凯雷集团首席战略官：石油和金属市场“投资严重不足”，有巨大上涨空间</a>
 <hr/>
-<h3>4. 七部门指导头部平台用工</h3>
-<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: 人力资源社会保障部等七部门对美团、淘宝等16家头部平台和快递企业开展用工行政指导，要求企业保障新就业形态劳动者权益。</p>
-<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3675955112878977?f=rss">七部门对头部平台企业和快递企业开展用工行政指导</a>
+<h3>8. 美国计划从下一波芯片关税中豁免大型科技企业</h3>
+<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 美国政府计划根据台积电在美国的投资承诺，从下一波芯片关税中豁免大型科技企业。这一政策将影响芯片行业的发展和国际贸易关系。</p>
+<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/e6f7f69a-2552-45f5-ae4c-6f1135e5cde1">US plans Big Tech carve-out from next wave of chip tariffs</a>
 <hr/>
-<h3>5. 德国与美国关系紧张，民众感到背叛</h3>
-<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: 德国民众对美关系恶化感到失望和背叛。这一事件反映了跨大西洋关系的紧张，可能对欧洲和全球政治经济产生深远影响。专家认为，德国与美国之间的紧张关系可能加剧欧洲的政治不稳定，并影响全球贸易和投资。</p>
-<strong>🔗 原文链接</strong>: <a href="https://www.ft.com/content/ef3c7456-93e9-4245-b435-91bf216c423a">‘It feels like a betrayal.’ Germany’s painful estrangement from the US</a>
+<h3>9. Anthropic融资20亿美元，AI竞争加剧</h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: Anthropic公司近日完成20亿美元融资，此前仅五个月前已筹集13亿美元。AI领域的激烈竞争和计算成本上升促使公司加速融资。此举可能进一步加剧AI领域的竞争格局。</p>
+<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/09/anthropic-closes-in-on-20b-round/">Anthropic closes in on $20B round</a>
 <hr/>
-<h3>6. 南德克萨斯移民执法影响经济</h3>
-<p><strong>📌 来源</strong>: WSJ 经济 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 6.8/10</p>
-<p><strong>📝 摘要</strong>: 南德克萨斯地区移民执法活动对当地经济造成影响，贸易团体对此表示担忧。这可能导致地区经济放缓和就业市场压力。</p>
-<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/politics/policy/texas-immigration-raids-economy-87e23e2e?mod=pls_whats_news_us_business_f">Immigration Raids in South Texas Are Starting to Hit the Economy</a>
+<h3>10. 央行逆回购操作3114亿元</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.7/10</p>
+<p><strong>📝 摘要</strong>: 央行进行3114亿元7天期逆回购操作，操作利率1.40%。这一举措旨在维持流动性稳定，对市场利率和金融市场产生重要影响。分析认为，逆回购操作有助于稳定市场预期，支持实体经济发展。专家预计，未来央行将继续根据市场情况灵活开展货币政策操作。</p>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3676817474052737?f=rss">央行开展3114亿元7天期逆回购操作</a>
+<hr/>
+<h3>11. 人民币兑美元中间价调升65个基点</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.7/10</p>
+<p><strong>📝 摘要</strong>: 人民币兑美元中间价调升65个基点，报6.9458。这一变化反映了市场对人民币汇率的预期，同时也受到国际汇率市场的影响。专家分析，人民币汇率将继续受到多种因素影响，投资者需关注汇率波动风险。</p>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3676804942963332?f=rss">人民币兑美元中间价调升65个基点</a>
+<hr/>
+<h3>12. 今日经济大钱流向资本而非劳动</h3>
+<p><strong>📌 来源</strong>: WSJ 市场 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 随着利润和股价的飙升，GDP更多地流向公司、高级员工和股东，AI技术将加剧这一趋势。</p>
+<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/economy/jobs/capital-labor-wealth-economy-2fcf6c2f?mod=rss_markets_main">The Big Money in Today’s Economy Is Going to Capital, Not Labor</a>
+<hr/>
+<h3>13. Mubadala收购Clear Channel Outdoor Holdings</h3>
+<p><strong>📌 来源</strong>: WSJ 市场 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 户外广告公司Clear Channel Outdoor Holdings同意以62亿美元的企业价值被Mubadala Capital收购，合作方为TWG Global。</p>
+<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/business/deals/mubadala-to-buy-clear-channel-outdoor-holdings-ffebed8c?mod=rss_markets_main">Mubadala to Buy Clear Channel Outdoor Holdings</a>
+<hr/>
+<h3>14. 诺和诺德股价反弹，Hims & Hers取消仿制减肥药计划</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 诺和诺德股价因Hims & Hers取消仿制减肥药计划而反弹，市场对核心产品Wegovy的担忧缓解。事件显示监管层对未经授权的复合GLP-1药物监管加强，对行业竞争格局产生影响。</p>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765309">诺和诺德欧股大涨9%，竞争对手取消仿制Wegovy减肥药项目</a>
+<hr/>
+<h3>15. 美伊风险溢价支撑油价上涨</h3>
+<p><strong>📌 来源</strong>: WSJ 市场 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 美国与伊朗谈判风险溢价推动油价上涨。市场对美伊关系保持警惕，地缘政治风险成为油价支撑因素。</p>
+<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/finance/commodities-futures/oil-falls-on-possible-position-adjustment-amid-middle-east-developments-59ed8ea3?mod=rss_markets_main">Oil Futures Gain As U.S.-Iran Risk Premium Holds</a>
+<hr/>
+<h2>🔬 科技新闻 (8条)</h2>
+<p>精选 <strong>8</strong> 条科技新闻</p>
+<h3>1. 追踪软件泄露，数百万用户数据被曝光</h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.2/10</p>
+<p><strong>📝 摘要</strong>: 自2017年以来，至少27家追踪软件公司被黑客攻击或泄露客户和受害者数据。近日，uMobix数据泄露事件再次引发关注，凸显了追踪软件的安全风险和隐私保护的重要性。</p>
+<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/09/hacked-leaked-exposed-why-you-should-stop-using-stalkerware-apps/">Hacked, leaked, exposed: Why you should never use stalkerware apps</a>
+<hr/>
+<h3>2. 黑客窃取50万追踪软件用户支付记录</h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.2/10</p>
+<p><strong>📝 摘要</strong>: 超过50万购买手机监控和社交媒体窥探应用的客户，其电子邮件地址和部分支付卡信息被公开。此事件突显了追踪软件的安全漏洞和用户隐私风险。</p>
+<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/09/hacktivist-scrapes-over-500000-stalkerware-customers-payment-records/">Hacktivist scrapes over 500,000 stalkerware customers’ payment records</a>
+<hr/>
+<h3>3. Ivanti EPMM中的潜伏后门攻击</h3>
+<p><strong>📌 来源</strong>: Hacker News | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: Hacker News报道，攻击者将潜伏后门植入Ivanti EPMM，对网络安全构成严重威胁，影响众多企业，需引起高度重视。</p>
+<strong>🔗 原文链接</strong>: <a href="https://defusedcyber.com/ivanti-epmm-sleeper-shells-403jsp">Sleeper Shells: Attackers Are Planting Dormant Backdoors in Ivanti EPMM</a>
+<hr/>
+<h3>4. 地平线与宁德时代达成战略合作</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 地平线与宁德时代达成战略合作，共同推动汽车智能化发展。这一合作将促进双方在汽车智能化领域的研发和应用，对行业发展产生重要影响。专家认为，汽车智能化将成为未来汽车产业的重要趋势。</p>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3676804512719748?f=rss">地平线与宁德时代子公司时代智能达成战略合作</a>
+<hr/>
+<h3>5. 花旗警告：AI冲击或致软件股价值蒸发三分之一</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.7/10</p>
+<p><strong>📝 摘要</strong>: 花旗指出AI对软件股的冲击可能导致终端价值蒸发三分之一，市场对行业未来利润率预期下降。AI技术对现有商业模式的颠覆引发估值重估，预计行业将进入个股分化阶段。</p>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765297">美软件股危机未除！花旗：AI冲击或让终端价值蒸发三分之一</a>
+<hr/>
+<h3>6. 爱芯元智登陆港交所，成为边缘计算AI芯片首家上市企业</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 爱芯元智在港交所上市，成为边缘计算AI芯片首家上市企业。公司已开发并商业化多代SoC产品，累计出货SoC 1.65亿颗，市场前景广阔。</p>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3676836287816327?f=rss">爱芯元智登陆港交所</a>
+<hr/>
+<h3>7. Waymo在纳什维尔测试无人驾驶出租车</h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: Waymo公司正在纳什维尔进行无人驾驶出租车的测试，这是其推出商业化服务的前奏。测试的进行标志着自动驾驶技术向商业化迈出了重要一步，预计将对未来出行方式产生深远影响。</p>
+<strong>🔗 原文链接</strong>: <a href="https://techcrunch.com/2026/02/09/waymo-is-testing-driverless-robotaxis-in-nashville/">Waymo is testing driverless robotaxis in Nashville</a>
+<hr/>
+<h3>8. 科技巨头超级碗AI投资回报不佳</h3>
+<p><strong>📌 来源</strong>: WSJ 经济 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 科技巨头在超级碗期间展示AI产品，但投资回报不佳。这表明AI技术的市场应用仍需时间，对投资者和科技企业有重要启示。</p>
+<strong>🔗 原文链接</strong>: <a href="https://www.wsj.com/articles/ai-fumbles-its-big-super-bowl-investment-as-viewers-opt-for-laughter-and-tears-3e3dff5f?mod=pls_whats_news_us_business_f">AI Fumbles Its Big Super Bowl Investment as Viewers Opt for Laughter and Tears</a>
+<hr/>
+<h2>🏛️ 社会政治 (7条)</h2>
+<p>精选 <strong>7</strong> 条社会政治新闻</p>
+<h3>1. Meta被控助长儿童色情</h3>
+<p><strong>📌 来源</strong>: The Verge | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 8.5/10</p>
+<p><strong>📝 摘要</strong>: The Verge报道，新墨西哥州起诉Meta，指控其平台助长儿童色情，Meta内部讨论与公开声明存在矛盾，引发社会对社交媒体责任问题的关注。</p>
+<strong>🔗 原文链接</strong>: <a href="https://www.theverge.com/policy/876168/new-mexico-attorney-general-meta-child-predator-social-media-addiction-trial">New Mexico goes to trial to accuse Meta of facilitating child predators</a>
+<hr/>
+<h3>2. Alphabet发债200亿支持AI，百年期债券引关注</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 8.1/10</p>
+<p><strong>📝 摘要</strong>: Alphabet通过美元债券发行筹资200亿美元，支持AI投资，同时发行百年期英镑债。此举标志着科技巨头在AI领域的巨额投资，预计将推动投资级债券发行总额达到创纪录的2.25万亿美元。</p>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765338">Alphabet美元债筹资200亿美元超预期，罕见发行100年期英镑债</a>
+<hr/>
+<h3>3. Alphabet计划通过发行美元债筹集150亿，巩固AI建设资本储备</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 8.1/10</p>
+<p><strong>📝 摘要</strong>: Alphabet计划通过发行美元债筹集约150亿美元，巩固AI建设资本储备。此举标志着科技巨头在AI领域的巨额投资，预计将推动投资级债券发行总额达到创纪录的2.25万亿美元。</p>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765325">报道：Alphabet计划通过发行美元债筹集约150亿美元，巩固AI建设资本储备</a>
+<hr/>
+<h3>4. 企业不保护自然将面临灭绝</h3>
+<p><strong>📌 来源</strong>: BBC Business | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 8.1/10</p>
+<p><strong>📝 摘要</strong>: 一份重要报告警告，除非企业采取措施保护自然环境，否则它们将面临灭绝。专家呼吁企业采取紧急行动，以恢复支持其运营的自然系统。这一报告强调了企业社会责任和环境保护的重要性。</p>
+<strong>🔗 原文链接</strong>: <a href="https://www.bbc.com/news/articles/cq8g20xgdjwo?at_medium=RSS&at_campaign=rss">Businesses face extinction unless they protect nature, major report warns</a>
+<hr/>
+<h3>5. 欧盟反垄断起诉Meta，拟强制WhatsApp开放</h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.9/10</p>
+<p><strong>📝 摘要</strong>: 欧盟反垄断监管机构对Meta发起指控，拟强制要求Meta在调查期间保持WhatsApp对竞争对手的开放性。此举旨在保护AI领域的有效竞争。</p>
+<strong>🔗 原文链接</strong>: <a href="https://wallstreetcn.com/articles/3765323">欧盟反垄断起诉Meta：拟强制WhatsApp开放，严禁封杀第三方AI竞争对手</a>
+<hr/>
+<h3>6. 春运铁路发送旅客1395万</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 春运期间，全国铁路预计发送旅客1395万人次，加开列车1363列。这一数据反映了春运期间的客流高峰，对旅客出行和铁路运输能力提出了挑战。预计将促进铁路运输行业的发展，并对春运期间的交通秩序和旅客体验产生重要影响。专家指出，随着春运的推进，铁路部门需加强运输组织，确保旅客安全、便捷出行。</p>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3676823483949953?f=rss">今天全国铁路预计发送旅客1395万人次</a>
+<hr/>
+<h3>7. T3出行春运打车需求增45%</h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.3/10</p>
+<p><strong>📝 摘要</strong>: T3出行预测春运期间打车需求同比增长45%。这一增长反映了春节期间出行高峰，对打车服务行业提出了更高要求。预计将推动打车服务行业的发展，并可能对城市交通产生一定影响。专家建议，打车服务企业应加强运力调配，确保乘客出行需求得到满足。</p>
+<strong>🔗 原文链接</strong>: <a href="https://36kr.com/newsflashes/3676817008468869?f=rss">T3出行：春运期间用户打车出行需求量同比增长将超45%</a>
 <hr/>]]></content:encoded>
     </item>
     <item>
         <title>2026年02月09日 新闻汇总</title>
-        <link>https://raw.githubusercontent.com/username/news/main/archive/2026-02-09.md</link>
+        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-09.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 09 Feb 2026 20:18:38 GMT</pubDate>
+        <pubDate>Tue, 10 Feb 2026 01:55:12 GMT</pubDate>
         <guid>archive/2026-02-09.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -522,9 +691,9 @@
     </item>
     <item>
         <title>2026年02月08日 新闻汇总</title>
-        <link>https://raw.githubusercontent.com/username/news/main/archive/2026-02-08.md</link>
+        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-08.md</link>
         <description>本期精选 26 条高质量科技新闻</description>
-        <pubDate>Mon, 09 Feb 2026 18:55:53 GMT</pubDate>
+        <pubDate>Tue, 10 Feb 2026 01:55:12 GMT</pubDate>
         <guid>archive/2026-02-08.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -827,9 +996,9 @@
     </item>
     <item>
         <title>2026年02月07日 新闻汇总</title>
-        <link>https://raw.githubusercontent.com/username/news/main/archive/2026-02-07.md</link>
+        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-07.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Sat, 07 Feb 2026 22:08:28 GMT</pubDate>
+        <pubDate>Tue, 10 Feb 2026 01:55:12 GMT</pubDate>
         <guid>archive/2026-02-07.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1114,9 +1283,9 @@
     </item>
     <item>
         <title>2026年02月06日 新闻汇总</title>
-        <link>https://raw.githubusercontent.com/username/news/main/archive/2026-02-06.md</link>
+        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-06.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Sat, 07 Feb 2026 09:21:44 GMT</pubDate>
+        <pubDate>Tue, 10 Feb 2026 01:55:12 GMT</pubDate>
         <guid>archive/2026-02-06.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1321,9 +1490,9 @@
     </item>
     <item>
         <title>2026年02月05日 新闻汇总</title>
-        <link>https://raw.githubusercontent.com/username/news/main/archive/2026-02-05.md</link>
+        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-05.md</link>
         <description>本期精选 11 条高质量科技新闻</description>
-        <pubDate>Thu, 05 Feb 2026 21:16:14 GMT</pubDate>
+        <pubDate>Tue, 10 Feb 2026 01:55:12 GMT</pubDate>
         <guid>archive/2026-02-05.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1465,9 +1634,9 @@
     </item>
     <item>
         <title>2026年02月04日 新闻汇总</title>
-        <link>https://raw.githubusercontent.com/username/news/main/archive/2026-02-04.md</link>
+        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-04.md</link>
         <description>本期精选 0 条高质量科技新闻</description>
-        <pubDate>Thu, 05 Feb 2026 19:07:57 GMT</pubDate>
+        <pubDate>Tue, 10 Feb 2026 01:55:12 GMT</pubDate>
         <guid>archive/2026-02-04.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1487,9 +1656,9 @@
     </item>
     <item>
         <title>2026年02月03日 新闻汇总</title>
-        <link>https://raw.githubusercontent.com/username/news/main/archive/2026-02-03.md</link>
+        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-03.md</link>
         <description>本期精选 10 条高质量科技新闻</description>
-        <pubDate>Tue, 03 Feb 2026 19:05:13 GMT</pubDate>
+        <pubDate>Tue, 10 Feb 2026 01:55:12 GMT</pubDate>
         <guid>archive/2026-02-03.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1618,9 +1787,9 @@
     </item>
     <item>
         <title>2026年02月02日 新闻汇总</title>
-        <link>https://raw.githubusercontent.com/username/news/main/archive/2026-02-02.md</link>
+        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-02.md</link>
         <description>本期精选 0 条高质量科技新闻</description>
-        <pubDate>Mon, 02 Feb 2026 22:50:18 GMT</pubDate>
+        <pubDate>Tue, 10 Feb 2026 01:55:12 GMT</pubDate>
         <guid>archive/2026-02-02.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h3>1. KKR 领导集团即将以超过 100 亿美元的价格收购新加坡数据中心公司</h3>
@@ -1917,9 +2086,9 @@
     </item>
     <item>
         <title>2026年02月01日 新闻汇总</title>
-        <link>https://raw.githubusercontent.com/username/news/main/archive/2026-02-01.md</link>
+        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-01.md</link>
         <description>本期精选 16 条高质量科技新闻</description>
-        <pubDate>Mon, 02 Feb 2026 19:52:23 GMT</pubDate>
+        <pubDate>Tue, 10 Feb 2026 01:55:12 GMT</pubDate>
         <guid>archive/2026-02-01.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -2119,9 +2288,9 @@
     </item>
     <item>
         <title>2026年01月31日 新闻汇总</title>
-        <link>https://raw.githubusercontent.com/username/news/main/archive/2026-01-31.md</link>
+        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-01-31.md</link>
         <description>本期精选 5 条高质量科技新闻</description>
-        <pubDate>Mon, 02 Feb 2026 19:52:23 GMT</pubDate>
+        <pubDate>Tue, 10 Feb 2026 01:55:12 GMT</pubDate>
         <guid>archive/2026-01-31.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 科技新闻精选</h1>
