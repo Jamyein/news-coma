@@ -66,6 +66,55 @@ class MarkdownGenerator:
                 groups["其他"].append(item)
         return groups
 
+    def _is_chinese_title(self, title: str) -> bool:
+        """
+        判断标题是否为中文标题
+
+        策略：
+        1. 如果标题中包含超过30%的中文字符，认为是中文标题
+        2. 或者包含至少5个中文字符
+
+        Args:
+            title: 标题文本
+
+        Returns:
+            bool: 是否为中文标题
+        """
+        if not title:
+            return False
+
+        # 统计中文字符数量
+        chinese_chars = sum(1 for char in title if '\u4e00' <= char <= '\u9fff')
+        total_chars = len(title.replace(' ', '').replace('-', ''))
+
+        if total_chars == 0:
+            return False
+
+        # 中文字符占比超过30% 或至少有5个中文字符
+        return (chinese_chars / total_chars > 0.3) or (chinese_chars >= 5)
+
+    def _get_display_title(self, item: NewsItem) -> str:
+        """
+        获取用于显示的新闻标题
+
+        规则：
+        - 如果原文标题(item.title)是中文 → 使用原文标题
+        - 如果原文标题是英文 → 使用翻译后的标题(item.translated_title)
+        - 如果翻译标题为空，则回退到原文标题
+
+        Args:
+            item: 新闻条目
+
+        Returns:
+            str: 用于显示的标题
+        """
+        if self._is_chinese_title(item.title):
+            # 原文是中文，直接使用
+            return item.title
+        else:
+            # 原文是英文，使用翻译后的标题
+            return item.translated_title or item.title
+
     def _build_content(self, items: list[NewsItem], timestamp: datetime) -> str:
         """构建Markdown内容（三板块分区布局）"""
         from datetime import timedelta
@@ -135,14 +184,15 @@ class MarkdownGenerator:
 """
 
         for i, item in enumerate(sorted_items, 1):
-            section += f"""### {i}. {item.translated_title or item.title}
+            # 根据原文标题语言决定显示哪个标题
+            display_title = self._get_display_title(item)
+
+            section += f"""### {i}. [{display_title}]({item.link})
 
 **📌 来源**: {item.source} | **🏏️ AI分类**: {item.ai_category} | **⭐ 评分**: {item.ai_score or 'N/A'}/10
 
 **📝 摘要**:
 {item.ai_summary or '暂无摘要'}
-
-**🔗 原文链接**: [{item.title}]({item.link})
 
 ---
 
@@ -170,20 +220,20 @@ class MarkdownGenerator:
             # 解析条目：返回 {url: (title, full_entry_content)}
             def parse_entries(content: str) -> dict:
                 entries = {}
-                # 匹配条目：从 ### N. 开始到 --- 结束
+                # 匹配条目：从 ### N. [标题](URL) 开始到 --- 结束
                 # 使用非贪婪匹配，直到遇到下一个 ### 或文件结束
                 entry_pattern = r'###\s+\d+\.\s+(.*?)(?=###\s+\d+\.\s+|\Z)'
-                # 链接模式：**🔗 原文链接**: [标题](URL)
-                link_pattern = r'\*\*🔗 原文链接\*\*:\s*\[.*?\]\((.+?)\)'
+                # 新的链接模式：从标题行 [标题](URL) 中提取URL
+                link_pattern = r'^###\s+\d+\.\s+\[.*?\]\((.+?)\)'
 
                 for match in re.finditer(entry_pattern, content, re.DOTALL):
                     entry_content = match.group(0)
-                    # 提取链接
-                    link_match = re.search(link_pattern, entry_content)
+                    # 从标题行提取链接
+                    link_match = re.search(link_pattern, entry_content, re.MULTILINE)
                     if link_match:
                         url = link_match.group(1)
-                        # 提取标题（第一行）
-                        title_match = re.match(r'###\s+\d+\.\s+(.+?)\n', entry_content)
+                        # 提取标题（第一行，包括Markdown链接格式）
+                        title_match = re.match(r'###\s+\d+\.\s+(\[.+?\]\(.+?\))', entry_content)
                         title = title_match.group(1) if title_match else ""
                         entries[url] = (title, entry_content)
                 return entries
