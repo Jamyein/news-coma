@@ -117,7 +117,7 @@ jobs:
   
   # GitHub Pages部署任务
   deploy:
-    if: github.ref == 'refs/heads/main'  # 只在main分支执行deploy
+    if: false  # 跳过所有分支的deploy部署
     runs-on: ubuntu-latest
     needs: aggregate
     environment:
