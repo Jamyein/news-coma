@@ -57,6 +57,7 @@ class ProviderConfig:
     temperature: float = 0.3
     batch_size: int = 10
     max_concurrent: int = 3
+    rate_limit_rpm: int = 60  # 每分钟请求限制
 
 
 @dataclass

@@ -180,7 +180,39 @@ class SmartScorer:
             return []
 
         total_batches = len(batches)
-        max_concurrent = min(getattr(self.config, 'max_concurrent', 3), 5)
+
+        # ===== 优化后的并发数计算逻辑 =====
+        # 获取当前提供商配置
+        current_provider = getattr(self.config, 'provider', 'zhipu')
+        providers_config = getattr(self.config, 'providers_config', {})
+        provider_config = providers_config.get(current_provider) if providers_config else None
+
+        # 优先使用提供商特定的并发配置
+        provider_max_concurrent = getattr(provider_config, 'max_concurrent', None) if provider_config else None
+        global_max_concurrent = getattr(self.config, 'max_concurrent', 3)
+
+        # 取两者中较小值，确保不超过绝对上限5
+        base_max_concurrent = min(
+            provider_max_concurrent if provider_max_concurrent else global_max_concurrent,
+            global_max_concurrent,
+            5  # 绝对上限
+        )
+
+        # 根据RPM计算推荐并发数
+        rpm = getattr(provider_config, 'rate_limit_rpm', 60) if provider_config else 60
+        estimated_time_per_batch = 8.0  # 假设每批次平均8秒
+        recommended_concurrent = max(1, int((rpm / 60.0) * estimated_time_per_batch))
+
+        # 最终并发数取两者的较小值
+        max_concurrent = min(base_max_concurrent, recommended_concurrent)
+
+        # 确保至少为1
+        max_concurrent = max(1, max_concurrent)
+
+        logger.info(f"并发配置: 提供商={current_provider}, 全局={global_max_concurrent}, "
+                    f"提供商限制={provider_max_concurrent}, RPM={rpm}, "
+                    f"推荐={recommended_concurrent}, 最终={max_concurrent}")
+        # ===== 并发数计算结束 =====
 
         # 如果只有1个批次或禁用并行，使用串行处理
         if total_batches == 1 or max_concurrent == 1:

@@ -41,12 +41,37 @@ class BatchProvider:
         # Fallback 客户端缓存
         self._fallback_clients: dict[str, AsyncOpenAI] = {}
 
+        # 速率限制
+        self._last_request_time = 0.0
+        self._min_request_interval = self._calculate_min_interval()
+
         logger.info(f"BatchProvider初始化: {self.provider_name} ({self.model})")
 
     @property
     def client(self) -> AsyncOpenAI:
         """获取主提供商客户端"""
         return self._client
+
+    def _calculate_min_interval(self) -> float:
+        """计算最小请求间隔（秒）"""
+        rpm = getattr(self.provider_config, 'rate_limit_rpm', 60)
+        safe_rpm = rpm * 0.9  # 90%安全余量
+        interval = 60.0 / safe_rpm
+        logger.info(f"速率限制: RPM={rpm}, 安全间隔={interval:.2f}秒")
+        return interval
+
+    async def _apply_rate_limit(self):
+        """应用速率限制"""
+        import time
+        current_time = time.time()
+        elapsed = current_time - self._last_request_time
+        
+        if elapsed < self._min_request_interval:
+            wait_time = self._min_request_interval - elapsed
+            logger.debug(f"速率限制等待: {wait_time:.2f}秒")
+            await asyncio.sleep(wait_time)
+        
+        self._last_request_time = time.time()
 
     def _get_fallback_client(self, provider_name: str) -> AsyncOpenAI:
         """
@@ -110,6 +135,9 @@ class BatchProvider:
             asyncio.TimeoutError: 请求超时
             Exception: API调用失败
         """
+        # 应用速率限制
+        await self._apply_rate_limit()
+        
         messages = [
             {"role": "system", "content": self.SYSTEM_PROMPT},
             {"role": "user", "content": prompt}

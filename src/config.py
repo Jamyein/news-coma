@@ -57,7 +57,8 @@ class Config:
                 max_tokens=config.get('max_tokens', 4000),
                 temperature=config.get('temperature', 0.3),
                 batch_size=config.get('batch_size', 10),
-                max_concurrent=config.get('max_concurrent', 3)
+                max_concurrent=config.get('max_concurrent', 3),
+                rate_limit_rpm=config.get('rate_limit_rpm', 60)
             )
         
         # 验证当前提供商的API key
