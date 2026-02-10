@@ -219,7 +219,6 @@ class RSSFetcher:
             title=title,
             link=link,
             source=source.name,
-            category=source.category,
             published_at=published,
             summary=summary_clean,  # 保持原始摘要，用于去重
             content=full_content    # 完整内容（可能被截断），用于AI评分

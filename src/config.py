@@ -33,8 +33,6 @@ class Config:
             sources.append(RSSSource(
                 name=source_data['name'],
                 url=source_data['url'],
-                weight=source_data.get('weight', 1.0),
-                category=source_data.get('category', '未分类'),
                 enabled=source_data.get('enabled', True)
             ))
         return [s for s in sources if s.enabled]

@@ -19,7 +19,6 @@ class NewsItem:
     title: str
     link: str
     source: str
-    category: str
     published_at: datetime
     summary: str = ""  # 原始摘要，用于去重
     content: str = ""  # 完整内容，用于AI评分
@@ -45,8 +44,6 @@ class RSSSource:
     """RSS源配置"""
     name: str
     url: str
-    weight: float = 1.0
-    category: str = "未分类"
     enabled: bool = True
 
 
