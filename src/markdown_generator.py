@@ -201,6 +201,32 @@ class MarkdownGenerator:
         return section
     
 
+    def _parse_entries(self, content: str) -> dict:
+        """解析内容中的新闻条目，返回 {url: (title, full_entry_content)}"""
+        entries = {}
+        entry_pattern = r'###\s+\d+\.\s+(.*?)(?=###\s+\d+\.\s+|\Z)'
+        link_pattern = r'^###\s+\d+\.\s+\[.*?\]\((.+?)\)'
+
+        for match in re.finditer(entry_pattern, content, re.DOTALL):
+            entry_content = match.group(0)
+            link_match = re.search(link_pattern, entry_content, re.MULTILINE)
+            if link_match:
+                url = link_match.group(1)
+                title_match = re.match(r'###\s+\d+\.\s+(\[.+?\]\(.+?\))', entry_content)
+                title = title_match.group(1) if title_match else ""
+                entries[url] = (title, entry_content)
+        return entries
+
+    def _extract_header(self, content: str) -> str:
+        """提取header（第一个 ### 之前的内容）"""
+        first_entry_match = re.search(r'###\s+\d+\.', content)
+        return content[:first_entry_match.start()] if first_entry_match else ""
+
+    def _extract_footer(self, content: str) -> str:
+        """提取footer（订阅部分）"""
+        footer_match = re.search(r'##\s+📮\s+订阅', content)
+        return content[footer_match.start():] if footer_match else ""
+
     def _merge_archive_content(self, existing: str, new: str) -> str:
         """
         合并归档内容，基于链接去重
@@ -208,8 +234,6 @@ class MarkdownGenerator:
         解析现有和新内容中的新闻条目，基于链接URL去重，
         合并后重新编号，保持Markdown格式
         """
-        import re
-
         # 边界情况：内容为空或相同
         if not existing:
             return new
@@ -217,45 +241,9 @@ class MarkdownGenerator:
             return new
 
         try:
-            # 解析条目：返回 {url: (title, full_entry_content)}
-            def parse_entries(content: str) -> dict:
-                entries = {}
-                # 匹配条目：从 ### N. [标题](URL) 开始到 --- 结束
-                # 使用非贪婪匹配，直到遇到下一个 ### 或文件结束
-                entry_pattern = r'###\s+\d+\.\s+(.*?)(?=###\s+\d+\.\s+|\Z)'
-                # 新的链接模式：从标题行 [标题](URL) 中提取URL
-                link_pattern = r'^###\s+\d+\.\s+\[.*?\]\((.+?)\)'
-
-                for match in re.finditer(entry_pattern, content, re.DOTALL):
-                    entry_content = match.group(0)
-                    # 从标题行提取链接
-                    link_match = re.search(link_pattern, entry_content, re.MULTILINE)
-                    if link_match:
-                        url = link_match.group(1)
-                        # 提取标题（第一行，包括Markdown链接格式）
-                        title_match = re.match(r'###\s+\d+\.\s+(\[.+?\]\(.+?\))', entry_content)
-                        title = title_match.group(1) if title_match else ""
-                        entries[url] = (title, entry_content)
-                return entries
-
-            # 提取header（第一个 ### 之前的内容）
-            def extract_header(content: str) -> str:
-                first_entry_match = re.search(r'###\s+\d+\.', content)
-                if first_entry_match:
-                    return content[:first_entry_match.start()]
-                return ""
-
-            # 提取footer（最后一个 --- 之后的内容）
-            def extract_footer(content: str) -> str:
-                # 查找订阅部分（通常是最后一部分）
-                footer_match = re.search(r'##\s+📮\s+订阅', content)
-                if footer_match:
-                    return content[footer_match.start():]
-                return ""
-
             # 解析现有和新内容的条目
-            existing_entries = parse_entries(existing)
-            new_entries = parse_entries(new)
+            existing_entries = self._parse_entries(existing)
+            new_entries = self._parse_entries(new)
 
             # 合并条目：新条目覆盖或追加（保留最新）
             merged_entries = {**existing_entries, **new_entries}
@@ -265,8 +253,8 @@ class MarkdownGenerator:
                 return existing + '\n\n' + new
 
             # 提取header和footer（使用新内容的header和footer）
-            header = extract_header(new)
-            footer = extract_footer(new)
+            header = self._extract_header(new)
+            footer = self._extract_footer(new)
 
             # 重新生成条目内容，重新编号
             body_parts = []

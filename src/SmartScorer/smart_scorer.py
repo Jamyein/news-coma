@@ -229,26 +229,13 @@ class SmartScorer:
         return self._ensure_diversity(sorted_items)
     
     def _ensure_diversity(self, items: list[NewsItem]) -> list[NewsItem]:
-        """
-        确保分类多样性（混合方案）
-        
-        策略（use_fixed_proportion=true时启用）：
-        1. 固定保障阶段：按category_fixed_targets保障每类最低数量（4:3:3）
-        2. 比例分配阶段：按各分类剩余新闻比例分配剩余名额
-        3. 轮询补充阶段：如仍有剩余名额，按分类轮询选择
-        
-        原有策略（use_fixed_proportion=false时使用）：
-        1. 按分类分组并按评分排序
-        2. 按比例缩减保障数（如需要）
-        3. 优先满足各分类最低保障
-        4. 剩余名额补充高分新闻
-        """
+        """确保分类多样性（混合方案）"""
         if not items:
             return []
 
         max_items = self.config.max_output_items
 
-        # 1. 按分类分组并排序
+        # 按分类分组
         by_category = defaultdict(list)
         for item in items:
             category = getattr(item, 'ai_category', '未分类')
@@ -350,9 +337,8 @@ class SmartScorer:
             final_distribution[category] = final_distribution.get(category, 0) + 1
         logger.info(f"📊 最终分类分布(混合方案): {final_distribution}")
 
-        # 最终按评分排序
-        selected.sort(key=lambda x: x.ai_score or 0, reverse=True)
-        return selected
+        # 最终按评分排序（共同排序逻辑）
+        return self._sort_by_score(selected)
 
     def _ensure_diversity_original(
         self,
@@ -395,8 +381,12 @@ class SmartScorer:
                 selected.append(item)
 
         # 最终按评分排序
-        selected.sort(key=lambda x: x.ai_score or 0, reverse=True)
-        return selected
+        return self._sort_by_score(selected)
+
+    def _sort_by_score(self, items: list[NewsItem]) -> list[NewsItem]:
+        """按AI评分降序排序（共同排序逻辑）"""
+        return sorted(items, key=lambda x: x.ai_score or 0, reverse=True)
+
     
     def _update_stats(self, input_count: int, output_count: int, duration: float):
         """更新统计信息"""

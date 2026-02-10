@@ -7,6 +7,7 @@ from typing import Any
 from openai import AsyncOpenAI, RateLimitError
 
 from src.models import AIConfig, NewsItem
+from src.constants import DefaultScores
 from src.exceptions import ContentFilterError
 
 logger = logging.getLogger(__name__)
@@ -285,6 +286,10 @@ class BatchProvider:
         
         return sub_batch_size
 
+    def _create_default_result_dict(self, index: int, reason: str = "") -> dict:
+        """创建默认结果字典（使用DefaultScores常量）"""
+        return DefaultScores.to_dict(index, reason)
+
     async def _retry_with_smaller_batches(
         self,
         items: list[NewsItem],
@@ -379,37 +384,19 @@ class BatchProvider:
                 except Exception as fallback_error:
                     logger.error(f"子批次 {sub_batch_id} fallback处理失败: {fallback_error}")
                     # 所有fallback都失败，添加默认结果
-                    for j, item in enumerate(sub_items):
-                        all_results.append({
-                            "news_index": i + j + 1,
-                            "category": "社会政治",
-                            "category_confidence": 0.5,
-                            "importance": 3,
-                            "timeliness": 3,
-                            "technical_depth": 3,
-                            "audience_breadth": 3,
-                            "practicality": 3,
-                            "total_score": 3.0,
-                            "summary": f"fallback失败: {str(fallback_error)[:30]}"
-                        })
+                    for j in range(len(sub_items)):
+                        all_results.append(self._create_default_result_dict(
+                            i + j + 1, f"fallback失败: {str(fallback_error)[:30]}"
+                        ))
                 continue
             except Exception as e:
                 # 其他错误，记录并继续
                 logger.error(f"子批次 {sub_batch_id} 处理失败: {e}")
                 # 为子批次添加默认结果
-                for j, item in enumerate(sub_items):
-                    all_results.append({
-                        "news_index": i + j + 1,
-                        "category": "社会政治",
-                        "category_confidence": 0.5,
-                        "importance": 3,
-                        "timeliness": 3,
-                        "technical_depth": 3,
-                        "audience_breadth": 3,
-                        "practicality": 3,
-                        "total_score": 3.0,
-                        "summary": f"处理失败: {str(e)[:30]}"
-                    })
+                for j in range(len(sub_items)):
+                    all_results.append(self._create_default_result_dict(
+                        i + j + 1, f"处理失败: {str(e)[:30]}"
+                    ))
                 continue
 
         if not all_results:
@@ -425,26 +412,12 @@ class BatchProvider:
         items: list[NewsItem],
         reason: str = "处理失败"
     ) -> str:
-        """
-        创建默认分数响应
-        
-        当所有处理方式都失败时，返回默认低分结果
-        """
+        """创建默认分数响应（当所有处理方式都失败时）"""
         results = []
         for idx, item in enumerate(items, 1):
-            results.append({
-                "news_index": idx,
-                "chinese_title": item.title,
-                "category": "社会政治",
-                "category_confidence": 0.5,
-                "importance": 3,
-                "timeliness": 3,
-                "technical_depth": 3,
-                "audience_breadth": 3,
-                "practicality": 3,
-                "total_score": 3.0,
-                "summary": f"[{reason}: 使用默认分数]"
-            })
+            result = self._create_default_result_dict(idx, f"{reason}: 使用默认分数")
+            result["chinese_title"] = item.title
+            results.append(result)
         
         return json.dumps({"results": results})
 

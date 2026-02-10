@@ -38,19 +38,11 @@ class DefaultScores:
     
     @classmethod
     def to_dict(cls, index: int, reason: str = "") -> dict:
-        """
-        生成默认分数字典
-        
-        Args:
-            index: 新闻索引（从1开始）
-            reason: 失败原因说明
-            
-        Returns:
-            符合API响应格式的字典
-        """
+        """生成默认分数字典"""
+        summary = f"[处理失败: {reason[:50]}]" if reason else "[处理失败给予默认分]"
         return {
             "news_index": index,
-            "chinese_title": None,  # 将使用原标题
+            "chinese_title": None,
             "category": cls.CATEGORY,
             "category_confidence": cls.CONFIDENCE,
             "importance": cls.IMPORTANCE,
@@ -59,7 +51,7 @@ class DefaultScores:
             "audience_breadth": cls.AUDIENCE_BREADTH,
             "practicality": cls.PRACTICALITY,
             "total_score": cls.TOTAL_SCORE,
-            "summary": f"[处理失败: {reason[:50]}]" if reason else "[处理失败给予默认分]"
+            "summary": summary
         }
 
 

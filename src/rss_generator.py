@@ -289,60 +289,43 @@ class RSSGenerator:
         """从latest.md文件中提取日期"""
         try:
             content = latest_file.read_text(encoding='utf-8')
-            
-            # 模式1：从"更新时间:"中提取日期
-            date_match = re.search(r'更新时间:\s*(\d{4})年(\d{2})月(\d{2})日', content)
-            if date_match:
-                year, month, day = int(date_match.group(1)), int(date_match.group(2)), int(date_match.group(3))
-                return datetime(year, month, day)
-            
-            # 模式2：从标题中提取日期
-            title_match = re.search(r'#\s*(\d{4})年(\d{2})月(\d{2})日', content)
-            if title_match:
-                year, month, day = int(title_match.group(1)), int(title_match.group(2)), int(title_match.group(3))
-                return datetime(year, month, day)
-            
-            # 模式3：从文件名中尝试提取（如果使用日期格式命名的软链接）
-            filename_match = re.match(r'(\d{4})-(\d{2})-(\d{2})\.md$', latest_file.name)
-            if filename_match:
-                year, month, day = int(filename_match.group(1)), int(filename_match.group(2)), int(filename_match.group(3))
-                return datetime(year, month, day)
-                
-            logger.warning(f"无法从latest.md中提取日期: {latest_file}")
-            return None
-            
+            return self._extract_datetime_from_content(content, include_time=False)
         except Exception as e:
             logger.error(f"从latest.md提取日期失败: {e}")
             return None
-    
+
     def _extract_datetime_from_latest(self, content: str) -> datetime:
-        """从latest.md内容中提取完整的日期时间（含时分）
-        
-        Args:
-            content: latest.md的文件内容
-            
-        Returns:
-            包含年月日时分信息的datetime对象，如果无法提取则返回None
+        """从latest.md内容中提取完整的日期时间（含时分）"""
+        return self._extract_datetime_from_content(content, include_time=True)
+
+    def _extract_datetime_from_content(self, content: str, include_time: bool = False) -> datetime | None:
         """
-        try:
-            # 模式：从"更新时间:"中提取完整日期时间
-            # 匹配格式：2026年02月05日 20:46
+        从内容中提取日期时间
+
+        Args:
+            content: 文件内容
+            include_time: 是否包含时分信息
+
+        Returns:
+            datetime对象或None
+        """
+        # 日期时间模式（含时分）
+        if include_time:
             match = re.search(r'更新时间:\s*(\d{4})年(\d{2})月(\d{2})日\s*(\d{2}):(\d{2})', content)
             if match:
-                year, month, day, hour, minute = map(int, match.groups())
-                return datetime(year, month, day, hour, minute)
-            
-            # 备选：仅提取日期（不含时分）
-            match = re.search(r'更新时间:\s*(\d{4})年(\d{2})月(\d{2})日', content)
-            if match:
-                year, month, day = map(int, match.groups())
-                return datetime(year, month, day)
-                
-            return None
-            
-        except Exception as e:
-            logger.error(f"从latest.md提取完整日期时间失败: {e}")
-            return None
+                return datetime(*map(int, match.groups()))
+
+        # 日期模式（仅年月日）
+        match = re.search(r'更新时间:\s*(\d{4})年(\d{2})月(\d{2})日', content)
+        if match:
+            return datetime(*map(int, match.groups()[:3]))
+
+        # 标题模式
+        match = re.search(r'#\s*(\d{4})年(\d{2})月(\d{2})日', content)
+        if match:
+            return datetime(*map(int, match.groups()))
+
+        return None
     
     def _parse_markdown_file(self, file_path: Path) -> dict:
         """解析Markdown文件，提取信息"""
