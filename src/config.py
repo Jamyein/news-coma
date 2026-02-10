@@ -6,18 +6,20 @@ import os
 import yaml
 from pathlib import Path
 
+from typing import Any
+
 from src.models import RSSSource, AIConfig, OutputConfig, FilterConfig, ProviderConfig, ScoringCriteria
 
 
 class Config:
     """配置管理类"""
-    
+
     def __init__(self, config_path: str = "config.yaml"):
         """初始化配置"""
         self.config_path = Path(config_path)
         self._config = self._load_config()
-    
-    def _load_config(self) -> dict[str, any]:
+
+    def _load_config(self) -> dict[str, Any]:
         """加载YAML配置文件"""
         if not self.config_path.exists():
             raise FileNotFoundError(f"配置文件不存在: {self.config_path}")

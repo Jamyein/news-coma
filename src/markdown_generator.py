@@ -3,6 +3,7 @@ Markdown生成模块
 负责生成结构化Markdown文档
 """
 import logging
+import re
 from datetime import datetime
 from pathlib import Path
 

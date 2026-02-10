@@ -50,7 +50,7 @@ class HistoryManager:
         self._data = self._load()
         self._init_data_structure()
     
-    def _load(self) -> dict[str, any]:
+    def _load(self) -> dict[str, Any]:
         """加载历史数据"""
         if self.history_path.exists():
             try:

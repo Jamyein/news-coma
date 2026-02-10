@@ -47,24 +47,24 @@ class RSSGenerator:
 
         # 3. 转换三级标题 (### → <h3>)
         html = re.sub(r'^###\s+(.+?)$', r'<h3>\1</h3>', html, flags=re.MULTILINE)
-        
-        # 2. 转换粗体 (** → <strong>)
+
+        # 4. 转换粗体 (** → <strong>)
         html = re.sub(r'\*\*([^*]+?)\*\*', r'<strong>\1</strong>', html)
-        
-        # 4. 转换引用块 (> → <blockquote>)
+
+        # 5. 转换引用块 (> → <blockquote>)
         def replace_quote(match):
             quote_content = match.group(1)
             return f'<blockquote>{quote_content}</blockquote>'
         html = re.sub(r'^>\s+(.+?)$', replace_quote, html, flags=re.MULTILINE)
 
-        # 5. 转换链接 ([文本](URL) → <a>)
+        # 6. 转换链接 ([文本](URL) → <a>)
         def replace_link(match):
             link_text = match.group(1)
             url = match.group(2)
             return f'<a href="{url}">{link_text}</a>'
         html = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', replace_link, html)
 
-        # 6. 转换列表 (- → <ul><li>)
+        # 7. 转换列表 (- → <ul><li>)
         lines = html.split('\n')
         result_lines = []
         in_list = False
@@ -96,10 +96,10 @@ class RSSGenerator:
         
         html = '\n'.join(result_lines)
 
-        # 7. 转换分隔线 (--- → <hr/>)
+        # 8. 转换分隔线 (--- → <hr/>)
         html = re.sub(r'^---\s*$', '<hr/>', html, flags=re.MULTILINE)
 
-        # 8. 包裹段落
+        # 9. 包裹段落
         lines = html.split('\n')
         result_lines = []
         current_para = []

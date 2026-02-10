@@ -12,7 +12,6 @@ import logging
 import asyncio
 from datetime import datetime
 
-
 from src.config import Config
 from src.models import NewsItem
 from src.rss_fetcher import RSSFetcher
