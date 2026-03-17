@@ -5,8 +5,8 @@
     <link>https://github.com/Jamyein/news-coma</link>
     <description>由 AI 筛选的高质量科技新闻聚合，每6小时自动更新</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 16 Mar 2026 01:58:06 GMT</lastBuildDate>
-    <pubDate>Mon, 16 Mar 2026 01:58:06 GMT</pubDate>
+    <lastBuildDate>Tue, 17 Mar 2026 01:36:23 GMT</lastBuildDate>
+    <pubDate>Tue, 17 Mar 2026 01:36:23 GMT</pubDate>
     <atom:link href="https://Jamyein.github.io/news-coma/feed.xml" rel="self" type="application/rss+xml" />
     <image>
         <url>https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</url>
@@ -15,10 +15,149 @@
     </image>
 
     <item>
+        <title>2026年03月17日 新闻汇总</title>
+        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-03-17.md</link>
+        <description>本期精选 30 条高质量科技新闻</description>
+        <pubDate>Tue, 17 Mar 2026 01:36:23 GMT</pubDate>
+        <guid>archive/2026-03-17.md</guid>
+        <category>综合新闻</category>
+        <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
+<blockquote>🕐 更新时间: 2026年03月17日 09:36</blockquote>
+<blockquote>📊 本期精选 <strong>30</strong> 条高质量新闻</blockquote>
+<blockquote>🤖 由 AI 自动分类、筛选、翻译和总结</blockquote>
+<hr/>
+<h2>💰 财经新闻 (14条)</h2>
+<p>精选 <strong>14</strong> 条财经新闻</p>
+<h3>1. <a href="https://wallstreetcn.com/articles/3767634">阿联酋最大石油公司实施大范围停产，导致该国原油日产量腰斩逾半！</a></h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.5/10</p>
+<p><strong>📝 摘要</strong>: 阿联酋最大石油公司ADNOC因伊朗冲突和霍尔木兹海峡关闭，日产量减少超过50%，全球能源市场面临深度动荡。霍尔木兹海峡封锁对国际能源市场造成大规模冲击，分析师预计中东地区原油日产量减少达700万至1000万桶，对亚洲及欧洲进口国冲击尤为直接。</p>
+<hr/>
+<h3>2. <a href="https://wallstreetcn.com/articles/3767619">摩根大通：油价持续上涨或触发“多米诺效应”，标普500恐再下跌15%</a></h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.5/10</p>
+<p><strong>📝 摘要</strong>: 摩根大通警告，若石油供应冲击持续蔓延，标普500指数可能面临10%至15%的显著回调。油价上涨直接压制股市，股市下跌继而通过财富效应削弱消费需求，最终对整体经济增长形成拖累。</p>
+<hr/>
+<h3>3. <a href="https://wallstreetcn.com/articles/3767616">阿联酋主要港口富查伊拉再遭袭击，油价拉升</a></h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.5/10</p>
+<p><strong>📝 摘要</strong>: 阿联酋主要港口富查伊拉周一再度遭到袭击，石油装卸被迫暂停，推动油价走高。富查伊拉港是全球原油及成品油的重要枢纽，装卸中断直接冲击供应预期，支撑油价走高。</p>
+<hr/>
+<h3>4. <a href="https://www.wsj.com/business/deals/nebius-meta-agree-to-27-billion-ai-infrastructure-pact-099e9bff?mod=pls_whats_news_us_business_f">Nebius与Meta签署270亿美元AI基础设施协议</a></h3>
+<p><strong>📌 来源</strong>: WSJ 经济 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.9/10</p>
+<p><strong>📝 摘要</strong>: Nebius与Meta于近期签署了一份为期五年的价值270亿美元的协议，旨在为Meta提供AI基础设施服务。这一合作预计将满足Meta数据中心计算需求的激增。此举对AI基础设施行业具有重要影响，预计将推动行业进一步发展，同时也可能加剧市场垄断。专家分析，随着AI技术的不断进步，相关基础设施的需求将持续增长，这对行业参与者来说既是机遇也是挑战。</p>
+<hr/>
+<h3>5. <a href="https://wallstreetcn.com/articles/3767679">油价大跌，发生了什么？</a></h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 美伊接触和霍尔木兹海峡通航预期导致油价大跌，WTI原油价格从102美元上方跌至94美元下方。市场对美伊冲突缓和的预期推动油价下跌。</p>
+<hr/>
+<h3>6. <a href="https://www.economist.com/finance-and-economics/2026/03/16/the-iran-war-is-roiling-commodities-far-beyond-oil">伊朗战争影响远超石油</a></h3>
+<p><strong>📌 来源</strong>: The Economist | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 伊朗战争导致燃料和化学品短缺，影响从农业到制药等多个行业。全球供应链面临压力，预计将推高相关商品价格。</p>
+<hr/>
+<h3>7. <a href="https://www.wsj.com/finance/oil-holds-above-100-stocks-mixed-as-global-markets-look-for-direction-a5228507?mod=pls_whats_news_us_business_f">布伦特原油价格回落，美股上涨</a></h3>
+<p><strong>📌 来源</strong>: WSJ 经济 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.7/10</p>
+<p><strong>📝 摘要</strong>: 华尔街日报报道，布伦特原油价格从105美元回落，推动美股上涨。波斯湾油流恢复的努力加强，对全球经济产生积极影响。专家表示，这表明全球能源市场正在逐渐恢复稳定。</p>
+<hr/>
+<h3>8. <a href="https://www.wsj.com/world/americas/takeaways-from-wsj-reporting-on-the-cias-dealings-with-an-ex-chevron-executive-0f0d7ddf?mod=pls_whats_news_us_business_f">前雪佛龙高管与CIA交易曝光</a></h3>
+<p><strong>📌 来源</strong>: WSJ 经济 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 华尔街日报报道，前雪佛龙高管与CIA的交易揭示了特朗普政府如何利用能源行业策略应对独裁者。这一事件可能影响美国与能源行业的关系，并对未来政策产生深远影响。专家表示，这表明美国在能源政策上的转变。</p>
+<hr/>
+<h3>9. <a href="https://www.wsj.com/finance/commodities-futures/oil-rises-amid-ongoing-supply-disruption-concerns-2063c332?mod=rss_markets_main">中东冲突推高油价</a></h3>
+<p><strong>📌 来源</strong>: WSJ 市场 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 中东地区冲突导致供应中断担忧加剧，油价在早间交易中上涨。市场预计，如果冲突持续，油价可能进一步上涨，对全球经济产生负面影响。分析师认为，能源安全是全球关注的焦点。</p>
+<hr/>
+<h3>10. <a href="https://36kr.com/newsflashes/3726315188877954?f=rss">工会负责人：三星工人的罢工计划将中断芯片供应</a></h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 三星电子工会领导人表示，5月份罢工计划可能导致芯片生产中断，全球半导体供应面临瓶颈。预计生产中断将加剧全球半导体供应紧张，影响汽车、计算机和智能手机等行业。</p>
+<hr/>
+<h3>11. <a href="https://www.marketwatch.com/story/upstarts-stock-rises-as-analyst-says-investors-have-been-ignoring-a-key-catalyst-81fbde00?mod=mw_rss_topstories">Upstart股价上涨，分析师称银行牌照计划降低风险</a></h3>
+<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 金融科技公司Upstart股价上涨，分析师预测其银行牌照计划将降低对私人信用的风险敞口，预计股价有55%的上涨空间。此举可能对金融科技行业产生积极影响，但具体效果需市场验证。</p>
+<hr/>
+<h3>12. <a href="https://www.wsj.com/finance/oil-holds-above-100-stocks-mixed-as-global-markets-look-for-direction-a5228507?mod=rss_markets_main">油价回落推动美股上涨</a></h3>
+<p><strong>📌 来源</strong>: WSJ 市场 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 美国股市上涨，因波斯湾石油流动恢复的努力加强。布伦特原油价格从105美元回落，市场预期未来油价将保持稳定。分析师认为，油价波动对全球经济有重要影响。</p>
+<hr/>
+<h3>13. <a href="https://www.wsj.com/finance/commodities-futures/oil-futures-rise-on-supply-disruption-concerns-ef2c0545?mod=rss_markets_main">霍尔木兹海峡信号显示原油价格下跌</a></h3>
+<p><strong>📌 来源</strong>: WSJ 市场 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 美国原油期货价格下跌5.3%，至每桶93.50美元，因伊朗允许部分油轮通过霍尔木兹海峡。市场预期，如果海峡局势稳定，原油价格将保持稳定。分析师认为，霍尔木兹海峡的安全对全球能源市场至关重要。</p>
+<hr/>
+<h3>14. <a href="https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-03-16-2026?mod=rss_markets_main">今日股市：道指上涨，布伦特原油价格回落</a></h3>
+<p><strong>📌 来源</strong>: WSJ 市场 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 华尔街日报报道，今日股市道指上涨，布伦特原油价格从105美元回落。波斯湾油流恢复的努力加强，对全球经济产生积极影响。专家认为，这表明全球能源市场正在逐渐恢复稳定。</p>
+<hr/>
+<h2>🔬 科技新闻 (8条)</h2>
+<p>精选 <strong>8</strong> 条科技新闻</p>
+<h3>1. <a href="https://36kr.com/newsflashes/3726301481581184?f=rss">英伟达：比亚迪、吉利、五十铃、日产正基于DRIVE Hyperion平台开发L4级自动驾驶汽车</a></h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: 英伟达宣布与比亚迪、吉利、五十铃、日产等车企合作开发L4级自动驾驶汽车，预计将推动自动驾驶技术的发展和应用。</p>
+<hr/>
+<h3>2. <a href="https://techcrunch.com/2026/03/16/nvidia-gtc-how-to-watch-jensen-huang-2026-keynote/">黄仁勋GTC 2026演讲聚焦AI未来</a></h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: Nvidia CEO黄仁勋将在GTC 2026上发表演讲，聚焦Nvidia在计算和AI未来中的角色。预计将宣布新产品、合作伙伴关系和未来愿景，对行业影响巨大。</p>
+<hr/>
+<h3>3. <a href="https://36kr.com/newsflashes/3726327200004481?f=rss">英伟达推出太空计算平台，黄仁勋：太空计算时代已经到来</a></h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.9/10</p>
+<p><strong>📝 摘要</strong>: 英伟达在GTC大会上宣布推出太空计算平台，包括NVIDIA Space-1 Vera Rubin模块等。这一平台旨在为轨道数据中心和自主太空任务提供高性能计算能力。市场分析认为，太空计算技术的发展将推动相关产业链的进步。</p>
+<hr/>
+<h3>4. <a href="https://wallstreetcn.com/articles/3767643">估值100亿美元！OpenAI加速企业级市场，拟联手TPG、贝恩等PE巨头组建合资公司</a></h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.9/10</p>
+<p><strong>📝 摘要</strong>: OpenAI正与多家私募股权机构谈判组建合资企业，估值约100亿美元。此举旨在借助PE对企业客户的广泛影响力，加速AI产品的商业化渗透。</p>
+<hr/>
+<h3>5. <a href="https://wallstreetcn.com/articles/3767637">阿里给Token建立了一座“内部央行”</a></h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.9/10</p>
+<p><strong>📝 摘要</strong>: 阿里巴巴成立Alibaba Token Hub（ATH）事业群，旨在建立一个以“创造Token、输送Token、应用Token”为核心目标的新组织。此举标志着阿里全面押注AI Agent时代的决心。</p>
+<hr/>
+<h3>6. <a href="https://36kr.com/newsflashes/3726326628694665?f=rss">兴业证券：游戏产业逻辑优化，AI应用催化加速</a></h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.7/10</p>
+<p><strong>📝 摘要</strong>: 兴业证券研报指出，游戏产业逻辑优化，AI应用催化加速。AI视频生成大模型的发展有望加速游戏和视频厂商的应用落地。市场分析认为，AI技术的应用将推动游戏产业的创新和升级。</p>
+<hr/>
+<h3>7. <a href="https://36kr.com/newsflashes/3726317735573890?f=rss">xAI：Grok的文本转语音API现已上线</a></h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.7/10</p>
+<p><strong>📝 摘要</strong>: xAI公司推出Grok的文本转语音API。这一技术有望在语音合成、智能客服等领域得到应用。市场分析认为，语音技术的进步将推动人工智能产业的发展。</p>
+<hr/>
+<h3>8. <a href="https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-actions/">GitHub Actions入门教程发布</a></h3>
+<p><strong>📌 来源</strong>: GitHub Blog | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: GitHub近日发布了关于GitHub Actions的入门教程，该教程详细介绍了如何使用GitHub Actions进行自动化工作流程，对开发者提高工作效率有重要意义。教程中提到的GitHub Actions是一个CI/CD和自动化平台，可帮助开发者自动化重复性任务和部署过程。</p>
+<hr/>
+<h2>🏛️ 社会政治 (8条)</h2>
+<p>精选 <strong>8</strong> 条社会政治新闻</p>
+<h3>1. <a href="http://finance.eastmoney.com/news/1353,202603163673334355.html">3月16日东方财富财经晚报（附新闻联播）</a></h3>
+<p><strong>📌 来源</strong>: 东方财富 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 外交部发言人就中美元首外交及特朗普访华事宜回应，国务院总理主持全体会议部署经济社会发展工作，中美经贸磋商取得初步共识，氢能应用试点工作启动，上海市商业用房购房贷款政策调整，阿里巴巴成立新事业群，工信部会议强调培育新兴产业，阿联酋石油产量大幅减少，金融监管总局会议强调化解风险，霍尔木兹海峡通航船只数量减少，英伟达年度开发者大会即将召开，存储芯片行业因AI需求价格上涨，海洋经济高质量发展文章发表，万华化学业绩发布，Meta计划投资Nebius，赤天化甲醇价格上涨，湘邮科技涉嫌信息披露违法违规被立案，南网储能计划投资抽水蓄能电站，沃森生物筹划发行A股股票停牌，三房巷化工产品价格波动，高凌信息筹划收购凯睿星通停牌，雪浪环境启动预重整停牌，速达股份实控人被留置，央视新闻联播报道习近平文章及国务院重点工作部署，国家统计局数据反映经济运行良好，自然资源部要求建立国土空间规划动态维护机制，市场监管总局查处违法行为，海关总署等部门联合部署工作。</p>
+<hr/>
+<h3>2. <a href="https://www.bbc.com/news/articles/cp9mgpzn901o?at_medium=RSS&at_campaign=rss">Starmer宣布提供5300万英镑支持取暖油费用</a></h3>
+<p><strong>📌 来源</strong>: BBC Business | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: BBC Business报道，Starmer宣布提供5300万英镑支持面临能源费用上涨的脆弱家庭。这一举措旨在缓解美伊战争爆发后能源价格上涨带来的压力，对受影响家庭有直接帮助。</p>
+<hr/>
+<h3>3. <a href="https://www.bbc.com/news/articles/crl4gxgkkylo?at_medium=RSS&at_campaign=rss">伊朗袭击阿联酋关键石油港口和机场</a></h3>
+<p><strong>📌 来源</strong>: BBC Business | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: BBC Business报道，伊朗袭击了阿联酋的关键石油港口和机场。这一事件可能对全球石油供应和价格产生重大影响，引发对能源安全的担忧。</p>
+<hr/>
+<h3>4. <a href="https://www.ft.com/content/175a9a69-4026-4680-9d9f-14ead972f5b1">霍尔木兹海峡战事将长期影响全球经济</a></h3>
+<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 伊朗展示了对霍尔木兹海峡的控制权，对全球经济构成潜在威胁。战事结束后，该海峡仍可能长期影响全球经济。</p>
+<hr/>
+<h3>5. <a href="https://www.wsj.com/opinion/strait-of-hormuz-battle-iran-oil-israel-donald-trump-dd814493?mod=pls_whats_news_us_business_f">伊朗在中东海峡的争夺战</a></h3>
+<p><strong>📌 来源</strong>: WSJ 经济 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.1/10</p>
+<p><strong>📝 摘要</strong>: 伊朗在中东海峡的争夺战中给特朗普和以色列提供了削弱其政权的理由。这一事件反映了中东地区紧张的地缘政治局势。专家警告，这种紧张局势可能进一步升级，对地区和全球安全构成威胁。</p>
+<hr/>
+<h3>6. <a href="https://www.wsj.com/opinion/how-to-keep-up-the-economic-pressure-against-iran-ffad39e8?mod=rss_markets_main">对伊朗经济施压策略：停止射击但政权仍存</a></h3>
+<p><strong>📌 来源</strong>: WSJ 市场 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.0/10</p>
+<p><strong>📝 摘要</strong>: 美国认为，即使射击停止，只要伊朗政权仍在，美国仍可打击其金融命脉。此举可能加剧地区紧张局势，影响中东地区经济稳定。专家警告，持续的经济压力可能导致地区冲突升级。</p>
+<hr/>
+<h3>7. <a href="https://www.ft.com/content/ab860148-6d39-403b-a810-a906bd9ce414">北约盟友拒绝特朗普的霍尔木兹海峡舰队要求</a></h3>
+<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.0/10</p>
+<p><strong>📝 摘要</strong>: 英国、法国和德国拒绝加入特朗普对伊朗的霍尔木兹海峡舰队要求，可能引发与美国总统的冲突。这可能导致北约内部紧张关系加剧。</p>
+<hr/>
+<h3>8. <a href="https://www.wsj.com/opinion/on-iran-is-only-bad-news-fit-to-print-1ac66649?mod=pls_whats_news_us_business_f">伊朗新闻选择性报道引争议</a></h3>
+<p><strong>📌 来源</strong>: WSJ 经济 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.0/10</p>
+<p><strong>📝 摘要</strong>: 华尔街日报报道指出，当前伊朗新闻的报道偏向负面，引发媒体偏见争议。报道指出，媒体在报道伊朗问题时存在严重偏见，这可能影响公众对伊朗局势的理解。专家认为，这种报道方式可能加剧地区紧张局势。</p>
+<hr/>]]></content:encoded>
+    </item>
+    <item>
         <title>2026年03月16日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-03-16.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:58:06 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-03-16.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -157,7 +296,7 @@
         <title>2026年03月15日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-03-15.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-03-15.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -296,7 +435,7 @@
         <title>2026年03月14日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-03-14.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-03-14.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -435,7 +574,7 @@
         <title>2026年03月13日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-03-13.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-03-13.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -574,7 +713,7 @@
         <title>2026年03月12日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-03-12.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-03-12.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -713,7 +852,7 @@
         <title>2026年03月11日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-03-11.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-03-11.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -852,7 +991,7 @@
         <title>2026年03月10日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-03-10.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-03-10.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -991,7 +1130,7 @@
         <title>2026年03月09日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-03-09.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-03-09.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1130,7 +1269,7 @@
         <title>2026年03月08日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-03-08.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-03-08.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1269,7 +1408,7 @@
         <title>2026年03月07日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-03-07.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-03-07.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1408,7 +1547,7 @@
         <title>2026年03月06日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-03-06.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-03-06.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1547,7 +1686,7 @@
         <title>2026年03月05日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-03-05.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-03-05.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1686,7 +1825,7 @@
         <title>2026年03月04日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-03-04.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-03-04.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1825,7 +1964,7 @@
         <title>2026年03月03日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-03-03.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-03-03.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1964,7 +2103,7 @@
         <title>2026年03月02日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-03-02.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-03-02.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -2103,7 +2242,7 @@
         <title>2026年03月01日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-03-01.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-03-01.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -2242,7 +2381,7 @@
         <title>2026年02月28日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-28.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-28.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -2381,7 +2520,7 @@
         <title>2026年02月27日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-27.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-27.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -2520,7 +2659,7 @@
         <title>2026年02月26日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-26.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-26.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -2659,7 +2798,7 @@
         <title>2026年02月25日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-25.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-25.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -2798,7 +2937,7 @@
         <title>2026年02月24日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-24.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-24.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -2937,7 +3076,7 @@
         <title>2026年02月23日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-23.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-23.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -3076,7 +3215,7 @@
         <title>2026年02月22日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-22.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-22.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -3215,7 +3354,7 @@
         <title>2026年02月21日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-21.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-21.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -3354,7 +3493,7 @@
         <title>2026年02月20日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-20.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-20.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -3493,7 +3632,7 @@
         <title>2026年02月19日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-19.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-19.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -3632,7 +3771,7 @@
         <title>2026年02月18日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-18.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-18.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -3771,7 +3910,7 @@
         <title>2026年02月17日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-17.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-17.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -3910,7 +4049,7 @@
         <title>2026年02月16日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-16.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-16.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -4049,7 +4188,7 @@
         <title>2026年02月15日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-15.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-15.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -4188,7 +4327,7 @@
         <title>2026年02月14日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-14.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-14.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -4327,7 +4466,7 @@
         <title>2026年02月13日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-13.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-13.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -4466,7 +4605,7 @@
         <title>2026年02月12日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-12.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-12.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -4605,7 +4744,7 @@
         <title>2026年02月11日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-11.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-11.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -4744,7 +4883,7 @@
         <title>2026年02月10日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-10.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-10.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -4883,7 +5022,7 @@
         <title>2026年02月09日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-09.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-09.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -5220,7 +5359,7 @@
         <title>2026年02月08日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-08.md</link>
         <description>本期精选 26 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-08.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -5525,7 +5664,7 @@
         <title>2026年02月07日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-07.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-07.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -5812,7 +5951,7 @@
         <title>2026年02月06日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-06.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-06.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -6019,7 +6158,7 @@
         <title>2026年02月05日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-05.md</link>
         <description>本期精选 11 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-05.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -6163,7 +6302,7 @@
         <title>2026年02月04日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-04.md</link>
         <description>本期精选 0 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-04.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -6185,7 +6324,7 @@
         <title>2026年02月03日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-03.md</link>
         <description>本期精选 10 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-03.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -6316,7 +6455,7 @@
         <title>2026年02月02日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-02.md</link>
         <description>本期精选 0 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-02.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h3>1. KKR 领导集团即将以超过 100 亿美元的价格收购新加坡数据中心公司</h3>
@@ -6615,7 +6754,7 @@
         <title>2026年02月01日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-02-01.md</link>
         <description>本期精选 16 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-02-01.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -6817,7 +6956,7 @@
         <title>2026年01月31日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-01-31.md</link>
         <description>本期精选 5 条高质量科技新闻</description>
-        <pubDate>Mon, 16 Mar 2026 01:52:41 GMT</pubDate>
+        <pubDate>Tue, 17 Mar 2026 01:29:30 GMT</pubDate>
         <guid>archive/2026-01-31.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 科技新闻精选</h1>
