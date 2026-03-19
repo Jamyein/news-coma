@@ -1,69 +1,69 @@
 {
-  "last_run": "2026-03-18T01:46:00.343578",
+  "last_run": "2026-03-19T01:47:00.418783",
   "stats": {
-    "total_runs": 66,
-    "total_news_processed": 10287,
-    "avg_news_per_run": 155.9
+    "total_runs": 67,
+    "total_news_processed": 10565,
+    "avg_news_per_run": 157.7
   },
   "source_stats": {
     "The Verge": {
-      "fetched": 468,
+      "fetched": 478,
       "selected": 58
     },
     "Hacker News": {
-      "fetched": 1099,
-      "selected": 130
+      "fetched": 1120,
+      "selected": 131
     },
     "TechCrunch": {
-      "fetched": 762,
-      "selected": 97
+      "fetched": 781,
+      "selected": 101
     },
     "GitHub Blog": {
       "fetched": 36,
       "selected": 12
     },
     "MarketWatch": {
-      "fetched": 514,
-      "selected": 80
+      "fetched": 524,
+      "selected": 81
     },
     "Financial Times": {
-      "fetched": 490,
-      "selected": 115
+      "fetched": 502,
+      "selected": 119
     },
     "WSJ 经济": {
-      "fetched": 1311,
-      "selected": 113
+      "fetched": 1348,
+      "selected": 115
     },
     "36氪": {
-      "fetched": 1342,
-      "selected": 240
+      "fetched": 1369,
+      "selected": 241
     },
     "WSJ 全球经济": {
-      "fetched": 294,
-      "selected": 38
+      "fetched": 301,
+      "selected": 39
     },
     "华尔街见闻": {
-      "fetched": 1805,
-      "selected": 299
+      "fetched": 1863,
+      "selected": 306
     },
     "BBC Business": {
-      "fetched": 605,
+      "fetched": 621,
       "selected": 83
     },
     "WSJ 市场": {
-      "fetched": 924,
+      "fetched": 951,
       "selected": 115
     },
     "东方财富": {
-      "fetched": 464,
-      "selected": 56
+      "fetched": 491,
+      "selected": 61
     },
     "CNBC": {
-      "fetched": 118,
-      "selected": 19
+      "fetched": 124,
+      "selected": 23
     },
     "The Economist": {
-      "fetched": 55,
+      "fetched": 56,
       "selected": 10
     }
   },
@@ -684,24 +684,33 @@
       "cache_misses": 0,
       "duration_seconds": 445.746092,
       "avg_score": 7.656666666666666
+    },
+    {
+      "run_time": "2026-03-19T01:47:00.418783",
+      "news_count": 278,
+      "api_calls": 28,
+      "cache_hits": 0,
+      "cache_misses": 0,
+      "duration_seconds": 422.160006,
+      "avg_score": 7.893333333333333
     }
   ],
   "source_last_fetch": {
-    "TechCrunch": "2026-03-18T01:46:00.574224",
-    "GitHub Blog": "2026-03-18T01:46:00.727501",
-    "Hacker News": "2026-03-18T01:46:01.013514",
-    "The Verge": "2026-03-18T01:46:01.172240",
-    "The Economist": "2026-03-18T01:46:01.445007",
-    "CNBC": "2026-03-18T01:46:01.915770",
-    "BBC Business": "2026-03-18T01:46:02.295548",
-    "MarketWatch": "2026-03-18T01:46:02.793984",
-    "Financial Times": "2026-03-18T01:46:03.306415",
-    "华尔街见闻": "2026-03-18T01:46:05.452235",
-    "36氪": "2026-03-18T01:46:06.837334",
+    "TechCrunch": "2026-03-19T01:47:00.559432",
+    "GitHub Blog": "2026-03-19T01:47:00.725556",
+    "Hacker News": "2026-03-19T01:47:00.815564",
+    "The Verge": "2026-03-19T01:47:00.883830",
+    "The Economist": "2026-03-19T01:47:01.102070",
+    "CNBC": "2026-03-19T01:47:01.282314",
+    "BBC Business": "2026-03-19T01:47:01.799575",
+    "MarketWatch": "2026-03-19T01:47:01.943073",
+    "Financial Times": "2026-03-19T01:47:02.347437",
+    "华尔街见闻": "2026-03-19T01:47:04.212654",
+    "36氪": "2026-03-19T01:47:05.731895",
     "香港經濟日報": "2026-02-04T15:03:52.635318",
-    "东方财富": "2026-03-18T01:46:08.960052",
-    "WSJ 经济": "2026-03-18T01:46:09.099486",
-    "WSJ 市场": "2026-03-18T01:46:09.363291",
-    "WSJ 全球经济": "2026-03-18T01:46:09.463370"
+    "东方财富": "2026-03-19T01:47:08.247892",
+    "WSJ 经济": "2026-03-19T01:47:08.321390",
+    "WSJ 市场": "2026-03-19T01:47:08.510439",
+    "WSJ 全球经济": "2026-03-19T01:47:08.575799"
   }
 }
