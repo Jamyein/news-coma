@@ -1,82 +1,73 @@
 {
-  "last_run": "2026-05-13T02:35:47.348113",
+  "last_run": "2026-05-14T02:36:13.448126",
   "stats": {
-    "total_runs": 122,
-    "total_news_processed": 22334,
-    "avg_news_per_run": 183.1
+    "total_runs": 123,
+    "total_news_processed": 22596,
+    "avg_news_per_run": 183.7
   },
   "source_stats": {
     "The Verge": {
-      "fetched": 986,
+      "fetched": 996,
       "selected": 121
     },
     "Hacker News": {
-      "fetched": 2309,
-      "selected": 273
+      "fetched": 2325,
+      "selected": 274
     },
     "TechCrunch": {
-      "fetched": 1578,
-      "selected": 199
+      "fetched": 1598,
+      "selected": 200
     },
     "GitHub Blog": {
-      "fetched": 77,
+      "fetched": 78,
       "selected": 22
     },
     "MarketWatch": {
-      "fetched": 1067,
-      "selected": 191
+      "fetched": 1077,
+      "selected": 192
     },
     "Financial Times": {
-      "fetched": 1057,
-      "selected": 298
+      "fetched": 1068,
+      "selected": 301
     },
     "WSJ 经济": {
-      "fetched": 2831,
+      "fetched": 2866,
       "selected": 229
     },
     "36氪": {
-      "fetched": 2831,
-      "selected": 413
+      "fetched": 2859,
+      "selected": 426
     },
     "WSJ 全球经济": {
-      "fetched": 613,
+      "fetched": 620,
       "selected": 87
     },
     "华尔街见闻": {
-      "fetched": 4171,
-      "selected": 648
+      "fetched": 4228,
+      "selected": 653
     },
     "BBC Business": {
-      "fetched": 1294,
+      "fetched": 1307,
       "selected": 190
     },
     "WSJ 市场": {
-      "fetched": 1985,
-      "selected": 222
+      "fetched": 2006,
+      "selected": 224
     },
     "东方财富": {
-      "fetched": 1141,
-      "selected": 161
+      "fetched": 1169,
+      "selected": 165
     },
     "CNBC": {
-      "fetched": 283,
+      "fetched": 287,
       "selected": 48
     },
     "The Economist": {
-      "fetched": 111,
+      "fetched": 112,
       "selected": 25
     }
   },
   "run_metrics": [
-    {
-      "run_time": "2026-02-07T00:55:59.159039",
-      "news_count": 237,
-      "api_calls": 24,
-      "cache_hits": 0,
-      "cache_misses": 0,
-      "duration_seconds": 328.949011,
-      "avg_score": 7.836666666666668
-    },
     {
       "run_time": "2026-02-07T02:54:43.339817",
       "news_count": 25,
@@ -967,24 +958,33 @@
       "cache_misses": 0,
       "duration_seconds": 569.8283,
       "avg_score": 7.816666666666666
+    },
+    {
+      "run_time": "2026-05-14T02:36:13.448126",
+      "news_count": 262,
+      "api_calls": 32,
+      "cache_hits": 0,
+      "cache_misses": 0,
+      "duration_seconds": 684.526551,
+      "avg_score": 7.989999999999999
     }
   ],
   "source_last_fetch": {
-    "TechCrunch": "2026-05-13T02:35:47.483552",
-    "GitHub Blog": "2026-05-13T02:35:47.627644",
-    "Hacker News": "2026-05-13T02:35:47.741617",
-    "The Verge": "2026-05-13T02:35:47.811452",
-    "The Economist": "2026-05-13T02:35:48.058735",
-    "CNBC": "2026-05-13T02:35:48.155391",
-    "BBC Business": "2026-05-13T02:35:48.257203",
-    "MarketWatch": "2026-05-13T02:35:48.393709",
-    "Financial Times": "2026-05-13T02:35:48.724167",
-    "华尔街见闻": "2026-05-13T02:35:51.089545",
-    "36氪": "2026-05-13T02:35:52.530206",
+    "TechCrunch": "2026-05-14T02:36:13.557459",
+    "GitHub Blog": "2026-05-14T02:36:13.672552",
+    "Hacker News": "2026-05-14T02:36:13.966685",
+    "The Verge": "2026-05-14T02:36:14.125224",
+    "The Economist": "2026-05-14T02:36:14.395321",
+    "CNBC": "2026-05-14T02:36:14.496730",
+    "BBC Business": "2026-05-14T02:36:14.566022",
+    "MarketWatch": "2026-05-14T02:36:14.891269",
+    "Financial Times": "2026-05-14T02:36:15.169622",
+    "华尔街见闻": "2026-05-14T02:36:20.233826",
+    "36氪": "2026-05-14T02:36:22.158791",
     "香港經濟日報": "2026-02-04T15:03:52.635318",
-    "东方财富": "2026-05-13T02:35:54.380348",
-    "WSJ 经济": "2026-05-13T02:35:54.481727",
-    "WSJ 市场": "2026-05-13T02:35:54.548241",
-    "WSJ 全球经济": "2026-05-13T02:35:54.631251"
+    "东方财富": "2026-05-14T02:36:25.935833",
+    "WSJ 经济": "2026-05-14T02:36:26.038995",
+    "WSJ 市场": "2026-05-14T02:36:26.131490",
+    "WSJ 全球经济": "2026-05-14T02:36:26.224747"
   }
 }
