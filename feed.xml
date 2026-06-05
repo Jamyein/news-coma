@@ -5,8 +5,8 @@
     <link>https://github.com/Jamyein/news-coma</link>
     <description>由 AI 筛选的高质量科技新闻聚合，每6小时自动更新</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 04 Jun 2026 03:39:04 GMT</lastBuildDate>
-    <pubDate>Thu, 04 Jun 2026 03:39:04 GMT</pubDate>
+    <lastBuildDate>Fri, 05 Jun 2026 03:00:24 GMT</lastBuildDate>
+    <pubDate>Fri, 05 Jun 2026 03:00:24 GMT</pubDate>
     <atom:link href="https://Jamyein.github.io/news-coma/feed.xml" rel="self" type="application/rss+xml" />
     <image>
         <url>https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</url>
@@ -15,10 +15,149 @@
     </image>
 
     <item>
+        <title>2026年06月05日 新闻汇总</title>
+        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-06-05.md</link>
+        <description>本期精选 30 条高质量科技新闻</description>
+        <pubDate>Fri, 05 Jun 2026 03:00:24 GMT</pubDate>
+        <guid>archive/2026-06-05.md</guid>
+        <category>综合新闻</category>
+        <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
+<blockquote>🕐 更新时间: 2026年06月05日 11:00</blockquote>
+<blockquote>📊 本期精选 <strong>30</strong> 条高质量新闻</blockquote>
+<blockquote>🤖 由 AI 自动分类、筛选、翻译和总结</blockquote>
+<hr/>
+<h2>💰 财经新闻 (13条)</h2>
+<p>精选 <strong>13</strong> 条财经新闻</p>
+<h3>1. <a href="http://finance.eastmoney.com/news/1354,202606053760773873.html">“对市场具有历史意义” SpaceX推进全球最大IPO</a></h3>
+<p><strong>📌 来源</strong>: 东方财富 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.5/10</p>
+<p><strong>📝 摘要</strong>: SpaceX计划于6月12日上市，预计募资750亿美元，创全球IPO募资纪录。公司估值1.77万亿美元，有望成为全美第七大市值公司。市场对估值存在分歧，但普遍认为SpaceX在航天领域的地位难以撼动。</p>
+<hr/>
+<h3>2. <a href="http://stock.eastmoney.com/news/11791,202606043760739370.html">看好中国 长线布局 外资持续加仓！</a></h3>
+<p><strong>📌 来源</strong>: 东方财富 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: 多家国际金融机构发布中国经济积极展望，调高对中国科技企业投资比重。外资机构看好人工智能、先进制造、能源转型等领域的投资机会。</p>
+<hr/>
+<h3>3. <a href="https://www.bloomberg.com/news/articles/2026-06-04/s-p-dow-jones-keeps-megacap-ipo-rules-as-is-after-consultation">标普拒绝SpaceX等大型IPO快速上市</a></h3>
+<p><strong>📌 来源</strong>: Hacker News | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 标普拒绝SpaceX等大型公司IPO快速上市，此举可能影响这些公司的融资计划。专家分析，这反映了市场对大型IPO的谨慎态度，对相关行业和投资者心理产生一定影响。</p>
+<hr/>
+<h3>4. <a href="https://wallstreetcn.com/articles/3773877">中东战争+超级厄尔尼诺！瑞银警告：亚洲食品通胀或全面升温</a></h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 瑞银发布报告预测，亚洲食品通胀风险升温，受厄尔尼诺气候事件和中东冲突影响。预计2026年5月至2027年2月，亚洲主要农业产区可能面临干旱风险，影响水稻等关键作物的单产。泰国白米价格5月单月涨幅达20%，创2008年以来最大单月涨幅。</p>
+<hr/>
+<h3>5. <a href="https://wallstreetcn.com/articles/3773869">瑞银：A股科技股拥挤程度远未达到历史峰值</a></h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.7/10</p>
+<p><strong>📝 摘要</strong>: 瑞银报告显示，A股科技股拥挤度远未达历史峰值，科技成长风格持续。公募基金对大科技板块的超配比例为9.9%，低于历史峰值。预计2026年全部A股盈利增速将从2025年的3.9%提升至11%。</p>
+<hr/>
+<h3>6. <a href="https://wallstreetcn.com/articles/3773861">博通Q2：谷歌「引入新欢」是扰动，294亿Q3指引与排到2028的订单才是基本盘</a></h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.7/10</p>
+<p><strong>📝 摘要</strong>: 博通Q2财报显示，谷歌引入新欢，但294亿Q3指引与排到2028的订单才是基本盘。博通预计第三季度营收约294亿美元，同比增幅84%。博通AI半导体出货108亿美元，但同期收到的客户订单总额超过300亿美元。</p>
+<hr/>
+<h3>7. <a href="https://wallstreetcn.com/articles/3773868">被低估的“银发经济”——全球消费增长新引擎</a></h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.7/10</p>
+<p><strong>📝 摘要</strong>: 汇丰报告指出，65岁以上群体正成为全球消费增长新引擎。2024年美国65岁以上人群贡献了全国消费支出的22%，较2014年的18%显著提升。预计未来十年，发达市场65岁以上群体的实际消费支出年均增速将达4%至5%。</p>
+<hr/>
+<h3>8. <a href="https://wallstreetcn.com/articles/3773851">软银单日暴跌11%！孙正义的亚洲首富，只当了三天</a></h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 软银股价大跌11%，孙正义亚洲首富地位仅维持三天。外界对软银高杠杆AI押注模式持续质疑，对OpenAI的累计投资已超过600亿美元，有息债务约达1040亿美元。</p>
+<hr/>
+<h3>9. <a href="https://wallstreetcn.com/articles/3773925">SK 海力士美国上市路演获"极度正面"反馈，HBM定价优势有望延续至明年</a></h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: SK海力士在美国上市路演中获得投资者积极反馈，预计其高带宽存储芯片（HBM）的有利定价环境将延续至明年。此举有助于巩固市场对SK海力士赴美上市的预期，对公司未来发展具有重要意义。</p>
+<hr/>
+<h3>10. <a href="https://wallstreetcn.com/articles/3773929">SpaceX等超级IPO提前纳入指数？纳指、罗素“开绿灯”，标普“守住节操”不跟！</a></h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: SpaceX超大IPO未获标普道琼斯指数纳入，引发市场对指数规则的讨论。此举可能影响SpaceX的上市进程和投资者信心。专家表示，指数规则应适应市场变化，以保持其公正性和权威性。</p>
+<hr/>
+<h3>11. <a href="https://wallstreetcn.com/articles/3773921">报道：美国政府拟收购AI公司股份并向全民派息，OpenAI Altman是主要推手</a></h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 美国政府正探索直接持有主要人工智能公司股权的可能性，并考虑将投资收益以股息形式分配给全体美国家庭。此举可能对AI行业产生重大影响。</p>
+<hr/>
+<h3>12. <a href="https://www.wsj.com/finance/investing/the-anything-goes-era-in-private-credit-lending-is-coming-to-an-end-e4fd1bb6?mod=rss_markets_main">私人信贷市场进入调整期</a></h3>
+<p><strong>📌 来源</strong>: WSJ 市场 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 投资者压力下，私人信贷市场成本上升，竞争加剧导致贷款条件收紧。预计将影响投资者和借款人策略，市场调整期可能持续。</p>
+<hr/>
+<h3>13. <a href="https://wallstreetcn.com/articles/3773914">盛大客户路演、齐声唱多研报---华尔街“火力全开”为SpaceX上市“造势”</a></h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 华尔街正以前所未有的规模和热情，为SpaceX史上最大规模IPO全力背书。此举可能对SpaceX的上市进程和投资者信心产生积极影响。</p>
+<hr/>
+<h2>🔬 科技新闻 (7条)</h2>
+<p>精选 <strong>7</strong> 条科技新闻</p>
+<h3>1. <a href="http://finance.eastmoney.com/news/1354,202606043760761396.html">深度绑定英伟达、谷歌 算力核心设备龙头博杰股份加速扩产</a></h3>
+<p><strong>📌 来源</strong>: 东方财富 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: 博杰股份拟募集资金15.03亿元，用于服务器检测设备及散热模组零部件产能建设项目。公司已与英伟达、谷歌等建立长期合作关系，订单规模持续扩大。</p>
+<hr/>
+<h3>2. <a href="https://techcrunch.com/2026/06/04/what-to-expect-from-wwdc-2026-siris-highly-anticipated-revamp-and-apple-intelligence-updates/">2026年WWDC前瞻：Siri大更新及苹果AI升级</a></h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: 苹果公司即将举行WWDC大会，预计将推出Siri的大更新和苹果AI技术的升级。这一事件对科技行业具有重要意义，可能引领智能语音助手和人工智能技术的发展方向。</p>
+<hr/>
+<h3>3. <a href="http://finance.eastmoney.com/news/1354,202606043760756957.html">不只是“光”“芯” 公募淘金AI材料端</a></h3>
+<p><strong>📌 来源</strong>: 东方财富 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 8.0/10</p>
+<p><strong>📝 摘要</strong>: MLCC、电子布等AI材料需求增长，部分上游材料个股涨幅超过200%。公募基金经理将布局从“芯”与“光”延伸至上游材料端，在结构性涨价潮中收获布局红利。</p>
+<hr/>
+<h3>4. <a href="https://wallstreetcn.com/articles/3773872">1.6T光模块量产元年，测试设备迎来黄金时代！</a></h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.9/10</p>
+<p><strong>📝 摘要</strong>: AI数据中心对高速互联的需求推动光模块测试设备市场增长。800G光模块已成为数据中心主流方案，1.6T光模块进入商业化放量阶段。预计2026年全球AI光模块市场规模将达260亿美元，同比增长57.6%。</p>
+<hr/>
+<h3>5. <a href="https://wallstreetcn.com/articles/3773867">云巨头角色重大转变：从算力供应商到AI分发枢纽</a></h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: 云巨头角色从算力供应商转变为AI分发枢纽，成为OpenAI、Anthropic等前沿模型触达企业客户的核心平台。2026年一季度，三大云巨头合计营收848亿美元，同比增长39%。</p>
+<hr/>
+<h3>6. <a href="https://36kr.com/p/3839505332161026?f=rss">8点1氪丨分析师曝苹果Vision Pro产品线被移除；黄仁勋将首次亮相综艺节目；粉笔CEO就骂人大学生“活该找不到工作”道歉</a></h3>
+<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: 苹果公司移除Vision Pro产品线，转而专注于AI眼镜，预计2027年推出。此举标志着苹果在AR/VR领域的战略调整，对行业影响深远。</p>
+<hr/>
+<h3>7. <a href="https://www.theverge.com/games/943657/valve-steam-machine-frame-summer-launch-verified">Valve宣布Steam Machine和Steam Frame VR头盔夏季发布</a></h3>
+<p><strong>📌 来源</strong>: The Verge | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.6/10</p>
+<p><strong>📝 摘要</strong>: Valve宣布其Steam Machine和Steam Frame VR头盔将于夏季发布，对游戏和VR市场有重要影响。新闻发布及时，技术深度适中，受众范围广，对消费者有实际参考价值。</p>
+<hr/>
+<h2>🏛️ 社会政治 (10条)</h2>
+<p>精选 <strong>10</strong> 条社会政治新闻</p>
+<h3>1. <a href="https://www.ft.com/content/516cd0e5-a402-4b6c-8035-d688dc5f0cf4">高盛预测SpaceX AI收入2030年增长百倍</a></h3>
+<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.8/10</p>
+<p><strong>📝 摘要</strong>: Financial Times报道，高盛预测SpaceX的AI收入到2030年将增长100倍，估值达1.78万亿。SpaceX计划IPO，市场关注其盈利模式。</p>
+<hr/>
+<h3>2. <a href="https://www.ft.com/content/40881578-9d19-4edc-a6f5-544190ccaf59">伯恩ham宣布将竞选英国首相</a></h3>
+<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 曼彻斯特市长伯恩ham宣布将竞选英国首相，引发政治关注。若成功，他将成为首位来自工党的英国首相。此次竞选将对英国政治格局产生重大影响，专家预测，英国政治将进入新的动荡时期。</p>
+<hr/>
+<h3>3. <a href="https://www.wsj.com/economy/jobs/layoffs-2026-tracker-784ea69f">AI行业裁员激增66%，科技巨头面临挑战</a></h3>
+<p><strong>📌 来源</strong>: WSJ 全球经济 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: WSJ报道称，今年AI行业裁员人数较去年增长66%，科技巨头面临重大挑战。裁员主要集中在技术领域，对行业稳定性和人才市场造成影响。专家预测，这一趋势将持续，可能引发行业格局变化。</p>
+<hr/>
+<h3>4. <a href="https://techcrunch.com/2026/06/04/chinese-spies-are-using-linkedin-to-lure-westerners-into-sharing-sensitive-information/">中国间谍利用LinkedIn诱骗西方人泄露敏感信息</a></h3>
+<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 据报告，中国间谍利用LinkedIn等公共求职平台诱骗西方人泄露敏感信息。这一行为引起了国际社会的广泛关注。专家警告，网络安全问题日益严重，个人和企业需要加强信息保护意识。同时，各国政府应加强合作，共同打击网络间谍活动。</p>
+<hr/>
+<h3>5. <a href="https://www.wsj.com/economy/jobs/technology-sector-leads-u-s-layoff-plans-ae1d722d">科技行业领跑美国裁员计划</a></h3>
+<p><strong>📌 来源</strong>: WSJ 全球经济 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.5/10</p>
+<p><strong>📝 摘要</strong>: 美国雇主在5月宣布了97,006个裁员计划，其中科技行业领跑。裁员主要集中在技术领域，反映了行业整合和技术变革的趋势。</p>
+<hr/>
+<h3>6. <a href="https://wallstreetcn.com/articles/3773912">泽连斯基公开信提议会晤，普京称“愿在安克雷奇会晤基础上谈判”，特朗普“俄乌会妥协”</a></h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.3/10</p>
+<p><strong>📝 摘要</strong>: 乌克兰总统泽连斯基提议与俄罗斯总统普京会晤，普京表示愿意在安克雷奇会晤基础上谈判。此举可能为长期困扰全球市场的地缘风险降温。俄乌冲突双方均释放出通过谈判结束冲突的积极信号。</p>
+<hr/>
+<h3>7. <a href="https://wallstreetcn.com/articles/3773902">贝森特国会激辩：回避特朗普“免审计”争议，称伊朗冲突已暂停、油价终将回落，对俄油豁免或改为“按国发放”</a></h3>
+<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.3/10</p>
+<p><strong>📝 摘要</strong>: 美国财长贝森特在国会听证会上就税务豁免、伊朗冲突、油价走势等问题作证，强调特朗普政府减税政策成效，同时回避特朗普审计豁免争议，引发激烈讨论。</p>
+<hr/>
+<h3>8. <a href="https://www.ft.com/content/326aa9fd-dcb3-4e3b-a775-61b28e7e12f6">欧盟展现创新实力</a></h3>
+<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.3/10</p>
+<p><strong>📝 摘要</strong>: Financial Times报道，欧盟推出新的技术主权计划，标志着从防御性监管向积极创新的转变。此举可能加强欧洲在全球科技竞争中的地位。</p>
+<hr/>
+<h3>9. <a href="https://www.ft.com/content/625ae455-3b7b-454e-82f3-b22414459cc0">SpaceX IPO神话与真相</a></h3>
+<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.2/10</p>
+<p><strong>📝 摘要</strong>: Financial Times报道，SpaceX IPO备受关注，但其支持高估值的具体计划尚不明确。市场对SpaceX的盈利能力和市场定位持怀疑态度。</p>
+<hr/>
+<h3>10. <a href="https://www.ft.com/content/d02d91b3-2636-454e-9442-dc7e69f51815">美国国家安全局使用Anthropic工具</a></h3>
+<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.1/10</p>
+<p><strong>📝 摘要</strong>: Financial Times报道，美国国家安全局使用Anthropic的Mythos工具进行网络攻击。此举引发对AI在网络安全领域应用的伦理和法律问题的关注。</p>
+<hr/>]]></content:encoded>
+    </item>
+    <item>
         <title>2026年06月04日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-06-04.md</link>
         <description>本期精选 17 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:39:04 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-06-04.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -105,7 +244,7 @@
         <title>2026年06月03日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-06-03.md</link>
         <description>本期精选 17 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-06-03.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -192,7 +331,7 @@
         <title>2026年06月02日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-06-02.md</link>
         <description>本期精选 17 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-06-02.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -279,7 +418,7 @@
         <title>2026年06月01日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-06-01.md</link>
         <description>本期精选 15 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-06-01.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -358,7 +497,7 @@
         <title>2026年05月31日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-31.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-31.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -497,7 +636,7 @@
         <title>2026年05月30日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-30.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-30.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -636,7 +775,7 @@
         <title>2026年05月29日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-29.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-29.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -775,7 +914,7 @@
         <title>2026年05月28日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-28.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-28.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -914,7 +1053,7 @@
         <title>2026年05月27日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-27.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-27.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1053,7 +1192,7 @@
         <title>2026年05月26日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-26.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-26.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1192,7 +1331,7 @@
         <title>2026年05月25日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-25.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-25.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1331,7 +1470,7 @@
         <title>2026年05月24日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-24.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-24.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1470,7 +1609,7 @@
         <title>2026年05月23日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-23.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-23.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1609,7 +1748,7 @@
         <title>2026年05月22日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-22.md</link>
         <description>本期精选 18 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-22.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1700,7 +1839,7 @@
         <title>2026年05月21日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-21.md</link>
         <description>本期精选 29 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-21.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1835,7 +1974,7 @@
         <title>2026年05月20日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-20.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-20.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -1974,7 +2113,7 @@
         <title>2026年05月19日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-19.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-19.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -2113,7 +2252,7 @@
         <title>2026年05月18日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-18.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-18.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -2252,7 +2391,7 @@
         <title>2026年05月17日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-17.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-17.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -2391,7 +2530,7 @@
         <title>2026年05月16日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-16.md</link>
         <description>本期精选 26 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-16.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -2514,7 +2653,7 @@
         <title>2026年05月15日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-15.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-15.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -2653,7 +2792,7 @@
         <title>2026年05月14日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-14.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-14.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -2792,7 +2931,7 @@
         <title>2026年05月13日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-13.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-13.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -2931,7 +3070,7 @@
         <title>2026年05月12日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-12.md</link>
         <description>本期精选 20 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-12.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -3030,7 +3169,7 @@
         <title>2026年05月11日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-11.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-11.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -3169,7 +3308,7 @@
         <title>2026年05月10日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-10.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-10.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -3308,7 +3447,7 @@
         <title>2026年05月09日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-09.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-09.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -3447,7 +3586,7 @@
         <title>2026年05月08日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-08.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-08.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -3586,7 +3725,7 @@
         <title>2026年05月07日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-07.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-07.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -3725,7 +3864,7 @@
         <title>2026年05月06日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-06.md</link>
         <description>本期精选 24 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-06.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -3840,7 +3979,7 @@
         <title>2026年05月05日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-05.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-05.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -3979,7 +4118,7 @@
         <title>2026年05月04日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-04.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-04.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -4118,7 +4257,7 @@
         <title>2026年05月03日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-03.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-03.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -4257,7 +4396,7 @@
         <title>2026年05月02日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-02.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-02.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -4396,7 +4535,7 @@
         <title>2026年05月01日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-05-01.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-05-01.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -4535,7 +4674,7 @@
         <title>2026年04月30日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-04-30.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-04-30.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -4674,7 +4813,7 @@
         <title>2026年04月29日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-04-29.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-04-29.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -4813,7 +4952,7 @@
         <title>2026年04月28日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-04-28.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-04-28.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -4952,7 +5091,7 @@
         <title>2026年04月27日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-04-27.md</link>
         <description>本期精选 28 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-04-27.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -5083,7 +5222,7 @@
         <title>2026年04月26日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-04-26.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-04-26.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -5222,7 +5361,7 @@
         <title>2026年04月25日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-04-25.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-04-25.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -5361,7 +5500,7 @@
         <title>2026年04月24日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-04-24.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-04-24.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -5500,7 +5639,7 @@
         <title>2026年04月23日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-04-23.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-04-23.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -5639,7 +5778,7 @@
         <title>2026年04月22日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-04-22.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-04-22.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -5778,7 +5917,7 @@
         <title>2026年04月21日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-04-21.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-04-21.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -5917,7 +6056,7 @@
         <title>2026年04月20日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-04-20.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-04-20.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -6056,7 +6195,7 @@
         <title>2026年04月19日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-04-19.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-04-19.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -6195,7 +6334,7 @@
         <title>2026年04月18日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-04-18.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-04-18.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -6334,7 +6473,7 @@
         <title>2026年04月17日 新闻汇总</title>
         <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-04-17.md</link>
         <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
+        <pubDate>Fri, 05 Jun 2026 02:48:09 GMT</pubDate>
         <guid>archive/2026-04-17.md</guid>
         <category>综合新闻</category>
         <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
@@ -6467,145 +6606,6 @@
 <h3>8. <a href="https://wallstreetcn.com/articles/3770137">特朗普急了！美伊4月BigDeal可以期待？市场紧盯这两天</a></h3>
 <p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.0/10</p>
 <p><strong>📝 摘要</strong>: 特朗普政府释放积极信号，美伊4月达成协议的可能性上升。特朗普表示，美国'很有可能'在4月下旬与伊朗达成协议。专家认为，双方核心诉求构成底线支撑，谈判有望成功。</p>
-<hr/>]]></content:encoded>
-    </item>
-    <item>
-        <title>2026年04月16日 新闻汇总</title>
-        <link>https://raw.githubusercontent.com/Jamyein/news-coma/main/archive/2026-04-16.md</link>
-        <description>本期精选 30 条高质量科技新闻</description>
-        <pubDate>Thu, 04 Jun 2026 03:25:26 GMT</pubDate>
-        <guid>archive/2026-04-16.md</guid>
-        <category>综合新闻</category>
-        <content:encoded><![CDATA[<h1>📰 新闻精选</h1>
-<blockquote>🕐 更新时间: 2026年04月16日 10:10</blockquote>
-<blockquote>📊 本期精选 <strong>30</strong> 条高质量新闻</blockquote>
-<blockquote>🤖 由 AI 自动分类、筛选、翻译和总结</blockquote>
-<hr/>
-<h2>💰 财经新闻 (15条)</h2>
-<p>精选 <strong>15</strong> 条财经新闻</p>
-<h3>1. <a href="https://www.marketwatch.com/story/microsofts-stock-has-sprung-back-to-life-its-on-its-strongest-run-in-3-years-by-one-measure-02b7e184?mod=mw_rss_topstories">微软股价强劲反弹，近三年来最佳表现</a></h3>
-<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.2/10</p>
-<p><strong>📝 摘要</strong>: 微软股价在连续数月低迷后强劲反弹，近三年来表现最佳。事件反映了投资者对微软未来发展的信心。</p>
-<hr/>
-<h3>2. <a href="https://www.marketwatch.com/story/iran-war-is-a-major-source-of-uncertainty-for-u-s-businesses-feds-beige-book-says-52d45d7b?mod=mw_rss_topstories">美国企业招聘和支出放缓，伊朗战争影响经济乐观情绪</a></h3>
-<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.2/10</p>
-<p><strong>📝 摘要</strong>: 美国企业因伊朗战争影响，招聘和支出放缓。事件揭示了地缘政治对经济的影响。</p>
-<hr/>
-<h3>3. <a href="https://www.ft.com/content/345e5dbc-d60a-4c78-a781-63c3b624a451">美联储官员警告：伊朗战争和关税构成‘双重危险’</a></h3>
-<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.2/10</p>
-<p><strong>📝 摘要</strong>: 美联储官员警告，伊朗战争和关税构成‘双重危险’，可能导致价格上涨。事件反映了全球供应链的脆弱性。</p>
-<hr/>
-<h3>4. <a href="https://36kr.com/newsflashes/3768858898153984?f=rss">一季度国内生产总值同比增长5.0%</a></h3>
-<p><strong>📌 来源</strong>: 36氪 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.0/10</p>
-<p><strong>📝 摘要</strong>: 国家统计局发布，2026年一季度国内生产总值334193亿元，同比增长5.0%。其中，第一产业增加值11941亿元，第二产业增加值116135亿元，第三产业增加值206117亿元。数据显示，经济运行稳中向好，为市场注入信心。</p>
-<hr/>
-<h3>5. <a href="https://www.wsj.com/finance/stocks/tech-stocks-power-s-p-500-and-nasdaq-to-records-69c9f187?mod=rss_markets_main">科技股推动美股再创新高，投资者对美伊和平持乐观态度</a></h3>
-<p><strong>📌 来源</strong>: WSJ 市场 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.0/10</p>
-<p><strong>📝 摘要</strong>: 科技股推动标普500和纳斯达克指数再创新高，投资者对美伊可能达成和平协议持乐观态度。</p>
-<hr/>
-<h3>6. <a href="https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-04-15-2026?mod=rss_markets_main">美股再创新高，纳指连续11周上涨</a></h3>
-<p><strong>📌 来源</strong>: WSJ 市场 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 8.0/10</p>
-<p><strong>📝 摘要</strong>: 2026年4月15日，美国股市标普500指数突破7000点，创下自1月以来的首次纪录。纳斯达克指数也创下新高，连续11周上涨。投资者对中东冲突的关注并未影响市场情绪。</p>
-<hr/>
-<h3>7. <a href="https://www.wsj.com/us-news/law/live-nation-illegally-monopolized-concerts-and-ticketing-jury-finds-389afedd?mod=pls_whats_news_us_business_f">Live Nation非法垄断音乐演出和票务</a></h3>
-<p><strong>📌 来源</strong>: WSJ 经济 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
-<p><strong>📝 摘要</strong>: Live Nation公司因非法垄断音乐演出和票务被陪审团判定。这一裁决可能促使多个州采取措施限制Ticketmaster母公司的权力，对音乐行业产生重大影响。</p>
-<hr/>
-<h3>8. <a href="https://wallstreetcn.com/articles/3770007">谈判曙光与强劲财报双重提振市场，标普历史新高，纳指十一连涨，特斯拉大涨近8%</a></h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
-<p><strong>📝 摘要</strong>: 周三，标普500指数收涨0.8%，创历史新高，纳指大涨1.6%，收创新高。特斯拉大涨近8%。财报季开局积极，成为本轮行情的重要支撑。市场对波斯湾战争结束持乐观态度。</p>
-<hr/>
-<h3>9. <a href="https://www.ft.com/content/7d30723d-f2b1-4d02-a9f0-76ccedb0f7ad">S&P 500创新高，市场从伊朗冲击中恢复</a></h3>
-<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
-<p><strong>📝 摘要</strong>: S&P 500指数创下历史新高，市场从伊朗战争的冲击中恢复。投资者关注华尔街的强劲业绩，并预计冲突将迅速结束。</p>
-<hr/>
-<h3>10. <a href="https://www.theverge.com/policy/912689/live-nation-ticketmaster-antitrust-monopoly-trial-verdict">票务巨头Ticketmaster被判垄断</a></h3>
-<p><strong>📌 来源</strong>: The Verge | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
-<p><strong>📝 摘要</strong>: The Verge报道，Ticketmaster因垄断市场被判违法。此举可能对票务行业产生重大影响。专家表示，垄断判决将促使票务行业更加注重公平竞争。</p>
-<hr/>
-<h3>11. <a href="https://www.wsj.com/finance/commodities-futures/u-s-natural-gas-inches-up-after-string-of-losses-4a225891?mod=rss_markets_main">美国天然气期货上涨，库存过剩预期持续</a></h3>
-<p><strong>📌 来源</strong>: WSJ 市场 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
-<p><strong>📝 摘要</strong>: 美国天然气期货在连续五日下跌后上涨，预计库存过剩将扩展至100亿立方英尺。这一情况可能影响能源市场供需平衡，分析师预计未来价格波动将加剧。</p>
-<hr/>
-<h3>12. <a href="https://www.wsj.com/finance/commodities-futures/oil-declines-amid-hopes-of-more-u-s-iran-talks-2f0cec93?mod=rss_markets_main">原油期货价格持平，市场静待冲突发展</a></h3>
-<p><strong>📌 来源</strong>: WSJ 市场 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
-<p><strong>📝 摘要</strong>: 原油期货价格在等待美国伊朗谈判进展、停火协议延期以及霍尔木兹海峡重新开放的消息时保持稳定。市场不确定性可能导致价格波动，投资者需密切关注相关动态。</p>
-<hr/>
-<h3>13. <a href="https://techcrunch.com/2026/04/15/accel-raises-5b-to-back-late-stage-bets/">Accel筹集50亿美元支持后期投资</a></h3>
-<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
-<p><strong>📝 摘要</strong>: Accel宣布筹集50亿美元用于后期投资，专注于AI领域的公司。这一举措将推动AI行业的发展，并可能引发更多投资。</p>
-<hr/>
-<h3>14. <a href="https://www.wsj.com/economy/central-banking/the-cost-of-war-how-economists-predict-the-economy-will-fare-0524150f">经济学家对伊朗战争后的增长、通胀、油价和衰退风险的展望</a></h3>
-<p><strong>📌 来源</strong>: WSJ 全球经济 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
-<p><strong>📝 摘要</strong>: 经济学家在华尔街日报的调查中对伊朗战争后的增长、通胀、油价和衰退风险进行了预测。这些预测对市场走势和投资者决策具有重要意义。</p>
-<hr/>
-<h3>15. <a href="https://wallstreetcn.com/articles/3770059">标普警告：银行对交易巨头风险敞口飙升，美国金融生态系统陷入“内生性脆弱”</a></h3>
-<p><strong>📌 来源</strong>: 华尔街见闻 | <strong>🏏️ AI分类</strong>: 财经 | <strong>⭐ 评分</strong>: 7.6/10</p>
-<p><strong>📝 摘要</strong>: 标普全球评级警告美国银行对交易巨头的风险敞口已达数万亿美元，金融生态系统脆弱。交易公司如Jane Street、Citadel Securities等崛起，与银行深度绑定，风险积聚。</p>
-<hr/>
-<h2>🔬 科技新闻 (6条)</h2>
-<p>精选 <strong>6</strong> 条科技新闻</p>
-<h3>1. <a href="https://techcrunch.com/2026/04/15/openai-updates-its-agents-sdk-to-help-enterprises-build-safer-more-capable-agents/">OpenAI更新SDK，助力企业构建智能代理</a></h3>
-<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.8/10</p>
-<p><strong>📝 摘要</strong>: OpenAI更新其智能代理构建工具包，以帮助企业在AI代理领域取得进展。这标志着AI技术在实际应用中的进一步深入。</p>
-<hr/>
-<h3>2. <a href="https://github.blog/ai-and-ml/github-copilot/build-a-personal-organization-command-center-with-github-copilot-cli/">GitHub Copilot CLI打造个人组织指挥中心</a></h3>
-<p><strong>📌 来源</strong>: GitHub Blog | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.8/10</p>
-<p><strong>📝 摘要</strong>: GitHub员工Brittany Ellich利用GitHub Copilot CLI打造了一个个人组织指挥中心，旨在解决数字碎片化问题，将分散在不同应用中的信息统一到一个中央空间。该项目在一天内完成，展示了AI工具在软件开发中的应用潜力。</p>
-<hr/>
-<h3>3. <a href="https://www.wsj.com/science/space-astronomy/the-bezos-vs-musk-space-race-is-heating-up-3b41d07a?mod=pls_whats_news_us_business_f">贝索斯与马斯克太空竞赛升温</a></h3>
-<p><strong>📌 来源</strong>: WSJ 经济 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.7/10</p>
-<p><strong>📝 摘要</strong>: 贝索斯创立的公司在卫星连接和火箭发射领域取得进展，挑战了SpaceX长期以来的主导地位。这一竞争可能推动太空探索技术的发展，并对相关行业产生深远影响。</p>
-<hr/>
-<h3>4. <a href="https://www.wsj.com/science/space-astronomy/the-bezos-vs-musk-space-race-is-heating-up-3b41d07a?mod=pls_whats_news_us_business_f">贝索斯与马斯克太空竞赛升温</a></h3>
-<p><strong>📌 来源</strong>: WSJ 经济 | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.7/10</p>
-<p><strong>📝 摘要</strong>: 贝索斯创立的公司在卫星连接和火箭发射领域取得进展，挑战了SpaceX长期以来的主导地位。这一竞争可能推动太空探索技术的发展，并对相关行业产生深远影响。</p>
-<hr/>
-<h3>5. <a href="https://www.marketwatch.com/story/is-tesla-a-chip-stock-now-investors-are-cheering-a-semiconductor-milestone-56341cf8?mod=mw_rss_topstories">特斯拉芯片里程碑，投资者欢呼</a></h3>
-<p><strong>📌 来源</strong>: MarketWatch | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.6/10</p>
-<p><strong>📝 摘要</strong>: 特斯拉的AI5芯片完成关键步骤，该芯片预计将用于人形机器人和超级计算机，投资者对此表示欢迎。</p>
-<hr/>
-<h3>6. <a href="https://techcrunch.com/2026/04/15/this-khosla-backed-autonomous-pod-startup-just-raised-170m-now-its-aiming-for-more/">Khosla支持的自驾车初创公司融资1.7亿美元</a></h3>
-<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 科技 | <strong>⭐ 评分</strong>: 7.6/10</p>
-<p><strong>📝 摘要</strong>: Glydways计划再融资2.5亿美元，用于推出三个试点项目。该公司的自动驾驶技术有望推动自动驾驶行业的发展。</p>
-<hr/>
-<h2>🏛️ 社会政治 (9条)</h2>
-<p>精选 <strong>9</strong> 条社会政治新闻</p>
-<h3>1. <a href="https://www.ft.com/content/d0ac6c5f-c1c5-43cb-8f1f-eb3bea48eca3">特朗普威胁解雇鲍威尔，拒绝停止刑事调查</a></h3>
-<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.8/10</p>
-<p><strong>📝 摘要</strong>: 美国总统特朗普威胁解雇美联储主席鲍威尔，并拒绝停止对其的刑事调查。事件反映了美国政治和金融体系的紧张关系。</p>
-<hr/>
-<h3>2. <a href="https://www.ft.com/content/fcc0e47b-589b-49da-992c-f309a4783e23">耶伦称特朗普推动降息政策像‘香蕉共和国’</a></h3>
-<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.8/10</p>
-<p><strong>📝 摘要</strong>: 前财政部长耶伦批评特朗普推动降息政策，称其像‘香蕉共和国’。事件引发了关于美国货币政策稳定性的讨论。</p>
-<hr/>
-<h3>3. <a href="https://www.ft.com/content/1fddd2cd-1294-4e9c-a17d-5ea06b399355">伊朗使用中国间谍卫星瞄准美国基地</a></h3>
-<p><strong>📌 来源</strong>: Financial Times | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.8/10</p>
-<p><strong>📝 摘要</strong>: 泄露文件显示伊朗秘密获取中国间谍卫星，用于指导3月战争中的打击。事件揭示了地缘政治和科技竞争的复杂性。</p>
-<hr/>
-<h3>4. <a href="https://www.wsj.com/business/earnings/chip-machine-supplier-asml-lifts-guidance-on-strong-ai-demand-29edc810?mod=pls_whats_news_us_business_f">ASML因AI需求强劲上调指导</a></h3>
-<p><strong>📌 来源</strong>: WSJ 经济 | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.7/10</p>
-<p><strong>📝 摘要</strong>: ASML首席执行官表示，芯片需求超过供应，客户正在加速2026年及以后的生产能力扩张计划。这表明AI需求强劲，将推动芯片行业增长。</p>
-<hr/>
-<h3>5. <a href="https://techcrunch.com/2026/04/15/sweden-blames-russian-hackers-for-attempting-destructive-cyberattack-on-thermal-plant/">瑞典指责俄罗斯黑客对热电厂进行“破坏性”网络攻击</a></h3>
-<p><strong>📌 来源</strong>: TechCrunch | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.6/10</p>
-<p><strong>📝 摘要</strong>: 瑞典政府指责俄罗斯黑客对热电厂进行网络攻击。这一事件可能加剧欧洲网络安全问题。</p>
-<hr/>
-<h3>6. <a href="https://www.bbc.com/news/articles/c98mrepzgj7o?at_medium=RSS&at_campaign=rss">Allbirds转型AI，股价飙升</a></h3>
-<p><strong>📌 来源</strong>: BBC Business | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.5/10</p>
-<p><strong>📝 摘要</strong>: 鞋类品牌Allbirds转型AI领域，股价大幅上涨。此举标志着公司从传统鞋类制造向技术基础设施提供商转变，对行业创新有示范作用。</p>
-<hr/>
-<h3>7. <a href="https://www.bbc.com/news/articles/c9qddrdd8w2o?at_medium=RSS&at_campaign=rss">特朗普威胁解雇美联储主席</a></h3>
-<p><strong>📌 来源</strong>: BBC Business | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: 特朗普威胁解雇美联储主席，加剧了其与杰罗姆·鲍威尔之间的争执，可能影响美国货币政策和经济稳定。</p>
-<hr/>
-<h3>8. <a href="https://www.bbc.com/news/articles/crl11ynjyn1o?at_medium=RSS&at_campaign=rss">社交媒体巨头被召至唐宁街讨论儿童安全</a></h3>
-<p><strong>📌 来源</strong>: BBC Business | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: 社交媒体巨头如Meta和YouTube被召至唐宁街讨论儿童安全问题，关注点在于保护儿童免受网络风险。</p>
-<hr/>
-<h3>9. <a href="https://www.bbc.com/news/articles/cr5110n2l3mo?at_medium=RSS&at_campaign=rss">英国财长称伊朗战争是错误</a></h3>
-<p><strong>📌 来源</strong>: BBC Business | <strong>🏏️ AI分类</strong>: 社会政治 | <strong>⭐ 评分</strong>: 7.0/10</p>
-<p><strong>📝 摘要</strong>: 英国财长批评伊朗战争是错误，预计将比其他大型经济体受到更大冲击。此言论可能影响国际关系和地缘政治。</p>
 <hr/>]]></content:encoded>
     </item>
 </channel>
