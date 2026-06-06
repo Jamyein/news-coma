@@ -1,82 +1,73 @@
 {
-  "last_run": "2026-06-05T02:48:41.112251",
+  "last_run": "2026-06-06T02:35:59.467242",
   "stats": {
-    "total_runs": 145,
-    "total_news_processed": 27380,
-    "avg_news_per_run": 188.8
+    "total_runs": 146,
+    "total_news_processed": 27612,
+    "avg_news_per_run": 189.1
   },
   "source_stats": {
     "The Verge": {
-      "fetched": 1198,
+      "fetched": 1208,
       "selected": 130
     },
     "Hacker News": {
-      "fetched": 2808,
+      "fetched": 2829,
       "selected": 304
     },
     "TechCrunch": {
-      "fetched": 1911,
-      "selected": 218
+      "fetched": 1926,
+      "selected": 221
     },
     "GitHub Blog": {
       "fetched": 91,
       "selected": 22
     },
     "MarketWatch": {
-      "fetched": 1293,
+      "fetched": 1303,
       "selected": 227
     },
     "Financial Times": {
-      "fetched": 1287,
+      "fetched": 1297,
       "selected": 354
     },
     "WSJ 经济": {
-      "fetched": 3428,
+      "fetched": 3459,
       "selected": 259
     },
     "36氪": {
-      "fetched": 3467,
-      "selected": 487
+      "fetched": 3493,
+      "selected": 488
     },
     "WSJ 全球经济": {
-      "fetched": 743,
-      "selected": 111
+      "fetched": 750,
+      "selected": 113
     },
     "华尔街见闻": {
-      "fetched": 5217,
-      "selected": 869
+      "fetched": 5274,
+      "selected": 876
     },
     "BBC Business": {
-      "fetched": 1560,
+      "fetched": 1572,
       "selected": 202
     },
     "WSJ 市场": {
-      "fetched": 2448,
-      "selected": 255
+      "fetched": 2469,
+      "selected": 258
     },
     "东方财富": {
-      "fetched": 1423,
-      "selected": 217
+      "fetched": 1431,
+      "selected": 220
     },
     "CNBC": {
-      "fetched": 373,
+      "fetched": 376,
       "selected": 66
     },
     "The Economist": {
-      "fetched": 133,
+      "fetched": 134,
       "selected": 25
     }
   },
   "run_metrics": [
-    {
-      "run_time": "2026-02-26T01:28:18.386039",
-      "news_count": 254,
-      "api_calls": 26,
-      "cache_hits": 0,
-      "cache_misses": 0,
-      "duration_seconds": 462.227551,
-      "avg_score": 7.766666666666667
-    },
     {
       "run_time": "2026-02-27T01:26:01.201598",
       "news_count": 246,
@@ -967,24 +958,33 @@
       "cache_misses": 0,
       "duration_seconds": 703.63347,
       "avg_score": 7.64
+    },
+    {
+      "run_time": "2026-06-06T02:35:59.467242",
+      "news_count": 232,
+      "api_calls": 24,
+      "cache_hits": 0,
+      "cache_misses": 0,
+      "duration_seconds": 612.457058,
+      "avg_score": 7.942105263157895
     }
   ],
   "source_last_fetch": {
-    "TechCrunch": "2026-06-05T02:48:41.211977",
-    "GitHub Blog": "2026-06-05T02:48:41.329047",
-    "Hacker News": "2026-06-05T02:48:41.736033",
-    "The Verge": "2026-06-05T02:48:41.908673",
-    "The Economist": "2026-06-05T02:48:42.146083",
-    "CNBC": "2026-06-05T02:48:42.307668",
-    "BBC Business": "2026-06-05T02:48:42.657198",
-    "MarketWatch": "2026-06-05T02:48:43.013846",
-    "Financial Times": "2026-06-05T02:48:43.322647",
-    "华尔街见闻": "2026-06-05T02:48:45.630532",
-    "36氪": "2026-06-05T02:48:47.438436",
+    "TechCrunch": "2026-06-06T02:35:59.653607",
+    "GitHub Blog": "2026-06-06T02:35:59.993640",
+    "Hacker News": "2026-06-06T02:36:00.131137",
+    "The Verge": "2026-06-06T02:36:00.240884",
+    "The Economist": "2026-06-06T02:36:00.560208",
+    "CNBC": "2026-06-06T02:36:00.763751",
+    "BBC Business": "2026-06-06T02:36:00.928432",
+    "MarketWatch": "2026-06-06T02:36:01.302415",
+    "Financial Times": "2026-06-06T02:36:01.738970",
+    "华尔街见闻": "2026-06-06T02:36:03.315288",
+    "36氪": "2026-06-06T02:36:04.678715",
     "香港經濟日報": "2026-02-04T15:03:52.635318",
-    "东方财富": "2026-06-05T02:48:49.932074",
-    "WSJ 经济": "2026-06-05T02:48:50.077861",
-    "WSJ 市场": "2026-06-05T02:48:50.232806",
-    "WSJ 全球经济": "2026-06-05T02:48:50.313889"
+    "东方财富": "2026-06-06T02:36:06.839164",
+    "WSJ 经济": "2026-06-06T02:36:06.963018",
+    "WSJ 市场": "2026-06-06T02:36:07.062357",
+    "WSJ 全球经济": "2026-06-06T02:36:07.175458"
   }
 }
